@@ -1,0 +1,54 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=academy
+      - POSTGRES_PASSWORD=academy
+      - POSTGRES_DB=academy
+    volumes:
+      - ./databases/pgsql:/var/lib/postgresql/data
+    container_name: academy_database
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    container_name: academy_redis
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "5671:5671"
+    hostname: "my-rabbitmq"
+    container_name: academy_rabbitmq
+  graphql:
+    image: hasura/graphql-engine:latest
+    ports:
+      - "6002:8080"
+    depends_on:
+      - "postgres"
+    restart: always
+    environment:
+      - HASURA_GRAPHQL_DATABASE_URL=postgres://academy:academy@postgres:5432/academy
+      - HASURA_GRAPHQL_ENABLE_CONSOLE=true
+      - HASURA_GRAPHQL_ADMIN_SECRET=academy
+      - HASURA_GRAPHQL_LIVE_QUERIES_MULTIPLEXED_REFETCH_INTERVAL=100
+    container_name: academy_graphql
+#    networks:
+#      academy_default:
+#      academy_service:
+#        ipv4_address: 172.12.0.13
+#networks:
+#  academy_default:
+#    name: academy_default
+#  academy_service:
+#    name: academy_service
+#    attachable: true
+#    driver: bridge
+#    ipam:
+#      config:
+#        - subnet: "172.12.0.0/16"
+#          gateway: 172.12.0.1
