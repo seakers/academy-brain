@@ -1,0 +1,7 @@
+200
+--
+subobjective subobjective
+--
+01000
+--
+the one for ${subobjective}

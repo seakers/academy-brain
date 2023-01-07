@@ -30,6 +30,8 @@ ALLOWED_HOSTS = [
     '*'
 ]
 
+USE_X_FORWARDED_HOST = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,9 +48,8 @@ INSTALLED_APPS = [
 
     # Academy APIs
     'academy',
-    # 'academy_auth',
+    'academy_auth',
     'academy_assistant',
-    # 'academy_problem'
 ]
 
 MIDDLEWARE = [
@@ -184,23 +185,32 @@ ACADEMY_PATH = '/home/ec2-user/academy-brain'
 ### NN Models ###
 #################
 NN_MODELS = {}
-NN_MODELS_PATH = '/home/ec2-user/academy-brain/academy_assistant/assistant/models_copy'
-LOAD_NN_MODELS = False
+NN_MODELS_LIB_PATH = '/home/ec2-user/academy-brain/academy_assistant/assistant/models'
+LOAD_NN_MODELS = True
 if LOAD_NN_MODELS is True:
     print('--> LOADING NN MODELS')
     import os
     from pathlib import Path
     from transformers import AutoModelForSequenceClassification
-    model_dict = {}
-    model_folder_path = Path(NN_MODELS_PATH)
-    for file in os.scandir(model_folder_path):
-        if file.is_dir():
-            role_name = file.name
-            role_model_path = model_folder_path / role_name
-            loaded_model = AutoModelForSequenceClassification.from_pretrained(role_model_path)
-            model_dict[role_name] = loaded_model
-    NN_MODELS = model_dict
+    model_lib_dict = {}
+    model_lib_path = Path(NN_MODELS_LIB_PATH)
+    for model_folder in os.scandir(model_lib_path):
+        if model_folder.is_dir():
+            model_folder_name = model_folder.name
+            model_folder_path = os.path.join(model_lib_path, model_folder_name)
+            model_dict = {}
+            model_lib_dict[model_folder_name] = model_dict
+            for file in os.scandir(model_folder_path):
+                if file.is_dir():
+                    role_name = file.name
+                    role_model_path = os.path.join(model_folder_path, role_name)
+                    loaded_model = AutoModelForSequenceClassification.from_pretrained(role_model_path)
+                    model_dict[role_name] = loaded_model
+    NN_MODELS = model_lib_dict
     print('--> FINISHED LOADING NN MODELS')
+
+
+
 
 
 ###########
@@ -215,6 +225,50 @@ NLP_MODEL = spacy.load('en_core_web_sm')
 
 
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '[%(asctime)s] - %(name)s - %(levelname)s - %(message)s'
+        },
+        'standard': {
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%Y/%m/%d %H:%M:%S"
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard',
+        },
+        'null': {
+            'class': 'logging.NullHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'debugging': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'config': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
 
 
 

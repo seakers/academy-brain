@@ -6,7 +6,6 @@ from channels.layers import get_channel_layer
 
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
 
-from academy_problem.aws.ServiceManager import ServiceManager
 
 from academy_auth.helpers import get_or_create_user_information_async, save_user_info_async
 from academy_auth.models import UserInformation

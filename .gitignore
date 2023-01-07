@@ -2,3 +2,9 @@
 __pycache__/
 *$py.class
 databases/pgsql
+academy_assistant/assistant/data
+academy_assistant/assistant/models
+academy_assistant/assistant/models_copy
+logs
+venv
+.hypothesis

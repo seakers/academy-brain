@@ -1,0 +1,9 @@
+200
+--
+--
+0100
+--
+what can you tell me about remote sensing
+How does the atmosphere impact remote sensing
+what is atmospheric attenuation
+what are target interactions
