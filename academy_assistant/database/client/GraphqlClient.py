@@ -197,3 +197,23 @@ class GraphqlClient:
         }
         query_result = self.execute_query(query, variables)
         return query_result["data"]["slide"]
+
+    def get_learning_module_id(self, name):
+        query = '''
+            query get_learning_module_id($name: String = "") {
+                module: LearningModule(where: {name: {_eq: $name}}) {
+                    id
+                    name
+                }
+            }
+        '''
+        variables = {
+            "name": name
+        }
+        query_result = self.execute_query(query, variables)
+
+        if 'data' in query_result and 'module' in query_result['data'] and len(query_result['data']['module']) > 0:
+            return int(query_result['data']['module'][0]['id'])
+        else:
+            print('query not found!', query_result)
+            return 0

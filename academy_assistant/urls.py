@@ -7,7 +7,7 @@ from . import views
 
 urlpatterns = [
     path('command', views.Command.as_view(), name='command'),
-    path('lmcommand', views.LMCommand.as_view(), name='command'),
+    path('lmcommand', views.LMCommand.as_view(), name='lmcommand'),
     path('stats/', include('academy_assistant.stats.urls')),
 ]
 

@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print('--> CREATING TRAINING DATA')
-        client = Preprocessing(version='CA')
+        client = Preprocessing(version='EOSS')
         client.process()
 
 

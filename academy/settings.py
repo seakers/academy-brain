@@ -117,16 +117,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CORS_ORIGIN_WHITELIST = (
-# 'http://localhost:8080',
-#     'https://academy.selva-research.com'
-# )
-#
-# CORS_ALLOW_CREDENTIALS = True
-#
-# CSRF_TRUSTED_ORIGINS = (
-#     "https://academy.selva-research.com"
-# )
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'https://academy.selva-research.com'
+)
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = (
+    'http://localhost:8080',
+    "https://academy.selva-research.com"
+)
 
 
 

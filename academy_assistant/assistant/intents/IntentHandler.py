@@ -55,6 +55,7 @@ class IntentHandler:
 
     def intent_5000(self):
         print('--> REWRITE INTENT METHOD FOR DAPHNE ACADEMY')
+        return {'text': 'Delta-V is the total change in velocity required for a mission'}
 
 
 
