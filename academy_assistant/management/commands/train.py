@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print('--> TRAINING MODELS')
-        client = Training(version='EOSS')
+        client = Training(version='CA')
         client.train()
 
 
