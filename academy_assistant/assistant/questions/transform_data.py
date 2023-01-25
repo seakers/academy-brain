@@ -13,14 +13,13 @@ def run_images():
     cwd = Path.cwd()
     t_path = os.path.join(cwd, t_dir)
 
-    f_path = os.path.join(t_path, '1000.png')
-    print(f_path)
-    img = Image.open(f_path)
-
-
-    text = pytesseract.image_to_string(img)
-
-    print(text)
+    for filename in os.listdir(t_path):
+        slide_class = int(filename.split('.', 1)[0])
+        f_path = os.path.join(t_path, filename)
+        print(f_path)
+        img = Image.open(f_path)
+        text = pytesseract.image_to_string(img)
+        print(len(text), text)
 
 
 def run2():
