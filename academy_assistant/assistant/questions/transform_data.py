@@ -19,7 +19,10 @@ def run_images():
         print(f_path)
         img = Image.open(f_path)
         text = pytesseract.image_to_string(img)
-        print(len(text), type(text), text)
+        lines = text.splitlines()
+        print(len(lines))
+        for line in lines:
+            print(line)
 
 
 def run2():
