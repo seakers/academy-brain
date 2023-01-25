@@ -20,10 +20,7 @@ def run_images():
         img = Image.open(f_path)
         text = pytesseract.image_to_string(img)
         lines = text.splitlines()
-        print(len(lines))
-        for line in lines:
-            print(line)
-
+        print(len(lines), lines)
 
 def run2():
     print('--> TRANSFORMING QUESTIONS')
