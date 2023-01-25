@@ -1,8 +1,26 @@
 import os
 from pathlib import Path
+from PIL import Image
+
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'/home/ec2-user/installs/vcpkg/installed/x64-linux/tools/tesseract/tesseract'
 
 
+def run_images():
+    print('--> PARSING IMAGES')
+    t_dir = 'Slides'
 
+    cwd = Path.cwd()
+    t_path = os.path.join(cwd, t_dir)
+
+    f_path = os.path.join(t_path, '1000.png')
+    print(f_path)
+    img = Image.open(f_path)
+
+
+    text = pytesseract.image_to_string(img)
+
+    print(text)
 
 
 def run2():
@@ -99,4 +117,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run2()
+    run_images()
