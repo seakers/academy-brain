@@ -15,6 +15,7 @@ def run_images():
     t_path = os.path.join(cwd, t_dir)
 
     for filename in os.listdir(t_path):
+        clean_lines = []
         slide_class = int(filename.split('.', 1)[0])
         f_path = os.path.join(t_path, filename)
         print(f_path)
@@ -23,11 +24,12 @@ def run_images():
         lines = text.splitlines()
         for line in lines:
             test_str = line.translate(str.maketrans('', '', string.punctuation)).lower().replace("»", '')
+            if test_str == '':
+                continue
+            clean_lines.append(test_str)
+        print(clean_lines)
 
-            print(test_str.lower())
 
-
-        print(len(lines), lines)
 
 def run2():
     print('--> TRANSFORMING QUESTIONS')
