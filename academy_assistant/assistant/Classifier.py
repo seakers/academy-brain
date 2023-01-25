@@ -8,14 +8,14 @@ from academy_assistant.database.client.GraphqlClient import GraphqlClient
 
 
 global_roles = {
-    'CA': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
-    'EOSS': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
+    'MaterialRecommender': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
+    'QA': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
 }
 
 
 class Classifier:
 
-    def __init__(self, user_info, library='CA'):
+    def __init__(self, user_info, library='QA'):
         self.roles = global_roles[library]
         self.model_loader = ModelLoader(library=library)
         self.graphql_client = GraphqlClient(user_info)

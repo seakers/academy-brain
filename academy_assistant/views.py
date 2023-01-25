@@ -13,9 +13,9 @@ from academy_assistant.assistant.Classifier import Classifier
 from academy_assistant.assistant.intents.IntentHandler import IntentHandler
 
 
-##################################
-# Called for classifying intents #
-##################################
+#########################################
+# Called for returning textual response #
+#########################################
 
 class Command(APIView):
 
@@ -27,7 +27,7 @@ class Command(APIView):
         # --> 1. Create classifier
         try:
             print('--> PROCESSING COMMAND: ', command)
-            classifier = Classifier(user_info, library='EOSS')
+            classifier = Classifier(user_info, library='QA')
         except Exception as ex:
             print(ex)
             return Response({'response_status': 'error', 'message': 'Error creating classifier: ' + str(ex)})
@@ -65,6 +65,10 @@ class Command(APIView):
 
 
 
+####################################
+# Called for recommending material #
+####################################
+
 class LMCommand(APIView):
 
     def post(self, request, format=None):
@@ -75,12 +79,12 @@ class LMCommand(APIView):
         # --> 1. Create classifier
         try:
             print('--> PROCESSING COMMAND: ', command)
-            classifier = Classifier(user_info, library='CA')
+            classifier = Classifier(user_info, library='MaterialRecommender')
         except Exception as ex:
             print(ex)
             return Response({'response_status': 'error', 'message': 'Error creating classifier: ' + str(ex)})
 
-        # --> 2. Classify role
+        # --> 2. Get all classifications
         try:
             confidence = classifier.recommend_material(command)
             print('--> MATERIAL CONFIDENCE:', confidence)

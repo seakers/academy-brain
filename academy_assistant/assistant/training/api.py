@@ -18,8 +18,8 @@ NUM_EPOCHS = 5  # Number of training epochs
 
 
 global_roles = {
-    'CA': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
-    'EOSS': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
+    'MaterialRecommender': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
+    'QA': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
 }
 
 
@@ -28,7 +28,7 @@ class Training:
 
 
 
-    def __init__(self, version='CA'):
+    def __init__(self, version='QA'):
         self.version = version
         self.app_path = settings.ACADEMY_PATH
         self.model_path = self.app_path + '/academy_assistant/assistant/models/' + self.version
