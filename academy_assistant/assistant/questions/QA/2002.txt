@@ -1,8 +1,7 @@
 200
 --
-design_id design_id
-subobjective subobjective
 --
-01000
+0100
 --
-why does design ${design_id} not satisfy ${subobjective}
+what does inclination mean
+what is inclination

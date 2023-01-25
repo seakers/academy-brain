@@ -1,8 +1,7 @@
 200
 --
-number number
 --
-10000
+1000
 --
-which of the designs use ${number} orbits
-highlight designs that use ${number} orbits
+what is a GSO orbit
+what is a geosynchronous orbit

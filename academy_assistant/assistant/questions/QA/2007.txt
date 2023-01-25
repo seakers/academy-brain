@@ -1,8 +1,9 @@
 200
 --
-design_id1 design_id
-design_id2 design_id
 --
-01000
+0100
 --
-what are the differences between architecture ${design_id1} and ${design_id2}
+At which frequencies do electro optical payloads operate between
+At which frequencies do EOIR payloads operate between
+At which frequencies do EO/IR payloads operate between
+At which frequencies do EO/IR payloads collect data

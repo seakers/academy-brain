@@ -1,8 +1,7 @@
 200
 --
-instrument_parameter instrument_parameter
-vassar_measurement vassar_measurement
 --
-01000
+0100
 --
-what is the requirement for ${instrument_parameter} for ${vassar_measurement}
+What is an instruments field of view
+What does field of view mean

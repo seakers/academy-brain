@@ -1,8 +1,8 @@
 200
 --
-instrument_parameter instrument_parameter
-vassar_instrument vassar_instrument
 --
-01000
+0100
 --
-what is the ${instrument_parameter} of ${vassar_instrument}
+what is instrument aperture
+what does aperture mean for a remote sensing instrument
+what is aperture for a remote sensing imager

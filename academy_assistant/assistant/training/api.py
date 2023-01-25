@@ -16,10 +16,11 @@ DEV_SAMPLE_PERCENTAGE = 0.1  # Percentage of the training data to use for valida
 BATCH_SIZE = 16  # Batch Size
 NUM_EPOCHS = 5  # Number of training epochs
 
-
+# Gabe: I'm keeping the material recommender and Q&A models separate for now as I want to try new material recommender models soon
 global_roles = {
     'MaterialRecommender': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
-    'QA': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
+    'QA': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher'],
+    'QA2': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost']
 }
 
 

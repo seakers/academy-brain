@@ -1,8 +1,8 @@
 200
 --
-design_id design_id
 --
-01000
+0100
 --
-why does design ${design_id} have this science benefit
-why does design ${design_id} have this science score
+what does delta-v mean
+what does deta v mean
+what are delta-v maneuvers

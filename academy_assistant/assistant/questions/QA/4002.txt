@@ -1,13 +1,8 @@
-500
+200
 --
-measurement measurement
-year1 year
-year2 year
-space_agency space_agency
 --
-00010
+0001
 --
-which instruments can measure ${measurement}
-which instruments can measure ${measurement} between ${year1} and ${year2}
-which instruments from ${space_agency} can measure ${measurement}
-which instruments from ${space_agency} can measure ${measurement} between ${year1} and ${year2}
+what is a qualification unit
+what are qualification units used for
+what does qualification unit mean

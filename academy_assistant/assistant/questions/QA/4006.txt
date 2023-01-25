@@ -1,9 +1,7 @@
-100
+200
 --
-technology technology
 --
-00010
+0001
 --
-which orbit is the most common for ${technology}
-which orbit is the most typical for ${technology}
-what orbit do you recommend for ${technology}
+what is space system final operating capability
+what does final operation capability mean

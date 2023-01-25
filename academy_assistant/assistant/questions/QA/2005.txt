@@ -1,8 +1,9 @@
 200
 --
-design_id design_id
-not_partial_full not_partial_full
 --
-01000
+0100
 --
-which objectives are ${not_partial_full} satisfied in design ${design_id}
+what region of the spectrum do radar systems work on
+at what wavelength to radar systems operate
+in which spectrum do radars operate
+what is the spectrum region for radar systems

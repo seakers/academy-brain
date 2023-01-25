@@ -1,11 +1,7 @@
 200
 --
-instrument instrument
-orbit orbit
-number number
 --
-10000
+1000
 --
-which of the designs use ${number} instruments in total
-what are the designs that use total ${number} instruments
-what are the designs that assigns ${number} instruments in orbit ${orbit}
+what is a GEO orbit
+what is a geostationary orbit

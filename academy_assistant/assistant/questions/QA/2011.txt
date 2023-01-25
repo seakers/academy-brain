@@ -1,7 +1,8 @@
 200
 --
-subobjective subobjective
 --
-01000
+0100
 --
-the one for ${subobjective}
+What is focal length
+What does focal length mean
+What is an instruments focal length

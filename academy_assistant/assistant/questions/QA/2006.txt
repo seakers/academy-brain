@@ -1,8 +1,7 @@
 200
 --
-design_id1 design_id
-design_id2 design_id
 --
-01000
+0100
 --
-why is architecture ${design_id1} better than ${design_id2}
+How does the atmosphere impact remote sensing
+How does the atmosphere effect remote sensing
