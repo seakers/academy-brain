@@ -9,7 +9,8 @@ from academy_assistant.database.client.GraphqlClient import GraphqlClient
 
 global_roles = {
     'MaterialRecommender': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
-    'QA': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
+    'QA_OLD': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher'],
+    'QA': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost']
 }
 
 
