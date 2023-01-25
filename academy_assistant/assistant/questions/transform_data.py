@@ -22,7 +22,8 @@ def run_images():
         text = pytesseract.image_to_string(img)
         lines = text.splitlines()
         for line in lines:
-            test_str = line.translate(str.maketrans('', '', string.punctuation))
+            test_str = line.translate(str.maketrans('', '', string.punctuation)).lower().replace("»", '')
+
             print(test_str.lower())
 
 
