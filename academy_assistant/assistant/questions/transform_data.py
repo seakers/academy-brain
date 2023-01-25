@@ -3,6 +3,7 @@ from pathlib import Path
 from PIL import Image
 
 import pytesseract
+import string
 pytesseract.pytesseract.tesseract_cmd = r'/home/ec2-user/installs/vcpkg/installed/x64-linux/tools/tesseract/tesseract'
 
 
@@ -20,6 +21,11 @@ def run_images():
         img = Image.open(f_path)
         text = pytesseract.image_to_string(img)
         lines = text.splitlines()
+        for line in lines:
+            test_str = line.translate(str.maketrans('', '', string.punctuation))
+            print(test_str.lower())
+
+
         print(len(lines), lines)
 
 def run2():
