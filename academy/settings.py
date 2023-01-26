@@ -198,7 +198,7 @@ if LOAD_NN_MODELS is True:
     for model_folder in os.scandir(model_lib_path):
         if model_folder.is_dir():
             model_folder_name = model_folder.name
-            if model_folder_name not in ['MaterialRecommender', 'QA']:
+            if model_folder_name not in ['MA', 'QA']:
                 continue
             model_folder_path = os.path.join(model_lib_path, model_folder_name)
             model_dict = {}
