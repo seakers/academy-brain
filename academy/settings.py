@@ -187,7 +187,7 @@ ACADEMY_PATH = '/home/ec2-user/academy-brain'
 #################
 NN_MODELS = {}
 NN_MODELS_LIB_PATH = '/home/ec2-user/academy-brain/academy_assistant/assistant/models'
-LOAD_NN_MODELS = False
+LOAD_NN_MODELS = True
 if LOAD_NN_MODELS is True:
     print('--> LOADING NN MODELS')
     import os

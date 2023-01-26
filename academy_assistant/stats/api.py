@@ -72,12 +72,12 @@ class StatsClient:
         print('--> MAP ESTIMATE:', map_estimate)
 
         # --> 4. Update user database
-        result = self.graphql_client.set_user_ability_parameters(self.user_id, topic_id, map_estimate)
+        result = self.graphql_client.set_user_ability_parameters(topic_id, map_estimate)
 
     def select_question(self):
 
         # --> 1. Determine lowest user topic ability parameter
-        sorter_parameters = self.graphql_client.get_user_ability_parameters(self.user_id)
+        sorter_parameters = self.graphql_client.get_user_ability_parameters()
         if len(sorter_parameters) == 0:
             return ex_question
         lowest_topic_id = sorter_parameters[0]['Topic']['id']
@@ -89,12 +89,12 @@ class StatsClient:
 
         # --> 3. Get ids of questions that have already been asked
         repeat_ids = []
-        exam_list = self.graphql_client.get_previously_asked_test_questions(self.user_id)
+        exam_list = self.graphql_client.get_previously_asked_test_questions()
         if len(exam_list) > 0:
             already_asked = exam_list[0]
             for q in already_asked['questions']:
                 repeat_ids.append(int(q['question_id']))
-        slide_list = self.graphql_client.get_previously_asked_module_questions(self.user_id, lowest_topic_id)
+        slide_list = self.graphql_client.get_previously_asked_module_questions(lowest_topic_id)
         for slide in slide_list:
             question_id = int(slide['question']['id'])
             if question_id not in repeat_ids:
