@@ -86,6 +86,7 @@ class LMCommand(APIView):
 
         # --> 2. Get all classifications
         try:
+            print('--> GETTING RECOMMENDED MATERIAL')
             confidence = classifier.recommend_material(command)
             print('--> MATERIAL CONFIDENCE:', confidence)
             return Response({'response': json.dumps(confidence)})

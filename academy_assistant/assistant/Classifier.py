@@ -48,6 +48,7 @@ class Classifier:
         role_probs = self.classify_learning_module(command)
         role_idx_list = [self.roles.index(r) for r in self.roles]
         role_slide_probs = []
+        print('--> CLASSIFYING SLIDES')
         for role_idx in role_idx_list:
             slide_probs = self.classify_slide(command, [role_idx])
             role_slide_probs.append(slide_probs)
