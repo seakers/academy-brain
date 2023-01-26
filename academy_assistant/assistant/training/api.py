@@ -18,7 +18,7 @@ NUM_EPOCHS = 5  # Number of training epochs
 
 # Gabe: I'm keeping the material recommender and Q&A models separate for now as I want to try new material recommender models soon
 global_roles = {
-    'MaterialRecommender': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
+    'MR': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
     'QA_OLD': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher'],
     'QA': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost']
 }

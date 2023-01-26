@@ -1,7 +1,0 @@
-400
---
-mission mission
---
-00010
---
-when was mission ${mission} launched

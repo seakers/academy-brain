@@ -79,7 +79,7 @@ class LMCommand(APIView):
         # --> 1. Create classifier
         try:
             print('--> PROCESSING COMMAND: ', command)
-            classifier = Classifier(user_info, library='MaterialRecommender')
+            classifier = Classifier(user_info, library='MR')
         except Exception as ex:
             print(ex)
             return Response({'response_status': 'error', 'message': 'Error creating classifier: ' + str(ex)})

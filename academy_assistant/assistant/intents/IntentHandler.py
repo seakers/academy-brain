@@ -80,26 +80,65 @@ class IntentHandler:
     def intent_1020(self):
         return {'text':  "Cross strapping is a method of adding redundancy to a system through interconnected identical units where either unit can provide the required functionality."}
 
-
-
-
-
-
     def intent_2000(self):
-        print('--> REWRITE INTENT METHOD FOR DAPHNE ACADEMY')
-
+        return {'text': "Delta-V is the total change in spacecraft velocity over a mission lifecycle"}
     def intent_2001(self):
-        print('--> REWRITE INTENT METHOD FOR DAPHNE ACADEMY')
+        return {'text': "Eccentricity is the deviation of an orbit from circularity"}
+    def intent_2002(self):
+        return {'text': "Orbital inclination measures the tilt of a spacecraft\'s orbit around a celestial body. It is expressed as the angle between a reference plane and the orbital plane or axis of direction of the orbiting object."}
+    def intent_2003(self):
+        return {'text': "The three main approaches to cost estimation are the following: top-down, bottom-up, and anaology."}
+    def intent_2004(self):
+        return {'text': "There are four main remote sensor systems types: visible systems, infrared systems, radar systems, and microwave radiometers"}
+    def intent_2005(self):
+        return {'text': "In the EM spectrum, radar systems operate in the centimeter to millimeter bands."}
+    def intent_2006(self):
+        return {'text': "The earth's atmosphere impacts the propagation of RF signals due to the signal interacting with gaseous constituents of the atmosphere, aerosols, or hydrometeors."}
+    def intent_2007(self):
+        return {'text': "EO/IR payloads collect data between the ultra-violate and infrared wavelengths."}
+    def intent_2008(self):
+        return {'text': "Aperture refers to the instrument's lens diameter"}
+    def intent_2009(self):
+        return {'text': "NIIRS refers to the National Image Interpretability Rating Scales. It defines the quality of an image and the performance of imaging systems."}
+    def intent_2010(self):
+        return {'text': "Field of view (FOV) is an angular measure of the width a sensor can see."}
+    def intent_2011(self):
+        return {'text': "Instrument focal length is the distance from the lens to the detectors."}
+    def intent_2012(self):
+        return {'text': "Instantaneous field of view (IFOV) is the angular width a single pixel detector can see in an instrument."}
+    def intent_2013(self):
+        return {'text': "Field of view (FOV) is an angular measure of the width a sensor can see. Instantaneous field of view (IFOV) is the angular width a single pixel detector can see."}
+    def intent_2014(self):
+        return {'text': "The two types of EO/IR payloads are scanners and starers. Scanners use a linear array of detectors, while starers use a rectangular array."}
+    def intent_2015(self):
+        return {'text': "At a high level, EO/IR payloads consist of a focal plane array (FPA) and readout integrated circuits (ROIC)"}
+    def intent_2016(self):
+        return {'text': "Passive thermal control systems dispel heat passively through the natural infrared radiation"}
 
     def intent_3000(self):
-        print('--> REWRITE INTENT METHOD FOR DAPHNE ACADEMY')
+        return {'text': "Focal plane arrays are arrays of light detectors placed in the focal plane of an imaging system."}
 
     def intent_4000(self):
-        print('--> REWRITE INTENT METHOD FOR DAPHNE ACADEMY')
+        return {'text': "Lifecycle cost is the total mission cost from planning through end-of-life"}
+    def intent_4001(self):
+        return {'text': "The three phases of lifecycle cost are: 1) Research, Development, Test, and Evaluation, 2) Production, and 3) Operations and Maintenance."}
+    def intent_4002(self):
+        return {'text': "Qualification units are used in qualification testing to verify the design and requirements."}
+    def intent_4003(self):
+        return {'text': "Brassboards are experimental or demonstration test models following an earlier prototyping stage called breadboards."}
+    def intent_4004(self):
+        return {'text': "Theoretical first units represent the first flight-qualified satellite off the production line."}
+    def intent_4005(self):
+        return {'text': "The learning curve is a factor multiplied by the theoretical first unit cost to determine the production cost of subsequent satellites."}
+    def intent_4006(self):
+        return {'text': "Space mission final operating capability represents the full compliment of on-orbit satellites."}
+    def intent_4007(self):
+        return {'text': "A satellite constellation is a group of satellites working together as a system."}
+    def intent_4008(self):
+        return {'text': "A satellite\'s orbit has implications on many factors such as delta-v budget (low altitude orbits need more station-keeping maneuvers), optical payload (spacial resolution), and revisit time for example."}
+    def intent_4009(self):
+        return {'text': "Satellite slewing agility determines the satellite\'s ability to change its attitude."}
 
-    def intent_5000(self):
-        print('--> REWRITE INTENT METHOD FOR DAPHNE ACADEMY')
-        return {'text': 'xxxxx'}
 
 
 

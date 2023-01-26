@@ -1,8 +1,0 @@
-200
---
-design_id design_id
-subobjective subobjective
---
-01000
---
-why does design ${design_id} not satisfy ${subobjective}
