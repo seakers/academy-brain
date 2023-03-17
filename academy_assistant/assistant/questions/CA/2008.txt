@@ -10,3 +10,8 @@ Can you tell me more about aperture diameter
 How does one find aperture diameter
 What is instrument field of view
 How is instrument resolution defined
+how do you calculate EO/IR resolution
+what is the equation for EO/IR resolution
+what do you need to calculate EO/IR resolution
+what is the focal length
+what does field of view mean

@@ -6,3 +6,7 @@
 how does the spacecraft know where it is
 how does the attitude determination and control system work
 how do the internals of the ADCS subsystem work
+what sensors are used in an ADCS
+what trackers are used in an ADCS
+how does a ADCS locate itself
+what is a star tracker

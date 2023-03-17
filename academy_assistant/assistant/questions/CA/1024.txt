@@ -5,3 +5,4 @@
 --
 show me a block diagram of the attitude determination and control system
 block diagram of ADCS subsystem
+show me an example diagram of the ADCS

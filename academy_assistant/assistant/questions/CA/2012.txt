@@ -8,3 +8,9 @@ what are infrared imagers used for
 different wavelengths for infrared images
 infrared imager cooling systems
 infrared imager thermal control
+how are infrared images recreated
+types of infrared sensors
+do NIR and SWIR require cooling
+how much cooling does LWIR need
+what infrared sensor needs active cooling
+what temperature does LWIR operate at

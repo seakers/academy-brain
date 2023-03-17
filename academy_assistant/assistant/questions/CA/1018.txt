@@ -5,5 +5,8 @@
 --
 what are electrical power system batteries for
 how are satellite batteries used
-what effects electrical power system battery size
+what affects electrical power system battery size
 what are battery cycles
+what is a nicd battery
+what are benefits of a nicd battery
+what affects the weight of a battery

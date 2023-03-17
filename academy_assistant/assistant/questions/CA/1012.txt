@@ -7,3 +7,6 @@ what are cost drivers for the thermal control subsystem
 different thermal control system cost drivers
 how does orbit impact thermal control
 what are operational requirements for the thermal control system
+what is the thermal balance solution
+are there any payload equipment requirements for thermal control cost drivers
+what is used to calculate the cost of thermal control

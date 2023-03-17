@@ -7,3 +7,6 @@ what is the first step of lifecycle cost analysis
 how are cost drivers identified
 lifecycle cost cost drivers
 what are spacecraft cost drivers
+how do you identify cost drivers
+what are typical cost drivers
+examples of cost drivers

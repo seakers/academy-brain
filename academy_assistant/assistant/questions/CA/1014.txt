@@ -8,3 +8,4 @@ how are solar panels created
 how do solar panels work
 what is the difference between deployed and fixed solar arrays
 what are different solar array design trades
+what do solar cells do

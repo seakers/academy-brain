@@ -7,3 +7,4 @@ what is the attitude determination and control subsystem
 what are the different components of the ADCS system
 different components of the attitude determination and control subsystem
 what is the function of the ADCS subsystem
+what does the ADCS do

@@ -5,3 +5,6 @@
 --
 basic ir payload design
 infrared payload design example
+how to design an IR payload
+show me a picture of an IR payload
+how do you design an IR payload

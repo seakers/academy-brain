@@ -6,3 +6,4 @@
 How are CERs developed
 How do we fit cost estimation relationships
 How are cost estimating relationships created
+what are the steps to develop CER

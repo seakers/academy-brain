@@ -6,3 +6,5 @@
 what are the design considerations for the attitude determination and control subsystem
 how to design the ADCS
 how should I design the attitude determination and control system
+what are the types of environmental impacts
+what is used for attitude control

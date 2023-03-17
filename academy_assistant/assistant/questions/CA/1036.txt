@@ -6,3 +6,5 @@
 how is the command and data handling subsystem designed
 what are design considerations for the command and data handling subsystem
 different components of the command and data handling subsystem
+what are the components of a TT&C susbsystem
+how do you design a telemetry, tracking and control subsystem

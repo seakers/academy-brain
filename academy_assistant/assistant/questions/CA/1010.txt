@@ -6,3 +6,6 @@
 what are design considerations for the thermal control subsystem
 how to design a thermal control subsystem
 how is thermal testing done
+what are thermal requirements
+what does a design start with
+what is a thermal environment

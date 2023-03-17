@@ -6,3 +6,8 @@
 what is the structures and mechanisms subsystem
 what is the function of the structures and mechanisms subsystem
 what are the components of the structures and mechanisms subsystem
+what does a structures subsystem do
+what does a mechanisms susbsystem do
+how does a space vehicle maintain structural stability
+what does the primary structure do
+what is the deployment mechanism

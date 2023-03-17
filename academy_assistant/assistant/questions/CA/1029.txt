@@ -5,3 +5,8 @@
 --
 how do control moment gyros work
 how are control moment gyros used for attitude control
+what is a CMG
+what does a CMG do
+what is a control moment gyro used for
+does a CMG need less power than RWA
+do RWAs use more power than CMGs

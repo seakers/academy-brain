@@ -8,3 +8,8 @@ EO/IR sensor components
 EO/IR payload scanners
 EO/IR payload starer
 which payload type uses linear detectors
+how do starers capture an image
+difference between scanner and starer
+how do scanners capture an image
+what is a starer
+limitations of starer

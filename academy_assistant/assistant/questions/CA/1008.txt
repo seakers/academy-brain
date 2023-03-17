@@ -6,3 +6,5 @@
 what are cost drivers for the structures and mechanisms subsystem
 what are requirements for the structures and mechanisms system
 complexity of the structures and mechanisms subsystem
+explain structures and mechanisms cost drivers
+what affects the cost of structures and mechanisms

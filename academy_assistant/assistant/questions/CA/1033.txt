@@ -7,3 +7,5 @@ what are design considerations for the propulsion subsystem
 how is the propulsion subsystem designed
 how do design the propulsion subsystem
 what are the different thruster types for the propulsion system
+what are propulsion thruster types
+what are some propulsion design considerations

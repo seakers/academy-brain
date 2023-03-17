@@ -6,3 +6,6 @@
 what are cost drivers for the propulsion subsystem
 how much does the propulsion subsystem cost
 what effects the cost of the propulsion subsystem
+what are propulsion delta-v requirements
+what determines satellite lifetime
+what are propulsion cost drivers

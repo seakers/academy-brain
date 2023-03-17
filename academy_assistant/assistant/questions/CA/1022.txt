@@ -6,3 +6,5 @@
 what are cost drivers for the electrical power system
 what determines how much the electrical power subsystem costs
 how does orbit effect the cost of the electrical power subsystem
+what are eps cost drivers
+remind me about eps cost drivers

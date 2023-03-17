@@ -7,3 +7,6 @@ what is the spacecraft bus electrical power subsystem
 what does the electrical power subsystem do
 what are the components of the electrical power system
 how does the electrical power system control power
+what are the key components of EPS
+what does the EPS do
+what is an EPS

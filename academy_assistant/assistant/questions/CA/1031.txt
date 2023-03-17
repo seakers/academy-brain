@@ -4,5 +4,7 @@
 1000
 --
 what are cost drivers for the attitude determination and control system
-what effects the cost of the ADCS
+what affects the cost of the ADCS
 what impacts attitude determination and control system cost
+give me a recap of ADCS cost drivers
+explain ADCS cost drivers

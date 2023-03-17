@@ -5,3 +5,6 @@
 --
 show me an example of sizing a solar array
 what are different solar array power densities
+how do you determine BOL power
+what units are used to calculate solar array size
+what is a solar flux

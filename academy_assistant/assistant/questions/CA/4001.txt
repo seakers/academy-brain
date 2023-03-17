@@ -5,3 +5,5 @@
 --
 what is lifecycle cost
 what are the main phases of lifecycle cost
+definition of lifecycle cost
+three phases of lifecycle cost

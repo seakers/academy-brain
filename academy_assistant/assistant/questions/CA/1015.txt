@@ -7,3 +7,5 @@ how are solar arrays sized
 how big should the solar array be
 how to find solar array weight
 example of sizing solar panels
+what do you need to calculate the size of a solar array
+give me the problem statement for calculating the size of a solar array

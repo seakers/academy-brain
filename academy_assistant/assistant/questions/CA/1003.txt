@@ -6,3 +6,7 @@
 What are the different space vehicle components
 what are the functions of space vehicle components
 different spacecraft vehicle functions
+What are the functions of a mission payload
+What does the booster adapter do
+What are the functions of a bus
+Which component supports payload mission

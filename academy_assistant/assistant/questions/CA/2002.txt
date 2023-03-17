@@ -8,3 +8,6 @@ in which spectrum do radars operate
 what is the spectrum region for radar systems
 different remote sensor types
 what are the different payload types
+what are visible systems
+what is the difference between radar and infrared sensors
+at what range to microwave radiometers operate

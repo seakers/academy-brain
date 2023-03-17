@@ -6,3 +6,9 @@
 remote sensing thermal infrared region
 which spectrum has middle wave infrared
 which spectrum has long wave infrared
+what is infrared remote sensing
+how is radiation emitted
+what does MWIR mean
+what does LWIR mean
+what do IR signatures rely on
+show me how radiation is detected with a sensor

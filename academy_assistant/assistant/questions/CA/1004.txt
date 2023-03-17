@@ -6,3 +6,4 @@
 show me a satellite image
 image of satellite integrated bus and payload
 what does a fully integrated satellite look like
+where is the payload on a sattelite

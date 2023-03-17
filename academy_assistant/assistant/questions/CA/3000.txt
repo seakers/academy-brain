@@ -4,5 +4,13 @@
 0010
 --
 What are cost estimating relationships
-How are to use CERs
+How to use CERs
+what is top-down cost estimation based on
+what does CER stand for
+what is the equation for 1 parameter CER
+what is the equation for two parameter CER
+what is a CER used for
+what are cost drivers in space
+how do you calculate a one parameter CER
+
 

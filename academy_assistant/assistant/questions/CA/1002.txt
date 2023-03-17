@@ -8,3 +8,4 @@ What is a satellite
 Define satellite
 What is a space vehicle
 What are the different space segments
+What is in a satellite system

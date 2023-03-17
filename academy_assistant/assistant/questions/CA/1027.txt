@@ -7,3 +7,4 @@ what is the gyroscope in the attitude determination
 how is attitude determination done
 how does the ADCS gyroscope work
 what is the purpose of the ADCS gyroscope
+what does the ADCS gyroscope do

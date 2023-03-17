@@ -9,3 +9,6 @@ examples of electro optical payloads
 what are the different types of electro optical payloads
 different EO/IR payloads
 different EOIR payloads
+examples of visible imagers
+what is a visible imager
+what is an electro optical imager

@@ -4,3 +4,4 @@
 1000
 --
 can you show me an example of sizing a solar array
+what do you need to calculate solar array weight

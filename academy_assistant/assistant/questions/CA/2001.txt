@@ -7,3 +7,6 @@ what can you tell me about remote sensing
 How does the atmosphere impact remote sensing
 what is atmospheric attenuation
 what are target interactions
+what types of remote sensing payloads are there
+what category do remote sensing payloads fall under
+what is remote sensing

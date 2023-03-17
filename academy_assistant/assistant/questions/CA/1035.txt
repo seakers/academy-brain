@@ -5,3 +5,8 @@
 --
 what is the command and data handling subsystem
 what are the functions of the command and data handling subsystem
+what is a TT&C subsystem
+what does C&DH mean
+what does TT&C stand for
+what does a C&DH subsystem do
+what is the purpose of the telemetry, tracking and control subsystem

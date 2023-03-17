@@ -6,4 +6,8 @@
 When are CERs valid
 When are cost estimating relationships valid
 How to find CERs error
-
+what is the equation to calculate CER error
+standard error of the estimate SEE equation
+what does a CER report
+what are cost estimating relationships used for
+CER example

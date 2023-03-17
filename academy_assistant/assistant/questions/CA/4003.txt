@@ -7,3 +7,9 @@ what is the second phase of lifecycle cost
 what is the production phase of lifecycle cost
 what lifecycle cost phase are theoretical first units used in
 what lifecycle cost phase applies a learning factor
+what is a TFU model
+how do you calculate production cost for multiple units
+what are production units
+what model is used to represent a flight qualified satellite
+what does the 2nd phase of lifecycle do
+what is phase 2 of lifecycle cost

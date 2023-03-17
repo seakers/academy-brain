@@ -9,3 +9,8 @@ optical image
 readout integrated circuits
 ROIC
 what is FPA
+what does FPA do
+what material is used for FPA
+what does FPA stand for
+how to improve resolution on FPA
+components of ROIC

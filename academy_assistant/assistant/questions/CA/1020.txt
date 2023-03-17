@@ -6,3 +6,8 @@
 how does the electrical power system distribute power
 how does the electrical power system convert power
 different types of power distribution
+what components handle power distribution
+what is a power converter
+what does a DC cable do
+what is a DC cable for
+what do power converters do

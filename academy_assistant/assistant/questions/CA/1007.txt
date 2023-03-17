@@ -5,3 +5,8 @@
 --
 what are design considerations for the structures and mechanisms subsystem
 how to design the structures and mechanisms subsystem
+how do you design structures
+how do you design mechanisms
+what do you need to account for when designing mechanisms
+considerations for designing mechanisms
+what is important for designing structures
