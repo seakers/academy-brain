@@ -64,37 +64,37 @@ class StatsClient:
         answers = self.get_answered_questions(topic_id)
 
         # --> 2. Print aggregated answers
-        for x in answers:
-            print(x)
+        # for x in answers:
+        #     print(x)
 
         # --> 3. Use model to find new ability parameter estimate
         map_estimate = MAP_Estimator(answers).estimate().x
-        print('--> MAP ESTIMATE:', map_estimate)
+        # print('--> MAP ESTIMATE:', map_estimate)
 
         # --> 4. Update user database
-        result = self.graphql_client.set_user_ability_parameters(self.user_id, topic_id, map_estimate)
+        result = self.graphql_client.set_user_ability_parameters(topic_id, map_estimate)
 
     def select_question(self):
 
         # --> 1. Determine lowest user topic ability parameter
-        sorter_parameters = self.graphql_client.get_user_ability_parameters(self.user_id)
+        sorter_parameters = self.graphql_client.get_user_ability_parameters()
         if len(sorter_parameters) == 0:
             return ex_question
         lowest_topic_id = sorter_parameters[0]['Topic']['id']
         current_estimate = sorter_parameters[0]['value']
-        print('--> Theta:', current_estimate)
+        # print('--> Theta:', current_estimate)
 
         # --> 2. Get set of potential questions for topic (that have not been seen before)
         all_questions = self.graphql_client.get_topic_questions(lowest_topic_id)
 
         # --> 3. Get ids of questions that have already been asked
         repeat_ids = []
-        exam_list = self.graphql_client.get_previously_asked_test_questions(self.user_id)
+        exam_list = self.graphql_client.get_previously_asked_test_questions()
         if len(exam_list) > 0:
             already_asked = exam_list[0]
             for q in already_asked['questions']:
                 repeat_ids.append(int(q['question_id']))
-        slide_list = self.graphql_client.get_previously_asked_module_questions(self.user_id, lowest_topic_id)
+        slide_list = self.graphql_client.get_previously_asked_module_questions(lowest_topic_id)
         for slide in slide_list:
             question_id = int(slide['question']['id'])
             if question_id not in repeat_ids:
@@ -105,7 +105,7 @@ class StatsClient:
         for question in all_questions:
             if int(question['id']) not in repeat_ids:
                 questions.append(question)
-        print('--> NUM QUESTIONS valid/total:', str(len(questions)) + '/' + str(len(all_questions)))
+        # print('--> NUM QUESTIONS valid/total:', str(len(questions)) + '/' + str(len(all_questions)))
 
         if len(questions) == 0:
             questions = all_questions
@@ -123,7 +123,7 @@ class StatsClient:
             ideal_theta = self.calculate_ideal_theta(current_estimate, question)
             difficulties.append(float(question['difficulty']))
             contributions.append(contribution)
-            print('--> ID:', question['id'], current_estimate, ideal_theta, contribution)
+            # print('--> ID:', question['id'], current_estimate, ideal_theta, contribution)
 
         question = questions[contributions.index(max(contributions))]
         question_close = questions[self.find_closest_difficulty_idx(current_estimate, difficulties)]
@@ -180,7 +180,7 @@ class StatsClient:
         sub_text = question['text']
         if len(sub_text) > 30:
             sub_text = sub_text[0:30]
-        print('--> Question:', round(contribution, 4), '-->', sub_text)
+        # print('--> Question:', round(contribution, 4), '-->', sub_text)
         return contribution
 
     def calculate_ideal_theta(self, current_estimate, question):
@@ -188,7 +188,7 @@ class StatsClient:
         b = float(question['difficulty'])
         c = float(question['guessing'])
 
-        print('--> QUESTION PARAMETERS:', a, b, c)
+        # print('--> QUESTION PARAMETERS:', a, b, c)
 
         # --> 1. Get question model
         q_model = IIIPL(a, b, c)

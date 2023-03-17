@@ -1,7 +1,0 @@
-200
---
---
-00001
---
-what is a GSO orbit
-what is a geosynchronous orbit

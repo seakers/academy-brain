@@ -8,7 +8,7 @@ from django.conf import settings
 
 class Preprocessing:
 
-    def __init__(self, version='CA'):
+    def __init__(self, version='QA'):
         self.version = version
         self.app_path = settings.ACADEMY_PATH
         self.templates_path = self.app_path + '/academy_assistant/assistant/questions/' + self.version

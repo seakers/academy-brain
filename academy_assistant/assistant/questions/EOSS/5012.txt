@@ -1,7 +1,0 @@
-200
---
---
-00001
---
-What is IFOV
-What is instantaneous field of view

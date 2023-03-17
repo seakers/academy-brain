@@ -117,16 +117,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CORS_ORIGIN_WHITELIST = (
-# 'http://localhost:8080',
-#     'https://academy.selva-research.com'
-# )
-#
-# CORS_ALLOW_CREDENTIALS = True
-#
-# CSRF_TRUSTED_ORIGINS = (
-#     "https://academy.selva-research.com"
-# )
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'https://academy.selva-research.com'
+)
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = (
+    'http://localhost:8080',
+    "https://academy.selva-research.com"
+)
 
 
 
@@ -197,6 +198,8 @@ if LOAD_NN_MODELS is True:
     for model_folder in os.scandir(model_lib_path):
         if model_folder.is_dir():
             model_folder_name = model_folder.name
+            if model_folder_name not in ['MR', 'QA']:
+                continue
             model_folder_path = os.path.join(model_lib_path, model_folder_name)
             model_dict = {}
             model_lib_dict[model_folder_name] = model_dict

@@ -1,9 +1,0 @@
-50
---
-technology technology
-space_agency space_agency
---
-00010
---
-which missions are currently flying ${technology}
-which missions from ${space_agency} are currently flying ${technology}

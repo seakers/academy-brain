@@ -12,27 +12,31 @@ class Command(BaseCommand):
     help = 'Creates training data for academy models'
 
     def handle(self, *args, **options):
-        command = 'how can design 1963 improve EPS Mass?'
+        command = 'what is the structures and mechanisms subsystem'
+
+
+        user_info_id = 38
+        user_info = UserInformation.objects.get(id=user_info_id)
+
 
 
         print('--> TEST COMMAND CLASSIFICATION:', command)
         start = time.time()
 
-        classifier = Classifier()
+        classifier = Classifier(user_info, library='QA')
         print('--> CONSTRUCTOR: ', time.time() - start)
 
+        material_result = classifier.recommend_material(command)
+        print(material_result)
 
-        role_result = classifier.classify_role(command)
-        print('--> ROLE:', classifier.get_role(role_result), time.time() - start)
 
-        intent_result = classifier.classify_role_intent(command, role_result)
-        intent = classifier.get_intent(role_result, intent_result)
-        print('--> INTENT:', intent, time.time() - start)
+        # role_result = classifier.classify_role(command)
+        # print('--> ROLE:', role_result, classifier.get_role(role_result))
+        #
+        # intent_result = classifier.classify_role_intent(command, role_result)
+        # intent = classifier.get_intent(role_result, intent_result)
+        # print('--> INTENT:', intent_result, intent)
 
-        user_info_id = 38
-        user_info = UserInformation.objects.get(id=user_info_id)
-        intent_handler = IntentHandler(user_info, command, intent)
-        intent_handler.process()
 
 
 

@@ -16,10 +16,11 @@ DEV_SAMPLE_PERCENTAGE = 0.1  # Percentage of the training data to use for valida
 BATCH_SIZE = 16  # Batch Size
 NUM_EPOCHS = 5  # Number of training epochs
 
-
+# Gabe: I'm keeping the material recommender and Q&A models separate for now as I want to try new material recommender models soon
 global_roles = {
-    'CA': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
-    'EOSS': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher']
+    'MR': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost'],
+    'QA_OLD': ['Analyst', 'Engineer', 'Critic', 'Historian', 'Teacher'],
+    'QA': ['Spacecraft Bus', 'Mission Payloads', 'Parametric Estimation', 'Lifecycle Cost']
 }
 
 
@@ -28,7 +29,7 @@ class Training:
 
 
 
-    def __init__(self, version='CA'):
+    def __init__(self, version='QA'):
         self.version = version
         self.app_path = settings.ACADEMY_PATH
         self.model_path = self.app_path + '/academy_assistant/assistant/models/' + self.version

@@ -1,8 +1,0 @@
-200
---
-agent agent
-design_id design_id
---
-00100
---
-what does the ${agent} think of ${design_id}

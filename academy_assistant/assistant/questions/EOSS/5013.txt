@@ -1,7 +1,0 @@
-200
---
---
-00001
---
-What is the difference between FOV and IFOV
-What is the difference between IFOV and FOV
