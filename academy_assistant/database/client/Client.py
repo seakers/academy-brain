@@ -10,7 +10,7 @@ from sqlalchemy import create_engine, Column, Integer, Float, String, DateTime, 
 import pandas as pd
 from datetime import datetime
 
-from client.base import DeclarativeBase
+from academy_assistant.database.client.base import DeclarativeBase
 
 
 class Client:
@@ -117,27 +117,33 @@ class Client:
         self.session.commit()
         return entry.id
 
-    def index_info_slide(self, module_id, type, src, user_id, idx):
-        entry = Slide(module_id=module_id, type=type, src=src, user_id=user_id, idx=idx)
+    def index_info_slide(self, module_id, type, src, user_id, idx, context=''):
+        entry = Slide(module_id=module_id, type=type, src=src, user_id=user_id, idx=idx, context=context)
         self.session.add(entry)
         self.session.commit()
         return entry.id
 
-    def index_question_slide(self, module_id, type, question_id, answered, correct, choice_id, user_id, idx, graded):
+    def index_question_slide(self, module_id, type, question_id, answered, correct, choice_id, user_id, idx, graded, context=''):
         entry = Slide(module_id=module_id, type=type, question_id=question_id, answered=answered, correct=correct,
-                      choice_id=choice_id, user_id=user_id, idx=idx, attempts=0, graded=graded)
+                      choice_id=choice_id, user_id=user_id, idx=idx, attempts=0, graded=graded, context=context)
         self.session.add(entry)
         self.session.commit()
         return entry.id
 
-    def index_quiz_start_slide(self, module_id, type, user_id, idx):
-        entry = Slide(module_id=module_id, type=type, user_id=user_id, idx=idx)
+    def index_quiz_start_slide(self, module_id, type, user_id, idx, context=''):
+        entry = Slide(module_id=module_id, type=type, user_id=user_id, idx=idx, context=context)
         self.session.add(entry)
         self.session.commit()
         return entry.id
 
-    def index_quiz_end_slide(self, module_id, type, user_id, idx):
-        entry = Slide(module_id=module_id, type=type, user_id=user_id, idx=idx)
+    def index_quiz_end_slide(self, module_id, type, user_id, idx, context=''):
+        entry = Slide(module_id=module_id, type=type, user_id=user_id, idx=idx, context=context)
+        self.session.add(entry)
+        self.session.commit()
+        return entry.id
+
+    def index_exam_finish_slide(self, module_id, type, user_id, idx, context=''):
+        entry = Slide(module_id=module_id, type=type, user_id=user_id, idx=idx, context=context)
         self.session.add(entry)
         self.session.commit()
         return entry.id
@@ -150,6 +156,12 @@ class Client:
 
     def index_authuser_group(self, user_id, group_id, admin=False):
         entry = Join__AuthUser_Group(user_id=user_id, group_id=group_id, admin=admin)
+        self.session.add(entry)
+        self.session.commit()
+        return entry.id
+
+    def index_experiment_user(self, user_id, assistant, task_order, assistant_order):
+        entry = UserExperiment(user_id=user_id, assistant=assistant, task_order=task_order, assistant_order=assistant_order)
         self.session.add(entry)
         self.session.commit()
         return entry.id
@@ -189,6 +201,46 @@ class Client:
 class auth_user(DeclarativeBase):
     __tablename__ = 'auth_user'
     __table_args__ = {'autoload': True}
+
+
+# Indexed when experiment starts with condition information
+# - indexed with experiment information after that
+class UserAction(DeclarativeBase):
+    __tablename__ = 'UserAction'
+    id = Column(Integer, primary_key=True)
+    user_id = Column('user_id', Integer, ForeignKey('auth_user.id'))
+    action = Column('action', String)
+    timestamp = Column('timestamp', DateTime, default=func.now())
+
+
+# UserExperiment Fields
+class UserExperiment(DeclarativeBase):
+    __tablename__ = 'UserExperiment'
+    id = Column(Integer, primary_key=True)
+    user_id = Column('user_id', Integer, ForeignKey('auth_user.id'))
+    assistant = Column('assistant', Boolean)
+    task_order = Column('task_order', String)
+    assistant_order = Column('assistant_order', String)
+
+    task_1_study_time = Column('task_1_study_time', Integer, default=0)
+    task_1_quiz_time = Column('task_1_quiz_time', Integer, default=0)
+    task_1_exam_time = Column('task_1_exam_time', Integer, default=0)
+    task_1_quiz_score = Column('task_1_quiz_score', Integer, default=-1)
+    task_1_exam_score = Column('task_1_exam_score', Integer, default=-1)
+
+    task_2_study_time = Column('task_2_study_time', Integer, default=0)
+    task_2_quiz_time = Column('task_2_quiz_time', Integer, default=0)
+    task_2_exam_time = Column('task_2_exam_time', Integer, default=0)
+    task_2_quiz_score = Column('task_2_quiz_score', Integer, default=-1)
+    task_2_exam_score = Column('task_2_exam_score', Integer, default=-1)
+
+    started = Column('started', Boolean, default=False)
+    stage = Column('stage', Integer, default=0)
+
+
+
+
+
 
 
 class Group(DeclarativeBase):
@@ -328,3 +380,5 @@ class Slide(DeclarativeBase):
     idx = Column('idx', Integer)
     attempts = Column('attempts', Integer, nullable=True, default=None)
     graded = Column('graded', Boolean, default=False)
+    context = Column('context', String, default='')
+

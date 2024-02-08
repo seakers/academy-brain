@@ -1,6 +1,7 @@
 import os
 import json
 import datetime
+import re
 
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
@@ -11,6 +12,80 @@ from academy_auth.helpers import get_or_create_user_information
 from academy_auth.models import UserInformation
 from academy_assistant.assistant.Classifier import Classifier
 from academy_assistant.assistant.intents.IntentHandler import IntentHandler
+
+from LLM_tasks.tutor_agent.TutorAgent import TutorAgent
+from LLM_tasks.dialogue_generation.DialogueGenerator import DialogueGenerator
+
+from academy_assistant.database.graphql import GraphqlClient
+# from academy_assistant.database.index import experiment_users
+
+
+experiment_user_1 = {
+    'username': 'exuser1',
+    'email': 'exuser1@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True
+}
+experiment_user_2 = {
+    'username': 'exuser2',
+    'email': 'exuser2@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False
+}
+experiment_users = [
+    experiment_user_1,
+    experiment_user_2
+]
+
+
+
+class Action(APIView):
+
+    def post(self, request, format=None):
+
+        user_info = get_or_create_user_information(request.session, request.user)
+        action_desc = request.data["description"]
+
+        db_client = GraphqlClient(user_info)
+        db_client.index_action(action_desc)
+
+        return Response({'response': 'ok'})
+
+
+
+class ExperimentInfo(APIView):
+
+    def post(self, request, format=None):
+
+        user_info = get_or_create_user_information(request.session, request.user)
+        username = user_info.user.username
+
+        experiment_info = ''
+        for user in experiment_users:
+            if username == user['username']:
+                experiment_info = {
+                    'task_order': user['task_order'],
+                    'assistant': user['assistant']
+                }
+
+        # Stringify info
+        info = json.dumps(experiment_info)
+        return Response({'response': 'ok', 'info': info})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #########################################
@@ -93,4 +168,40 @@ class LMCommand(APIView):
         except Exception as ex:
             print(ex)
             return Response({'response_status': 'error', 'message': 'Error classifying material: ' + str(ex)})
+
+
+
+
+####################
+# Generative Model #
+####################
+
+
+class GMCommand(APIView):
+
+    def post(self, request, format=None):
+
+        user_info = get_or_create_user_information(request.session, request.user)
+        command = request.data["command"]
+        route = request.data['route']
+
+
+
+        # tutor = TutorAgent(user_info)
+        # response = tutor.run(command, route)
+
+        agent = DialogueGenerator(user_info)
+        response = agent.run(command, route)
+        if 'ANSWER:' in response:
+            response = response.replace('ANSWER:', '')
+
+        # Remove UserInfo citations
+        pattern = re.compile(r'\(UserInfo.*?\)')
+        response = pattern.sub('', response)
+
+
+
+        return Response({'response': response})
+
+
 

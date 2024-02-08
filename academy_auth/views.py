@@ -1,7 +1,7 @@
 import json
 import os
 import threading
-
+import json
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from rest_framework.views import APIView
@@ -119,6 +119,31 @@ class Register(APIView):
         return userinfo
 
 
+# ------------------------------------
+# Experiment Users
+# ------------------------------------
+
+experiment_user_1 = {
+    'username': 'exuser1',
+    'email': 'exuser1@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True
+}
+experiment_user_2 = {
+    'username': 'exuser2',
+    'email': 'exuser2@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False
+}
+
+experiment_users = [
+    experiment_user_1,
+    experiment_user_2
+]
+
+
 class Login(APIView):
     """
     Login a user
@@ -143,11 +168,23 @@ class Login(APIView):
             # Get user private key
             user_pk = get_user_pk(username)
 
+            # get experiment info
+            experiment_info = ''
+            for user in experiment_users:
+                if username == user['username']:
+                    experiment_info = {
+                        'task_order': user['task_order'],
+                        'assistant': user['assistant']
+                    }
+            # Stringify info
+            info = json.dumps(experiment_info)
+
             # Return the login response
             return Response({
                 'status': 'logged_in',
                 'username': username,
                 'pk': user_pk,
+                'experiment_info': info
             })
         else:
             return Response({
@@ -204,11 +241,24 @@ class CheckStatus(APIView):
             'email': 'placeholder',
         }
 
+        # get experiment info
+        experiment_info = ''
+        for user in experiment_users:
+            if request.user.username == user['username']:
+                experiment_info = {
+                    'task_order': user['task_order'],
+                    'assistant': user['assistant']
+                }
+        # Stringify info
+        info = json.dumps(experiment_info)
+
         if request.user.is_authenticated:
             response['is_logged_in'] = True
             response['pk'] = get_user_pk(request.user.username)
             response['user_info_pk'] = user_info.id
             response['email'] = get_user_email(request.user.username)
+            response['experiment_info'] = info
+
         else:
             response['is_logged_in'] = False
         return Response(response)

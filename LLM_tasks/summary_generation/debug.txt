@@ -1,0 +1,28 @@
+System:
+You will be provided with a slide set delimited by triple quotes and a question.
+Your task is to CONCISELY answer the question using only the provided slides.
+You must cite the slide you use to answer.
+If the slides do not contain any of the information needed to answer this question then simply write: "Insufficient information."
+
+User:
+"""
+User Report:
+Username: testuser
+Assigned Learning Modules:
+	Space Mission Overview: 0.0% complete
+	Space Environment and Orbits: 0.0% complete
+state: viewing slide 3 in learning module Space Mission Overview:
+{'id': 95, 'idx': 3, 'correct': None, 'context': 'Why go to space?\nLook down – Global perspective\n    Weather forecasting\n    Surveillance\n    Communications and navigation services\nLook out – Above the atmosphere\n    Astrophysics (look up)\n    Atmospheric sounding (look down)\nExplore space\n    Colonization, expand limits of humanity, or just tourism\n    Science: astrobiology, geology, physics, etc.\nNo gravity – Science\n    Microgravity science\n    Materials processing\nAbundant resources!\n    Obtain rare elements and bring them back (gold, platinum)\n    In-situ resource utilization', 'choice_id': None, 'answered': None, 'type': 'info', 'src': 'ITSC_4', 'question_id': None, 'module_id': 1, 'attempts': None, 'question': None}
+"""
+
+What are some reasons for going to space as mentioned in the slide?
+
+Assistant:
+The reasons for going to space mentioned in the slide include:
+
+1. Global perspective for weather forecasting, surveillance, and communications and navigation services.
+2. Astrophysics and atmospheric sounding by looking above the atmosphere.
+3. Exploration of space for colonization, expanding the limits of humanity, or tourism, and science fields like astrobiology, geology, and physics.
+4. Conducting microgravity science and materials processing due to the absence of gravity.
+5. Obtaining abundant resources, such as rare elements like gold and platinum, and in-situ resource utilization (Slide 3).
+

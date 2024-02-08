@@ -5,6 +5,10 @@ from academy_assistant.database.client.modules.mission_payloads import get_modul
 from academy_assistant.database.client.modules.parametric_ca import get_module as get_pca_module
 from academy_assistant.database.client.modules.spacecraft_bus import get_module as get_sb_module
 
+# Experiment Modules
+from academy_assistant.database.client.modules.intro_to_space import get_module as get_intro_module
+from academy_assistant.database.client.modules.space_env_and_orbits import get_module as get_orb_env_module
+
 
 class LearningModule:
 
@@ -13,12 +17,16 @@ class LearningModule:
 
         self.modules = {
             # 'Basics': get_basic_module(),
-            'Spacecraft Bus': get_sb_module(),
-            'Mission Payloads': get_rms_module(),
+
+            # Space Training 101
+            'Space Mission Overview': get_intro_module(),
+            'Space Environment and Orbits': get_orb_env_module(),
+            # 'Spacecraft Bus': get_sb_module(),
+            # 'Mission Payloads': get_rms_module(),
             # 'Bottom Up Estimation': get_buca_module(),
             # 'Economies of Scale': get_eocl_module(),
-            'Parametric Estimation': get_pca_module(),
-            'Lifecycle Cost': get_lc_module(),
+            # 'Parametric Estimation': get_pca_module(),
+            # 'Lifecycle Cost': get_lc_module(),
         }
 
 
@@ -32,7 +40,7 @@ class LearningModule:
 
         # --> 2. Index slide for each user
         for user_id in user_ids:
-            self.client.index_info_slide(module_id, slide['type'], slide['src'], user_id, slide['idx'])
+            self.client.index_info_slide(module_id, slide['type'], slide['src'], user_id, slide['idx'], slide['context'])
 
     def index_question_slide(self, slide, module_id):
 
@@ -51,7 +59,7 @@ class LearningModule:
         for user_id in user_ids:
             # (self, module_id, type, question_id, answered, correct, choice_id, user_id, idx)
             self.client.index_question_slide(module_id, slide['type'], question_id, slide['answered'], slide['correct'],
-                                             slide['choice_id'], user_id, slide['idx'], graded)
+                                             slide['choice_id'], user_id, slide['idx'], graded, slide['context'])
 
     def index_quiz_start_slide(self, slide, module_id):
 
@@ -63,7 +71,7 @@ class LearningModule:
 
         # --> 2. Index slide for each user
         for user_id in user_ids:
-            self.client.index_quiz_start_slide(module_id, slide['type'], user_id, slide['idx'])
+            self.client.index_quiz_start_slide(module_id, slide['type'], user_id, slide['idx'], slide['context'])
         return 0
 
     def index_quiz_end_slide(self, slide, module_id):
@@ -76,8 +84,22 @@ class LearningModule:
 
         # --> 2. Index slide for each user
         for user_id in user_ids:
-            self.client.index_quiz_start_slide(module_id, slide['type'], user_id, slide['idx'])
+            self.client.index_quiz_start_slide(module_id, slide['type'], user_id, slide['idx'], slide['context'])
         return 0
+
+    def index_exam_finish_slide(self, slide, module_id):
+
+        # --> 1. Get user ids
+        users = self.client.get_users()
+        user_ids = [None]
+        for user in users:
+            user_ids.append(user.id)
+
+        # --> 2. Index slide for each user
+        for user_id in user_ids:
+            self.client.index_exam_finish_slide(module_id, slide['type'], user_id, slide['idx'], slide['context'])
+        return 0
+
 
     def index(self):
 
@@ -105,3 +127,5 @@ class LearningModule:
                     self.index_quiz_start_slide(slide, module_id)
                 elif slide['type'] == 'quiz_end':
                     self.index_quiz_end_slide(slide, module_id)
+                elif slide['type'] == 'exam_finish':
+                    self.index_exam_finish_slide(slide, module_id)

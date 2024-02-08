@@ -1,0 +1,112 @@
+System:
+You are a tutoring assistant tasked with answering a user question. Specifically, you are to query a set of databases until you have the necessary information to answer the question. Each database contains information about a course learning module.
+The databases are the following:
+    SpaceMissionOverview: information on the elements of a space mission including types of missions, mission segments, and mission phases
+    SpaceEnvironmentAndOrbits: information on the environment of a space mission and space mission orbits
+    UserInfo: information on the user including what they are viewing such as slide content
+
+Your task is twofold:
+1. Decompose the user question into multiple SIMPLE CONCISE queries, as shown in the examples below. To query a database, start your message with the name of the database in parentheses. If a query has NO RESULTS, try to re-query the module once.
+2. Once you have the necessary information answer the user question using only the information from the databases. Start your final answer with "ANSWER" and cite the modules and slides used.
+
+User:
+What is the difference between the Troposphere and Mesosphere?
+
+Assistant:
+(SpaceEnvironmentAndOrbits) Describe the Troposphere in detail.
+
+Assistant:
+(SpaceEnvironmentAndOrbits) Describe the Mesosphere in detail.
+
+Assistant:
+ANSWER: The difference between the Troposphere and Mesosphere is... (SpaceEnvironmentAndOrbits, Slide 6)
+
+User:
+How is atmospheric drag calculated for a satellite?
+
+Assistant:
+(SpaceEnvironmentAndOrbits) How is atmospheric drag calculated?
+
+Assistant:
+ANSWER: Atmospheric drag is calculated with... (SpaceEnvironmentAndOrbits, Slide 7)
+
+User:
+What is the purpose of the communications segment?
+
+Assistant:
+(SpaceMissionOverview) What is the purpose of the communications segment?
+
+Assistant:
+ANSWER: The purpose of the communications segment is... (SpaceMissionOverview, Slide 29)
+
+User:
+Compare and contrast mission design phases A and B
+
+Assistant:
+(SpaceMissionOverview) What happens during mission design phase A?
+
+Assistant:
+(SpaceMissionOverview) What happens during mission design phase B?
+
+Assistant:
+ANSWER: Mission design phase A... (SpaceMissionOverview, Slide 34, Slide 35)
+
+User:
+What learning modules am I assigned?
+
+Assistant:
+(UserInfo) Which learning modules are assigned to the user?
+
+Assistant:
+ANSWER: You are assigned the following learning modules... (UserInfo, Slide 1)
+
+User:
+Summarize this slide for me.
+
+Assistant:
+(UserInfo) Explain the content of the slide the user is viewing.
+
+Assistant:
+ANSWER: This slide describes the different... (UserInfo, Slide 1)
+
+User:
+END OF EXAMPLES
+
+User:
+Can you please generate a multiple choice question for me from this slide?
+
+Assistant:
+(UserInfo) Generate a multiple choice question from the slide the user is viewing.
+
+User:
+What are some reasons for going to space as mentioned in the slide?
+A) Weather forecasting and surveillance
+B) Colonization and tourism
+C) Microgravity science and materials processing
+D) All of the above
+
+Correct Answer: D) All of the above (Slide: state: viewing slide 3 in learning module Space Mission Overview)
+
+Assistant:
+(UserInfo) What are some reasons for going to space as mentioned in the slide?
+
+User:
+The reasons for going to space mentioned in the slide include:
+
+1. Global perspective for weather forecasting, surveillance, and communications and navigation services.
+2. Astrophysics and atmospheric sounding by looking above the atmosphere.
+3. Exploration of space for colonization, expanding the limits of humanity, or tourism, and science fields like astrobiology, geology, and physics.
+4. Conducting microgravity science and materials processing due to the absence of gravity.
+5. Obtaining abundant resources, such as rare elements like gold and platinum, and in-situ resource utilization (Slide 3).
+
+Assistant:
+ANSWER: The reasons for going to space mentioned in the slide include:
+
+1. Global perspective for weather forecasting, surveillance, and communications and navigation services.
+2. Astrophysics and atmospheric sounding by looking above the atmosphere.
+3. Exploration of space for colonization, expanding the limits of humanity, or tourism, and science fields like astrobiology, geology, and physics.
+4. Conducting microgravity science and materials processing due to the absence of gravity.
+5. Obtaining abundant resources, such as rare elements like gold and platinum, and in-situ resource utilization.
+
+(Slide 3 in the learning module Space Mission Overview)
+

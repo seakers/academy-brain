@@ -1,0 +1,104 @@
+[
+    {
+        "entry": "Slide 1\nIntro to Space Commodities\nModule 2: Space Environment and Orbits\nDr. Daniel Selva (Texas A&M University)\nDr. Alejandro Salado (University of Arizona)\n"
+    },
+    {
+        "entry": "Slide 2\nIntro to Module 2\nIn this module, you will get introduced to space missions and the space mission design process. \nThe module consists of 4 short lectures:\n    Space environment. What makes space a harsh environment? How does it affect humans and spacecraft?\n    Introduction to orbits. What is an orbit and why is it important? \n    Types of orbits. What types of orbits are there? How does orbit selection affect spacecraft design? \n    Orbital maneuvers. How do different types of maneuvers work in space? Implications on spacecraft design.\n"
+    },
+    {
+        "entry": "Slide 3\n1. Space Environment\n"
+    },
+    {
+        "entry": "Slide 4\nKey space environment factors affecting spacecraft (and humans!)\n    Microgravity\n    Vacuum\n    Radiation\n    Atmospheric Drag\n    Atomic oxygen\n    Extreme Temperatures\n    Space Debris\n"
+    },
+    {
+        "entry": "Slide 5\n\u201cMicrogravity\u201d\nObjects are in \u201cfree fall\u201d, not absence of gravity!\n    Gravity compensated by centrifugal force due to orbital speed \nNear absence of gravity (~10-6 g) means that:\n    Objects don\u2019t fall\n    Bubbles don\u2019t rise\n    Particles don\u2019t settle in a solution\n    No convection (eliminates an important heat transfer mechanism!)\nThis presents challenges, mostly for astronauts\u2026\n    Bone loss\n    Muscle loss\n    Cardiovascular problems\n    Immune system\n\u2026but also opportunities\n    Formation of large crystals\nThe effects on traditional Earth satellites are relatively benign (e.g., lower structural stresses when in orbit)\n"
+    },
+    {
+        "entry": "Slide 6\nAtmosphere layers\nTroposphere (0-10km)\n    Where we are (weather, pollution)\nStratosphere (10-50km)\n    Where airplanes and balloons are\n    Stratospheric chemistry\n    Ozone layer absorbs UV\nMesosphere (50-80km)\n    Where suborbital flights go\nThermosphere (80-400km)\n    Where very low earth satellites are\n    Atomic oxygen absorbs radiation\n    Ions\nExosphere (>400km)\n    Where most satellites are\n"
+    },
+    {
+        "entry": "Slide 7\nAtmospheric drag \u2013 Orbit/attitude disturbance\nWe care about atmospheric density mostly because it affects the drag (D) seen by the satellite, which may lead to orbital decay and disturbance torques:\nD = (1/2)*p*V^2*C_d*A\np  is the atmospheric density (varies exponentially but very small in orbit)\nC_d is the drag coefficient (2-4 are typical values for spacecraft)\nV is the orbital velocity\nAtmospheric drag is strong up to 500km, negligible after that\n    A CubeSat at 400km has 1-9 month lifespan, and 600km one has over 25 years lifespan\n"
+    },
+    {
+        "entry": "Slide 8\nAtomic Oxygen \u2013 Erosion\nIn the upper layers of the atmosphere the predominant constituent is atomic oxygen (O), formed by photodissociation of O2\n - O_2 + light = O + O\nHighly reactive and energetic\nIt erodes satellite surfaces (teflon, epoxies, Mylar)\nSurfaces can be protected by coating them with something that is \"immune\" to O:\n - silicon dioxide\n - aluminum\nSource: http://esmat.esa.int/Atox_on_metals.PDF\n"
+    },
+    {
+        "entry": "Slide 9\nVacuum \u2013 Outgassing\nOutgassing is the release of gas that was trapped in some material\n - adhesives, insulators, thermal coating, electrical shields\nVacuum facilitates outgassing due to decreased sublimation and evaporation points. \nOutgassed material tends to condense onto cooler surfaces. \n - Optical elements, radiators, solar cells\nReaction with UV radiation results in dark stains that may affect performance of instruments or solar panels.\nSome materials outgas more than others in vacuum (e.g., Cd, Zn, Mg, paints, etc.)\nSpacecraft manufacturers have lists of low outgassing materials\n"
+    },
+    {
+        "entry": "Slide 10\nEarth\u2019s magnetic field\nThe Earth has a magnetic field\n - Protects us from radiation\n - Generates forces that rotate spacecraft (can be leveraged using magnetic torquers)\nMagnetic field lines points from magnetic south to north\n - Different from geographic equator and poles\nIntensity decreases with distance as 1/r^3\nMax at the magnetic equator, min at the magnetic poles\n"
+    },
+    {
+        "entry": "Slide 11\nEarth\u2019s magnetosphere\nMagnetosphere is the region around Earth in which ions are controlled by the Earth\u2019s magnetic field\nIt protects us from solar and other radiation up to certain levels of energy\n"
+    },
+    {
+        "entry": "Slide 12\nElectromagnetic radiation\nElectromagnetic radiation is carried by waves and massless particles (named photons) that travel at the speed of light\nWaves are periodic:\n - Wavelength is the distance between consecutive peaks\n - Frequence is the time interval between consecutive peaks\nFrequency 'f' and wavelength 'lambda' are related to the speed of light 'c'\n - f = c / lambda\nEnergy of a photon is proportional to its frequency through the Planck constant h\n - E = h*f = (h*c) / lambda\n"
+    },
+    {
+        "entry": "Slide 13\nSolar Radiation \u2013 Light, matter, and fields\nExplosions in the Sun's atmosphere produce both: light (photons), and matter (charged particles such as ions and electrons)\nThis becomes radiation from the Sun\nSolar flares are huge bursts of photons in all wavelengths, but mostly x-rays and extreme UV (EUV): E ~ 10^25 J\nCoronal Mass Ejections (CME) are made of particles (ions and electrons) ejected at very high speeds (solar wind)\n - from 0.2-3 CME/day\n - ~500km/s (~3days to reach earth)\n - ~10 protons/cm^3\n"
+    },
+    {
+        "entry": "Slide 14\nSolar Radiation \u2013 Geomagnetic storms\nGeomagnetic storms are temporary disturbances in the Earth magnetosphere due to interaction with solar radiation\nThey create: Solar energetic particle events, Geomagnetically induced currents, Ionospheric disturbances, Auroras\nThis creates multiple problems for spacecraft and astronauts\n - Drag\n - Spacecraft charging\n - Radiation poisoning\nAnd even affect Earth\u2019s infrastructure such as power grids! \n"
+    },
+    {
+        "entry": "Slide 15\nSolar cycle\nAverage total solar irradiance (energy per unit time and area) is about 1366 W/m^2\nHowever, there are periodic variations on the order of +- 0.5W/m^2\nThese fluctuations have a period of ~11 years (solar cycle)\nCan be observed through variations in solar spots\nThus, timing of launch within solar cycle affects atmospheric drag and amount of radiation\n"
+    },
+    {
+        "entry": "Slide 16\nGalactic Cosmic Rays\nGalactic Cosmic Rays (GCR) are radiation from outside the solar system\n - from supernovae, black holes, etc\nMuch more energtic than solar radiation (GeV-PeV, where 1eV = 1.6*10^(-19); G, T, P = 10^9, 10^12, 10^15 respectively)\n - Protons or heavier ions travelling at relativistic speeds\nLarger threat, especially for interplanetary missions\nGCR is max at solar cycle minumum\nCreate Single Event Phenomena (SEP): Single particle can destroy an electronic component.\n"
+    },
+    {
+        "entry": "Slide 17\nVan Allen Radiation Belts\nThe Van Allen Belts are 2 regions of trapped fast charged particles (electrons and protons)\n - Inner belt: 1,000-6,000km altitude\n - Outer belt: 13,000-60,000km\nMost LEO satellites are below the 1st ring (inner belt) so they have a more benign radiation environment\nMEO satellites are in the middle of the 2nd ring (outer belt) so they see more radiation (e.g., GPS satellites)\nGEO satellites are in the edge of the outer belt (radiation also a problem)\nThe South Atlantic Anomaly is a range of longitudes where the Earth\u2019s magnetic field is weaker and thus radiation is worse. Leads to more radiation-related spacecraft failures.\n"
+    },
+    {
+        "entry": "Slide 18\nSpacecraft charging\nAs a result of charged particles looming around in space, a positive or negative charge can accumulate in a spacecraft\u2019s surface\n - Like when you walk on carpet\nThis can lead to very damaging electrostatic discharges\n - when you touch the doorknob\nSpacecraft have to be carefully designed to mitigate this risk\n"
+    },
+    {
+        "entry": "Slide 19\nRadiation and shielding\nIn summary, the total dose of radiation comes from:\n - Sunlight (mostly UV photons)\n - Solar flares (EUV and X-rays)\n - Solar wind (low energy protons)\n - CME (medium-high energy protons)\n - Radiation belt (protons and electrons)\n - Galactic Cosmic Rays (relativistic heavy nuclei)\nSpacecraft must shield against this radiation\n - Ex: Thick layer of aluminum, or water for human spaceflight.\nThe more total radiation dose expected during the mission\u2019s lifetime, the thicker the layer of aluminum must be.\n"
+    },
+    {
+        "entry": "Slide 20\nOrbital debris and meteoroids\nAny non-operational object in orbit is considered debris\nIncludes mission-related debris, such as\n - Pieces of dead satellites\n - Pieces of launch vehicles (fairings, inter-stage adapters)\n - Others (e.g., Ed White\u2019s glove from Gemini 4 mission)\nAnd naturally occurring debris\n - Micrometeoroids\n - Asteroid particles\nMostly concentrated around most populated orbits (e.g., GPS and GEO orbits)\n"
+    },
+    {
+        "entry": "Slide 21\nOrbital debris and meteoroids\nCan cause collisions that destroy [parts of] spacecraft\nAll objects above 10cm are visible from Earth and are currently being monitored and carefully catalogued\n"
+    },
+    {
+        "entry": "Slide 22\nSpacecraft Thermal Environment\nSpacecraft receive heat from \n - the Sun (direct and reflected off Earth), \n - the Earth,\n - internal sources (e.g., electronics)\nVariations in these contributions along a spacecraft\u2019s orbit can result in fast and extreme temperature changes\n - When a spacecraft has large surface areas directly exposed to the Sun, it can get pretty hot\n - When a spacecraft is behind Earth (there is no sunlight), we say it is in eclipse \u2013 it gets cold pretty quickly\nTo manage this heat, spacecraft rely primarily on radiation\n - No convection in space (e.g., heat doesn\u2019t rise)\nTo control radiation, spacecraft often use coatings such as paints and thermal insulators with radiative properties specially designed for the mission\n - More on this in the spacecraft subsystems module!\n"
+    },
+    {
+        "entry": "Slide 23\n2. Introduction to orbits\n"
+    },
+    {
+        "entry": "Slide 24\nWhat are orbits?\nOrbits are the trajectories that spacecraft \u201cnaturally\u201d follow around the Earth due to gravitational forces\nAny two objects under each other\u2019s gravitational force will \u201corbit each other\u201d\n - This is called the 2-body problem\nWhen one is much larger than the other (e.g., a satellite vs Earth, or the Earth vs the Sun) the motion of the large object is largely unaffected and it all happens as if the small object rotates around the large object\n"
+    },
+    {
+        "entry": "Slide 25\nShape of orbits\nSatellite orbits are generally ellipses\nThe earth (or central body) sits in one of the focus points\nAn ellipse is usually defined by 2 parameters:\n - the semimajor-axis a is half the length of the longer axis (increasing 'a' makes the orbit \"bigger\", further from earth)\n - Eccentricity e tells us how elongated the ellipse is (when e = 0 the orbit is circular)\nTogether, a and e define the shape of the orbit\n"
+    },
+    {
+        "entry": "Slide 26\nConic sections, open vs closed orbits\nMore generally, orbital trajectories can follow the shape of any conic section (circle, ellipse, parabola, or hyperbola)\nCircular and elliptical orbits (0 <= eccentricity < 1) are \"closed orbits\" around earth\nA satellite with sufficient energy (eccentricity >= 1) will escape earth and follow an interplanetary trajectory that never comes back (i.e. open orbits)\n - when eccentricity = 1, it follows a parabolic trajectory\n - when eccentricity > 1 it follows a hyperbolic trajectory\nHyperbola: \n"
+    },
+    {
+        "entry": "Slide 27\nPosition of a satellite within its orbit\nThe true anomaly 'theta' is an angle that defines where within the orbit the satellite is at a given point in time.\nThere are two special points:\n - the perigee is the point where it is closest to the earth\n - the apogee is the point where it is farthest from earth\nGiven semi-major axis (a), eccentricity (e), and theta, we can compute the satellite position r, i.e. the distance betwseen the satellite and earth\n - r(theta) = (a*(1-e^2))/(1+e*cos(theta)) \n"
+    },
+    {
+        "entry": "Slide 28\nOrientation of the orbit and orbital plane\nThe orbit lies on a plane called the orbital plane that intersects the Earth's equatorial plane (i.e. at 0 degrees latitude) at two points called the nodes:\n - Ascending node: where the satellite is going north\n - Descending node: where it is going south\nThe orientation of the orbit (the ellipse) within the orbital plane is defined by an angle called the argument of perigee\n - Angle from the ascending node to the perigee from the earth center, 'w'\nThe orientation of the orbital plane with respect to the Earth is defined by two angles:\n - the inclination 'i' is the tilt angle between the orbital plane and the equatorial plane\n - the right ascension of the ascending node (called RAAN) 'omega' is the twist angle of the orbital plane, from the vernal equinox (a fixed direction in space) to the ascending node.\n"
+    },
+    {
+        "entry": "Slide 29\nOrbital parameters, period\nTogether, the 6 orbital parameters semi-major axis (a), eccentricity (e), inclination (i), argument of perigee (w), right ascension of the ascending node (omega), and true anomaly (theta) fully define the trajectory of the satellite\n - from these 6 parameters, we can calculate anything: the satellite position, velocity, etc.\nFor example, from kepler's laws, we can calculate the orbital period (T), aka the time it takes the satellite to go around its orbit once:\n - T = (1/2*pi) * sqrt(a^3 / G*M)\nWhere G = 6.67*10^(-11) (Newton * meter^2 / kilogram^2) is the gravitational constant and M = 5.97*10^24 kg is the mass of earth\nNote that it only depends on the semi-major axis!\n"
+    },
+    {
+        "entry": "Slide 30\nOrbital velocity\nSimilarly, using the vis-viva equation (conservation of energy), we can compute the velocity of the satellite:\n - V = sqrt(G*M*(2/r - 1/a)) where r is distance from earth and a is semi-major axis\nFor a general elliptical orbit, we see that as predicted by Kepler's laws, the satellite will move faster the closer it gets to Earth, and will slow down as it gets farther from Earth\nFor a circular orbit, r = a = R_e + h, where R_e = 6370km is the radius of earth and h is the orbit altitude. In this case, the velocity is constant:\n - V = sqrt(G*M*(1/(R_e + h)))\n"
+    },
+    {
+        "entry": "Slide 31\nExample: What is the orbital period and velocity of a satellite in a circular orbit around Earth at 600km altitude?\nThe orbital period is:\n - T = (1/2pi) * sqrt(a^3/(G*M)) = 96.7min\nThe orbital velocity is:\n - V = sqrt((G*M)/(R_e + h)) = 7.56km/s\nIn general, satellites in low Earth orbits (400-800km altitudes) have periods of ~92-100 minutes and velocities of ~7.4-7.7 km/s\nPeriod increases with altitude whereas velocity decreases with it\nThe special altitude that leads to a period of 24h is about 36,000km, this is called a geosynchronous orbit\n"
+    },
+    {
+        "entry": "Slide 32\nOrbit perturbations \u2013 Effect of J2\nIn the absence of any peturbations, the orbital parameters a, e, i, w, omega would stay constant over time\n - The orientation of the orbital plane would stay fixed, independent of the motion of earth\nIn reality, the plane rotates over time primarily because the earth is not a perfect sphere.\n - This is nodal precession, a change in RAAN over time\n - The earth's shape is modeled using spherical harmonics with many coefficients terms\n - The largest coefficient is the ablateness of the earth, which is captured by the so-called J_2 parameter\nRate of nodal precession is different for different orbits:\n - precission_rate = -3/(2(1-e^2)^2) * n * J_2 * (R_e/a)^2 * cos(i), where n= 2pi / T\nJ2 also causes the argument of the perigee to rotate within the orbital plane, which is called apsidal precession\n"
+    },
+    {
+        "entry": "Slide 33\nOrbit perturbations\nAnother major orbit perturbation for very low Earth orbits is atmospheric drag which creates orbital decay below 600km\nThere are several other sources of orbit perturbations:\n - 3rd body effects (Moon and Sun) Solar radiation pressure\n - Other harmonics (J4, J6), other planets, albedo, tidal effects, ...\nMagnitude of each depends strongly on altitude, but J2 is often strongest\nExample: \n - For a satellite at 300km, drag is as strong as J2 (really dominates)\n - At 800km, J2 dominates\n - At 36,000km, the Sun/Moon effects are as strong as J2\nBecause of all these perturbations, spacecraft use propellant to keep their orbit parameters constant \n - This is called station-keeping\n"
+    },
+    {
+        "entry": "Slide 34\nGround tracks\nThe ground track is the projection of the position of satellite on the Earth\u2019s surface (lat,lon) over time\n - They are a useful visualization of an orbit since they show which regions are \u201cseen\u201d\nCan infer orbital parameters from ground tracks\n - Inclination from max latitude\n - Period (and thus semimajor axis) from equatorial orbit shift between consecutive tracks\n"
+    }
+]

@@ -119,6 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',
+    'http://127.0.0.1:8080',
     'https://academy.selva-research.com'
 )
 
@@ -126,6 +127,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = (
     'http://localhost:8080',
+    'http://127.0.0.1:8080',
     "https://academy.selva-research.com"
 )
 
@@ -187,7 +189,7 @@ ACADEMY_PATH = '/home/ec2-user/academy-brain'
 #################
 NN_MODELS = {}
 NN_MODELS_LIB_PATH = '/home/ec2-user/academy-brain/academy_assistant/assistant/models'
-LOAD_NN_MODELS = True
+LOAD_NN_MODELS = False
 if LOAD_NN_MODELS is True:
     print('--> LOADING NN MODELS')
     import os
