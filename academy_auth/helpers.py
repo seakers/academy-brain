@@ -17,6 +17,7 @@ def get_or_create_user_information_async(session, user) -> UserInformation:
 
 def get_or_create_user_information(session, user):
     userinfo = get_user_information(session, user)
+    print("############ userinfo ##########", userinfo, user.is_authenticated, user)
     if userinfo is not None:
         return userinfo
     if user.is_authenticated:
@@ -73,6 +74,7 @@ def create_user_information(session_key=None, username=None):
             raise Exception("Unexpected input for create_user_information")
         user_info.save()
 
+        print("### BEFORE RETURNING ##############", user_info)
         return user_info
 
 

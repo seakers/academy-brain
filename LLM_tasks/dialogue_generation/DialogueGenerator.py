@@ -84,6 +84,69 @@ class DialogueGenerator(LLM_Task):
         # 4. Start Conversation
         return self.start_dialogue(messages, route)
 
+    def run_vision(self, input, slide_info, route=''):
+
+        # 1. System message
+        print("##### IN DIALOUGE GEN ######")
+        system_message = self.system_msg + self.exam_check(route)
+        messages = [
+            {
+                'role': 'system',
+                'content': system_message
+            },
+        ]
+
+        # 2. Examples
+        # messages += self.search_convo_examples(input, examples=self.req_examples, num_examples=2)
+        messages += self.search_convo_examples(input)
+        messages.append({
+            'role': 'user',
+            'content': "END OF EXAMPLES"
+        })
+
+        ############## ADD FOR GPT VISION #####################
+        # slide_image_url = None
+        slide_image_url = "http://drive.google.com/uc?export=view&id=1yrGe-_kej1hG5h5rbTE63562UOUigx7i"
+
+        ################ TO DO :: ADD CODE TO ASSIGN "slide_image_url" URL of image ####################
+        # slide_info = {topic: this.currentTopic, module: this.currentModule, slide: this.currentSlide}
+        ## Call query to get slide_image_url for particular topic, module and slide
+
+        db_client = GraphqlClient(self.user_info)
+        
+        # imageurl_info = db_client.get_slide_info(slide_info["topic"], slide_info["module"], slide_info["slide"])
+        imageurl_info = db_client.get_slide_info(slide_info["module"], slide_info["slide"])
+        print("##### imageurl_info ####", imageurl_info)
+
+        if len(imageurl_info):
+            slide_image_url = imageurl_info[0]['image_url']
+            
+        print("##### slide_image_url ####", slide_image_url)
+
+        ################################################################################################
+
+        # 3. User Input
+        messages.append({
+            'role': 'user',
+            'content': [
+                {
+                    "type": "text",
+                    "text": input
+                    },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                    "url": slide_image_url
+                    }
+                }
+            ]
+        })
+        #######################################################
+
+
+        # 4. Start Conversation
+        return self.start_dialogue(messages, route)
+
     def start_dialogue(self, messages, route):
         # This function will loop calling the LLM until a final answer is reached
 

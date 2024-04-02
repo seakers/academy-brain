@@ -40,7 +40,8 @@ class LearningModule:
 
         # --> 2. Index slide for each user
         for user_id in user_ids:
-            self.client.index_info_slide(module_id, slide['type'], slide['src'], user_id, slide['idx'], slide['context'])
+            print("######SLIDE#######", slide['image_url'])
+            self.client.index_info_slide(module_id, slide['type'], slide['src'], user_id, slide['idx'], slide['context'], slide['image_url'])
 
     def index_question_slide(self, slide, module_id):
 

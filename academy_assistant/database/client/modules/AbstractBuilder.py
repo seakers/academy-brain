@@ -22,12 +22,13 @@ class AbstractBuilder:
 
 
 
-    def add_slide(self, src, context=''):
+    def add_slide(self, src, context='', image_url = None):
         self.slides.append({
             'type': 'info',
             'src': src,
             'idx': len(self.slides),
-            'context': context.strip()
+            'context': context.strip(),
+            'image_url': image_url 
         })
 
     def add_quiz_start_slide(self):

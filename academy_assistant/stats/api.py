@@ -21,7 +21,8 @@ class StatsClient:
 
     def __init__(self, user_info):
         self.user_info = user_info
-        self.user_id = user_info.user.id
+        # self.user_id = user_info.user.id
+        self.user_id = 1
         self.graphql_client = GraphqlClient(user_info)
 
     def get_answered_questions(self, topic_id):

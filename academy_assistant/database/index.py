@@ -5,8 +5,9 @@ import json
 
 
 # --> Setup django for standalone use
-sys.path.append('/home/ec2-user/academy-brain')
-sys.path.append('/home/ec2-user/academy-brain/academy_assistant')
+# sys.path.append('/home/ec2-user/academy-brain')
+# sys.path.append('/home/ec2-user/academy-brain/academy_assistant')
+sys.path.append('E:/SEM IV - Courses/GAR/Work/Source Code/academy-brain')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'academy.settings')
 django.setup()
 from django.contrib.auth.models import User
@@ -215,17 +216,32 @@ def main():
 
     # DROP / CREATE TABLES
     client.initialize()
-
+    print("Init Done")
+    
     # Index demo users
     index_demo_users(client)
+    print("#####1##########")
+
     index_experiment_users(client)
+    print("#####2##########")
+
 
     # Index learning content
     Excel(client).index()
+    print("#####3##########")
+
     LearningModule(client).index()
+    print("#####4##########")
+
     Questions(client).index()
+    print("#####5##########")
+
     Topic(client).index()
+    print("#####6##########")
+
     Message(client).index()
+    print("#####7##########")
+
 
 
 

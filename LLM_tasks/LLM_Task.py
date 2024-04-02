@@ -174,7 +174,8 @@ class LLM_Task:
 
     def stream_chat_completion(self, messages, prefix='Task: '):
         streamed_completion = openai.ChatCompletion.create(
-            model=self.model,
+            # model=self.model,
+            model="gpt-4-vision-preview",
             messages=messages,
             max_tokens=self.max_tokens,
             temperature=self.temperature,

@@ -117,8 +117,8 @@ class Client:
         self.session.commit()
         return entry.id
 
-    def index_info_slide(self, module_id, type, src, user_id, idx, context=''):
-        entry = Slide(module_id=module_id, type=type, src=src, user_id=user_id, idx=idx, context=context)
+    def index_info_slide(self, module_id, type, src, user_id, idx, context='', image_url=None):
+        entry = Slide(module_id=module_id, type=type, src=src, user_id=user_id, idx=idx, context=context, image_url=image_url)
         self.session.add(entry)
         self.session.commit()
         return entry.id
@@ -381,4 +381,5 @@ class Slide(DeclarativeBase):
     attempts = Column('attempts', Integer, nullable=True, default=None)
     graded = Column('graded', Boolean, default=False)
     context = Column('context', String, default='')
+    image_url = Column('image_url', String, default=None)
 

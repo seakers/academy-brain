@@ -184,14 +184,37 @@ class GMCommand(APIView):
         user_info = get_or_create_user_information(request.session, request.user)
         command = request.data["command"]
         route = request.data['route']
-
-
-
+        print("############### INFO #############", request.user)
+        print(user_info)
+        # print(user_info.keys())
+        # print(user_info.user)
+        print(request.user)
+        print(user_info.id)
+        print(request.data)
+        
         # tutor = TutorAgent(user_info)
         # response = tutor.run(command, route)
 
         agent = DialogueGenerator(user_info)
-        response = agent.run(command, route)
+        response = None
+
+        ############## ADD FOR GPT VISION #####################
+        print("############### GOING FOR VISION ##############")
+        # print(request.data['slide_info'][0])
+        print(request.data['vision'][0])
+        print(json.loads(request.data['slide_info']))
+        print("vision" in request.data)
+
+        if "vision" in request.data and str(request.data['vision']) == "true":
+            slide_info = json.loads(request.data['slide_info'])
+            print(slide_info["topic"])
+            
+            response = agent.run_vision(command, slide_info, route)
+            
+        else:    
+            response = agent.run(command, route)
+        ###################################
+
         if 'ANSWER:' in response:
             response = response.replace('ANSWER:', '')
 

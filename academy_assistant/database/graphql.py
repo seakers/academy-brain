@@ -15,9 +15,13 @@ import time
 class GraphqlClient:
 
     def __init__(self, user_info):
-        self.hasura_url = 'https://academy.selva-research.com/graphql/v1/graphql'
+        # GRAPHQL URL
+        # self.hasura_url = 'https://academy.selva-research.com/graphql/v1/graphql'
+        self.hasura_url = 'http://127.0.0.1:6002/v1/graphql'
         self.user_info = user_info
-        self.user_id = user_info.user.id
+        # self.user_id = user_info.user.id
+        self.user_id = 1
+        # self.user_id = 1
 
 
     def execute_query(self, query, variables=None):
@@ -174,6 +178,30 @@ class GraphqlClient:
         query_result = self.execute_query(query, variables)
         return query_result["data"]["messages_db"]
 
+    
+    ################ GET SLIDE IMAGE URL ####################
+    def get_slide_info(self, module_id, idx):
+        # query = '''
+        #     query getSlideInfo($topic_id: Int!, $module_id: Int!, $slide_id: Int!) {
+        #         slide_info(where: {topic_id: {_eq: $topic_id}, module_id: {_eq: $module_id}, slide_id: {_eq: $slide_id}}) {
+        #             image_url
+        #         }
+        #     }
+        # '''
+        query = '''
+            query getSlideInfo($module_id: Int!, $idx: Int!) {
+                slide_info: Slide(where: {module_id: {_eq: $module_id}, idx: {_eq: $idx}}) {
+                    image_url
+                }
+            }
+        '''
+        variables = {
+            # 'topic_id': topic_id,
+            'module_id': module_id,
+            'idx': idx,
+        }
+        query_result = self.execute_query(query, variables)
+        return query_result["data"]["slide_info"]  
 
 
 
