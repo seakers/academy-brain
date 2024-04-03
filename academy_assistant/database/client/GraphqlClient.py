@@ -143,6 +143,38 @@ class GraphqlClient:
         query_result = self.execute_query(query, variables)
         return query_result
 
+    def set_question_ab_parameters(self, id, discrimination, difficulty):
+        query = '''
+            mutation set_question_ab_parameters($id: Int!, $discrimination: float8!, $difficulty: float8!) {
+                update_Question(where: {id: {_eq: $id}}, _set: {discrimination: $discrimination, difficulty: $difficulty}) {
+                    affected_rows
+                }
+            }
+        '''
+        variables = {
+            'id': id,
+            'discrimination': discrimination,
+            'difficulty': difficulty
+        }
+        query_result = self.execute_query(query, variables)
+        return query_result  
+
+    def get_question_abc_parameters(self, question_id):
+        query = '''
+            query get_question_parameters($question_id: Int!) {
+                question: Question_by_pk(id: $question_id) {
+                    difficulty
+                    discrimination
+                    guessing
+                }
+            }
+        '''
+        variables = {
+            "question_id": question_id
+        }
+        query_result = self.execute_query(query, variables)
+        return query_result["data"]["question"]      
+
     def get_topic_questions(self, topic_id):
         query = '''
             query get_topic_questions($topic_id: Int!) {

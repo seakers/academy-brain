@@ -75,6 +75,26 @@ class StatsClient:
         # --> 4. Update user database
         result = self.graphql_client.set_user_ability_parameters(topic_id, map_estimate)
 
+    def update_parameter_model(self, question_ids):
+        print('--> UPDATING QUESTION PARAMETER:', question_ids)
+
+        # --> 1. Get current question params
+        question_id = question_ids[0]
+        answer = question_ids[1]
+        result = self.graphql_client.get_question_abc_parameters(question_id)
+        print('--> get_question_abc_parameters:', result)
+
+        a_value = result["discrimination"]
+        b_value = result["difficulty"]
+        c_value = result["guessing"]
+
+        # --> 2. Use model to find new ability parameter estimate
+        estimated_a, estimated_b =  MAP_Estimator([answer]).update_ab_parameter(question_id, answer, a_value, b_value, c_value)
+        print('--> estimated_a, estimated_b:', estimated_a, estimated_b)
+
+        # --> 3. Update user database
+        result = self.graphql_client.set_question_ab_parameters(question_id, estimated_a, estimated_b)    
+
     def select_question(self):
 
         # --> 1. Determine lowest user topic ability parameter

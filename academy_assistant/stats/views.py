@@ -37,10 +37,15 @@ class UpdateModelTID(APIView):
         user_info = get_or_create_user_information(request.session, request.user)
         stats_client = StatsClient(user_info)
         topic_ids = json.loads(request.data['topic_ids'])
+        question_ids = json.loads(request.data['question_ids']) # [question_ids, 1 or 0]
 
         print('--> UPDAING CA MODEL', topic_ids)
         for topic_id in topic_ids:
             stats_client.update_model(topic_id)
+
+        # UPDATING AB PARAMETER OF QUESTION
+        print('--> UPDAING QUESTION a,b', question_ids)
+        stats_client.update_parameter_model(question_ids)
 
         return Response({})
 
