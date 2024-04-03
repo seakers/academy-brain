@@ -68,7 +68,8 @@ class StatsClient:
         #     print(x)
 
         # --> 3. Use model to find new ability parameter estimate
-        map_estimate = MAP_Estimator(answers).estimate().x
+        map_scipy_estimate = MAP_Estimator(answers).estimate()  # this is the scipy custom object
+        map_estimate = map_scipy_estimate.x  # this is the estimate
         # print('--> MAP ESTIMATE:', map_estimate)
 
         # --> 4. Update user database

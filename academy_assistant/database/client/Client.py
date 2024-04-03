@@ -43,6 +43,7 @@ class Client:
             print(table, '\n')
             if table not in ['auth_user', 'Join__AuthUser_Group', 'Group']:
                 to_delete.append(table_obj)
+
         DeclarativeBase.metadata.drop_all(self.engine, to_delete)
 
     def get_users(self):
@@ -147,6 +148,14 @@ class Client:
         self.session.add(entry)
         self.session.commit()
         return entry.id
+
+    def index_tlx_survey_slide(self, module_id, type, user_id, idx, context=''):
+        entry = Slide(module_id=module_id, type=type, user_id=user_id, idx=idx, context=context)
+        self.session.add(entry)
+        self.session.commit()
+        return entry.id
+
+
 
     def index_message(self, user_id, text, sender, more_info=None):
         entry = Message(user_id=user_id, text=text, sender=sender, more_info=more_info)

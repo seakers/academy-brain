@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # POST api/assistant/command {}
 
 
     path('api/auth/', include('academy_auth.urls')),

@@ -100,6 +100,19 @@ class LearningModule:
             self.client.index_exam_finish_slide(module_id, slide['type'], user_id, slide['idx'], slide['context'])
         return 0
 
+    def index_tlx_survey_slide(self, slide, module_id):
+
+        # --> 1. Get user ids
+        users = self.client.get_users()
+        user_ids = [None]
+        for user in users:
+            user_ids.append(user.id)
+
+        # --> 2. Index slide for each user
+        for user_id in user_ids:
+            self.client.index_tlx_survey_slide(module_id, slide['type'], user_id, slide['idx'], slide['context'])
+        return 0
+
 
     def index(self):
 
@@ -129,3 +142,5 @@ class LearningModule:
                     self.index_quiz_end_slide(slide, module_id)
                 elif slide['type'] == 'exam_finish':
                     self.index_exam_finish_slide(slide, module_id)
+                elif slide['type'] == 'tlx_survey':
+                    self.index_tlx_survey_slide(slide, module_id)

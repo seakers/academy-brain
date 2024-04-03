@@ -6,11 +6,17 @@ from . import views
 
 
 urlpatterns = [
+
+    # These are not being used
     path('command', views.Command.as_view(), name='command'),
     path('lmcommand', views.LMCommand.as_view(), name='lmcommand'),
-    path('gmcommand', views.GMCommand.as_view(), name='gmcommand'),
+
+    # These are for the experiment
     path('action', views.Action.as_view(), name='action'),
     path('experiment_info', views.ExperimentInfo.as_view(), name='experiment_info'),
+
+    # These are the only ones we are using
+    path('gmcommand', views.GMCommand.as_view(), name='gmcommand'),
     path('stats/', include('academy_assistant.stats.urls')),
 ]
 

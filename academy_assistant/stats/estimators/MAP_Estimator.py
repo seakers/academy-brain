@@ -18,6 +18,21 @@ class MAP_Estimator:
         return values
 
     def likelihood(self, theta):
+        # Two quiz questions
+        # User 1 gets both correct
+
+        # Say user ability level is 0.1
+        # prob getting first correct is 0.5
+        # prob getting second correct is 0.5
+        # prob user gets both correct is 0.5 * 0.5 = 0.25
+
+        # Say user ability level is 0.9 <-- this is theta
+        # prob getting first correct is 0.9  <-- this is p(theta)
+        # prob getting second correct is 0.9
+        # prob user gets both correct is 0.9 * 0.9 = 0.81
+
+
+
         result = 1.0
 
         for item_tuple in self.item_response_vector:

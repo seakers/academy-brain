@@ -65,6 +65,13 @@ class AbstractBuilder:
             'context': 'This slide denotes the end of the module exam. If this is the second learning module you have studied, the experiment has finished. Else, select the continue button below to continue to the next stage.'
         })
 
+    def add_tlx_survey_slide(self):
+        self.slides.append({
+            'type': 'tlx_survey',
+            'idx': len(self.slides),
+            'context': 'You have completed the module exam. Please alert your proctor, and you will be moved on to a brief survey.'
+        })
+
 
 
     ###############################################

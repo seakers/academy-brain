@@ -14,9 +14,11 @@ class UpdateModel(APIView):
 
     def post(self, request, format=None):
         print('--> UPDAING CA MODEL')
-
-        user_info = get_or_create_user_information(request.session, request.user)
         slide = json.loads(request.data['slide'])
+
+
+        # user_info is an instance of the UserInformation class
+        user_info = get_or_create_user_information(request.session, request.user)
 
         # --> 1. Determine topics to update
         graphql_client = GraphqlClient(user_info)
