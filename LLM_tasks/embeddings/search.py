@@ -41,8 +41,8 @@ class SimilaritySearch:
     def __init__(self):
         self.root_dir = '/home/ec2-user/academy-brain/LLM_tasks/embeddings'
         self.embedding_model = 'text-embedding-ada-002'
-        # self.embedding_path = os.path.join(self.root_dir, 'embeddings.pickle')
-        self.embedding_path = "embeddings.pickle"
+        self.embedding_path = os.path.join(self.root_dir, 'embeddings.pickle')
+        # self.embedding_path = "embeddings.pickle"
         self.embeddings = {}
         self.read_embedding_store()
 

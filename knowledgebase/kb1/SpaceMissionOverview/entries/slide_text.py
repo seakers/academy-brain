@@ -39,17 +39,6 @@ Abundant resources!
     In-situ resource utilization
 """)
 slide_text.append("""Slide 5
-Apollo project cost
-Apollo project cost $147B in today’s dollars over 11 years
-11 crewed missions🡺 $13B/mission
-""")
-slide_text.append("""Slide 6
-International Space Station cost
-$171 billion over 30 years (1985-2015)
-Including $58B for 36 Shuttle flights to build it
-$28B from international partners
-""")
-slide_text.append("""Slide 7
 Cost of Earth Observation Satellites
 Earth observation mission: $200-$2B
 LandSat-8: $857M
@@ -65,6 +54,35 @@ Joint Strike Fighter: $200B
 NASA budget: $20B
 Airliner: 50-100$M
 Km of road: 1.5$M world average
+""")
+slide_text.append("""Slide 6
+Space is expensive. Why?
+Getting to space (without falling right back) is hard!
+Rockets are inefficient
+Surviving in space is also hard!
+Small markets – unique parts
+Labor-intensive
+Need for high reliability and “Space Spiral”
+Some of this is changing with the recent push for distributed space architectures but still.
+
+Negative Feedback Cycle
+    Fewer missions
+    Higher reliability
+    Longer schedule
+    Higher cost
+""")
+slide_text.append("""Slide 7
+Why is getting to space so hard?
+You need a lot of kinetic energy!
+Go up at least a few hundreds of km (overcome gravity, atmospheric drag, etc.)
+But that is not enough. You also need to accelerate tangentially up to “orbital velocity”, or you would fall back down
+Orbital velocity is the velocity at which the centrifugal force pulling the satellite outwards exactly compensates for the gravitational force pulling the satellite inwards 
+About 7.5km/s (~16,700mph) + 1-2 km/s more for losses.
+Rockets are an inefficient way of getting that energy
+A lot of propellant is needed to reach that velocity
+Remember Newton’s action-reaction law? the center of mass of the system (rocket + propellant) doesn’t move, so if we want a heavy rocket to go up, a lot of propellant needs to go down
+Rockets are about 90% of propellant in weight
+Spend most of the energy (propellant) accelerating… the propellant
 """)
 slide_text.append("""Slide 8
 Space is expensive. Why?
@@ -83,17 +101,16 @@ Negative Feedback Cycle
     Higher cost
 """)
 slide_text.append("""Slide 9
-Why is getting to space so hard?
-You need a lot of kinetic energy!
-Go up at least a few hundreds of km (overcome gravity, atmospheric drag, etc.)
-But that is not enough. You also need to accelerate tangentially up to “orbital velocity”, or you would fall back down
-Orbital velocity is the velocity at which the centrifugal force pulling the satellite outwards exactly compensates for the gravitational force pulling the satellite inwards 
-About 7.5km/s (~16,700mph) + 1-2 km/s more for losses.
-Rockets are an inefficient way of getting that energy
-A lot of propellant is needed to reach that velocity
-Remember Newton’s action-reaction law? the center of mass of the system (rocket + propellant) doesn’t move, so if we want a heavy rocket to go up, a lot of propellant needs to go down
-Rockets are about 90% of propellant in weight
-Spend most of the energy (propellant) accelerating… the propellant
+Example Question
+Why is getting into space so difficult?
+Answer Choices:
+A)Strict regulation of propulsion technology
+B)Necessity of a large amount of Kinetic Energy
+C)Radiation present in the ozone layer interferes with rockets
+D)Companies disrupting the market and raising costs
+
+The correct choice is B. Overcoming the force of Gravity is difficult as well as the need to reach the point of Orbital Velocity.
+
 """)
 slide_text.append("""Slide 10
 Cost of access to space
@@ -150,6 +167,16 @@ Combine dozens of complexity factors such as payload and bus mass, power, data r
 better predictive power than mass or any other single parameter
 """)
 slide_text.append("""Slide 16
+Which of the of following is likely to be the best prediction of spacecraft cost?
+Answer Choices:
+A)Satellite Dry Mass
+B)Satellite power at the beginning of life
+C)Propellant mass
+D)A complexity index accounting for several factors including all of the above
+
+The correct choice is D. Multiple factors have better predictability than one factor alone.
+""")
+slide_text.append("""Slide 17
 Launch Segment
 
 The launch segment is in charge of putting the spacecraft(s) in their desired orbit(s)
@@ -157,7 +184,7 @@ Requires a huge amount of propellant 🡺 large rocket 🡺 so more efficient to
 The launch segment consists of one or more launches from the same or different launch vehicles.
 Different launch vehicles have different sizes and can carry different amounts of weigh to various orbits
 """)
-slide_text.append("""Slide 17
+slide_text.append("""Slide 18
 Ground Segment
 
 The ground segment is in charge of operating the spacecraft
@@ -167,7 +194,18 @@ Track spacecraft orbital position
 Serve as interface between spacecraft and data users
 It consists primarily of communications equipment (large antennas, electronics), control centers, and data servers.
 """)
-slide_text.append("""Slide 18
+slide_text.append("""Slide 19
+Example Question
+Choice of the ____ and ____ drive the design of the spacecraft bus
+Answer Choices (Select Multiple):
+A)Ground Stations
+B)Payload
+C)Orbit
+D)Launch Vehicle
+
+The correct choices are $\mathrm{B}$ and $\mathrm{C}$. The spacecraft bus is an element of the Space segment. Choices $A$ and $D$ belong to the other mission segments.
+""")
+slide_text.append("""Slide 20
 Mission Concept and ConOps
 
 The mission concept is the highest level description of 
@@ -183,7 +221,7 @@ Tasking, scheduling, control
 Communications architecture
 Data Delivery
 """)
-slide_text.append("""Slide 19
+slide_text.append("""Slide 21
 Timeline of an Earth observation mission
 Launch (~min to hours): Lift off, first stage separation, upper stage(s), fairing jettisoning, injection. May launch multiple satellites in different orbits.
 Orbit insertion (hours to weeks): Detumbling, Deploy antennas and solar panels, perform health tests, transfer to operational orbit
@@ -191,23 +229,6 @@ Commissioning (weeks to months): Payload testing and calibration
 Nominal operations (~3-10 years): Acquire images, send down to Earth, perform station-keeping maneuvers, software updates. May include nominal orbital changes.
 Extended operations (0-10 years): If there is extra funding for ops, extend operations for current or new goals, in same or different orbit.
 End of life (deorbiting, hours to weeks): Reentry and burn through Earth’s atmosphere or move intro “graveyard” orbit
-""")
-slide_text.append("""Slide 20
-ConOps for NASA SMAP mission
-""")
-slide_text.append("""Slide 21
-Communications architecture
-Example ground networks:
-    Near Earth Network (NEN)
-    Space Network/TDRSS
-    Deep Space Network (DSN)
-    Air Force Satellite Control network (AFSCN)
-    Commercial (Amazon, KSAT, …)
-Most NASA LEO missions use the NEN
-Most NASA deep space missions use DSN
-Human Spaceflight (ISS) uses SN-TDRSS, plus a few other LEO missions
-
-Example costs: NEN: 557$ per pass (<30 min per pass); SN: SA: $130/min, MA: $12-21/min
 """)
 slide_text.append("""Slide 22
 Data Delivery
@@ -219,6 +240,7 @@ Space vs ground processing
 Centralized vs distributed processing: All done on one computer or multiple dedicated computers? Decoupling is nice for performance, risk, testing, etc. but may increase cost.
 Level of autonomy: from 100% manual to 100% automatic.
 All these are inter-related.
+
 """)
 slide_text.append("""Slide 23
 Tasking, scheduling, control
@@ -263,16 +285,12 @@ Payloads
     Radars have day-night and all weather capability and typically have resolutions of tens-hundreds of meters (synthetic aperture radar)
 """)
 slide_text.append("""Slide 27
-Mass of Earth Observation Satellites
-<image depicting mass of different earth observing satellites>
-""")
-slide_text.append("""Slide 28
 Space Observation
 Similar to Earth observation but used for on-orbit servicing, surveillance, monitoring orbital debris, etc.
 Agile satellites capable of proximity operations, with cooperative or uncooperative targets
 Payloads are adapted for smaller distances and challenging illumination conditions
 """)
-slide_text.append("""Slide 29
+slide_text.append("""Slide 28
 Communications
 
 Provide communications services between users on the ground, air, or space.
@@ -286,7 +304,7 @@ Payloads: Antennas and transponders
     Single-access (1 user at a time) or multiple-access (multiple users at a time)
     High vs low bandwidth/gain
 """)
-slide_text.append("""Slide 30
+slide_text.append("""Slide 29
 Navigation
 
 Provide position, navigation, and timing (PNT) services to users on the ground, air and space
@@ -294,137 +312,24 @@ Variable accuracy on the order of cm to meters.
 Payload is a set of L-band antennas
 The most common example is the GPS constellation of ~24 satellites orbiting Earth at around ~20,000km altitude
 """)
+slide_text.append("""Slide 30
+Example Question
+Which of the following types of Satellites would be agile for proximity operations and can face challenging visibility?
+Answer Choices (Select Multiple):
+A)Earth Observation
+B)Navigation
+C)Space Observation
+D)Communications
+
+The correct choice is C. Space observation satellites may be tasked with imaging other objects within its own orbit or closer to it than the Earth.
+""")
 slide_text.append("""Slide 31
-4. Space Mission Design Process. 
-Typical phases and milestone of the mission development process.
-""")
-slide_text.append("""Slide 32
-The Space Mission Life Cycle
-
-Phases
-Key Decision Points
-Technical Reviews
-<image of different phases and key decision points in the space mission life cycle>
-Image: NASA SEH
-""")
-slide_text.append("""Slide 33
-Pre-Phase A: Concept studies
-Developed continuously and with multiple projects in parallel
-Goals 
-    To produce a broad spectrum of ideas and alternatives for missions from which new programs/projects can be selected. 
-    Study feasibility of desired system
-    Develop mission concepts
-    Identify potential technology needs.
-Outcomes 
-    Mission concepts
-    Draft system-level requirements
-Reviews 
-    Mission Concept Review (MCR)
-""")
-slide_text.append("""Slide 34
-Phase A – Concept and Technology development
-Part of formulation (i.e., before approval)
-Goals
-    To determine the feasibility and desirability of a suggested new major system and establish an initial baseline compatibility with NASA’s strategic plans.
-    Develop final mission concept, system-level requirements, and needed system structure technology developments.
-    Initiate technology developments
-Outcomes
-    Mission Architecture and Conops
-    Top-level Requirements
-    Work Breakdown Structure
-    Systems Engineering Management Plan
-    Technologies 
-Reviews
-    Systems Requirements Review (SRR), halfway through
-    Mission/System Definition Review (MDR/SDR)
-""")
-slide_text.append("""Slide 35
-Why is Phase A important?
-
-Architectural decisions commit most of lifecycle cost and determine ability of the system to deliver value
-    i.e. satisfy stakeholder needs
-Cost of correcting defects is lowest in the architecture phase
-Architectural decisions determine most of system–ilities
-    Flexibility
-    Scalability
-    Robustness
-    …
-Source: INCOSE systems engineering handbook
-""")
-slide_text.append("""Slide 36
-Phase B: Preliminary Design and Technology Completion
-
-Goals
-    To define the project in enough detail to establish an initial baseline capable of meeting mission needs. 
-    Develop system structure end product (and enabling product) requirements 
-    And generate a preliminary design for each system structure end product
-    Finalize technology development
-Outcomes
-    Baseline design
-    Interface Control Documents
-    Updated requirements
-    Science/operations plan
-    Technologies
-    Reviews
-    Preliminary Design Review (PDR), for the system and for lower level items as appropriate
-""")
-slide_text.append("""Slide 37
-Phase C: Final Design and Fabrication
-Goals
-    To complete the detailed design of the system (and its associated subsystems, including its operations systems)
-    Fabricate hardware
-    Code software. 
-    Generate final designs for each system structure end product.
-    Plan integration and testing
-Outcomes
-    Finalized designs and components
-    Integration plan and procedures
-    V&V procedures
-    Operations plan
-    Reviews
-    Critical Design Review (CDR), half-way through Phase C
-    System Integration Review (SIR)
-""")
-slide_text.append("""Slide 38
-Phase D: System Assembly, Integration and Test, Launch
-Goals
-    To assemble and integrate the products to create the system, while developing confidence that it will be able to meet the system requirements. 
-    Put the system in launch/flight configuration
-    Launch and prepare for operations. 
-    Perform system end product implementation, assembly, integration and test, and transition to use
-Outcomes
-    Integrated and validated system
-    Operational procedures
-Reviews
-    Various test readiness reviews (TRR) at all levels
-    System Acceptance Review (SAR, human only), before shipping to launch site
-    Operational Readiness Review (ORR), system not in launch configuration, weeks to a few months before launch
-    Flight Readiness Review (FRR), system in launch configuration, a few days before launch
-""")
-slide_text.append("""Slide 39
-Phase E: Operations and sustainment
-Goals
-    To conduct the mission and meet the initially identified need 
-    And maintain support for that need. 
-    Implement the mission operations plan.
-Outcomes
-    Data Products, sample, …, value! (needs satisfied)
-    Ops and maintenance logs
-    Reviews
-    Post Launch Assessment Review (PLAR), a few hours or days after launch
-    Post Flight Assessment Review (PFAR), human only
-    Critical Event Readiness Review (CERR), right before a critical event (such as a burn changing operational phase in conops)
-""")
-slide_text.append("""Slide 40
-Phase F: Closeout
-Goals
-    To implement the systems decommissioning/disposal plan developed in Phase E 
-    And perform analyses of the returned data and any returned samples
-Outcomes
-    System is disposed or in a safe state
-    Archived data
-    Final mission report
-    Lessons learned
-    Reviews
-    Decommissioning Review (DR)
+Summary
+The space missions and their design process can be summarized into the following topics:
+Introduction to Space
+ There are many motivations for space missions in the realms of exploration and science. There lies a challenge in reaching space with the large amount of kinetic energy required and in consequence the cost of launch.
+ Overview of space missions
+Space mission are divided into 3 segments: launch, ground, and space. Each segment consists of physical parameters or parts help the segment perform its function.
+Space missions and Payloads
+The type of spacecraft mission can depend on the intent/goal, customer context, or mission context. From this, an appropriate payload can be chosen. The types of satellites focused on in this module is Earth observation, space observation, communications, and navigation.
 """)

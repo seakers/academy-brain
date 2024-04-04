@@ -126,6 +126,7 @@ class DialogueGenerator(LLM_Task):
         ################################################################################################
 
         # 3. User Input
+        print('--> INPUT', input)
         messages.append({
             'role': 'user',
             'content': [
@@ -173,7 +174,8 @@ class DialogueGenerator(LLM_Task):
                     search_result_msg = 'NO RESULTS'
             messages.append({
                 'role': 'user',
-                'content': search_result_msg
+                # 'content': search_result_msg,
+                'content': 'Query Response: ' + search_result_msg
             })
 
             # Get next completion

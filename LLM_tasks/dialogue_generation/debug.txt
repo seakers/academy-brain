@@ -10,6 +10,45 @@ Your task is twofold:
 2. Once you have the necessary information answer the user question using only the information from the databases. Start your final answer with "ANSWER" and cite the modules and slides used.
 
 User:
+What is the purpose of the communications segment?
+
+Assistant:
+(SpaceMissionOverview) What is the purpose of the communications segment?
+
+Assistant:
+ANSWER: The purpose of the communications segment is... (SpaceMissionOverview, Slide 29)
+
+User:
+What learning modules am I assigned?
+
+Assistant:
+(UserInfo) Which learning modules are assigned to the user?
+
+Assistant:
+ANSWER: You are assigned the following learning modules... (UserInfo, Slide 1)
+
+User:
+Summarize this slide for me.
+
+Assistant:
+(UserInfo) Explain the content of the slide the user is viewing.
+
+Assistant:
+ANSWER: This slide describes the different... (UserInfo, Slide 1)
+
+User:
+Compare and contrast mission design phases A and B
+
+Assistant:
+(SpaceMissionOverview) What happens during mission design phase A?
+
+Assistant:
+(SpaceMissionOverview) What happens during mission design phase B?
+
+Assistant:
+ANSWER: Mission design phase A... (SpaceMissionOverview, Slide 34, Slide 35)
+
+User:
 What is the difference between the Troposphere and Mesosphere?
 
 Assistant:
@@ -31,82 +70,17 @@ Assistant:
 ANSWER: Atmospheric drag is calculated with... (SpaceEnvironmentAndOrbits, Slide 7)
 
 User:
-What is the purpose of the communications segment?
-
-Assistant:
-(SpaceMissionOverview) What is the purpose of the communications segment?
-
-Assistant:
-ANSWER: The purpose of the communications segment is... (SpaceMissionOverview, Slide 29)
-
-User:
-Compare and contrast mission design phases A and B
-
-Assistant:
-(SpaceMissionOverview) What happens during mission design phase A?
-
-Assistant:
-(SpaceMissionOverview) What happens during mission design phase B?
-
-Assistant:
-ANSWER: Mission design phase A... (SpaceMissionOverview, Slide 34, Slide 35)
-
-User:
-What learning modules am I assigned?
-
-Assistant:
-(UserInfo) Which learning modules are assigned to the user?
-
-Assistant:
-ANSWER: You are assigned the following learning modules... (UserInfo, Slide 1)
-
-User:
-Summarize this slide for me.
-
-Assistant:
-(UserInfo) Explain the content of the slide the user is viewing.
-
-Assistant:
-ANSWER: This slide describes the different... (UserInfo, Slide 1)
-
-User:
 END OF EXAMPLES
 
 User:
-Can you please generate a multiple choice question for me from this slide?
+[{'type': 'text', 'text': 'why is getting to space so difficult?'}, {'type': 'image_url', 'image_url': {'url': 'http://drive.google.com/uc?export=view&id=1p1ZACbeAWe5XgkxYhfWxzI6AiSknDiLo'}}]
 
 Assistant:
-(UserInfo) Generate a multiple choice question from the slide the user is viewing.
+(SpaceMissionOverview) What are the challenges of getting to space?
 
 User:
-What are some reasons for going to space as mentioned in the slide?
-A) Weather forecasting and surveillance
-B) Colonization and tourism
-C) Microgravity science and materials processing
-D) All of the above
-
-Correct Answer: D) All of the above (Slide: state: viewing slide 3 in learning module Space Mission Overview)
+Query Response: The challenges of getting to space include the need for a large amount of kinetic energy to overcome gravity and atmospheric drag, and to reach orbital velocity, which is about 7.5 km/s plus additional speed for losses (Slide 7). Rockets, which are the means to achieve this, are inefficient as they are about 90% propellant by weight and spend most of their energy accelerating the propellant itself (Slide 7). Additionally, surviving in space is difficult due to the need for high reliability and unique parts for the harsh space environment, which leads to a negative feedback cycle of fewer missions, higher reliability requirements, longer schedules, and higher costs (Slide 6, Slide 8).
 
 Assistant:
-(UserInfo) What are some reasons for going to space as mentioned in the slide?
-
-User:
-The reasons for going to space mentioned in the slide include:
-
-1. Global perspective for weather forecasting, surveillance, and communications and navigation services.
-2. Astrophysics and atmospheric sounding by looking above the atmosphere.
-3. Exploration of space for colonization, expanding the limits of humanity, or tourism, and science fields like astrobiology, geology, and physics.
-4. Conducting microgravity science and materials processing due to the absence of gravity.
-5. Obtaining abundant resources, such as rare elements like gold and platinum, and in-situ resource utilization (Slide 3).
-
-Assistant:
-ANSWER: The reasons for going to space mentioned in the slide include:
-
-1. Global perspective for weather forecasting, surveillance, and communications and navigation services.
-2. Astrophysics and atmospheric sounding by looking above the atmosphere.
-3. Exploration of space for colonization, expanding the limits of humanity, or tourism, and science fields like astrobiology, geology, and physics.
-4. Conducting microgravity science and materials processing due to the absence of gravity.
-5. Obtaining abundant resources, such as rare elements like gold and platinum, and in-situ resource utilization.
-
-(Slide 3 in the learning module Space Mission Overview)
+ANSWER: Getting to space is difficult due to several challenges. These include the need for a large amount of kinetic energy to overcome Earth's gravity and atmospheric drag, and to achieve the necessary orbital velocity of approximately 7.5 kilometers per second, with additional speed to account for losses. Rockets, which are the primary means of reaching space, are inherently inefficient, as they are composed of about 90% propellant by weight and expend most of their energy just to accelerate the propellant. Furthermore, the space environment demands high reliability and specialized components to survive, which leads to fewer missions, higher reliability requirements, longer schedules, and consequently higher costs. (SpaceMissionOverview, Slides 6, 7, 8)
 

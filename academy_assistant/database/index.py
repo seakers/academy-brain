@@ -5,9 +5,9 @@ import json
 
 
 # --> Setup django for standalone use
-# sys.path.append('/home/ec2-user/academy-brain')
-# sys.path.append('/home/ec2-user/academy-brain/academy_assistant')
-sys.path.append('E:/SEM IV - Courses/GAR/Work/Source Code/academy-brain')
+sys.path.append('/home/ec2-user/academy-brain')
+sys.path.append('/home/ec2-user/academy-brain/academy_assistant')
+# sys.path.append('E:/SEM IV - Courses/GAR/Work/Source Code/academy-brain')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'academy.settings')
 django.setup()
 from django.contrib.auth.models import User

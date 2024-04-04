@@ -196,90 +196,90 @@ def get_module():
         discrimination=10,
         graded=True
     )
-    builder.add_mc_question(
-        'Choice of the ______ and ______ drive the design of the spacecraft bus',
-        [
-            {'text': 'Ground Stations, Orbit', 'correct': False,
-             'id': 0},
-            {'text': 'Launch Vehicle, Payload', 'correct': False, 'id': 1},
-            {'text': 'Communication Requirement, Orbit', 'correct': False, 'id': 2},
-            {'text': 'Payload, Orbit', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.25,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_tf_question(
-        'The launch segment always consists of a single launch vehicle.',
-        False,
-        '',
-        ['Intro To Space'],
-        difficulty=0.25,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'Which of the following is NOT an element of a mission’s ConOps',
-        [
-            {'text': 'Mission Budget', 'correct': True,
-             'id': 0},
-            {'text': 'Tasking, Scheduling, Control', 'correct': False, 'id': 1},
-            {'text': 'Data Delivery', 'correct': False, 'id': 2},
-            {'text': 'Imaging concept', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.25,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'Which of the following payloads would be present on a communications satellite',
-        [
-            {'text': 'Antenna', 'correct': True,
-             'id': 0},
-            {'text': 'Radar', 'correct': False, 'id': 1},
-            {'text': 'Spectrometer', 'correct': False, 'id': 2},
-            {'text': 'Thermal Imager', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.25,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'Which of the following types of satellites is more likely to have requirements related to proximity operations?',
-        [
-            {'text': 'Earth Observation', 'correct': False,
-             'id': 0},
-            {'text': 'Space Observation', 'correct': True, 'id': 1},
-            {'text': 'Navigation', 'correct': False, 'id': 2},
-            {'text': 'Communications', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.25,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'Which of the following types of satellites would hold transponders in its payload?',
-        [
-            {'text': 'Earth Observation', 'correct': False,
-             'id': 0},
-            {'text': 'Space Observation', 'correct': False, 'id': 1},
-            {'text': 'Navigation', 'correct': False, 'id': 2},
-            {'text': 'Communications', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.25,
-        discrimination=10,
-        graded=True
-    )
+    # builder.add_mc_question(
+    #     'Choice of the ______ and ______ drive the design of the spacecraft bus',
+    #     [
+    #         {'text': 'Ground Stations, Orbit', 'correct': False,
+    #          'id': 0},
+    #         {'text': 'Launch Vehicle, Payload', 'correct': False, 'id': 1},
+    #         {'text': 'Communication Requirement, Orbit', 'correct': False, 'id': 2},
+    #         {'text': 'Payload, Orbit', 'correct': True, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.25,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_tf_question(
+    #     'The launch segment always consists of a single launch vehicle.',
+    #     False,
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.25,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Which of the following is NOT an element of a mission’s ConOps',
+    #     [
+    #         {'text': 'Mission Budget', 'correct': True,
+    #          'id': 0},
+    #         {'text': 'Tasking, Scheduling, Control', 'correct': False, 'id': 1},
+    #         {'text': 'Data Delivery', 'correct': False, 'id': 2},
+    #         {'text': 'Imaging concept', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.25,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Which of the following payloads would be present on a communications satellite',
+    #     [
+    #         {'text': 'Antenna', 'correct': True,
+    #          'id': 0},
+    #         {'text': 'Radar', 'correct': False, 'id': 1},
+    #         {'text': 'Spectrometer', 'correct': False, 'id': 2},
+    #         {'text': 'Thermal Imager', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.25,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Which of the following types of satellites is more likely to have requirements related to proximity operations?',
+    #     [
+    #         {'text': 'Earth Observation', 'correct': False,
+    #          'id': 0},
+    #         {'text': 'Space Observation', 'correct': True, 'id': 1},
+    #         {'text': 'Navigation', 'correct': False, 'id': 2},
+    #         {'text': 'Communications', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.25,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Which of the following types of satellites would hold transponders in its payload?',
+    #     [
+    #         {'text': 'Earth Observation', 'correct': False,
+    #          'id': 0},
+    #         {'text': 'Space Observation', 'correct': False, 'id': 1},
+    #         {'text': 'Navigation', 'correct': False, 'id': 2},
+    #         {'text': 'Communications', 'correct': True, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.25,
+    #     discrimination=10,
+    #     graded=True
+    # )
 
     builder.add_exam_finish_slide()
 
@@ -524,6 +524,8 @@ Same trade: Ground vs autonomous?
 Typically, attitude control is autonomous but orbit control is from the ground
 Payload scheduling is from the ground
 """)
+
+
 slide_text.append("""
 3. Types of Space Missions and Payloads.
 """)
