@@ -208,8 +208,14 @@ class GMCommand(APIView):
         if "vision" in request.data and str(request.data['vision']) == "true":
             slide_info = json.loads(request.data['slide_info'])
             print(slide_info["topic"])
+
+            ## GET USER CUSTOM MESSAGE
+            db_client = GraphqlClient(user_info)
+            result = db_client.get_system_message()
+            print("result", result)
+            custom_system_message = result[0]["system_message"]
             
-            response = agent.run_vision(command, slide_info, route)
+            response = agent.run_vision(command, slide_info, route, custom_system_message)
             
         else:    
             response = agent.run(command, route)

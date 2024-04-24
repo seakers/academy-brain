@@ -84,11 +84,17 @@ class DialogueGenerator(LLM_Task):
         # 4. Start Conversation
         return self.start_dialogue(messages, route)
 
-    def run_vision(self, input, slide_info, route=''):
+    def run_vision(self, input, slide_info, route='', custom_system_message = None):
 
         # 1. System message
         print("##### IN DIALOUGE GEN ######")
         system_message = self.system_msg + self.exam_check(route)
+
+        ## CHECK IF USER HAS GIVEN CUSTOM SYSTEM MESSAGE #####
+        if custom_system_message:
+            system_message += f"\n{custom_system_message}"
+
+        print("system_message", system_message)
         messages = [
             {
                 'role': 'system',
@@ -116,7 +122,7 @@ class DialogueGenerator(LLM_Task):
         
         # imageurl_info = db_client.get_slide_info(slide_info["topic"], slide_info["module"], slide_info["slide"])
         imageurl_info = db_client.get_slide_info(slide_info["module"], slide_info["slide"])
-        print("##### imageurl_info ####", imageurl_info)
+        # print("##### imageurl_info ####", imageurl_info)
 
         if len(imageurl_info):
             slide_image_url = imageurl_info[0]['image_url']
