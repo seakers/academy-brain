@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import re
+from scipy.stats import percentileofscore
 
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
@@ -269,4 +270,44 @@ class GETSYSMessage(APIView):
         result = db_client.get_system_message()
         response["system_message"] = result[0]["system_message"]
 
+        return Response(response)
+    
+class GETUserReport(APIView):
+
+    # GET USER SYSTEM MESSAGE
+    def get(self, request, format=None):
+
+        user_info = get_or_create_user_information(request.session, request.user)
+        response = {
+            'topic 1': "Percentile"
+        }
+
+        ############## GET TOPICS FOR USER WHICH HAS ABILITY PARAMS #####################
+        db_client = GraphqlClient(user_info)
+        user_ability_info = db_client.get_ability_levels()
+
+        ### LOOP THROUGH ALL TOPICS AND FIND ALL USERS VALUES AND PERCENTILE ###
+        for value in user_ability_info:
+            if value["ability_level"]["value"]:
+                topic_name = value["name"]
+
+                ## FIND ABILITY VALUES OF ALL USERS FOR THAT TOPIC AND FIND PERCENTILE
+                users_topic_ability_info = db_client.get_ability_levels_by_topic(value["id"])
+
+                ## Gather all users Ability level of that topic
+                ability_list = []
+                for val in users_topic_ability_info:
+                    # If ability has value and that abi
+                    # if val["value"] and val["user_id"] != user_info.user.id:
+                    if val["value"] and val["user_id"] != 1:
+                        ability_list.append(val["value"])
+
+                ## For all users get percentile of the selected values
+                percentile = 100
+                if len(ability_list):
+                    percentile = percentileofscore(value["ability_level"]["value"], ability_list, kind='rank')
+
+                ## Assign topic name with percentile
+                response[topic_name] = percentile
+        print("RESPONSE", response)
         return Response(response)

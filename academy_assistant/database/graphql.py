@@ -235,13 +235,17 @@ class GraphqlClient:
         }
         query_result = self.execute_query(query, variables)
         return query_result["data"]["user_info"]  
-
-
-
-
-
-
-
-
-
-
+    
+    ################ GET TOPICS FOR USER WHICH HAS ABILITY PARAMS #################### 
+    def get_ability_levels_by_topic(self, topic_id):
+        query = '''
+            query get_ability_levels_by_topic($topic_id: Int!) {
+                ability_info: AbilityParameter(where: {topic_id: {_eq: $topic_id}}) {
+                    value
+                }
+            }'''
+        variables = {
+            "topic_id": topic_id
+        }
+        query_result = self.execute_query(query, variables)
+        return query_result["data"]["ability_info"]
