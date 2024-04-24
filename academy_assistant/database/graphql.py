@@ -204,7 +204,37 @@ class GraphqlClient:
         return query_result["data"]["slide_info"]  
 
 
+    ################ SET USER SYSTEM MESSAGE ####################
+    def update_system_message(self, system_message):
+            query = '''
+                mutation update_system_message($id: Int!, $system_message: String!) {
+                    update_auth_user(where: {id: {_eq: $id}}, _set: {system_message: $system_message}) {
+                        affected_rows
+                    }
+                }
+            '''
+            variables = {
+                'id': self.user_id,
+                'system_message': system_message
+            }
+            query_result = self.execute_query(query, variables)
+            return query_result 
+    
 
+    ################ GET USER SYSTEM MESSAGE #################### 
+    def get_system_message(self):
+        query = '''
+            query get_system_message($id: Int!) {
+                user_info: auth_user(where: {id: {_eq: $id}}) {
+                    system_message
+                }
+            }
+        '''
+        variables = {
+            'id': self.user_id,
+        }
+        query_result = self.execute_query(query, variables)
+        return query_result["data"]["user_info"]  
 
 
 

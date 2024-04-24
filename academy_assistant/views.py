@@ -228,3 +228,39 @@ class GMCommand(APIView):
 
 
 
+#########################
+# System Message by User #
+#########################
+
+
+class SYSMessage(APIView):
+
+    # SAVE USER SYSTEM MESSAGE
+    def post(self, request, format=None):
+
+        user_info = get_or_create_user_information(request.session, request.user)
+        message = request.data["message"]
+        print(user_info.id)
+
+        ############## SAVE SYS MESSAGE FOR USER #####################
+        db_client = GraphqlClient(user_info)
+        result = db_client.update_system_message(message)
+
+        return Response({'response': 'ok'})
+    
+class GETSYSMessage(APIView):
+
+    # GET USER SYSTEM MESSAGE
+    def get(self, request, format=None):
+
+        user_info = get_or_create_user_information(request.session, request.user)
+        response = {
+            'system_message': ""
+        }
+
+        ############## GET SYS MESSAGE FOR USER #####################
+        db_client = GraphqlClient(user_info)
+        result = db_client.get_system_message()
+        response["system_message"] = result[0]["system_message"]
+
+        return Response(response)
