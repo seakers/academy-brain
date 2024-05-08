@@ -279,35 +279,54 @@ class GETUserReport(APIView):
 
         user_info = get_or_create_user_information(request.session, request.user)
         response = {
-            'topic 1': "Percentile"
+            # 'topic 1': "Percentile"
         }
 
         ############## GET TOPICS FOR USER WHICH HAS ABILITY PARAMS #####################
         db_client = GraphqlClient(user_info)
-        user_ability_info = db_client.get_ability_levels()
+        user_ability_info = db_client.get_ability_levels_by_user()
 
         ### LOOP THROUGH ALL TOPICS AND FIND ALL USERS VALUES AND PERCENTILE ###
         for value in user_ability_info:
-            if value["ability_level"]["value"]:
-                topic_name = value["name"]
+            ## FOR EACH TOPIC 
+            # print("$$$$$", value)
+            if value["value"]:
+                topic_name = value["topic"]["name"]
 
                 ## FIND ABILITY VALUES OF ALL USERS FOR THAT TOPIC AND FIND PERCENTILE
-                users_topic_ability_info = db_client.get_ability_levels_by_topic(value["id"])
+                users_topic_ability_info = db_client.get_ability_levels_by_topic(value["topic_id"])
 
                 ## Gather all users Ability level of that topic
+                print("#####", users_topic_ability_info)
                 ability_list = []
                 for val in users_topic_ability_info:
-                    # If ability has value and that abi
-                    # if val["value"] and val["user_id"] != user_info.user.id:
-                    if val["value"] and val["user_id"] != 1:
+                    # If ability has value and that ability param is not if current user
+                    if val["value"] and val["user_id"] != user_info.user.id:
+                    # if val["value"] and val["user_id"] != 1:
                         ability_list.append(val["value"])
 
                 ## For all users get percentile of the selected values
                 percentile = 100
                 if len(ability_list):
-                    percentile = percentileofscore(value["ability_level"]["value"], ability_list, kind='rank')
+                    percentile = percentileofscore(ability_list, value["value"], kind='rank')
 
+                print("########### TOPIC ################ TOPIC: {}, ability_list: {}".format(topic_name, str(ability_list)))
                 ## Assign topic name with percentile
                 response[topic_name] = percentile
+        
+        # GET TOPIC WITH LESS THAN 35 Percentile FOR WEAKNESS
+        # GET TOPIC WITH GREATER THAN 65 Percentile FOR STRENGTHS
+
+        weakness_list = []
+        strength_list = []
+        for topic in response:
+            if response[topic] <= 35:
+                weakness_list.append(topic)
+            elif response[topic] >= 65:
+                strength_list.append(topic)    
+        response["WEAKNESS"] = weakness_list
+        response["STRENGTHS"] = strength_list
+        response["RECOMMENDATIONS"] = []
+
         print("RESPONSE", response)
         return Response(response)

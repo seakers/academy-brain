@@ -115,6 +115,23 @@ class GraphqlClient:
         }
         query_result = self.execute_query(query, variables)
         return query_result["data"]["topics"]
+    
+    def get_ability_levels_by_user(self):
+        query = '''
+                query get_ability_levels_by_user($user_id: Int!) {
+                ability_info: AbilityParameter(where: {user_id: {_eq: $user_id}}) {
+                    topic_id
+                    value
+                    topic: Topic {
+                        name
+                    }
+                }
+            }'''
+        variables = {
+            "user_id": self.user_id
+        }
+        query_result = self.execute_query(query, variables)
+        return query_result["data"]["ability_info"]
 
 
     def get_test_history(self):
@@ -242,6 +259,7 @@ class GraphqlClient:
             query get_ability_levels_by_topic($topic_id: Int!) {
                 ability_info: AbilityParameter(where: {topic_id: {_eq: $topic_id}}) {
                     value
+                    user_id
                 }
             }'''
         variables = {
