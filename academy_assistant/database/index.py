@@ -146,6 +146,7 @@ experiment_user_4 = {
     'assistant': True,
     'assistant_order': [1, 0]
 }
+# ------------------------------------
 experiment_user_5 = {
     'username': 'subject5',
     'email': 'subject5@seaklab.com',
@@ -178,6 +179,7 @@ experiment_user_8 = {
     'assistant': True,
     'assistant_order': [1, 0]
 }
+# ------------------------------------
 experiment_user_9 = {
     'username': 'subject9',
     'email': 'subject9@seaklab.com',
@@ -194,6 +196,188 @@ experiment_user_10 = {
     'assistant': True,
     'assistant_order': [1, 0]
 }
+experiment_user_11 = {
+    'username': 'subject11',
+    'email': 'subject11@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_12 = {
+    'username': 'subject12',
+    'email': 'subject12@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+# ------------------------------------
+experiment_user_13 = {
+    'username': 'subject13',
+    'email': 'subject13@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_14 = {
+    'username': 'subject14',
+    'email': 'subject14@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+experiment_user_15 = {
+    'username': 'subject15',
+    'email': 'subject15@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_16 = {
+    'username': 'subject16',
+    'email': 'subject16@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+# ------------------------------------
+experiment_user_17 = {
+    'username': 'subject17',
+    'email': 'subject17@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_18 = {
+    'username': 'subject18',
+    'email': 'subject18@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+experiment_user_19 = {
+    'username': 'subject19',
+    'email': 'subject19@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_20 = {
+    'username': 'subject20',
+    'email': 'subject20@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+# ------------------------------------
+experiment_user_21 = {
+    'username': 'subject21',
+    'email': 'subject21@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_22 = {
+    'username': 'subject22',
+    'email': 'subject22@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+experiment_user_23 = {
+    'username': 'subject23',
+    'email': 'subject23@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_24 = {
+    'username': 'subject24',
+    'email': 'subject24@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+# ------------------------------------
+experiment_user_25 = {
+    'username': 'subject25',
+    'email': 'subject25@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_26 = {
+    'username': 'subject26',
+    'email': 'subject26@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+experiment_user_27 = {
+    'username': 'subject27',
+    'email': 'subject27@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_28 = {
+    'username': 'subject28',
+    'email': 'subject28@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+# ------------------------------------
+experiment_user_29 = {
+    'username': 'subject29',
+    'email': 'subject29@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_30 = {
+    'username': 'subject30',
+    'email': 'subject30@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T1', 'T2'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+experiment_user_31 = {
+    'username': 'subject31',
+    'email': 'subject31@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': False,
+    'assistant_order': [0, 1]
+}
+experiment_user_32 = {
+    'username': 'subject32',
+    'email': 'subject32@seaklab.com',
+    'password': 'U4VPbxK2Ch9PZ5NL',
+    'task_order': ['T2', 'T1'],
+    'assistant': True,
+    'assistant_order': [1, 0]
+}
+
 
 experiment_accounts = [
     experiment_user_1,
@@ -206,6 +390,28 @@ experiment_accounts = [
     experiment_user_8,
     experiment_user_9,
     experiment_user_10,
+    experiment_user_11,
+    experiment_user_12,
+    experiment_user_13,
+    experiment_user_14,
+    experiment_user_15,
+    experiment_user_16,
+    experiment_user_17,
+    experiment_user_18,
+    experiment_user_19,
+    experiment_user_20,
+    experiment_user_21,
+    experiment_user_22,
+    experiment_user_23,
+    experiment_user_24,
+    experiment_user_25,
+    experiment_user_26,
+    experiment_user_27,
+    experiment_user_28,
+    experiment_user_29,
+    experiment_user_30,
+    experiment_user_31,
+    experiment_user_32,
     test_experiment_user
 ]
 

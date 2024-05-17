@@ -119,58 +119,43 @@ def get_module():
         discrimination=10,
         graded=False
     )
-
-
-
-
     builder.add_quiz_end_slide()
 
-    builder.add_mc_question(
-        'Which of the following statements accurately describes the relationship between the inclination (i) and the right ascension of the ascending node (RAAN) (Ω) in defining the satellite\'s orbital plane?',
-        [
-            {'text': 'They both represent the angle between the orbital plane and the Earth\'s equatorial plane',
-             'correct': False, 'id': 0},
-            {
-                'text': 'Both i and Ω contribute to defining the plane\'s orientation, but they are not directly related to each other',
-                'correct': True, 'id': 1},
-            {'text': 'Ω defines the "twist" of the plane, while i represents the "tilt" angle from the ascending node',
-             'correct': False, 'id': 2},
-            {'text': 'Only RAAN (Ω) is necessary to fully define the orientation of the orbital plane',
-             'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
 
-    builder.add_mc_question(
-        'Which of the following represents the value of r in the Satellite Velocity equation?',
-        [
-            {'text': 'The length of the semimajor axis', 'correct': False, 'id': 0},
-            {'text': 'The distance from the center of the central body to the satellite', 'correct': True, 'id': 1},
-            {'text': 'The distance between the satellite and the surface of the central body', 'correct': False,
-             'id': 2},
-            {'text': 'The distance between the center of the central body and its surface', 'correct': False, 'id': 3}
-        ],
+    builder.add_tf_question(
+        'The Van Allen Belts contain the safest environment for a satellite.',
+        False,
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.25,
         discrimination=10,
         graded=True
     )
     builder.add_mc_question(
-        'The vis-viva equation demonstrates that the satellite\'s velocity in an elliptical orbit:',
+        'Which of these is the least impactful source of radiation to a spacecraft?',
         [
-            {'text': 'Remains constant throughout its entire journey', 'correct': False, 'id': 0},
-            {'text': 'Is directly proportional to its distance from Earth', 'correct': False, 'id': 1},
-            {'text': 'Depends solely on the satellite\'s mass and the Earth\'s mass', 'correct': False, 'id': 2},
-            {'text': 'Increases as it approaches Earth and decreases as it moves away', 'correct': True, 'id': 3}
+            {'text': 'Solar flares', 'correct': False, 'id': 0},
+            {'text': 'Galactic cosmic rays', 'correct': False, 'id': 1},
+            {'text': 'Earth-generated infrared radiation', 'correct': True, 'id': 2},
+            {'text': 'Van Allen Radiation Belt', 'correct': False, 'id': 3}
         ],
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.75,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Which of the following are not possible shapes for a spacecraft’s orbit?',
+        [
+            {'text': 'Dot (i.e., spacecraft hovering in space, not moving)', 'correct': True, 'id': 0},
+            {'text': 'Circle', 'correct': False, 'id': 1},
+            {'text': 'Parabola', 'correct': False, 'id': 2},
+            {'text': 'Ellipse', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.75,
         discrimination=10,
         graded=True
     )
@@ -188,13 +173,60 @@ def get_module():
         discrimination=10,
         graded=True
     )
+    builder.add_tf_question(
+        'The minimum magnetic field intensity is found at the poles.',
+        False,
+        '',
+        ['Intro To Space'],
+        difficulty=0.25,
+        discrimination=10,
+        graded=True
+    )
     builder.add_mc_question(
-        'Which of the following would be a unique concern with sending a satellite to an orbit with a height of 36000km?',
+        'Open orbits follow a path defined by a _______ or a ________ (conic sections).',
         [
-            {'text': 'This height is further than the outermost Earth orbit', 'correct': False, 'id': 0},
-            {'text': 'The gravitational pull from other planets would affect the Satellite', 'correct': False, 'id': 1},
-            {'text': 'High orbit traffic', 'correct': True, 'id': 2},
-            {'text': 'There is little merit in sending a satellite to this height', 'correct': False, 'id': 3}
+            {'text': 'Circle, Parabola', 'correct': False, 'id': 0},
+            {'text': 'Parabola, Hyperbola', 'correct': True, 'id': 1},
+            {'text': 'Hyperbola, Ellipse', 'correct': False, 'id': 2},
+            {'text': 'Circle, Ellipse', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.75,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'The vis-viva equation demonstrates that the satellite\'s velocity in an elliptical orbit:',
+        [
+            {'text': 'Remains constant throughout its entire journey', 'correct': False, 'id': 0},
+            {'text': 'Is directly proportional to its distance from Earth', 'correct': False, 'id': 1},
+            {'text': 'Depends solely on the satellite\'s mass and the Earth\'s mass', 'correct': False, 'id': 2},
+            {'text': 'Increases as it approaches Earth and decreases as it moves away', 'correct': True, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_tf_question(
+        'The Earth or larger body always sits at one of the foci of an orbit.',
+        False,
+        '',
+        ['Intro To Space'],
+        difficulty=0.25,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Which of the following represents the value of r in the Satellite Velocity equation?',
+        [
+            {'text': 'The length of the semimajor axis', 'correct': False, 'id': 0},
+            {'text': 'The distance from the center of the central body to the satellite', 'correct': True, 'id': 1},
+            {'text': 'The distance between the satellite and the surface of the central body', 'correct': False,
+             'id': 2},
+            {'text': 'The distance between the center of the central body and its surface', 'correct': False, 'id': 3}
         ],
         '',
         ['Intro To Space'],
@@ -218,112 +250,12 @@ def get_module():
         graded=True
     )
     builder.add_mc_question(
-        'What type of satellite would not be used often in the Molniya Orbit?',
-        [
-            {'text': 'Communication', 'correct': False, 'id': 0},
-            {'text': 'Navigation', 'correct': False, 'id': 1},
-            {'text': 'Military', 'correct': False, 'id': 2},
-            {'text': 'Weather Observation', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'What orbit would be best for a global coverage weather satellite?',
-        [
-            {'text': 'GEO', 'correct': True, 'id': 0},
-            {'text': 'Sun-Synchronous', 'correct': False, 'id': 1},
-            {'text': 'Molniya', 'correct': False, 'id': 2},
-            {'text': 'Low Earth Orbit', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'How is the orbital period calculated?',
-        [
-            {'text': 'Using Kepler’s Laws', 'correct': True, 'id': 0},
-            {'text': 'Using Newton’s Laws', 'correct': False, 'id': 1},
-            {'text': 'Using Planck’s Laws', 'correct': False, 'id': 2},
-            {'text': 'Using Hubble’s Laws', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'What distance is represented when theta=0 in the satellite distance equation?',
-        [
-            {'text': 'Apogee', 'correct': False, 'id': 0},
-            {'text': 'Semimajor-axis', 'correct': False, 'id': 1},
-            {'text': 'True Anomaly', 'correct': False, 'id': 2},
-            {'text': 'Perigee', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
         'At which point(s) does the orbital plane intersect the Earth\'s equatorial plane?',
         [
             {'text': 'Ascending and Descending Nodes', 'correct': True, 'id': 0},
             {'text': 'North and South Poles', 'correct': False, 'id': 1},
             {'text': 'Vernal Equinox', 'correct': False, 'id': 2},
             {'text': 'Argument of the Perigee', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'How is the orbital velocity (V) related to the orbital period (T)?',
-        [
-            {'text': 'Direct', 'correct': False, 'id': 0},
-            {'text': 'Inverse', 'correct': True, 'id': 1},
-            {'text': 'Quadratic', 'correct': False, 'id': 2},
-            {'text': 'None of the above', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'Despite being in "free fall," objects in orbit do not experience true weightlessness due to:',
-        [
-            {'text': 'The absence of air resistance', 'correct': False, 'id': 0},
-            {'text': 'The orbital velocity: the spacecraft is moving at a high velocity', 'correct': False, 'id': 1},
-            {'text': 'Residual gravitational force', 'correct': True, 'id': 2},
-            {'text': 'Drag', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-    builder.add_mc_question(
-        'Why does atmospheric density have a significant impact on satellites in low Earth orbit (LEO)?',
-        [
-            {'text': 'It affects the amount of solar energy received by the satellite', 'correct': False, 'id': 0},
-            {'text': 'It disrupts the communication signals between the satellite and the ground', 'correct': False,
-             'id': 1},
-            {'text': 'It creates drag that can lead to orbital decay and require corrections', 'correct': True,
-             'id': 2},
-            {'text': 'It increases the temperature of the satellite due to friction', 'correct': False, 'id': 3}
         ],
         '',
         ['Intro To Space'],
@@ -347,12 +279,26 @@ def get_module():
         graded=True
     )
     builder.add_mc_question(
-        'What material is best to prevent outgassing?',
+        'For a value of the true anomaly θ is 90°, which of the following describes the line that connects the center of mass of the system and the satellite in an elliptical orbit.',
         [
-            {'text': 'Aluminum', 'correct': True, 'id': 0},
-            {'text': 'Zinc', 'correct': False, 'id': 1},
-            {'text': 'Cadmium', 'correct': False, 'id': 2},
-            {'text': 'Magnesium', 'correct': False, 'id': 3}
+            {'text': 'Perpendicular to the semi major axis, passing through one of the foc', 'correct': True, 'id': 0},
+            {'text': 'Perpendicular to the semi minor axis, passing though one of the foci', 'correct': False, 'id': 1},
+            {'text': 'Parallel to the semi minor axis, passing through the center of the ellipse', 'correct': False, 'id': 2},
+            {'text': 'Parallel to the semi major axis, passing through the center of the ellipse', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.75,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'What type of satellite would not be used often in the Molniya Orbit?',
+        [
+            {'text': 'Communication', 'correct': False, 'id': 0},
+            {'text': 'Navigation', 'correct': False, 'id': 1},
+            {'text': 'Military', 'correct': False, 'id': 2},
+            {'text': 'Weather Observation', 'correct': True, 'id': 3}
         ],
         '',
         ['Intro To Space'],
@@ -361,20 +307,197 @@ def get_module():
         graded=True
     )
     builder.add_mc_question(
-        'If thrust is applied to an object in orbit in the direction of its orbital velocity, how is the orbit affected?',
+        'What does “impulsive” describe about a maneuver?',
         [
-            {'text': 'The satellite will completely change orbits', 'correct': False, 'id': 0},
-            {'text': 'The satellite will remain in the same plane but with a larger orbit', 'correct': True, 'id': 1},
-            {'text': 'The satellite will slow down due to drag, causing the thrust to have no effect', 'correct': False,
-             'id': 2},
-            {'text': 'Satellites cannot change trajectory once placed in an orbit', 'correct': False, 'id': 3}
+            {'text': 'Maneuvers are made impulsively by the onboard computer that decreases computing time when hundreds of maneuvers need to be made', 'correct': False, 'id': 0},
+            {'text': 'The burn time of the maneuver is assumed to be very short compared to the period of the orbit', 'correct': True, 'id': 1},
+            {'text': 'The maneuvers are performed in many consecutive, smaller pulses throughout the orbit instead of a continuous burn until the desired conditions are reached', 'correct': False, 'id': 2},
+            {'text': 'None of the above', 'correct': False, 'id': 3}
         ],
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.75,
         discrimination=10,
         graded=True
     )
+    builder.add_mc_question(
+        'Consider a spacecraft in an equatorial orbit (i.e. inclination 0 degrees) around Earth at a moment when the Sun, Earth and Spacecraft are aligned. Looking at the Earth-spacecraft-sun system from above, what is the order of the Earth, Sun, and Spacecraft when the spacecraft is at Perigee from left to right?',
+        [
+            {'text': 'Sun - Earth - Spacecraft', 'correct': False, 'id': 0},
+            {'text': 'Earth - Sun - Spacecraft', 'correct': False, 'id': 1},
+            {'text': 'Sun - Spacecraft - Earth', 'correct': False, 'id': 2},
+            {'text': 'Too little information', 'correct': True, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.75,
+        discrimination=10,
+        graded=True
+    )
+    #  ------- PASTE HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # builder.add_mc_question(
+    #     'Which of the following statements accurately describes the relationship between the inclination (i) and the right ascension of the ascending node (RAAN) (Ω) in defining the satellite\'s orbital plane?',
+    #     [
+    #         {'text': 'They both represent the angle between the orbital plane and the Earth\'s equatorial plane',
+    #          'correct': False, 'id': 0},
+    #         {
+    #             'text': 'Both i and Ω contribute to defining the plane\'s orientation, but they are not directly related to each other',
+    #             'correct': True, 'id': 1},
+    #         {'text': 'Ω defines the "twist" of the plane, while i represents the "tilt" angle from the ascending node',
+    #          'correct': False, 'id': 2},
+    #         {'text': 'Only RAAN (Ω) is necessary to fully define the orientation of the orbital plane',
+    #          'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Which of the following would be a unique concern with sending a satellite to an orbit with a height of 36000km?',
+    #     [
+    #         {'text': 'This height is further than the outermost Earth orbit', 'correct': False, 'id': 0},
+    #         {'text': 'The gravitational pull from other planets would affect the Satellite', 'correct': False, 'id': 1},
+    #         {'text': 'High orbit traffic', 'correct': True, 'id': 2},
+    #         {'text': 'There is little merit in sending a satellite to this height', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'What orbit would be best for a global coverage weather satellite?',
+    #     [
+    #         {'text': 'GEO', 'correct': True, 'id': 0},
+    #         {'text': 'Sun-Synchronous', 'correct': False, 'id': 1},
+    #         {'text': 'Molniya', 'correct': False, 'id': 2},
+    #         {'text': 'Low Earth Orbit', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'How is the orbital period calculated?',
+    #     [
+    #         {'text': 'Using Kepler’s Laws', 'correct': True, 'id': 0},
+    #         {'text': 'Using Newton’s Laws', 'correct': False, 'id': 1},
+    #         {'text': 'Using Planck’s Laws', 'correct': False, 'id': 2},
+    #         {'text': 'Using Hubble’s Laws', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'What distance is represented when theta=0 in the satellite distance equation?',
+    #     [
+    #         {'text': 'Apogee', 'correct': False, 'id': 0},
+    #         {'text': 'Semimajor-axis', 'correct': False, 'id': 1},
+    #         {'text': 'True Anomaly', 'correct': False, 'id': 2},
+    #         {'text': 'Perigee', 'correct': True, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'How is the orbital velocity (V) related to the orbital period (T)?',
+    #     [
+    #         {'text': 'Direct', 'correct': False, 'id': 0},
+    #         {'text': 'Inverse', 'correct': True, 'id': 1},
+    #         {'text': 'Quadratic', 'correct': False, 'id': 2},
+    #         {'text': 'None of the above', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Despite being in "free fall," objects in orbit do not experience true weightlessness due to:',
+    #     [
+    #         {'text': 'The absence of air resistance', 'correct': False, 'id': 0},
+    #         {'text': 'The orbital velocity: the spacecraft is moving at a high velocity', 'correct': False, 'id': 1},
+    #         {'text': 'Residual gravitational force', 'correct': True, 'id': 2},
+    #         {'text': 'Drag', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Why does atmospheric density have a significant impact on satellites in low Earth orbit (LEO)?',
+    #     [
+    #         {'text': 'It affects the amount of solar energy received by the satellite', 'correct': False, 'id': 0},
+    #         {'text': 'It disrupts the communication signals between the satellite and the ground', 'correct': False,
+    #          'id': 1},
+    #         {'text': 'It creates drag that can lead to orbital decay and require corrections', 'correct': True,
+    #          'id': 2},
+    #         {'text': 'It increases the temperature of the satellite due to friction', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'What material is best to prevent outgassing?',
+    #     [
+    #         {'text': 'Aluminum', 'correct': True, 'id': 0},
+    #         {'text': 'Zinc', 'correct': False, 'id': 1},
+    #         {'text': 'Cadmium', 'correct': False, 'id': 2},
+    #         {'text': 'Magnesium', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'If thrust is applied to an object in orbit in the direction of its orbital velocity, how is the orbit affected?',
+    #     [
+    #         {'text': 'The satellite will completely change orbits', 'correct': False, 'id': 0},
+    #         {'text': 'The satellite will remain in the same plane but with a larger orbit', 'correct': True, 'id': 1},
+    #         {'text': 'The satellite will slow down due to drag, causing the thrust to have no effect', 'correct': False,
+    #          'id': 2},
+    #         {'text': 'Satellites cannot change trajectory once placed in an orbit', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
 
     builder.add_tlx_survey_slide()
     builder.add_exam_finish_slide()
@@ -509,117 +632,15 @@ def get_module():
     #     discrimination=10,
     #     graded=True
     # )
-    # builder.add_tf_question(
-    #     'The minimum magnetic field intensity is found at the poles.',
-    #     False,
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'What does “impulsive” describe about a maneuver?',
-    #     [
-    #         {'text': 'Maneuvers are made impulsively by the onboard computer that decreases computing time when hundreds of maneuvers need to be made', 'correct': False, 'id': 0},
-    #         {'text': 'The burn time of the maneuver is assumed to be very short compared to the period of the orbit', 'correct': True, 'id': 1},
-    #         {'text': 'The maneuvers are performed in many consecutive, smaller pulses throughout the orbit instead of a continuous burn until the desired conditions are reached', 'correct': False, 'id': 2},
-    #         {'text': 'None of the above', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.75,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_tf_question(
-    #     'The Van Allen Belts contain the safest environment for a satellite.',
-    #     False,
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Which of these is the least impactful source of radiation to a spacecraft?',
-    #     [
-    #         {'text': 'Solar flares', 'correct': False, 'id': 0},
-    #         {'text': 'Galactic cosmic rays', 'correct': False, 'id': 1},
-    #         {'text': 'Earth-generated infrared radiation', 'correct': True, 'id': 2},
-    #         {'text': 'Van Allen Radiation Belt', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.75,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Consider a spacecraft in an equatorial orbit (i.e. inclination 0 degrees) around Earth at a moment when the Sun, Earth and Spacecraft are aligned. Looking at the Earth-spacecraft-sun system from above, what is the order of the Earth, Sun, and Spacecraft when the spacecraft is at Perigee from left to right?',
-    #     [
-    #         {'text': 'Sun - Earth - Spacecraft', 'correct': False, 'id': 0},
-    #         {'text': 'Earth - Sun - Spacecraft', 'correct': False, 'id': 1},
-    #         {'text': 'Sun - Spacecraft - Earth', 'correct': False, 'id': 2},
-    #         {'text': 'Too little information', 'correct': True, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.75,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Which of the following are not possible shapes for a spacecraft’s orbit?',
-    #     [
-    #         {'text': 'Dot (i.e., spacecraft hovering in space, not moving)', 'correct': True, 'id': 0},
-    #         {'text': 'Circle', 'correct': False, 'id': 1},
-    #         {'text': 'Parabola', 'correct': False, 'id': 2},
-    #         {'text': 'Ellipse', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.75,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Open orbits follow a path defined by a _______ or a ________ (conic sections).',
-    #     [
-    #         {'text': 'Circle, Parabola', 'correct': False, 'id': 0},
-    #         {'text': 'Parabola, Hyperbola', 'correct': True, 'id': 1},
-    #         {'text': 'Hyperbola, Ellipse', 'correct': False, 'id': 2},
-    #         {'text': 'Circle, Ellipse', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.75,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_tf_question(
-    #     'The Earth or larger body always sits at one of the foci of an orbit.',
-    #     False,
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'For a value of the true anomaly θ is 90°, which of the following describes the line that connects the center of mass of the system and the satellite in an elliptical orbit.',
-    #     [
-    #         {'text': 'Perpendicular to the semi major axis, passing through one of the foc', 'correct': True, 'id': 0},
-    #         {'text': 'Perpendicular to the semi minor axis, passing though one of the foci', 'correct': False, 'id': 1},
-    #         {'text': 'Parallel to the semi minor axis, passing through the center of the ellipse', 'correct': False, 'id': 2},
-    #         {'text': 'Parallel to the semi major axis, passing through the center of the ellipse', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.75,
-    #     discrimination=10,
-    #     graded=True
-    # )
+
+
+
+
+
+
+
+
+
     #
     #
     #

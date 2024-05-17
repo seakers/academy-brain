@@ -101,189 +101,84 @@ def get_module():
         graded=False
     )
     builder.add_mc_question(
-        'Which statement about orbital velocity is not accurate?',
+        'What are the three types of payloads discussed in the module',
         [
-            {'text': 'It balances gravitational pull inwards with centrifugal force outwards', 'correct': False,
+            {'text': 'Observation, Communications, Navigation', 'correct': True,
              'id': 0},
-            {'text': 'It is approximately 7.5 km/s for low Earth orbit', 'correct': False, 'id': 1},
-            {'text': 'Additional velocity is required to overcome energy losses during launch', 'correct': False,
-             'id': 2},
-            {'text': 'It allows the satellite to maintain a constant altitude above Earth', 'correct': True, 'id': 3}
+            {'text': 'Science, Imaging, Navigation', 'correct': False, 'id': 1},
+            {'text': 'Science, Communications, Military', 'correct': False, 'id': 2},
+            {'text': 'Imaging, Communication, Navigation', 'correct': False, 'id': 3}
         ],
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.25,
         discrimination=10,
         graded=False
     )
+    # builder.add_mc_question(
+    #     'Which statement about orbital velocity is not accurate?',
+    #     [
+    #         {'text': 'It balances gravitational pull inwards with centrifugal force outwards', 'correct': False,
+    #          'id': 0},
+    #         {'text': 'It is approximately 7.5 km/s for low Earth orbit', 'correct': False, 'id': 1},
+    #         {'text': 'Additional velocity is required to overcome energy losses during launch', 'correct': False,
+    #          'id': 2},
+    #         {'text': 'It allows the satellite to maintain a constant altitude above Earth', 'correct': True, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=False
+    # )
     builder.add_quiz_end_slide()
 
-    builder.add_mc_question(
-        'In-situ resource utilization (ISRU) may refer to the use of resources available in space for:',
-        [
-            {'text': 'Obtaining rare elements to bring back to Earth', 'correct': False, 'id': 0},
-            {'text': 'Measuring astronaut health', 'correct': False, 'id': 1},
-            {'text': 'Conducting microgravity experiments on board spacecraft', 'correct': False, 'id': 2},
-            {'text': 'Building and maintaining permanent human settlements on the Moon or Mars', 'correct': True,
-             'id': 3}
-        ],
+    # -----------------------------------
+    # Exam
+    # -----------------------------------
+
+
+
+
+    builder.add_tf_question(
+        'The launch segment always consists of a single launch vehicle.',
+        False,
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.25,
         discrimination=10,
         graded=True
     )
-
     builder.add_mc_question(
-        'The ground segment is responsible for ALL of the following EXCEPT:',
+        'Choice of the ______ and ______ drive the design of the spacecraft bus',
         [
-            {'text': 'Tracking spacecraft position', 'correct': False, 'id': 0},
-            {'text': 'Processing and storing mission data', 'correct': False, 'id': 1},
-            {'text': 'Attitude Control', 'correct': True, 'id': 2},
-            {'text': 'Sending commands to the spacecraft', 'correct': False, 'id': 3}
+            {'text': 'Ground Stations, Orbit', 'correct': False,
+             'id': 0},
+            {'text': 'Launch Vehicle, Payload', 'correct': False, 'id': 1},
+            {'text': 'Communication Requirement, Orbit', 'correct': False, 'id': 2},
+            {'text': 'Payload, Orbit', 'correct': True, 'id': 3}
         ],
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.25,
         discrimination=10,
         graded=True
     )
-
     builder.add_mc_question(
-        'What part of the Mission Architecture stores propellant?',
+        'Which of the following types of satellites would hold transponders in its payload?',
         [
-            {'text': 'ConOps', 'correct': False, 'id': 0},
-            {'text': 'Payload', 'correct': False, 'id': 1},
-            {'text': 'Ground Segment', 'correct': False, 'id': 2},
-            {'text': 'Launch Segment', 'correct': True, 'id': 3}
+            {'text': 'Earth Observation', 'correct': False,
+             'id': 0},
+            {'text': 'Space Observation', 'correct': False, 'id': 1},
+            {'text': 'Navigation', 'correct': False, 'id': 2},
+            {'text': 'Communications', 'correct': True, 'id': 3}
         ],
         '',
         ['Intro To Space'],
-        difficulty=0.5,
+        difficulty=0.25,
         discrimination=10,
         graded=True
     )
-
-    builder.add_mc_question(
-        'Define ConOps.',
-        [
-            {'text': 'Constraints Objectives and Operations', 'correct': False, 'id': 0},
-            {'text': 'Concept of Operations', 'correct': True, 'id': 1},
-            {'text': 'Confidence of Operations', 'correct': False, 'id': 2},
-            {'text': 'Create Orbit and Optimization', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'Which could be a part of the ConOps for a Satellite?',
-        [
-            {'text': 'Extensive size specifications', 'correct': False, 'id': 0},
-            {'text': 'Calculations for the amount of fuel required', 'correct': False, 'id': 1},
-            {'text': 'Expected orbit placement', 'correct': False, 'id': 2},
-            {'text': 'Explanation of how individual instruments perform their measurements', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'What type of spacecraft application would a satellite for TV services be?',
-        [
-            {'text': 'Exploration', 'correct': False, 'id': 0},
-            {'text': 'Resource Utilization', 'correct': False, 'id': 1},
-            {'text': 'Communications and Navigation', 'correct': True, 'id': 2},
-            {'text': 'Education', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'Which of the following is an ACTIVE illumination system?',
-        [
-            {'text': 'Thermal Control Surfaces', 'correct': False, 'id': 0},
-            {'text': 'Communication Antennas', 'correct': False, 'id': 1},
-            {'text': 'Solar Panels', 'correct': False, 'id': 2},
-            {'text': 'Radar', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'What type of Satellite provides PNT services?',
-        [
-            {'text': 'Space Observation', 'correct': False, 'id': 0},
-            {'text': 'Communication', 'correct': False, 'id': 1},
-            {'text': 'Navigation', 'correct': True, 'id': 2},
-            {'text': 'Earth Observation', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'Which of the following does NOT occur during detumbling?',
-        [
-            {'text': 'Deploy antennas', 'correct': False, 'id': 0},
-            {'text': 'Payload testing', 'correct': True, 'id': 1},
-            {'text': 'Perform health tests', 'correct': False, 'id': 2},
-            {'text': 'Transfer to operational orbit', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'What considerations are necessary when determining data delivery systems?',
-        [
-            {'text': 'Space vs Ground processing', 'correct': False, 'id': 0},
-            {'text': 'Centralized vs Distributed Processing', 'correct': False, 'id': 1},
-            {'text': 'Level of autonomy', 'correct': False, 'id': 2},
-            {'text': 'All of the above', 'correct': True, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
-    builder.add_mc_question(
-        'What task is usually performed from the ground?',
-        [
-            {'text': 'Payload scheduling', 'correct': True, 'id': 0},
-            {'text': 'Attitude control', 'correct': False, 'id': 1},
-            {'text': 'Data acquisition', 'correct': False, 'id': 2},
-            {'text': 'Low-level Signal Processing', 'correct': False, 'id': 3}
-        ],
-        '',
-        ['Intro To Space'],
-        difficulty=0.5,
-        discrimination=10,
-        graded=True
-    )
-
     builder.add_mc_question(
         'What type of satellite would perform on-orbit servicing?',
         [
@@ -298,14 +193,28 @@ def get_module():
         discrimination=10,
         graded=True
     )
-
     builder.add_mc_question(
-        'What are CubeSat satellites most commonly used for?',
+        'Which of the following components of a space mission’s architecture falls under the ground segment?',
         [
-            {'text': 'Military', 'correct': False, 'id': 0},
-            {'text': 'Navigation', 'correct': False, 'id': 1},
-            {'text': 'Education', 'correct': True, 'id': 2},
-            {'text': 'Tourism', 'correct': False, 'id': 3}
+            {'text': 'Mission Control', 'correct': True,
+             'id': 0},
+            {'text': 'Launch Vehicle', 'correct': False, 'id': 1},
+            {'text': 'Payload', 'correct': False, 'id': 2},
+            {'text': 'Spacecraft Bus', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.25,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'The ground segment is responsible for ALL of the following EXCEPT:',
+        [
+            {'text': 'Tracking spacecraft position', 'correct': False, 'id': 0},
+            {'text': 'Processing and storing mission data', 'correct': False, 'id': 1},
+            {'text': 'Attitude Control', 'correct': True, 'id': 2},
+            {'text': 'Sending commands to the spacecraft', 'correct': False, 'id': 3}
         ],
         '',
         ['Intro To Space'],
@@ -313,7 +222,6 @@ def get_module():
         discrimination=10,
         graded=True
     )
-
     builder.add_mc_question(
         'What is the difference between centralized and distributed processing?',
         [
@@ -331,6 +239,218 @@ def get_module():
         discrimination=10,
         graded=True
     )
+    builder.add_mc_question(
+        'Which of the following is an ACTIVE illumination system?',
+        [
+            {'text': 'Thermal Control Surfaces', 'correct': False, 'id': 0},
+            {'text': 'Communication Antennas', 'correct': False, 'id': 1},
+            {'text': 'Solar Panels', 'correct': False, 'id': 2},
+            {'text': 'Radar', 'correct': True, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Which of the following is NOT an element of a mission’s ConOps',
+        [
+            {'text': 'Mission Budget', 'correct': True,
+             'id': 0},
+            {'text': 'Tasking, Scheduling, Control', 'correct': False, 'id': 1},
+            {'text': 'Data Delivery', 'correct': False, 'id': 2},
+            {'text': 'Imaging concept', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.25,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Which of the following payloads would be present on a communications satellite',
+        [
+            {'text': 'Antenna', 'correct': True,
+             'id': 0},
+            {'text': 'Radar', 'correct': False, 'id': 1},
+            {'text': 'Spectrometer', 'correct': False, 'id': 2},
+            {'text': 'Thermal Imager', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.25,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'What part of the Mission Architecture stores propellant?',
+        [
+            {'text': 'ConOps', 'correct': False, 'id': 0},
+            {'text': 'Payload', 'correct': False, 'id': 1},
+            {'text': 'Ground Segment', 'correct': False, 'id': 2},
+            {'text': 'Launch Segment', 'correct': True, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Define ConOps.',
+        [
+            {'text': 'Constraints Objectives and Operations', 'correct': False, 'id': 0},
+            {'text': 'Concept of Operations', 'correct': True, 'id': 1},
+            {'text': 'Confidence of Operations', 'correct': False, 'id': 2},
+            {'text': 'Create Orbit and Optimization', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'What type of Satellite provides PNT services?',
+        [
+            {'text': 'Space Observation', 'correct': False, 'id': 0},
+            {'text': 'Communication', 'correct': False, 'id': 1},
+            {'text': 'Navigation', 'correct': True, 'id': 2},
+            {'text': 'Earth Observation', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Which of the following types of satellites is more likely to have requirements related to proximity operations?',
+        [
+            {'text': 'Earth Observation', 'correct': False,
+             'id': 0},
+            {'text': 'Space Observation', 'correct': True, 'id': 1},
+            {'text': 'Navigation', 'correct': False, 'id': 2},
+            {'text': 'Communications', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.25,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'What are CubeSat satellites most commonly used for?',
+        [
+            {'text': 'Military', 'correct': False, 'id': 0},
+            {'text': 'Navigation', 'correct': False, 'id': 1},
+            {'text': 'Education', 'correct': True, 'id': 2},
+            {'text': 'Tourism', 'correct': False, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    builder.add_mc_question(
+        'Which could be a part of the ConOps for a Satellite?',
+        [
+            {'text': 'Extensive size specifications', 'correct': False, 'id': 0},
+            {'text': 'Calculations for the amount of fuel required', 'correct': False, 'id': 1},
+            {'text': 'Expected orbit placement', 'correct': False, 'id': 2},
+            {'text': 'Explanation of how individual instruments perform their measurements', 'correct': True, 'id': 3}
+        ],
+        '',
+        ['Intro To Space'],
+        difficulty=0.5,
+        discrimination=10,
+        graded=True
+    )
+    #  ------- PASTE HERE
+
+
+
+
+
+    # builder.add_mc_question(
+    #     'In-situ resource utilization (ISRU) may refer to the use of resources available in space for:',
+    #     [
+    #         {'text': 'Obtaining rare elements to bring back to Earth', 'correct': False, 'id': 0},
+    #         {'text': 'Measuring astronaut health', 'correct': False, 'id': 1},
+    #         {'text': 'Conducting microgravity experiments on board spacecraft', 'correct': False, 'id': 2},
+    #         {'text': 'Building and maintaining permanent human settlements on the Moon or Mars', 'correct': True,
+    #          'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'What type of spacecraft application would a satellite for TV services be?',
+    #     [
+    #         {'text': 'Exploration', 'correct': False, 'id': 0},
+    #         {'text': 'Resource Utilization', 'correct': False, 'id': 1},
+    #         {'text': 'Communications and Navigation', 'correct': True, 'id': 2},
+    #         {'text': 'Education', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'Which of the following does NOT occur during detumbling?',
+    #     [
+    #         {'text': 'Deploy antennas', 'correct': False, 'id': 0},
+    #         {'text': 'Payload testing', 'correct': True, 'id': 1},
+    #         {'text': 'Perform health tests', 'correct': False, 'id': 2},
+    #         {'text': 'Transfer to operational orbit', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'What considerations are necessary when determining data delivery systems?',
+    #     [
+    #         {'text': 'Space vs Ground processing', 'correct': False, 'id': 0},
+    #         {'text': 'Centralized vs Distributed Processing', 'correct': False, 'id': 1},
+    #         {'text': 'Level of autonomy', 'correct': False, 'id': 2},
+    #         {'text': 'All of the above', 'correct': True, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+    # builder.add_mc_question(
+    #     'What task is usually performed from the ground?',
+    #     [
+    #         {'text': 'Payload scheduling', 'correct': True, 'id': 0},
+    #         {'text': 'Attitude control', 'correct': False, 'id': 1},
+    #         {'text': 'Data acquisition', 'correct': False, 'id': 2},
+    #         {'text': 'Low-level Signal Processing', 'correct': False, 'id': 3}
+    #     ],
+    #     '',
+    #     ['Intro To Space'],
+    #     difficulty=0.5,
+    #     discrimination=10,
+    #     graded=True
+    # )
+
+
+
+
+
+
 
     builder.add_tlx_survey_slide()
     builder.add_exam_finish_slide()
@@ -384,21 +504,7 @@ def get_module():
     #     discrimination=10,
     #     graded=False
     # )
-    # builder.add_mc_question(
-    #     'What are the three types of payloads discussed in the module',
-    #     [
-    #         {'text': 'Observation, Communications, Navigation', 'correct': True,
-    #          'id': 0},
-    #         {'text': 'Science, Imaging, Navigation', 'correct': False, 'id': 1},
-    #         {'text': 'Science, Communications, Military', 'correct': False, 'id': 2},
-    #         {'text': 'Imaging, Communication, Navigation', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=False
-    # )
+
     #
     # builder.add_quiz_end_slide()
     #
@@ -458,105 +564,13 @@ def get_module():
     #     discrimination=10,
     #     graded=True
     # )
-    # builder.add_mc_question(
-    #     'Which of the following components of a space mission’s architecture falls under the ground segment?',
-    #     [
-    #         {'text': 'Mission Control', 'correct': True,
-    #          'id': 0},
-    #         {'text': 'Launch Vehicle', 'correct': False, 'id': 1},
-    #         {'text': 'Payload', 'correct': False, 'id': 2},
-    #         {'text': 'Spacecraft Bus', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Choice of the ______ and ______ drive the design of the spacecraft bus',
-    #     [
-    #         {'text': 'Ground Stations, Orbit', 'correct': False,
-    #          'id': 0},
-    #         {'text': 'Launch Vehicle, Payload', 'correct': False, 'id': 1},
-    #         {'text': 'Communication Requirement, Orbit', 'correct': False, 'id': 2},
-    #         {'text': 'Payload, Orbit', 'correct': True, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_tf_question(
-    #     'The launch segment always consists of a single launch vehicle.',
-    #     False,
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Which of the following is NOT an element of a mission’s ConOps',
-    #     [
-    #         {'text': 'Mission Budget', 'correct': True,
-    #          'id': 0},
-    #         {'text': 'Tasking, Scheduling, Control', 'correct': False, 'id': 1},
-    #         {'text': 'Data Delivery', 'correct': False, 'id': 2},
-    #         {'text': 'Imaging concept', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Which of the following payloads would be present on a communications satellite',
-    #     [
-    #         {'text': 'Antenna', 'correct': True,
-    #          'id': 0},
-    #         {'text': 'Radar', 'correct': False, 'id': 1},
-    #         {'text': 'Spectrometer', 'correct': False, 'id': 2},
-    #         {'text': 'Thermal Imager', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Which of the following types of satellites is more likely to have requirements related to proximity operations?',
-    #     [
-    #         {'text': 'Earth Observation', 'correct': False,
-    #          'id': 0},
-    #         {'text': 'Space Observation', 'correct': True, 'id': 1},
-    #         {'text': 'Navigation', 'correct': False, 'id': 2},
-    #         {'text': 'Communications', 'correct': False, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
-    # builder.add_mc_question(
-    #     'Which of the following types of satellites would hold transponders in its payload?',
-    #     [
-    #         {'text': 'Earth Observation', 'correct': False,
-    #          'id': 0},
-    #         {'text': 'Space Observation', 'correct': False, 'id': 1},
-    #         {'text': 'Navigation', 'correct': False, 'id': 2},
-    #         {'text': 'Communications', 'correct': True, 'id': 3}
-    #     ],
-    #     '',
-    #     ['Intro To Space'],
-    #     difficulty=0.25,
-    #     discrimination=10,
-    #     graded=True
-    # )
+
+
+
+
+
+
+
     #
     # builder.add_exam_finish_slide()
     #
