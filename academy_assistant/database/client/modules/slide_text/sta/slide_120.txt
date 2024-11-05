@@ -1,0 +1,50 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 120
+Slide text: 
+
+Operational modes – State Diagram
+
+- All subsystems perform checkout prior to launch
+- Avionics active
+
+Pre-Launch:
+- On
+- Off
+- Fail
+
+Self-Test:
+- OK
+- Fail
+
+Launch:
+- Checkout
+
+Orbit Insertion:
+- Deploy
+
+Self-Test:
+- Start
+- OK
+- Error
+- Fail
+
+Error Contingency:
+- Resolved
+- Fail
+
+Failure
+
+On-orbit On-station
+
+Active:
+- Power
+- Avionics
+- ACS if possible
+- Comm
+- Subsystem under test
+
+Active:
+- All
+
+-Bus avionics do not play a relevant role during these stages
+-Communication of telemetry if possible

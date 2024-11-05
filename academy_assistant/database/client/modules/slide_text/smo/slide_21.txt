@@ -1,0 +1,18 @@
+Module: Space Mission Overview
+Slide Number: 21
+Slide text: 
+
+Data Delivery
+
+• Space vs ground processing
+    • Instrument data received and expensive data processing algorithms are done to filter, calibrate, convert to physical units, and bin the data into images.
+    • Which of those do we do on-board?
+
+• Centralized vs distributed processing:
+    • One computer vs. Multiple-dedicated computers?
+    • Decoupling good for performance, risk, and testing but increases cost
+
+• Level of autonomy: from 100% manual to 100% automatic.
+
+• All of these decisions are interrelated.
+

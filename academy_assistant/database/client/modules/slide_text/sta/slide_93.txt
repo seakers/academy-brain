@@ -1,0 +1,12 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 93
+Slide text:
+Main considerations for configuration
+
+- Payload – unobstructed field of view, electromagnetic interference, vibrations, contamination
+- ADCS – spinner vs 3 axis, minimize moments of inertia. Sun sensors with FOV of sun, sensors next to users (e.g., payload)
+- Propulsion – location of propellant tanks (heavy, close to center of mass), thrust misalignments
+- Power – Batteries (also heavy), must be kept cool, close to solar array to minimize wiring (losses), cabling
+- Comms – Antenna field of view, electromagnetic interference, deployable, amplifiers generate heat.
+- Avionics – can be heavy, generate vibrations, generate heat, wiring
+- Thermal – Thermal balance, separate hot from cold components, find radiator area, location of heat pipes and other thermal components.

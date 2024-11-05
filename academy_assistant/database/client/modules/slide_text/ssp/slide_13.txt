@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 13
+Slide text: 
+Optional: Overtone and combination bands
+
+- A molecule can be in vibrational energy states other than fundamental modes. Generally, it can be in any of the following:
+\[ E = h\nu_1 \left( v_1 + \frac{1}{2} \right) + h\nu_2 \left( v_2 + \frac{1}{2} \right) + \cdots + h\nu_{3N-6} \left( v_{3N-6} + \frac{1}{2} \right) \]
+  - Where a state is defined by a set of quantum numbers. \( v_1, v_2, \ldots, v_{3N-6} \)
+
+- A fundamental band is characterized by \( v_i = 1, v_j = 0 \) \( \forall j \neq i \)
+- An overtone band corresponds to \( v_i = k, k > 1, v_j = 0 \) \( \forall j \neq i \) and a photon of frequency \( k\nu_1 \)
+- A combination band corresponds to multiple non-zero quantum numbers, e.g. \( \nu_1 + 2\nu_2 \)
+
+- Molecules also absorb/emit at overtone and combination bands, i.e. at the sum of frequencies
+\[ h\nu = nE_i + mE_j \rightarrow \frac{hc}{\lambda} = n \frac{hc}{\lambda_i} + m \frac{hc}{\lambda_j} \]

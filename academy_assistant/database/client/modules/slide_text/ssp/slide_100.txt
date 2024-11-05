@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 100
+Slide text: 
+
+Where’s the catch?
+
+- The resolution of this antenna would be $\frac{\lambda}{2} = \frac{L}{2h}$ and the resulting ground azimuth resolution is $X_a = \frac{L}{2}$
+  - Independent of h!
+  - Better resolution for smaller antennas!
+  - What’s going on?
+- Indeed, the further the sensor, the larger the ground footprint and thus the larger the synthesized aperture.
+- However, at some point, you become limited by SNR, ambiguities, and data processing abilities.

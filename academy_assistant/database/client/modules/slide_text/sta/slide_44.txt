@@ -1,0 +1,18 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 44
+Slide text:
+- Idea: Change the direction of spinning instead of the speed of rotation like reaction wheels do
+- Power required is very small compared to reaction wheels
+
+\[
+\begin{align*}
+\tau^c & \\
+\Delta h & \\
+\hat{a} & \\
+h & \\
+\hat{g} & \\
+N & \\
+\end{align*}
+\]
+
+50 ft-lb-sec / 50 ft-lb CMG Development Unit at Honeywell Defense and Space Electronic Systems

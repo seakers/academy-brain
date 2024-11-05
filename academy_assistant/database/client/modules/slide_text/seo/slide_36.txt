@@ -1,0 +1,19 @@
+Module: Space Environments And Orbits
+Slide Number: 36
+Slide text:
+Types of Earth orbits
+
+- Orbit selection is the most important decision in a space mission after payload selection
+  - Orbit affects the design of all key spacecraft subsystems and drives payload performance
+- There are many different types of orbits. For example:
+  - By altitude:
+    - Low Earth Orbit (LEO): \( h < 3000 \, \text{km} \) (most \( < 800 \, \text{km} \))
+    - Medium Earth Orbit (MEO): \( 3000 \, \text{km} < h < 36000 \, \text{km} \)
+    - Geosynchronous (GEO): \( h = 36000 \, \text{km} \)
+  - By inclination:
+    - Prograde: \( 0 < i < 90^\circ \)
+    - Retrograde: \( 90^\circ < i < 180^\circ \)
+    - Polar: \( i = 90^\circ \)
+    - Sun-synchronous: \( i(h), 90^\circ < i < 100^\circ \)
+    - Tropical: \( i \sim 20^\circ - 30^\circ \)
+    - Equatorial: \( i \sim 0^\circ \)

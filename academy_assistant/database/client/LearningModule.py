@@ -6,8 +6,16 @@ from academy_assistant.database.client.modules.parametric_ca import get_module a
 from academy_assistant.database.client.modules.spacecraft_bus import get_module as get_sb_module
 
 # Experiment Modules
-from academy_assistant.database.client.modules.intro_to_space import get_module as get_intro_module
-from academy_assistant.database.client.modules.space_env_and_orbits import get_module as get_orb_env_module
+# from academy_assistant.database.client.modules.intro_to_space import get_module as get_intro_module
+# from academy_assistant.database.client.modules.space_env_and_orbits import get_module as get_orb_env_module
+
+# Production Modules isc_smo, isc_seo, isc_sta, isc_ssp
+from academy_assistant.database.client.modules.isc_smo import get_module as get_isc_smo
+from academy_assistant.database.client.modules.isc_seo import get_module as get_isc_seo
+from academy_assistant.database.client.modules.isc_sta import get_module as get_isc_sta
+from academy_assistant.database.client.modules.isc_ssp import get_module as get_isc_ssp
+
+
 
 
 class LearningModule:
@@ -19,14 +27,20 @@ class LearningModule:
             # 'Basics': get_basic_module(),
 
             # Space Training 101
-            'Space Mission Overview': get_intro_module(),
-            'Space Environment and Orbits': get_orb_env_module(),
+            # 'Space Mission Overview': get_intro_module(),
+            # 'Space Environment and Orbits': get_orb_env_module(),
             # 'Spacecraft Bus': get_sb_module(),
             # 'Mission Payloads': get_rms_module(),
             # 'Bottom Up Estimation': get_buca_module(),
             # 'Economies of Scale': get_eocl_module(),
             # 'Parametric Estimation': get_pca_module(),
             # 'Lifecycle Cost': get_lc_module(),
+
+            # Production Modules
+            'Space Mission Overview': get_isc_smo(),
+            'Space Environments and Orbits': get_isc_seo(),
+            'Spacecraft Technologies and Architectures': get_isc_sta(),
+            'Satellite Scientific Payloads': get_isc_ssp(),
         }
 
 

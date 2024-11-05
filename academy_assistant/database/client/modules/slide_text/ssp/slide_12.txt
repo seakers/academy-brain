@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 12
+Slide text: 
+
+Optional: Fundamental vibration bands
+
+• Each mode of vibration corresponds to a different energy level and different frequency called the fundamental frequency
+
+• Levels of vibrational energy: \( E_v = h \nu_k \left( v_k + \frac{1}{2} \right) \)
+  • Where \( v_k = 1, 2, \ldots \) is the vibrational quantum number
+  • \( \nu_k \) is the fundamental frequency
+
+• Molecules may change from the ground state \( v_k = 0 \) to one of the modes \( v_k = 1 \) by absorbing photons at the mode's fundamental frequency \( \nu_k \)
+
+• For example, \( \text{H}_2\text{O} \) has 3 fundamental modes at 2.9, 3.1 and 6.08μm
+  • Note these are in the SWIR

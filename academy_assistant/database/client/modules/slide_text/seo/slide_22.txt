@@ -1,0 +1,15 @@
+Module: Space Environments And Orbits
+Slide Number: 22
+Slide text: 
+- Spacecraft Thermal Environment
+  - Spacecraft receive heat from
+    - the Sun (direct and reflected off Earth),
+    - the Earth,
+    - internal sources (e.g., electronics)
+  - Variations in these contributions along a spacecraft’s orbit can result in fast and extreme temperature changes
+    - When a spacecraft has large surface areas directly exposed to the Sun, it can get pretty hot
+    - When a spacecraft is behind Earth (there is no sunlight), we say it is in eclipse – it gets cold pretty quickly
+  - To manage this heat, spacecraft rely primarily on radiation
+    - No convection in space (e.g., heat doesn’t rise)
+  - To control radiation, spacecraft often use coatings such as paints and thermal insulators with radiative properties specially designed for the mission
+    - More on this in the spacecraft subsystems module!

@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 77
+Slide text:
+
+Antennas – Types of antennas
+
+• Antennas are circuits (wires, apertures) that interact with EM waves by transforming electrical fields into currents (and vice-versa)
+• There are different types of antennas
+    • Wire antennas (dipoles)
+    • Apertures (e.g. parabolic, patch)
+    • Others (e.g. helical, Yagi)
+• An omni-directional antenna radiates isotropically in all directions, but most antennas are directional, i.e., the intensity of the radiated power depends on the direction.
+• Antennas are important for communications but also for remote sensing (radiometers, radars, and even telescopes are antennas!)
+

@@ -1,0 +1,22 @@
+Module: Space Environments And Orbits
+Slide Number: 42
+Slide text: 
+
+How to choose an orbit – Earth observing mission
+
+• A compromise between requirements from all instruments and cost
+• Cost:
+  • launch cost
+  • Bus cost through power available, $\Delta V$ budget
+• Altitude
+  • Higher altitude means higher $\Delta V$ budget and higher launch cost
+  • High altitude for passive instruments, low altitude for very high energy instruments or in situ measurements
+  • Higher altitude means better coverage and revisit time
+  • Lower altitude means better spatial resolution and SNR
+  • Below 500km, drag is a problem (lifetime, ADCS)
+• Inclination
+  • Greater inclination change from launch latitude means higher $\Delta V$ budget and higher launch cost
+  • SSO are useful to ensure constant illumination
+  • SSO are avoided when we want to sample diurnal cycle (e.g., oceanography to avoid tidal aliasing)
+  • True polar when we want optimal coverage of the poles (e.g., high latitudes, geodetic satellites)
+  • Lower inclinations to improve coverage of region of interest (e.g., tropics)

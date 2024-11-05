@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 57
+Slide text: 
+- Incoming power from solar irradiance:
+  \[
+  \dot{Q}_{\text{Sun}} = \Phi_s \alpha_{\text{VNIR}} A_{\text{Sun}}
+  \]
+  - Where \( A_{\text{Sun}} \) is the area perpendicular to Sun-spacecraft vector
+  - \( \Phi_s = \frac{1370}{r^2} \frac{W}{m^2} \) is the solar irradiance (changes with \( r \) and over time)
+  - \( \alpha_{\text{VNIR}} \) is the absorptivity of the surface in the VNIR
+
+- Remember that for a given wavelength, absorptivity is equal to emissivity (Kirchhoff Law)
+  \[
+  \epsilon(\lambda) = \alpha(\lambda)
+  \]
+
+- However, if a material absorbs in the VNIR (e.g., sunlight) and emits in the TIR (300K), emissivity and absorptivity are different in general.
+
+- Example: for white paint \( \epsilon(\text{TIR}) = 0.9; \alpha(\text{VNIR}) = 0.2 \).
+
+- Example: \( \dot{Q}_{\text{Sun}} = 547W \) for \( \alpha_{\text{VNIR}} = 0.4, A_{\text{Sun}} = 1m^2, r = 1AU \).

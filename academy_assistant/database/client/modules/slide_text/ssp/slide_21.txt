@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 21
+Slide text:
+
+- Multi-angle Imaging Spectroradiometer (MISR) captures images of the Earth's surface and atmosphere from nine different angles.
+- MISR can distinguish features based on their angular distribution, which helps in identifying aerosols, clouds, and surface properties
+- A limb sounder observes the Earth's atmosphere by looking vertically up from the limb of the Earth, which is the edge of the planet seen from space.
+- This perspective allows the instrument to measure vertical profiles of atmospheric constituents, such as ozone, water vapor, and trace gases, over a broad altitude range.

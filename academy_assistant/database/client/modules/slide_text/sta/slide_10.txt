@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 10
+Slide text:
+
+Electrical Power System – Functions
+
+• The Electrical Power Subsystem (EPS) is responsible for providing electrical power to the payload and the rest of the spacecraft subsystems. The main cost drivers for the system is mass and power.
+
+• More specifically, it must perform the following functions
+  • Power generation, enough to satisfy the power requirements from the different components
+  • Energy storage, to save power for situations in which more power is needed than can be produced (e.g., in eclipse)
+  • Power regulation and control, to ensure that the different voltages and currents that are required by the different components are properly generated and remain within the required limits.
+  • Power distribution, so that the power is physically transported from the source to the loads (i.e., the components).
+  • Power isolation, to ensure the safety of the system in case of short-circuits or any undesirable power surges.

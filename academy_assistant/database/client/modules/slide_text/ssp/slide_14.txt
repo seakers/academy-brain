@@ -1,0 +1,13 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 14
+Slide text: 
+
+Optional: Rotational processes
+
+• Quantized rotational energy states:
+    E_J = Bhc(J + 1), J ∈ Z^+
+    • Where B = h/8π^2Ic is the rotational constant of the molecule (depends on inertial properties) and J is the quantum number (J=1,2,...)
+• When the molecule changes from one state (quantum number) to another, it emits/absorbs a photon of frequency
+    ν = 2BJ (cm^-1)
+• Selection rule: ΔJ = ±1 (from quantum mechanics)
+• Pure rotational processes occur in the far-infrared and microwave portion of the spectrum

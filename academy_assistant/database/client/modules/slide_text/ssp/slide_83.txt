@@ -1,0 +1,10 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 83
+Slide text: 
+Optional: In-class question
+
+- We have a 20MHz, L-band radar (1.3GHz) with a side-looking angle of 20deg and flying at 800km. How long would the antenna need to be in the azimuth (along-track) direction to have an azimuth resolution equal to the ground range resolution?
+    1. 8.96m
+    2. 89.6m
+    3. 896m
+    4. 8.96km

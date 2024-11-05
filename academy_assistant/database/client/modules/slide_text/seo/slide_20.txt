@@ -1,0 +1,12 @@
+Module: Space Environments And Orbits
+Slide Number: 20
+Slide text:
+- Any non-operational object in orbit is considered debris
+- Includes mission-related debris, such as
+  - Pieces of dead satellites
+  - Pieces of launch vehicles (fairings, inter-stage adapters)
+  - Others (e.g., Ed White’s glove from Gemini 4 mission)
+- And naturally occurring debris
+  - Micrometeoroids
+  - Asteroid particles
+- Mostly concentrated around most populated orbits (e.g., GPS and GEO orbits)

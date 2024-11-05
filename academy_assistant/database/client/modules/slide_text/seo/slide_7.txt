@@ -1,0 +1,20 @@
+Module: Space Environments And Orbits
+Slide Number: 7
+Slide text: 
+
+Atmospheric drag – Orbit/attitude disturbance
+
+- We care about atmospheric density mostly because it affects the drag (D) seen by the satellite, which may lead to orbital decay and disturbance torques.
+
+\[ D = \frac{1}{2} \rho V^2 C_D A \]
+
+  - \(\rho\) is the atmospheric density (varies exponentially but very small in orbit)
+  - \(C_D\) is the drag coefficient (~2-4 are typical values for spacecraft)
+  - \(V\) is the orbital velocity
+  - \(A\) is the drag area
+
+- Atmospheric drag is strong up to ~500km, negligible after that
+  - A CubeSat at 400km has a lifetime of 1-9 months
+  - A CubeSat at 600km has a lifetime over 25 years
+
+(C) Daniel Selva 2018

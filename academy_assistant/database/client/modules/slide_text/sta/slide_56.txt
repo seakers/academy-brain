@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 56
+Slide text: 
+
+Thermal Radiation to Space
+
+- Remember Stefan-Boltzmann equation:
+  \[
+  \dot{Q}_{\text{out}} = \epsilon \sigma T^4 A_{\text{rad}} [W]
+  \]
+  - Where \(\epsilon = \epsilon(\lambda)\) is the emissivity of the surface, which depends on the wavelength \(\lambda\).
+    - In particular, \(\epsilon_{\text{(TIR)}} \neq \epsilon_{\text{(VIS)}}\)
+  - \(\sigma = 5.67 \cdot 10^{-8} W/m^2K\) is the Stefan-Boltzmann constant
+  - \(T\) is the temperature in K
+  - \(A_{\text{rad}}\) is the surface area projected to cold space in \(m^2\)
+
+- At which wavelength is the radiation emitted?
+  - All of them, following continuous Planck function
+  - Peak given by Wien law: \(\lambda_{\text{max}} T = 2898 \mu m \cdot K\)
+
+- Example: For \(\epsilon = 0.8\), \(T = 330K\), \(A_{\text{rad}} = 1m^2 \rightarrow \dot{Q}_{\text{out}} = 538W\)

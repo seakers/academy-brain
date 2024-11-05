@@ -1,0 +1,11 @@
+    Module: Space Mission Overview
+    Slide Number: 2
+    Slide text: 
+    Intro to Module 1
+
+    • In this module, you will get introduced to space missions and the space mission design process.
+
+    • The module consists of 3 short lectures:
+    1. Introduction to Space. Why go to space? Why is space expensive?
+    2. Overview of a Space Mission. Typical elements and concept of operations for a space mission.
+    3. Types of Space Missions and Payloads. Functions of space missions, architectures, payload types

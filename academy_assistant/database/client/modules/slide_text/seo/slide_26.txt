@@ -1,0 +1,29 @@
+Module: Space Environments And Orbits
+Slide Number: 26
+Slide text: 
+
+Conic sections, open vs closed orbits
+
+• More generally, orbital trajectories can follow the shape of any conic section (circle, ellipse, parabola, or hyperbola)
+• Circular and elliptical orbits (0 ≤ e < 1) are “closed orbits” around the Earth
+• A satellite with sufficient energy (e ≥ 1) will escape Earth and follow an interplanetary trajectory that never comes back (i.e., “open orbits”)
+    • When e = 1, it follows a parabolic trajectory
+    • When e > 1 it follows a hyperbolic trajectory
+
+
+Equations:
+- Hyperbola:
+  \[
+  \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+  \]
+  \[
+  r = \frac{ep}{1 - e \cos \theta}
+  \]
+
+- Parabola:
+  \[
+  y^2 = 4ax
+  \]
+  \[
+  r = \frac{2a}{1 - \cos \theta}
+  \]

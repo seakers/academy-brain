@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 71
+Slide text: 
+
+Modulations
+
+- Information between satellite and ground station is transmitted by changing some property (amplitude, frequency or phase) of a high-frequency carrier signal \( c(t) \) in a way that encodes the information in the message \( m(t) \).
+  - This is called modulation.
+
+- Why do we need modulation? Why can’t we just transmit our low frequency train of pulses (bits) \( m(t) \)?
+  - Low frequency signals are reflected off the ionosphere
+  - Low frequency signals would require extremely large antennas
+
+[Image of signal, AM, and FM waveforms]

@@ -1,0 +1,11 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 21
+Slide text: 
+
+Example problem
+
+• Consider a CubeSat that needs 10W continuously. It is in a typical LEO orbit (not dawn-dusk SSO). With a degradation factor \( I_d \approx 0.72 \), ignoring yearly degradation, and assuming 1D control (worst-case sun angle of \( \theta = 23^\circ \)), how many 4x4 cm\(^2\) triple-junction solar cells (\( \eta = 30\% \)) do we need approximately?
+    1. 12
+    2. 24
+    3. 48
+    4. 96

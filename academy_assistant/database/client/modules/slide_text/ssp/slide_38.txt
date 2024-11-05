@@ -1,0 +1,11 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 38
+Slide text:
+
+Optional: Photomultiplier tubes
+
+• Add multiple electrodes (dynodes) to increase number of electrons per photon
+• At each dynode, new electrons are ejected due to secondary emission
+• Thermal noise becomes negligible
+• Still have noise due to dark current (from cosmic rays, thermal, etc)
+• Cooling helps decrease dark current (cryocooling needed upwards of 2 – 3μm)

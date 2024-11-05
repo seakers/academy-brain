@@ -1,0 +1,15 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 91
+Slide text:
+Spacecraft fundamental frequency
+
+- Example: Spacecraft on launch vehicle (k bending stiffness of "cantilever beam")
+\[ \omega = 2\pi f = \sqrt{\frac{k}{m}}, \quad k = \frac{3EI}{L^3} \]
+
+- Where \( L \) is the distance from launch adapter to spacecraft center of mass, \( E \) is the Young's modulus \([Pa]\) and \( I \) is the area moment of inertia \([m^4]\)
+
+- This fundamental frequency is often on the order of tens of Hz for typical spacecraft (see empirical data).
+
+- It must be greater than a threshold provided in the launch vehicle guide. For Falcon 9:
+  - Fundamental bending mode > 10Hz
+  - Fundamental axial mode > 25Hz

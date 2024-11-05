@@ -1,0 +1,25 @@
+Module: Space Environments And Orbits
+Slide Number: 19
+Slide text:
+- In summary, the total dose of radiation comes from:
+  - Sunlight (mostly UV photons)
+  - Solar flares (EUV and X-rays)
+  - Solar wind (low energy protons)
+  - CME (medium-high energy protons)
+  - Radiation belt (protons and electrons)
+  - Galactic Cosmic Rays (relativistic heavy nuclei)
+- Spacecraft must shield against this radiation
+  - Ex: Thick layer of aluminum, or water for human spaceflight.
+- The more total radiation dose expected during the mission’s lifetime, the thicker the layer of aluminum must be.
+
+\[
+\text{BFO dose equivalent, cSv/yr}
+\]
+
+\[
+\text{Shield thickness, g/cm}^2
+\]
+
+Source: Hoffman (MIT)
+
+(C) Daniel Selva 2018

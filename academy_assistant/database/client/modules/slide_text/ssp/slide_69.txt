@@ -1,0 +1,10 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 69
+Slide text:
+Optional: In-class question
+
+- How big would the aperture of a conically scanning L-band radiometer have to be to provide a ground spatial resolution of 1km from a 685km SSO given an off-nadir angle of 40deg?
+  1. 0.3m
+  2. 3m
+  3. 30m
+  4. 300m

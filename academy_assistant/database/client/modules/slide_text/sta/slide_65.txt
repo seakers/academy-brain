@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 65
+Slide text: 
+
+**Thermal control technologies**
+
+- **Doublers**
+  - Passive aluminum plates that increase heat exchange surface area
+- **Heat pipes**
+  - Transport heat from source to sink using evaporation and condensation of a fluid
+- **Thermoelectric coolers**
+  - Electrical current induces cooling of junction of 2 different materials
+- **Cryocoolers**
+  - Use thermodynamic (e.g., Stirling) cycle (careful with vibrations!)
+  - Or just cryogenic liquids
+
+*Image credit: G. Landis (MIT)*

@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 93
+Slide text: 
+
+Optional: Focused vs unfocused SAR
+
+• In order to achieve the full capability of the synthetic array, each received echo must be phase-shifted to take into account the difference in distance between the target and the sensor
+
+• To focus on point \(X_i\), this phase difference is \(\phi_i = 2k(h - r_i) = \frac{4\pi}{\lambda} (h - r_i)\)
+  • This requires computing the phase for each point \(X_i\) \(\Rightarrow\) focused SAR
+
+• In an unfocused SAR, we assume that phase shift corrections of less than \(\lambda/4\) can be neglected, restrict ourselves to this region, and simply do not do these calculations.
+  • This is equivalent to having a smaller antenna of \(L' = \sqrt{\frac{\lambda h}{2}}\) and resolution
+    \[
+    X_a = \frac{\lambda h}{L'} = \sqrt{2\lambda h}
+    \]

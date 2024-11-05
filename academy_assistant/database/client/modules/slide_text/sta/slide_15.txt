@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 15
+Slide text: 
+
+Photovoltaic power generation
+
+• Arrays of solar cells
+    • p-n junctions, like photodetectors
+    • Transform photons into electrons using photovoltaic effect
+• Only viable if close enough to the Sun
+    • up to Mars or even Jupiter
+    • cf. the Juno mission got 200W power with a 60m^2 solar array
+• High specific power 25-300 W/kg
+• Configurations
+    • Body-mounted (cheapest) vs deployable
+    • Fixed (cheapest) vs 1-axis vs 2-axis gimbal
+        • Use sun sensors for pointing

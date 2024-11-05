@@ -1,0 +1,13 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 58
+Slide text: 
+
+Optional: Rayleigh-Jeans approximation
+
+• Today we are concerned with the MW region of the spectrum.
+• While most of thermal emission of bodies at room temperature occurs in the far infrared, the emission extends into the microwave region.
+• In this region, we observe that $h\nu \ll kT$ and thus the exponential term in Planck’s law can be well approximated:
+\[ e^{h\nu/k_BT} \approx 1 + \frac{h\nu}{kT} + \ldots \]
+• With a little algebra, we obtain:
+\[ B_\nu \approx \frac{2kT}{\lambda^2} \]
+\[ T_B \approx \epsilon T_{phys} \]

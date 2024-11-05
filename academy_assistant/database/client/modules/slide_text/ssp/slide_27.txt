@@ -1,0 +1,21 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 27
+Slide text: 
+
+Detectors: Pixel size, GSD, and IFOV
+
+- The focal plane is populated by many detectors (\(N_x\)-thousands) of size \(p\) (e.g., \(p=5\mu m\))
+- Each detector integrates energy coming from a small solid angle (instantaneous field of view)
+  \[
+  \tan \text{IFOV} \approx \text{IFOV} = \frac{p}{f} = \frac{\text{FOV}}{N_x}
+  \]
+- Altitude and IFOV determine ground sampling distance GSD:
+  \[
+  \tan \frac{\text{IFOV}}{2} \approx \frac{\text{IFOV}}{2} = \frac{p}{2f} = \frac{\text{GSD}}{2h}
+  \]
+  \[
+  \text{GSD} = h \cdot \text{IFOV} = \frac{p}{M} = \frac{hp}{f}
+  \]
+- With an off-nadir looking angle \(\eta\), a constant must be applied
+  - Cross-track: \(\frac{1}{\cos \eta}\)
+  - Along-track: \(\frac{1}{\cos^2 \eta}\)

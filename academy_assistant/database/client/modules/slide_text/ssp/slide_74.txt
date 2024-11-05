@@ -1,0 +1,17 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 74
+Slide text: 
+
+Fundamentals of radar systems
+
+- Radar systems deduce the range to objects, and sometimes radial velocity and shape.
+  - Great for topography, geometry and physical structure
+- The principle of operation is simple: radar emits a pulse of radiation, which is reflected off the target, comes back to the radar and is received.
+- The round-trip delay is proportional to the range:
+  \[
+  \Delta t = \frac{2r}{c}
+  \]
+- Monostatic radar is the most common, in which the same antenna is used for transmission and reception
+- If the two antennas are in different locations, it is called a bistatic radar.
+
+Radars are usually side-looking. Can you guess why?

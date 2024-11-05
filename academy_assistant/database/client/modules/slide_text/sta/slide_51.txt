@@ -1,0 +1,5 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 51
+Slide text: 
+
+5 – Thermal Control Subsystem

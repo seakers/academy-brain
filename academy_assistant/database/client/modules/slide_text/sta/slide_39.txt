@@ -1,0 +1,25 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 39
+Slide text: 
+
+3-axis control based on control moment gyros
+
+TABLE 11-1. Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.
+
+| Type | Pointing Options | Attitude Maneuverability | Typical Accuracy | Lifetime Limits |
+|------|------------------|-------------------------|------------------|----------------|
+| Gravity-gradient Earth local vertical only | Very limited | ±5 deg (2 axes) | None |
+| Gravity-gradient plus Wheel | Earth local vertical only | Very limited | ±5 deg (2 axes) | Life of wheel bearings |
+| Passive Magnetic | North/south only | Very limited | ±5 deg (2 axes) | None |
+| Pure Spin Stabilization | Spin axis fixed inertially (or with momentum wheel despin) | High propellant cost for spin axis reorientation | ±1 deg (1 axis) | Thruster propellant or gas jets |
+| Dual-Spin Stabilization | Spin axis fixed inertially (or with momentum wheel despin) | High propellant cost for spin axis reorientation | ±1 deg (1 axis) | Thruster propellant or gas jets |
+| Momentum Bias (1 Wheel) | Momentum vector fixed inertially or along platform | Same as above for momentum vector reorientation | ±1 deg (1 axis) | Thruster propellant or gas jets |
+| Base Momentum (1 Wheel) | Best suited for nadir pointing | Momentum vector reorientation by wheel torque, considering platform constraints | ±0.1 deg to ±0.5 deg | Propellant for initial spin-up, life of sensor and wheel bearings |
+| Zero Momentum (3 Wheels) | No constraints | No constraints | ±0.01 deg to ±0.5 deg | Propellant for initial spin-up, life of sensor and wheel bearings |
+| Zero Momentum (3 Magnetic Torquers) | No constraints | No constraints | ±0.01 deg to ±1 deg | Propellant for initial spin-up, life of sensor and wheel bearings |
+| Zero Momentum (4 CMG) | No constraints | No constraints | ±0.001 deg to ±1 deg | Life of sensor and wheel bearings |
+
+*Thrusts may be used for slewing and momentum dumping at all altitudes. Magnetic torquers may be used from LEO to GEO.
+
+Highest performance (and cost) configuration
+CMGs provide high torques and high accuracies

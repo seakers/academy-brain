@@ -1,0 +1,15 @@
+Module: Space Environments And Orbits
+Slide Number: 12
+Slide text: 
+- Electromagnetic radiation is carried by waves and massless particles (named photons) that travel at the speed of light
+- Waves are periodic.
+  - Wavelength is the distance between consecutive peaks
+  - Frequency is the time interval between consecutive peaks
+- Frequency \( f \) and wavelength \( \lambda \) are related by the speed of light \( c \)
+  \[
+  f = \frac{c}{\lambda}
+  \]
+- Energy of a photon is proportional to its frequency through the Planck constant
+  \[
+  E = hf = \frac{hc}{\lambda}
+  \]

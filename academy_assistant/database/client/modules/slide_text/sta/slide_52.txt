@@ -1,0 +1,11 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 52
+Slide text: 
+Thermal Subsystem Functions
+
+- Control the temperature of spacecraft and its components by:
+  - Dissipating excess heat (typically passive radiators)
+  - Cooling down certain components (e.g., instrument focal planes)
+  - Heating up certain components (e.g., sometimes batteries)
+- Spacecraft have to survive in extremely hot and cold environments
+- They have to withstand extreme temperature changes in short amounts of time

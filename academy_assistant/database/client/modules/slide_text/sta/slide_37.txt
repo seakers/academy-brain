@@ -1,0 +1,25 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 37
+Slide text: 
+
+3-axis control based on thrusters
+
+TABLE 11-1. Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.
+
+| Type | Pointing Options | Attitude Maneuverability | Typical Accuracy | Lifetime Limits |
+|------|------------------|--------------------------|------------------|----------------|
+| Gravity-gradient (Earth only) | Earth local vertical only | No constraints | 45 deg (3 axes) | None |
+| Gravity-gradient and Momentum Wheel (Earth only) | Earth local vertical only | Very limited | 45 deg (3 axes) | Life of wheel bearings |
+| Passive Magnetic | Not seriously constrained by slew rate | Very limited | 25 deg (3 axes) | None |
+| Pure Spin Stabilization | Internally fixed high propellant any direction except with momentum vector | High propellant and momentum vector | ±1 deg to ±10 deg in spin axis; proportional to spin rate | Thruster propellant or propellant |
+| Dual Spin Stabilization | Limited only by despin platform momentum | Momentum vector same as above. Despin platform constrained by its own geometry | Same as above for spin axis. Despun platform dictated by its pointing | Thruster propellant or spin axis bearings |
+| Bias Momentum (1 wheel only) | Best suited for nadir pointing | Momentum vector same as above. Wheel precess to other planes, conserving momentum | ±0.1 deg to ±1 deg | Propellant (if required); Life of sensor and wheel bearings |
+| Zero Momentum (thruster only) | No constraints | No constraints | ±0.1 deg to ±0.5 deg | Propellant |
+| Zero Momentum (3 wheels) | No constraints | No constraints | ±0.001 deg to ±0.1 deg | Life of sensor and wheel bearings |
+| Zero Momentum (4 wheels) | No constraints | No constraints | ±0.001 deg to ±0.1 deg | Life of sensor and wheel bearings |
+
+*Thrusters may be used for slewing and momentum dumping at all altitudes. Magnetic torques may be used from LEO to GEO.
+
+Thrusters used for changing attitude
+High torque so great for good satellites, but not great for fine attitude maneuvers
+Spend propellant which is a consumable so that limits lifetime

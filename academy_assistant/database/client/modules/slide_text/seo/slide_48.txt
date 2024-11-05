@@ -1,0 +1,17 @@
+Module: Space Environments And Orbits
+Slide Number: 48
+Slide text: 
+Types of orbital maneuvers
+
+• In-plane maneuvers:
+  • $\Delta V$ in the orbital plane
+  • Typically to raise $a$, can also change $e$, $\omega$
+  • Burn in the direction of $\vec{V}$ (tangential) for max efficiency
+  • Examples: Hohmann transfer
+
+• Out-of-plane maneuvers:
+  • $\Delta V$ has a component outside of the orbital plane
+  • typically to change $i$ or $\Omega$
+  • Example: Simple plane change, Combined plane change
+
+• Out-of-plane maneuvers are usually much more expensive than in plane maneuvers

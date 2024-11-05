@@ -1,0 +1,12 @@
+Module: Space Mission Overview
+Slide Number: 30
+Slide text: 
+Summary
+
+The space missions and their design process can be summarized into the following topics:
+- Introduction to Space
+  - There are many motivations for space missions in the realms of exploration and science. There lies a challenge in reaching space with the large amount of kinetic energy required and in consequence the cost of launch.
+- Overview of space missions
+  - Space mission are divided into 3 segments: launch, ground, and space. Each segment consists of physical parameters or parts help the segment perform its function.
+- Space missions and Payloads
+  - The type of spacecraft mission can depend on the intent/goal, customer context, or mission context. From this, an appropriate payload can be chosen. The types of satellites focused on in this module is Earth observation, space observation, communications, and navigation.

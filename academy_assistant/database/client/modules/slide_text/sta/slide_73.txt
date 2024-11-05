@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 73
+Slide text:
+
+Bit Error Rate (BER)
+
+• The Bit Error Rate is the probability that an error will be made in one bit when decoding a symbol.
+• It is a measure of quality of the communications, and one of the main requirements of a communications system
+    • The other one being the data rate (i.e. the quantity of data)
+• Typical BER are on the order of \(10^{-5}\)
+    • Lower BERs can be accepted for non-critical applications
+• BER depends on two main parameters:
+    • The signal to noise ratio (typically expressed in terms of \(E_b/N_0\))
+    • The modulation chosen: for example, for the same BER, BPSK and QPSK require 3dB less of \(E_b/N_0\) than 8PSK.

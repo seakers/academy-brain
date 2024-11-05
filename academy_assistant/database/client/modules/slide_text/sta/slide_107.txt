@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 107
+Slide text:
+
+Memories
+
+• Read Only Memory (ROM)
+  • Not volatile: data remains regardless of power or reset
+  • Slow write, interfaces to CPU only for read purposes
+  • Usually dedicated to “firmware” - software that will not change
+  • Can be re-programmed with special instructions/voltages
+
+• Random Access Memory (RAM)
+  • Volatile: data is lost when power is removed and/or after a reset
+  • Fastest memory available (over 1000MHz)
+
+• Non-Volatile Random Access Memory (NVRAM)
+  • Non-volatile
+  • Between ROM & RAM mid-speed memory which can be easily read and written
+  • Usually stores “software/firmware” that is expected to be updated, but otherwise does not change during normal operations
+  • Most common type is flash memory (very common in recent space applications)

@@ -1,0 +1,10 @@
+Module: Space Mission Overview
+Slide Number: 10
+Slide text: 
+- The average launch cost of a satellite varies greatly depending on mass, objective, and launch vehicle
+- Cost of access to space is about $5k-$20k/kg
+  - Higher end for smaller expendable rockets
+  - Lower end for larger reusable rockets
+- SpaceX in particular has disrupted this market and is bringing costs down closer to $1k/kg
+
+https://aerospace.csis.org/data/space-launch-to-low-earth-orbit-how-much-does-it-cost/

@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 47
+Slide text:
+
+Permittivity
+
+• Definition: Permittivity (\(\epsilon\)) is a measure of the resistance encountered when forming an electric field in a medium by adding charge (\(E \sim \frac{Q}{\epsilon A}\)).
+  • It is usually expressed in relative terms with respect to permittivity in the vacuum, \(\epsilon = \epsilon_r \epsilon_0\), \(\epsilon_0 = 8.85 \cdot 10^{-12} Fm^{-1}\).
+
+• Relative permittivity \(\epsilon_r\) (a.k.a. dielectric constant) is a complex quantity and depends on frequency
+  \[
+  \epsilon_r(\omega) = \epsilon_r'(\omega) + i\epsilon_r''(\omega)
+  \]
+  • Real part is related to stored energy in the medium
+  • Imaginary part is related to losses of energy in the medium

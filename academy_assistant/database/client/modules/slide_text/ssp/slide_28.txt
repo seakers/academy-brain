@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 28
+Slide text:
+- The Q-factor of an optical system is given by the ratio between ground resolution limited by diffraction and GSD determined by detector size:
+\[ Q = \frac{\Delta x'}{\text{GSD}} \]
+- If \( Q < 1 \) then actual angular (spatial) resolution driven by detectors and GSD
+- Otherwise the actual system resolution is diffraction-limited and equal to \( \Delta x' \)
+- Most optical systems are designed so that \( Q \approx 1 \)

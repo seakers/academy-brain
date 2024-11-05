@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 22
+Slide text:
+Optics– Point spread function
+
+- An imaging system is commonly characterized by its response to EM radiation originating from a fictitious point source located far away from the sensor system
+- Plane waves are diffracted at the finite aperture, so that a single point is spread over a certain patch in the focal plane
+  - Point spread function (PSF) describes this spread
+- Once again, the incoming field \( E(\theta, \phi) \) and the aperture field \( E\left(\frac{x}{\lambda}, \frac{y}{\lambda}\right) \) are related by a 2D Fourier transform, and the PSF of a rectangular/circular aperture looks like a sinc function

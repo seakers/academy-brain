@@ -1,0 +1,38 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 53
+Slide text: 
+
+**Thermal Requirements**
+
+- Several spacecraft components have operational/survival temperature ranges
+  - Keep batteries between 10-20C
+  - Keep computers between 10-50C
+  - Keep humans alive and comfortable (e.g. crew cabin at ~21.85C)
+  - Keep liquid propellant from freezing/boiling
+  - Keep certain instruments cold
+  - Keep RTG heat source hot
+  - Avoid thermal cycling of components that can lead to thermal fatigue and structural failure
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\text{Component/System} & \text{Operating Temperature (C)} & \text{Survival Temperature (C)} \\
+\hline
+\text{Electronics} & 0 \text{ to } 50 & -50 \text{ to } 70 \\
+\hline
+\text{Humans} & 15 \text{ to } 25 & 0 \text{ to } 35 \\
+\hline
+\text{Batteries (NiCad)} & 10 \text{ to } 20 & 0 \text{ to } 50 \\
+\hline
+\text{IR detectors} & -273 \text{ to } -173 & -273 \text{ to } 35 \\
+\hline
+\text{Solid-state particle detectors} & -60 \text{ to } 0 & -125 \text{ to } 35 \\
+\hline
+\text{Momentum wheels} & 0 \text{ to } 50 & -20 \text{ to } 70 \\
+\hline
+\text{Solar panels} & -100 \text{ to } +100 & -150 \text{ to } +150 \\
+\hline
+\end{array}
+\]
+
+*Efficiency decreases with Temperature

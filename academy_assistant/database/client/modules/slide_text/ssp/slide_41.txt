@@ -1,0 +1,22 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 41
+Slide text: 
+
+Optional: Signal to noise ratio (SNR), detectivity, NEP
+
+\[
+SNR = \frac{\bar{i_s}(t)^2}{\sigma_i^2} = \frac{\left( \frac{\eta P_s e}{h f} \right)^2}{(2BeG_n(P_s + P_d))eG_n \frac{e}{h f} + \frac{4kTB}{R_L}} = \frac{\left( \frac{\eta P_s e}{h f} \right)^2}{\frac{P_s + P_d}{R_L} + \frac{2kT h f}{\eta R_L P_s e^2 G^2}} \quad \text{where}
+\]
+
+- \(\bar{i_s}(t) = \eta P_s e G \frac{h f}{f}\) is the signal current
+- \(i(t) = i_s(t) + i_d(t) + i_{ins}(t) + i_{nt}(t)\) is the total current
+  - \(i_d(t)\) is the dark current
+  - \(i_{ins}(t)\) is the shot noise current, \(i_{ins}(t)^2 = 2BeG(i_s(t) + i_d(t))\)
+  - \(i_{nt}(t)\) is the thermal noise current, \(i_{nt}(t)^2 = 4kTB / R_L\)
+
+- If we neglect dark noise and thermal noise, \(SNR \approx \frac{\eta P_s}{2 h f B}\)
+- Noise Equivalent Power (NEP): \(P_s\) such that \(SNR = 1\) for \(B = 1 \text{Hz}\)
+- Specific Detectivity \(D^* = \frac{\sqrt{A B}}{NEP} \left[ \frac{\text{cm} \sqrt{\text{Hz}}}{\text{W}} \right]\), where \(A\) is the area of the detector
+
+
+Photodetector circuit model image is included at the bottom of the slide.

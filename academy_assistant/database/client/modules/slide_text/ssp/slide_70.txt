@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 70
+Slide text:
+Remote sensing of solid surfaces – VNIR
+
+- In the VNIR, sensors measure **solar radiation reflected off** a surface
+  - In the TIR, it’s mostly thermal emission (like microwave)
+- In the absence of an atmosphere, by comparing spectrum of source to received radiation, we obtain surface reflectivity
+- Surface reflectivity depends on physical and chemical properties of the surface of interest

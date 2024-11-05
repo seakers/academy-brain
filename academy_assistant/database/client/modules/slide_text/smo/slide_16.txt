@@ -1,0 +1,6 @@
+Module: Space Mission Overview
+Slide Number: 16
+Slide text: 
+- The launch segment is in charge of putting the spacecraft(s) in their desired orbit(s)
+  - Requires a huge amount of propellant ⊕ large rocket ⊕ so more efficient to separate this from the spacecraft itself
+- The launch segment consists of one or more launches from the same or different launch vehicles.

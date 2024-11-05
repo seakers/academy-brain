@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 76
+Slide text:
+
+RF Link Budget Equation
+
+• The link budget equation is the fundamental relationship driving the design of the communications architecture
+• It links together the requirements (data rate, BER, spectral efficiency) with the main design parameters of both the satellite TT&C subsystem and the ground segment:
+    • How big should the antennas be?
+    • How much power should we transmit?
+    • How much noise can we accept on the receiver?
+\[
+\frac{E_b}{N_0} = \frac{P_t G_t G_r L_a L_l \lambda^2}{(4 \pi R)^2 k T R_b} > \frac{E_b}{N_0}_{\text{min}} \quad (\text{BER}, \eta)
+\]
+• Note that this is a single equation linking 9 parameters, so there are multiple possible combinations of values that can satisfy the requirements
+
+(C) Daniel Selva 2019

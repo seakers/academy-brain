@@ -1,0 +1,10 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 78
+Slide text: 
+
+Range resolution
+
+• Pulse length plays a key role in determining the ability of the radar to resolve two targets that are very close in range (i.e. its range resolution)
+• If the leading edge of the echo from the second target arrives before the trailing edge of the echo from the first target, we cannot separate them.
+• Thus, \(\Delta t = \frac{2 \Delta r}{c} > \tau\) and slant range resolution is: \(\Delta r = \frac{c \tau}{2} = \frac{c}{2B}\)
+• Ground range resolution is slant range resolution projected onto ground \(\Delta x_r = \frac{\Delta r}{\sin \theta} = \frac{c}{2B \sin \theta}\)

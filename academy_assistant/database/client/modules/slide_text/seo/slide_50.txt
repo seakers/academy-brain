@@ -1,0 +1,6 @@
+Module: Space Environments And Orbits
+Slide Number: 50
+Slide text: 
+- Rendez-vous is a maneuver by which two spacecraft change their orbits to get close enough to one another that they can dock – establish a physical interface between them
+- Typically, an interceptor spacecraft changes its orbit to dock with (intercept) a target spacecraft.
+- Maneuver consists of one or multiple burns to adjust semimajor axis and thus period to reduce phase angle followed by another burn to equalize the semimajor axis.

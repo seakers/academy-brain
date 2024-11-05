@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 62
+Slide text: 
+Received Power: Costs
+
+- Complexity due to interferences:
+  - Variations in emissivity require sophisticated calibration, adding to mission complexity and cost
+  - Atmospheric conditions such as humidity and temperature affect signal quality, necessitating proper corrections
+  - Environmental surface roughness and nearby vegetation scatters, reflects, and absorbs transmitted signals, reducing the intended received power

@@ -1,0 +1,14 @@
+Module: Space Environments And Orbits
+Slide Number: 14
+Slide text: 
+- Geomagnetic storms are temporary disturbances in the Earth magnetosphere due to interaction with solar radiation
+- They create
+  - Solar energetic particle events
+  - Geomagnetically induced currents
+  - Ionospheric disturbances
+  - Auroras
+- This creates multiple problems for spacecraft and astronauts
+  - Drag
+  - Spacecraft charging
+  - Radiation poisoning
+- And even affect Earth’s infrastructure such as power grids!

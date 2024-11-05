@@ -1,0 +1,15 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 70
+Slide text: 
+
+Digital communications system
+
+\[
+\frac{E_b}{N_0} = \frac{P_t G_t G_r L_a L_l \lambda^2}{(4 \pi)^2 k T R_b} > \frac{E_b}{N_{0 \text{min}}} \quad (\text{BER}, \eta)
+\]
+
+• In the next two lectures we will follow this diagram
+  • Analog to digital conversion, sampling
+  • Source and channel coding (compression and error detection and correction)
+  • Modulation (and demodulation)
+  • Channel characterization (link budgets)

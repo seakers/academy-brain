@@ -1,0 +1,20 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 34
+Slide text: 
+
+Components of an optical imaging system
+
+• Collector (aperture)
+• Focusing optics
+    • Lens (refractive)
+    • Mirrors (reflective)
+• Scanning element
+• Filters or dispersive elements
+    • Prism
+    • Diffraction gratings
+    • Dichroic filters
+    • Interferometers
+• Detectors
+    • Photoelectric tubes
+    • Photodiodes
+    • Bolometers

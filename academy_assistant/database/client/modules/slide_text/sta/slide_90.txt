@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 90
+Slide text:
+- Structures are not rigid bodies – they deform under stress
+- They can be modeled as spring-mass-damper systems.
+- Most simple model (ignores damping):
+\[ m\ddot{x} + kx = F(t) \]
+- Solving homogeneous equation in Laplace domain (s = jω), we get:
+\[ ms^2X(s) + kX(s) = 0; \]
+\[ x(t) = A \cos \omega t \]
+\[ \omega = \sqrt{\frac{k}{m}} \]
+- This is the fundamental (lowest) natural frequency
+- For K, M matrices we get
+\[ |K - \omega^2 M| = 0 \] (eigenvalue problem)

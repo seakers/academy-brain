@@ -1,0 +1,18 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 4
+Slide text: 
+Reminder: Elements of a space mission architecture
+
+[Diagram]
+Space Mission
+    ├── Space Segment
+    │   ├── Spacecraft Bus
+    │   ├── Payload
+    │   └── Orbit
+    ├── Launch Segment
+    │   └── Launch Vehicle
+    └── Ground Segment
+        ├── Ground Stations
+        └── Mission Control
+
+Today we focus mostly on the spacecraft bus and its interfaces with the ground and launch segments.

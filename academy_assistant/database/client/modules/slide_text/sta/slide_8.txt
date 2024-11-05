@@ -1,0 +1,6 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 8
+Slide text: 
+- SwissCube
+
+(Note: The image contains a detailed diagram of the SwissCube with various labeled components, but no additional text or equations are present on the slide.)

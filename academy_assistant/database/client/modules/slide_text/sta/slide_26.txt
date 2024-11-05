@@ -1,0 +1,4 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 26
+Slide text: 
+3 – Attitude (and Orbit) Determination and Control Subsystem

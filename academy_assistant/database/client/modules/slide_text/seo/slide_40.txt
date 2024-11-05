@@ -1,0 +1,8 @@
+Module: Space Environments And Orbits
+Slide Number: 40
+Slide text: 
+- Certain orbits are such that an integer number \( n \) of orbital periods corresponds exactly to an integer number \( k \) of days
+- The ground tracks of these special orbits repeat exactly every \( k \) days
+- Many Earth Observation satellites are repeat ground track SSO orbits
+- There are not that many combinations of those, especially for low repeat cycles!
+- Example: There is only 1 1-day repeat cycle orbit between 300 and 700km for which: 560km, whose period equals exactly 15 orbital revolutions per day.

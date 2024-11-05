@@ -1,0 +1,13 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 6
+Slide text: 
+
+GOES-16
+
+- Solar Array
+- Solar Ultraviolet Imager (SUVI)
+- Magnetometer
+- Space Environment In-Situ Suite (SEISS)
+- Advanced Baseline Imager (ABI)
+- Geostationary Lightning Mapper (GLM)
+- Extreme Ultraviolet and X-Ray Irradiance Sensor (EXIS)

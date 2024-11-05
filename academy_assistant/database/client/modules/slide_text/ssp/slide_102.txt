@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 102
+Slide text: 
+- Passive microwave imagers (radiometers) have good sensitivity and lower power consumption but poor spatial resolution on the order of tens of km.
+- Real-aperture radar has good range resolution on the order of tens of meters but poor azimuth resolution. Mostly used for altimetry.
+- Synthetic aperture radar has good spatial resolution on the order of tens of meters on both dimensions but comes at the expense of higher power and complex data processing requirements.
+- Spatial resolution improvements generally demand larger apertures, increasing the size, weight, and cost of the antenna.
+- SNR requirements can drive power needs up but data processing can also be used to trade SNR against spatial resolution by increasing the number of looks.
+- Balancing swath area with resolution impacts antenna design and cost, with wider swaths requiring advanced solutions like multi-beam antenna, phased antenna arrays, adaptive signal processing.

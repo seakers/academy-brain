@@ -16,7 +16,7 @@ class GraphqlClient:
 
     def __init__(self, user_info):
         # GRAPHQL URL
-        self.hasura_url = 'https://academy.selva-research.com/graphql/v1/graphql'
+        self.hasura_url = 'https://academy2.selva-research.com/graphql/v1/graphql'
         # self.hasura_url = 'http://127.0.0.1:6002/v1/graphql'
         self.user_info = user_info
         self.user_id = user_info.user.id

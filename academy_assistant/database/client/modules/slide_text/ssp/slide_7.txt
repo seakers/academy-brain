@@ -1,0 +1,5 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 7
+Slide text:
+- The following slides contain information that describes the science behind optical payloads
+- This information will not be tested, but instead is included as optional content if the user is interested

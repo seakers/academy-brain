@@ -1,0 +1,11 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 88
+Slide text: 
+
+Synthetic Aperture Radar
+
+• Azimuth resolution of real-aperture radars is on the order of km
+• In order to improve this, the concept of aperture synthesis is used
+• The fundamental idea is that a target stays in view of the radar for a long time and it is observed from different locations as the satellite moves along its orbit.
+• Therefore, if we could somehow combine the signals received from these multiple locations, it would be like having a larger antenna
+• The hard part is, the signals received from different locations are out of phase (they are incoherent). So in order to be able to add them, we need to make them coherent by data processing.

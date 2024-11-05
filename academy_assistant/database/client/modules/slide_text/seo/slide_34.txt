@@ -1,0 +1,10 @@
+Module: Space Environments And Orbits
+Slide Number: 34
+Slide text:
+Ground tracks
+
+- The ground track is the projection of the position of satellite on the Earth's surface (lat, lon) over time
+  - They are a useful visualization of an orbit since they show which regions are "seen"
+- Can infer orbital parameters from ground tracks
+  - Inclination from max latitude
+  - Period (and thus semimajor axis) from equatorial orbit shift between consecutive tracks

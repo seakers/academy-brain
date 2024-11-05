@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 18
+Slide text: 
+- Observations in the wings of a spectral band sense deeper into the atmosphere whereas observations in the band center see only the very top of the atmosphere.
+- Each frequency has an associated weighting function that peaks at a certain altitude/pressure
+- Thus, by properly selecting a set of frequencies/wavelengths, we can derive a vertical profile of temperature or concentration of sth
+
+Spectral resolution \(\propto\) vertical spatial resolution!

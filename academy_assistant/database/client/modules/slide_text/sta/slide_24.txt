@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 24
+Slide text: 
+- The capacity of a battery is the total energy stored,
+  - Typically measured in Wh or Ah
+  - Sized to power spacecraft during eclipse
+- Depth of Discharge (DOD) of a battery is the percentage of capacity that is used in each charge-discharge cycle
+- Battery life (# cycles) decreases with DOD
+  - GEO (few cycles): 60% DOD
+  - LEO (many cycles): 30% DOD
+- Total battery capacity needed:
+  \[
+  C_r = \frac{P_e T_e}{DOD \cdot n}
+  \]
+- where \( n \approx 90\% \) is the battery efficiency
+
+Example: DOD=60%, we get 987.65Whr which assuming 50Whr/kg weigh 19.75kg

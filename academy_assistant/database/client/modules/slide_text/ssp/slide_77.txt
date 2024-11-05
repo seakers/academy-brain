@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 77
+Slide text: 
+- The spectrum of the pulse plays an important role in radar.
+- Consider a simple sinusoidal pulse of frequency \( f_0 \) truncated to length \( \tau \). It is easy to show that the spectrum of this signal is two sinc functions at \( \pm f_0 \) with width \( 1/\tau \).
+  - Exercise: Prove this.
+- When we repeat this pulse with period \( T = 1/\text{PRF} \), the fine structure (impulse train) appears with spacing \( \frac{1}{T} = \text{PRF} \).
+- The bandwidth of this pulse is approximately \( B = 1/\tau \).

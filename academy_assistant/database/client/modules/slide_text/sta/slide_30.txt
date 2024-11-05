@@ -1,0 +1,10 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 30
+Slide text:
+- Spacecraft mass and shape drives the **moments of inertia**, which captures the distribution of mass around the center of mass.
+  - More massive spacecraft have higher moments of inertia
+  - Spacecraft with mass concentrated along a certain direction can have dissimilar inertias for each axis
+- Moment of inertia dictates how much torque is needed to achieve a certain angular acceleration
+  - Higher moments of inertia $\Rightarrow$ larger actuators
+- They also drive the natural stability of the spacecraft
+- Example: symmetrical spacecraft (e.g., sphere or cube) don’t suffer (or benefit) from gravity gradient disturbance torques

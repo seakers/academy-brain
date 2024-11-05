@@ -1,0 +1,27 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 13
+Slide text: 
+
+Power subsystem elements
+
+[Diagram with the following labels]
+
+Primary Power Source:
+- Primary batteries
+- Solar dynamic
+- Radioisotope generators
+- Solar arrays
+- Nuclear reactors
+- Fuel cells
+
+Primary Power:
+- Primary Power Source
+- Charge Control
+- Power Conditioning Regulation
+- Distribution
+- Users
+
+PMAD:
+- Storage
+- Rechargeable batteries
+- Power Management and Distribution

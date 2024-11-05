@@ -1,0 +1,18 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 33
+Slide text:
+
+Integration time - Whiskbroom
+
+• For whiskbroom sensors, integration time is shorter because of the scanning in the cross-track direction. Assuming \(N_x\) pixels in the cross-track direction:
+\[
+\tau = \frac{\Delta y}{N_x V_g}
+\]
+    • Example: \(\Delta y = 30m, V_g = 6620m/s, N_x = 4096, \tau = 0.7\mu s\)
+
+• The required rotation rate for the mirror is:
+\[
+\omega = \frac{FOR}{\Delta y / V_g}
+\]
+
+• Can improve integration time by doing along-track scanning.

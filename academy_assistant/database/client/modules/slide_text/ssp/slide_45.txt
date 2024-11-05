@@ -1,0 +1,17 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 45
+Slide text: 
+
+From soil moisture (SM) to antenna output
+
+- The goal of this lecture is to explain how we can do MW remote sensing (e.g., of soil moisture)
+- I will take you through the journey from soil moisture \( SM \) to radiometer antenna output (voltage \( V \)) and to retrieved soil moisture \( \hat{SM} \).
+- Along the way I will use a use a few key concepts:
+  - Permittivity \( \epsilon_r \)
+  - Emissivity \( \epsilon \)
+  - Brightness temperature \( T_B \)
+- And explain how a radiometer is fundamentally just an antenna with a band-pass filter and a square-law detector
+
+\[
+SM \rightarrow \epsilon_r \rightarrow n \rightarrow \rho \rightarrow \epsilon \rightarrow T_B \rightarrow P(\nu) \rightarrow V \sim T_B \rightarrow \hat{SM}
+\]

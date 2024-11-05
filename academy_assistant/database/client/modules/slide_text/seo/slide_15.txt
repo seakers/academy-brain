@@ -1,0 +1,8 @@
+Module: Space Environments And Orbits
+Slide Number: 15
+Slide text:
+- Average total solar irradiance (energy per unit time and area) is about 1366 W/m\(^2\)
+- However, there are periodic variations on the order of \(\pm 0.5 \, \text{W/m}^2\)
+- These fluctuations have a period of ~11 years (solar cycle)
+- Can be observed through variations in solar spots
+- Thus, the timing of launch within solar cycle affects atmospheric drag and amount of radiation

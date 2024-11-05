@@ -1,0 +1,13 @@
+Module: Space Environments And Orbits
+Slide Number: 30
+Slide text: 
+
+Orbital velocity
+
+- Similarly, using the vis-viva equation (conservation of energy), we can compute the velocity of the satellite:
+\[ V = \sqrt{GM \left( \frac{2}{r} - \frac{1}{a} \right)} \]
+
+- For a general elliptical orbit, we see that as predicted by Kepler's laws, the satellite will move faster the closer it gets to Earth, and will slow down as it gets farther from Earth.
+
+- For a circular orbit, \( r = a = R_E + h \) where \( R_E = 6370 \text{km} \) is the radius of the Earth and \( h \) is the orbit altitude. In this case, the velocity is constant:
+\[ V = \sqrt{\frac{GM}{R_E + h}} \]

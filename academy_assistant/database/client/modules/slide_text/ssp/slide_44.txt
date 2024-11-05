@@ -1,0 +1,6 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 44
+Slide text: 
+Microwave remote sensing payloads
+Microwave imaging radiometers
+Real-aperture and synthetic aperture radars

@@ -1,0 +1,20 @@
+Module: Space Environments And Orbits
+Slide Number: 13
+Slide text: 
+
+Solar Radiation – Light, matter, and fields
+
+- Explosions in the Sun’s atmosphere produce both
+  - Light (photons)
+  - And matter (charged particles, such as ions and electrons)
+- This becomes radiation from the Sun
+- Solar flares are huge bursts of photons in all wavelengths but mostly X-rays and extreme UV (EUV)
+  - \( E \sim 10^{25} \)
+- Coronal Mass Ejections (CME) are made of particles (ions and electrons) ejected at very high speeds (solar wind)
+  - From 0.2-3 CME/day
+  - \(\sim 500 \, \text{km/s} \, (\sim 3 \, \text{days to get to Earth})\)
+  - \(\sim 10 \, \text{protons/cm}^3\)
+
+Coronal Mass Ejection Video
+[Wikipedia]
+

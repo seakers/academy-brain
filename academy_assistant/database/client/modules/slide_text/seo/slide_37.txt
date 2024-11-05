@@ -1,0 +1,10 @@
+Module: Space Environments And Orbits
+Slide Number: 37
+Slide text:
+- **Geosynchronous**: Period is exactly equal to 1 Earth's day
+- **Geostationary**: Geosynchronous + equatorial (i=0)
+- **A geostationary satellite maintains nearly fixed position with respect to Earth (stays above a given region)**
+- For geostationary, the ground track is a point.
+- For geosynchronous with \(i, e > 0\) it is an analemma (a figure "8").
+- Applications: communications, regional weather, IS&R
+- Very special and thus very congested orbit

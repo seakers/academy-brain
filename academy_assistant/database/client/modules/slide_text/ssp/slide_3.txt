@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 3
+Slide text: 
+Optical remote sensing payloads
+
+Passive visible, near-infrared, and thermal infrared imagers and spectrometers
+
+(C) Daniel Selva 2018

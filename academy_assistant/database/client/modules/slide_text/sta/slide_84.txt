@@ -1,0 +1,20 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 84
+Slide text:
+
+Design decisions and alternatives
+
+• Configuration – Geometrical shape of the spacecraft, primary structures, and positions of components
+  • Stacked
+  • Central thrust cylinder
+  • …
+
+• Dimensions: length, area, thickness, etc. of all major structures
+
+• Materials: Aluminum, steel, titanium, composites
+
+• Deployment mechanisms:
+  • Yes or no?
+    • May need them even if appendages fit inside LV to avoid excessive stiffness requirement
+  • What type?
+    • Springs, motors, bumper stops, pyro…

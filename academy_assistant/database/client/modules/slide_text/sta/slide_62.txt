@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 62
+Slide text: 
+
+Single-node heat balance
+
+\[
+\dot{Q}_{\text{Sun}} + \dot{Q}_{\text{alb}} + \dot{Q}_{\text{Earth}} + \dot{Q}_{\text{int}} = \dot{Q}_{\text{out}}
+\]
+
+\[
+\Phi_s \alpha_{\text{VNIR}} (A_{\text{Sun}} \cos \theta + RA_{\text{Earth}}) + \alpha_{\text{TIR}} \epsilon_{\text{Earth}} F_0 T^4_{\text{Earth}} A_{\text{Earth}} + \dot{Q}_{\text{int}} = \epsilon_s / c \sigma T^4_s / c A_{\text{cold}}
+\]
+
+Example: For \(\dot{Q}_{\text{int}} = 100W\), \(\dot{Q}_{\text{in}} = 1031W\)
+- Equilibrium temperature for \(1m^2\) of radiator area: 388K \(\Rightarrow\) compare this with requirements (too hot)
+- Radiator Area needed for \(T_{\text{eq}} = 300K\) is about \(2.9m^2\)

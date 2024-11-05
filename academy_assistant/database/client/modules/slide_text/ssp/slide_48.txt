@@ -1,0 +1,6 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 48
+Slide text: 
+- Water has a high microwave dielectric constant and thus lower emissivity compared to most natural surfaces $\Rightarrow$ Can map soil moisture!
+- The range of variation of permittivity $\epsilon_r'$ due to soil moisture in L-band can be a factor of 10 between dry and saturated soil $\Rightarrow$ enough to measure!
+- Note that this range is maximized in L-band, which is why this frequency is used instead of higher frequencies to measure soil moisture

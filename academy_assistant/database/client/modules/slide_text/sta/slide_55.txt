@@ -1,0 +1,13 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 55
+Slide text: 
+- In thermal equilibrium, the rate of heat flow going in equals that going out
+- Power in: $\dot{Q}_{in} = \dot{Q}_{sun} + \dot{Q}_{alb} + \dot{Q}_{Earth} + \dot{Q}_{int}$
+  - Direct solar irradiance
+  - Reflected sunlight (Albedo)
+  - Thermal emission from Earth
+  - Internal heat sources
+- Power out: $\dot{Q}_{out} = \dot{Q}_{out}(T)$
+  - Radiation to space, depends on surface temperature
+- Thermal balance equation leads to equilibrium temperature
+  $\dot{Q}_{in} = \dot{Q}_{out}(T)$

@@ -1,0 +1,21 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 40
+Slide text: 
+
+Optional: Avalanche photodiodes
+
+• Strong reverse bias of photodiodes to force avalanche region
+
+• High gain: lots of electrons per photon
+    • Still less than PMTs
+
+• They suffer from Shot noise (Poisson distribution)
+    • Noise power is proportional to average signal power
+
+
+The image on the right shows a graph with the following labels:
+- y-axis: i
+- x-axis: v
+- "APDs have current gain per photon"
+- "avalanche region"
+- "breakdown"

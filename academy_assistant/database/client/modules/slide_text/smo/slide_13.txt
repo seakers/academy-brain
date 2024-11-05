@@ -1,0 +1,18 @@
+Module: Space Mission Overview
+Slide Number: 13
+Slide text: 
+Elements of a space mission architecture
+
+[Diagram]
+Space Mission
+    Space Segment
+        Spacecraft Bus
+        Payload
+        Orbit
+    Launch Segment
+        Launch Vehicle
+    Ground Segment
+        Ground Stations
+        Mission Control
+
+Cost distribution between space/launch/ground segment is highly mission-dependent

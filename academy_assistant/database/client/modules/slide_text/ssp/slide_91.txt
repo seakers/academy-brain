@@ -1,0 +1,14 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 91
+Slide text:
+
+Synthetic Aperture Radar – Azimuth resolution
+
+• Consider a fixed target P. As the sensor moves at a velocity v, X_1 is the first observation of P, and X_n is the last one. P is observed during a length of \mathcal{L}, i.e., a time \mathcal{L}/v, where
+\[
+\mathcal{L} = \frac{2h\lambda}{L}
+\]
+
+• If we combine the signals at points X_1 through X_n coherently, it’s like having an array of antennas of length \mathcal{L}
+
+• The angular resolution of this antenna would be \frac{\lambda}{\mathcal{L}} = \frac{L}{2h} and the resulting ground azimuth resolution is X_a = \frac{L}{2}

@@ -1,0 +1,11 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 81
+Slide text: 
+
+Pulse modulation
+
+[Image: Before matched filtering] [Image: After matched filtering: the echoes are shorter in time.]
+
+• Yes! Using matched filter detection with pulse modulation, the pulse “looks shorter” at the output of the matched filter
+• Thus, for pulse modulated radar and matched filter detection, range resolution depends on bandwidth of the pulse, not on pulse length!
+• We can increase bandwidth without affecting length ☺ conflict solved!

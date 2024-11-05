@@ -1,0 +1,19 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 65
+Slide text: 
+
+Optional: Basic intensity receiver (total power radiometer)
+
+• \( P_R = kT_R \) is the noise added by the receiver
+• Band-pass filter of bandwidth \( B \) eliminates some noise
+• Square-law detector makes output (Volts) proportional to input power and thus equivalent temperature
+• \( h(t) \) is an integrator with integration time \( \tau \) (smoothing)
+
+
+\[
+P_R = kT_R
+\]
+
+\[
+v_i(t) \quad v_d(t) = v_i^2(t) \quad v_o(t) = \int_0^\infty v_d(t - \tau) h(\tau) d\tau
+\]

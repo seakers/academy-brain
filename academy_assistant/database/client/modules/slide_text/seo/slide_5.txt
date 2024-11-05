@@ -1,0 +1,23 @@
+Module: Space Environments And Orbits
+Slide Number: 5
+Slide text: 
+
+"Microgravity"
+
+- Objects are in “free fall”, not absence of gravity!
+  - Gravity compensated by centrifugal force due to orbital speed
+- Near absence of gravity (~$10^{-6}$ g) means that:
+  - Objects don’t fall
+  - Bubbles don’t rise
+  - Particles don’t settle in a solution
+  - No convection (eliminates an important heat transfer mechanism!)
+- This presents challenges, mostly for astronauts…
+  - Bone loss
+  - Muscle loss
+  - Cardiovascular problems
+  - Immune system
+- …but also opportunities
+  - Formation of large crystals
+- The effects on traditional Earth satellites are relatively benign (e.g., lower structural stresses when in orbit)
+
+(C) Daniel Selva 2018

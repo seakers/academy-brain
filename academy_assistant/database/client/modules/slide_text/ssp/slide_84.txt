@@ -1,0 +1,19 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 84
+Slide text: 
+Radar equation
+
+- Let’s start by computing the received signal power (no noise)
+  - Power density that reaches a target at distance r: \( P_i = \frac{P_t G}{4 \pi r^2} \) [W/m\(^2\)] where G is the gain of the antenna
+  - Backscattered power: \( P_s = P_i S \cos \theta \sigma = P_i X_a X_r \sigma \) where \( S = X_a X_r \) is the surface area of the target (defined by azimuth and ground range resolution), and \( \sigma \) is its backscatter cross-section (usually in dB, depends on \( \theta \))
+  - Power density in the vicinity of the sensor: \( P_c = \frac{P_s}{4 \pi r^2} \)
+  - Power collected by the antenna: \( P_r = \frac{A_e P_c}{P_t G X_a X_r \sigma A_e} \)
+  \[
+  P_r = \frac{P_t G X_a X_r \sigma A_e}{4 \pi r^2 4 \pi r^2}
+  \]
+- For rectangular apertures this reduces to:
+  \[
+  P_r = \frac{P_t \eta^2 W^2 L \cos^4 \theta}{8 \pi \lambda h^3 B \sin \theta}
+  \]
+
+Where \( \eta \) is the antenna efficiency, \( W \) and \( L \) are the width (range) and length (azimuth) of the antenna, \( h \) is the altitude, and \( B \) is the bandwidth

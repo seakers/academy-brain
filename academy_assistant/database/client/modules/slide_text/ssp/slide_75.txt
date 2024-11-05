@@ -1,0 +1,19 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 75
+Slide text:
+Why space-based radar?
+
+- Better spatial resolution than radiometers
+- Applications:
+  - Surface topography
+  - Oceanography
+  - Precipitation
+  - Vegetation structure
+  - Ice sheet topography
+  - Wind
+- Types
+  - Real vs Synthetic Aperture
+  - Altimeter
+  - Scatterometer
+  - Polarimeter
+  - Doppler

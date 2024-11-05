@@ -1,0 +1,20 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 124
+Slide text: 
+```
+Input/output
+
+• Data bus
+  • Reserved for high-speed data transfers (>33MHz or >500Mbps)
+  • Processor bus: usually 16, 32 or 64 bit wide
+  • Spacecraft bus: usually 16, 32 or 64 bit wide
+    • Usually VME, PCI (older: ISA)
+• Digital I/O
+  • Usually interfaced through the processor bus directly to the CPU
+    • Mapped I/O: programs address this I/O directly as part of the CPU
+  • Enables direct control of parallel digital signals
+    • Usually 1-bit or 1-byte at a time, but can have custom size
+• Custom I/O
+  • A/D
+  • Ports (UART, I²C, USB)
+```

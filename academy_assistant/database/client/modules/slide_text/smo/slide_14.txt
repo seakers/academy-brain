@@ -1,0 +1,10 @@
+Module: Space Mission Overview
+Slide Number: 14
+Slide text:
+- The space segment consists of one or more spacecraft
+- Each spacecraft consists of
+  - A payload: the instrument(s) that collect(s) the mission data (e.g., cameras, radars)
+  - A spacecraft bus: the platform that provides power, communications, propulsion, attitude control, and other support to the payload.
+- Each spacecraft is put into an orbit, which is the trajectory they follow around a planetary body (e.g., Earth)
+
+Choice of payload and orbit drive the design of the spacecraft bus and therefore drive space segment cost.

@@ -1,0 +1,13 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 9
+Slide text:
+
+Optional: Lyman, Balmer, Paschen series
+
+• Hydrogen atom has been studied extensively
+• Certain transitions have common names:
+  • Lyman series: from \( n \geq 2 \) to \( n = 1 \)
+  • Balmer series: from \( n \geq 3 \) to \( n = 2 \)
+  • Paschen series: from \( n \geq 4 \) to \( n = 3 \)
+• These transitions fall in the UV-VIS-NIR region of the spectrum for hydrogen, but outside of UV-VIS-NIR for most common minerals
+• May sometimes see these names in the characteristics of certain instruments, although mostly reserved for astrophysics

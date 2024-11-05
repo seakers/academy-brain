@@ -1,0 +1,22 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 63
+Slide text: 
+
+MW Receivers
+
+- Receivers in MW remote sensing instruments are antennas that measure some property of the incoming EM radiation:
+  - Intensity (total power radiometer)
+  - Arrival time (radar)
+  - Doppler (Doppler radar)
+  - Phase (interferometric radar)
+
+- Incoming wave:
+  \[
+  E = \frac{|E_0|}{r} e^{-i(kr - \omega t)} \quad \text{(spherical EM wave)}
+  \]
+
+- The main components of receivers are:
+  - Amplifiers (increase the intensity of the signal)
+  - Filters (remove certain frequencies, band-pass, low-pass)
+  - Local oscillators
+  - Mixers (multiply by \(\cos \omega t\))

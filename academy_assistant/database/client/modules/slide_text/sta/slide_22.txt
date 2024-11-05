@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 22
+Slide text: 
+
+Batteries
+
+• Batteries are arrays of electrochemical cells connected in series/parallel that transform chemical energy into electricity
+• Each cell has a cathode and an anode connected by a conductive electrolyte containing anions and cations.
+• Electrons travel from anode to cathode through redox reactions.
+• Each cell produces 1-3V. Sizing:
+    • #cells in series determines V
+    • #cells in parallel fixes I, current
+
+Example, for Ni-Cd battery, using KOH as electrolyte, during discharge:
+    Anode (oxidation): Cd + 2OH^- \rightarrow Cd(OH)_2 + 2e^-
+    Cathode (reduction): 2NiO(OH) + 2H_2O + 2e^- \rightarrow 2Ni(OH)_2 + 2OH^-

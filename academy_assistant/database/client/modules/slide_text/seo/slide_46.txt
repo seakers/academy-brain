@@ -1,0 +1,13 @@
+Module: Space Environments And Orbits
+Slide Number: 46
+Slide text: 
+- What are spacecraft maneuvers?
+  - Spacecraft are never “stopped”. They are always moving in space at very fast speeds.
+  - Spacecraft maneuvers are changes to the spacecraft speed and direction that result in a new spacecraft orbit (i.e. new orbital parameters)
+  - Orbital maneuvers are necessary for many operational reasons:
+    - Station keeping (e.g, raise altitude to compensate for atmospheric drag, stay within your allotted GEO slot)
+    - Get closer to another spacecraft (e.g., for docking or inspection)
+    - Observe a region of Earth sooner or more frequently
+    - Provide better coverage (e.g., comms) of a given region
+  - To do an orbital maneuver, a thruster applies a certain amount of force (thrust) for a certain duration (burn time) in a certain direction.
+  - This results in consumption of some amount of fuel or propellant.

@@ -1,0 +1,27 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 11
+Slide text:
+- The main requirement and cost driver for the power subsystem is the amount of power required by each component. This is captured in a table called the power budget.
+- In its simplest form, the power budget provides the average power requirement for each component and the total power required (in Watts or kW) which often includes margin.
+- Since components may turn on/off (e.g., antennas, payloads, heaters, engines) or need more power at certain times, a power budget may provide 2 or more values for each component (e.g., baseline/peak power and duty cycle)
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\text{Subsystem} & \text{Value (W)} & \text{Duty Cycle} \\
+\hline
+\text{Avionics} & 30 & 100\% \\
+\text{ADCS} & 12.96 & 100\% \\
+\text{Payload} & 60 & 46.73\% \\
+\text{Comms} & 45 & 66.00\% \\
+\text{Thermal} & 10 & 35.34\% \\
+\text{Propulsion} & 0.637 & 0.003\% \\
+\hline
+\text{Margin} & 20\% & \\
+\hline
+\text{Average} & 110.822 & \\
+\hline
+\text{Peak} & 168.716 & \\
+\hline
+\end{array}
+\]

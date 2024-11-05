@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 19
+Slide text: 
+Basic solar array sizing
+
+- Compute power density at EOL considering cell degradation over time
+  \[
+  P_{EOL} = P_{BOL}(1 - D)^t \left[ \frac{W}{m^2} \right]
+  \]
+  - \( D \) is the degradation of performance of the solar cells per unit time (e.g. \( D \approx 3\%/year \) for Si, 0.5%/yr for triple junction).
+  - \( t \) is the spacecraft design lifetime (e.g., 5 years)
+
+- Estimate required solar array area
+  \[
+  A_{sa} = \frac{P_{sa}}{P_{EOL}} [m^2]
+  \]

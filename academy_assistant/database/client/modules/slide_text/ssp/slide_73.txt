@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 73
+Slide text: 
+
+Optional: Vibrational-rotational spectrum
+
+• The group of lines with lower energy than the fundamental is called the P-branch (\(\Delta J = -1\))
+
+• The group of lines with higher energy than the fundamental is called the R-branch (\(\Delta J = +1\))
+
+• The line centered at the fundamental is called the Q-branch (\(\Delta J = 0\))
+  • Generally (not always) forbidden

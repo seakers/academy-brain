@@ -1,0 +1,27 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 55
+Slide text: 
+
+Optional: Fresnel’s laws – Coefficients of reflectance
+
+• The fraction of EM radiation that is reflected at the interface (reflectance) depends on 3 things:
+  • Polarization of the EM wave (H, V)
+  • The impedance of the media (refraction index)
+  • Incidence angle
+
+\[
+\rho^h = \left( \frac{n_1 \cos \theta_2 - n_2 \cos \theta_1}{n_1 \cos \theta_2 + n_2 \cos \theta_1} \right)^2
+\]
+
+\[
+\rho^v = \left( \frac{n_1 \cos \theta_1 - n_2 \cos \theta_2}{n_1 \cos \theta_1 + n_2 \cos \theta_2} \right)^2
+\]
+
+Brewster angle corresponds to perfect transmission, i.e.
+\[
+n_1 \cos \theta_2 = n_2 \cos \theta_1
+\]
+With algebra: 
+\[
+\tan \theta_B = \frac{n_1}{n_2}
+\]

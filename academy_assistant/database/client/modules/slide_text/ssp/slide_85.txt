@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 85
+Slide text:
+
+Radar equation – SNR
+
+• The backscatter cross-section is related to the reflectivity from last lecture, which depends on physical properties, such as SM.
+• Let’s now add the noise. Thermal noise power in the receiver is kTB. (T is the system noise temperature)
+• Thus, the SNR is (for rectangular apertures):
+
+\[
+\text{SNR} = \frac{P_t \eta^2 W^2 L_c \sigma \cos^4 \theta}{8 \pi \lambda^3 B \sin \theta \ kTB}
+\]
+
+• Often, instead of by SNR, a radar is characterized by its noise-equivalent backscatter cross-section \(\sigma_n\), which is simply defined as \(\sigma\) that makes \(\text{SNR}(\sigma_n) = 1\)
+  • Example: For SMAP, \(\sigma_n = -30dB\).

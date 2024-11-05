@@ -1,0 +1,18 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 25
+Slide text: 
+
+Optics: Focal length, FOV, and F-number
+
+- The focal length \( f \) of an optical system is the distance between the lens/mirror and the point at which all optical rays converge (focal plane).
+- Focal length \( f \) and orbit altitude \( h \) define magnification \( M \), which determines the relationship between distances in the image plane (e.g., size of the image plane \( r_d \)) vs in the object plane (e.g., field of view \( R \)):
+
+\[
+\frac{r_d}{R} = M = \frac{f}{h}, \tan \left( \frac{\text{FOV}}{2} \right) = \frac{R}{h} = \frac{r_d}{f}
+\]
+
+- The F-number \( F\# \) relates the focal length to the aperture \( D \):
+
+\[
+F\# = \frac{f}{D}
+\]

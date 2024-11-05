@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 53
+Slide text:
+- In practice, surfaces are always rough and consist of particulates, and therefore there is a scattering component that cannot be neglected.
+- Effect of scattering, modeled by scattering cross-section, depends strongly on the particulate size distribution. Analytical calculation of scattering is very complex.
+  - For solid particulates, the size is comparable or greater than the wavelength.
+    - In this case, empirical approaches are used to estimate reflectivity of multiple reflections.
+- Multiple reflections result in some of the energy absorbed at frequencies close to the absorption feature, and thus a dip in the reflectivity as opposed to a peak.

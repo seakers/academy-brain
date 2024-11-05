@@ -1,0 +1,19 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 18
+Slide text: 
+
+Basic solar array sizing
+
+• Compute available power density at beginning of life (BOL):
+
+\[ P_{BOL} = \frac{S_0}{AU^2} \eta I_d \cos \theta \left[ \frac{W}{m^2} \right] \]
+
+• \( S_0 \) is the solar irradiance at Earth's TOA (~1368 \( W/m^2 \)) - fluctuates slightly with the solar cycle.
+• AU is the distance to the Sun in AU (AU=1 for Earth)
+• \( \eta \) is the theoretical solar cell efficiency (typ. 0.2-0.4, costs $ to improve!)
+• \( I_d \) is the inherent degradation (typ. 0.5-0.9, due to design and assembly of the solar panels from individual cells, shadowing, temperature, etc.)
+• \( \theta \) is the angle between the solar panel surface normal vector and the Sun-Spacecraft
+
+• Note that the sun angle
+  • Changes over time and is potentially different for each solar panel
+  • Can be reduced with articulated solar panels that can rotate the solar panels (in 1 or 2 axes) to track the Sun. This adds $$ of course.

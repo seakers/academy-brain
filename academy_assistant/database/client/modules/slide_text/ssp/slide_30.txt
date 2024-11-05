@@ -1,0 +1,11 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 30
+Slide text: 
+- The idea to estimate the output data rate of an instrument is to relate the radiometric resolution (bits per pixel) by the rate at which pixels are produced, which typically has to do with orbital velocity.
+- For example, data rate in an imaging system with a single line of detectors is given by number of bands \(N_{\text{band}}\), pixels per line \(N_x\), radiometric resolution \(b \left(\frac{\# \text{bit}}{\text{pixel}}\right)\) pixel size in the along track direction \(\Delta y\) and ground velocity \(V_g = \frac{R_E}{R_E + h} V\):
+
+\[
+R_b = \frac{N_{\text{band}} \cdot N_x \cdot b}{\Delta y / V_g}
+\]
+
+- Note that \(\Delta y = \text{GSD}\) for a nadir-looking circular pixel, but it could be different for off-nadir observation or rectangular apertures.

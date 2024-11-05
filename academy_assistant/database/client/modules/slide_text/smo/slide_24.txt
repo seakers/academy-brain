@@ -1,0 +1,106 @@
+Module: Space Mission Overview
+Slide Number: 24
+Slide text: 
+
+Types of spacecraft missions and applications
+
+- Intent or value added
+  - Data products vs Technology validation vs Education
+
+- Customer context
+  - Civil vs Military
+  - Commercial vs Industry vs Government
+
+- Mission Context
+  - Near Earth vs interplanetary
+  - Robotic vs human
+  - Remote sensing vs communications vs navigation vs in situ measurements
+
+- Focus on this course is on Earth satellites for observation, communication and navigation
+
+[Table with columns and rows]
+
+Examples:
+- Direct TV
+- INTELSAT
+- DirecTV
+- GPS
+- GLONASS
+- GMS
+- RADARSAT
+- Malaysia
+
+- Landsat
+- SPOT
+- IRS
+- DMC
+- CBERS
+- RADARSAT
+- ERS
+- ENVISAT
+
+- Hubble
+- Chandra
+- COBE
+- EUVE
+- ROSAT
+- XTE
+- HESSI
+- RHESSI
+- TRACE
+- SOHO
+- STEREO
+- SDO
+- GALEX
+- WMAP
+- Planck
+- Kepler
+- JWST
+
+- Eutelsat
+- SES
+- Intelsat
+- Inmarsat
+- Thuraya
+- Iridium
+- Globalstar
+- Orbcomm
+- ICO
+- A.Tom
+
+- Apollo
+- Galileo
+- Cassini
+- Mars Rover
+- Mars Express
+- MRO
+- LRO
+
+- Landsat
+- SPOT
+- IRS
+- DMC
+- CBERS
+- RADARSAT
+- ERS
+- ENVISAT
+
+- ELINT
+- SIGINT
+- COMINT
+- IMINT
+- SBIRS
+- DSP
+- Milstar
+- AEHF
+- WGS
+- MUOS
+- TacSat-1
+- TacSat-2
+- TacSat-3
+
+- Space Stations
+- Space Habitats
+- Space Hotels
+- Space Tourism
+- Space Travel

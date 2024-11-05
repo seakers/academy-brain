@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 63
+Slide text:
+- There are 2 main types of thermal control systems:
+  - Passive (usually cheaper)
+  - Active (requires more energy)
+- Materials and coatings
+  - Use paints, mirrors, silvered plastics...
+  - Play with \(\frac{\alpha_{VNIR}}{\epsilon_{TIR}}\)
+- Multi-layer insulation
+  - Used to isolate S/C from thermal environment
+  - Multiple layers of aluminized Mylar or Kapton with a thin net of material between them
+  - Without air, primary coupling is radiation, not conduction
+  - High reflectivity, low emissivity \(\Rightarrow\) very little transfer between layers
+
+Image credit: Wikipedia

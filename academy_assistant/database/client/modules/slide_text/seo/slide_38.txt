@@ -1,0 +1,9 @@
+Module: Space Environments And Orbits
+Slide Number: 38
+Slide text: 
+- Higher launch cost than LEO
+- High radiation dose due to Van Allen Belt
+- Higher station keeping requirements than LEO
+- Lots of sunlight. Two eclipse seasons per year, short eclipses.
+- Lots of debris!
+- Far away (stringent communications and observation requirements)

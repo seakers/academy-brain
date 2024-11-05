@@ -1,0 +1,39 @@
+Module: Space Mission Overview
+Slide Number: 11
+Slide text: 
+- Spacecraft cost drivers
+  - Spacecraft mass is a commonly cited driver for space mission cost
+    - Frequently used for cost estimation
+  - More sophisticated cost models are based on complexity indexes
+    - Combine dozens of complexity factors such as mass, power, data rate, lifetime, flight heritage, etc.
+    - better predictive power than mass or any other single parameter
+
+- System Cost as Function of Complexity
+  - Successful
+  - Failed
+  - Impaired
+  - To-be-determined
+
+- Predicted Mission Cost
+
+- \( y = 10.8676x^{5.1115} \)
+- \( R^2 = 0.8769 \)
+
+- Factor | Min | Max | Data | Complex\%
+  - Payload Mass | 0 | 6066 | 6 | 0.02402341
+  - Payload Av. Power | 0 | 5005 | 5 | 0.05383332
+  - Payload Peak Power | 0 | 10326 | 10 | 0.07773532
+  - Payload DR | 0 | 30423 | 24.16E+06 | 76.70503
+  - Av Payload | 0 | 0 | 0 | 0
+  - Delta Vane | 0 | 2116800 | 15900 | 57.4749059
+  - Foreign Partnership | 0 | 1 | 0 | 0
+  - Design Life | 0 | 15 | 5 | 0.33333333
+  - Launch Mass | 17 | 18121 | 11 | -0.0370178
+  - Sat Mass | 0 | 0 | 0 | 0
+  - Bus dry mass | 0 | 0 | 0 | 0
+  - SC+heritage | 0 | 0 | 0 | 0
+  - Redundancy | 0 | 0 | 0 | 0
+  - ORT | 0 | 0 | 0 | 0
+  - BOL Power | 12 | 52500 | 15 | 0.04200326
+  - EOL Ave Power | 0 | 0 | 0 | 0
+  - EOL Power | 0 | 9960 | 3 | 0.33333333

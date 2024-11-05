@@ -1,0 +1,47 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 33
+Slide text: 
+
+Passive magnetic control
+
+[Diagram of Earth with magnetic field lines and spacecraft components]
+
+TABLE 11-4. Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.
+
+Type                | Pointing Options | Attitude Maneuverability | Typical Accuracy | Lifetime Limits
+------------------------------------------------------------------------------------------------------
+Gravity-gradient    | Earth local      | Very limited             | ±5 deg (3σ level)| None
+                    | vertical only    |                          |                  |
+Gravity-gradient    | Earth local      | Very limited             | ±5 deg (3σ level)| Life of wheel
+with momentum       | vertical only    |                          |                  | bearings
+bias
+Passive Magnetic    | North/south only | Very limited             | ±5 deg (3σ level)| None
+Pure Spin           | Inertially fixed | High propulsion          | ±10 deg to 45 deg| Propellant
+Stabilization       | spin axis        | usage to reorient        | (3σ level)       | usage for
+                    |                  | spin axis with           |                  | despin
+                    |                  | maneuvers                |                  |
+Dual-Spin           | Inertially fixed | Momentum wheel           | Same as above for| Propellant
+Stabilization       | platform,        | platform can be          | platform, sensor | usage for
+                    | Earth pointing   | slewed to any            | pointing 1 to 3  | despin
+                    | platform         | orientation              | deg (3σ level)   |
+Bias Momentum       | Best used for    | Momentum wheel           | ±0.1 deg to ±1 deg| Propellant
+(1 Wheel)           | nadir/Earth      | provides roll/yaw        | (3σ level)       | usage, life of
+                    | pointing         | control, pitch           |                  | sensor and
+                    |                  | control by wheel         |                  | wheel bearings
+                    |                  | speed change             |                  |
+Zero Momentum       | No constraints   | High precision           | ±0.01 deg to ±0.1| Propellant
+(3 Wheels)          |                  | pointing                 | deg (3σ level)   | usage, life of
+                    |                  |                          |                  | sensor and
+                    |                  |                          |                  | wheel bearings
+Zero Momentum       | No constraints   | High precision           | ±0.001 deg to    | Propellant
+(4 Wheels)          |                  | pointing                 | ±0.01 deg (3σ    | usage, life of
+                    |                  |                          | level)           | sensor and
+                    |                  |                          |                  | wheel bearings
+
+*Thrusters may be used for slewing and momentum dumping at all altitudes. Magnetic torquers may be used from LEO to GEO.
+
+[Diagram of spacecraft components with labels: Transceiver Box, On Board Computer Box, Batteries Box, Hysteresis rods, Power Conditioning box, Permanent Magnets]
+
+Intechopen.com
+
+Very limited for purely passive, more useful if we add magnetic torquers. Only useful close to Earth and for small sats.

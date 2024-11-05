@@ -1,0 +1,11 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 80
+Slide text: 
+
+Choice of frequency – Atmospheric losses
+
+
+The slide contains two graphs:
+
+1. The left graph shows "Rain Attenuation (dB)" versus "Frequency (GHz)" for different elevation angles (10°, 20°, 45°) and availability percentages (99.5%, 99.0%).
+2. The right graph shows "Theoretical One Way Zenith Attenuation (dB)" versus "Frequency (GHz)" for different altitudes (0 km, 4 km, 8 km, 12 km, 16 km) and indicates the presence of O₂ and H₂O absorption lines.

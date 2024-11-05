@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 20
+Slide text:
+
+Imaging systems: Pushbroom vs Whiskbroom
+
+• Pushbroom sensors utilize a stationary array of detectors to capture data across the entire swath simultaneously, offering advantages in simplicity, stability, and accuracy.
+
+• Whiskbroom sensors require a more complex mechanical system to sweep back and forth across the swath, capturing data line by line.
+
+• Others: multi-element whiskbroom, matrix imagers.
+
+Images:
+- Whiskbroom
+- Pushbroom

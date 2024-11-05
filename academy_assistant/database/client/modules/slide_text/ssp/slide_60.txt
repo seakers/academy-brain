@@ -1,0 +1,35 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 60
+Slide text: 
+
+Inverse problem for soil moisture (SM)
+
+• Inverse problem: Find SM from received power (in general, any instance of a problem where you observe \( y = \sum \omega_i f(x_i) \) and want to get one \( x_j \) from \( y \)
+• In this case, there are multiple undesired sources that contribute to the received radiance:
+    • Effect of the atmosphere
+    • Effects of surface roughness
+    • Effects of vegetation
+    • Effects of solar reflected radiation
+    • Effect of the antenna (coming in a few slides)
+
+
+Equation:
+\[ y = \sum \omega_i f(x_i) \]
+
+Diagram text:
+
+This is what we want to know
+SM
+Roughness
+vegetation
+ε_r
+θ
+ρ
+ε_soil
+B_v,soil
+T
+noise
+B_v,atm
+G(θ, φ)
+P(ν)
+This is what we observe with the instrument (received power)

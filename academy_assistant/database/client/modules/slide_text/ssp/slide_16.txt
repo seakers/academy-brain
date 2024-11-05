@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 16
+Slide text:
+- Spectrum of solar radiation at top of the atmosphere (TOA, yellow on figure) resembles that of a blackbody at a temperature of 5250deg C (black line)
+- However, if we look at the surface, the spectrum looks quite different due to the atmosphere (red)
+- We observe several absorption features of H\(_2\)O, O\(_2\), CO\(_2\), O\(_3\) and others
+- Whatever features we observe in the reflected spectrum on a satellite that are not these are due to the reflectivity of the surface.
+
+VNIR ~ 300-2500nm

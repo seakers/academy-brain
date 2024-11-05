@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 49
+Slide text: 
+
+From Delta V to propellant
+
+• Delta V is important because it determines the amount of propellant needed in the spacecraft
+• The rocket equation captures the relation between ΔV and propellant mass for a given technology ($I_{sp}$)
+\[ \Delta V = g_0 I_{sp} \ln \left( \frac{m_i}{m_f} \right) \]
+    • Where $m_i$ is the initial mass with propellant and $m_f$ is the final mass after the maneuver (without the propellant)
+• Rearranging terms:
+\[ \frac{m_{prop}}{m_{dry}} = e^{\frac{\Delta V}{g_0 I_{sp}}} - 1 \]
+• Thus, the ratio of propellant mass to “dry mass” increases exponentially with ΔV
+    • This is the rocket equation “wall”
+        • Note that the total mass of the propulsion system also scales with propellant mass
+• For a given ΔV, the amount of propellant needed strongly depends on $I_{sp}$

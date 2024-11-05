@@ -1,0 +1,15 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 60
+Slide text: 
+
+Reflected sunlight
+
+\[
+\dot{Q}_{alb} = \Phi_s \cdot R \cdot \alpha_{VNIR} \cdot A_{Earth}
+\]
+
+- Where \( R \) is the albedo (fraction of solar irradiance reflected off Earth surface)
+  - Function of orbit and spacecraft attitude
+  - Values of Earth albedo oscillate significantly between 0.2-0.6
+- \( A_{Earth} \) is the area perpendicular to spacecraft-Earth vector
+- Example: \( \alpha_{VNIR} = 0.4 \), \( R = 0.4 \), \( A_{Earth} = 1m^2 \), we get \( \dot{Q}_{alb} = 219W \)

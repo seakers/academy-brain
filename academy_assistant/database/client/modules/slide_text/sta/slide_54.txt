@@ -1,0 +1,28 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 54
+Slide text: 
+
+Heat transfer mechanisms
+
+• Conduction
+  • Requires physical contact
+  • Heat flows from high T to low T according to Fourier's law:
+    \[
+    \dot{Q} = \frac{\partial E}{\partial t} = k \cdot A \cdot \frac{\partial T}{\partial x}
+    \]
+  • Where \( k \) is the thermal conductivity \(\left[ \frac{W}{m \cdot K} \right]\)
+
+• Convection
+  • "Heat rises", requires gravity
+    \[
+    \dot{Q} = \frac{\partial E}{\partial t} = h \cdot A \cdot (T_{\text{object}} - T_{\text{fluid}})
+    \]
+  • \( h \) is the convective heat transfer coefficient \(\left[ \frac{W}{m^2 \cdot K} \right]\)
+  • Usually not a factor in space
+
+• Radiation
+  • Through EM fields
+    \[
+    \dot{Q} = \sigma E A T^4
+    \]
+  • Dominates heat transfer in space.

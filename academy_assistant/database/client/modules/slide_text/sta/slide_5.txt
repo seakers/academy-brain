@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 5
+Slide text: 
+Examples of Earth spacecraft configurations – ADEOS
+
+- Internal Communication Antenna
+- TOMS
+- ILAS (Improved Limb Atmospheric Spectrometer)
+- RIS (Radio Interferometer in Space)
+- OCTS (Ocean Color and Temperature Scanner)
+- POLDER (Polarization and Directionality of Earth's Reflectances)
+- AVNIR (Advanced Visible and Near Infrared Radiometer)
+- NSCAT (NASA Scatterometer)
+- ADEOS Flight Direction
+- Solar Array
+- Nadir Direction

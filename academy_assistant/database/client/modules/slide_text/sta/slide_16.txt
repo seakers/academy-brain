@@ -1,0 +1,25 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 16
+Slide text:
+
+Solar cells
+
+• Main requirement and cost driver is the solar cell efficiency
+  • Ratio of output power density \( S_{out} \left[ \frac{W}{m^2} \right] \) to input power density \( S_{in} \left[ \frac{W}{m^2} \right] \)
+    \[
+    \eta = \frac{S_{out}}{S_{in}}
+    \]
+    • \( S_{in} \approx 1368 \, W/m^2 \) in earth's vicinity
+
+• Types:
+  • Silicon
+    • Old, cheap, lots of heritage
+    • Low efficiency \( \eta \approx 15\% \)
+  • Gallium Arsenide
+    • Slightly better than Si
+    • Efficiency \( \eta \approx 20\% \)
+  • Multi-junction
+    • State of the art
+    • Several semiconductor layers
+    • \( \eta \approx 30 - 35\% \)
+

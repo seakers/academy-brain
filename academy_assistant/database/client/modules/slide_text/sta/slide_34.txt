@@ -1,0 +1,20 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 34
+Slide text: 
+Spin-stabilized satellites
+
+TABLE 11-4. Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.
+
+| Type | Pointing Capabilities | Attitude Maneuverability | Typical Accuracy | Lifetime Limits |
+|------|-----------------------|--------------------------|-------------------|-----------------|
+| Gravity-gradient (Earth only) | Earth local vertical only | Very limited | ±5 deg (2 axes) | None |
+| Passive Magnetic (Earth only) | North only | Very limited | ±5 deg (2 axes) | Life of wheel bearings |
+| Pure Spin Stabilization | Nominally fixed high precision attitude with respect to spin momentum vector | ±1 deg to ±10 deg (proportional to spin rate) | None | Thruster propellant or propeller |
+| Bias Spin Stabilization | Limited by 3-axis platform | Momentum vector despin allows 3-axis platform control by gyroscopically stiff platform | Same as above for spin axis, ±1 deg to ±10 deg for platform | Thruster propellant or propeller, life of bearings |
+| Single Momentum Wheel (3 wheels) | Best suited for single axis pointing | Momentum vector despin allows 3-axis platform control by gyroscopically stiff platform | ±0.1 deg to ±1 deg | Propellant, life of sensor and wheel bearings |
+| Zero Momentum (2/3 wheels) | No constraints | No constraints | ±0.001 deg to ±1 deg | Propellant, life of sensor and wheel bearings |
+| Zero Momentum (4 wheels) | No constraints | No constraints | ±0.001 deg to ±1 deg | Propellant, life of sensor and wheel bearings |
+
+Whole satellite rotates about an axis
+Imager uses satellite rotation to sweep the Earth (not ideal)
+Very common in old GEO satellites but not anymore

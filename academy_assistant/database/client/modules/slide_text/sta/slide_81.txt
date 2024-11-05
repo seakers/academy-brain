@@ -1,0 +1,31 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 81
+Slide text: 
+
+Choice of frequency
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+ & \text{Higher freq} & \text{Lower freq} \\
+\hline
+\text{Atmospheric Attenuation} & - & + \\
+\hline
+\text{Rain attenuation} & - & + \\
+\hline
+\text{Free space loss} & - & + \\
+\hline
+\text{Bandwidth} & + & - \\
+\hline
+\text{Cost and complexity of electronics} & - & + \\
+\hline
+\text{Size} & + & - \\
+\hline
+\text{Antenna Gain} & + & - \\
+\hline
+\end{array}
+\]
+
+(+) indicates good or better, (-) indicates bad or worse
+
+(C) Daniel Selva 2019

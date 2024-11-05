@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 71
+Slide text:
+
+Optional: Overtone and combination bands: water
+
+- Often, overtone and combination bands are observed in the VNIR instead of fundamental bands
+- For example for water, there is an overtone band at 1.45um (2v_3) and a combination band at 1.9um (v_2 + v_3)
+- Location and appearance of water bands when sensing solid surfaces provides useful information about how water associates with the mineral. This information can be used to infer composition
+- See difference in water features for different water-bearing minerals such as gypsum, natrolite, or quartz.
+
+
+Equations:
+- Overtone band at 1.45um: \( 2v_3 \)
+- Combination band at 1.9um: \( v_2 + v_3 \)

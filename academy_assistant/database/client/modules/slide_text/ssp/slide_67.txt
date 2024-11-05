@@ -1,0 +1,14 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 67
+Slide text: 
+
+MWR – Swath
+
+• If spatial resolution is the size of a pixel in m (km), swath is the size of an image in km.
+    • Usually, we want large swath
+• Images with multiple pixels are obtained by some sort of scanning mechanism
+    • Many imaging MWR perform conical scans (see video)
+    \[
+    \text{Swath} \approx 2h \tan \left( \eta_0 + \frac{\Delta \theta}{2} \right)
+    \]
+• Exercise: A conically-scanning L-band radiometer flying at 660km has an aperture of 6m and an off-nadir angle of 45deg. Compute the swath with a flat-Earth approximation. Compare to curved Earth calculations.

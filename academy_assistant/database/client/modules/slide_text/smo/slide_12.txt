@@ -1,0 +1,7 @@
+Module: Space Mission Overview
+Slide Number: 12
+Slide text: 
+- Using Parametric Cost Modeling, cost of a system dependent on certain factors (ie. mass, aperture, average power) can be calculated using CERs
+  - Example: Research, Development, Testing, and Evaluation CERs
+    - Each component cost can be estimated based on the parameter \(X\), these are often power functions
+- The Mission must be separated into different elements for accurate cost approximation

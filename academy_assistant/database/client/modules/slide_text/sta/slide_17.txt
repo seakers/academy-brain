@@ -1,0 +1,15 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 17
+Slide text:
+
+Basic solar array sizing
+
+• Basic idea: the solar array generates power during daylight only, but it needs to fill the batteries during daylight so they can cover the needs during eclipse.
+• Compute required power from payload and spacecraft bus and eclipse times at End of Life (EOL)
+\[
+P_{sa} = \frac{P_d T_d}{X_d} + \frac{P_e T_e}{X_e} \div T_d \quad [W]
+\]
+    • \(P_d\) is the power required during illuminated portion of the orbit which lasts \(T_d\) seconds
+    • \(P_e\) is the power required during eclipse portion of the orbit which lasts \(T_e\) seconds
+    • \(X_e\) is the efficiency from the solar arrays to the batteries to power distribution (\(X_e \approx 0.65\))
+    • \(X_d\) is the efficiency from the solar arrays to power distribution directly (\(X_d \approx 0.85\))

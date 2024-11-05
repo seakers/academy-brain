@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 14
+Slide text: 
+
+Power generation technologies
+
+• Most Earth satellites use solar panels as the primary source of power since they are affordable and sunlight is widely available.
+• Rockets use primary batteries
+• Distant exploration satellites with stringent power requirements must use other power sources
+    • Nuclear reactors
+    • Radioisotopes
+
+
+The slide also contains an image titled "Power Source Comparison" with a graph comparing different power sources (Chemical, Solar, Nuclear Reactor, Radioisotope) based on electric power and time at power.

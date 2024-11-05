@@ -1,0 +1,20 @@
+Module: Space Environments And Orbits
+Slide Number: 32
+Slide text: 
+Orbit perturbations – Effect of J2
+
+- In the absence of any perturbations, the orbital parameters \(a, e, I, \omega, \Omega\) would stay constant over time
+  - The orientation of the orbital plane would stay “fixed” independent of the motion of the Earth
+
+- In reality, the plane rotates over time primarily because the Earth is not a perfect sphere.
+  - This is nodal precession, a change in RAAN over time \(\dot{\Omega} \neq 0\)
+  - The Earth’s shape is modeled using spherical harmonics with many coefficients terms
+  - The largest coefficient is the oblateness of the Earth which is captured by the so-called \(J_2\) parameter
+
+- Rate of nodal precession is different for different orbits:
+  \[
+  \dot{\Omega} = -\frac{3}{2(1-e^2)^2} n \frac{J_2 (R_E)^2}{a^2} \cos i
+  \]
+  - Where \(n = \frac{2\pi}{T}\) is called the mean motion
+
+- \(J_2\) also causes the argument of the perigee to rotate within the orbital plane \(\dot{\omega} \neq 0\), which is called apsidal precession

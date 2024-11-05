@@ -1,0 +1,12 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 67
+Slide text: 
+The TT&C subsystem
+
+- The TT&C subsystem has three main functions that drive requirements:
+    1. Send payload data to ground (mission)
+    2. Send spacecraft data (e.g. health, position, attitude) to ground (operations)
+    3. Receive commands from ground (operations)
+- To accomplish these functions, the TT&C subsystem consists of:
+    - Antennas
+    - Transceivers (oscillators, mixers, filters, amplifiers...)

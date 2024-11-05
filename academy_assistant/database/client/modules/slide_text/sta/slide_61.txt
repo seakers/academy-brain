@@ -1,0 +1,24 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 61
+Slide text: 
+
+**Thermal emission from Earth**
+
+\[
+\dot{Q}_{\text{Earth}} = \epsilon_{\text{Earth}} \sigma T^4_{\text{Earth}} \cdot F \cdot \alpha_{\text{TIR}} \cdot A_{\text{Earth}}
+\]
+
+- Where F is a geometric factor taking into account decay due difference in solid angle at \( h \). It's tabulated for different altitudes, inclinations but approximately 
+
+\[
+F \approx \left( \frac{R_E}{R_E + h} \right)^2
+\]
+
+  - Example: For \( h = 500 \text{km} \), \( F = 0.86 \)
+
+- In this case:
+  - \( \epsilon_{\text{Earth}} \approx 1 \)
+  - \( T_{\text{Earth}} \approx 255K \)
+  - \( A_{\text{Earth}} \) is the S/C area perpendicular to Earth-spacecraft vector
+
+- Example: \( A_{\text{Earth}} = 1m^2, \alpha_{\text{TIR}} = \epsilon_{\text{TIR}} = 0.8 \rightarrow \dot{Q}_{\text{Earth}} = 165W \)

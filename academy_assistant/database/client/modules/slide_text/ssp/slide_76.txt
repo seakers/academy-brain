@@ -1,0 +1,7 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 76
+Slide text:
+- In continuous-wave radar the signal is sent without interruption.
+- In pulsed-wave radars, a pulse of length $\tau$ is sent every $1/PRF$ seconds in a train of pulses
+- $PRF$ is the pulse repetition frequency. Note that $\frac{1}{PRF} > \tau$ must hold
+- Typical values for pulse length and $PRF$ are on the order of microseconds and kHz, respectively.

@@ -1,0 +1,13 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 79
+Slide text: 
+Matched filter detection
+
+- In most cases, detection of the received pulse is done using a matched filter
+  * Also used in digital communication systems as it maximizes SNR in the presence of uncorrelated zero-mean noise
+- Idea: Correlate the received signal (echoes) with the sent signal (pulse) and look for the time where correlation is maximum: this is the delay
+  \[
+  R_{xy}(\tau) = \int_{-\infty}^{+\infty} x(t - \tau) \cdot y(t) \, dt
+  \]
+- In the case of rectangular pulses, the output of the matched filter has 2x the length of the input pulse, so it becomes harder to separate them
+- If the pulses are too close in time, we cannot separate them because there is a single peak in the correlation

@@ -1,0 +1,18 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 118
+Slide text: 
+```
+Types of functions
+
+• Operating system vs Application software
+  • OS Manages the computer’s resources
+    • input/output devices, memory, and scheduling of application software
+  • Application includes mission-specific software which does work required by the user or the mission rather than in support of the computer
+    • Payload management
+
+• Hard vs Soft real-time processing
+  • Hard real-time requires precise timing to achieve correct results – missing a time boundary has severe consequences
+    • ADCS, telemetry
+  • Soft real-time requires that the tasks be performed in a timely manner –missing a time boundary results in degraded but continuous performance
+    • Orbit control, orientation of solar panels, payload management
+```

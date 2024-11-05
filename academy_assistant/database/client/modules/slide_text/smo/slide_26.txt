@@ -1,0 +1,6 @@
+Module: Space Mission Overview
+Slide Number: 26
+Slide text:
+- Similar to Earth observation but used for on-orbit servicing, surveillance, monitoring orbital debris, etc.
+- Agile satellites capable of proximity operations, with cooperative or uncooperative targets
+- Payloads are adapted for smaller distances and challenging illumination conditions

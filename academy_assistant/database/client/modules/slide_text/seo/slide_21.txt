@@ -1,0 +1,10 @@
+Module: Space Environments And Orbits
+Slide Number: 21
+Slide text: 
+- Orbital debris and meteoroids
+  - Can cause collisions that destroy [parts of] spacecraft
+  - All objects above 10cm are visible from Earth and are currently being monitored and carefully catalogued
+
+  (Image of impact crater with caption: "impact crater (~110 μm in diameter, 75 μm deep) in pure aluminum foil.")
+  
+  (Graph showing the number of debris found of a given size with various measurement methods, captioned: "[1998]")

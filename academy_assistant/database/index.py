@@ -82,6 +82,43 @@ demo_user_5 = {
     'password': 'U4VPbxK2Ch9PZ5NL'
 }
 
+# cape_accounts = [
+#     {'username': 'mlane', 'email': 'mlane@seaklab.com', 'password': '1aZ3xE8sB7pV9dT4'},
+#     {'username': 'gsummers', 'email': 'gsummers@seaklab.com', 'password': '8yW2vQ6mR3kU1hN0'},
+#     {'username': 'hdougherty', 'email': 'hdougherty@seaklab.com', 'password': '4nL7jX2wV9zP0aT3'},
+#     {'username': 'dlyons', 'email': 'dlyons@seaklab.com', 'password': '5bQ8kJ1sM7pX6eZ2'},
+#     {'username': 'chowells', 'email': 'chowells@seaklab.com', 'password': '2rN9xC4vB8lF7tW1'},
+#     {'username': 'sfitzpatrick', 'email': 'sfitzpatrick@seaklab.com', 'password': '0yU5mR3kW8nL7jX4'},
+#     {'username': 'jpatterson', 'email': 'jpatterson@seaklab.com', 'password': '9dP1vT7kE4sX6mZ5'},
+#     {'username': 'aknepper', 'email': 'aknepper@seaklab.com', 'password': '6fL2nW8xJ5pV9tR3'}
+# ]
+
+cape_accounts = [
+    {'username': 'mlane', 'email': 'mlane@seaklab.com', 'password': '1aZ3xE8sB7pV9dT4'},
+    {'username': 'gsummers', 'email': 'gsummers@seaklab.com', 'password': '8yW2vQ6mR3kU1hN0'},
+    {'username': 'hdougherty', 'email': 'hdougherty@seaklab.com', 'password': '4nL7jX2wV9zP0aT3'},
+    {'username': 'dlyons', 'email': 'dlyons@seaklab.com', 'password': '5bQ8kJ1sM7pX6eZ2'},
+    {'username': 'chowells', 'email': 'chowells@seaklab.com', 'password': '2rN9xC4vB8lF7tW1'},
+    {'username': 'sfitzpatrick', 'email': 'sfitzpatrick@seaklab.com', 'password': '0yU5mR3kW8nL7jX4'},
+    {'username': 'jpatterson', 'email': 'jpatterson@seaklab.com', 'password': '9dP1vT7kE4sX6mZ5'},
+    {'username': 'aknepper', 'email': 'aknepper@seaklab.com', 'password': '6fL2nW8xJ5pV9tR3'},
+
+    {'username': 'ghogan', 'email': 'gregory.hogan.3@us.af.mil', 'password': 'A1b2C3d4E5f6G7h8'},
+    {'username': 'kpethel', 'email': 'kaylee.pethtel@us.af.mil', 'password': 'H8g7F6e5D4c3B2a1'},
+    {'username': 'cmohindroo', 'email': 'chelsea.mohindroo@us.af.mil', 'password': 'I2j3K4l5M6n7O8p9'},
+    {'username': 'econcepcion', 'email': 'enid.alvira-concepcion@us.af.mil', 'password': 'P9o8N7m6L5k4J3i2'},
+    {'username': 'cmccarthy', 'email': 'christopher.mccarthy.18@us.af.mil', 'password': 'Q1r2S3t4U5v6W7x8'},
+    {'username': 'apena', 'email': 'anthony.pena.3@us.af.mil', 'password': 'Y8x7W6v5U4t3S2r1'},
+    {'username': 'phach', 'email': 'patricia.hach@us.af.mil', 'password': 'Z2a3B4c5D6e7F8g9'},
+    {'username': 'efisk', 'email': 'estevan.fisk@us.af.mil', 'password': 'G9f8E7d6C5b4A3z2'},
+    {'username': 'tpackard', 'email': 'travis.packard.4@us.af.mil', 'password': 'X1y2Z3a4B5c6D7e8'},
+    {'username': 'cwhitehorn', 'email': 'christopher.whitehorn.1@us.af.mil', 'password': 'F8g7H6i5J4k3L2m1'},
+    {'username': 'dvasconi', 'email': 'dawson.vasconi.1@us.af.mil', 'password': 'M1n2O3p4Q5r6S7t8'},
+    {'username': 'nbiancalana', 'email': 'nickolas.biancalana.1@us.af.mil', 'password': 'T8u7V6w5X4y3Z2a1'},
+    {'username': 'wkim', 'email': 'william.kim.11@us.af.mil', 'password': 'B1c2D3e4F5g6H7i8'},
+    {'username': 'kjawad', 'email': 'jawad.kazi@us.af.mil', 'password': 'J8k7L6m5N4o3P2q1'}
+]
+
 
 
 demo_accounts = [
@@ -104,97 +141,84 @@ demo_accounts = [
 
 
 # ------------------------------------
-# Experiment Users
+# Experiment Users (20 total)
 # ------------------------------------
 test_experiment_user = {
     'username': 'testuser',
     'email': 'testuser@seaklab.com',
     'password': 'testuser',
-    'task_order': ['T1', 'T2'],
-    'assistant': True,
-    'assistant_order': [1, 0]
 }
 # ------------------------------------
 experiment_user_1 = {
-    'username': 'subject1',
-    'email': 'subject1@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T1', 'T2'],
-    'assistant': False,
-    'assistant_order': [0, 1]
+    'username': 'soaracc1',
+    'email': 'soaracc1@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_2 = {
-    'username': 'subject2',
-    'email': 'subject2@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T1', 'T2'],
-    'assistant': True,
-    'assistant_order': [1, 0]
+    'username': 'soaracc2',
+    'email': 'soaracc2@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_3 = {
-    'username': 'subject3',
-    'email': 'subject3@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T2', 'T1'],
-    'assistant': False,
-    'assistant_order': [0, 1]
+    'username': 'soaracc3',
+    'email': 'soaracc3@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_4 = {
-    'username': 'subject4',
-    'email': 'subject4@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T2', 'T1'],
-    'assistant': True,
-    'assistant_order': [1, 0]
+    'username': 'soaracc4',
+    'email': 'soaracc4@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_5 = {
-    'username': 'subject5',
-    'email': 'subject5@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T1', 'T2'],
-    'assistant': False,
-    'assistant_order': [0, 1]
+    'username': 'soaracc5',
+    'email': 'soaracc5@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_6 = {
-    'username': 'subject6',
-    'email': 'subject6@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T1', 'T2'],
-    'assistant': True,
-    'assistant_order': [1, 0]
+    'username': 'soaracc6',
+    'email': 'soaracc6@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_7 = {
-    'username': 'subject7',
-    'email': 'subject7@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T2', 'T1'],
-    'assistant': False,
-    'assistant_order': [0, 1]
+    'username': 'soaracc7',
+    'email': 'soaracc7@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_8 = {
-    'username': 'subject8',
-    'email': 'subject8@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T2', 'T1'],
-    'assistant': True,
-    'assistant_order': [1, 0]
+    'username': 'soaracc8',
+    'email': 'soaracc8@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_9 = {
-    'username': 'subject9',
-    'email': 'subject9@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T1', 'T2'],
-    'assistant': False,
-    'assistant_order': [0, 1]
+    'username': 'soaracc9',
+    'email': 'soaracc9@seaklab.com',
+    'password': 'campsoar24',
 }
 experiment_user_10 = {
-    'username': 'subject10',
-    'email': 'subject10@seaklab.com',
-    'password': 'U4VPbxK2Ch9PZ5NL',
-    'task_order': ['T1', 'T2'],
-    'assistant': True,
-    'assistant_order': [1, 0]
+    'username': 'soaracc10',
+    'email': 'soaracc10@seaklab.com',
+    'password': 'campsoar24',
 }
+experiment_user_11 = {
+    'username': 'soaracc11',
+    'email': 'soaracc11@seaklab.com',
+    'password': 'campsoar24',
+}
+experiment_user_12 = {
+    'username': 'soaracc12',
+    'email': 'soaracc12@seaklab.com',
+    'password': 'campsoar24',
+}
+
+
+
+
+
+
+
+
+
+
 
 experiment_accounts = [
     experiment_user_1,
@@ -222,8 +246,8 @@ def main():
     index_demo_users(client)
     print("#####1##########")
 
-    index_experiment_users(client)
-    print("#####2##########")
+    # index_experiment_users(client)
+    # print("#####2##########")
 
 
     # Index learning content
@@ -247,7 +271,8 @@ def main():
 
 def index_demo_users(client):
     usernames = [x.username for x in client.get_users()]
-    for account in demo_accounts:
+    combined_accounts = demo_accounts + experiment_accounts + cape_accounts
+    for account in combined_accounts:
         if account['username'] not in usernames:
             user = User.objects.create_user(account['username'], account['email'], account['password'])
             user.save()

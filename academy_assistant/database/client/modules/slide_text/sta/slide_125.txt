@@ -1,0 +1,19 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 125
+Slide text: 
+```
+Data bus
+
+• Data bus connects all subsystems that generate and receive data/commands
+• Similar to power bus
+• Connected to comm system for external communications
+
+[Diagram of subsystems connected to Avionics and Power]
+
+Legend:
+→ Data
+→ Continuous power
+→ Controlled power
+```
+
+Note: The diagram shows various subsystems (Propulsion, ACS, Comm, Structures, Thermal, Payload) connected to Avionics and Power, with arrows indicating the flow of data, continuous power, and controlled power.

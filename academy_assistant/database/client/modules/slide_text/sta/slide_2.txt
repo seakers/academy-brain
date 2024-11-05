@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 2
+Slide text: 
+
+Intro to Module 3
+
+• In this module, you will get introduced to the different spacecraft subsystems, their main requirements and cost drivers as well as the most typical technologies used.
+
+• The module consists of 8 parts:
+1. Space System Overview
+2. Electrical Power Subsystem
+3. Attitude and Orbit Determination and Control Subsystem
+4. Propulsion Subsystem
+5. Thermal Control Subsystem
+6. Telemetry, Tracking and Control Subsystem
+7. Structures, Mechanisms, and Configurations
+8. Avionics and Flight Software Subsystem

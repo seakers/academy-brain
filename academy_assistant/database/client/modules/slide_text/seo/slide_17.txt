@@ -1,0 +1,10 @@
+Module: Space Environments And Orbits
+Slide Number: 17
+Slide text:
+- The Van Allen Belts are 2 regions of trapped fast charged particles (electrons and protons)
+  - Inner belt: 1,000-6,000km altitude
+  - Outer belt: 13,000-60,000km
+- Most LEO satellites are below the 1st ring (inner belt) so they have a more benign radiation environment
+- MEO satellites are in the middle of the 2nd ring (outer belt) so they see more radiation (e.g., GPS satellites)
+- GEO satellites are in the edge of the outer belt (radiation also a problem)
+- The South Atlantic Anomaly is a range of longitudes where the Earth’s magnetic field is weaker and thus radiation is worse. Leads to more radiation-related spacecraft failures.

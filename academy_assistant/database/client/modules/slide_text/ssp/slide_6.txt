@@ -1,0 +1,21 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 6
+Slide text: 
+
+    MW: \( hf \ll kT \), VNIR: \( hf \gg kT \), TIR: \( hf \approx kT \)
+    
+    Wave-matter interaction in the optical
+
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Band & Energy levels & Interaction mechanisms & Applications & Examples of instruments \\
+    \hline
+    UV & 3-40 eV \newline 30-400nm & Electronic bands \newline Photodissociation & Atmospheric composition (stratosphere): \( O_3 \), \( N_2O \), aerosols & OMI \newline OMTS \\
+    \hline
+    VNIR & 0.5-3 eV \newline 0.4-2.5um & Vibrational bands \newline Electronic bands \newline Crystal field \newline Charge transfer \newline Conduction bands & Surface composition (Fe\(^{3+}\) band, OH bands) \newline Vegetation status (chlorophyll absorption bands) & HYSPIRI \newline MERIS \\
+    \hline
+    MIR & 0.1-0.5 eV \newline 2.5-12um & Vibrational bands \newline Rotational bands & Surface composition (Si-O band for silicates) \newline Atmospheric composition (troposphere, \( CO_2 \), CO, \( O_3 \)) & OCO \newline SCIAMACHY \\
+    \hline
+    TIR & 0.02-0.1eV \newline 12-50um & Thermal emission \newline Vibrational bands \newline Rotational bands & Land/ocean surface temperature, atmosphere temperature, heat capacity, surface composition & ASTER \newline HYSPIRI \\
+    \hline
+    \end{tabular}

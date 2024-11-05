@@ -158,6 +158,7 @@ class DialogueGenerator(LLM_Task):
         })
 
         while self.stop_condition(completion) is False:
+            
 
             # Search Information Space
             module, query = self.parse_completion(completion)

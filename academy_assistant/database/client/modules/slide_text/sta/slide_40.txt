@@ -1,0 +1,19 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 40
+Slide text: 
+
+ACS Control-Concept Capability
+
+• How do you choose an ADCS concept?
+• Purely passive approaches are only possible when required accuracy is ~5deg
+• ~1deg can be achieved with spin stabilized systems
+• ~0.1deg accuracy is typical for 3-axis stabilized systems with reaction wheels.
+• ~0.01deg or less is possible with CMGs
+
+TABLE 11-8. Effect of Control Accuracy on Sensor Selection and ADCS Design. Accurate pointing requires better, higher cost, sensors, and actuators.
+
+Required Accuracy (deg) | Effect on Spacecraft | Effect on ADCS
+> 5 deg | • Permits major cost savings • Permits gravity-gradient (GG) stabilization | Without attitude determination • No sensors required for GG stabilization • Boom motor, GG damper, and a bias momentum wheel are only required actuators With attitude determination • Sun sensors & magnetometer adequate for attitude determination at 2-3 deg • Higher accuracies may require star trackers or horizon sensors
+1 deg to 5 deg | • GG not feasible • Spin stabilization feasible if stiff, inertially fixed attitude is acceptable • Payload needs may require despun platform on spinner • 3-axis stabilization will work | • Sun sensors and horizon sensors may be adequate for sensors, especially a spinner • Accuracy for 3-axis stabilization can be met with FSS; degraded control but reaction wheels will save propellant for long missions • Thrusters and gyro adequate for spinner • Magnetics for 3-axis (and magnetometer) useful
+0.1 deg to 1 deg | • 3-axis and momentum-bias stabilization feasible • Dual-spin stabilization also feasible | • Need for accurate attitude reference leads to star tracker or horizon sensors & possibly gyros • Reaction wheels typical with thrusters for momentum management and coarse control • Magnetometer less useful for long missions • Magnetic torquers adequate in light vehicles (magnetometer also required)
+< 0.1 deg | • 3-axis stabilization is necessary • May require articulated & vibration-isolated payload platform with separate sensors | • Same as above for 0.1 deg to 1 deg but needs star sensor and gyro for attitude control • Control laws and computational needs are more complex • Flexible body performance very important

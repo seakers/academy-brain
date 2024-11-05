@@ -1,0 +1,11 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 89
+Slide text: 
+- Other sources of loads
+  - Transportation
+  - Handling
+  - Ascent – pressure and thermal profiles
+
+(Figure 4-13: Maximum payload fairing spot temperature seen by payload)
+
+(Figure 4-9: Falcon 9 fairing internal pressure and decay rate (representative))

@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 72
+Slide text: 
+Optional: Overtone and combination bands: OH
+
+- All fundamental vibrational modes of most common molecules (e.g. oxides of silicon, magnesium, or aluminum) occur in the TIR.
+- Only a few occur in the VNIR, and by far the most common is that of OH ion (e.g. in AlOH or MgOH), which has a fundamental mode at 2.77um
+- Its first overtone at 1.4um is the most common feature in the NIR spectra of terrestrial materials

@@ -1,0 +1,11 @@
+Module: Space Environments And Orbits
+Slide Number: 29
+Slide text:
+- Together, the 6 orbital parameters \(a, e, I, \omega, \Omega, \theta\) fully define the trajectory of the satellite
+  - From these 6 parameters, we can calculate anything: the satellite position, velocity, etc.
+- For example, from Kepler’s laws, we can calculate the orbital period, i.e., the time it takes the satellite to go around its orbit once:
+  \[
+  T = \frac{1}{2\pi} \sqrt{\frac{a^3}{GM}}
+  \]
+- Where \(G = 6.67 \cdot 10^{-11} \frac{N \cdot m^2}{kg^2}\) is the gravitational constant and \(M = 5.97 \cdot 10^{24} kg\) is the mass of the Earth
+- Note that it only depends on the semimajor axis!

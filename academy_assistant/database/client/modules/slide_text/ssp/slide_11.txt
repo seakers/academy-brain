@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 11
+Slide text:
+Optional: Modes of motion
+
+- For a molecule with N atoms, there are 3N modes of motion
+  - 3 translational modes
+  - 3 (2 if linear) rotational modes of the molecule as a whole
+  - 3N-6 (3N-5 if linear) vibrational modes
+- Example: \( \text{H}_2\text{O} \) has 3 atoms and is not a linear molecule. Thus it has \( 3*3-6=3 \) vibrational modes.
+- Example: \( \text{CO}_2 \) has 3 atoms and is a linear molecule. Thus it has \( 3*3-5=4 \) vibrational modes
+  - Although 2 are degenerate – same energy

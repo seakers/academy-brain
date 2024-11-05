@@ -1,0 +1,18 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 43
+Slide text: 
+Summary
+
+- Types of imaging systems
+  - Pushbroom
+  - Whiskbroom
+
+- Basic performance metrics and design parameters
+  - Diffraction-limited spatial resolution, ground sampling distance, swath
+  - Focal length, magnification, aperture, F number, Q factor
+  - Data rate, integration time
+  - Signal-to-noise ratio, NEP (NEdT)
+
+- Elements of imaging systems
+  - Detectors: photodiodes, photomultiplier tubes
+  - Dispersive elements: prisms, diffraction gratings

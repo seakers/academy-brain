@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 100
+Slide text:
+Design process
+
+3. Functionally partition and allocate the computational requirements
+   • Consider the following areas to allocate functions:
+     • Space or ground, payload, spacecraft bus (avionics, other sub-systems)
+     • Distinguish between hardware and software requirements
+
+4. Evaluate internal and external interfaces
+   • Determine Input/Output requirements for the avionics subsystem with respect to the other subsystems and payload
+
+5. Select the baseline architecture
+   • Centralized or distributed processing
+   • If distributed, what type?
+   • Need redundancy?
+
+6. Form the baseline system specification
+   • Detailed design
+   • IA&T strategy

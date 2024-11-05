@@ -1,0 +1,7 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 2
+Slide text:
+- Be familiar with the main types of \textit{optical} and \textit{microwave} observation payloads
+- Understand the \textit{terminology} used to describe the characteristics of optical payloads.
+- Estimate the basic \textit{performance} characteristics and \textit{design drivers} of optical and microwave instruments
+- Understand how optical and microwave instruments can drive space mission design

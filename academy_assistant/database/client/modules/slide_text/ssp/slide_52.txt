@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 52
+Slide text:
+Reflectivity vs emissivity
+
+- Definition: Transmissivity or transmittance ($\tau$) is the fraction of EM radiation that is transmitted at an interface.
+
+- By conservation of energy:
+$$\rho + \tau = 1$$
+
+- Furthermore, for most thick surfaces, the transmitted radiation is absorbed and then re-emitted (conservation of energy), therefore:
+$$\tau = \alpha = \epsilon = 1 - \rho$$

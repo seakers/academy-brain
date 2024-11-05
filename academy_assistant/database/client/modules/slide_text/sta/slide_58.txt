@@ -1,0 +1,30 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 58
+Slide text: 
+
+Emissivity and absorptivity of materials
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+\text{Material} & \alpha_{VNIR} & \epsilon_{TIR} & \text{Ratio} \\
+\hline
+\text{Aluminum} & 0.09 & 0.03 & 3.00 \\
+\text{White paint} & 0.20 & 0.92 & 0.22 \\
+\text{Black paint} & 0.92 & 0.89 & 1.03 \\
+\text{Silver Teflon} & 0.08 & 0.8 & 0.10 \\
+\text{Aluminized Kapton} & 0.38 & 0.67 & 0.56 \\
+\hline
+\end{array}
+\]
+
+\[
+\alpha_{VNIR}/\epsilon_{TIR}
+\]
+
+- Use Silver Teflon to minimize solar absorption and max emissions (e.g., for telescope mirrors)
+- Use black paint to maximize energy transfer, both absorption and emission (e.g., interior of spacecraft)
+- Use metals (e.g., Aluminum) to minimize both absorption and emission (e.g., instrument sun shield)
+- Combine these surfaces to get almost any \(\alpha_{VNIR}/\epsilon_{TIR}\) you want
+
+Effect of solar radiation, outgassing etc. is deposit of particles on surfaces that increase \(\alpha_{VNIR}\). Almost no effect on \(\epsilon_{TIR}\).

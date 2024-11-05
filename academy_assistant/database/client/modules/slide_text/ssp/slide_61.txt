@@ -1,0 +1,26 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 61
+Slide text: 
+
+Inverse problem for soil moisture (SM)
+
+This is what we want to know
+  Rough -ness
+  SM
+  vegetat ion
+  ε_r
+  θ
+  ρ
+  ε_soil
+  B_v,soil
+  T
+  B_v,atm
+  noise
+  G(θ, φ)
+  P(ν)
+This is what we observe with the instrument (received power)
+
+• Inverse problems are hard to solve. Tricks to solve inverse problems:
+  • Observe at different angles or frequencies and use differences and ratios for inversion to get rid of certain additive or multiplicative effects
+  • Observe at certain times of day to get rid of certain dependencies (e.g. at dawn-dusk, temperature of the soil and air are almost the same)
+  • Combine observations with ancillary models to estimate the unknown parameters (vegetation, roughness)

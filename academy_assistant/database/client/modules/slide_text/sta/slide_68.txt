@@ -1,0 +1,8 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 68
+Slide text:
+- The simplest communications architecture of a mission consists of the satellite and a single ground station
+- We distinguish between the uplink (commands) and the downlink (telemetry and science data), primary cost drivers for the system
+- Downlink typically drives sizing
+- Sometimes, different comm systems handle TM/TC vs science data
+- Data rate is also primary cost driver for the system along with mass

@@ -1,0 +1,6 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 74
+Slide text: 
+BER as a function of \(E_b/N_0\)
+
+Adding coding schemes (Reed Solomon, Viterbi) to a modulation has the effect of pushing the BER=\(f(E_b/N_0)\) curve towards the left (less \(E_b/N_0\) required for a given BER)

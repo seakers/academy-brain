@@ -1,0 +1,26 @@
+Module: Space Environments And Orbits
+Slide Number: 33
+Slide text: 
+
+Orbit perturbations
+
+• Another major orbit perturbation for very low Earth orbits is atmospheric drag which creates orbital decay below 600km
+
+• There are several other sources of orbit perturbations:
+    • 3rd body effects (Moon and Sun) Solar radiation pressure
+    • Other harmonics (J4, J6), other planets, albedo, tidal effects, ...
+
+• Magnitude of each depends strongly on altitude, but J2 is often strongest
+
+• Example:
+    • For a satellite at 300km, drag is as strong as J2 (really dominates)
+    • At 800km, J2 dominates
+    • At 36,000km, the Sun/Moon effects are as strong as J2
+
+• Because of all these perturbations, spacecraft use propellant to keep their orbit parameters constant
+    • This is called station-keeping
+
+
+Equation:
+
+\text{Figure 3.1. Central acceleration and perturbative accelerations as a function of the distance r of the satellite from the centre of the Earth, shown on a log-log scale. Over the ranges considered, the curves can be approximated as straight lines with gradients as noted. The altitudes of the three types of satellite have also been indicated.}

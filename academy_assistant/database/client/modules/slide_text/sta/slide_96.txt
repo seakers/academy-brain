@@ -1,0 +1,9 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 96
+Slide text:
+- Functions of the avionics subsystem
+  - Running flight software
+  - Executing commands
+  - Storing data
+  - Processing data
+  - Distributing data

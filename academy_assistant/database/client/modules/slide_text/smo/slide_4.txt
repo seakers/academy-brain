@@ -1,0 +1,21 @@
+Module: Space Mission Overview
+Slide Number: 4
+Slide text:
+Why go to space?
+
+- Look down – Global perspective
+  - Weather forecasting
+  - Surveillance
+  - Communications and navigation services
+- Look out – Above the atmosphere
+  - Astrophysics (look up)
+  - Atmospheric sounding (look down)
+- Explore space
+  - Colonization, expand limits of humanity, or just tourism
+  - Science: astrobiology, geology, physics, etc.
+- No gravity – Science
+  - Microgravity science
+  - Materials processing
+- Abundant resources!
+  - Obtain rare elements and bring them back (gold, platinum)
+  - In-situ resource utilization

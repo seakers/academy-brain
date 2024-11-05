@@ -1,0 +1,18 @@
+Module: Space Mission Overview
+Slide Number: 18
+Slide text: 
+
+Mission Concept and ConOps
+
+• The mission concept is the highest level description of
+    • What the mission is
+        • purpose, payload, orbit, number and type of spacecraft (more on this to come)
+    • How the mission is going to work
+        • Often referred to as the Concept of Operations or ConOps.
+
+• Elements of a mission ConOps:
+    • Timeline from launch to reentry
+    • Imaging concept
+    • Tasking, scheduling, control
+    • Communications architecture
+    • Data Delivery

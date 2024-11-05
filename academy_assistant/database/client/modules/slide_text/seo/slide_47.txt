@@ -1,0 +1,24 @@
+Module: Space Environments And Orbits
+Slide Number: 47
+Slide text: 
+
+Delta V
+
+• Consider an impulsive maneuver: a maneuver with a short burn time compared to the orbital period (typical assumption for analysis, realistic in many cases)
+• It all happens as if:
+
+\[
+\begin{array}{c|c}
+\text{Position: } r_1 & \text{Position: } r_1 \\
+\text{Velocity: } V_1 & \text{Velocity: } V_2 = V_1 + \Delta V \\
+\end{array}
+\]
+
+• The difference in velocities \(\Delta V\) dictates the new orbit
+    • Ex: If one burns in the direction of the current direction of travel, the orbit gets bigger (increase in semi-major axis and eccentricity) but the orbital plane stays the same
+• In any case, the spacecraft always returns to the point where the last maneuver was made
+• The change in velocity \(\Delta V\) is typically called “delta-V”.
+    • It is a measure of the cost of an orbital maneuver since higher \(\Delta V\) means more fuel needed to perform the maneuver
+• The sum of the magnitudes of delta-V for all the maneuvers throughout the spacecraft’s lifetime is called the Delta-V budget
+    • Delta-V budget can be an important cost driver
+    • More on this to come

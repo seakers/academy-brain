@@ -1,0 +1,12 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 83
+Slide text:
+- Withstand static and dynamic loads seen during all operational phases, including buckling, vibrations, and fatigue
+- Shielding from space environment (radiation, atmosphere, pyrotechnic shocks)
+- Avoid thermal deformations
+- Interface with the launch vehicle
+- Ensure field of view for payloads and antennas
+- Facilitate thermal management
+- Deploy all appendages as needed
+- Manufacturability
+- Accessibility during integration assembly and testing

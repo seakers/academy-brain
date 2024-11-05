@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 42
+Slide text:
+
+Force Actuators vs Angular-momentum Actuators
+
+• Angular-momentum actuators (e.g., reaction wheels) can apply torques to a spacecraft
+    • Internal torques
+    • System angular momentum is constant: rotating wheel in one direction makes spacecraft rotate in the opposite direction
+    • They require only electrical power (no expendables)
+    • Momentum accumulates over time so it needs to be “dumped” periodically ➔ need external torquers for that (e.g., magnetic torquers)
+
+• Force actuators (e.g., thrusters) can apply forces and torques to a spacecraft
+    • Torques are “external”
+    • System angular momentum is not necessarily constant
+    • They enable simultaneous control of mass-center position and attitude
+    • Most require mass expulsion (propellant, an expendable)

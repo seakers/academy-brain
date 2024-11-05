@@ -1,0 +1,16 @@
+Module: Space Environments And Orbits
+Slide Number: 28
+Slide text: 
+
+Orientation of the orbit and orbital plane
+
+- The orbit lies on a plane called the orbital plane that intersects the Earth's equatorial plane (i.e. at 0 degrees latitude) at two points called the nodes:
+  - Ascending node: where the satellite is going up (north)
+  - Descending node: where it is going down (south)
+
+- The orientation of the orbit (the ellipse) within the orbital plane is defined by an angle called the argument of the perigee
+  - Angle from the ascending node to the perigee from the Earth center, $\omega$
+
+- The orientation of the orbital plane with respect to the Earth is defined by two angles:
+  - The inclination $i$ is the "tilt" angle between the orbital plane and the equatorial plane
+  - The right ascension of the ascending node (a.k.a. the RAAN), $\Omega$ is the "twist" angle of the orbital plane, from the Vernal equinox (a fixed direction in space) to the ascending node

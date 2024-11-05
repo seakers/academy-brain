@@ -1,0 +1,17 @@
+Module: Space Environments And Orbits
+Slide Number: 27
+Slide text: 
+
+Position of a satellite within its orbit
+
+- The true anomaly $\theta$ is an angle that defines where within the orbit the satellite is at a given point in time
+- There are two special points:
+  - the perigee is the point where it is closest to the Earth
+  - The apogee is the point where it is farthest from the Earth
+- Given $a$, $e$ and $\theta$ we can compute the satellite position $r$, i.e., the distance between the satellite and Earth:
+  \[
+  r(\theta) = \frac{a(1 - e^2)}{1 + e \cos \theta}
+  \]
+
+- For example, the distance to the perigee ($\theta = 0^\circ$) is $r_p = a(1 - e)$
+- The distance to the apogee and apogee ($\theta = 180^\circ$) is $r_a = a(1 + e)$

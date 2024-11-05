@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 46
+Slide text: 
+- Perfect absorber and emitter
+- Spectral radiance given by Planck’s function:
+\[ B_\lambda(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_B T}} - 1} \left[ \frac{W}{m^2 \mu m Sr} \right] \]
+- Peak given by Wien’s law:
+\[ \lambda_{max} T = 2898 \mu m K \]
+- Equal radiance viewed from any direction \(\Rightarrow\) radiant intensity [W/Sr] is Lambertian:
+\[ I(\theta) = I_0 \cos \theta \]
+- Irradiance given by Stefan-Boltzmann’s law:
+\[ E = \sigma T^4 \left[ \frac{W}{m^2} \right] \text{ where } \sigma = \frac{2 \pi^5 k_B^4}{15 c^2 h^3} = 5.67 \cdot 10^{-8} \left[ \frac{W}{m^2 K^4} \right] \]

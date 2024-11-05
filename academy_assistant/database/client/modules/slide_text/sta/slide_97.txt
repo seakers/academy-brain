@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 97
+Slide text: 
+
+Main requirements of the avionics subsystem
+
+• Throughput (instructions per second)
+• Data storage
+  • Firmware (ROM) – kb
+  • O/S data (RAM) – Mb
+  • Data storage (Disk) – Gb
+• Radiation hardness (10krad LEO, 100krad GEO, ~Mrad interplanetary)
+• Reliability/fault tolerance
+• Flexibility: change after launch

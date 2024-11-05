@@ -1,0 +1,12 @@
+Module: Space Environments And Orbits
+Slide Number: 10
+Slide text: 
+- The Earth has a magnetic field
+  - Protects us from radiation
+  - Generates forces that rotate spacecraft (can be leveraged using magnetic torquers)
+- Magnetic field lines points from magnetic south to north
+  - Different from geographic equator and poles
+- Intensity decreases with distance as \(1/r^3\)
+- Max at the magnetic equator, min at the magnetic poles
+
+Source: U of Oklahoma Geophysics

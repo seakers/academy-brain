@@ -1,0 +1,18 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 99
+Slide text: 
+
+Design process
+
+1. Allocate mission and system requirements
+   • Establish functional requirements of avionics system: what and why?
+   • Evaluate candidate architectures: how?
+   • Partition by function: develop block diagrams
+   • Determine feasibility: risk vs capabilities
+   • Develop non-intrusive testing methodologies: “black box” testing
+
+2. Define the computer system’s operational modes and states
+   • Develop state diagram consistent with functional requirements
+   • Model different operational stages as different states
+   • Ensure degradation/failure states are modeled
+   • Consider effects on ground/ops for all states

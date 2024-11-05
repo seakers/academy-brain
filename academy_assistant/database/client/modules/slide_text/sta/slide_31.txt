@@ -1,0 +1,40 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 31
+Slide text: 
+
+**ADCS Configurations**
+
+- Passive configurations exist that take advantage of nature (e.g., gravity gradient, magnetic field) to make the spacecraft naturally stable around a desired attitude
+- These configurations are very cheap, but they also have poor performance (5-10 deg control accuracy) and impose heavy constraints on the spacecraft shape or ConOps (e.g., the spacecraft must be elongated, or must be spinning all the time around some axis)
+- Continuously spinning either the whole satellite or just a wheel inside it provides some stability but also limits agility
+- Nowadays, most satellites use reaction wheels or similar actuators to very finely control the attitude of the spacecraft in 3 axes.
+
+**TABLE 11-4. Attitude Control Methods and Their Capabilities.** As requirements become tighter, more complex control systems become necessary.
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Type} & \text{Pointing Options} & \text{Attitude Maneuverability} & \text{Typical Accuracy} & \text{Lifetime Limits} \\
+\hline
+\text{Gravity-gradient (Earth local vertical only)} & \text{Earth local vertical only} & \text{Very limited} & \text{5-10 deg (2 axes)} & \text{None} \\
+\hline
+\text{Gravity-gradient (with damper)} & \text{Earth local vertical only} & \text{Very limited} & \text{5-10 deg (2 axes)} & \text{Life of wheel bearings} \\
+\hline
+\text{Passive Magnetic (Earth local vertical only)} & \text{North/south only} & \text{Very limited} & \text{5-10 deg (2 axes)} & \text{None} \\
+\hline
+\text{Pure Spin Stabilization} & \text{Inertially fixed any direction (with precession maneuvers)} & \text{High propellant usage when momentum vector is moved} & \text{<1.0 deg (1 to 3 axes) (proportional to spin rate)} & \text{Thruster propellant or gyros} \\
+\hline
+\text{Dual Spin Stabilization} & \text{Limited only by despin platform} & \text{Momentum vector can be a platform constrained by its own geometry} & \text{Same as above for despun platform} & \text{Thruster propellant or gyros} \\
+\hline
+\text{Bias Momentum (1 wheel)} & \text{Best suited for Earth local vertical pointing} & \text{Momentum vector precesses to any attitude, with constraints on precession rate, no constraints on momentum vector} & \text{<0.1 deg (1 to 3 axes)} & \text{Propellant, life of sensor and wheel bearings} \\
+\hline
+\text{Zero Momentum (thrusters only)} & \text{No constraints} & \text{High rates possible} & \text{<1.0 deg (1 to 3 axes)} & \text{Propellant, life of sensor and wheel bearings} \\
+\hline
+\text{Zero Momentum (3 wheels)} & \text{No constraints} & \text{No constraints, high rates possible} & \text{<0.001 deg (1 to 3 axes)} & \text{Propellant, life of sensor and wheel bearings} \\
+\hline
+\text{Zero Momentum CMG} & \text{No constraints} & \text{No constraints, high rates possible} & \text{<0.001 deg (1 to 3 axes)} & \text{Propellant, life of sensor and wheel bearings} \\
+\hline
+\end{array}
+\]
+
+*Thrusters may be used for slewing and momentum dumping at all altitudes. Magnetic torquers may be used from LEO to GEO.

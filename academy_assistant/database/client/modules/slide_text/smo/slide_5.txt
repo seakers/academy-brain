@@ -1,0 +1,17 @@
+Module: Space Mission Overview
+Slide Number: 5
+Slide text: 
+- Earth observation mission: $200-$2B
+- LandSat-8: $857M
+- Terra: $1.3B
+- Calipso: $217M
+- Envisat (ESA): 2.3B Euro
+- CryoSat (ESA):
+- Planetary mission: $1-5B
+- Is that a lot?
+- To put in perspective:
+  - US budget: 20 trillion
+  - Joint Strike Fighter: $200B
+  - NASA budget: $20B
+  - Airliner: 50-100$M
+  - Km of road: 1.5$M world average

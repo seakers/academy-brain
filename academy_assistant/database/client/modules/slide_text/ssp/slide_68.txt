@@ -1,0 +1,19 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 68
+Slide text:
+
+MWR – Sensitivity
+
+• One can prove (*) that for an ideal total power radiometer, the sensitivity is:
+\[
+\Delta T_{rms} = \frac{V_{0,rms}}{\frac{\partial < V_0 >}{\partial T_A}} = \frac{T_A + T_R}{\sqrt{B \tau}}
+\]
+
+• Where \(\tau\) is the integration time
+• Example: \(B = 20 \text{MHz}, \tau = 1 \text{s}, T_A + T_R = 600 \text{K}, \Delta T_{rms} = 0.134 \text{K}\)
+• However, in practice there are gain fluctuations that add another term:
+\[
+\Delta T_{rms} = (T_A + T_R) \sqrt{\frac{1}{B \tau} + m^2} \text{ where } m \text{ is the gain fluctuation (\%)}
+\]
+
+    • This added term can be important especially for high temperatures. For the previous example with \(T_A + T_R = 600 \text{K}\), a very small gain fluctuation of 0.1\% leads to a real sensitivity of 0.615K!

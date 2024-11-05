@@ -1,0 +1,39 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 23
+Slide text: 
+
+Batteries
+
+- Types of batteries
+  - Ag-Zn
+  - Ni-Cd
+  - Ni-H₂
+  - Li-Ion
+
+- They are called primary batteries when used as primary energy source
+  - Very short duration
+  - Very few cycles
+  - Launch vehicles, rovers on distant planetary bodies
+
+- They are called secondary batteries when used for energy storage
+  - Requires a power source (e.g. solar arrays)
+
+Characteristics of Secondary Batteries
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\text{Secondary Battery Couple} & \text{Specific Energy Density (W-hr/kg)} & \text{Status} \\
+\hline
+\text{Nickel Cadmium} & 25-35 & \text{Space-qualified; extensive data} \\
+\hline
+\text{Nickel hydrogen (individual pressure ves.)} & 25-45 & \text{Space-qualified} \\
+\hline
+\text{Nickel hydrogen (common pressure vessel)} & 45-60 & \text{in development} \\
+\hline
+\text{Lithium ion} & 90-138 \text{Future: 180} & \text{Beginning to enter use, needs qual} \\
+\hline
+\text{Sodium sulfur} & 140-210 & \text{in development} \\
+\hline
+\end{array}
+\]

@@ -1,0 +1,20 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 64
+Slide text: 
+Thermal control technologies
+
+- Electric heaters
+  - Essentially resistors that produce heat through Joule effect
+  - Controlled by thermostats
+
+- Radiators
+  - Heat exchanger on outer surface to radiate excess heat into cold space
+
+- Louvres
+  - Shield radiator surfaces to moderate heat flow to space
+
+- Cold plates
+  - To cool down electronics
+  - May use fluids for convective heat transfer
+
+Image credit: thelivingmoon.com

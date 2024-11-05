@@ -1,0 +1,14 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 8
+Slide text: 
+
+Optional: Electronic processes: The Bohr model
+
+• Energy of an atom can change as a result of a change in energy of its electrons
+• Bohr model (simplistic model)
+  • Electrons in an atom orbit the nucleus
+  • They can only occupy specific orbits with quantized energy levels: \( E_1, E_2, \ldots \)
+  • Electrons gain or lose energy by transitioning between orbits, accompanied by absorption or emission of photons
+
+Equation:
+\[ \Delta E = hf \]

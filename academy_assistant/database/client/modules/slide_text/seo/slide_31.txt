@@ -1,0 +1,15 @@
+Module: Space Environments And Orbits
+Slide Number: 31
+Slide text:
+- What is the orbital period and velocity of a satellite in a circular orbit around Earth at 600km altitude?
+- The orbital period is
+  \[
+  T = \frac{1}{2\pi} \sqrt{\frac{a^3}{GM}} = \frac{1}{2\pi} \sqrt{\frac{(6378000 + 600000)^3}{6.67 \cdot 10^{-11} \cdot 5.97 \cdot 10^{24}}} = 96.7 \text{min}
+  \]
+- The orbital velocity is
+  \[
+  V = \sqrt{\frac{GM}{R_E + h}} = \sqrt{\frac{6.67 \cdot 10^{-11} \cdot 5.97 \cdot 10^{24}}{6378000 + 600000}} = 7.56 \text{km/s}
+  \]
+- In general, satellites in low Earth orbits (400-800km altitudes) have periods of ~92-100 min and velocities of ~7.4-7.7 km/s
+- Period increases with altitude whereas velocity decreases with it.
+- The special altitude that leads to a period of 24h is about 36,000km. This is called a geosynchronous orbit.

@@ -1,0 +1,10 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 88
+Slide text:
+- Vibration loads are often the cause of structural failures for what we call secondary structures (appendages) and tertiary structures (avionics, etc.)
+- Vibrations at different frequencies are seen during launch
+  - Sine, up to 100Hz or so
+  - Acoustic, up to ~10kHz
+  - Shocks, up to 10kHz+
+- Some frequencies see higher loads than others.
+- Vibration environment often provided in terms of $g$ for sine, power spectral density ($g^2/Hz$) for higher frequencies.

@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 10
+Slide text: 
+
+Optional: Molecules as dynamic systems
+
+• Molecules have translational energy as a result of their motion in space.
+• Molecules have rotational energy because they can rotate about an axis through their center of gravity
+• Molecules have vibrational energy because atoms are bounded by forces that can be modeled as springs such that individual atoms can vibrate about certain positions of equilibrium with respect to one another

@@ -1,0 +1,9 @@
+Module: Space Environments And Orbits
+Slide Number: 24
+Slide text:
+What are orbits?
+
+- **Orbits** are the trajectories that spacecraft “naturally” follow around the Earth due to gravitational forces
+- Any two objects under each other’s gravitational force will “orbit each other”
+  - This is called the 2-body problem
+- When one is much larger than the other (e.g., a satellite vs Earth, or the Earth vs the Sun) the motion of the large object is largely unaffected and it all happens as if the small object rotates around the large object

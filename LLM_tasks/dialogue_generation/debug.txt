@@ -37,18 +37,6 @@ Assistant:
 ANSWER: This slide describes the different... (UserInfo, Slide 1)
 
 User:
-Compare and contrast mission design phases A and B
-
-Assistant:
-(SpaceMissionOverview) What happens during mission design phase A?
-
-Assistant:
-(SpaceMissionOverview) What happens during mission design phase B?
-
-Assistant:
-ANSWER: Mission design phase A... (SpaceMissionOverview, Slide 34, Slide 35)
-
-User:
 What is the difference between the Troposphere and Mesosphere?
 
 Assistant:
@@ -59,6 +47,18 @@ Assistant:
 
 Assistant:
 ANSWER: The difference between the Troposphere and Mesosphere is... (SpaceEnvironmentAndOrbits, Slide 6)
+
+User:
+Compare and contrast mission design phases A and B
+
+Assistant:
+(SpaceMissionOverview) What happens during mission design phase A?
+
+Assistant:
+(SpaceMissionOverview) What happens during mission design phase B?
+
+Assistant:
+ANSWER: Mission design phase A... (SpaceMissionOverview, Slide 34, Slide 35)
 
 User:
 How is atmospheric drag calculated for a satellite?
@@ -73,14 +73,20 @@ User:
 END OF EXAMPLES
 
 User:
-[{'type': 'text', 'text': 'why is getting to space so difficult?'}, {'type': 'image_url', 'image_url': {'url': 'http://drive.google.com/uc?export=view&id=1p1ZACbeAWe5XgkxYhfWxzI6AiSknDiLo'}}]
+[{'type': 'text', 'text': 'What is deltaV in the context of orbital maneuvers '}, {'type': 'image_url', 'image_url': {'url': 'https://academy2.selva-research.com/images/smo/Slide11.png'}}]
 
 Assistant:
-(SpaceMissionOverview) What are the challenges of getting to space?
+(SpaceEnvironmentAndOrbits) What is deltaV in the context of orbital maneuvers?
 
 User:
-Query Response: The challenges of getting to space include the need for a large amount of kinetic energy to overcome gravity and atmospheric drag, and to reach orbital velocity, which is about 7.5 km/s plus additional speed for losses (Slide 7). Rockets, which are the means to achieve this, are inefficient as they are about 90% propellant by weight and spend most of their energy accelerating the propellant itself (Slide 7). Additionally, surviving in space is difficult due to the need for high reliability and unique parts for the harsh space environment, which leads to a negative feedback cycle of fewer missions, higher reliability requirements, longer schedules, and higher costs (Slide 6, Slide 8).
+Query Response: NO RESULTS
 
 Assistant:
-ANSWER: Getting to space is difficult due to several challenges. These include the need for a large amount of kinetic energy to overcome Earth's gravity and atmospheric drag, and to achieve the necessary orbital velocity of approximately 7.5 kilometers per second, with additional speed to account for losses. Rockets, which are the primary means of reaching space, are inherently inefficient, as they are composed of about 90% propellant by weight and expend most of their energy just to accelerate the propellant. Furthermore, the space environment demands high reliability and specialized components to survive, which leads to fewer missions, higher reliability requirements, longer schedules, and consequently higher costs. (SpaceMissionOverview, Slides 6, 7, 8)
+(SpaceMissionOverview) What is deltaV in the context of orbital maneuvers?
+
+User:
+Query Response: NO RESULTS
+
+Assistant:
+ANSWER: I could not find specific information on deltaV in the context of orbital maneuvers in the provided databases.
 

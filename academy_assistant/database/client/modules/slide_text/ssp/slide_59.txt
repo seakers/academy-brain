@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 59
+Slide text:
+
+Received power
+
+• For a gray body with emissivity $\epsilon(\theta)$ a surface element $ds$ emits the following radiant power per unit bandwidth in a solid angle $d\Omega'$:
+$$P(\nu) \approx \frac{2kT}{\lambda^2} \epsilon(\theta) ds d\Omega' \ [W]$$
+
+• Therefore, the power collected in a spectral band $d\nu$ by a linearly polarized antenna of effective area $A(\nu, \theta, \phi)$ at distance $r$ (solid angle $d\Omega' = A/r^2$) is given by
+$$P(\nu) \approx \frac{2kT}{\lambda^2} \epsilon(\theta) \frac{A(\nu, \theta, \phi)}{2r^2} ds d\nu = \frac{kT A}{\lambda^2} \int \epsilon(\theta) \bar{G}(\theta, \phi) d\Omega d\nu$$
+
+$$P_r = \frac{kT A}{\lambda^2} \int \int_B \epsilon(\theta) \bar{G}(\theta, \phi) d\Omega d\nu \approx kB \cdot \frac{T A}{\lambda^2} \int \epsilon(\theta) \bar{G}(\theta, \phi) d\Omega \equiv k T_{eq} B$$
+
+• Where we have defined an equivalent temperature that is equal to the physical temperature multiplied by a factor that depends on the antenna radiation patterns and the angular emissivity.
+$$T_{eq} = \frac{T A}{\lambda^2} \int \epsilon(\theta) \bar{G}(\theta, \phi) d\Omega = \frac{T G}{4 \pi} \int \epsilon(\theta) \bar{G}(\theta, \phi) d\Omega$$

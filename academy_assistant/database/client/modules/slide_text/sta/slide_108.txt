@@ -1,0 +1,23 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 108
+Slide text:
+
+Mass storage
+
+• Hard Drives
+    • Operation: Mechanical/magnetic rotating discs
+    • Most common available technology; largest storage capacities (>200GB)
+    • Concerns: reliability, angular momentum, and vibration
+
+• Magnetic/optical/digital tapes
+    • Operation: Rotating mechanical system
+    • Highly reliable data storage
+    • Stack structure (First in, last out) leads to slow data access
+        • Normally not useful for operating system or programs
+    • Concerns: momentum, start/stop torques, vibration
+
+• Bubble memory (old)
+    • Operation: Solid state, non-volatile, no moving parts
+        • Patterns in magnetic permalloy and rotating magnetic field cause bubbles to move under read/write head
+    • Persists in a magnetic bias field
+    • Concerns: high mass, power dissipation, unwanted magnetic fields

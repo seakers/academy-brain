@@ -1,0 +1,28 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 98
+Slide text: 
+
+Typical spacecraft avionics subsystem
+
+[Diagram of the spacecraft avionics subsystem]
+
+Processor:
+- Memory: ROM (Firmware)
+- Memory: RAM
+- Mass Storage
+- Central Processing Unit
+- Watchdog
+- Digital I/O
+- Custom I/O (e.g. A/D, D/A)
+- Bus Interface
+
+Spacecraft Data Bus:
+- ACS
+- Comm
+- Propulsion
+- Power
+- Thermal
+- Payload
+  - Instrument
+  - Control
+  - Computer

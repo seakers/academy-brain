@@ -1,0 +1,13 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 94
+Slide text:
+
+Antenna: Costs
+
+• Design and manufacturing:
+  • Spatial resolution improvements demand larger apertures, increasing the size, weight, and cost of the antenna, necessitating more powerful launch vehicles
+  • Balancing swath area with resolution impacts antenna design and cost, with wider swaths requiring advanced solutions like multi-beam antenna, phased antenna arrays, adaptive signal processing
+
+• Technology research:
+  • Developing high-sensitivity receivers for detecting weak signals and implementing noise reduction techniques increases research and manufacturing costs
+  • Synthetic Aperture Radar systems involve complex algorithms and high-performance computing resources, significantly raising development and operational costs

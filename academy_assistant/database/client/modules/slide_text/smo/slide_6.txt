@@ -1,0 +1,14 @@
+Module: Space Mission Overview
+Slide Number: 6
+Slide text: 
+Space is expensive. Why?
+
+- Getting to space without falling right back is difficult
+- Rockets are inefficient
+- Space environment is harsh
+- Small markets – unique parts
+- Labor-intensive
+- Need for high reliability and “Space Spiral”
+- Some of this is changing with the recent push for distributed space architectures but still.
+
+Fewer missions → Higher reliability → Higher cost → Longer schedule → Fewer missions

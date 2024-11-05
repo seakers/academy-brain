@@ -1,0 +1,10 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 12
+Slide text: 
+
+Power budget
+
+- An even more detailed version of a power budget would provide power requirements over time for each component for a representative “day in the life” of the spacecraft
+
+
+The slide also contains two graphs. The first graph shows power requirements for different activities (Driving Cycles, Communication, Thinking Cycles) over time, with three cases labeled \( P_{sa, \text{case 1}} \), \( P_{sa, \text{case 2}} \), and \( P_{sa, \text{case 3}} \). The second graph shows power consumption over time for different components (payload, platform, spacecraft).

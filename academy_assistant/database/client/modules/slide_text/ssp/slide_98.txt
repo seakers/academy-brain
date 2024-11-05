@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 98
+Slide text:
+```
+Optional: Basic array of antennas
+
+• When $\psi \approx 0$, signals add in phase
+• As $\psi$ increases, signals start adding incoherently and the magnitude of the sum decreases
+• When $\psi = \frac{2\pi d}{\lambda} \sin \theta = \frac{2\pi}{\lambda}$, signals exactly cancel out producing a zero
+  \[
+  \theta \approx \frac{\lambda}{Nd}
+  \]
+• Hence, the radiation pattern of the array is very similar to that of an aperture antenna of size $D = Nd$ and its angular resolution is approximately $\lambda / D$
+• Note that beamwidth from zero to zero is $2\lambda / D$, i.e. twice the angular resolution
+```

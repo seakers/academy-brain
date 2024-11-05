@@ -1,0 +1,10 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 32
+Slide text:
+- Integration time is an important characteristic of an imaging system because it affects SNR. The longer the integration time, the better the SNR.
+- For pushbroom sensors, the integration time $\tau$ is determined by ground velocity $V_g = \frac{R_E}{R_E + h} \cdot V$ and along-track pixel size $\Delta y$
+  \[
+  \tau = \frac{\Delta y}{V_g}
+  \]
+  - Example: $\Delta y = 250m, V_g = 6620m/s, \tau = 37.8ms$
+- It is also common to enforce some overlap $O$ between consecutive swaths, which decreases $\Delta y$ (use $\Delta y / O$ instead) and therefore integration time.

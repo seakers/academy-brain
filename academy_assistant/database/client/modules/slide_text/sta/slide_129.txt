@@ -1,0 +1,19 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 129
+Slide text: 
+
+Processing Architectures
+
+• Centralized
+  • One processor designated as the master unit which provides all housekeeping and data handling
+  • All commands are processed and routed through this central unit
+
+• Distributed (multi-processor) architectures
+  • Multiple processors divide the avionics tasks: two possible configurations:
+    • Distributed Computing
+      • Executive tasks are shared by all processors
+      • Dedicated processors assigned to each sub-system
+      • Communicate through the spacecraft bus
+    • Redundant processing
+      • Multiple processors can assume the role of master
+      • Tolerates faults well

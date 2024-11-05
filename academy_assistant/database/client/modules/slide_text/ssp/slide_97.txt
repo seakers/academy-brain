@@ -1,0 +1,8 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 97
+Slide text: 
+- Let us consider the case of N antennas separated by d and emitting \( a_n e^{i \phi_n} \). The total field from a direction \( \theta \) is proportional to
+\[ E(\theta) \sim \sum_n a_n e^{i \phi_n - i n k d \sin \theta} \]
+- Assuming equal amplitudes and phases \( a_n e^{i \phi_n} = a e^{i \phi} \), we obtain
+\[ E(\theta) \sim a e^{i \phi} \sum_n e^{-i n k d \sin \theta} \]
+- This sum is strongly dependent on the value of \( \psi = k d \sin \theta = \frac{2 \pi d}{\lambda} \sin \theta \).

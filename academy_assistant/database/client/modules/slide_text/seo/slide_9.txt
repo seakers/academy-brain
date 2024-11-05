@@ -1,0 +1,16 @@
+Module: Space Environments And Orbits
+Slide Number: 9
+Slide text: 
+
+Vacuum – Outgassing
+
+- **Outgassing** is the release of gas that was trapped in some material
+  - adhesives, insulators, thermal coating, electrical shields
+- Vacuum facilitates outgassing due to decreased sublimation and evaporation points.
+- Outgassed material tends to condense onto cooler surfaces.
+  - Optical elements, radiators, solar cells
+- Reaction with UV radiation results in dark stains that may affect performance of instruments or solar panels.
+- Some materials outgas more than others in vacuum (e.g., Cd, Zn, Mg, paints, etc.)
+- Spacecraft manufacturers have lists of low outgassing materials
+
+(C) Daniel Selva 2018

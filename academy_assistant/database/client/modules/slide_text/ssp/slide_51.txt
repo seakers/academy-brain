@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 51
+Slide text: 
+
+Reflection, Transmission, Scattering in Surfaces
+
+• When an EM wave is incident on an interface between two materials (e.g. atmosphere and solid surface):
+    • Some of the energy is reflected in the specular direction
+    • Some of it is scattered in all directions (more on this to come)
+    • Some of it is transmitted
+
+• In most thick surfaces, transmitted energy is absorbed and re-radiated in the form of thermal emission or other processes.

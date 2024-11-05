@@ -1,0 +1,19 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 106
+Slide text: 
+
+Central Processing Units (CPU)
+
+- **General purpose vs custom** instruction sets (Can influence cost)
+- **Micro-controller Units (MCU)**
+  - Small, dedicated processor to perform very specific tasks
+    - 1-100MHz, <16MB RAM, ROM storage (no HD/Mass storage)
+- **Digital Signal Processors (DSP)**
+  - Specifically designed to manage embedded digital systems
+  - High processing/power ratio (e.g., 1GIPS @ <6W)
+    - 100MHz - 1GHz, 16MB to 2GB RAM, ROM storage, FLASH storage
+- **Microprocessors (μP)**
+  - Intel architecture, Power PC instruction set most common
+  - Most powerful processors; but high power consumption
+    - >1GIPS, 50-200W, 4GB+ RAM, ROM storage, HD’s, CD-ROM’s, etc.
+  - General purpose instruction set (available commands)

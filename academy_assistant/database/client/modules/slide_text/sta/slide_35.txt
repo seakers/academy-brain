@@ -1,0 +1,23 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 35
+Slide text: 
+
+Dual-spin satellites
+
+TABLE 11-1. Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.
+
+| Type | Pointing Options | Attitude Maneuverability | Typical Accuracy | Lifetime Limits |
+|------|------------------|-------------------------|------------------|-----------------|
+| Gravity-gradient | Earth local vertical only | Very limited | ±5 deg (2 axes) | None |
+| Gravity-gradient and Momentum Bias Wheel | Earth local vertical only | Very limited | ±5 deg (2 axes) | Life of wheel bearings |
+| Passive Magnetic | North/south only | Very limited | ±5 deg (2 axes) | None |
+| Pure Spin Stabilization | Inertially fixed spin axis (often aligned with momentum vector) | High propellant usage for any change in momentum vector | ±1 deg to ±3 deg (1 axis proportional to spin rate) | Thruster propellant or gas supply |
+| Dual-Spin Stabilization | Limited by despin platform and payload | Momentum vector same as above for spin stabilization | Same as above for spin stabilization | Thruster propellant or gas supply, life of despin bearings |
+| Low Momentum (1 wheel) | Best suited for inertial pointing | Momentum vector can be changed to any plane, considering wheel momentum | ±0.1 deg to ±1 deg (3 axes) | Life of sensor and wheel bearings |
+| Low Momentum (3 wheels) | No constraints | No constraints | ±0.001 deg to ±0.1 deg (3 axes) | Life of sensor and wheel bearings |
+| Zero Momentum (3 wheels) | No constraints | No constraints | ±0.001 deg to ±0.1 deg (3 axes) | Life of sensor and wheel bearings |
+
+*Thrusts may be used for slewing and momentum dumping at all altitudes. Magnetic torques may be used in LEO to GEO.
+
+Allows the payload to stay fix while the rest of the satellite rotates
+Also very common in old GEO satellites

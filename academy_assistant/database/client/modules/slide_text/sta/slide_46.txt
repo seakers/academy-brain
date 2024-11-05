@@ -1,0 +1,19 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 46
+Slide text: 
+Delta V budget
+
+- The main function of the propulsion system is to impart the necessary $\Delta V$ to achieve mission success.
+- The $\Delta V$ budget provides the breakdown of the total necessary $\Delta V$.
+- The $\Delta V$ budget is the main driving requirement for the propulsion system.
+- Typical $\Delta V$ budget for Earth-based satellites include:
+  - Orbit insertion (correct for launch vehicle injection errors)
+  - Orbit transfers (e.g., from a Geostationary Transfer Orbit to GEO)
+  - Deployment (e.g., space out satellites evenly within the orbital plane)
+  - Orbit maintenance/station keeping
+    - Raising orbit to compensate for drag
+    - Staying in orbital slot in GEO
+    - Maintaining specialized orbits (e.g., SSO)
+  - Attitude control (e.g., for large/fast attitude maneuvers and desaturation of reaction wheels)
+  - Evasive maneuvers
+  - Deorbiting

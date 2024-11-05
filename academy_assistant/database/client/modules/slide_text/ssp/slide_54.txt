@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 54
+Slide text:
+
+Optional: Refraction index and Snell law
+
+• Definition: Refractive index n of a medium is the ratio of the speed of EM waves in vacuum c vs in the medium v, \( n = \frac{c}{v} \)
+
+• The refractive index and relative permittivity of a material are related 
+  \( n = \sqrt{\mu_r \epsilon_r} \approx \sqrt{\epsilon_r} \)
+
+• Snell’s law describes the relationship between the angles of incidence and refraction of a wave when passing through the boundary between two media with different impedance (i.e. refractive index):
+  \( n_1 \sin \theta_1 = n_2 \sin \theta_2 \)
+
+
+The slide also includes a diagram illustrating the refraction and reflection of waves at the boundary between two media (air and water), showing the critical angle and total internal reflection.

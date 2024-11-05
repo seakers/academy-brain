@@ -1,0 +1,14 @@
+Module: Space Mission Overview
+Slide Number: 19
+Slide text: 
+
+Example Question
+
+Which of the following is NOT an element of a mission’s ConOps
+Answer Choices (Select Multiple):
+A) Mission Budget
+B) Tasking, Scheduling, Control
+C) Data Delivery
+D) Imaging Concept
+
+The correct choice is A. The ConOps represents the logistics of the mission, not specific design or budget.

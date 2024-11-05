@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 48
+Slide text: 
+
+Propulsion Requirements and Key Parameters for Earth Satellites
+
+• ΔV: From ΔV budget. Drives total mass and cost.
+• Thrust (F, in Newton), a measure of agility, which dictates how quickly a maneuver can be performed.
+• Specific impulse (I_sp in seconds): A measure of fuel efficiency of the propulsion system, namely the thrust it can provide for a given propellant burn rate \(\dot{m}\)
+\[ I_{sp} \equiv \frac{F}{\dot{m} g_0}, \text{ where } g_0 = 9.80 \, \text{m/s}^2 \]
+• Minimum impulse bit: The smallest amount of delta V the system can provide (a measure of controllability)
+• Burn time
+• Storage time, mission lifetime
+• Thrust-to-weight ratio (important for rockets but not really for satellites)
+• Influential cost drivers
+  • Dry mass
+  • Apogee kick motor
+• Others
+  • Safety and security (e.g., toxicity of the propellants)
+  • Mass, power, volume, cost…
+  • Reliability, design lifetime

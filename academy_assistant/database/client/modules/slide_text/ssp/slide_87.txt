@@ -1,0 +1,7 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 87
+Slide text:
+- To improve SNR, a low-pass filter (moving average of length \( T \gg 1/B \)) is used. This is equivalent to averaging \( N_r = \frac{T}{\tau} = BT \) samples in time (i.e., in range direction).
+- Speckle noise can be further reduced by averaging \( N_a \) neighbor pixels in the azimuth direction.
+- The total number of averaged independent samples is called the number of looks. \( N = N_a N_r \)
+- The larger the number of looks, the better the quality of the image (SNR improves by factor of \( N \)), but spatial resolution is degraded (by \( N_a, N_r \) respectively).

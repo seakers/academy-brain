@@ -1,0 +1,25 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 119
+Slide text: 
+
+Optional: Throughput estimate – Conceptual example
+
+\[
+\begin{array}{|l|c|c|c|c|c|}
+\hline
+\text{Function} & \text{Execution frequency (Hz)} & \text{Instructions per exec} & \text{Instructions per sec} & \text{Cycles per instruction} & \text{Cycles per second} \\
+\hline
+\text{Read battery sensor temperature} & 4 & 1 & 4 & 1 & 4 \\
+\hline
+\text{Noise filter} & 300 & 10 & 3 \text{kIPS} & 5 & 15\text{k} \\
+\hline
+\text{Convert sensor coordinates to S/C coordinates} & 300 & 50 & 15\text{kIPS} & 5 & 75\text{k} \\
+\hline
+\text{Propagate orbit} & 200 & 20,000 & 4 \text{MIPS} & 5 & 20\text{M} \\
+\hline
+\text{…} & & & & & \\
+\hline
+\end{array}
+\]
+
+Total: 20.09MHz

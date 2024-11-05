@@ -1,0 +1,9 @@
+Module: Space Environments And Orbits
+Slide Number: 39
+Slide text: 
+- In Sun-synchronous orbits, \(a\) and \(i\) are carefully chosen so that nodal precession matches the Earth rotation around the Sun
+- Angle between Sun-Earth vector and the orbital plane stays constant all year
+- Consequently, for a given latitude, observations are all made at the same local solar time (called Local Time of the Ascending Node or LTAN)
+- Choice of LTAN matters
+  - E.g., dawn-dusk minimizes eclipses but not a lot of light
+- Very common for Earth observation since it makes illumination conditions constant

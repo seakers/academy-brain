@@ -1,0 +1,5 @@
+Module: Space Environments And Orbits
+Slide Number: 11
+Slide text: 
+- Magnetosphere is the region around Earth in which ions are controlled by the Earth's magnetic field
+- It protects us from solar and other radiation up to certain levels of energy

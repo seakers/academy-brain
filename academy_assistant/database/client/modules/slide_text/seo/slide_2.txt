@@ -1,0 +1,10 @@
+Module: Space Environments And Orbits
+Slide Number: 2
+Slide text:
+- In this module, you will get introduced to space missions and the space mission design process.
+
+- The module consists of 4 short lectures:
+1. **Space environment.** What makes space a harsh environment? How does it affect humans and spacecraft?
+2. **Introduction to orbits.** What is an orbit and why is it important?
+3. **Types of orbits.** What types of orbits are there? How does orbit selection affect spacecraft design?
+4. **Orbital maneuvers.** How do different types of maneuvers work in space? Implications on spacecraft design.

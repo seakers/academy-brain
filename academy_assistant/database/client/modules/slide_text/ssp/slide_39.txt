@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 39
+Slide text: 
+
+Optional: Photodiodes
+
+• Diodes are devices that only let current in one direction (asymmetric conductance)
+• However, they do have a small reverse current
+• The amount of reverse current increases with light
+\[ i_s(t) = \frac{\eta P_s(t)}{hf} e \]
+  - \( P_s \) is incident light power (in W)
+  - Quantum efficiency: \( \eta \) = 0.8-0.95 electrons per photon
+• Dark current problem (current for \( P_s = 0 \) is not zero)
+
+\[ V_0 = \left( i_{dark} + \frac{\eta P_s e}{hf} \right) R \]

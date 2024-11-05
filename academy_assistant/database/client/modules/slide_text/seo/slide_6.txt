@@ -1,0 +1,17 @@
+Module: Space Environments And Orbits
+Slide Number: 6
+Slide text: 
+- Troposphere (0-10km)
+  - Where we are (weather, pollution)
+- Stratosphere (10-50km)
+  - Where airplanes and balloons are
+  - Stratospheric chemistry
+  - Ozone layer absorbs UV
+- Mesosphere (50-80km)
+  - Where suborbital flights go
+- Thermosphere (80-400km)
+  - Where very low earth satellites are
+  - Atomic oxygen absorbs radiation
+  - Ions
+- Exosphere (>400km)
+  - Where most satellites are

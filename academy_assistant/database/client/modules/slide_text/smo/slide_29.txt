@@ -1,0 +1,14 @@
+Module: Space Mission Overview
+Slide Number: 29
+Slide text: 
+
+Example Question
+
+Which of the following types of Satellites would be agile for proximity operations and can face challenging visibility?
+Answer Choices (Select Multiple):
+A) Earth Observation
+B) Navigation
+C) Space Observation
+D) Communications
+
+The correct choice is C. Space observation satellites may be tasked with imaging other objects within its own orbit or closer to it than the Earth.

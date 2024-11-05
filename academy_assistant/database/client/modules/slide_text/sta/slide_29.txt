@@ -1,0 +1,15 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 29
+Slide text:
+
+Effect of orbit selection through disturbance torques
+
+• Orbit selection can also be a cost drive for the ADCS in some cases
+• The spacecraft encounters some disturbance torques that, if uncontrolled, change the orientation of the spacecraft in undesired ways
+• These disturbance torques depend strongly on orbit selection, especially on orbit altitude, and are due to
+    • Atmospheric drag: Drag from the atmosphere may push stronger on one side of the spacecraft vs the other
+    • Magnetic field: If the spacecraft has a residual magnetic moment due to its distribution of electrical currents, magnetic forces will tend to align the spacecraft with the Earth’s magnetic field
+    • Solar radiation: Solar radiation may push stronger on one side of the spacecraft vs the other
+    • Gravity gradient: Gravitational force is slightly different at the near end of the spacecraft vs the far end, which will tend to align the long axis of the spacecraft with the direction of gravity (radially towards Earth).
+• The ADCS must be able to counter disturbance torques.
+• These are usually small, but in some cases such as very low earth orbits can drive cost.

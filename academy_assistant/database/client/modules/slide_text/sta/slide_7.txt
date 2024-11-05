@@ -1,0 +1,23 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 7
+Slide text: 
+
+PRISMA
+
+- GPS antenna
+- Sun presence sensor -X
+- Vision based sensor short range
+- Vision based sensor long range
+- Inter-satellite link antenna
+- 4 antennas in X dipole configuration
+- Video camera head
+- Antenna for ground communication
+- GPS antenna
+- RF metrology antennas
+- Main radiator panel (+Y)
+- Micro thruster pod
+- Star cameras
+- Sun presence sensor +X, +Y
+- Heater radiator
+- +X radiator
+- HPGP thrusters

@@ -1,0 +1,18 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 5
+Slide text: 
+
+Where do spectral bands come from?
+
+• Molecules have different kinds of energy
+  • Translational
+  • Rotational
+  • Vibrational
+  • Electronic
+
+• The last three are quantized: Only a discrete set of states are possible
+
+• When molecules change their energy state from one state to another, they emit/absorb photons whose frequency matches the difference in energy between those states: \( h\nu = |E_1 - E_2| \)
+
+• This is the origin of the formation of spectral lines, which is the fundamental principle behind remote sensing in the UV/VNIR/MIR
+  • Changes of states lead to narrow spectral lines (deltas). In practice we observe broader lines, broadened by multiple effects such as pressure or Doppler. We are not going to go into those effects today.

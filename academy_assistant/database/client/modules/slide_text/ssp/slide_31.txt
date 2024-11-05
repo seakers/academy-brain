@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 31
+Slide text: 
+
+Data Rate: Costs
+
+- Data Volume:
+  - Higher data rates = more data generated and transmitted from the satellite to the ground.
+  - This increased volume of data requires more robust and capable ground receiving stations, data processing centers, and storage facilities.
+- Onboard Processing Capabilities:
+  - To efficiently manage high data rates, satellites may need advanced onboard processing capabilities.
+- Communication Systems:
+  - Higher data rates necessitate more sophisticated communication systems, including higher-capacity transmitters, receivers, and antennas.
+
+Note: Increased Data Rate driven by factors in the previous slide inherently increase total mission complexity and cost

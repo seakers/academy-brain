@@ -1,0 +1,18 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 126
+Slide text:
+```
+Radiation hardening
+
+• Radiation affects electronic components due to particle momentum, EM fields, and electrostatic charges
+• High energy neutrons cause structural damage in solid state materials
+• Charge on gates of metal-oxide semiconductors can change their state – single event upset (SEU)
+    • Magnetic components (HD’s, ROM) can be unintentionally reconfigured
+• High energy charged particles generate clouds of electrical charges
+    • Digital logic slows down
+    • Op Amp offset voltages change
+    • Current capability is reduced
+    • CMOS can latch up across the power supply
+        • Power dissipation increases
+• Electronic components are covered with materials to minimize these effects, adds a lot to cost
+```

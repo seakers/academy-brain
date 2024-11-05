@@ -1,0 +1,10 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 87
+Slide text: 
+- Expected static load envelopes are provided in launch vehicle user guides for axial and lateral.
+- Usually in \( g \).
+- Example from Falcon 9 Launch Vehicle User Guide. The spacecraft must be designed to be able to withstand any combination of loads inside this polygon.
+- Other considerations
+  - Center of gravity < 180in
+  - Lateral CG offset < 5in
+  - Mass between 1810 and 9070kg

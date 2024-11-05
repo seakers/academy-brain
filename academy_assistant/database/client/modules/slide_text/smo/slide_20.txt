@@ -1,0 +1,24 @@
+Module: Space Mission Overview
+Slide Number: 20
+Slide text: 
+
+Timeline of an Earth observation mission
+
+Lift off, first stage separation, upper stage(s), fairing jettisoning, injection. May launch multiple satellites in different orbits.
+Launch (~min to hours)
+
+Detumbling, Deploy antennas and solar panels, perform health tests
+Transfer to operational orbit
+Orbit insertion (hours to weeks)
+
+Payload testing and calibration
+Commissioning (weeks to months)
+
+Acquire images, send down to Earth, perform station-keeping maneuvers, software updates. May include nominal orbital changes.
+Nominal operations (~3-10 years)
+
+If there is extra funding for ops, extend operations for current or new goals, in same or different orbit.
+Extended operations (0-10 years)
+
+Reentry and burn through Earth's atmosphere or move into "graveyard" orbit
+End of life (deorbiting, hours to weeks)

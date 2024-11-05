@@ -1,0 +1,21 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 82
+Slide text: 
+Real-aperture radar – Resolution
+
+- Ground range resolution: We project the \(\frac{c}{2B}\) onto the horizontal ground and obtain
+  \[
+  X_r = \frac{c}{2B \sin \theta}
+  \]
+
+- Note this is different from the cross-track resolution of a radiometer (in fact, the value below is the radar swath width in the cross-track direction):
+  \[
+  SW_r \approx \frac{h \lambda}{W \cos^2 \theta}
+  \]
+  Where \(W\) is the size of the antenna in the vertical direction (antenna height or width)
+
+- Azimuth resolution: The ability of the radar to separate two iso-delay points is simply given by azimuth angular resolution of the antenna \(\beta = \frac{\lambda}{L}\)
+  \[
+  X_a \approx \frac{h}{\cos \theta} \beta = \frac{h \lambda}{L \cos \theta}
+  \]
+  Where \(L\) is the size of the antenna in the along-track direction (antenna length)

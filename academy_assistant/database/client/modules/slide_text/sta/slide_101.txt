@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 101
+Slide text: 
+
+Estimating avionics requirements
+
+1. List all **applications and functions** allocated to the computer
+2. Estimate **memory space** needed
+   - Either by analogy or bottom-up estimate
+3. Estimate **throughput**
+   - Determine the frequency of execution of each function (execs/s)
+   - Estimate \#instructions per execution for each function
+   - Multiply by \#cycles per instruction (for each function)
+   - Sum for all functions
+4. List all utility functions, determine OS requirements
+   - Determine requirement for concurrent processes, interrupts, RT tasks
+5. Determine margins for growth / spare capacity

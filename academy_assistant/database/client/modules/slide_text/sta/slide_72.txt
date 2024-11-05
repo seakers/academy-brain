@@ -1,0 +1,7 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 72
+Slide text: 
+- In PSK, symbols correspond to different amplitudes.
+- In binary PSK (BPSK), we use 2 phases, (0: $\phi_0$, 1: $\phi_1$) where typically $\phi_0 = 0$ and $\phi_1 = \pi$
+- We can also have 4-PSK (QPSK), 8-PSK...
+- QPSK: (00: $\phi_{00} = 0$, 01: $\phi_{01} = \frac{\pi}{2}$, 10: $A_{10} = \pi$, 11: $A_{11} = \frac{3\pi}{2}$)

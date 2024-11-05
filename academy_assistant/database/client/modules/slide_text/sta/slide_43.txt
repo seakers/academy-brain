@@ -1,0 +1,15 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 43
+Slide text: 
+- Reaction Wheels
+  - A rotor fixed to a spacecraft's body
+  - The spin motor's torque \(\tau_r\) accelerates or decelerates the rotor about the body-fixed axis \(\hat{a}\).
+  - Applying power exchanges angular momentum with the spacecraft.
+
+  \(\hat{a}\)
+
+  Honeywell Constellation Series Reaction Wheel
+
+  Cross Sectional View
+
+  \(\hat{a}\)

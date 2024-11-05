@@ -1,0 +1,7 @@
+Module: Space Environments And Orbits
+Slide Number: 44
+Slide text:
+- Launching near large bodies of water increases safety
+- Launches that are closer to the equator gain eastward speed and require less fuel
+- Launching eastward assists in gaining speed but launching westward requires more fuel.
+- A high latitude launch site allows for easier access to polar orbits

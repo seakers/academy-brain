@@ -1,0 +1,16 @@
+Module: Space Mission Overview
+Slide Number: 7
+Slide text: 
+
+Why is getting to space so hard?
+
+- You need a lot of kinetic energy
+  - Go up at least a few hundreds of km (overcome gravity, atmospheric drag, etc.)
+  - Once in orbit, you need to accelerate tangentially to "orbital velocity", or you would fall back down
+    - Orbital velocity is the velocity at which the centrifugal force pulling the satellite outwards exactly compensates for the gravitational force pulling the satellite inwards
+
+- Rockets are an inefficient way of getting that energy
+  - A lot of propellant is needed to reach orbital velocity
+  - The center of mass of the system (rocket + propellant) doesn't move, so if we want a heavy rocket to go up, a lot of propellant needs to go down
+  - Rockets are about 90% of propellant in weight
+    - NOTE: With weight as a main cost driver, propellant and fuel requirements must be highly considered

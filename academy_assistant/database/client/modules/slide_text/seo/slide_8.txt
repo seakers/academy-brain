@@ -1,0 +1,14 @@
+Module: Space Environments And Orbits
+Slide Number: 8
+Slide text: 
+- In the upper layers of the atmosphere the predominant constituent is (O), formed by photodissociation of \(O_2\)
+  \[
+  O_2 + \text{light} \rightarrow O + O
+  \]
+- Highly reactive and energetic
+- It erodes satellite surfaces (Teflon, epoxies, Mylar)
+- Surfaces can be protected by coating them with something that is "immune" to O:
+  - Silicon dioxide
+  - Aluminum
+
+See http://esmat.esa.int/Atox_on_metals.PDF

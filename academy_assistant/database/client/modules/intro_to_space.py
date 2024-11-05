@@ -34,18 +34,6 @@ def get_module():
     builder.add_slide('ITSC_28', slide_text[28], "http://drive.google.com/uc?export=view&id=1F4H_TChYARfLiy7NWj974Z5HI-eepCRD")
     builder.add_slide('ITSC_29', slide_text[29], "http://drive.google.com/uc?export=view&id=1UlGiQxe3SML3nbp1MdDKeFdpv11n2iMo")
 
-    # builder.add_slide('ITSC_30', slide_text[30], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_31', slide_text[31], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_32', slide_text[32], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_33', slide_text[33], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_34', slide_text[34], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_35', slide_text[35], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_36', slide_text[36], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_37', slide_text[37], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_38', slide_text[38], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_39', slide_text[39], "http://drive.google.com/uc?export=view&id=")
-    # builder.add_slide('ITSC_40', slide_text[40], "http://drive.google.com/uc?export=view&id=")
-
     builder.add_quiz_start_slide()
 
     # Quiz

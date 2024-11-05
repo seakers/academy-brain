@@ -1,0 +1,12 @@
+Module: Space Mission Overview
+Slide Number: 22
+Slide text:
+Tasking, scheduling, control
+
+- Includes
+  - payload scheduling and control
+  - Spacecraft attitude and orbit control, others
+- Same trade: Ground vs autonomous?
+  - Typically, attitude control is autonomous but orbit control is from the ground
+  - Payload scheduling is from the ground
+- These components will be recurring costs and depend on the spacecraft prime contractor

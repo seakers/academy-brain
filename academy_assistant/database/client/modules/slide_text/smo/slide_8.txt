@@ -1,0 +1,14 @@
+Module: Space Mission Overview
+Slide Number: 8
+Slide text: 
+
+Example Question
+
+Why is getting into space difficult?
+Answer Choices:
+A) Strict regulation of propulsion technology
+B) Necessity of a large amount of Kinetic Energy
+C) Radiation present in the ozone layer interferes with rockets
+D) Companies disrupting the market and raising costs
+
+The correct choice is B. Overcoming the force of Gravity is difficult as well as the need to reach the point of Orbital Velocity.

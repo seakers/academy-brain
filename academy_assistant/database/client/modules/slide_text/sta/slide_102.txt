@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 102
+Slide text: 
+
+Typical functions
+
+• Payload: pointing, on/off, signal/data/image processing.
+• TT&C: telemetry and command processing
+• Attitude/Orbit sensor processing: gyros, sun sensors, …
+• AODCS algorithms: Kalman filter, integration, orbit propagation
+• Attitude control (actuator) processing: thrusters, reaction wheels…
+• Fault detection: monitoring, identification and correction
+• Power Management: charging, solar array pointing
+• Thermal Management: heaters, louvers, coolers, pointing
+• Momentum management: momentum wheels
+• Utilities: basic math functions, matrix algebra, time management, rotations

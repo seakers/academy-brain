@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 35
+Slide text:
+
+Types of dispersive elements (filters)
+
+• Goal is to separate light by wavelengths.
+• 2 main mechanisms: Dispersion (n varies – usually decreases – with wavelength) and interferometry.
+• Main types of dispersive elements:
+    • Prism: Light from different frequencies is deviated in a different angle (n(f))
+      \(\delta(\lambda) \approx \alpha(n(\lambda) - 1)\)
+    • Diffraction grating: Light is reflected or transmitted in a grating with a periodic structure with a characteristic distance. Reflected/transmitted angle is driven by interferometric patterns that depend on wavelength:
+      \[
+      \frac{d}{\lambda} \sin \theta_m = m \in \mathbb{Z}^+
+      \]
+    • Dichroic filter: Mirrors with thin coatings whose n(f) and thickness are tuned to transmit/reflect specific wavelengths

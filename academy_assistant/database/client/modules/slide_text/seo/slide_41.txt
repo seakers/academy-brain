@@ -1,0 +1,9 @@
+Module: Space Environments And Orbits
+Slide Number: 41
+Slide text:
+- The Molniya orbit is very common in satellites from northern regions (e.g., Russia)
+- 12h period
+- Highly elliptical orbit spends most of time over apogee
+- Special high inclination of 63.4 deg is such that there is no apsidal precession (frozen apogee)
+- Thus, the satellite spends ~11h a day moving very slowly over a certain northern region that is always the same
+- Useful for communications and regional coverage in high-latitude countries like Russia

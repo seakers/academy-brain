@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 86
+Slide text: 
+- So far we have assumed a single scatterer (the target).
+- In practice, the received signal comes from \( N_S > 1 \) scatterers, all with different phases \(\Rightarrow\) random constructive and destructive interference \(\Rightarrow\) signal fading (aka Speckle noise)
+- Speckle noise appears as grainy, "salt and pepper" texture in an image
+- Not due to real variations in \(\sigma\) \(\Rightarrow\) Makes image interpretation hard
+
+Image credit: ESA

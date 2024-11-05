@@ -1,0 +1,10 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 50
+Slide text: 
+Types of propulsion systems
+
+- The main choices for spacecraft propulsion systems are chemical propulsion vs electrical propulsion.
+  - In chemical propulsion, the energy comes from the molecular bonds of the propellant
+  - In electrical propulsion, the energy typically comes from accelerating particles through electromagnetic fields
+
+- In general, chemical propulsion provides higher thrust but is less efficient than electric propulsion (i.e. it requires more propellant for the same Delta V)

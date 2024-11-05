@@ -1,0 +1,19 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 23
+Slide text: 
+- If two points are too close in angle (or ground distance), they look like a single point due to the PSF (diffraction)
+- The diffraction-limited resolution of an optical system is determined by the wavelength of the light being observed and the diameter of the system's entrance aperture. The resolution is inversely proportional to the wavelength and directly proportional to the aperture diameter.
+  - For a circular aperture, \(\Delta \theta = 1.22 \lambda / D\) (from peak to zero)
+- Earth observation satellites are limited further by atmospheric conditions while Space observation can operate near its diffraction limit
+
+\[
+\Delta \theta \approx \frac{2.44 \lambda}{D}
+\]
+
+\[
+\Delta \theta = \frac{1.22 \lambda}{D}
+\]
+
+\[
+\Delta \theta \ll \frac{1.22 \lambda}{D}
+\]

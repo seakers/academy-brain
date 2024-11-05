@@ -1,0 +1,23 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 42
+Slide text: 
+
+**Avalanche photodiodes (APD) vs Photomultiplier tubes (PMT)**
+
+**Advantages of APD vs PMT**
+- Better linearity of output current as a function of incident light
+- Spectral response from 190 nm to 1100 nm or longer
+- Higher quantum efficiency, typically 60-80%
+- Low noise
+- Ruggedized to mechanical stress
+- No high voltage required
+- Low cost
+- Compact and light weight
+- Long lifetime
+
+**Disadvantages of APD vs PMT**
+- Small area
+- Lower internal gain
+- Much lower overall sensitivity
+- Photon counting only possible with specially designed, usually cooled photodiodes, with special electronic circuits
+- Response time for many designs is slower

@@ -1,0 +1,17 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 64
+Slide text: 
+
+MW radiometers
+
+• MW radiometers are very sensitive antennas that measure the intensity of EM radiation coming from
+    • Atmosphere (gases, clouds, precipitation)
+    • Land or ocean surface (soil moisture, ocean salinity, temperature)
+• Main Figures of Merit:
+    • Spatial resolution
+    • Swath
+    • Sensitivity
+• Main design parameters:
+    • Aperture
+    • Frequency
+    • Bandwidth/integration time

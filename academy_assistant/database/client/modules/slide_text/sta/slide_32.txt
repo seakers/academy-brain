@@ -1,0 +1,25 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 32
+Slide text: 
+
+Gravity gradient satellites
+
+[Image of Oersted satellite]
+
+They must be elongated
+Basic gravity gradient cannot control yaw
+➔ Add momentum wheel on pitch axis
+
+[Table 11-4: Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.]
+
+Type: Gravity-gradient
+Pointing Options: Earth local vertical only
+Attitude Maneuverability: Very limited
+Typical Accuracy: ±5 deg (2 axes)
+Lifetime Limits: None
+
+Type: Gravity-gradient and momentum
+Pointing Options: Earth local vertical only
+Attitude Maneuverability: Very limited
+Typical Accuracy: ±5 deg (2 axes)
+Lifetime Limits: Use of wheel bearings

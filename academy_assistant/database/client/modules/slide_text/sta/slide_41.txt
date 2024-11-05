@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 41
+Slide text: 
+
+**ADCS components**
+
+- **Actuators**
+  - Momentum wheels
+  - Reaction wheels
+  - Control Moment Gyros
+  - Magnetic Torquers
+  - Thrusters
+- Choice driven by control accuracy requirement and torque needs from slewing (agility) requirements, disturbance torques
+
+- **Sensors: Often a combination of**
+  - Sun sensors: Need sunlight, mostly for sun-oriented S/C or insertion/contingency modes.
+  - Star sensors/trackers: Highest accuracy (<0.01deg), most typical
+  - Horizon sensors: Mostly for Earth-pointing S/C or insertion/contingency modes (~0.1deg acc.)
+  - Magnetometers: Cheap and reliable, ~1deg acc.
+  - IMU: Precise but suffer from drift so need external reference
+  - GPS: Mostly for navigation but also attitude through differential GPS

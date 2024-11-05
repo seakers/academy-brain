@@ -1,0 +1,13 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 80
+Slide text: 
+
+Pulse modulation
+
+Then one can prove that the bandwidth becomes \(\Delta f\), which is independent of \(\tau\). Now, can we make range resolution depend on B but not \(\tau\)?
+
+• Conflict
+  • We want short pulses (low \(\tau\) or high B) for good range resolution
+  • We want long pulses (high \(\tau\)) to increase energy per pulse, which helps us detect small or distant targets
+• We can solve this conflict by modulating the pulse. The typical approach is to use frequency modulation (linear chirp).
+  • Instead of having a constant frequency, we increase the frequency linearly from \(f_0\) to \(f_0 + \Delta f\) throughout the pulse.

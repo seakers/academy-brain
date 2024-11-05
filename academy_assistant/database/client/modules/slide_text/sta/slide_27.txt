@@ -1,0 +1,17 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 27
+Slide text: 
+
+Functions of the A(O)DC subsystem
+
+- **Navigating:** Taking measurements of spacecraft
+  - Attitude (orientation)
+  - Position
+
+- **Guiding:** Computing
+  - Attitude and position corrections based on navigation and goals
+  - Commands for the actuators based on those corrections
+
+- **Controlling:** Executing commands that change position/attitude
+
+- **Note:** ADCS focuses on attitude. Propulsion subsystem usually handles orbit changes but sometimes ADCS thrusters are used for orbit control as well

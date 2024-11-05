@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 15
+Slide text: 
+
+Optional: Vibrational-rotational spectrum
+
+• Molecular vibration produces an oscillating electric dipole moment that is sufficient for both vibrational and rotational transitions
+
+• Thus, both transitions occur at the same time and the resulting energy level is the sum of the separate transition energies.
+
+• Since the energy of the vibrational transition is much larger than that of the rotational transitions, many rotational levels are active, and the resulting spectrum is a combination of lines around the fundamental vibrational band
+    • This is sometimes called the vibrational-rotational spectrum

@@ -1,0 +1,21 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 95
+Slide text:
+
+Summary
+
+• MW radiometer:
+  • Spatial resolution, swath
+  • Sensitivity
+
+• Real aperture radar
+  • Pulse modulation, pulse length and bandwidth
+  • Range and azimuth resolution
+  • Radar equation
+
+• Synthetic aperture radar
+  • Principle of aperture synthesis (coherent combination of signals)
+  • Improved azimuth resolution
+
+• There are many other types of radars: altimeter, scatterometer, polarimeter, etc.
+

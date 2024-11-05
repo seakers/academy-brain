@@ -1,0 +1,16 @@
+Module: Space Environments And Orbits
+Slide Number: 43
+Slide text: 
+How to choose an orbit
+
+- Local time of Ascending Node
+  - Usually no effect on launch cost (can be set through launch time)
+  - Very high energy active instruments go in dawn-dusk (DD) SSO orbits to maximize sunlight
+  - Visible and near-infrared (VNIR) passive instruments can’t be in low-light orbits (e.g., DD)
+  - Chemistry orbits prefer PM local times since that’s max time for pollution
+
+- Repeat ground track requirements restrict possibilities to a few options
+
+- Finally, there might also be legacy constraints
+  - A-Train: SSO 700km PM
+  - Landsat: SSO 800km AM

@@ -1,0 +1,50 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 127
+Slide text: 
+
+Example avionics system for CubeSat
+
+Proton200k™ Lite Processor Board
+
+SPECIFICATIONS
+- Radiation Tolerance
+  - SEL: Threshold > 36 (MeV-cm²/mg)
+  - SEU: Error Detection and correction on all critical data
+    - SEU mitigation in internal and external memories
+    - SEU: 1 per 1,000 days in GEO
+    - TID: 10krads (technology for SEU detection/mitigation, 300krads (shield))
+    - SEFI: Patented micro-code technology for SEFI detection/mitigation
+
+- Performance
+  - 66 MHz Floating Point, 1,000 MFLOPS native
+  - 900 MFLOPS (1,200 MFPS @ 64 TLE conservative observed)
+  - 1.8 GOPS (48-bit) Programmable Cache
+
+- Memory
+  - 1.25 MB (448k Cache/128k+ 192KB Mapped RAM)
+  - Timers: 32-bit (3x)
+  - 512k EEPROM w/ EDAC
+  - 1.0 MB SRAM for boot image
+  - 1.0 MB additional boot image
+  - 4.0V radiation hardened NAND Flash
+
+- Power
+  - 1.5W nominal, low power idle/sleep mode available
+
+- External Interfaces
+  - (31 Pin micro-D sub-minimizer Connector)
+    - x1, asynchronous 3v3 GPIO
+    - x1, I2C interface
+    - x2, ADC (dual 12-bit)
+
+- Internal Interfaces
+  - (104 Pin Cubesat Stacking Connector)
+    - x2, Asynchronous w/ RS422
+    - x2, ADC (dual 12-bit)
+    - Additional non-isolated 3v3 GPIO
+    - x1, I2C interface
+    - x6 ADC inputs
+
+200g, 1.5W
+
+(C) Daniel Selva 2018

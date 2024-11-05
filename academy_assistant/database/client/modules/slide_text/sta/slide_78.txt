@@ -1,0 +1,16 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 78
+Slide text: 
+
+Expressions for Gain of most used antennas
+
+- Helical antenna: \( G(dB) \approx 10.25 + 1.22 \frac{L}{\lambda} - 0.0726 \left( \frac{L}{\lambda} \right)^2 \) where \( L \) is the length of the antenna
+  - This gain is obtained when the radius \( R \) is equal to \( \frac{R}{\lambda} = 0.2025 - 0.0079 \frac{L}{\lambda} + 0.000515 \left( \frac{L}{\lambda} \right)^2 \)
+
+- Other expressions in SMAD:
+  - Circular aperture: \( \theta^o = \frac{21}{f_{GHz}D} \)
+    - Don’t be fooled, this is \( 1.22 \frac{\lambda}{D} \)
+  - Non-circular aperture: \( G(dB) = 44.3 - 10 \log (\theta_x \theta_y) \)
+    - Don’t be fooled, this is \( G = \frac{\eta 4 \pi}{\lambda^2} A = \frac{\eta 4 \pi}{\lambda^2} D_x D_y \)
+
+(C) Daniel Selva 2019

@@ -1,0 +1,10 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 49
+Slide text:
+Emissivity
+
+- **Definition**: Emissivity (ε) of an object (or its surface) is the ratio of the body’s spectral radiance to Planck’s blackbody spectral radiance.
+  - It is also the ratio of the observed irradiance and Stefan-Boltzmann’s irradiance \( P = \varepsilon \sigma T^4 \), \( 0 < \varepsilon < 1 \)
+- A **gray body** has constant emissivity \( 0 < \varepsilon < 1 \)
+- Emissivity of a **real object** depends on direction, (i.e. real objects are not Lambertian emitters), and on frequency: \( \varepsilon = \varepsilon (\nu, \theta) \)
+- Emissivity also depends on physical and chemical parameters, such as roughness, soil moisture, chemical composition, etc.

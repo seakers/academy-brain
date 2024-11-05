@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 29
+Slide text:
+- Swath in pushbroom imaging systems is given by FOV (i.e., by number of pixels in the array of detectors and IFOV)
+\[ sw \approx 2h \tan \left( \frac{\text{FOV}}{2} \right) = 2h \tan \left( \frac{N_x \text{IFOV}}{2} \right) \]
+- Swath in whiskbroom imaging systems is given by scanning angle, aka field of regard (FOR)
+\[ sw \approx 2h \tan \left( \frac{\text{FOR}}{2} \right) \]
+- Note: These are flat-Earth approximations. Better estimates can be obtained using formulas
+- A wider swath requires more complex mechanisms increasing cost due to weight and complexity

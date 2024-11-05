@@ -1,0 +1,8 @@
+Module: Space Environments And Orbits
+Slide Number: 18
+Slide text:
+- As a result of charged particles looming around in space, a positive or negative charge can accumulate in a spacecraft’s surface
+  - Like when you walk on carpet
+- This can lead to very damaging electrostatic discharges
+  - When you touch the doorknob
+- Spacecraft have to be carefully designed to mitigate this risk

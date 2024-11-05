@@ -1,0 +1,5 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 95
+Slide text: 
+
+8 – Avionics and Flight Software

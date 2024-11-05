@@ -1,0 +1,17 @@
+Module: Space Mission Overview
+Slide Number: 25
+Slide text: 
+
+Earth Observation
+
+• Various purposes
+  • Weather satellites
+  • IS&R satellites
+  • Earth science satellites
+• Payloads
+  • Spectral region: optical (visible, infrared) or microwave
+  • Spectral content: single-band, multi-spectral, hyper-spectral
+  • Illumination: active (e.g. radars and lidars) or passive (optical imagers)
+  • Visible imagers offer high resolution (sub-meter) but can’t see during night or through clouds
+  • Thermal imagers work over night but typically offer reduced spatial resolution (meters to tens of meters)
+  • Radars have day-night and all weather capability and typically have resolutions of tens-hundreds of meters (synthetic aperture radar)

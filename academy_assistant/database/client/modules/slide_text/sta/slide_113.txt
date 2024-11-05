@@ -1,0 +1,11 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 113
+Slide text:
+- Avionics reliability and fault tolerance
+  - How do we implement a reliability requirement?
+    - Redundancy
+    - Distributed processing
+    - Watchdogs
+    - Modularize memory
+    - Replicate startup ROMS
+    - Error detection and correction

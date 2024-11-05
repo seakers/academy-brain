@@ -1,0 +1,29 @@
+Module: Space Environments And Orbits
+Slide Number: 16
+Slide text: 
+
+Galactic Cosmic Rays
+
+- Galactic Cosmic Rays (GCR) are radiation from outside the solar system
+  - From supernovae, black holes, etc.
+- Much more energetic than solar radiation (GeV-PeV, where 1eV = \(1.6 \times 10^{-19}\); G,T,P = \(10^9\), \(10^{12}\), \(10^{15}\) respectively)
+  - Protons or heavier ions traveling at relativistic speeds
+- Larger threat, especially for interplanetary missions
+- GCR is max at solar cycle minimum
+- Create Single Event Phenomena (SEP): Single particle can destroy an electronic component
+
+\[
+\begin{array}{|c|c|}
+\hline
+E \, (\text{eV}) & \text{Rate} \\
+\hline
+\text{GeV} & 10 \, \text{per ms} \\
+\text{TeV} & 1 \, \text{per s} \\
+\text{PeV} & 1 \, \text{per year} \\
+\hline
+\end{array}
+\]
+
+Space Environment Overview: 1983-01-01 00h - 2012-12-31 24h
+
+[Graph showing various data trends from 1983 to 2013]

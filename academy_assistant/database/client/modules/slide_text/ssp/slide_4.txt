@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 4
+Slide text: 
+
+NASA Orbiting Carbon Observatory mission
+
+• OCO lost at launch in 2/2009 (Taurus).
+• OCO-2 successfully launched 7/2014 (Delta-II)
+• Spacecraft: 454kg, 521W
+• Provides measurements of column averaged $CO_2$ air mole fraction on regional scales
+• Payload: 3 high-resolution grating spectrometers
+  • $\lambda = 2.06\mu m, 1.61\mu m, 0.765\mu m$
+• 710km, 16-day repeat cycle, SSO PM orbit (A-train)
+
+How does this work???
+

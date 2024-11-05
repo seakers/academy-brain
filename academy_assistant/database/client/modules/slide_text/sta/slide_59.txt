@@ -1,0 +1,11 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 59
+Slide text: 
+- In-class question: Eq Temp for cylindrical satellite
+- What is the equilibrium temperature for a cylindrical satellite of diameter D and height h, assuming it’s painted black \(\left(\frac{\alpha_{VNIR}}{\epsilon_{TIR}} = 1\right)\) and the top and bottom sides are insulated?
+  - It depends on D and h
+  - 79C
+  - -12C
+  - 23C
+
+\[ T^4 = \frac{\Phi_s}{\sigma} \cdot \frac{\alpha_{VNIR}}{\epsilon_{TIR}} \cdot \frac{A_{sun}}{A_{rad}} \]

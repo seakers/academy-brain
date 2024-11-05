@@ -1,0 +1,19 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 66
+Slide text:
+
+Microwave radiometers – Spatial resolution
+
+• Most MW radiometers use rectangular aperture antennas ➔ angular resolution is Δθ_i = λ/D_i (1.22λ/D for circular)
+• Spatial resolution of a nadir-looking radiometer (rectangular aperture D) at altitude h:
+  \[
+  \tan \left( \frac{\Delta \theta}{2} \right) = \tan \left( \frac{\lambda}{2D} \right) \approx \frac{\lambda}{2D}; \quad \Delta x \approx \frac{\lambda h}{2D}; \quad \Delta x \approx \frac{h \lambda}{D}
+  \]
+• If rectangular antenna, then it is different for cross-track vs along-track
+• If off-nadir angle of η_0, then:
+  \[
+  \Delta x = h \left[ \tan \left( \eta_0 + \frac{\Delta \theta}{2} \right) - \tan \left( \eta_0 - \frac{\Delta \theta}{2} \right) \right]
+  \]
+  \[
+  \approx \frac{h \lambda}{D \cos^2 \eta_0}
+  \]

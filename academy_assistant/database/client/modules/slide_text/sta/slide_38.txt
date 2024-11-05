@@ -1,0 +1,13 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 38
+Slide text: 
+
+3-axis control based on reaction wheels
+
+Most common configuration (1 wheel per axis, sometimes 1 more for redundancy)
+Lower torque so may need to be quite large for larger satellites, but good for fine attitude maneuvers
+No use of propellant
+
+
+Equations:
+None

@@ -1,0 +1,39 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 36
+Slide text: 
+
+Momentum wheels
+
+TABLE 11-1. Attitude Control Methods and Their Capabilities. As requirements become tighter, more complex control systems become necessary.
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Type} & \text{Pointing Options} & \text{Attitude Maneuverability} & \text{Typical Accuracy} & \text{Lifetime Limits} \\
+\hline
+\text{Gravity-gradient (Earth local vertical)} & \text{Earth local vertical only} & \text{Very limited} & \pm 5 \deg (3 \sigma \text{ axes}) & \text{None} \\
+\hline
+\text{Gravity-gradient with Momentum Bias Wheel} & \text{Earth local vertical only} & \text{Very limited} & \pm 5 \deg (3 \sigma \text{ axes}) & \text{Life of wheel bearings} \\
+\hline
+\text{Passive Magnetic} & \text{North only or inertially fixed in any direction except with momentum vector} & \text{Very limited} & \pm 25 \deg (2 \sigma \text{ axes}) & \text{None} \\
+\hline
+\text{Pure Spin Stabilization} & \text{High propellant use for spin-up and momentum vector maneuvers} & \text{High propellant use for spin-up and momentum vector maneuvers} & \pm 1 \deg to \pm 15 \deg (\sigma \text{ proportional to axis length}) & \text{Thruster propellant or apogee} \\
+\hline
+\text{Dual-Spin Stabilization} & \text{Limited only by despin platform and platform instruments} & \text{Momentum vector same as above. Despin platform constraints by its own capability} & \text{Same as above for main section. Despun platform typically inertial reference and pointing} & \text{Thruster propellant if by thrusters. Life of spin bearings beyond apogee} \\
+\hline
+\text{Bias Momentum (1 or more wheels)} & \text{Best suited for inertial or solar pointing} & \text{Momentum vector same as above. Wheels used to precess to other plane, constraining maneuver} & \pm 0.1 \deg to \pm 1 \deg (3 \sigma \text{ axes}) & \text{Propellant if by thrusters. Life of wheels and wheel bearings} \\
+\hline
+\text{Zero Momentum (1 or more wheels)} & \text{No constraints. High rates possible} & \text{No constraints. High rates possible} & \pm 0.1 \deg to \pm 0.5 \deg (3 \sigma \text{ axes}) & \text{Propellant if by thrusters. Life of sensor and wheel bearings} \\
+\hline
+\text{Zero Momentum (3 wheels)} & \text{No constraints. High rates possible} & \text{No constraints. High rates possible} & \pm 0.001 \deg to \pm 1 \deg (3 \sigma \text{ axes}) & \text{Propellant if by thrusters. Life of sensor and wheel bearings} \\
+\hline
+\text{Zero Momentum (4 wheels)} & \text{No constraints. High rates possible} & \text{No constraints. High rates possible} & \pm 0.001 \deg to \pm 1 \deg (3 \sigma \text{ axes}) & \text{Propellant if by thrusters. Life of sensor and wheel bearings} \\
+\hline
+\end{array}
+\]
+
+Only the wheel rotates while satellite states fix
+Spin provides some stability but also stiffness (resistance to change attitude)
+Quite common in old LEO and GEO satellites
+
+TDRSS satellite

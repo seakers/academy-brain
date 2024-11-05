@@ -1,0 +1,17 @@
+Module: Space Environments And Orbits
+Slide Number: 49
+Slide text:
+Deorbiting
+
+- Due to the space debris problem, NASA has a recommendation to deorbit a satellite after its lifetime in less than 25 years
+  - Now more modern guidelines from FCC with 5 years
+
+- Deorbiting strategies:
+  - If LEO, burn inward, decrease altitude (or perigee) to <300km
+  - If GEO/MEO, burn outward, increase altitude by 100km to a "graveyard orbit"
+
+- Impact on spacecraft design:
+  - Must have a propulsion system on board or stay below a certain max altitude
+  - Must account for deorbiting delta V
+
+(C) Daniel Selva 2018

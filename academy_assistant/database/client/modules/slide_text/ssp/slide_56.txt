@@ -1,0 +1,26 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 56
+Slide text:
+
+Optional: Restrahlen effect
+
+• Recall Snell Law and Fresnel Laws. If the first medium is air, \( n_1 \approx 1 \)
+  and we have normal observation (\( \theta_1 = \theta_2 = 0 \))
+  \[
+  \Gamma^h = \left( \frac{n_1 \cos \theta_2 - n_2 \cos \theta_1}{n_1 \cos \theta_2 + n_2 \cos \theta_1} \right)^2 = \left( \frac{n_2 - 1}{n_2 + 1} \right)^2 = \Gamma^v
+  \]
+
+• Recall that generally speaking, \( n_2(\nu) = n_r(\nu) + i n_i(\nu) \) where the
+  imaginary part is related to absorption, and both terms are frequency-dependent.
+
+• At frequencies such that \( n_i(\nu) \ll n_r(\nu) \), i.e. far away from absorption
+  features:
+  \[
+  \Gamma = \left( \frac{n_r - 1}{n_r + 1} \right)^2 < 1
+  \]
+
+• Conversely, at frequencies such that \( n_i(\nu) \gg n_r(\nu) \), i.e. close to
+  absorption features:
+  \[
+  \Gamma = \left( \frac{n_i - 1}{n_i + 1} \right)^2 \approx 1
+  \]

@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 17
+Slide text:
+- If instead of VNIR, we look at the TIR region of the spectrum, this is no longer solar reflected radiation
+- Mostly thermal emission from the atmosphere
+- Transparent window between 8-12um
+- Many water absorption features including large band at 6-8um
+- CO2 bands at 2, 4, 10 and 15um
+- O3 band at 9.6um

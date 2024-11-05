@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 28
+Slide text: 
+
+ADCS requirements
+
+- The driving requirement for the ADCS are typically pointing accuracy and agility
+- Pointing accuracy is the accuracy with which the spacecraft can determine or control its attitude
+  - Can be different requirement for determination (knowledge) vs control. For example, it’s ok to point a bit off as long as I know where I am pointing
+  - Can be different for different axes
+  - Pointing accuracy is a cost driver because highly accurate sensors such as star trackers and actuators such as control moment gyros are expensive
+- Agility is a measure of how quickly the satellite can change its attitude.
+- Example: 60 deg in 30 seconds
+  - Agility is very operationally desirable for IS&R missions
+  - Agility is a cost driver because high agility requires large and expensive actuators such as control moment gyros
+- Other requirements
+  - Jitter: Amplitude and spectral characteristics of high-frequency variations
+  - Drift: Limits on low-frequency variations
+  - Transient response: Max settling time or overshoot for slew maneuvers
+  - Range: Angular motions over which other requirements must be met
+  - Reliability

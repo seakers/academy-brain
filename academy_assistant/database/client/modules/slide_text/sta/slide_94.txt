@@ -1,0 +1,7 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 94
+Slide text: 
+
+Some configurations
+
+[The slide contains images and diagrams of various spacecraft configurations and components, including labeled parts such as the Deep Space Atomic Clock (DSAC), Ultra Stable Oscillator (USO), and GPS Receiver (TRIG Lite). There are also images of spacecraft and their components with labels indicating different parts and their manufacturers or origins.]

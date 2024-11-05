@@ -10,7 +10,7 @@ class GraphqlClient:
         # self.user_id = 1
         # GraphQL URL
         # self.hasura_url = 'http://127.0.0.1:6002/v1/graphql'
-        self.hasura_url = 'https://academy.selva-research.com/graphql/v1/graphql'
+        self.hasura_url = 'https://academy2.selva-research.com/graphql/v1/graphql'
 
     def execute_query(self, query, variables=None):
         json_body = {'query': query}

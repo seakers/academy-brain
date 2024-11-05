@@ -1,0 +1,27 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 110
+Slide text: 
+
+Data bus
+
+• Data bus connects all subsystems that generate and receive data/commands
+• Similar to power bus
+• Connected to comm system for external communications
+
+[Diagram with the following labels]
+- Structures
+- Thermal
+- Propulsion
+- ACS
+- Comm
+- Payload
+  - Instrument
+  - Control
+  - Computer
+- Avionics
+- Power
+
+[Legend]
+- Black arrow: Data
+- Green arrow: Continuous power
+- Red arrow: Controlled power

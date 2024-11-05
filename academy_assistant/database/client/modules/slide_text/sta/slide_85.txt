@@ -1,0 +1,13 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 85
+Slide text: 
+
+Main considerations
+
+- **Fitting in the launch vehicle** – Launch vehicle fairing dimensions
+- **Static loads** – All critical loads including buckling must be above loads seen during launch and operations
+- **Dynamic loads** – Natural frequencies including fundamental bending mode must be above those encountered in the environment (launch vehicle)
+- **Material selection**
+  - Stiffness, strength, weight (density), ductility, coefficient of thermal expansion, fatigue, outgassing
+- **Mass**
+  - Cost driver

@@ -1,0 +1,15 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 36
+Slide text:
+
+Types of optical detectors
+
+• Photon detectors: Transform photons into electrons (used in VNIR mostly)
+    • Photodiodes and avalanche photodiodes
+    • Photoelectric and photomultiplier tubes
+    • CCDs are arrays of photodetectors
+• Thermal detectors: Transform heat into electrons (used in TIR mostly)
+    • Thermocouples
+    • Bolometers
+• Photon detectors generally have higher sensitivity compared to thermal detectors. They can detect weaker signals, making them suitable for applications requiring high-resolution imaging or detecting faint objects
+• Photon detectors typically have faster response times, often in the microsecond level, allowing them to quickly capture rapid changes in the scene. Thermal detectors usually have slower response times, on the order of milliseconds, limiting their ability to capture fast-moving targets or transient events

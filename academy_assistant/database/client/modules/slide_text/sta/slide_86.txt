@@ -1,0 +1,13 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 86
+Slide text: 
+
+Fitting in the launch vehicle
+
+[Diagram of Falcon 9 fairing and payload dynamic envelope]
+
+Figure 5-2: Falcon 9 fairing and payload dynamic envelope\(^9\), meters (feet)
+
+OTB-1 satellite in ESPA ring (supports a primary payload and 6 180kg secondary payloads)
+
+P-POD CubeSat Deployer

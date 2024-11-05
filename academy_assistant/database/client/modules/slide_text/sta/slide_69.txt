@@ -1,0 +1,6 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 69
+Slide text:
+- More sophisticated communications architectures may include more ground stations and/or one or more **relay satellites** (adds cost)
+- We distinguish between **space-to-ground links** vs **inter-satellite links**
+- **Forward link** vs **return link**

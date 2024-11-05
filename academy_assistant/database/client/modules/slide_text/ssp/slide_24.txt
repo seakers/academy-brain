@@ -1,0 +1,12 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 24
+Slide text: 
+
+Spatial Resolution: Costs
+
+- Complexity:
+  - Achieving high spatial resolution necessitates the use of highly sophisticated sensors capable of capturing detailed imagery
+  - High spatial resolution images contain more pixels, resulting in a larger volume of data
+- Coverage:
+  - High-resolution satellite imagery covers a smaller ground area compared to lower resolution imagery. To monitor a specific region of interest, multiple high-resolution images may be required, further increasing the cost.
+  - Lower resolution imagery can cover larger areas with fewer images, making it more cost-effective for broad-area monitoring

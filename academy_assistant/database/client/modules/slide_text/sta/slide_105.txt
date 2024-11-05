@@ -1,0 +1,21 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 105
+Slide text: 
+
+Operational modes – State Diagram
+
+- All subsystems perform checkout prior to launch
+- Avionics active
+
+Active:
+- Power
+- Avionics
+- ACS if possible
+- Comm
+- Subsystem under test
+
+Active:
+- All
+
+- Bus avionics do not play a relevant role during these stages
+- Communication of telemetry if possible

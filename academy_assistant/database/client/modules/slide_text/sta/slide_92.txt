@@ -1,0 +1,24 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 92
+Slide text:
+Buckling
+
+- Buckling is a failure mode of a structure due to a dynamic instability.
+  - Affects slender structures under a compressive stress \( P \)
+  - Sudden sideways deflection \( w \)
+
+- Deflection of a beam \( w \) is related to its bending moment \( M \)
+  \[
+  M = -EI \frac{d^2 w}{dx^2}
+  \]
+  - \( M \) is bending moment \([Nm]\)
+  - \( w \) is the deflection or vertical displacement \([m]\)
+  - \( E \) is Young’s modulus \([Pa]\)
+  - \( I \) is area moment of inertia \([m^4]\)
+
+- \( M = Pw \) for a beam with pinned end. From there, we can compute Euler’s critical load (elastic buckling):
+  \[
+  P_c = \frac{\pi^2 EI}{L'^2} \quad [N]
+  \]
+  - \( L' = KL \) is the effective length
+  - \( K \) here is not stiffness but rather effective length factor, driven by boundary conditions (pinned, fixed), varies between 0.5-2 (1 for pinned)

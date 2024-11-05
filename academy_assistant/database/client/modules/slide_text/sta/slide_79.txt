@@ -1,0 +1,32 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 79
+Slide text: 
+
+System Noise Temperature
+
+- The total noise on the receiver ($T_s$ or sometimes just T) has contributions from antenna and receiver
+  \[
+  T_s = T_A + T_0(F - 1), \quad T_0 = 290K
+  \]
+- If the line btw antenna and receiver is lossy ("gain" $L_l < 1$), it will also contribute noise
+  \[
+  T_s = T_A + \frac{T_0(F - 1)}{L_l} + \frac{T_0(1 - L_l)}{L_l}
+  \]
+  - $T_A$ is the antenna noise temperature and it depends on the frequency and on where the antenna is pointing at
+  - $F$ is the noise factor of the receiver. Usually, receivers can be made less noisy on the ground antenna.
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Noise Temperature} & \text{Frequency (GHz)} & \text{Downlink} & \text{Crosslink} & \text{Uplink} \\
+\hline
+\text{Antenna Noise (K)} & 0.2 & 150 & 25 & 100 & 20 & 290 & 290 \\
+\text{Line Loss (dB)} & 0.5 & 0.5 & 0.5 & 0.5 & 0.5 \\
+\text{Line Loss Noise (K)} & 35 & 35 & 35 & 35 & 35 \\
+\text{Receiver Noise Figure (dB)} & 0.5 & 1.0 & 3.0 & 5.0 & 3.0 & 4.0 \\
+\text{Receiver Noise (K)} & 26 & 75 & 289 & 627 & 289 & 438 \\
+\text{System Noise (K)} & 221 & 113 & 424 & 682 & 614 & 763 \\
+\text{System Noise (dB-K)} & 23.4 & 21.3 & 26.3 & 28.3 & 27.9 & 28.8 \\
+\hline
+\end{array}
+\]

@@ -1,0 +1,13 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 75
+Slide text:
+- Shannon limit provides a theoretical maximum data rate \( R_b \) that can be transmitted "error-free" over an additive Gaussian white noise channel with a given S/N using a given bandwidth \( B \)
+- This max data rate is called capacity \( C \)
+  \[
+  R_b \leq C = B \cdot \log_2 \left( 1 + \frac{S}{N} \right)
+  \]
+- If we substitute \( \eta = R_b / B \), and rewriting \( \frac{S}{N} = \frac{E_b}{N_0} \eta \), we obtain:
+  \[
+  \frac{E_b}{N_0} \geq \frac{2^\eta - 1}{\eta}
+  \]
+- This defines a second inequality for the \( \frac{E_b}{N_0} \)

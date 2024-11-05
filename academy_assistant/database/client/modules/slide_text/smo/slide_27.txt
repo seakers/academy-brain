@@ -1,0 +1,16 @@
+Module: Space Mission Overview
+Slide Number: 27
+Slide text: 
+
+Communications
+
+- Provide communications services between users on the ground, air, or space.
+- Different types of services
+  - Real-time audio
+  - Real-time video
+  - Mission data
+  - Telemetry and Control
+- Payloads: Antennas and transponders
+  - RF (L, S, C, X, Ku, K, or Ka bands) or optical
+  - Single-access (1 user at a time) or multiple-access (multiple users at a time)
+  - High vs low bandwidth/gain

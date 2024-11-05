@@ -1,0 +1,12 @@
+Module: Space Mission Overview
+Slide Number: 17
+Slide text: 
+Ground Segment
+
+- The ground segment is in charge of operating the spacecraft
+  - Maintaining communications with it (receive data and send commands)
+  - Processing and storing data (telemetry, mission)
+  - Track spacecraft orbital position
+  - Serve as interface between spacecraft and data users
+
+- It consists primarily of communications equipment (large antennas, electronics), control centers, and data servers.

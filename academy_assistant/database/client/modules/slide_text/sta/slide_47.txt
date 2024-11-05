@@ -1,0 +1,14 @@
+Module: Spacecraft Technologies and Architectures
+Slide Number: 47
+Slide text:
+
+Example Delta V budget for a GEO satellite
+
+• GTO-GEO transfer: 1,500 m/s
+• Station keeping: 50 m/s/yr * 15 yrs = 750 m/s
+• Evasive maneuvers: 50 m/s
+• Attitude control: 2 m/s/yr * 15 yrs = 30 m/s
+• Deorbiting: 20 m/s
+• Total: 2,350 m/s
+
+• Sometimes, a dedicated engine is used for the GTO-GEO transfer and then jettisoned but the same engine can be used too if all other requirements are compatible.

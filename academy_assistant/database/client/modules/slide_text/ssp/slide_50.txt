@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 50
+Slide text: 
+
+Real objects – Brightness temperature
+
+• Definition: Brightness temperature \( T_B \) is the temperature at which a black body would have to be to match the spectral radiance of a gray body at temperature \( T_{phys} \) with emissivity \( \varepsilon < 1 \).
+
+• Mathematically, from Planck's law:
+\[
+\frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{\frac{h\nu}{kT_B}} - 1} = \varepsilon \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{\frac{h\nu}{kT_{phys}} - 1}}
+\]
+
+\[
+T_B = \left[ \frac{k}{h\nu} \ln \left( 1 + \frac{h\nu}{kT_{phys} - 1} \cdot \frac{1}{\varepsilon} \right) \right]^{-1}
+\]

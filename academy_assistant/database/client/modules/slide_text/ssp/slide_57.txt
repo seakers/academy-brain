@@ -1,0 +1,9 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 57
+Slide text:
+Optional: Restrahlen effect
+
+- In other words, if wide-spectrum light is incident on a polished surface, the reflected light will contain a relatively large portion of energy around the absorption bands of the surface material.
+- This is known as the Restrahlen effect and is manifested in the form of a peak in the reflectivity of a surface near an absorption feature of the material
+
+[Diagram of light reflection and graph of reflectivity \( R \) versus wavelength \( \lambda \) with a peak at \( \lambda_0 \)]

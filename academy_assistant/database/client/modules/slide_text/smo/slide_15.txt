@@ -1,0 +1,14 @@
+Module: Space Mission Overview
+Slide Number: 15
+Slide text: 
+
+Example Question
+
+Which of the following is likely to be the best prediction of spacecraft cost?
+Answer Choices:
+A) Satellite Dry Mass
+B) Satellite power at the beginning of life
+C) Propellant mass
+D) A complexity index accounting for several factors including all of the above
+
+The correct choice is D. Multiple factors have better predictability than one factor alone.

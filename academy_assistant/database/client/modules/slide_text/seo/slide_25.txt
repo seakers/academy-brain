@@ -1,0 +1,11 @@
+Module: Space Environments And Orbits
+Slide Number: 25
+Slide text:
+- Satellite orbits are generally ellipses
+- The Earth (or central body) sits in one of the focus points
+- An ellipse is usually defined by 2 parameters:
+  - The semimajor axis \( a \) is half the length of the longer axis
+    - Increasing \( a \) make the orbit "bigger", further from Earth
+  - The eccentricity \( e \) tells us how elongated the ellipse is
+    - When \( e = 0 \), the ellipse becomes a perfect circle
+- Together, \( a, e \) define the shape of the orbit

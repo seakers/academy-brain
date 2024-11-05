@@ -1,0 +1,7 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 26
+Slide text: 
+- More specialized missions require more complex and expensive components
+- The focal length, field of view, and f-number are interrelated parameters that significantly affect the cost of a satellite optical system.
+  - Increasing focal length and decreasing f-number can improve image resolution and quality but at the expense of increased component sizes, system complexity, and operational costs.
+  - A wider field of view can improve coverage efficiency but may reduce the effectiveness of the system for high-resolution imaging

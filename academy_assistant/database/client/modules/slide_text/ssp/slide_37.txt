@@ -1,0 +1,16 @@
+Module: Satellite Remote Sensing Payloads
+Slide Number: 37
+Slide text:
+
+Optional: Photoelectric tubes
+
+• Tube has a cathode and an anode separated by vacuum.
+• Place metal or semiconductor in cathode
+• When a photon arrives with sufficient energy to liberate an electron from the Valence band (i.e. more than Fermi level), it may be absorbed and an electron is liberated and emitted (photoelectric effect).
+• This occurs with probability given by quantum efficiency
+    • η ≈ 30% for Germanium or Silicon
+• Electron travels to anode and current flows.
+
+
+Equation:
+\[ v_0(t) = R_L i(t) \]

@@ -1,0 +1,13 @@
+Module: Space Environments And Orbits
+Slide Number: 4
+Slide text: 
+
+Key space environment factors affecting spacecraft (and humans!)
+
+Microgravity
+Vacuum
+Radiation
+Atmospheric Drag
+Atomic oxygen
+Extreme Temperatures
+Space Debris
