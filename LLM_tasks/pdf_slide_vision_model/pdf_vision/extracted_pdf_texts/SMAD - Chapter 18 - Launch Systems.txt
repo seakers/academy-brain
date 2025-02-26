@@ -1,0 +1,1524 @@
+
+Chapter 18
+
+Launch Systems
+
+Joseph P. Loftus Jr. and Charles Teixeira,
+NASA Johnson Space Center
+
+Updated by Douglas Kirkpatrick,
+
+United States Air Force Academy
+
+18.1 Basic Launch Vehicle Considerations
+18.2 Launch System Selection Process
+
+18.3. Determining the Spacecraft Design Envelope and
+Environments
+
+The launch process can.severely constrain spacecraft design. Primary restrictions
+are the launch vehicle’s lift capability and the environment to which it subjects the
+satellite during ascent. A launch system consists of a basic launch vehicle incorporat-
+ing one or more stages and an infrastructure for ground support. It alters velocity to
+place the spacecraft in orbit, creates a severe ascent environment, and protects the
+spacecraft from its surroundings. Ultimately, it places the payload into the desired
+orbit with a functional spacecraft attitude. In this chapter the term payload includes all
+hardware above the launch-vehicle-to-spacecraft interface, excluding the payload’s
+protective fairing, which is usually part of the launch system. Thus, the launch-vehicle
+payload consists of the entire spacecraft above the booster adapter interface. For the
+Shuttle, it is customary to speak of the payload as the spacecraft to be deployed or the
+sortie mission payload to be operated from the payload bay with the Shuttle providing
+all of the support functions. Shuttle missions normally accommodate both types of
+payloads on each flight.
+
+The aerospace industry has typically managed launch vehicles in one organization
+and spacecraft in another, reinforcing a tendency to budget and manage at the inter-
+face. This approach has been, and in many cases will continue to be, successful.
+However, we must continue to ensure it leads to the most cost-effective technical and
+management solutions. For example, traditional interfaces may not be appropriate as
+new generations of maneuverable spacecraft with their own inertial references become
+common. These spacecraft-borne inertial platforms could be used to guide and
+navigate launch systems, replacing similar systems in the launch vehicle.
+
+Over the last 30 years, launch vehicle performance has improved tenfold while
+reliability has slowly increased from 0.85 to roughly 0.95. Planners often do not
+appreciate that launch-system reliability and cost are keys to a successful mission.
+Because the spacecraft usually costs more than the launch system, it can be very cost-
+effective to spend a bit more for a launch system with more reliability.
+
+719
+
+720 Launch Systems 18.1
+
+In this chapter we discuss some of the fundamental physical considerations of
+launch vehicles and upper stages, followed by a discussion of the launch system selec-
+tion process as outlined in Table 18-1, and finally, a definition of spacecraft design
+envelopes and environments.
+
+TABLE 18-1. Steps in Selecting a Launch System.
+
+| Step Comments and Required Information
+
+1. Collect requirements —_| Number of spacecraft per launch
+and constraints, which | Spacecraft dry weight
+depend on the mission | Spacecraft dimensions
+operations concept. Mission orbit
+
+Consider the Mission timeline
+deployment strategy. Funding constraints
+
+References
+
+See text
+Chaps. 10, 11
+Chaps. 10, 11
+
+Chap. 7
+
+Mission planning est.
+Mission planning est.
+
+. Identify and analyze
+acceptable
+
+configurations for the
+launch system.
+
+Include the following information for each
+potential configuration:
+
+— Weight of spacecraft propellant
+
+— Orbit-insertion stage weight, if required
+— Weight of booster adaptor
+— Performance margin available
+— Boosted weight capability
+— Reliability
+
+Chap. 17
+Chap. 17, Table 18-2
+Secs. 11.6, 18.3
+Sec. 18.2
+
+Tables 18-2,18-4
+Table 18-3
+
+3. Select launch systems | Criteria based on the following parameters:
+for spacecraft design. — Boosted weight capability Tables 18-2, 18-4
+During conceptual —Cost Chap. 20
+design identify several — Performance margin available Sec. 18.2
+esters tomake the ~ Reliability Table 18-3, 19.2
+an ch more likel — Schedule vs. vehicle availability Mission planning est.
+— Launch availability Sec. 18.2, Eq. (18-5)
+
+. Determine spacecraft
+design envelope and
+environments dictated
+by the launch system
+selected.
+
+Include the following information for each
+launch system, and include the worst-case
+environments for combined launch systems:
+— Fairing size and shape
+
+— Maximum accelerations
+
+— Vibration frequencies and magnitudes
+
+— Acoustic frequencies and magnitudes
+
+— Temperature extremes
+
+— Air cleanliness
+
+— Orbital insertion accuracy
+
+— Interfaces to launch site and vehicle
+
+Fig. 18-8
+
+Table 18-8
+
+Table 18-9, Fig. 18-10
+Fig. 18-12
+
+Sec. 18.3
+
+Sec. 18.3,Table 18-7
+Table 18-10
+
+Fig. 18-8
+
+Document and maintain the criteria, decision
+process and data to support program
+changes.
+
+. Iterate to meet
+constraints on
+performance, cost, risk
+and schedule.
+
+18.1 Basic Launch Vehicle Considerations
+
+Space launch systems are unique forms of transportation since they are the only
+systems that accelerate continuously throughout their performance envelope. Conse-
+quently, velocity is the fundamental measure of performance for launch systems. A
+launch system’s ability to achieve orbital velocity comes primarily from its propulsion
+efficiency, with vehicle weight and drag acting against it.
+
+18.1 Basic Launch Vehicle Considerations 721
+
+Figure 18-1 shows the forces acting on a launch vehicle and the associated free-
+body diagram. Note that the weight, W, of the vehicle acts at its center-of-gravity, cg,
+and the aerodynamic forces—iift, L, and drag, D, act at its center-of-pressure, cp. This
+configuration, with the center-of-gravity ahead of the center-of-pressure, is stable
+since the lift and drag forces cause restoring torques about the vehicle’s center-of-
+gravity. Ideally, thrust, 7, acts through the centerline of the vehicle but we can develop
+a control torque by gimballing the engine nozzle. We measure the vehicle’s flight path
+angle, @, from the local horizon to its velocity vector and we measure its angle-of-
+attack, a, from its velocity vector to its centerline.
+
+zN
+
+Local
+
+Horizon F902 — (a+ oy) "O"ZOP
+
+cg = center-of-gravity
+cp = center-of-pressure
+a= angie of attack
+¢ = flight path angle
+
+Free-body Diagram
+
+Fig. 18-1. Forces Acting on a Launch Vehicle. By summing all the forces on a launch vehicle,
+we can compute its acceleration and velocity, using Eqs. (18-1), (18-2), and an inte-
+grating process.
+
+Using the free-body diagram in Fig. 18-1, we can develop expressions for the
+acceleration along the axial, a,, and lateral, a,, body reference axes.
+
+a, = g [T/W - sin(¢ + @) - D/W cos(@) + L/W sin(a)] (18-1)
+a, = g [-cos(¢ + a) + D/W sin(a) + L/W cos(a)] (18-2)
+
+We use Eqs. (18-1) and (18-2) to develop the vehicle’s estimated acceleration shown
+in Table 18-8. We can calculate thrust and drag using Eqs. (17-1) and (6-21), respec-
+tively, and integrating Eqs. (18-1) and (18-2) in an inertial reference frame to yield the
+estimated velocity of the launch vehicle.
+
+We can easily estimate the velocity that a launch vehicle should provide by
+
+MWiaesign = AViurnout + We ravity + AVarag (18-3)
+
+where AVp,nour iS the velocity required for the desired orbit. We add the velocity
+losses, AVpravity and AVgrag, to the burnout velocity to obtain the required design
+velocity. We also have to account for velocity losses from thrust vector control for
+trajectory shaping and other performance variables, such as solid rocket motor bulk
+
+722 Launch Systems 18.1
+
+temperature, which causes thrust-level variations. Fig. 18-2 shows values for gravity
+and drag losses for a typical two-stage vehicle. Note that these losses are sensitive to
+the initial thrust-to-weight ratio, 7/Wp. A low thrust-to-weight ratio causes gravity
+losses to be high because the vehicle spends more time in ascent, while high thrust-to-
+weight causes drag losses to be high because of the higher velocities achieved in the
+atmosphere. The thrust-to-weight ratio is a key launch vehicle parameter because it
+dictates the vibration, acoustic, and dynamic load environment for the spacecraft.
+These environments are discussed in Sec. 18.3.
+
+A Shuttle
+ATitan IV
+
+Velocity Losses
+
+Fig. 18-2. Launch System Performance Losses. At the low end of T/W, gravity losses are
+higher because the launch vehicle spends more time ascending. At the high end of
+T/ Wo, drag losses are higher because the launch vehicle reaches a higher velocity in
+the atmosphere.
+
+If there were no atmosphere and no topographical variations, an optimum launch
+trajectory would be very similar to a Hohmann transfer and gravity losses would be
+minimized by thrusting normal to the radius vector. To accurately estimate gravity
+losses we need to know a precise ascent profile and time of flight. But for medium-to-
+large launch vehicles on nominal trajectories the velocity losses due to gravity fall
+between 750 and 1,500 m/s.
+
+Aerodynamic drag forces acting on a launch vehicle are a function of the shape and
+size of the vehicle, speed, and angle-of-attack, @. We can manipulate Eq. (6-21) to get
+
+D/W = C, (A/W) q (18-4)
+
+where C, is the dimensionless coefficient of drag (about 2.2), A is the vehicle’s cross-
+sectional area perpendicular to its velocity vector, and the dynamic pressure, q, is
+one-half the product of the atmospheric density (at the vehicle’s current altitude) and
+the velocity squared. For the current inventory of large, expendable launch vehicles,
+velocity losses due to drag are less than 3% of the total change in velocity required,
+about 20 to 40 m/s. The percentage decreases as the size of the vehicle decreases.
+Once we know the required design velocity, AViesign , from mission requirements,
+we can estimate the mass of propellant required for the launch vehicle using Eq. (17-7)
+for single stage rockets and Sec. 17.5 for launch systems with multiple stages.
+Several definitions are useful at this point. The flight vehicle mass is the sum of the
+propellant mass, structure mass, including mass of the fairing, and the mass of every-
+
+18.2 Launch System Selection Process 723
+
+thing above the launch vehicle interface, including mass of the spacecraft bus,
+payload, and any upper stages. We use mass fractions to describe the portion of the
+flight vehicle devoted to certain sections. For example, the propellant mass fraction is
+the mass of propellant divided by the total flight vehicle mass; the structure mass
+fraction or deadweight fraction is the structural mass, including the mass of the fairing,
+divided by total flight vehicle mass; and the payload mass fraction is the payload mass
+divided by total flight vehicle mass. Typical values for propellant, structure, and
+payload mass fractions are 0.85, 0.14, and 0.01, respectively.
+
+18.2 Launch System Selection Process
+
+The first step in the launch system selection process is to establish the mission
+needs and objectives, since they dictate the performance, trajectory, and the family of
+vehicles which can operate from suitable sites. The mission need should be stated in
+terms of the specific return desired, e.g., Earth observation data over specific portions
+of the Earth, weather information, etc. The mission need may be very specific as in the
+case of a military objective, or as broad as a Presidential Directive to land man on the
+Moon within a decade. A clear understanding of the real mission need is extremely
+important since it can dictate the launch strategy. For example, large constellations of
+spacecraft may require periodic replenishment launches after the constellation is full.
+At the same time, a tactical satellite may require launch on demand within weeks or
+days. These drastically different requirements demand different performance from the
+launch system and its supporting infrastructure.
+
+Another critical issue is whether ‘the spacecraft will use a dedicated or shared
+launch system. The dedicated system may cost more, but it lessens the chances that a
+problem with another spacecraft will adversely affect the launch. Payload security
+may also demand a dedicated launch. On the other hand, shared launches are usually
+less expensive per spacecraft. Before deciding on a shared launch, we must consider
+the interaction between payloads in the shroud. If we mount them serially, for
+example, we must analyze the probability that the upper payload will not deploy
+and thus interfere with the lower payload’s deployment. Examples of larger vehicles
+that can launch multiple payloads are the Space Shuttle, several Ariane 4 variants,
+Ariane 5, and Titan IV. We consider launching multiple spacecraft if their desired
+orbital altitudes and inclinations are compatible. This works especially well for the
+Space Shuttle, when primary mission payloads don’t fill the payload bay, or when the
+spacecraft are deployable and sortie operations has room on the mission timelines.
+
+Once we establish the mission need, then we determine specific mission require-
+ments. For low-Earth orbit missions, these usually consist of orbit altitude, inclination,
+and right ascension of the ascending node. In addition, estimated payload weight and
+dimensions become requirements to the launch system. The mission concept specifies
+such parameters as number of spacecraft, anticipated lifetime and replacement strat-
+egy, and method of data retrieval and management. A required launch date also may
+become a selection parameter as it affects schedules, and the vehicle and launch site
+availabilities.
+
+We allocate the mission requirements as functional requirements between the
+launch vehicle and payload. The basic question is, “What specific functions or opera-
+tions must the payload accomplish, and which must the launch vehicle perform?” The
+two functions usually affected are propulsion, and guidance, navigation, and control.
+For example, can the launch vehicle achieve the final orbit, or must the spacecraft
+provide orbital maneuvering capability to raise the orbit to a higher altitude or change
+
+724 Launch Systems 18.2
+
+inclination? The launch vehicle may require an upper stage to achieve the final orbit,
+adding to the launch cost. The alternative is to provide sufficient propulsive capability
+on the spacecraft to perform the final propulsive maneuvers. We must carefully weigh
+the impact to the spacecraft in additional propellant and tankage, in terms of cost and
+complexity to the spacecraft design and trade against the potentially higher launch cost
+associated with an upper stage.
+
+A similar trade is made in navigation, guidance, and control (Chap. 11.7). Space-
+craft computer capabilities have grown by orders of magnitude over the past twenty
+years. Consequently, the spacecraft navigation, guidance and control subsystem can
+technically provide this function to the launch system during ascent. However, this
+approach results in a highly coupled payload and launch system which presents some
+negative attributes, including a more complex integration of the two, and makes it
+more difficult to manage at the spacecraft-to-launch-vehicle interface. The current
+trend is to separate the spacecraft and launch system functions at the interface, both
+functionally and physically, to minimize interface requirements and complexity.
+
+We must assess each function required to achieve the mission objective through
+this process, and allocate functions based on cost, reliability, and risk. This is a classic
+systems engineering problem, which we must continuously evaluate as part of the
+vehicle selection process and as the spacecraft design matures.
+
+Having established mission requirements, constraints, and the required information
+in Step 1 of Table 18-1, we must decide which launch-system configurations can
+deliver the spacecraft to its mission orbit. The launch systems selected during concep-
+tual design should satisfy the mission’s performance requirements and minimize
+program risk. We want to choose the launch systems early, so contractors for the
+spacecraft and launch system can negotiate requirements early, as well. Doing so
+decreases changes in design, cost, and schedule downstream. Recent experiences
+show that we should design spacecraft to be compatible with several launch systems
+to enhance launch probability, as well as to provide some leverage in negotiating
+launch cost. Fixing problems that may cause launches to fail takes months or years. If
+we change the launcher we may have to redesign the spacecraft and its interfaces with
+the launch vehicle. A redesign costs a lot of time and money. To solve this problem,
+we select an alternate launch vehicle, as a backup, early in the process, and design the
+spacecraft to be compatible with both.
+
+Selecting a launch system depends on at least these criteria: the launch vehicle’s
+performance capability to boost the necessary weight to the mission orbit, the
+required launch date versus vehicle availability, spacecraft-to-launch-vehicle com-
+patibility, and of course, cost of the launch service. The launch system’s performance
+capability must include factors such as performance margin, and a clear definition of
+weight and performance parameters as given in Table 18-2. Note that the payload
+performance quoted by launch vehicle manufacturers must be greater than the pro-
+jected boosted weight. This difference (launch system performance capability minus
+spacecraft boosted weight) is referred to as performance margin and is an important
+selection criterion. Note that the performance margin is in addition to the allowances
+made for spacecraft weight growth (see Table 10-9).
+
+Performance margin is an important parameter throughout a program, but it is
+particularly important early in a program. Ideally a spacecraft launches with a small
+positive performance margin, meaning that the spacecraft weighs (when it is com-
+pleted and delivered) just what the launch system can place into orbit. For spacecraft
+with propulsion systems, we use propellant loading to trim the final weight.
+
+18.2 Launch System Selection Process 725
+
+TABLE 18-2. Weight Parameter Definitions. These are the key elements of a weight budget.
+Performance charts for launch vehicles usually list only payload performance
+capability.
+
+1. Spacecraft Dry Weight Weight of all spacecraft subsystems and sensors,
+including weight growth allowance of 15-25% at concept
+definition
+
+plus Propellant
+Yields
+
+Weight of propellant required by the spacecraft to
+perform its mission when injected into its mission orbit
+
+. Loaded Spacecraft Weight
+plus Upper Stage Vehicle Weight
+
+Yields
+
+Mission-capable spacecraft weight (wet weight)
+
+Weight of any apogee or perigee kick motors and stages
+added to the launch system
+
+. Injected Weight
+plus Booster Adapter Weight
+Yields
+. Boosted Weight
+plus Performance Margin
+Yields
+
+Total weight achieving orbit
+
+May also include airborne support equipment on the
+Space Shuttle
+
+Total weight that must be lifted by the launch vehicle
+
+The amount of performance retained in reserve (for the
+booster) to allow for ail other uncertainties.
+
+. Payload Performance Capability
+
+This is the payload weight contractors say their launch
+systems can lift
+
+Occasionally this happens, but more often the spacecraft’s weight grows beyond
+projected weight growth allocations. Make sure the spacecraft weight is within the
+launcher capability and that the weight growth is within the allocated weight growth
+margin (see Table 10-10). The longer the wait to reduce weight, the more it costs. Do
+it early!
+
+If the launch system does not have sufficient performance capability, discussions
+with the launch vehicle manufacturer can frequently result in some augmentation to
+the performance, selection of a higher performance launch system, or, if necessary,
+reevaluation of the spacecraft design and its requirements. These trades are part of the
+selection process whereby we continuously reevaluate cost, schedule, and risk.
+
+We further evaluate the candidate launch systems which pass the performance
+“gate” based on their available payload fairings. The fairings must be physically large
+enough to house and protect the spacecraft during ascent, and the interfaces to the
+spacecraft, both structural attachment and other services such as cooling (see
+Sec. 18.3), must be acceptable to the spacecraft.
+
+We must also consider the launch schedule and whether the preferred launch
+system will be available. Given the required launch date and window, we discuss
+availability with contractors of launch services. Schedule considerations should
+include the launch site’s availability as well as the use of any unique facilities for
+ground processing. For example, on the requested launch date, the launch pad may be
+available but activities nearby may keep us from launching for safety or security
+reasons. Thus, we have to examine the entire infrastructure, including items such as
+ground-support equipment and networks for tracking and communications. Several
+off-site facilities are available for processing—commercially and through agreements
+
+726 Launch Systems 18.2
+
+with government agencies. Finally, if we intend to change the launch site, we must
+consider the effect on scheduling and cost.
+
+Launch availability brings other dimensions to launch-system selection. The avail-
+ability of a launch system depends on its reliability, production capacity, the ability of
+the launch operations system to support the desired launch rate, existing launch com-
+mitments, and its demonstrated stand-down time following a failure. The relationship
+
+A=1-[L0 —-R)T,/0 — 1/S)] (18-5)
+
+allows us to discuss this concept. Here the expected launch availability, A, measured
+in percent of the time the launch system is available, depends on the vehicle’s reli-
+ability, R, the nominal or planned launch rate, L, in units of flights per year, the
+demonstrated (or estimated) stand-down time following a failure, T,,, in units of years,
+and the surge-rate capacity, S, where S = 1.5 means the system can achieve a flight
+rate 50% higher than the planned rate L. Launch systems in the United States can
+typically surge to between 1.15 and 1.5 times the nominal launch rate. Figure 18-3
+illustrates results from Eq. (18-5). Negative results mean that the system probably
+would not be available when needed. We must use Eq. (18-5) with caution since a
+singularity occurs for surge values approaching one, i.e., the system has no surge
+capacity. Commitment to two systems with poor availability means that some of the
+spacecraft so committed will not fly or may be delayed for several years. Table 18-3
+provides estimated reliability and stand-down times for typical launch systems.
+
+0.9
+0.8
+0.7
+0.6
+05
+0.4 =
+0.3
+0.2
+0.1
+
+0
+-0.1
+
+-0.2 7
+0.96 0.965 0.97 0.975 0.98 0.985 0.99 0.995
+Vehicle Reliability
+
+@ Flight Rate = 4 X Flight Rate = 8
+
+Fig. 18-3. Vehicle Availability. Even with a high surge capability (1.4), a launch system may
+have low availability (0.43) for a modest launch rate (4 per year) and a high reliability
+(0.96). For a high launch rate (8 per year), the same system may not be available
+when needed.
+
+Availability (%)
+
+Using the above criteria, we can narrow the field of candidates to a few launch
+systems by evaluating them consistently and systematically. A risk analysis must also
+accompany these assessments by considering:
+
+¢ Are the advertised cost and schedules reasonable?
+
+* How do these numbers compare with past experience?
+
+* Is the offeror likely to stay in business? Or in some cases, is the country
+providing the launch service stable?
+
+« Are there any circumstances which are unique or new that could result in
+additional risk?
+
+18.2 Launch System Selection Process 727
+
+TABLE 18-3. Reliability Experience of Launch Systems. This table shows the reliability of
+international launch systems along with their stand-down times following a failure
+as of December 1998. A is the reliability. lsakowitz [1995] provides additional
+information.
+
+No. of
+Launch Successful
+System
+
+sae |e
+ae [|
+a= [fe
+
+Titan II (since 1970)
+
+(since 1970)
+faranes | 8
+Ca
+[tong March (ez) | 4
+zent2 |
+a
+
+Soyuz/Molniya 1,225 1,293 0.947
+(since 1970)
+
+©
+
+These are difficult questions to address, but a successful mission is predicated on care-
+ful consideration of these factors.
+
+To identify the best combinations, we should examine several acceptable deploy-
+ment strategies and staging concepts. There are three primary options for the ascent
+from Earth to the final mission orbit: direct injection by a launch system, injection
+using various launch and stage vehicle combinations, or injection using an integral
+propulsion system. Small payloads can usually use launch vehicles that insert directly
+into low-Earth orbit. For geostationary orbits, however, we typically need to augment
+the launch vehicle with an upper stage. The third method, integral propulsion, allows
+us to insert and maintain the spacecraft in its orbit and control its attitude with a single
+propellant system in the spacecraft. Because the system must operate for the entire
+mission with many restarts, it typically uses a liquid bipropellant or an ion engine.
+
+Table 18-4 lists available launch systems, their ability to launch the boosted weight,
+compatible upper stages, available launch sites, and envelope dimensions for standard
+payload fairings. For more precise information on these systerns, see the user manuals,
+listed just before the references at the end of this chapter. Figures 18-4 and 18-5 show
+performance curves for selected launch vehicles at various altitudes. Although options
+seem endless, usually only a few candidate systems meet requirements of payload
+weight injected into the desired orbit, weight margin, vehicle availability, cost, and
+reliability. In addition, Table 18-5 lists available stage vehicles and their performance.
+Tables 17-6 and 17-7 list typical solid rocket motors and liquid engines, respectively.
+
+728 Launch Systems 18.2
+
+TABLE 18-4. Launch Systems Characteristics. The table shows characteristics for existing sys-
+tems to 28.5 deg inclination, unless specified otherwise. Low-Earth orbit (LEO) is given
+here as approximately 185 km circular. GTO is geosynchronous transfer orbit, and GEO
+is geosynchronous orbit. Polar is 90 deg inclination and 185 km circular. See Isakowitz
+{1995] for details. Launch site letters are keyed to Table 18-6.
+
+Payload
+Accommodations
+ig LEO GTO Polar Launch Length
+System (i (kg) —o (kg) Site i)
+ATLAS | Centaur-1 3.3
+ATLAS I Centaur-2 6,5 580 5 B10 570 55 510 4.2
+ATLAS IIAS Centaur-2A 8,640) 3,606) 1,050 7,300 4.2
+DELTA Il
+6920/25 PAM-D 3,990] 1,450 730 2,950 A,B 8.5
+7920/25 =a D 35 089 == 840 910 = 890 A,B =a
+| as | | 44 |
+
+PEGASUS Aircraft
+PEGASUS XL launch
+
+SHUTTLE
+
+TITAN It
+TITAN IV
+
+3.7, 4.6 3.5-5.0
+2.2 3.5
+
+OW O Bo
+
+PROTON
+(Russia)
+
+10,500 7,000 2,200 6,600
+Numerous 1,800] 1,215 4907 1,300
+PROTON K
+
+PROTON M
+
+ZENIT 2 — 11,380
+
+1 With solid rocket motor upgrade NUS = No Upper Stage
+2 With two liquid rocket boosters {US = Inertial Upper Stage
+3 With two liquid and two solid rocket boosters TOS = Transfer Orbit Stage
+4 Carrier aircraft can stage from various locations PAM = Payload Assist Module
+5 Under development
+6 4.5 m diameter and 18.0 m length allowing
+for dynamic clearance
+7 With perigee and apogee kick motors
+
+1,56
+3.0
+3.8
+3.0
+3.8
+41
+4.0
+
+lf
+Nol @s
+mG | CoO
+
+wo
+aN
+on
+|
+zB
+
+K
+L
+L
+M
+L
+H
+H
+H
+H
+H
+
+
+18.2 Launch System Selection Process 729
+
+Ariane 44L.
+
+Payload (kg)
+
++000
+Altitude (km)
+
+Fig. 18-4. Typical Launch-System Performance for Launches Due East from U.S. Launch
+Sites. Curves show delivery mass into circular orbit at the altitude indicated. The curves
+indicate development systems. Figures courtesy Capt. Marty France, U.S. Air Force
+
+Academy.
+T T T |
+i i
+| i i | |
+10,000 Zenit Titan IVINUS |
+Atlas tA ‘ ~ 7 |
+i ‘ CT
+i i ; i Ariane 44L |
++ :
+20
+| Delta ti
+Ariane 40, 6b20
+
+Payload (kg)
+
+, asus XL
+| } i
+| i i
+
+200 " 1,000
+Polar Circular Orbit Altitude (km)
+
+Fig. 18-5. Typical Launch-System Performance for Polar Launches from U.S. Launch
+Sites. For polar orbits there is no velocity assistance from the revolution of the Earth,
+so the launch vehicle has to furnish the additional ~450 m/s, thus reducing delivery
+mass.
+
+730
+
+Launch Systems
+
+18.2
+
+TABLE 18-5. Orbital Transfer Vehicles. A number of upper stages are available to provide
+additional velocity beyond low-Earth orbit requirements. Both solid and liquid
+systems are shown and compatible launch vehicles identified.
+
+Characteristics PAM-DIl| TOS lus Centaur H-10
+Stage: Lockheed | Lockheed Ariane- RSC _ | Ariane-
+Manufacturer Boeing | Boeing | Martin Boeing Martin space | Energia | space
+Length (m) 2.04 2.00 3.30 5.20 9.0 9.9 6.8 45
+Diameter (m) 1.25 1.62 3.44 2.90 43 26 411 5.4
+Engine: Pratt-
+Manufacturer Thiokol | Thiokol CSD CSD Whitney |SNECMA] Isayev | DASA
+Type (Star ISTP SRM-1 | SRM-1, SRM-2 | RL 10A-3-3A} HM7B |11DM 58] Aestus
+48)
+Number 1 4 4 1,1 2 4 4 4
+Fuel Solid Solid Solid Solid LOsLHe LO gLH» LOX N2O,/
+RP1 MMH
+Composition TP-H- _— HTPB HTPB §.5:1 477 2.05
+3340
+Total Thrust (N) 66,440 | 78,300 | 200,000} 200,000 81,200 147,000 29,000
+Specific Impulse (s) | 292.6 281.7 294 |292.9 300.9 442 324
+Burn Time (s) 54.8 121 150 |153.0 104.0 488 680 1100
+Stage: |
+Pad Mass (kg) 2,180 3,490 | 10,800 14,865 18,800 12,100 | 18,400 | 10,900
+Impulse Propel. 2,000 3,240 9,710 19,710 2,750 16,700 10,800 | 15,050 | 9,700
+Mass (kg)
+Bumout Mass (kg) 189 250 1,090 | 1,255 1,150 | 2,100 1,300 2,140 | 1,200
+Airborne Support 1,140 1,600 1,450 3,350 4,310 _ _ _
+Equip. Mass (kg) |
+Iilustration:
+Schedule:
+Start Date 1975 1980 1983 1978 1982 1986 New 1988
+Operational Date 1982 1985 1986 1982 1990 New 1996
+Type of Com- Com- Com- U.S. Gov't U.S. Gov't ESA ILS ESA
+Development mercial | mercial | mercial
+Sponsor Boeing | Boeing OSC USAF USAF ESA ILS ESA
+
+CSD—Chemical System Division, United Technologies; ESA—-European Space Agency; ILS—International Launch
+Services; OSC—Orbital Sciences Corporation; RSC—Rocket Space Corporation; DASA—Daimler Chrysler
+Aerospace; SNECMA—Société Nationale d'Etudes et de Constructions de Moteurs d’Avion
+
+The current version of the Delta launch system, Delta II, has two forms: the 6925
+and 7925. The 6925 extended the earlier 3920’s tanks to store more propellant and
+added Thiokol solid-rocket boosters for better performance. The 7925 uses an
+upgraded Rocketdyne RS-27A main engine and Hercules GEM solid rocket boosters.
+The 6920 and 7920 are two-stage versions of the three-stage 6925 and 7925, respec-
+tively. Both core vehicles use liquid oxygen and RP-1 propellant in the first stage and
+nitrogen tetroxide (N»O,) and Aerozine 50 (A50) in the second stage. They use inertial
+guidance and provide control moments from gimballed engines. Of the nine boosters,
+
+18.2 Launch System Selection Process 731
+
+six ignite at lift-off and stage at 57 sec. The other three ignite at altitude during the first
+stage burn. The first and second stages are staged at 265 and 440 sec respectively. The
+third stage uses a spin-stabilized Star 48 B rocket motor in the PAM-D upper stage.
+Atlas/Centaur launch vehicles include the Atlas I, Atlas II, Atlas IIA, and Atlas
+IIAS. The Atlas vehicle’s core system uses liquid oxygen and hydrocarbons (RP-1) in
+a stage-and-a-half form, with three engines ignited at lift-off. Two of these booster
+engines jettison at 172 sec, and the third sustainer engine burns for another 111 sec.
+The Atlas is inertially guided and controlled in pitch and yaw by gimballed engines.
+Vernier engines on Atlas I control roll in the first stage. For Atlas II, ITA, and ITAS, a
+hydrazine roll control system attached to the interstage adapter controls the roll angle.
+The Centaur uses liquid oxygen and liquid hydrogen for propulsion. It has two
+RL-10A engines, which can start several times and burn 400 to 600 sec. Gimballed
+engines control the Centaur during burn, and 12 reaction-control engines control it
+when it coasts. On the IIAS version, four solid rocket motors improve the lifting
+capacity. Two motors ignite with the three main engines for lift off. When the first two
+motors burn out they drop off, then the other two burn until depleted and drop off.
+
+The Titan IT is a refurbished ballistic missile configured as a launch vehicle. It was
+essentially the core vehicle for the retired Titan II series. For fuel, the Titan II uses
+storable propellants: a nitrogen tetroxide oxidizer and Aerozine 50 (a 50/50 mixture of
+hydrazine and UDMH). Adding two solid rocket boosters and a third stage for the
+Titan III vehicle increased lift capability significantly. Fifty-five Titan II missiles were
+available to modify, eleven of which completed modification and launched success-
+fully, as of late 1998. The Titan IV vehicle adds solid rockets to the Titan core vehicle.
+The solid rockets are the “zero” stage ignited for lift-off, whereas the core vehicle’s
+engines ignite when the solid-rocket motor’s thrust tails off before separating. The
+Titan IV zero stage burns 138 sec, the first stage 164 sec, and the second stage 223 sec.
+A strap-down inertial system provides guidance using liquid injection (UDMH) to
+contro] the thrust vector in the zero stage and gimballed engines for the first and sec-
+ond stages. Titan IV is compatible with two upperstages, TUS and Centaur.
+
+The Space Shuttle delivers, services, and recovers payloads. The Shuttle uses two
+solid-rocket boosters and three liquid-oxygen and liquid-hydrogen engines for propul-
+sion. The solid-rocket boosters burn out at approximately 123 sec. At first, the main
+engines burn in parallel with the solids, then continue to burn for 522 sec. For each
+flight, the Shuttle can carry up to three PAM-D payloads, one IUS, or one TOS.
+
+The Pegasus air-launched booster and its -XL variant use wings to provide lift and
+three stages powered by solid-rocket motors. A strapped-down inertial system guides
+the booster. Aerodynamic fins control the first stage, and vectorable nozzles control
+the second and third stages. A cold-gas system for reaction control adjusts attitude
+while the spacecraft coasts and when the payload deploys and separates. Employing a
+Lockheed L-1011 as a launch platform reduces the propellant needed to achieve orbit
+and provides variable launch azimuths and locations for different orbital inclinations.
+
+Space Data Corporation, a subsidiary of the Orbital Sciences Corporation, devel-
+oped a standard, smal] launch vehicle called Taurus. The first stage is essentially an
+MX missile first stage, and the upper stages are similar to those flown on Pegasus,
+without the attached wing. Two successful launches in 1998 placed seven satellites
+into low-Earth orbit.
+
+Lockheed-Khrunichev-Energia International offers Proton for commercial
+launches. The original Russian D-le version has four stages and delivers payloads to
+geostationary orbits. The first three stages use storable propellants (UDMH and N,0,),
+
+732 Launch Systems 18.2
+
+but the upper stage burns liquid oxygen and kerosene and has a multiple start capabil-
+ity. It has supported planetary and lunar launches and placed communication satellites
+in space. The 3-stage D-1 launches the MIR and other large payloads into low-Earth
+orbits. The new commercial K and M versions use the same first three stages, but add
+the DM and Breeze M upperstages, respectively.
+
+China’s Great Wall Industries builds, offers commercially, and operates the Long
+March vehicles. The Long March CZ3 is a three-stage vehicle, using storable propel-
+lants in the first two stages and cryogenic liquid-oxygen and liquid-hydrogen in the
+third stage. A new heavy-lift variant, the CZ3B, uses four liquid strap-ons and can
+carry 13,600 kg into low-Earth orbit.
+
+The current versions of the Ariane launch system are the Ariane 4 and 5 series.
+Arianespace operates these vehicles commercially. Ariane 4 is a three-stage vehicle
+capable of using from zero to four strap-on solid or liquid rocket boosters. The liquid
+strap-ons and stages one and two use storable nitrogen tetroxide and UH-25 (a mixture
+of 75% unsymmetrical dimethylhydrazine and 25% hydrazine hydrate). The third
+stage burns liquid hydrogen and oxygen. Ariane 5 is a new, heavy-lift vehicle,
+designed for reliability and cost effectiveness. It has a core stage that uses liquid
+hydrogen and oxygen, an upper stage that burns nitrogen tetroxide and monomethy]
+hydrazine, and two solid-rocket-motor strap-ons that are recoverable. Eventually,
+Arianespace will rate this vehicle for crewed launches. It has had two successful
+launches after an initial launch failure. Ariane launch vehicles are efficient boosters
+for low-inclination or geotransfer missions because of their Kourou launch site: just
+5 deg north latitude. As a result of the location and launch successes, they have
+captured more than half of the launch traffic for commercial communication satellites.
+
+Japan’s space agencies operate two launch systems and are designing a third. The
+H-2 is a new heavy-lift vehicle that can place 10,500 kg into low-Earth orbit. This two-
+stage vehicle burns liquid hydrogen and oxygen in both stages and has two solid-
+rocket-motor strap-ons. Launching from Tanegashima Space Center, it has six
+successes in six attempts. The M-5 is a new three-stage vehicle, capable of launching
+1,800 kg into low-Earth orbit. All stages use solid rocket motors, burning hydroxy-ter-
+minated polybutadiene (HTPB). This vehicle operates from the Kagoshima Space
+Center and has two successes in two attempts. A new design, J-1, uses the H-2 solid
+rocket booster as stage one and the two upper stages from the M-3SII as its upper
+stages. Because of these common parts, its design went quickly.
+
+Table 18-6 lists the available launch sites for each launch system. Once we have
+identified the mission orbit and launch system, the appropriate launch site(s) become
+apparent. The key U.S. launch sites are the Eastern Range at Cape Canaveral Air Force
+Station, Florida, which serves the Kennedy Space Center next to it, and the Western
+Range at Vandenberg Air Force Base, California. The Wallops Island facility in
+Virginia can launch a number of smaller commercial launch vehicles and sounding
+rockets.
+
+Figure 18-6 shows the location of the world’s launch sites, and Table 18-6 identifies
+their coordinates. We can get the best performance from a launch vehicle into a direct
+orbit by locating the launch site at the equator to take advantage of the easterly velocity
+from Earth’s rotation. Theoretically, we can attain any orbit inclination from the equa-
+tor, but we may select other sites for convenient access, security, or political reasons.
+Launch sites at higher latitudes cannot directly access orbit inclinations much below
+their latitude, and trajectory profiles that go to higher inclinations sacrifice velocity
+and payload mass. An inclination change of one degree requires about 208 m/s of
+
+18.2 Launch System Selection Process 733
+
+velocity in low-Earth orbit. As Eq. (6-38) shows, this number decreases as the altitude
+of the change increases. We can calculate the propellant mass required to achieve the
+plane change using Eq. (17-7).
+
+North
+
+a7” Kapustin Yar
+PrWuratam giluquan
+@ fp
+Taiyuan ~®
+Xichang + @
+
+Latitude
+
+0 20 40 60 80 100 «120 «6140 160 180 160 140 120 ©6100 80 60 40 20 0
+East Longitude West
+
+Fig. 18-6. Launch Sites. These 17 sites have done or can do orbital launches. The location of
+the launch site and range safety considerations determine the acceptable launch
+azimuths.
+
+TABLE 18-6. Worldwide Launch Sites. The location of launch sites is useful when deciding on
+launch azimuth.
+
+Map Latitude | Longitude
+Launch Site Designation Country (deg min) | (deg min)
+
+Western Range Vandenberg AFB, CA | United States 34 36 N| 120 36 W
+
+Eastern Range Cape Canaveral United States 28 30 N| 80 33 W
+AFS, Cape Kennedy
+Space Center
+Wallops Island Wallops, VA United States 37 51 N| 75 28 W
+Kourou Launch Ctr CNES/Arianespace| 5.32 N| 52 46 W
+San Marco Launch Platform |SanMarco [tally 256S| 40 12E
+Plesetsk Plesetsk [Russia 62 48 N| 40 24 E|
+Kapustin Yar Kapustin Yar [Russia 48 24N| 45 48 E
+
+oN
+[sharkoia——__—[Seharkow___[nda____[ 1947] 80-15 |
+Kagoshima Space Ctr Kagoshima Japan/ISAS
+Tanegashima Space Ctr Tanegashima
+Woomera Launch Site Woomera
+Israeli Launch Complex Yavne israel =| 31: 31 N| 34 27 E|
+
+734 Launch Systems 18.2
+
+Section 6.4 discussed the relationship between the desired orbital inclination and
+the required direction of launch from a specific launch site. The direction of launch, or
+launch azimuth, depends on range safety considerations that prohibit flying over
+certain land and ocean areas. Figure 18-7 shows the launch azimuths and inclina-
+tions directly available from the U.S. Eastern and Western launch sites. The Japanese
+have only two 45-day launch periods, one in the spring and one in the winter. At other
+times, the launch would threaten fishing fleets by dropping booster parts into the
+fishing area.
+
+Vandenberg Air Force Base Kennedy Space Center
+
+38 32
+
+Orbit
+Inclination ,35
+
+Launch
+Azimuth
+
+o
+
+o
+w
+So
+
+Latitude (deg N)
+b=
+Latitude (deg N)
+Nh
+@o
+
+an
+32 26 Allowable >
+Launch
+Azimuth
+Deg
+30 24
+124 122 120 118 116 84 82 80 78 76
+Longitude (deg W) Longitude (deg W)
+
+Fig. 18-7. Orbit inclinations and Launch Azimuths Available from the Eastern and Western
+Ranges. In general, low-inclination orbits are possible from the East coast and high-
+inclination orbits are possible from the West. Note that orbital inclinations available
+from these launch sites depend on launch azimuth.
+
+Given a choice of launch sites and launch dates, we must consider weather at the
+launch location. Bad weather can severely restrict chances to launch, thus costing time
+and money. The site’s location and time of year determine surface weather and winds
+aloft. For example, Florida and French Guiana have many thunderstorms and fre-
+quent lightning during the spring and summer. Because the highly ionized gas in the
+launcher’s exhaust plume can attract lightning, we must launch carefully in these sea-
+sons. During the winter, the winds aloft are severe because the jet stream moves to the
+south and often passes over both the Eastern and Western Ranges. As a result, we must
+study weather information for all possible sites.
+
+Although only a few launch-system vendors operate in the U.S., we can choose
+intelligently from many types of launch vehicles. Several government organizations
+manage these systems. The Air Force Space Systems Division (AFSSD) developed the
+Titan, Atlas, and Delta launchers and matches launchers to users’ requests. Air Force
+Space Command manages launch operations at DoD launch sites. NASA manages the
+Space Transportation System through NASA Headquarters. Vendors of commercial
+launch vehicles contract services directly with users. Contractors obtain license
+approvals to launch through the Department of Transportation, Office of Commercial
+Space Transportation.
+
+18.3 Determining the Spacecraft Design Envelope and Environments 735
+
+18.3 Determining the Spacecraft Design
+Envelope and Environments
+
+Once we’ ve identified several launch systems for our mission, we must determine
+the configuration of the interfaces between the launch system and payload and under-
+stand the environments that the payload must withstand. We can use the parameters
+for the launch system we select; however, a preferred approach is to match environ-
+ments and interfaces to the combined parameters of several launch vehicles. We
+should at least develop the information listed in Step 4 of Table 18-1. This process is
+referred to as payload integration, which means doing the management, program sup-
+port, and analysis required to integrate the spacecraft (including upper stages) with the
+launch vehicle. We must consider this step early in mission design. The payload design
+must address launch environments and interfaces, whereas the launch system must
+support the payload during ascent. If we don’t integrate these tasks carefully, problems
+in designing and manufacturing the payload can scuttle or seriously delay the launch.
+Payload integration must meet specific requirements of the program review, including
+interface control documents at both the Flight Feasibility Review and the Cargo Inte-
+gration Review.
+
+In the spacecraft design, we must consider the payload environment for the time the
+payload leaves the vendor’s facility until the spacecraft completes its mission. In this
+section, we will address the environment from the time we install the payload on top
+of the launch vehicle until it’s through the ascent. In many areas, the combination of
+high accelerations and vibrations coupled with the thermal environment and rapidly
+changing local pressures result in environmental conditions more severe than it would
+experience on orbit. Carefully considering these environments is critical to spacecraft
+design. Three areas require particular attention: usable payload volume offered by the
+available fairings, structural and electrical interfaces, and payload environments, as
+summarized in Table 18-7.
+
+Fairings. Launch-vehicle vendors offer a wide range of payload fairings. They
+define the usable payload volumes and dimensions within the fairings for the space-
+craft. These values account for payload and fairing deflections due to static and
+dynamic loads encountered during ascent. Table 18-4 provides approximate dimen-
+sions for various systems, and Fig. 18-8 shows a typical payload fairing.
+
+The mission designer must ensure that the spacecraft will fit within the allowable
+envelope. The fairing protects the payload from aerodynamic loads and, in general,
+provides a benign environment, as discussed below, to lessen the impact on the
+payload. Generally the payload fairing is jettisoned late in the ascent when dynamic
+pressure and the heating rate are below acceptable levels specified by the launch vehi-
+cle vendor. Different times can be negotiated, if required. We do not need to analyze
+payload and upper-stage combinations which are similar to previously flown payloads
+as extensively as new or unique payloads, because analysis by similarity is acceptable.
+If available fairings are unsuitable, launch vehicle vendors can develop fairings to
+meet unique requirements.
+
+The Space Shuttle’s cargo bay is so large that it usually accommodates several pay-
+loads. To help planning, the bay is partitioned into four sectors, allocating a specified
+amount of electrical power, cooling, telemetry, and so forth, to each—comparable to
+that available from a Delta or Atlas vehicle. Larger payloads combine resources from
+several sectors to meet their requirements. The cargo bay doors and the fuselage
+provide protection equivalent to that of a shroud on an expendable launch vehicle.
+
+736 Launch Systems 18.3
+
+TABLE 18-7. Launch Vehicle Ascent Environments and Payload Fairing Constraints Must
+Be Factored into the Spacecraft Design Early in the Design Process. !ncom-
+patibility found late in the design may require costly revisions or selection of
+another (less desirable) launch system.
+
+Payload Fairing Envelope Consult user guide Fig. 18-8, Table18-4
+
+Payload to Launch Vehicle Interface | Specified bolt pattern Launch vehicle
+user guides
+Environments
+Thermal 10-35 °C Launch vehicle
+Pad 188 BTU: ft2/hr user guides
+Ascent fairing radiant 100~150 BTU -ft2/hr
+Aeroheating
+Electromagnetic Consult range and launch
+vehicle user guides
+
+Contamination Satisfy class 10,000 air Sec. 18.3
+
+Venting Maximum of 1 psi differential Fig. 18-9
+Acceleration 5-7g Table 18-8
+
+Vibration 0.1 g2/Hz Table 18-9, Fig. 18-10
+Acoustics 140 dB Fig. 18-12
+
+Shock 4,000 g Fig. 18-11
+
+Structural and Electrical Interfaces. We must identify interfaces between the
+payload and the launch system early in the design process. For example, a payload
+adapter attaches the payload to the launch vehicle, and we have to determine whether
+the payload needs additional support. The adapters physically connect the payload and
+any required kick motors, spin tables, separation systems, or electrical interfaces. The
+launch-vehicle manufacturer usually provides them, if necessary, tailoring them to
+individual requirements. Adapter mass reduces available payload mass, so it is some-
+times an important part of selecting the launch vehicle. Examples of booster-adapter
+masses are the 51-kg single-launch Type 1666A adapter for the Ariane 4, and, for
+dual-launch systems, the 440-kg Long SPELDA, also for Ariane. Section 11.6
+provides a method to estimate booster-adapter weight, but actual weights are in the
+launch vehicle users’ guide.
+
+Launch-vehicle manufacturers must provide physical, electrical, radio frequency,
+and optical access to the payload while the fairing encloses it. Effective operations
+demand the correct location of access doors and windows for radio frequencies and
+optics. In many cases, manufacturers must wire the launcher to command and safe the
+spacecraft. They also provide the mechanisms that separate the payload from the
+launch vehicle in orbit, typically by using redundant logic and circuitry to trigger
+redundant, ordnance-firing systems. High reliability in the payload separation mecha-
+nism is important.
+
+The launch system and payload must match the desired communications architec-
+ture for launch operations. Communications requirements depend on the combined
+demands of the entire space mission: ground stations, payload, launch vehicle, range
+safety, and the user. We can adjust launch trajectories somewhat to provide redundant
+ground-station coverage during launch if needed. When we cannot get ground
+coverage, aircraft can cover critical events. We must check the entire communications
+
+18.3 Determining the Spacecraft Design Envelope and Environments 737
+
+Atmospheric
+
+Spacecraft
+
+Launch Site Should Fit : Air Conditioning
+Mechanical Within the \ - Cleanliness
+and Prescribed \ — Temperature
+Electrical Envelope \
+Interfaces |
+|
+
+Clearance
+(Stay-out Zone)
+
+Usable ——p,
+Diameter \
+
+!
+Faring ———lp
+
+Diameter !
+
+Electromagnetic
+
+|
+|
+|
+Interference :
+Acoustic and ;
+Vibration |
+| Interface
+| Attachment
+Access | — Mechanical
+Panels ! — Electrical
+}
+
+Booster
+
+Adapter Axial Frequency
+
+Lateral Frequency
+
+Fig. 18-8. Typical Launch-System Fairing. This figure shows a typical payload fairing, illustrat-
+ing the maximum dimensions and shape of the spacecraft allowed, as well as the
+separation plane between the spacecraft and launch vehicle.
+
+architecture before launch if we expect the launch and early orbit operations to
+succeed. Chapter 13 discusses communications networks in more detail.
+
+Payload Environments. We need to pay attention to the predicted payload
+environments so we can protect the payload during ground transportation, aircraft
+take-off and landing, hoisting operations, launch, and ascent. Table 18-7 lists the
+payload environments that we should assess for pre-launch and launch. The supply of
+conditioned air to the payload fairing controls the pre-launch thermal environment.
+Conditioned air typically moves through ducts into the top of the fairing, while vents
+near the fairing bottom maintain acceptable pressures and temperatures. Specifications
+normally call for static pressures of about 79 millibars, a temperature range of 9 to
+37 °C, relative humidity of 30% to 50%, and air filtration to class 10,000.
+
+738 Launch Systems 18.3
+
+Contamination degrades the performance of solar panels, optical sensors, and
+surfaces used for thermal control. Where necessary, we need to control the handling
+of particles and molecules from the launcher’s out-gassing materials. To model how
+contaminants move from source to removal, we analyze the thermal characteristics,
+compartment airflow, outgassing properties of materials, qualities and location of
+materials, and spacecraft components. We have to consider these analyses from
+ground processing through ascent.
+
+Electrical signals must be compatible among the spacecraft bus, the payload, the
+launch vehicle, and the launch site. Electrical signals of different frequencies and
+powers can combine to form spurious radio transmissions and electric fields that spoof
+systems or fire ordnance devices. Shielding and design of ordnance circuits must
+conform to safety regulations at the launch site. For after lift-off, the launch-vehicle
+operator defines, documents, and integrates the flight electrical environment. The
+payload developer’s analysis ensures that the spacecraft is compatible with these
+ascent conditions.
+
+The following analyses of ascent environments concentrate on discrete events
+where flight experience shows the environment may drive the design. These design
+points include ignition and shutdown events, and periods of maximum dynamic pres-
+sure, maximum acceleration, peak heating rates, and heat loading.
+
+Several analyses help us define and control the thermal environment for payloads
+during ascent. For expendable launch vehicles, we assess the thermal effects due to the
+radiant heat from the payload fairing internal surfaces. Maximum temperatures on the
+inner wall of a Delta-II vehicle range from 25 to 50° C. We also check radiated heat
+from the payload fairing or doors and free-molecular heating from rarefied air hitting
+the spacecraft after the payload fairing is jettisoned. When we use an upper stage, we
+have to consider the thermal effects from being exposed to the space environment
+during the parking and transfer-orbit phases. The Shuttle flights require similar analy-
+ses. We must consider any extended time the payload is aboard the Orbiter and the
+standard abort scenarios. We review results from these analyses to chart effects on
+mission operations and to constrain the time that the payload is exposed to the Sun or
+deep space while in the Orbiter bay.
+
+Several static and dynamic loads affect the structures of the payload, adapters, and
+launch vehicle. These loads are either aerodynamic or they depend on acceleration and
+vibration. Aerodynamic loads are a function of the total pressure placed on the vehicle
+moving through the atmosphere. They consist of a static (ambient) pressure and a
+dynamic pressure (the pressure component experienced by a fluid when brought to
+rest). The relationship between altitude and velocity on the ascent trajectory deter-
+mines these pressures. Payload fairings protect against dynamic pressure up to stated
+limits. (If strong winds on launch day result in excessive shear loads, the launch must
+be postponed.) At some point in the ascent trajectory the dynamic pressure will drop
+to levels which will not damage an unprotected payload; this results from the atmo-
+spheric density decreasing with altitude. At this point the fairing may be jettisoned to
+lighten the load on the booster. Typically payload fairings are not jettisoned until the
+dynamic pressure drops to 0.5 N/mz2.
+
+During ascent a pressure differential occurs between the inside and outside of the
+fairing because the ambient atmospheric pressure continuously drops with altitude
+while the fairing contains higher-pressure air. Air trapped in compartments and crev-
+ices within the fairing and the spacecraft is at a higher pressure until the fairing vents
+to the outside. The venting rate depends on the pressure differential between internal
+
+18.3 Determining the Spacecraft Design Envelope and Environments 739
+
+payload compartments and the fairing, as well as the pressure differential between the
+volume enclosed within the fairing and the external environment. The venting rate also
+depends on the size and number of vent ports, on the spacecraft and on the fairing.
+Figure 18-9 gives typical data on pressure differentials (pressure inside the fairing
+minus external ambient pressure) for the Titan-IJI. Some values are ranges which
+cover trajectory dispersions and uncertainties in the venting rates. We may need to
+vent payload components to prevent damage during ascent.
+
+1.6 i ——
+
+1.2 T
+
+1.0 4
+
+08 4
+
+0.6 -}--}-----
+
+0.4 Sf. i ——
+0.6 0.7 0.8 0.91.0 1.1 1.2 1.3 4.4 151.6 1.7 18 1.9 2.0 212.2 232.4
+
+Mach Number
+
+c*
+
+i
+
+a _ =.
+QQ!
+x
+
+Pressure Differential P —- P PSID
+
+Fig. 18-9. Pressure Differential in the Payload Compartment for Titan-lll. This chart shows
+the payload compartment's pressure relative to ambient air pressure during ascent.
+We must know this differential pressure to vent pressure adequately.
+
+The acceleration loads, usually called load factors, experienced by the payload
+consist of static (steady state) and dynamic (vibration) loads. Table 18-8 shows typical
+values for several launch vehicles, measured in terms of g levels or multiples of sea-
+level, gravitational acceleration (9.806 65 m/s). Note that we must consider axial and
+lateral values. In addition to the normal ascent-acceleration and vibrational-load
+events, Shuttle payloads must look at events on orbit, during re-entry, and during
+emergency or nominal landings. Figure 18-10 shows the vibrational environments for
+several launch systems. These environments consist of launch-vehicle acceleration,
+variable combustion flows in the engines, aerodynamic drag and shear, acoustic
+pressures from the engines, and the mechanical response of the entire vehicle to these
+stimuli. We must design the payload and booster adapter to carry these loads.
+Table 18-9 specifies a lower limit for the fundamental frequency of the booster adapter
+and spacecraft combination, resulting in a structural stiffness requirement. However,
+if the combination is too stiff, the structure may interfere with the most energetic
+vibration frequencies shown in Fig. 18-10. Thus, we need to update analyses of static
+and dynamic loads, so they include more refined data on the design of the launch
+system, booster adapter, and payload.
+
+To separate the launch vehicle from the spacecraft, or to deploy spacecraft compo-
+nents, we typically use pyrotechnic devices. These devices are light, highly reliable,
+and easily integrated into mating techniques that provide a high degree of stiffness.
+Unfortunately, when activated they generate a shock load that transmits through the
+structure to the payload. Figure 18-11 shows the shock characteristics for several
+launch systems.
+
+740 Launch Systems 18.3
+
+TABLE 18-8. Launch System Acceleration. Steady-state and dynamic components for sev-
+eral critical ascent events are shown. We must design payloads to survive the sum
+of steady state and dynamic accelerations in the axial and lateral directions. When
+only dynamic load factors are given, they include steady-state load factors. All
+entries are in g's.
+
+Stage 1 Stage 2
+Shutdown Shutdown
+Lift-Off Max Airloads (Booster) (Booster)
+
+FWehiete—[Aat [Caterer | Axial [Lateral [Axial [ Lateral | Axial [Lateral
+
+T34D/IUS
+Steady State | +1.5 _ +2.0 _ 0 to +4.5 _ 0 to +2.5 _
++1.5 +5.0 +1.0 +25 +4.0 +2.0 +4.0 +2.0
+_ +4.0 _
++0.5 +2.0 +0.5
+_
+
+Dynamic
+Atlas-{l
+Steady State
+
+Dynamic
+
++65
+. . +0.5
+Delta
+(max’ ail series)
+Steady State
+Dynamic .
+
+H-II
+Steady State
+Dynamic
+
+Shuttle
+
+Steady State
+with IUS
+
+Dynamic
+
+* 20 Values
+
+ee
+
+STS -IUS >,
+
+oo “A
+
+1 100 1,000 10,000
+Hz
+
+Fig. 18-10. Vibrational Environment for Launch Systems. The launch vehicle and fairing dic-
+tate the environment. The vertical axis is the power spectral density.
+
+18.3 Determining the Spacecraft Design Envelope and Environments 741
+
+TABLE 18-9. Fundamental Frequencies for Spacecraft Design. The booster adapter and
+spacecraft structure should be designed for fundamental frequencies greater than
+or equal to those shown.
+
+Fundamental Frequency (Hz )
+[Axial tateral
+15 10
+
+Atlas Il, ITA, IAS
+Ariane 4
+
+Delta 6925/7925
+Long March 2E
+Pegasus, XL
+Proton
+
+Space Shuttle
+Titan I
+
+* 31 Hz for dual payloads, 18 Hz for single payloads.
+
+10,000
+Ariane
+. Titan MUSH)
+_ ’
+8 | / 4 .
+ao IT
+3
+S
+8 ¢ «STS
+ef 100 |--—- — -f- fof af
+4 Sj
+/ i
+Atlas II-»/7
+|
+10
+10 100 1,000 10,000
+
+Hz
+
+Fig. 18-11. Shock Environments for Launch Systems Caused by Staging and Separation
+Events.
+
+The acoustic environment is a function of the physical configuration of the launch
+vehicle, its acceleration time history, and the configuration of the propulsion system.
+The near-launch-pad acoustic environment depends on the reflected sound energy
+from the launch pad ‘structures and facilities. The maximum dynamic environment
+is a consequence of the rate of acceleration and the aerodynamic smoothness of
+the launch vehicle shape. Solid-rocket boosters and first stages (often combined) usu-
+ally provoke a more severe environment, and the smaller the launch vehicle,
+the more stressed the payload. In general, the closer the payload is to the launch pad,
+the more severe the acoustic environment prior to releasing the launch vehicle, and the
+more rapidly the vehicle accelerates, the more severe the environment at maximum
+dynamic pressure. Since the acoustic excitation is rapidly time-varying, we must
+design for the instantaneous values and the overall average. When the payload design
+is sensitive to the acoustic environment, it is common to add damping insulation to the
+fairing. Figure 18-12 shows the acoustic environments of several launch vehicles.
+
+742 Launch Systems 18.3
+
+=— Atlas | 137 dB Overall
+
+@ Titan 142 dB
+
+- Delta 792x-9 139.6 dB
+
+©- Delta 792x-10 144.5 dB
+
+110 “Shuttle 138 0B
+
+105
+
+100
+
+31.5 63 125 250 500 1,000 2,000 4,000 8,000
+1/3 Octave Band Geometric Center Frequency
+
+Fig. 18-12. Acoustic Environments of Typical Launch Configurations. These curves
+represent the sound pressure level (SPL) of the acoustic energy at one-third octave
+intervals for typical launch configurations. Customarily, the payload receives maxi-
+mum energy at two points: at ignition before release of hold-downs and at transition
+through maximum dynamic pressure (Max q). Delta provides both a 2.9 and 3.2 m
+standard shroud for which the acoustics are different. Often shrouds are made to
+provide the desired environment.
+
+Injection accuracy is also important to launch systems. Traditionally, the launch
+system and payload separate at a prescribed location and velocity. Launch-system
+vendors usually state an orbit-injection accuracy that depends primarily on the last
+stage of the vehicle. Table 18-10 gives injection accuracies for several systems launch-
+ing a payload to geosynchronous transfer orbit.
+
+TABLE 18-10. Injection Accuracy for Geosynchronous Transfer Orbits. These numbers
+depend on the last stage of the vehicle and type of guidance used. We may need
+more propellant on the spacecraft to correct errors in inclination and altitude at
+apogee.
+
+Injection Accuracies
+Launch :
+
+Systems
+
+Early in the design, we must consider payload processing and integration proce-
+dures at the launch site. Commercial and government facilities are available for
+processing payloads at various launch sites. The actual flow depends on specific
+processing requirements, configuration of propulsion, ordnance elements, and avail-
+able facilities. Payload processing includes receiving inspections, checking payload
+and ground-support equipment, installing hardware such as batteries and avionics,
+checking pressures and gas leaks, and testing functions and communications.
+
+Launch Vehicle User Guides 743
+
+Potential integration functions at the launch site include mating the spacecraft with
+a stage vehicle, spin tests, loading propellants, mating with the launch vehicle, and
+prelaunch testing of all systems (integrated test). Two items to consider are the launch-
+site layout and how to integrate the payload and launch vehicle. A launch site may
+have several pads, so we can integrate several spacecraft at the same time. Others may
+have one pad that restricts the flow to one payload at a time. If the launch site uses a
+series approach, launch delays and failures in one spacecraft or launch system may
+adversely impact the next program.
+
+Various launch systems use vastly different approaches to physically integrate the
+payload and the launch vehicle. The most common is vertical integration, which
+means erecting the booster and hoisting the payload on top of it. With this method, we
+must build platforms at various levels so we can get to the entire launch vehicle, stage
+vehicle, and payload. This approach works, but it is fraught with restricted access and
+safety problems. Another way is horizontal integration, which means securing the
+launch vehicle in a horizontal position and attaching the spacecraft. This approach
+eases access and lessens safety concerns. Actual payload processing varies according
+to the complexity of the spacecraft, and should be examined case-by-case. The time
+required at the launch site depends on its design, interface requirements, integrated test
+requirements, amount of shared resources, and the launch-site operator’s philosophy
+and approach.
+
+Following the process defined in this chapter, you should be able to identify several
+acceptable launch systems for a particular mission and establish preliminary design
+requirements for the spacecraft. The process is an iterative one, and you will probably
+need to use it several times prior to converging on the spacecraft design and launch
+vehicle.
+
+Launch Vehicle User Guides
+
+Ariane 4. Arianespace, Inc. 1747 Pennsylvania Avenue, N.W., Suite 875, Washing-
+ton, DC 20006. Ariane Launch Vehicles, rue Soljenitsyns, 91000 Evry, France.
+
+Atlas Launch System Mission Planners Guide. February 1995. Lockheed Martin
+Commercial Launch Services, Inc., 101 West Broadway, Suite 2000, San Diego,
+CA 92101.
+
+Commercial Delta II User Manual. July 1989. McDonnell Douglas Commercial
+Delta, Inc., 5301 Bolsa Avenue, Huntington Beach, CA 92647.
+
+Delta II Payload Planners Guide. October 1995. Boeing McDonnell Douglas, 5301
+Bolsa Avenue, Huntington Beach, CA 92647-2099.
+
+H-I and H-II Rocket. NASDA External Relations Department, World Trade Center
+Building, 4-1 Hamamatsu-cho-2-chome, Minato-Ku, Tokyo 105, Japan.
+
+Long March Family of Launch Vehicles. China Great Wall Industry Corporation,
+No. 17, Wenchang Hutong Xidan, P.O. Box 847, Beijing, China.
+
+Payload Users Guide Titan II Space Launch Vehicle. August 1986. Titan IT Space
+Launch Vehicle Program, Space Launch Systems Division, Martin Marietta
+Corporation, Denver Aerospace, P.O. Box 179, Denver, CO 80201.
+
+744 Launch Systems
+
+Pegasus Payload Users Guide Initial Release. December 1988. Advanced Projects
+Office, Orbital Sciences Corporation, 12500 Fair Lakes Circle, Fairfax, VA 22033.
+
+Proton Launch Vehicle and Launch Services Users Guide LKE—(Lockheed
+Krunichey Energia). December 1993 (available from Lockheed Martin Commer-
+cial Launch Services).
+
+Shuttle Orbiter/Cargo Standard Interfaces, ICD 2-19001, NSTS Volume 14,
+Attachment 1, NASA L. B. Johnson Space Center, Houston, TX 77058.
+
+Soviet Launcher Proton. Glavcosmos USSR, 103030, Moscow Krasnoproletarskaya
+str., 9.
+
+The Inertial Upper Stage Users Guide. January 1984. Boeing Aerospace Co., A
+Division of Boeing Company, P.O. Box 3999, Seattle, WA 98124.
+
+Titan IV Users Handbook. June 1987. Titan IV Space Launch Systems, Martin
+Marietta, Denver Aerospace, P.O. Box 179, Denver, CO 80201.
+
+Reference
+
+Isakowitz, Steven J. 1995. AIAA International Reference Guide to Space Launch
+Systems (2nd Edition). Washington, DC: American Institute of Aeronautics and
+Astronautics.

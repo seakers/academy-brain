@@ -1,0 +1,1327 @@
+
+Chapter 4
+
+Requirements Definition
+
+Stanley I. Weiss, Massachusetts Institute of Technology
+Michael S. Williams, Lockheed Martin Global Telecommunications
+
+4.1 Role of Requirements in System Development
+Quality Function Deployment—A Tool for
+Requirements Development
+
+4.2 Requirements Analysis and Performance Budgeting
+Functional Analysis; Initial Performance Budgets;
+Refining and Negotiating the Performance Budgets
+
+4.3, Requirements Documentation and Specifications
+
+4.4 Summary: The Steps to a Requirements Baseline
+
+An early adage in systems engineering was “requirements before analysis, require-
+ments before design.” This emphasizes the importance of defining and developing
+requirements as the front-end process for system design, development, and deploy-
+ment. Regardless of size and complexity, and whatever the formality and scope of this
+process, it should follow the general pattern described in this chapter.
+
+All requirements must begin with succinct but well defined user and customer
+mission needs, focusing on the critical functional and operational requirements, with-
+out unnecessarily constraining or dictating the design. Section 4.1 shows that the
+requirements derived from these mission needs and progressively allocated to lower
+levels of the design are central to meeting a program’s performance commitments.
+Section 4.2 describes the process of analyzing requirements and budgeting perfor-
+mance. As we derive functions and the associated performance requirements, we must
+document them to provide the basis for developing, producing, deploying, and oper-
+ating the system, as well as a referencable history governing the development. Section
+4.3 shows the role of requirements documentation. Finally, Sec. 4.4 summarizes a
+brief step-by-step method of establishing requirements for typical space mission
+programs.
+
+This traditional approach to systems engineering is to first define the requirements
+and then design the system to meet those requirements at minimum cost and risk. More
+recently a number of authors and organizations have advocated “trading on require-
+ments” as a formal process intended to provide a compromise between what the user
+wants and what the buyer can afford. This process is discussed in detail by Wertz and
+Larson [1996].
+
+73
+
+74 Requirements Definition 4.1
+
+4.1 Role of Requirements in System Development
+
+To this point, the book has dealt with the mission analysis and concept development
+process which ideally drives the system design. The mission objectives and system
+concepts we have adopted have involved five basic measures: (1) required perfor-
+mance, (2) cost, (3) development and deployment schedule, (4) implicit and explicit
+constraints, and (5) risk. The same measures continue to apply during the entire system
+engineering process, from concept to implementation. Through this process, we
+decompose and allocate the central system-derived requirements (sometimes
+expressed as system specifications) to individual segments or system elements, inter-
+faces between these as well as interfaces external to the system. To define the total
+system, therefore, users, customers, system engineers, and segment developers must
+constantly interact. Although we initiate the process in a “top-down” fashion, we
+typically must continually reconcile system level requirements with technology and
+lower-level design development.
+
+A healthy tension often exists between the user and development communities.
+Developers may consider the user wedded to current operational approaches and
+insensitive to how over-specified requirements constrain design. Users often believe
+that developers favor new technology and ignore the practical needs associated with
+operating a system and exploiting the mission data. Thus, the developer may establish
+mission requirements without consulting the user, or the user may produce “non-
+negotiable stone tablets” and carry them down from the mountain too late or too over-
+specified for actual use. Because both sides have valid concerns, however, they must
+cooperate from the start in developing the mission’s operational requirements. We
+may implement this cooperation through so-called IPTs (Integrated Product Teams)
+involving both users/customers and developers.
+
+Typically, developers wanting to build as soon as possible drive prematurely
+toward low-level detail. Sometimes they underemphasize the original mission drivers
+—tequirements which dominate performance, cost, and schedule risk. Customers
+often constrain system development with overly specific requirements at levels below
+the critical requirements that determine most of a program’s cost and risk. While the
+level of formality and detail may vary depending upon system maturity, complexity,
+and size, critical requirements must remain in the forefront during design, develop-
+ment, and validation of the system.
+
+Overzealous requirements can also find their way into mission statements. For
+example, a user may specify the scan rate and swath width under payload and coverage
+performance. Clearly, these constraints on sensor design and constellation are inappro-
+priate in this case, prior to establishing a system which meets the key requirements,
+i.e., timely data with enough accuracy and resolution. Specifications on launch rate,
+launch responsiveness, and spacecraft reliability are also common. But so long as a
+system meets availability and maximum outage needs, the developer should be able to
+allocate requirements for reliability, maintenance, and replacement. Mission require-
+ments concerning launch, operation, or maintenance may establish the design domain,
+but not dictate the design. On the other hand, the user must also be a party to the system
+design as it converges, to identify design characteristics likely to produce operational
+problems.
+
+Table 1-5 in Sec. 1.4 shows essential requirements for the FireSat mission. These
+requirements neither dictate nor impose needless constraints on design, but they do
+specify what is essential to perform the mission and operate the system. The table
+
+4.1 Role of Requirements in System Development 75
+
+contains enough information to derive the specific design characteristics with
+sufficient controls on the user’s essential requirements. Also, the table includes no
+unverifiable terms or goals such as “maximize,” “sufficient,” or “optimize,” because
+these words have no quantifiable interpretations. Requirements which we are asked to
+implement only if no “impact” results, are in fact goals and we cannot treat them as
+design drivers. Every meaningful requirement bears cost and will have an impact.
+
+Constraints are those requirements for a system which we cannot trade, usually
+under any circumstances. They may pertain to performance when levels of capability
+of a system must have a certain value to be useful. One example is the necessity for a
+resolution level of an optical or RF signal, above which the desired information could
+not be derived or would not be sufficiently better than existing systems to justify new
+development. A related, fixed requirement could also be coverage and timeliness of
+data, clearly a major consideration for FireSat. Another might be cost—a constraint
+increasingly important to the financial success of a new mission. Thus, if a cost ceiling
+of N millions could not be met for a new development, the feasibility, design attributes
+or method of achieving a mission would be directly affected. The term “design to cost”
+applies directly to a cost constraint. Schedule may also be a constraint, and many tech-
+nically worthwhile projects get scrubbed because developers could not solve some
+problems soon enough to be competitive—this is often called a “time to market” con-
+straint. Others, but by no means all, include environmental and safety issues, legal and
+political mandates, fixed asset usage, involvement of geographically distributed or
+foreign offset contractors.
+
+An alternative view of “goals” vs. “requirements” is that the former represent
+design margin. Any firm requirement must result in a level of margin in the design,
+and we can regard the “goal” as specifying the desired margin. As the design matures,
+the margin represents the trade space available to decision-makers. The user must
+ultimately decide whether the additional performance is worth its associated incre-
+mental cost.
+
+Designers often focus on performance areas, such as operating the payload and
+distributing the mission data, and underemphasize the more mundane requirements,
+such as availability and accommodation to the external environment. Yet these can be
+critical to cost and risk. For example, availability can demand increased component
+reliability and therefore raise development costs. It can drive maintenance concepts,
+including replenishment and on-orbit support. It can also affect production time, espe-
+cially for critical components. Likewise, ignoring external interfaces can produce a
+system design without the external support needed to deploy and operate the mission.
+
+When space systems perform more than one mission, planners must develop
+requirements which account for each mission. For example, the IR surveillance
+payload on FireSat may serve other users with its performance in IR imaging and
+radiometric measurement. If the increased cost and risk are acceptable, their require-
+ments could lead to more payload bands, added coverage, and added distribution
+requirements. That is why we must establish all valid missions early in requirements
+definition, or we should incorporate accommodations for new missions in future
+upgrades to a system’s capabilities.
+
+While we must address system requirements throughout all aspects of the
+development cycle, the role and characteristics of requirements change in each devel-
+opment phase. Consequently, we should use specific structure and language early in
+the process without premature detail. Table 4-1 shows how the requirements converge
+during system development. Concept development must continue to reflect the driving
+
+76 Requirements Definition 41
+
+requirements, including internal and external interfaces. Top level or mission
+requirements drive early activities—developing the system concept and assessing
+technology. We must be prepared to modify these as the concepts and design mature
+and cause re-evaluation.
+
+TABLE 4-1. Evolution of Requirements Activities and Products. Each development phase
+tends to focus on specific requirement and design considerations.
+
+Needs Analysis
+¢ Defining mission requirements
+
+¢ Defining environment
+
+¢ Identifying mission drivers and constraints
+¢ Technology programs
+
+Concept Development
+¢ Identifying critical driving requirements and associated risks
+¢ Developing operations and design concepts
+
+¢ Cost estimates
+
+¢ Functional analysis and major interfaces
+
+¢ System studies and simulations
+
+¢ Prototyping and assessing technology
+
+Concept Validation
+* Tailored system and segment definitions
+
+¢ Preliminary internal interface requirements
+
+¢ Preliminary system standards
+
+¢ Preliminary requirements flowdown
+
+¢ Integrated system validation including test planning
+¢ Transition planning
+
+¢ Validating technology
+
+Design and Implementation
+¢ Detailed requirements flowdown
+
+¢ Developing formal design documentation and interface control
+¢ Integrating and testing the system
+
+¢ Demonstrating and verifying the system
+
+¢ Test procedures and reports
+
+During concept development, we normally carry forward and evaluate many design
+options, so we need to specify and document requirements in critical areas in a flexible
+fashion. We generally don’t require formal specifications complying with acquisition
+standards and serving as the legal basis for the system until full-scale development. At
+that point, we need to have solved the critical program risk areas. Until then, however,
+there are no set prescriptions for the requirements products other than what the pro-
+gram finds applicable and workable.
+
+We should, of course, recognize that the spectrum of valid approaches for require-
+ments development and application is broad. Significant differences exist among
+NASA, DoD, ESA, NASDA and other development agencies, as well as their con-
+tractors, and even among locations within the same organization. For example, all
+
+41 Role of Requirements in System Development 77
+
+NASA organizations conduct Phase A and Phase B studies which result ultimately in
+a Request for Proposal, including top-level specifications. But they vary widely in
+their approaches to conducting these studies and their requirements products. For DoD
+organizations, the rituals of MIL-STD-499 have often overwhelmed arguments based
+on unique program needs, and requirements become over-detailed and over-formal-
+ized too early. In full-scale development, most of the requirements activities center on
+integrating program interfaces (inter-segment and external to the system) and resolv-
+ing ways of carrying out specific requirements at segment level. Solving major system
+issues at this point can be expensive and risky. Usually, we freeze requirements once
+the system passes into production. Rarely can a program afford to accept changes at
+this point, opting far more often to accept limits to the system as designed or to defer
+the change to a later upgrade.
+
+We often hear that requirements drive technology programs, but in fact, new
+technologies frequently make systems possible. For example, improvements in
+bandwidth for communications processing have permitted greater use of real-time
+data downlinks. But relying on new technologies or production abilities can be risky.
+New technologies which allow us to reduce design specifications for power, weight,
+and volume can improve system performance and cost. We must, however, monitor
+the technology and production base and carry backup plans, in case program risk
+management demands changes to basic design requirements and interfaces to reallo-
+cate performance.
+
+Although the success of every program hinges on performance, cost, and schedule,
+cost is typically the most constraining. One reaction to cost emphasis is the design-to-
+cost practice by which a fixed dollar amount affects possible design solutions. Thus,
+progressive design development may, under cost limitations, cause review of require-
+ments, with attendant trades between cost and performance. This has clearly been a
+factor in the design and functions of the International Space Station (ISS). We can do
+much to control program costs while analyzing requirements. For instance, over-
+specified requirements may be “safe,” but evaluation of necessary design margins
+early via close interaction between the developer and the requirements specifier
+permits us to make timely trades.
+
+As discussed earlier, defining requirements without attending to production and
+operational support is also costly. Thus, with every major decision, we must consider
+which performance option meets essential requirements while minimizing cost.
+
+Sometimes, standardizing can reduce costs and improve operability. For example,
+particularly in the commercial communications industry, use of a “standard bus” or
+basic vehicle can yield lower costs for many programs. We sometimes call this process
+“platform-based design.” In addressing approaches to standardization, however, we
+must always consider trade-offs between reduced cost and increased development
+risk.
+
+As shown in Chaps. 1-3, mission development is an iterative process. Although
+each stage seems to cascade forward without hesitation, each requires significant feed-
+back and adjustments. Typically, most of the feedback occurs between adjacent phases
+of development. However, some situations may demand feedback across multiple
+phases, such as when an element design falls short on a particular requirement and
+causes a change in the design and operations concept, and possibly a change to the
+original schedule.
+
+An aside on requirements and cost control is imperative here. Solutions to
+constraining cost (e.g., design-to-cost specification, imposed standardization) are
+
+78 Requirements Definition 4.1
+
+difficult to implement in truly innovative space systems. In fact, well-intentioned
+approaches early in the design cycle may result in serious cost growth later in design
+and operation. But this difficulty in explicit cost control does not imply we should
+avoid the challenge. The growth in cost from the early estimates performed during
+Concept Development is typically driven by a few controllable problems. First, not
+fully accounting for all elements of cost in these early estimates is common. Fre-
+quently, not consulting with designers and manufacturers who will develop the system
+and the operators who will control the system results in misunderstanding cost or miss-
+ing elements of cost. Second, overspecifying the system inhibits trades which we can
+focus on cost reduction. Finally (and probably the most prevalent problem), heavy and
+uncontrolled changes to requirements as the system proceeds through latter stages of
+design can create major growth in cost due to constant redesign and related material
+and time waste. Worse, the loss of a fully understood system baseline becomes more
+likely and potentially very costly later in the program. The process of defining and
+flowing down requirements affects cost more than any other program activity.
+
+Then, too, on several occasions, customer requirements accepted without rational
+challenge have led to unjustifiable project costs and, in two well-documented cases,
+eventually caused cancellation. One of the authors once had the opportunity to
+convince a customer that a new requirement that was inserted after program start
+would not enhance the mission; millions of dollars were saved and the customer’s
+belief in our integrity was solidified.
+
+4.1.1 Quality Function Deployment—A Tool for Requirements Development
+
+While there are several structured approaches to developing requirements from the
+customer/user needs, the most commonly used tool is Quality Function Deployment,
+or QFD. Its application is not product limited; we also use it in developing of
+requirements for processes and services.
+
+Quality Function Deployment derives from three Japanese words or characters
+meaning (1) quality or features, (2) function or mechanization, and (3) deployment or
+evaluation. Symbolically we define the combination as “attribute and function
+development.” It involves a series of matrices organized to define system characteris-
+tics and attributes and can be applicable over multiple areas of decomposition. The
+first level, connecting customer needs or requirements to technical attributes or
+requirements, we often called the House of Quality and configure it in its simplest form
+as in Fig. 4-1. We often call the left hand column the “Whats” (at this first level, this
+is called the “voice of the customer’’) and we call the horizontal attributes the “Hows.”
+This relationship will become apparent as the “Hows” define the means for fulfilling
+the “Whats.”
+
+Weightings are applied to the “what” side of the matrix and are usually graded in
+three levels to help establish priorities of needs and related technical attributes. While
+of value in trading requirements, the primary use at this stage should be to define trade
+space.
+
+Figure 4-2 shows a simplified application to FireSat. Referring to Table 1-5 and
+illustrating with only a few of the identified mission needs, an abbreviated matrix
+shows some five needs and six relevant attributes. Note the conflicts between compet-
+ing satellite orbits which could potentially satisfy key requirements. This suggests
+carrying out extensive analysis and trades. Note also the relative priorities emphasiz-
+ing technical attributes which assure timely coverage.
+
+4.1 Role of Requirements in System Development 79
+
+Root of
+House of
+Quality
+
+Correlations
+or Conflicts
+
+| | tt
+| wna | [| Relationships
+
+nn a
+PEE
+SC Tse TT
+
+Fig. 4-1. Abbreviated House of Quality.
+
+3 3
+Technical 5/8 a>
+214 > a
+Attributes slez |& os
+o=|o_|o So
+£9|S gic: 33
+Customer 2212 8la ga
+Needs 8818318 .o4
+30 m Resolution
+Daily Coverage 9
+Weighting:
+
+Sn |
+seein |
+nos
+P|
+
+9: Highest Importance
+3: Medium Importance
+1: Lowest Importance
+
+re pela
+soogm
+oacee
+
+Palate laa] =|
+t+ + + + + +
+
+Fig. 4-2. Simplified QFD for FireSat Mission. This limited set of needs and responding tech-
+nical attributes would be expanded significantly for the complete design process.
+
+Recalling the discussion on constraints (at the end of Sec. 4.1), we understand that
+the customer needs that the system cost no more than $20 million per year of opera-
+tion; that is a constraint and all needs and technical attributes must meet this criterion.
+Thus, while it is a fixed requirement, we may leave it off the customer needs column
+of the QFD so as not to overbalance weighted scoring. If it were stated as having a
+target cost of $20 million or less, we might trade that figure and put it on the left hand
+side of the matrix. As a next stage use of QFD, the technical attributes developed in
+the top level would then become the requirements or “what” (left side) of the QFD
+
+80 Requirements Definition 4.2
+
+matrix, with definitive characteristics, such as specific orbits, coverage per pass or unit
+time and top reliability level which we would derive to satisfy the set of specified tech-
+nical requirements. Figure 4-3 illustrates this progression.
+
+Q
+BK Conflicts J nN JN
+
+AXX
+System Functions Technical R Design ‘s)
+and Characteristics Characteristics lequiremen
+
+Specifications
+
+User Needs
+importance Weight
+
+Customer-
+System Functional
+Requirements
+
+Technicat
+Characteristics
+
+System Requirements Concept Preliminary
+Phase Phase Design Phase
+
+= Weighted Score
+
+Requirements Specified
+for Detail Design
+
+Fig. 4-3. Progression of QFD Process. Illustrated is the derivation of successive “What”
+aspects from previous levels’ responsive “Hows.”
+
+Thus the QFD is a structured means for a design team to address customer needs
+and to develop the consequent design characteristics to satisfy them. It also serves to
+sustain the trail of requirements derivation and provides a means for analyzing the
+impact of changes to requirements at any level. And since we can link the technical
+attributes responsive to needs, to functions of the system, there is a logical translation
+to functional analysis via functional flow diagrams and thence architecture and inter-
+face definitions.
+
+As an added note regarding understanding the customer, I know of several satellite
+projects that have had little success as commercial ventures because the contractor’s
+designers established requirements based on their own interpretation of potential
+customer needs. This was also the cause of a major military satellite contract loss to
+the competition due to inaccurately presumed knowledge of customer’s desires. The
+voice of the customer must be heard before fixing a design.
+
+4.2 Requirements Analysis and Performance Budgeting
+
+We must decompose every system requirement into progressively lower levels of
+design by defining the lower-level functions which determine how each function must
+be performed. Allocation assigns the function and its associated performance require-
+ment to a lower level design element. Decomposing and allocating starts at the system
+level, where requirements derive directly from mission needs, and proceeds through
+segment, subsystem, and component design levels. This process must also ensure
+closure at the next higher level. Closure means that satisfying lower-level require-
+ments ensures performance at the next higher level, and that we can trace all
+requirements back to satisfying mission needs. This emphasizes the iterative character
+of the requirements development process.
+
+4.2 Requirements Analysis and Performance Budgeting 81
+
+Figure 4-4 shows how a single mission need—the FireSat geopositioning error—
+flows through many levels of design. Errors in the final mission data depend on many
+
+sources of error in the processing segments for space, mission control, and mission
+data.
+
+Attitude
+
+Control Control Dynamics
+
+Alignments
+
+Thermal
+Distortion
+Mec
+
+hanicat
+Dynamics
+Star Catalog
+Quantization/
+Timing
+
+Internal
+
+Spacecraft
+Bus
+
+Design
+
+Margin
+
+Geopositioning
+Error
+
+Earth
+Eltipsoid
+Estimation
+
+Payload Alignment
+Calibration
+Measurement
+Attitude Errors
+Operations Estimation
+Facility & Control Internal
+Dynamics
+Mission Position
+Control Estimation
+& Control
+Error
+Detection
+ae & Control
+Communications
+Data Compression
+& Expansion
+p Data
+Registration
+Data
+Processing Data
+ar Compression &
+Mission Expansion
+Data
+Processing
+
+Error
+Detection &
+Control
+
+Data
+Dissemination,
+
+Data
+Compression &
+Expansion
+
+Fig. 4-4. Allocation from Mission Requirements through Component Design. Understand-
+ing the sources contributing to top-level requirements is essential.
+
+Two important observations are necessary. First, the system encompasses more
+than the spacecraft, and errors come from numerous segments. The accuracy of the
+geolocated object in a FireSat image is driven by much more than the spacecraft’s
+
+82 Requirements Definition 4.2
+
+pointing capability. Second, while the number of error sources is large, they are not
+all equal. Many are predictable and relatively constant—star catalogs and Earth
+ellipsoid estimates. Others are more variable, but small and not significant drivers for
+cost or technology. The remaining errors are those which are most amenable to
+cost-performance-risk trade-offs and need the greatest level of attention during
+requirements flowdown and validation.
+
+4.2.1 Functional Analysis
+
+The simplest way to represent functions—or actions by or within each element of
+a system—is through a functional-flow block diagram. As Fig. 4-5 shows, we define
+the topmost or first level functions of a system in the sequence in which they occur.
+Successive decomposition permits identifying how a system works at each level
+before proceeding to lower levels, For example, to address sensor misalignment three
+levels down in the functional flow (Function 4.4.4 in Fig. 4-5), it is necessary to
+consider the production (1.0) and integration (2.0) phases, which require manufacture
+and validation within reasonable tolerances.
+
+[fio] [20 —
+Production anton LEVEL
+FLOW
+Conduct
+Training
+SECOND
+Search for : Determine LEVEL
+
+Forest Fires Class of Fire
+
+Determine
+Signature
+Intensity
+
+eat) aa7 aae
+a a Estimate Convertto | THIRD
+Ephemeris Inertial Forest Latviong& | LEVEL
+v Fire Local Map
+Coordinates Coordinates
+Estimate
+Spacecraft
+Attitude er
+Misalignment
+
+Estimate Radius of
+Body-Centered Earth
+Sensor Pointing Ellipsoid
+
+Angle
+
+Fig. 4-5. Functional Flows Generating Geopositioning Information for FireSat Mission.
+The functional flow defines what is to be done in a hierarchical framework. Additional
+features can be added to the representation (e.g., data interfaces, control sequences)
+using different diagramming techniques.
+
+4.2 Requirements Analysis and Performance Budgeting 83
+
+Once we establish the top-level functions and sequences, we can decompose and
+analyze each function throughout the remaining layers of the flow. For example,
+determining geopositioning data (Function 4.4 in Fig. 4-5) for FireSat requires a
+sequence of actions, from estimating key spacecraft and payload parameters to deriv-
+ing local Earth coordinates. Functional decomposition, regardless of how formalized,
+is necessary in allocating design characteristics at each level of system architecture
+(the organization of system elements into a structured hierarchy). This organization
+permits us to allocate performance budgets together with other budgets affecting cost
+and risk.
+
+We can also use functional flow diagrams to depict information or data flow, as
+well as control gates governing function sequencing. Information may include inter-
+face data flowing between functions, control relationships showing what must happen
+before another function can begin, or data sources and destinations.
+
+In applying these techniques, we may use manual methods, particularly for simple
+systems, for top-level mission descriptions, but CASE (computer-aided system engi-
+neering) tools facilitate diagramming decompositions and maintaining traceability.
+But as with other computer applications, the software for developing diagrams and
+maintaining support databases does not drive the analysis. In fact, the functional
+framework which evolves is often a compromise among estimates of performance,
+cost, schedule, and the risk associated with each decision. (McClure [1988] and
+INCOSE Sixth Annual Proceedings [1996] provides an interesting discussion of sup-
+port tools and techniques.)
+
+4.2.2 Initial Performance Budgets
+
+Analyzing requirements leads eventually to hierarchically organized performance
+metrics and budgets for the interactive development segments. The iterative process
+starts with budgets derived using analysis, simulation, known design or test data, and
+a large measure of experience. We should note that in the development of require-
+ments and derived functions, mission drivers must be the primary drivers.
+
+Experience or related reference missions are especially important in developing the
+initial performance budgets to meet system performance requirements. In the example
+of Fig. 4-5, the geopositioning accuracy reflects this. The major trade-offs and focus
+for validating performance therefore reside in how accurately the system can estimate
+and control position and attitude, and we must evaluate the options considered against
+not only performance requirements but also cost and schedule.
+
+Figure 4-6 illustrates the combined effect of spacecraft attitude and position errors
+on the geopositioning estimate’s accuracy in locating fires. In this simple example,
+three broad options are possible. The first option gives a very loose spacecraft position
+budget, which permits only limited support from the GPS and/or remote tracking sta-
+tions. However, it requires a tight attitude budget, which is likely to create problems
+for both the space and mission control segments. Though payload sensitivity and
+resolution drive the selection of the FireSat orbit envelope, using a low-Earth orbit
+could severely affect attitude accuracy because of atmospheric drag. A higher altitude
+would reduce drag, but produce even tighter pointing tolerances. Thus, two main costs
+make this a poor budget option: the satellite’s subsystem for controlling attitude and
+the potentially taxing calibration which the mission control segment must perform on
+the attitude sensors.
+
+At the other extreme, leaving the attitude budget loose and tightly estimating space-
+craft position can have risks if a full GPS constellation is not in operation. Using GPS
+
+84
+
+Requirements Definition 4.2
+
+Position
+Error as : "
+Design Margin
+A A 2
+| u ; t
+| T T T
+| Attitude :
+Error re |
+| fe)
+| Geopositioning S = .
+| Error 1 p
+|
+| T fe) 1-4
+| 1 Ss Pp
+| fe) 1 ie)
+| N T Ss
+| :
+| U
+| r] il is
+sg Wy Attitude ~ ~ | | Other Errors
+(_ 500 m NEP Error \
+\ Req't A
+Sd Spacecraft
+Se ae Attitude
+ear Budget } Tight Moderate Loose
+
+Position :
+Budget } Loose Moderate Tight
+
+Fig. 4-6. Typical Options in Error Budgets for Attitude and Position. Variations in attitude
+and ephemeris accuracy requirements have implications on allocation and attendant
+design risk. A balance of cost, performance, and implementation risk must enter the
+
+evaluation of options. Details of mapping budget development are given in Sec. 5.4.
+
+risks degraded performance without a full constellation. Resorting to remote tracking
+Stations or other sources of information can require excessive response times. A third
+option allows some risk for both attitude and position error budgets, but balances that
+risk against the cost of achieving the required geopositioning accuracy.
+
+Table 4-2 lists the elements we would normally budget with the chapter and para-
+graph where we discuss each element. Budgeted items may come directly from
+requirements such as geolocation or timing, or they may be related to elements of the
+overall system design such as subsystem weight, power, or propellant.
+
+Timeline budgets at the system level are also typical mission drivers. For FireSat,
+tight timelines for tip-off response and data distribution will require developing an
+initial budget. We must define and decompose all functions necessary to meet this
+timeline, as well as define their allocation and control sequences (functions which can-
+
+not start without completion of others and potential data hand-offs). Simulation will
+help us estimate delays in processing and communication. Applying experience or
+data from related systems provides some calibration. But this initial budget is just that,
+since as the design process progresses, we will introduce changes from design itera-
+tions among different levels.
+It is, however, extremely important to recognize the nature of initial design budgets.
+They are typically developed by system engineers with a broad understanding of the
+
+4.2 Requirements Analysis and Performance Budgeting 85
+
+TABLE 4-2. Elements Frequently Budgeted In Space Mission Design. Primary budgets are
+directly related to mission requirements or ability to achieve the mission (e.g.,
+weight). These primary requirements then flow down into secondary budgets.
+
+Subsystem weight Secs. 10.3, 10.4
+
+Power Secs. 10.3, 10.4, 11.4
+Propellant Secs. 10.3, 10.4, 17.4
+
+Geolocation or System
+
+Pointing Errors
+
+Pointing & Alignment Secs. 5.4, 10.4.2, 11.1
+ig
+Timing
+
+Mapping Sec. 5.4
+Attitude Control Secs. 4.2, 10.4.2, 11.1
+Availability
+
+Attitude Determination Secs. 4.2, 10.4.2, 11.1
+Position Determination Secs. 4.2, 6.1
+Coverage Secs. 5.2, 7.2
+Communications Sec. 13.1
+Operations Sec. 14.2
+Processing Sec. 16.2.1
+Reliability Secs. 10.5.2, 19.2
+Operations Sec. 14.2
+Development cost Sec. 20.3
+Deployment cost Sec. 20.3
+Operations and maintenance cost | Sec. 20.3
+system and its elements. But the details of new technology and lower-level design
+studies can and should result in adjustments to these budgets as experts familiar with
+specific subsystem and component design review the initial allocations. A key aspect
+of the system design is a robust initial allocation (i.e., one which can tolerate changes
+at subsequently lower design levels) and adaptable to iterations as noted previously.
+Just as it is important to involve representatives of all affected levels of design in the
+development of the initial budgets, it is also important to recognize the iterative nature
+and that a system solution which minimizes total cost and risk may impose more
+stringent demands on certain aspects of lower-level designs than others. The process
+of reconciling the imposed costs and allocated risks involves a high degree of
+negotiation.
+
+Table 4-3 shows how the response timeline may affect the space and ground
+segments of the system. While it may seem desirable to assign responsibility for a
+specified performance parameter to a single segment, we must evaluate and integrate
+critical system parameters across segments. For example, FireSat must respond
+quickly to tip-offs in order to provide the user timely data on suspected fires. This sin-
+gle response requirement alone may define the size and orbit envelope of the satellite
+constellation to ensure coverage when needed. Thus, time budgets for the following
+chain of events will be critical to the mission control segment’s performance:
+
+* Formulating the schedule for pass & time intervals
+* Developing and scheduling commands to the spacecraft
+* Developing and checking constraints on the command load
+
+* Establishing communications with the spacecraft
+
+86 Requirements Definition 4.2
+
+TABLE 4-3. Impact of Response-Time Requirement on FireSat’s Space and Ground Seg-
+ments. The assumed requirement is for fire data to be registered to a map base and
+delivered to a user within 30 min of acquisition.
+
+Impact on Space Segment
+Spacecraft constellation accessibility to specified Earth coordinates
+Command load accept or interrupt timelines
+Communication timelines to ground segments
+Satellite availability
+
+Impact on Ground Segment
+
+Time to determine and arbitrate satellite operations schedule
+Manual interrupt of scheduled operations
+
+Command load generation and constraint checking time
+Availability of mission ground segments and communications
+Image processing timelines
+
+Image sorting and distribution timelines
+
+The space and ground segment budgets may involve interrupting current command
+loads, maneuvering the spacecraft, collecting the mission data, establishing communi-
+cations links scheduled from the ground, and communicating the mission data. Mis-
+sion data processing must receive, store, and process the mission data, sort it by user
+or by required media, and send it to the user. We must consider all of these activities
+in establishing budgets to meet the system requirement of delivering specified data and
+format within 30 min of acquiring it.
+
+Requirements Budget Allocation Example
+
+Pointing budget development, described in Sec. 5.4, is a problem on space missions
+using pointable sensors. Another common budget example is the timing delay associ-
+ated with getting mission data to end users. It can be a critical requirement for system
+design, as is the case of detecting booster plume signatures associated with ballistic
+missile launches. In that case, coverage (i.e., the time from initiation of a launch to
+initial detection) as well as the subsequent transmission, processing, distribution, and
+interpretation of the detection, is time critical. Because of the severe coverage require-
+ment, geosynchronous satellites with sensitive payloads and rapid processing are
+needed.
+
+The FireSat mission does not require timing nearly as critical as missile detection,
+but clearly the detection of forest fires is a time-sensitive problem. Figure 4-7 shows
+both the timeline and the requirements budget associated with it. For FireSat’s Earth
+coverage (i.e., Time Segment 1), it would be ideal to provide continuous surveillance
+using a geosynchronous satellite. However, cost and ground resolution favor a low-
+Earth orbit implementation which results in Time Segment | being three to six hours,
+depending principally on the number of satellites in the constellation.
+
+Once detection occurs, a series of shorter timeline events must occur to achieve the
+30-minute requirement for Time Segment 2. The system may need to validate each
+detection to minimize the number of false alarms transmitted to the ground for
+processing. This may impose design specifications for onboard detection processing
+and additional payload “looks.” The time spent downlinking the data after validating
+a detection could have a significant impact on the communications architecture that
+assures rapid acquisition of the required links. The availability of direct or relay links
+
+4.2 Requirements Analysis and Performance Budgeting 87
+
+Detectable Fire Actual Mission Data
+Time Segment 1 Detection to End User
+A AA
+to t)+ 3-6 hr ty+ 3.5-6.5 hr
+Valida- Down- Gnd Prep. Select/Queue Mission Data
+
+Detection tion link Process Confirm Data Distribution to End Users
+
+30 min ——____________ >»
+
+Time Segment 2
+Time Segment 1 Requirements
+
+. Coverage (Number of Spacecraft, Orbit, Elev. Angle)
+Time to Actual Detection < Detection Time Given Coverage
+
+(Payload Scan Options & Sensitivity
+Initial
+Time Segment 2 Requirements Allocation
+
+Initial Vallidation (PD/PFA, No. of Hits, 1 min
+Processing Time Given Detection)
+
+Downlink (Link Avail., Link Acquisition/ Closure) 3 min
+
+Orbit and Attitude Determination 6 min
+Ground Look Point Determination 2 min
+Completion of Ground Processing (Front End Pro- 3 min
+Time from Detection cessing Arch., No. of Channels, Process. Rate)
+
+to Data Delivery Confirmation of Fire (Auto vs. Manual, Number 3 min
+of Exploiters and Workstations)
+Data Preparation (Sorting, Formatting, Internal 2min
+Routing)
+
+Queuing for User Distribution (Sorting, Distribution, 3 min
+Queue Processing)
+
+Distribution to End User (Network Mgmt., Channel 2 min
+Rates)
+
+Margin 5 min
+30 min
+
+Fig. 4-7. Mission Data Timeline and Requirements Budget. The actual time from the detec-
+tion of a fire to distribution of the time-urgent data is related both to coverage and’
+specific timing requirements.
+
+to meet this timeline is a significant cost driver, potentially replacing a “store and
+dump” approach appropriate for purely scientific missions.
+
+Once the ground system receives the data it must process the data to format it,
+perform orbit, altitude, and ground-look-point determination, and then extract the rel-
+evant fire-detection data. A short time requirement here will likely demand real-time
+processing and a substantial capacity to support real-time operation. Identification and
+subsequent confirmation of a fire prior to broader dissemination may drive either a
+high performance pattern-matching process or manual processing in a time-critical
+fashion. Once the system confirms a fire, the data must be registered and prepared for
+distribution to appropriate end users. This preparation may involve merging it with
+
+88 Requirements Definition 4.2
+
+standard data sets to support evaluating the fire at a later time. The data processing
+system must also queue the data for distribution over a network. Priorities and proto-
+cols may drive the management of input queues and network routing. Figure 4-7
+shows the initial allocations for the components of Time Segment 2.
+
+This example punctuates two critical activities: First, the components of a timeline
+must follow the step-by-step functional flow described in 4.2.1. The functions them-
+selves may be strictly sequential or capable of being processed in parallel to shorten
+timelines. Functional representation diagrams and support tools (e.g., built-in simula-
+tion) can ease this evaluation. Second, there are numerous performance-cost trade-offs
+at each decision point which dictate the time-budget allocations. The objective is to
+meet the highest level requirement while equally sharing the potential performance
+risk and cost associated with meeting each derived requirement.
+
+4.2.3 Refining and Negotiating the Performance Budgets
+
+System engineers must thoroughly understand how to develop and define require-
+ments, then allocate and negotiate budgets associated with them. Failure to meet key
+budgets can lead to major system problems. Early definition permits the iterative
+process of adjusting allocations, margins and even operations well before major cost
+or schedule penalties occur.
+
+Performance budgeting and validating key system requirements is the iterative
+process, as shown in Fig. 4-8. Before the process can actually start, however, the
+specific performance parameter and associated requirement statement must be clear
+and traceable to the mission need. The Quality Function Deployment methodology
+and several tools make this possible by maintaining the link between the need and the
+technical requirement in traceable documentation. Vague, inconsistent, or unquantifi-
+able requirements too often lead to inaccurate understanding, misinterpretation and/or
+exploitation. This applies especially to critical areas of system performance which
+without early and thorough interaction and/or prototype testing can become expensive
+and program-threatening later. We should also note that the iterative process includes
+negotiation and re-negotiation of budgets based upon evidence from the design pro-
+cess and the discovery of errors and “injustices” in the initial allocation.
+
+We know of several programs in which major difficulties have resulted from con-
+flict among requirements. One case involved the difference between operational
+availability of ground stations with that of the satellites in a system. Another involved
+the selection of the launch vehicle before a design concept was established, the re-
+quirements for the latter driving the mass far beyond the booster’s lift capability. And
+in a third case, the changes in a customer’s program management introduced new
+requirements for a payload which invalidated the flowdown of the original project
+requirements. The response to this required both data and persuasiveness, the latter
+being unfortunately insufficient until serious problems arose in the systems design.
+
+An aside is worthwhile at this point on the issue of requirements-level vs. design-
+level budgeting. The system-level design is a logical integration or synthesis of
+segment designs. Defining functions and their performance requirements and those
+interfaces requiring support lays the framework for deciding “how” to design each
+segment. For FireSat, this relates to the accuracy of the geolocation and the allocation
+to segments of ephemeris, attitude, and other contributions. The “how” relates to space
+segment hardware decisions such as whether to use star sensor or gyro performance to
+achieve the required attitude accuracy. But such decisions affect mission operations
+which must then schedule star sensor calibration and gyro alignment so the spacecraft
+
+4.2 Requirements Analysis and Performance Budgeting 89
+
+System Concept
+
+1 System Validation Program/Testbed
+
+System Performance System
+Parameter & ——» Allocation
+Requirement Language Analysis
+
+“Strawman”
+Allocations
+
+Segment
+Prototype Results
+
+Segment Response
+Segment Design g p
+
+Budget Analyses
+
+CYCLE?
+Negotiation
+
+Concurrence on Changes
+
+System-level
+Validation Testing
+
+CYCLE2
+
+Consider other ‘ i . Pass__ {Continued
+Options ssessmeni Design
+
+Fig. 4-8. Iterative Performance Budgeting and Validation. The initial performance budget is
+a point of departure for later evaluation of segment design and validation testing. The
+design will converge to a validated value which may require system-level budget
+adjustments to match the changes.
+
+can meet its requirements. Thus, both procedural and data interfaces must be identified
+and documented. In addition, mission operations must take into account the space-
+craft’s system for attitude control to keep from misusing it when scheduling
+operations. Likewise, in scheduling calibration or alignment, the mission operators
+must know the sensor payload and other electronic package performance character-
+istics to prevent accidental maneuvers. System and segment specifications provide
+system and interface requirements, and lower-level specifications provide design
+requirements, but in fact, the system engineer and segment designers must interact at
+all design levels.
+
+It should be noted that initial budget estimates almost never correspond with design
+considerations at lower levels. Clearly, the early budgets are starting points for
+negotiation and budget adjustment, to reconcile early system allocations with segment
+estimates of design and performance. As we reconcile requirements, we should docu-
+ment them in a requirements reference which changes only with full traceability and
+visibility for all stakeholders such as segment designers, system engineers, and pro-
+gram managers. (A number of tools may be useful: these include the previously noted
+QFDs, plus software packages ranging from Excel to QSS DOORS and Ascent
+Logic’s RDD 100.) Each of these critical performance parameters matches an estab-
+lished system and segment budget. These budgets can and normally do change as
+developers proceed on the design and validate performance.
+
+90 Requirements Definition 4.3
+
+At this stage of budgeting, design margin becomes an issue; specifically, how much
+is reasonable to keep, who knows where it is, and who has the authority to adjust it?
+Typically, margin is statistical (e.g., two-sigma error requirements), so as it cascades
+to various levels of design it can produce significant overdesign and cost. Design
+engineers can complicate appropriate adjustment by keeping margin at lower tiers of
+design, where it tends not to be visible or usable for reallocation. Here prescription
+cannot substitute for judgment. Sometimes, margins can provide robustness against
+on-orbit failures, but can also cause problems. For example, too much margin in com-
+munication links could actually saturate receivers. Key system requirements must also
+have margins, which we can trade or allocate downward, so as to permit meeting real-
+istic performance and reliability with minimum risk.
+
+Once the first cycle of interactions between system and segments personnel has
+established the best controlled estimate of key performance budgets we must continue
+to test the design we are developing. Configurations should be validated via simula-
+tions or prototypes. These early exercises in system integration are important in
+developing a consensus that continues through the initial design phase.
+
+At all times a baseline of common requirements must support this process of
+analyzing and estimating performance requirements, interacting and negotiating with
+segment implementors, and validating the key performance drivers early in the design
+phase. The validation exercises use many specific scenarios or point situations to
+evaluate performance. Meeting performance budgets in these point situations is
+comforting, but not sufficient. Scenarios designed to stress one aspect of system
+performance may not provide adequate coverage of other aspects. The converging,
+controlled system requirements captured in requirements documents, interfaces, and
+standards are often the only reference for system functions and performance. The
+requirements documentation must match the phase of system development in matur-
+ity, but it must always reflect the results of analyses, performance budget negotiations,
+and validation exercises—faithfully, openly, and quickly.
+
+4.3 Requirements Documentation and Specifications
+
+In dealing with criteria for requirements documents, we should note the references
+governing much of today’s systems engineering practice in the aerospace industry.
+With the deletion of most military standards in the United States as contractual
+requirements, internal documents most often establish and govern system design and
+engineering practices. These documents, however, are based largely upon either the
+previously controlling MIL-STD-499 or its successor (not issued but available in final
+draft) 499b, or newer civil organization standards. These include the Electronics
+Industries Association (in conjunction with the International Council on Systems
+Engineering) EIA/IS 632, Systems Engineering and the Institute of Electrical and
+Electronic Engineering (IEEE) Trial Use standard, and Application and Management
+of the Systems Engineering Process, IEEE 1220. Most recently, the International Stan-
+dards Organization (ISO) moved to incorporate systems engineering in the growing
+body of international standards and to develop ISO Standard 15288, System Life
+Cycle Processes, which can serve as a framework for activities in the increasingly
+global context of the aerospace industry. All of these documents place mission and
+requirements development and management at the head of system design processes.
+
+Effective requirements documents must be consistent and complete relative to the
+maturity of the system in its development cycle. Consistency means that we should
+
+43 Requirements Documentation and Specifications 91
+
+write a performance requirement only once, keep it in a logical place, and position it
+appropriately in the hierarchy of established requirements. Completeness depends on
+the system’s phase of development, but it means that at every level of requirement we
+must ensure that we satisfy the next higher level. As an example of completeness, the
+geolocation requirement of the FireSat mission should address all error sources both
+in segment and interface documents.
+
+Requirements Traceability
+
+Requirements must be rigorously traceable as we develop, allocate and decompose
+or derive them. While computer support tools exist which link and show dependencies
+and derivations among requirements, the complexity of the product should govern the
+form of the documentation. This form can range from notebooks for small projects to
+sophisticated database systems. We must base every design and decision task on
+requirements, and trade studies at any level must take into account all related require-
+ments, while considering the impact of changes throughout the product (and system)
+architecture. Any indexing method will suffice, so long as it permits traceability
+upwards as well as across all elements. Requirements documents should specify this
+tracing method, however, and the basis for derived requirements must be clearly iden-
+tifiable. The specific requirements document may be purely electronic, possibly using
+the database features of the computer tools. Whatever the documentation form, it must
+have a concise entry for every requirement. Each entry should index the documents
+and specific paragraphs from which we traced the requirement. Where analysis pro-
+duced a derived requirement, it should reference the specific technical memo or report
+showing the results of the analysis for future use.
+
+Traceability emphasizes the need for effective requirements to be unambiguous and
+verifiable to avoid misinterpretation and exploitation. Words such as “optimize” or
+“minimize” in specifications cannot govern the design, and they defy verification.
+
+We should note that requirements reviews are necessary corollaries to design
+reviews and issues must have the same weight as design issues in readiness decisions
+by a program to proceed to its next step of development. We sometimes call these
+“gates.” Requirements assessments at such review points are critical. They may iden-
+tify the need to reassess project drivers, including:
+
+¢ Accelerate or emphasize particular design areas
+* Relax design budgets
+
+¢ Reallocate requirements
+
+* Consider operational work-arounds
+
+¢ Acknowledge a program slip
+
+¢ Revise funding profiles
+
+Requirements documentation notionally falls into nine classes (Fig. 4-9). These are
+often designated as specifications. The figure also shows descriptive or supporting
+documents which need to be current with the requirements baseline.
+
+Based on mission needs, analyses, and validation exercises, the system require-
+ments document (usually called “system requirements specification”) should cover
+every relevant aspect of what the system should do (functions) and how well it should
+do it (performance requirements). It should address every aspect of system perfor-
+mance. Since ideally system requirements are the basis for segment requirements, they
+
+92 Requirements Definition 4.3
+
+Compliance Documents Descriptive & Supporting
+
+Systems Documents
+Operational Requirements :
+Mission Review (SRR) Analysis Reports
+
+Operations Concept
+Development Concept
+
+Description of
+System Architecture
+
+Requirements
+
+Extemal
+Interfaces
+
+System |
+Standards
+System |
+Plans
+—c||
+Cc
+
+‘ontrot
+Documents
+
+Facility |
+Specification
+
+i]
+
+System
+
+Specification
+
+ul
+
+Segment l
+Specifications*
+
+* Requirements specifications
+
+Fig. 4-9. Requirements Documentation Hierarchy or System Specification.
+
+should come before the latter. However, once segments are defined, there may be
+trade-offs required at the system level in response to cost, interface issues, perfor-
+mance limitations, or schedules related to segment designs.
+
+We should note that among the system plans derived from requirements are test
+plans which will reflect validation and verification of these requirements in qualifica-
+tion and acceptance processes. These characteristically are reflections from test spec-
+ifications which identify objectives, environments and levels of assembly at which
+tests are to be performed.
+
+It should be remembered that requirements specifications, at system and lower
+levels, are potentially subject to change. Therefore, they should be designated, “‘pre-
+liminary” prior to reviews at each stage of design. During formal design phases, while
+requirements may have to be traded, the specifications must, like design documents,
+be subject to rigorous change control.
+
+In addition, when requirements specifications at a top level govern more than one
+system segment, tailoring to accommodate the specific character of a segment may be
+appropriate. This is particularly so with requirements not directly associated with
+system performance.
+
+Interface Management
+
+Often, developers overlook or assume external interfaces in the early stages of
+system development, but they must be carefully considered with the total system
+architecture. Internal to the system, documenting interfaces between segments, usually
+through interface control documents or ICDs, is the key to integrating and maintaining
+relationships between these segments. The system level ICD may be referred to or
+included in the system specification. Documents covering critical interfaces, such as
+the spacecraft-to-ground segment for FireSat, can become highly complex. Two
+guidelines are important in developing and refining interface documents. Each docu-
+ment normally covers only two segments, although multiple elements within segments
+may require consideration of relationships with other segments. In general, we should
+avoid designs necessitating such added complexity.
+
+4.4 Summary: The Steps to a Requirements Baseline 93
+
+In all cases, we must document these agreements at every level of design, usually
+in ICDs. At the system level, project managers or system engineers control these,
+while internal to segments, this is the responsibility of individual element leaders (see
+Chap. 16). Although the content and format of interface documents vary significantly
+with products and organizations, elements always addressed include physical and data
+or signal interfaces and interactions. Thus pin connections and message formats
+clearly must be defined in interface documents; but the characteristics of gyro drift and
+star sensor performance (such as nonlinearities of the transfer function, output axis
+coupling or star sensor noise) require the same definition level so that the mission
+ground station can correctly calibrate them.
+
+4.4 Summary: The Steps to a Requirements Baseline
+
+We have commented that we cannot prescribe a single means for establishing
+requirements. This chapter does, however, present guidelines for establishing a
+requirements baseline in approximately sequential order. This baseline is a reference
+not only for establishing the premises for functional design, but also a means of
+continually assessing the impact of design decisions on requirements validation. We
+can predetermine some requirements, such as constraints on a system. (One example
+could be the requirement to use existing NASA ground facilities.) We must recognize
+that requirements can and do change and that flexibility in the design process is
+necessary to accommodate such change, as in the need to iterate the relationships
+among design, functions and requirements. Documentation is also a critical aspect of
+the requirements process, for sustaining the baseline reference, as well as providing
+the translation for system development of the mission objectives.
+
+TABLE 4-4. Steps to Developing a Requirements Baseline.
+
+. Identify the customer and user of the product or services. A customer may be a procuring
+agent but not the ultimate user and both must be understood.
+
+. Identify and prioritize customer/user objectives and needs for the mission to be
+accomplished.
+
+. Define internal and external constraints.
+
+. Translate customer/user needs into functional attributes and system characteristics.
+Quality Function Deployment is one tool to do this.
+
+.. Establish functional requirements for system and provide for decomposition to elements.
+. Establish functional flow and representative for its performance of functions.
+
+. Translate functional attributes into technical characteristics which will become the
+requirements for the physical system.
+
+. Establish quantifiable requirements from all the above steps.
+
+. Through the use of block diagrams expressing interfaces and hardware/software/data
+relationships for the system level.
+
+. From the architecture expressed by step 9 at the system level, decompose the functional
+requirements and characteristics sets to successive lower levels, i.e., the next level
+defining the basis of the elements of the system.
+
+. Atall the steps above, iteration with preceding activities is necessary both to test the
+assumptions made and to reconcile higher levels of requirements and functional
+implementation.
+
+
+94 Requirements Definition 4.4
+
+In the steps which relate to determining requirements, every requirement must have
+at least the following three components: first, “what” the system is to do (the function);
+second, “how well” it is to perform the function (performance requirement); last, how
+we verify the requirement (verification). This last component should be of particular
+concern to us early in the requirements development process, and we should translate
+it into a verification and validation plan which will govern the quality and qualification
+test programs.
+
+Table 4-4 lists ten steps to establishing a requirements baseline in the early phase
+of a development program. It emphasizes activities concerned with analyzing and
+validating system requirements versus the design of segments, subsystems, or compo-
+nents. These activities produce a hierarchical baseline of requirements which lead to
+allocation throughout a decomposed system.
+
+References
+
+Blanchard, B. and W. Fabrycky. 1990. Systems Engineering. Englewood Cliffs, NJ:
+Prentice-Hall, Inc.
+
+Chubb, W.B., and G.F. McDonough. 1991. System Engineering Handbook MSFC-
+HDBK-1912. Huntsville, AL: NASA Marshall Space Flight Center.
+
+Defense Systems Management College. 1990. System Engineering Management
+Guide (3rd Edition). Ft. Belvoir, VA: Defense Systems Management College.
+
+Electronic Industries Association. 1998. Standard 632. EIA.
+Institute of Electrical and Electronic Engineering. 1996. Standard 1220. IEEE
+
+International Council on Systems Engineering. 1998. Systems Engineering Handbook.
+INCOSE.
+
+International Council on Systems Engineering. 1996. “Systems Engineering Practices
+and Tools.” Proceedings of Sixth Annual Symposium.
+
+Lugi, V. Berzins. 1988. “Rapidly Prototyping Real-Time Systems.” JEEE Software.
+September: 25-36.
+
+McClure, C. 1988. Structured Techniques, The Basis for CASE. Englewood Cliffs, NJ:
+Prentice Hall, Inc.
+
+Shishko, R. and R.G. Chamberlain. 1992. NASA Systems Engineering Handbook.
+Washington, DC: NASA Headquarters.
+
+Wertz, James R. and Wiley J. Larson. 1996. Reducing Space Mission Cost. Torrance,
+CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer Academic
+Publishers

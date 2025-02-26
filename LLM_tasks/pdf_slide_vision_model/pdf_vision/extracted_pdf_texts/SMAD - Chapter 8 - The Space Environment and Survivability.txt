@@ -1,0 +1,2144 @@
+
+Chapter 8
+The Space Environment and Survivability
+
+8.1 The Space Environment
+The Solar Cycle; The Gravitational Field and
+Microgravity; The Upper Atmosphere; Plasmas,
+the Magnetic Field, and Spacecraft Charging;
+Radiation and Associated Degradation
+
+8.2 Hardness and Survivability Requirements
+The Nuclear Weapons Environment and Its Effect
+on Space Systems; Other Hostile Environments;
+Spacecraft Hardening, Strategies for Achieving
+Survivability
+
+8.1 The Space Environment
+
+Alan C. Tribble, Intellectual Insights
+
+D.J. Gorney, J.B. Blake, H.C. Koons, M. Schulz, A.L. Vampola,
+R.L. Walterscheid, The Aerospace Corporation
+
+James R. Wertz, Microcosm, Inc.
+
+The near-Earth space and atmospheric environments strongly influence the per-
+formance and lifetime of operational space systems by affecting their size, weight,
+complexity, and cost. Some environmental interactions also limit the technical poten-
+tial of these systems. They can lead to costly malfunctions or even the loss of compo-
+nents or subsystems [Tribble, 1995; Hastings and Garrett, 1996; DeWitt et al., 1993].
+
+By itself, operating under vacuum-like conditions can pose significant problems for
+many spacecraft systems. When under vacuum, most organic materials will outgas
+—the generation of spurious molecules which may act as contaminants to other
+surfaces. Even before reaching orbit, particles from the atmosphere may fall onto
+optical surfaces and degrade the performance of electro-optical instrumentation.
+Because there is no practical way to clean spacecraft surfaces once the vehicle reaches
+orbit, maintaining effective contamination control during design and development is a
+significant issue for most spacecraft [Tribble et al., 1996].
+
+Once orbit is obtained, the spacecraft is subjected to a very tenuous atmosphere
+[Tascione, 1994]. At lower orbits a spacecraft will be bombarded by the atmosphere
+at orbital velocities on the order of ~8 km/s. Interactions between the satellite and the
+neutral atmosphere can erode satellite surfaces, affect the thermal and electrical
+properties of the surface, and possibly degrade spacecraft structures.
+
+203
+
+204 The Space Environment and Survivability 8.1
+
+At shuttle altitudes, ~300 km, about 1% of the atmosphere is ionized. This fraction
+increases to essentially 100% ionization in the geosynchronous environment. The
+presence of these charged particles, called the plasma environment, can cause differ-
+ential charging of satellite components on the surface and interior of the vehicle. If
+severe, this charging can exceed breakdown electric fields and the resulting electro-
+static discharges may be large enough to disrupt electronic components. More energet-
+ic space radiation, such as electrons with energies from about 200 keV to 1.5 MeV,
+can become embedded in dielectric components and produce electrostatic discharges
+in cable insulation and circuit boards. This bulk charging may disrupt a subsystem’s
+signals or the operation of its devices. Even if mild, the charging may alter the electri-
+cal potential of the spacecraft relative to space and affect the operation of scientific
+instrumentation.
+
+Very energetic (Me V-GeV) charged particles can be found in the trapped radiation
+belts, solar flare protons, and galactic cosmic rays. The total dose effects of this high-
+energy radiation can degrade microelectronic devices, solar arrays, and sensors. A
+single energetic particle can also cause single-event phenomena within micro-
+electronic devices which can temporarily disrupt or permanently damage components.
+
+Lastly, orbiting spacecraft are periodically subjected to hypervelocity impacts by
+1 pm or larger sized pieces of dust and debris. If the impacting particles originate in
+nature they are termed micrometeoroids. If the particles are man-made they are termed
+orbital debris. A single collision with a large micrometeoroid or piece of orbital debris
+can terminate a mission. The probability of this occurring will increase significantly
+with the introduction of large constellations of satellites.
+
+The subject of space environment effects is, by itself, an area of active research.
+The more critical of the various effects are discussed below.
+
+8.1.1 The Solar Cycle
+
+This subject is of particular interest because of the fact that the solar activity is seen
+to vary with an 11-year cycle as shown in Fig. 8-1 [NOAA, 1991]. The plot shows the
+F10.7 index, which is the mean daily flux at 10.7 cm wavelength in units of 10-22
+W/m? - Hz. The peaks in the F10.7 index are called solar maxima, while the valleys
+are called solar minima. Note that the variations are substantial on a day-to-day basis
+and that one solar maximum may have levels that vary dramatically from other solar
+maxima. Consequently, predicting the level at any given future time is highly
+uncertain. On the other hand, the average over an extended period of time is well
+known. As will be seen, many space environment effects are strongly dependent on
+the solar cycle.
+
+8.1.2 The Gravitational Field and Microgravity”
+
+Microgravity, also called weightlessness, free fall, or zero-g, is the nearly complete
+absence of any of the effects of gravity. In the microgravity environment of a satellite,
+objects don’t fall, particles don’t settle out of solution, bubbles don’t rise, and convec-
+tion currents don’t occur. Yet in low-Earth orbit, where all of these phenomena occur,
+the gravitational force is about 90% of its value at the Earth’s surface. Indeed, it is the
+gravitational field that holds the satellite in its orbit.
+
+* Contributed by James R. Wertz, Microcosm, Inc.
+
+8.1 The Space Environment 205
+
+F10.7 Solar Radio Flux (10 wim « Hz)
+
+50
+1940 1950 1960 1970 1980 1990 2000
+
+Year
+
+Fig. 8-1. Observed Daily Radio Flux at 10.7 cm Adjusted to 1 AU.
+
+In Earth orbit microgravity comes about because the satellite is in free fall—i.e., it
+is continuously falling through space and all of the parts of the satellite are falling
+together. In a circular orbit the forward velocity of the spacecraft (tangential to the
+direction to the Earth) is just enough that the continual falling of the spacecraft toward
+the Earth keeps the satellite at the same distance from the Earth’s center. Moving ina
+circular orbit requires a continuous acceleration toward the center.
+
+The term microgravity is used in the space environment because, in practice, zero
+gravity cannot actually be achieved. Two objects traveling very near each other in
+orbit will not travel in quite the same path due to differences in the gravitational forces
+or external nongravitational forces acting on them. Two objects held side by side and
+dropped from a tall building will both accelerate toward the center of the Earth and, as
+they fall, will converge slightly toward each other. From the point of view of the
+objects, there is a small component of Earth gravity that pulls them toward each other.
+An orbiting spacecraft under the influence of atmospheric drag or solar radiation pres-
+sure will feel a very small force due to this external pressure. This force can mimic the
+effect of gravity, causing heavy particles in solution to settle toward the front end of a
+moving spacecraft. Similarly, a rotating spacecraft produces “artificial gravity” due to
+centrifugal force. Finally, tidal forces, sometimes called gravity-gradient forces, come
+about because of very small differences in the force of gravity over an extended object.
+For a spherical bubble drifting in orbit, the force of gravity on the lower edge of the
+bubble will be stronger than at the center of mass and weaker at the far edge of the
+bubble. This very small difference in forces results in “tides” which will distort the
+shape of the bubble and elongate it toward and away from the direction to the Earth.
+
+For most practical applications, microgravity effects in low-Earth orbit can be
+reduced to the level of 10-6 g = 1 pg). A level of 10-7 g can be achieved over a very
+small region near the center of mass of the spacecraft. Table 8-1 provides formulas for
+the most common forces in the microgravity environment. In this table, z is the
+direction toward nadir and Z is the acceleration in the nadir direction. wis the angular
+velocity of the satellite in its orbit. Note that for a nadir-pointing spacecraft, the space-
+craft rotates in inertial space at a rate of one rotation per orbit and thus will add to the
+acceleration environment due to the centrifugal force of this rotation. In low-Earth
+
+206 The Space Environment and Survivability 8.1
+
+orbit, the lowest microgravity level can be achieved in an inertially-oriented spacecraft
+rather than a nadir-oriented spacecraft. The last row in Table 8-1 is the coriolis force
+which is an apparent sidewise force that occurs whenever objects move (e.g., fluid
+flow in a chemical process) in a rotating reference frame, such as a gravity-gradient
+stabilized spacecraft.
+
+TABLE 8-1. Equations for Microgravity Level. @ is the orbital angular velocity. @,e> =
+(u/a3)*/2 = 0.00106 rad/s. x, y, and z are the distances from the spacecraft center
+of mass.
+
+x direction y direction z direction
+(velocity) (orbit normal) (nadir)
+
+Aerodynamic Drag
+
+Gravity Gradient
+
+Centrifugal (due to spacecraft
+rotation in inertial frame)
+
+Sinusoidal Vibration along
+X axis of frequency f
+and amplitude A
+
+Coriolis Force from material
+moving in the spacecraft frame
+
+TABLE 8-2. Microgravity Levels. Each entry gives the conditions under which a microgravity
+level of 1 yg will be achieved, assuming a gravity-gradient stabilized spacecraft at
+700 km. c.m. = center of mass.
+
+x direction y direction z direction
+
+Aerodynamic Drag Altitude of 360 km at solar _
+max, 260 km at solar min
+for m/CpA = 65 kg/m?
+
+Coriolis Force 2=4.6mm/s x =-4,.6 mm/s
+
+Centrifugal 7.3 m from c.m. 7.3 m from c.m.
+Sinusoidal Vibration A=2x 10-9 mat 10 Hz
+
+Table 8-2 uses the formulas in the previous table to compute the conditions under
+which 1 pg is achieved. This gives an idea of the scale over which specific micro-
+gravity values can be obtained. Microgravity levels could be substantially lowered by
+conducting microgravity experiments well away from the vicinity of the Earth or other
+large objects.
+
+Microgravity leads to a wide variety of chemical and manufacturing processes that
+cannot occur on the surface of the Earth. Heavier particles in a solution do not settle
+out and bubbles do not rise to the surface. This allows uniform, universal mixing and
+permits chemical reactions to occur that could not occur on Earth because separation
+or weight collapse would hinder completion of the reaction or hardening of the
+material. Surface tension and other inter-molecular forces can take over that would
+
+8.1 The Space Environment 207
+
+otherwise be dominated by gravitational settling. Similarly, convection does not occur
+in space and heated materials do not churn or boil. This allows differential heating to
+take place to provide other chemical reactions. Because settling does not occur, very
+large crystals can be formed in space which have a variety of industrial applications.
+Containerless processing and working in the vacuum of space can lead to extremely
+pure chemicals for use in both pharmaceuticals and manufacturing. Microgravity is a
+whole new science which is just beginning to evolve.
+
+8.1.3 The Upper Atmosphere*
+
+The upper atmosphere affects spacecraft by generating aerodynamic drag lift and
+heat, and through the chemically corrosive effects of highly reactive elements such as
+atomic oxygen. The effects of aerodynamic lift and heating are important during
+launch and reentry. Aerodynamic drag is addressed in Sec. 6.2.3.
+
+Drag depends on the ballistic coefficient (which is a function of atmospheric com-
+position and temperature), velocity relative to the wind, and atmospheric density. We
+can either estimate the ballistic coefficient based on the configuration of the space-
+craft, or bound the problem using typical upper and lower limits as shown in Table 8-3.
+
+TABLE 8-3. Typical Ballistic Coefficients for Low-Earth Orbit Satellites. Values for cross-
+sectional area and drag coefficients are estimated from the approximate shape,
+size, and orientation of the satellite and solar arrays. [XA = cross-sectional]
+
+Mass
+
+277
+37 —
+
+JOscart |
+| Interoas.-16 |
+[viking |
+[Explorer-11 |
+[Sp Teles. [11,000] cytind.” |
+1
+1
+
+Viking
+7
+
+OSO-8
+
+eRst
+
+enema [| |
+
+*With solar arrays
+
+* Contributed by R. L. Walterscheid, The Aerospace Corporation.
+
+208 The Space Environment and Survivability 8.1
+
+Strong drag occurs in dense atmospheres, and satellites with perigees below
+~120 km have such short lifetimes that their orbits have no practical importance.
+Above ~600 km, on the other hand, drag is so weak that orbits usually last more than
+the satellites’ operational lifetimes. At this altitude, perturbations in orbital period are
+so slight that we can easily account for them without accurate knowledge of the atmo-
+spheric density. At intermediate altitudes, roughly two variable energy sources cause
+large variations in atmospheric density and generate orbital perturbations.‘These vari-
+ations can be predicted with two empirical models: the Mass Spectrometer Incoherent
+Scatter (MSIS) and the Jacchia models [Hedin, 1986; Jacchia, 1977].
+
+Altitudes between 120 and 600 km are within the Earth’s thermosphere, the region
+above 90 km where the absorption of extreme ultraviolet radiation from the Sun results
+in a very rapid increase in temperature with altitude. At ~200—-250 km, this tem-
+perature approaches a limiting value, called the exospheric temperature, the average
+values of which range between ~600 and 1,200 K over a typical solar cycle. The ther-
+mosphere may also be strongly heated from geomagnetic activity, which transfers
+energy from the magnetosphere and ionosphere. Heating of the thermosphere
+increases atmospheric density because the thermosphere’s expansion causes increased
+pressure at fixed altitudes.
+
+Heating due to extreme ultraviolet radiation and its solar cycle variation has the
+greatest effect on satellite lifetimes. Geomagnetic disturbances are generally too brief
+to significantly affect lifetimes. Extreme ultraviolet radiation from the Sun is com-
+pletely absorbed before it reaches the ground and is not measured routinely by
+satellite-borne instruments; consequently, its effects are unpredictable. Solar activity
+is monitored using such proxy indices as sunspot number and the F10.7 index which
+was previously discussed.
+
+Figures 8-1 to 8-4 provide a means of estimating satellite lifetimes based on the
+information available to the mission designer. Figure 8-2 provides the atmospheric
+density as a function of altitude corresponding to various values of the F10.7 index.
+Densities were obtained from the MSIS atmospheric model (Hedin, 1986]. Below
+about 150 km, the density is not strongly affected by solar activity. However, at
+satellite altitudes in the range of 500 to 800 km, the density variations between solar
+maximum and solar minimum are approximately 2 orders of magnitude.
+
+The large variations in density imply that satellites will decay more rapidly during
+periods of solar maxima and much more slowly during solar minima. This is clearly
+demonstrated in Fig. 8-3 which shows the altitude as a function of date for a set of 9
+hypothetical satellites launched over a 6-year period. We assume that all of the satel-
+lites were launched in a perfectly circular orbit at 700 km altitude—3 in 1956 at the
+beginning of a solar maximum, 3 in 1959 toward the end of the solar maximum, and
+3 in 1962 near the time of solar minimum. In each group one satellite had a ballistic
+coefficient of 20 kg/m2, one was at 65 kg/m2, and one at 200 kg/m2. The histories of
+the 9 satellites are shown in the graph.
+
+Several characteristics of satellite decay are easily seen in Fig. 8-3. Satellites decay
+very little during solar minimum, and then rapidly during solar maximum. For one
+satellite, each solar maximum period will generally produce larger decay than the
+previous maximum because the satellite is lower. It will, of course, depend on the level
+of the particular solar maximum. The effect of the solar maxima will also depend on
+the satellite ballistic coefficient. Those with a low ballistic coefficient will respond
+quickly to the atmosphere and will tend to decay promptly. Those with high ballistic
+coefficients will push through a larger number of solar cycles and will decay much
+
+8.1 The Space Environment 209
+
+10°06 =
+|
+10-07
+10-08
+10-9
+oo Solar Maximum =|
+E 10-70
+i) F10.7 = 225, ap = 20
+S jot ~
+2
+‘a 12 a F10.7 = 175, ap = 16
+ec 10° = 4
+a 13 Solar M —
+107 olar Minimum ———
+107-14 Ste
+F10.7 = 075, ap = 08
+40-15
+F10.7 = 125, ap = 12 Time Average
+10716 I I
+100 200 300 400 500 600 700 800 900 1,000
+Altitude (km)
+
+Fig. 8-2. Density vs. Altitude for Various F10.7 Values. Note that the curves have the same
+shape as the altitude maintenance curves in Fig. 7-8.
+
+800 T T T T T T T
+
+750+ Start 1956 |
+Start 1959 Ballistic Coefficient = 200 kg/m
+Start 1962 Re-enter Approximately 2153
+
+700
+
+A
+Re-enter Approximately 2135 4
+
+600 -
+
+5007
+
+Altitude (km)
+
+Ballistic Coefficient
+20 kg/m
+
+Ballistic Coefficient 4
+65 kg/m
+
+4507
+
+350/ Copyright 1999 1
+
+Microcosm, Inc.
+4
+
+300 n 1 L L n
+1950 1960 1970 1980 1990 ' 2000 2010 2020 2030
+
+Time (years)
+
+Fig. 8-3. Altitude as a Function of Date for 9 Hypothetical Satellites Launched over a
+6-Year Period. The bars at approximately 400 km altitude mark the periods of solar
+maxima when the FI0.7 index was above 150.
+
+more slowly. Note that the time for satellite decay is generally measured better in solar
+cycles than in years. All 9 satellites reentered during periods of solar maximum. For
+the range of ballistic coefficients shown, the lifetimes varied from approximately half
+of a solar cycle (5 years) to 17 solar cycles (190 years). Predicting where the satellite
+would come down would be remarkably difficult.
+
+8.1
+
+The Space Environment and Survivability
+
+210
+
+‘[g661] wesBoud ay eg ou) yy payeioueb eyeq ‘sued jesaes 10) Ajpides sou Aeoap jIM oyJayes Oy) UBYM LUNWUIXeLW JefOS JO We}S Sy} ye YOUNR]
+s]Ueseidal SAIN JAMO} By) Pue ARo~ap JO |SA9} MO] B 9q |]IM 9494} UBYM LUNWIUIWW JEIOS JO Pe}s Oy} ye YOuNe] Sjusseidad avind saddn ay} ‘}UsI9Yj909
+ONSITEq YOO 10-4 ‘SJUB]D1e0D IISINeg SAE WUesesdaey puke ‘aj9AZD JejOg ay O} diysuoHejay ‘apnyy Jo UOHOUNY e Se SoUNasIT aN}[EIeS = “p-g “BI
+(wy) epnyy Buyers
+000‘'t 006 008 o02 009 o0S O00r o0€ 002 oof 0
+
+100°0
+“Ou] “WSOSOJDIIN
+661 wBAdog
+— = 3
+WNWIXe| Je]0 boro
+1 ye Buys uqiC
+f
+== WNUIUIF Je|0S LO
+____ye Buleis uo =
+2/54 Oz : L 2
+= iw9}01H}909 ,w/64 002 =
+nse = 1U9191jJ905 ®
+= + onsineg o ©&
+: zu/6y S9 ool
+= ]U9191jj209
+t onsieg | +
+000'L
+
+8.1 The Space Environment 211
+
+Figure 8-4 summarizes satellite decay in a convenient manner for mission analysis
+use. The 3 sets of curves show lifetime as a function of initial circular altitude for
+satellites with ballistic coefficients that are low (20 kg/m2), moderate (65 kg/m), and
+high (200 kg/m2). The spread in the curves near the middle represents the difference
+between solar maximum (F10.7 = 225) and solar minimum (F10.7 = 75). At the left of
+the figure, below about 200 km, satellite orbits decay within a few days, the atmo-
+spheric density is largely independent of the solar cycle (see Fig. 8-11), and the upper
+and lower curves for each coefficient begin to merge. From there to lifetimes of about
+half a solar cycle (approximately 5 years) there will be a very strong difference
+between satellites launched at the start of solar minimum (upper curve) and those
+launched at the start of solar maximum (lower curve). Also note that the difference
+between the solar maximum and solar minimum curves is larger for satellites with a
+lower ballistic coefficient as we would expect. (Balloons respond to drag more than
+bowling balls do.) After about half a solar cycle, satellites on the upper curve of each
+pair will hit solar maximum and the curve will become much flatter. In contrast, those
+on the lower curve will hit solar minimum and will nearly stop decaying such that the
+curve becomes nearly vertical. This oscillatory pattern continues with a frequency of
+the 11-year solar cycle as can be seen in the upper portion of the curves. Finally at high
+altitudes and long lifetimes the curves come together because the satellite will see a
+large number of solar cycles and it will make very little difference when the satellite
+starts. of course the actual lifetime for any particular satellite will depend on both the
+actual F10.7 index variations and the design and attitude history of the satellite. None-
+theless, Fig. 8-13 provides an estimate of the extrema for use in mission design and
+can be used to estimate the lifetime for a specific satellite if the ballistic coefficient and
+launch date relative to the solar cycle are know.
+
+Atomic oxygen—the predominant atmospheric constituent from ~200 km to
+~600 km—is another important part of the upper atmosphere’s effect on space
+systems. This form of oxygen can react with thin organic films, advanced composites,
+and metallized surfaces [Visentine, 1988], resulting in degraded sensor performance.
+For example, Kapton, a material commonly used for insulation and seals, erodes at a
+rate of approximately 2.8 um for every 1024 atoms/m?2 of atomic oxygen fluence
+[Leger et al., 1984]. The fluence, A, over a time interval T, is given by
+
+Fy = pyVT (8-1)
+
+where (,, is the number density of atomic oxygen (see Fig. 8-5), and Vis the satellite
+velocity. (See tables on inside rear cover.) In addition, chemical reactions involving
+atomic oxygen may produce radiatively active, excited constituents which, in turn,
+emit significant amounts of background radiation, create effects such as “Shuttle
+glow,” and interfere with optical sensors.
+
+Atomic oxygen forms when solar ultraviolet radiation dissociates molecular
+oxygen. Above 110 km, atmospheric constituents diffuse, and each constituent’s
+density varies with altitude according to its scale height. The scale height of a
+constituent is the height change over which the density drops to 1/e of its value. In
+diffusive equilibrium, the scale height is inversely proportional to its molecular
+weight. Thus, the density of light constituents decreases less rapidly with altitude than
+the density of heavy constituents, and eventually the light constituents dominate the
+mixture of gases. Atomic oxygen is lighter than the molecular nitrogen and oxy-
+gen; therefore, near ~170 km altitude, atomic oxygen becomes the most abundant
+constituent.
+
+212 The Space Environment and Survivability 8.1
+
+800
+
+\ —— F10.7 = 50
+‘ ---- F10.7 = 250
+
+600
+
+400
+
+Altitude (km)
+
+200
+
+107 1012 1017 1072
+Number Density (atoms/m?)
+
+Fig. 8-5. Altitude Profiles of Number Density of Atomic Oxygen at Solar Minimum (Solid
+Line) and Solar Maximum (Dashed Line).
+
+Figure 8-5 shows altitude profiles of atomic oxygen number density over the
+equator for F10.7 values of 50 and 250. These values represent the extremes for solar
+minimum and maximum, respectively. The profiles are based on predictions from the
+MSIS model {Hedin, 1986] for 3 p.m. local time at northern hemisphere equinox and
+for geomagnetically quiet conditions [Walterscheid, 1989]. Up to 150 km, the solar-
+cycle variation is small, but it increases steadily with increasing altitude. By 300 km,
+the number density of atomic oxygen at solar maximum becomes an order of magni-
+tude greater than at solar minimum.
+
+The large solar-cycle variation in atomic oxygen means spacecraft materials can be
+selected based on phasing the mission to the solar cycle. Since there are large differ-
+ences between solar cycles, material choices made on the basis of average solar max-
+imum conditions may be inappropriate because of the possibility of more extreme
+solar maximum conditions.
+
+8.1.4 Plasmas, The Magnetic Field, and Spacecraft Charging”
+The Earth’s magnetic field is roughly dipolar; that is,
+B(R,A) = (1 + sin? A)!/2 By/R3 (8-2)
+
+where B is the local magnetic field intensity, A is the magnetic latitude, R is the radial
+distance measured in Earth radii (Rg), and Bg is the magnetic field at the equator at the
+Earth’s surface [By = B(R = Rp, A= 0) = 0.30 gauss].
+
+As shown in Fig. 8-6, the interaction between the solar wind and the Earth’s
+magnetic field causes magnetic field on the night side of the Earth to stretch into a very
+elongated structure known as the magnetotail (see Tsyganenko [1987] for a more
+complete model of the Earth’s magnetic field). A thin plasma sheet bifurcates the
+magnetotail, which extends over 1,000 Earth radii parallel to the flow velocity of the
+solar wind.
+
+* Contributed by H. C. Koons, The Aerospace Corporation.
+
+8.1 The Space Environment 213
+
+Bow Shock Magnetosheath
+>
+
+—
+Solar Wind , res
+
+Polar
+
+Boundary Layer ————_—_
+
+Radiation Belt and~
+Ring Current
+
+Polar Wind
+
+pebbb db dd bedded daa
+
+Magnetopause
+
+Fig. 8-6. A Cross Section of the Earth’s Magnetosphere. It shows the key plasma and
+energetic particle populations which respond to variations in solar wind parameters.
+
+Through the interaction between the solar wind and the Earth’s magnetic field,
+some of the solar wind’s kinetic energy is converted to magnetic energy stored in the
+magnetotail. Because this energy cannot build up indefinitely, magnetic substorms
+dissipate it from time to time. These substorms produce an energized plasma (5 to
+50 keV) that is injected toward the Earth. This hot plasma can extend into geosynchro-
+nous orbits, charging the surface of any spacecraft within it to high negative voltages.
+
+The electrical potential of a spacecraft or component is measured with respect to
+the plasma in which it is immersed where the net current flow is zero. That is, the
+following currents must cancel each other: (1) the electron current from the plasma to
+the vehicle, (2) the ion current from the plasma to the vehicle, (3) the secondary elec-
+tron current, (4) the backscattered electron current, and (5) the photoelectron current.
+The voltage at the component’s surface also depends on the material’s capacitance
+with respect to the surrounding materials, especially the vehicle ground.
+
+Because materials have varying secondary emission coefficients and photoelectron
+currents, their equilibrium potentials also differ. An electrostatic arc occurs if the elec-
+tric field exceeds the breakdown field along the surface of the material, through the
+material, or between adjacent materials. Electromagnetic interference, EMI, from
+such arcs can cause spacecraft to operate erratically [Robinson, 1989].
+
+Surface charging detrimental to vehicle operation occurs mainly in orbits where
+electrons with energies of 10 to 20 keV dominate the electron current from the plasma
+to the vehicle. At low altitudes this charging occurs only at high latitudes where
+auroral electrons collide with the vehicle which is passing through an otherwise cold,
+low-density plasma [Gussenhoven et al., 1985]. For other low-altitude locations, low-
+energy electrons usually develop enough current to keep electric fields below
+breakdown levels.
+
+In higher orbits, such as geosynchronous, surface charging occurs during mag-
+netospheric substorms between the longitudes corresponding to midnight and dawn
+[Fennell et al., 1983]. We can approximate the electron-flux distribution during a
+substorm by summing a cold and a hot Maxwellian distribution. The cold component
+has a density of 0.2 cm-3 and a temperature of 0.4 keV; the hot component has a
+
+214 The Space Environment and Survivability 8.1
+
+density of about 2.3 cm-3 and a temperature of 25 keV [Mullen et al., 1981]. We must
+design spacecraft which either keep the differential charging caused by this plasma
+well below breakdown potentials, or can tolerate the resulting electrostatic discharges.
+
+Design guidelines are available to help reduce differential potentials on vehicle
+surfaces [Purvis et al., 1984; Vampola et al., 1985]. For example, we can select candi-
+date materials and conductive coatings, apply numerical or analytical models using
+their quantifiable characteristics, and determine their differential potentials in space.
+If we cannot prevent discharges by selecting alternative materials, we might consider
+alternatives such as special filtering, cabling, or grounding. We can employ coupling
+models for electromagnetic interference simulation, and test the vehicle for electro-
+static discharges in its flight configuration.
+
+It is important to note that while differential charging as discussed in the preceding
+paragraphs is not seen in lower equatorial orbits, the spacecraft potential may be as
+much as 90% of the solar array voltage more negative than that of the surrounding
+plasma depending on the configuration of the spacecraft electrical power supply. This
+may be aconcern on scientific missions, where nonbiased measurements of the plasma
+environment are desired, and may also give rise to arcing or other undesirable effects
+if high voltage power supplies are used [Tribble, 1995].
+
+8.1.5 Radiation and Associated Degradation
+
+Trapped Radiation*
+
+The Van Allen radiation belts are a permanent hazard to orbiting spacecraft. They
+consist of electrons and ions (mostly protons) having energies greater than 30 keV and
+are distributed nonuniformly within the magnetosphere. As illustrated in Fig. 8-7, the
+energetic electrons preferentially populate a pair of toroidal regions centered on the
+magnetic shells L ~ 1.3 (inner zone) and L ~ 5 (outer zone).
+
+Electrons
+E>0.5 MeV
+
+Fig. 8-7. Electron Belts of the Inner and Outer Zones. The numbers on the contours
+represent the log, of the integral omnidirectional flux in units of particles cm-? s-!, The
+horizontal axis is the magnetic equator marked in units of Earth radii. Only electrons
+with energies above 0.5 MeV are included. [Adapted from Vette et al., 1966, by Schulz
+and Lanzerotti, 1974].
+
+* Contributed by M. Schulz and A. L. Vampola, The Aerospace Corporation.
+
+8.1 The Space Environment 215
+
+A magnetic L-shell is the surface generated by rotating a magnetic field line around
+the dipole axis. It approximately satisfies the equation
+
+R = Lcos2 A (8-3)
+
+where R is the distance in Earth radii from the idealized point dipole near the Earth’s
+center, and A is the magnetic latitude. Thus, the L value of a dipolar magnetic shell is
+its equatorial radius measured in Earth radii. A generalized concept of L, introduced
+by McIlwain [1961], takes account of the way higher harmonics of the main
+geomagnetic field perturb the motion of charged particles from their dipolar trajec-
+tories. Normally, we use this concept instead of the dipole L value for mapping the
+trapped radiation environment. Standard models of the Van Allen belts are available
+from the National Space Science Data Center. The model which provides inner zone
+(L = 1.2 - 2.4) electron data is AE8, which has an average energy range of 40 keV to
+5 MeV [Bilitza et al., 1988]. AE8 has two forms, AE8MIN and AE8MAX, which
+represent the time-averaged environments during solar minimum and maximum.
+
+Outer-zone electron fluxes vary much more over time than inner-zone fluxes.
+Indeed, during a major magnetic storm, the equatorial intensity at a given energy and
+L value may grow by several orders of magnitude (factors of 10) in less than a day.
+Between storms, such flux enhancements usually decay exponentially with an energy-
+dependent lifetime t ~ 10 E(MeV) days at L > 3.
+
+Available proton models are AP8MIN and AP8MAX, which also represent the
+solar minimum and maximum periods, At solar maximum, the increased atmospheric
+densities decrease the proton fluxes because the trapped protons collide with the
+atmosphere at low altitudes. The AP8 models cover the energy range from 100 keV to
+> 400 MeV. Figure 8-8 shows some of AP8MIN’s typical contours for proton fluxes
+in (R, A) space. Since the MIN model predicts slightly more flux than the MAX model,
+it can be used during solar maximum or as a conservative model for long-term
+missions.
+
+Protons
+E>100 MeV
+
+3 Ae
+
+Fig. 8-8.. High-Energy Protons in the Inner Zone. Axes and units are the same as on Fig. 8-7.
+(Note a somewhat different scale.) Data is the omnidirectional flux from the AP8MIN
+model. Only protons with energies above 100 MeV are considered.
+
+Using the energetic proton models (e.g., AP8) is difficult because they are
+organized in terms of B (local magnetic field intensity) and L. Secular variations in the
+Earth’s magnetic field drive the normally stable energetic protons toward lower
+altitudes and the models do not take this into account. Thus, if we project the magnetic
+
+216 The Space Environment and Survivability 8.1
+
+107
+
+0.1
+
+0.3
+
+|
+
+1
+
+0:5 Hemispherical
+08 Shield
+
+12 Thickness
+1.6 (g/cm? of
+Aluminum)
+
+Dose (Rads/yr)
+
+0 2,000 4,000 6,000 8,000 10,000
+Altitude (km)
+
+Fig. 8-9. Radlatlon Dose Rates as a Function of Altitude for Low-Altitude Polar Orbits.
+Dose rates are shown for several shielding depths.
+
+field more than 10-15 years into the future, our calculations will be invalid for low-
+altitude orbits [Konradi and Hardy, 1987]. The present and future configurations of the
+inner-zone proton belt probably will not differ much, provided both are described in
+terms of L and A.
+
+We can determine the appropriate amount of shielding for future spacecraft by
+computing the dose rate for the desired orbit as a function of shield thickness. To do
+so, we must apply a radiation transport computation to the time-averaged space
+environment. Figure 8-9 shows how various shielding depths affect radiation doses in
+low-altitude polar orbits. Figure 8-10 shows results for geosynchronous satellites. A
+rad is that amount of radiation which deposits 100 ergs (= 6.25 x 107 MeV) per gram
+of target material (100 mils of aluminum is equivalent to 0.686 g/cm2). The total
+radiation dose consists of three components: proton dose, electron dose, and
+bremsstrahlung X-ray dose produced by the interaction of electrons with the shielding
+material. In low-Earth orbits, energetic protons in the inner radiation belt contribute
+most to the total radiation dose. Radiation dose strongly depends on altitude; below
+1,000 km the dose increases at approximately the 5th power of the altitude. At
+synchronous altitude the greater than 5 MeV proton dose is negligible and the
+bremsstrahlung dose dominates the electron dose for shield thicknesses greater than
+1 cm.
+
+Figure 8-10 illustrates that protons trapped near a geosynchronous orbit do not have
+enough energy to penetrate 10 mils of aluminum. Nevertheless, many trapped protons
+and heavier ions in this region of space have energies around 10-200 keV. These
+lower-energy ions can harm space systems differently than penetrating radiation. By
+depositing their energy in the spacecraft skin, the lower-energy ions can cause a tem-
+perature rise sufficient to significantly enhance the infrared background. Heat loads of
+up to 0.5 W/m? are possible. These same low-energy ions can degrade the effective-
+ness of paints and protective glass by breaking chemical bonds in their surface layers.
+We cannot shield against these effects.
+
+8.1 The Space Environment 217
+
+107
+
+10°
+
+105 fe
+
+104
+
+Dose (Rads/yr)
+
+10°
+
+102 in
+10 100 1,000 10,000
+
+Shield Thickness (mil - aluminum)
+
+Fig. 8-10. Radiation Dose Rate in Geosynchronous Equatorial Orbit for Various Shield
+Thicknesses.
+
+Solar Particle Events*
+
+Solar particle events (SPEs) occur in association with solar flares. SPEs are rapid
+increases in the flux of energetic particles (~ 1 MeV to above 1 GeV) lasting from
+several hours to several days. On the average, only a few SPEs occur per year;
+however, they have important consequences for man-made systems and for man in
+space. For example, they degrade solar array elements, increase background noise in
+many types of electro-optical sensors, and cause illnesses in astronauts.
+
+Figure 8-11 shows the typical evolution over time of a solar particle event observed
+near Earth. The profile depends on the time evolution of the originating solar flare,
+how long the energetic particles take to diffuse within the solar corona and how the
+particles propagate within the interplanetary medium. Protons of relativistic energies
+arrive at Earth within minutes after the flare’s occurrence. Lower energy (~10’s of
+MeV) protons are slowed by diffusion within the solar corona and by interactions with
+the interplanetary medium. After a solar particle event occurs, proton fluxes decay to
+background noise values over several days. The practical importance of an individual
+event depends on its maximum intensity, its duration, and the relative abundance of
+the highest-energy components and heavy nuclei.
+
+The frequency of proton events peaks within a year or two of sunspot maximum and
+diminishes greatly during the few years surrounding sunspot minimum. Nevertheless,
+intense events can occur virtually any time within the 11-year sunspot cycle except at
+sunspot minimum. Table 8-4 shows when the most and fewest sunspots will occur for
+solar cycles 21-25.
+
+The intensities of typical solar proton events closely follow a log-normal distribu-
+tion [Jursa, 1985; King, 1974; Feynman et al., 1988]; thus, a few individual events can
+dominate the total proton fluence observed over a complete solar cycle. Table 8-5
+shows the parameters of this distribution. For example, using the values in Table 8-5,
+a typical solar proton event has a fluence above 10 MeV of 108-27 cm-2, whereas an
+extreme (30) event would contribute 10(8-27 + 3 x 0.59) om-2 = 1.1 x 10!9 cm-2.
+
+* Contributed by D. J. Gorney, The Aerospace Corporation.
+
+218 The Space Environment and Survivability 8.1
+
+104
+Protons
+> 29 MeV
+10°
+w
+=
+c
+re)
+$10?
+s
+oD X-Rays
+x 1-8A |,
+/
+10! Yul,
+A
+Yiliy
+L-° Protons
+> 500 MeV
+10° £
+
+Time (hours) 1 Day 2Days 1 Week
+
+Fig. 8-11. Typical Time Evolution of a Solar Particle Event Observed on Earth.
+
+TABLE 8-4. Years of Sunspot Maxima and Minima for Solar Cycles 21-25.
+
+Solar Cycle 21 22 23 24 25
+Sunspot Maximum 1979 1990 2001 2012 2023
+Sunspot Minimum 1985 1996 2007 2018 2029
+
+TABLE 8-5. Parameters of the Log-Normal Probability Distributions for Solar Proton
+Events. [King, 1974].
+
+Energy Range (MeV) >10 > 30 > 60 > 100
+Log Fluence (cm-2) 8.27 + 0.59 7.28 + 0.75 6.63 + 0.95 5.77 + 1.24
+Log Peak Flux (cm-2 sec-1) 3.27 + 0.64 2.37 + 0.82 1.88 + 0.78 _
+
+Figure 8-12 shows the probability of the proton fluence (energy >10 MeV) exceed-
+ing a given value over time intervals of 1-7 years (typical of the durations of many
+satellite missions). Solar array outputs typically degrade by a few percent following
+exposure to fluences above ~109 cm-? at energies over ~| MeV, but actual degradation
+rates depend on cell type, cover glass thickness, and cell age.
+
+Galactic Cosmic Rays*
+
+Galactic cosmic rays, or GCR, are particles which reach the vicinity of the Earth
+from outside the solar system. The number and type of nuclei in these particles are
+proportional to those in solar system material. Figure 8-13 shows the energy spectrum
+for several elements. The sum of the curves in the lower energy portion of the figure
+suggests that cosmic rays undergo solar-cycle modulation.
+
+* Contributed by J. B. Blake, The Aerospace Corporation.
+
+8.1 The Space Environment 219
+
+Probability (%)
+
+“40° 10" 10"! 10'2
+Fluence (Particle - cm”)
+
+Fig. 8-12. A Plot of the Probabilities of Exceeding Given Fluence Levels for Satellite
+Mission Durations of 1, 2, 3, 5, and 7 Years. The plot represents protons with
+energies above 10 MeV. These values pertain to satellite missions near the solar
+activity maxima [Feynman et al., 1988].
+
+t
+Helium Nuclei
+
+C+0 Nuclei
+i
+
+1073 L... Iron Nuclei _.'
+
+Flux (ions/m2sr sec MeV/nucleon)
+
+10-8
+
+0-7 i
+10-2, 10-1 109) to 102, 108
+Energy (GeV/nucleon)
+
+Fig. 8-13. Energy Spectra for Several Elements of Galactic Cosmic Rays. The energy for
+hydrogen has been multiplied by a factor of 5 to distinguish it from the helium curve.
+
+Cosmic rays pose a serious hazard because a single particle can cause a malfunction
+in common electronic components such as random access memory, microprocessors,
+and hexfet power transistors. When a single passing particle causes this malfunction,
+we call radiation effects single-event phenomena, or SEP.
+
+A galactic cosmic ray loses energy mainly by ionization. This energy loss depends
+chiefly on the square of the particle’s charge, Z, and can be increased if the particle
+
+220 The Space Environment and Survivability 8.1
+
+undergoes nuclear interactions within an electronic part. Thus, lower-Z (and more
+abundant) ions deposit as much energy in a device as less abundant, higher-Z ions.
+When the galactic cosmic ray leaves electron-hole pairs in a depletion region of an
+electronic device, the electric field in that region sweeps up the pairs. Figure 8-14
+shows this process schematically.
+
+Fast Charged Energetic
+Particle Proton
+
+=
+Hat
+
+TN Nuclear
++
+
+ée
+
+lonization Column awh
+
+Depletion Region 3)
+
+Fig. 8-14. Schematic Showing How Galactic Cosmic Rays Deposit Energy in an Elec-
+tronic Device.
+
+Single-event phenomena include three different effects in electronic components.
+The first is the so-called bitflip, or single-event upset (SEU), which neither damages
+the part nor interferes with its subsequent operation. The second is single-event latch-
+up (SEL). In this case, the part hangs up, draws excessive current, and will no longer
+operate until the power to the device is turned off and then back on. The excessive
+current drawn in the latched condition can destroy the device if the power supply
+cannot handle the current. When latchup demands too much current for the power
+supply, it may drag down the bus voltage, or even damage supply. The third effect is
+single-event burnout (SEB). This causes the device to fail permanently.
+
+To evaluate the frequency of single-event phenomena for a given part, we must
+know three things: the external environment; how the incident energy spectrum and
+particle intensity change as a particle passes through the spacecraft to the sensitive
+device; and how the electronic device responds to ionizing radiation. We find these
+phenomena difficult to evaluate because of the complex interactions between the radi-
+ation environment and the device’s circuit elements. On-orbit failure rates can be
+predicted primarily for single-event upsets in memory devices, with well defined
+sensitive volumes, in which the galactic cosmic rays produce electron-hole pairs. A
+useful equation developed by Petersen [1995] expresses the upset rate R as follows:
+
+R = 200 0;/1905 (8-4)
+
+where R is the number of upsets or errors per bit day, 07, is the limiting cross section
+(sensitive area) of the device in cm2, and Lp 5 is the linear energy transfer (LET) at
+25% of the limiting cross section in units of MeV/mg/cm2. If experimental cross
+section data is not available, but device modeling data is, then geometric data can be
+used in conjunction with the predicted critical charge, and now
+
+R= 2x 10-10 abe2/Q,? (8-5)
+
+8.2 Hardness and Survivability Requirements 221
+
+where R is the number of errors per bit day, a and b are device surface dimensions in
+um, c is the device depth in um, and Q, is the critical charge in pC. These two equa-
+tions have been shown to predict upset rates in the geosynchronous orbit for solar
+minimum conditions with reasonable accuracy. Scale factors for estimating error rates
+for other orbits and other calculational methods may be found in Petersen [1995].
+
+Single-event upset rates in complex devices such as microprocessors, or single-
+event latchups or burnouts in any devices, cannot be reliably predicted. We must resort
+to predictions based on simulated accelerator test observations and flight performance
+of similar devices.
+
+Galactic cosmic rays can also generate background noise in various satellite
+subsystems such as star sensors, infrared detectors, and components employing
+charge-coupled devices. In addition to increased noise signals, these rays create
+spurious events which can masquerade as real signals. The spurious signals can affect
+satellite subsystems depending on the genuine signals’ frequency of occurrence, time
+duration, and repetition, as well as the sophistication of the sensor system. Galactic
+cosmic rays are a potential source of background noise which must be taken into
+account when designing a satellite system. It should also be noted that, while this sec-
+tion addresses effects of galactic cosmic rays, similar effects are caused by high energy
+protons and must be considered for orbits in the range of 1,000-10,000 km altitude.
+
+8.2 Hardness and Survivability Requirements
+
+Paul Nordin, The Boeing Company
+Malcolm K. Kong, TRW Systems & Information Technology Group
+
+Survivability is the ability of a space system to perform its intended function after
+being exposed to a stressing natural environment or one created by an enemy or hostile
+agent. Hardness is an attribute defining the environmental stress level which a space
+system can survive. As an example, a satellite or spacecraft which can withstand an
+X-ray fluence of 1.0 cal/cm? or absorption of 107 rads (Si) of total dose (a rad of
+absorbed dose is approximately 100 ergs/g) has a hardness of that amount. (Fluence is
+the time integral of flux. Flux is the flow of energy per unit time and per unit cross-
+sectional area.)
+
+In the aerospace industry we now consider both natural and hostile environments
+in the definition of hardness and survivability. Well-developed technologies, evolved
+over the last 35 years, make it possible to design satellites to withstand natural and
+modest levels of hostile environments. Although technologies for hardening against
+hostile military threats and for natural survival of satellites overlap, they are distinct
+and are usually treated separately except in the areas of survivability to total dose due
+to the Van Allen belts, single-event effects (SEE) caused by galactic cosmic rays and
+high energy protons, and space/bulk charging due to naturally occurring space plas-
+mas. The latter phenomena must be treated synergistically in the design of satellites.
+
+A military space system or commercial satellite must be survivable if we will need
+its services in times of high stress, such as a nuclear war. To do this, we must under-
+stand what may cause the system to malfunction and then design it to protect against
+failures. Survivability requirements include identifying the environments and their
+intensities and, in most cases, designing the space system so it will continue to perform
+its intended function for a specified time after exposure.
+
+222 The Space Environment and Survivability 8.2
+
+Commercial or scientific satellites usually do not need to be survivable to military
+threats, but planners must be aware that an unhardened satellite may prematurely stop
+operating after even very distant nuclear explosions. A slight hardening of satellites
+can make them much more survivable. (See Sec. 8.2.3.) The Starfish high-altitude
+nuclear test of July 9, 1962, illustrates the vulnerability of unhardened satellites. That
+test, a 1.4 megaton device at 400 km altitude above Johnston Island in the Pacific
+Ocean, caused the failure of several satellites when electrons became trapped in the
+Earth’s geomagnetic field. As a result of those failures, the U.S. Joint Chiefs of Staff
+established hardening guidelines for all military satellites, including operational and
+experimental ones. Ritter [1979] discusses these guidelines.
+
+Studies were conducted by the Defense Threat Reduction Agency (formerly the
+Defense Special Weapons Agency) [Webb, et al., 1995] on the possible effects of a
+small Third World nuclear burst (for example, 50 kT at 120 km altitude over the East
+Asian Peninsula) on known commercial (unhardened) satellites. Satellites considered
+included Hubble Space Telescope, Iridium, ORBCOMM, Globalstar, NOAA, and
+Nimbus. These satellites showed lifetime reductions of 67% to as large as 99%.
+
+It is important to consider survivability from the outset of mission design. For
+example, if the satellite can function within a range of orbit altitudes, the highest of
+these is both the hardest to attack and the most expensive to reach. We should consider
+the system’s survival in each of its life-cycle phases, including concept definition,
+engineering design and development, and operations in orbit. Note, however, that
+historically we have not hardened launch systems because of cost and weight, as well
+as undefined need. The main military threats against space systems are nuclear
+weapons, including directed energy designs such as X-ray lasers; ground- and space-
+based laser weapons; high-velocity-pellet (fragmentation) weapons; high-power
+radio frequency (microwave) weapons; homing kinetic energy weapons; and beam
+weapons using neutral atomic particles. We may use several approaches to make a
+system survivable, with hardening of the satellite as a key element. Section 8.2.4
+describes these possible approaches and discusses their approximate cost and relative
+effectiveness.
+
+8.2.1 The Nuclear Weapons Environment and Its Effect on Space Systems
+
+Nuclear weapons pose the most severe threat to spacecraft or space systems. The
+yield, or explosive power, and accuracy of delivery are such that if a nuclear weapon
+directly attacks a spacecraft, ground station, or any other node of a space system, the
+node will be destroyed. Nuclear weapon yields can range from a few tons to many
+megatons of TNT equivalent (one kiloton of TNT is defined to be 10!” calories). Future
+nuclear exchanges could use yields of a few hundred kilotons to a few megatons,
+depending on the purpose of the specific attack and the weapon’s delivery accuracy.
+Accurate delivery of low yields will achieve the desired kill probability, whereas less
+accurate delivery requires higher yields.
+
+Approximately 80% of the energy from a nuclear weapon detonated in space
+appears in the form of X-rays. Other important effects include small amounts of
+gamma rays and neutrons, as well as small fractions in residual radioactivity and
+kinetic energy of bomb debris. For additional technical detail on nuclear weapons
+effects, see Glasstone and Dolan [1977].
+
+X-Radiation. The X-radiation occurs because just after detonation, nuclear bomb
+material is at 10-100 million K. As a first approximation, the hot bomb material will
+
+8.2 Hardness and Survivability Requirements 223
+
+very quickly radiate the energy as though it were a black body, according to the Stefan-
+Boltzmann’s law:
+
+E =oT*4 (8-6)
+where E is the energy in W/m2, Tis the absolute temperature in K, and ois the Stefan-
+Boltzmann’s constant (5.67 x 10-8 W- m-2- K-4). At higher black-body temperatures,
+more X-ray photons are emitted at higher energies. (This is Wien’s law, which states
+that A, qx T= constant, where A,,,., is the wavelength at maximum intensity and T is
+the absolute temperature of the blackbody.)
+
+The X-ray fluence, F,, at a distance R from a nuclear detonation of yield Y is given
+by
+
+F, =f, Y/(4 0R2) (8-7a)
+= 6.4Y/R2 (8-8a)
+
+where f, is the fraction of the energy emitted as X-rays (= 0.8) and in the numerical
+form F, is in cal/cm2, Y is in kilotons, and R is in km.
+
+Neutron Radiation. One kiloton of equivalent nuclear energy arises from the
+fission of approximately 1.45 x 1023 nuclei. Each fission produces 2 or 3 neutrons.
+Approximately half of these neutrons escape during the few tens of nanoseconds of
+energy generation. Accordingly, the neutron fluence at a distance R cm from a nuclear
+detonation is given by
+
+F,, = 0.5 x 2.5 x 1.45 x 1023Y/(42R2)
+F,=1.4x 1012 Y/R2 n/cm? (8-9)
+
+where FY is in kilotons, R is in km, and F, is in n/cm2. This equation is only approxi-
+mate. The actual neutron output will depend upon the design of the nuclear weapon.
+
+Prompt Radiation. Gamma radiation emitted during the actual nuclear burn time
+is prompt radiation, whereas gamma rays emitted after the nuclear burn time are
+delayed radiation. Prompt gammas result from fission reactions, neutron capture, and
+inelastic neutron scattering events occurring during intense generation of nuclear
+energy. The total energy and energy distribution of the prompt gamma rays depend on
+the nuclear weapon’s specific design. To calculate preliminary survivability at range
+R from a nuclear burst in space, we can express the dose, Dy, (energy deposited per
+unit mass) in silicon semiconductor material from prompt gamma radiation as
+
+Dy =4 x 1052/3 /R2 rads (Si) (8-10)
+
+where R is in km, Y is in megatons, and Dy is in rads (Si).
+
+Delayed Radiation. Delayed gammas, neutrons, positrons, and electrons—or
+residual radiation—occur when radioactive fission products decay. For about the first
+second after a nuclear explosion, the decay rate from residual nuclear radiation is
+nearly constant. Thereafter, the dose rate follows the approximate law:
+
+R = Ro (t/to)-12 (8-11)
+
+where R is the dose rate (usually in rads/hr) at any elapsed time after the reference
+time, fg, when the dose rate was Ro. The fission products causing this dose rate contain
+more than 300 different isotopes of 36 elements from the periodic table, so the inverse
+1.2 power of time is an approximation. It is accurate to within 25% for the first
+6 months after the nuclear explosion [Glasstone and Dolan, 1977].
+
+224 The Space Environment and Survivability 8.2
+
+The explosion energy rapidly disperses residual radiation. In the absence of an
+atmosphere and geomagnetic fields, the radioactive fission products would expand
+geometrically and decrease in intensity by the inverse square of the distance from the
+burst. However, the geomagnetic field causes the mostly ionized, radioactive weapon
+debris to spiral along geomagnetic field lines, in a manner similar to the charged-
+particle motion described in Sec. 8.1. Thus expansion of the radioactive debris will
+depend on the magnetic field at the nuclear event and on the magnetic field’s config-
+uration between the nuclear event and the satellite being considered. As a first
+approximation, we can assume a geometric expansion. A more conservative approach,
+however, would be to assume that the nuclear event and the satellite are on the same
+geomagnetic field lines. The largest possible amount of radioactive debris would then
+funnel from the nuclear event to the satellite.
+
+An upper bound estimate of the delayed gamma flux due to radioactive debris, in
+gammas or photons per square centimeter per second, from a single nuclear burst, is
+given by
+
+¥=9x10°¥/4nR2(1+1)'? photons /cm?/s (8-12)
+
+where Y is yield in megatons (one-third of total yield assumed to be fission), R is
+distance from the burst point in kilometers, and fis time after burst in seconds [Gold-
+flam, 1990}. This estimate applies to cases where the debris strikes and plates outer
+surfaces of a satellite, as well as cases where the debris is far away. Similarly, an esti-
+mate of delayed beta debris can be made by applying a one-third factor to the equation.
+
+Both delayed gammas and betas will manifest themselves as noise spikes in electro-
+optical and visible sensor elements used on satellite systems (such as infrared
+surveillance sensors, optical/visible sensors, Earth sensors, and star trackers). The
+delayed gammas are a significant threat to satellites, since they can be reduced only by
+very thick shielding with high Z materials.
+
+Electromagnetic Pulse (EMP). EMP is a secondary effect of nuclear weapon
+detonations. X-rays and gamma rays impinging upon the upper atmosphere create an
+electron flux which radiates in the RF region of the spectrum. EMP’s spectral energy
+is mostly in the 1 MHz to 100 MHz range. As the RF energy arrives at a satellite, it
+will induce currents and voltages that may damage or kill the satellite if we do not
+design to protect it. Nominal electric field strengths, which satellites would experi-
+ence, can vary from 3 to 100 V/m, depending on satellite altitude and burst location,
+relative geometry, and other parameters.
+
+System-Generated EMP, SGEMP, is a phenomenon caused when X-rays and
+gamma rays hit a satellite or other system element, thereby creating an internal flux of
+electrons whose electromagnetic interactions create large currents and voltages. These
+large internal currents and voltages can damage sensitive components inside the satel-
+lite. Section 8.2.3 discusses how we can mitigate these effects.
+
+Geomagnetically Trapped Radiation. Following a nuclear burst at high altitude,
+electrons caused by the weapon join the naturally occurring Van Allen radiation belts
+(Sec. 8.1). The electron flux may increase by many orders of magnitude, thus increas-
+ing the absorbed dose in unshielded materials as the satellite repeatedly traverses the
+Van Allen belts. To protect solid-state (silicon) electronic circuits, we normally
+enclose them in aluminum, with wall thickness ranging from 0.0254 cm (0.01 inch) to
+a centimeter or more. Aluminum shielding with a thickness of 0.1 cm and a density of
+2.71 g/cm corresponds to 0.27 g/cm2. Figure 8-9 of Sec. 8.1 gives the natural dose
+rate in silicon, in rads per year, for polar orbits as a function of orbital altitude and for
+
+8.2 Hardness and Survivability Requirements 225
+
+several values of aluminum shielding. The dose scales linearly with time so the curves
+can be used for longer or shorter durations. A polar orbit satellite will accumulate less
+dose than an equatorial one because the trapped radiation is essentially nonexistent at
+and near the geomagnetic poles of the Earth; this dose difference can be as large as a
+factor of 5.
+
+One Year Total Dose -— 30 deg inclinations
+
+—2— 200 mils Al
+
+U
+10° =
+
+—— 300 mils Al i
+
+Dose, rads (Si)
+
+40?
+
+100 1,000 10,000 100,000
+Altitude (km)
+
+A. Natural total dose in one year, 30 deg inclination circular orbits, for three values of
+aluminum shielding (0.254 cm, 0.508 cm, and 0.762 cm).
+
+=! E: —— fa !
+4+
+an
+= 10° b= fn oes
+2 =3 =
+3 ann
+is rT T
+3 10° <4 = = — J
+3°
+fa)
+10°
+100 1,000 10,000 100,000
+
+Circular Orbit Altitude (km)
+
+B. Nuclear-enhanced electron dose in 30 days, 30 deg inclination circular orbits, for one
+value of aluminum shielding (0.254 cm).
+
+Fig. 8-15. Nuclear-enhanced Electron Environment, 30 Days Duration. Figure assumes
+30 deg inclination circular orbit and 0.1 inch aluminum shielding.
+
+Figure 8-15B gives the dose resulting from a 30-day exposure to a nuclear weapon-
+enhanced electron flux for one value of aluminum shielding and as a function of
+orbital altitude. The dose for shorter periods can be estimated by linear scaling;
+however, longer periods cannot be estimated by linear scaling since the saturated
+environment decays rapidly. As with the natural trapped electrons, the nuclear
+
+226 The Space Environment and Survivability 8.2
+
+weapon-enhanced electron flux is practically nonexistent near the north and south
+poles. For satellites with higher inclination orbits, i.e., greater than 60 to 70 deg, the
+accumulated dose is greatly reduced, compared to satellites with inclinations of zero
+to 60 or 70 deg.
+
+An example will show how these calculations work in practice. Consider a satellite
+which must operate for | year in the natural environment and then operate (survive)
+for 1 day following a high altitude nuclear explosion which creates an electron-
+enhanced Van Allen belt. We assume a circular orbit, 30 deg inclination and an
+altitude of 6,000 km. For a wall thickness of 0.254 cm (corresponding to a shielding
+value of 0.69 g/cm2), Fig. 8-15A gives a dose of about 130 krads in 1 year. Figure
+8-15B gives a dose of 21 Mrads for 30 days and 700 krads for 1 day. Adding the two,
+we get 830 krads. The electronics must be able to function properly after accumulating
+a total dose of this amount. Solid-state electronics can be hardened to tolerate from a
+few krads to about | Mrad so our satellite, if hardened to 830 krads or more, would
+satisfy the survivability requirement of | year natural plus 1 day weapon enhanced.
+
+Nuclear Weapon Effects on Materials. The X-radiation pulse lasts tens of nano-
+seconds, and its energy is absorbed almost instantaneously in solid material through
+the photoelectric effect and Compton scattering. In the photoelectric effect, bound
+electrons of the material are ejected from their atomic orbits and take on a kinetic
+energy equal to the difference between the energy of the incident photon and the
+atom’s ionization energy. The incident photon disappears in the photoelectric effect,
+with its absorption per atom proportional to the 5th power of Z, the atomic number of
+the absorbing material, and inversely proportional to the 7/3 power of the incident
+photon’s energy [Heitler, 1954]. Therefore, high-Z materials shield against X-rays
+more effectively, and the absorption cross section decreases dramatically for incident-
+photon energy from | to 20 keV (1 keV = 1.6 x 10-16 J),
+
+Compton scattering is an elastic scattering event in which an electron receives
+some of the energy of the incident photon, and the incident photon changes direction.
+As a result, the photon’s energy decreases and its wavelength increases [Heitler,
+1954]. The cross section per atom for Compton scattering is proportional to Z and, for
+the range of photon energies we are interested in, is inversely proportional to the inci-
+dent photon’s energy. Therefore, for Compton scattering, increasing Z only slightly
+increases the absorption coefficient, whereas the cross section decreases moderately
+as the photon energy increases.
+
+The energetic, free electrons described above can cause electronic circuits to
+malfunction, and their energy ultimately appears as heat in the material. In fact, the
+material heats rapidly enough to create shock waves which develop tensile stresses
+that may cause spall at its unconstrained boundaries. If the deposited energy is high
+enough (usually not the case at typical satellite fluence levels), the material may
+vaporize or melt, creating direct damage in addition to the shock waves. For space-
+craft, where flux or fluence levels are low, malfunction of electronic circuits is the
+most likely occurrence.
+
+Gamma rays resulting from nuclear explosions range from a few hundred keV to
+several MeV. In preliminary designs, we can assume that gamma rays have a mean
+energy of approximately ! MeV and interact with matter primarily through Compton
+scattering. Because gamma radiation is very penetrating, we cannot effectively shield
+against it. Thus, when we wish to protect against the less penetrating, but more highly
+ionizing, X-radiation, we need only provide enough shielding to reduce the prompt
+dose to levels approximately equal to that of gamma radiation. Figure 8-18 of
+
+8.2 Hardness and Survivability Requirements 227
+
+Sec. 8.2.3 gives the prompt dose induced by a unit fluence of X-radiation as a function
+of additional shielding (the abscissa of the figure can be converted to linear dimensions
+by dividing by the density of the shielding material). For higher or lower fluences,
+linear scaling is appropriate.
+
+Neutrons interact with material by colliding with atomic nuclei. The collisions
+impart energy to the atoms of the material and displace the atoms from their normal
+positions in the lattice. Changing the lattice structure can seriously harm solid-state
+electronic devices because they depend on the characteristics of the lattice for their
+function. At fluences greater than about 10!2 n/cm2, neutrons can cause solid-state
+devices to stop working, thus “electronically killing” a satellite.
+
+Effects on Communications. A nuclear weapon detonated in space near the Earth
+interacts strongly with the atmosphere and the Earth’s magnetic field. The electromag-
+netic energy radiated from the detonation creates large-scale ionization in the bomb
+material and in the atmosphere. Radioactive debris contributes beta particles
+(positrons and electrons) from radioactive decay. The ionized bomb debris and beta
+particles move along the lines of force of the geomagnetic field, as described in
+Sec. 8.1. As the magnetic field lines enter the atmosphere, the energetic particles
+interact with it, creating more ions and electrons. The free electrons thus created
+absorb and reradiate RF energy and refract the electromagnetic waves of the radio
+communications links between ground and satellite, creating phase and amplitude
+changes. These in turn reduce the signal strength in radio receivers, thus interrupting
+communications.
+
+Based on the theory of electromagnetic propagation, the attenuation, a, in dB per
+km, is given by
+
+a=44x 104N,v/((2 nf? + v2) dB/km (8-13)
+
+where N, is the number of electrons per cm}, v is the frequency of collision of electrons
+with ions, atoms or molecules in Hz, and f is the frequency of the electromagnetic
+radiation in Hz. The values of these parameters are difficult, if not impossible, to
+obtain. However, the U.S. Defense Threat Reduction Agency (formerly the Defense
+Special Weapons Agency) can provide computer programs for propagation analyses
+in nuclear environments, assuming appropriate clearances and need to know can be
+established.
+
+For space-to-ground links, we can use the form of Eq. (8-13) and the fact that the
+density distribution of the atmosphere is approximately exponential to infer the
+absorptive behavior of RF signals as a function of frequency. The form of Eq. (8-13)
+indicates that the absorption passes through a maximum as a function of collision
+frequency, v, which is proportional to the density of air. Above approximately 80 km,
+the density is so low that v is essentially zero and absorption does not occur. Below
+about 60 km, electrons rapidly reattach to atoms and molecules, so the low electron
+density again leads to small absorption. Therefore, the attenuation is at a maximum for
+any given radiation frequency between 60 and 80 km. In this region the attenuation
+varies with the inverse square of the radiation frequency. Thus, we should choose the
+highest communication frequency we can to minimize attenuation due to nuclear
+weapons environments. For a more complete treatment of nuclear effects on commu-
+nications, see Mohanty [1991].
+
+High data rate requirements for military satellites with surveillance sensor payloads
+and future commercial communications satellites have resulted in the use of optical/
+laser links in modern systems. While having many advantages over RF links, such as
+
+228 The Space Environment and Survivability 8.2
+
+weight and power, optical link components are also affected by nuclear environments.
+Table 8-6 contains general guidelines for the effects of nuclear radiation on optical link
+components.
+
+TABLE 8-6. Radiation Effects on Optical Link Components.
+Device Type Total Dose | Neutron Prompt Dose Rate
+
+Natural Van Allen belts, Man-made events Man-Made Events with
+man-made events primarily short-term irradiation times.
+
+Optical 2 100 krad, polymer clad > 1014 n/cm? for Losses increase 1-2 orders,
+Fibers silica, 20 °C, 0.85 um: 0.02-0.5 dB/m loss. depending on dose, dose
+0.02-0.5 dB/m loss (1-2 rate, wavelength and
+orders less loss at 1.5 ym). temperature. Nearly complete
+annealing in < 24 hrs.
+
+Transmitters | 1-10 Mrad (up to 3.0 dB 1012-1014 n/cm? for lonization induced burnout
+light loss) for LEDs and LEDs (threshold) at 109-1019 rads/s.
+
+laser diodes, peak 1013-1015 n/cm? for Pulsed lasers turn-on delays
+wavelength shifts, threshold | taser diodes (threshold). | are up to 100 ns.
+
+current increases, beam :
+pattern distorts, power loss. | Light output loss and Power loss, wavelength
+
+peak wavelength shifts. | shifts.
+
+Detectors Decrease in responsivity of | Displacement Dark current increases
+10-30% at 10 Mrad. damage thresholds of linearly up to ~101° rads/s.
+Dark current increase of ~1014 nicm? for SiPIN | False signal generation by
+1-2 orders at 10-100 Mrads | Photodiodes and ~1012 | radiation pulse. Upset at
+(for Si PIN photodiodes, for APDs. Dark current | > 107 rads/s. Burnout at
+worse for APDs, better for | increases, responsivity | > 109 rads/s. APDs much
+AlGaAs/GaAs photodiodes) decreases. more sensitive than PIN
+photodiodes.
+
+Opto- Depends on device and Depends on device and | Depends on device and
+modulators | device technology. device technology. device technology. Circuit
+upset and burnout possible.
+
+NOTES:
+
+Optical Fibers
+
+¢ Damage worse and annealing slower for lower temperatures. Losses generally lower for increasing
+wavelength (to 1.5 tm)
+
+* Polymer clad silica cores have lowest losses but losses increase below ~ 20 °C. Max dose usage of
+~107—108 rads
+
+Transmitters
+
+¢ At higher temperatures, threshold current and peak wavelength increase while output power decreases for
+laser diodes
+
+« LEDs have better temperature/temporal stability, longer lifetimes, greater reliability and lower cost
+
+Detectors
+* APDs are predicted to be more sensitive than PIN diodes to total dose, neutrons and dose rate
+¢ AlGaAs/GaAs photodiodes shown to be more radiation resistant than hard PIN photodiodes
+
+8.2.2 Other Hostile Environments
+
+Laser Weapons. High-power lasers are being developed as potential ground-based
+or space-based antisatellite weapons. The flux in power per cross-sectional area from
+these weapons is given by
+
+Pp
+
+PF a=
+mR? [(1.224Q)° + (JD) ] (8-14)
+
+8.2 Hardness and Survivability Requirements 229
+
+where P is the average output power, D is the laser objective diameter, Q is the quality
+of the laser beam (dimensionless), A is the wavelength of the laser, J is the angular
+jitter of the beam (in rad), and R is the range from the laser to the target. Q = 1 indicates
+a diffraction-limited weapon; laser weapons being developed will have a beam quality
+of 1.5 to 3.0. Both pulsed and continuous-wave lasers are in development. Equation
+(8-14) is for a continuous-wave laser, but is approximately correct for the average flux
+from a pulsed laser. The peak flux for a pulsed laser will be much higher.
+
+For engagement ranges of several hundred km, the laser spot sizes will be several
+meters in diameter and will, in general, completely engulf the target satellite in laser
+radiation. To damage or kill a satellite at any range, the laser beam must hold steady
+long enough to achieve a damaging or killing level. Depending on the incident flux
+level and sensitivity, this dwell time could be several seconds or minutes.
+
+Fragmentation or Pellet Weapons. The former Soviet Union operated an
+antisatellite weapon using fragmentation pellets that could attack satellites in low-
+Earth orbit [U.S. Congress, OTA, 1985]. This weapon, launched from ground
+locations, achieved an orbit with nearly the same elements as those of the target satel-
+lite. Hence we call it a co-orbital antisatellite system. Radar or optical guidance brings
+the weapon close to the target satellite. A high explosive then creates many small
+fragments which move rapidly toward the target satellite and damage or kill it by
+impact.
+
+High-Power Microwave Weapons. These weapons generate a beam of RF energy
+intense enough to damage or interfere with a satellite’s electronic systems. Their fre-
+quencies of operations range from 1 to 90 GHz, thereby covering the commonly used
+frequencies for command, communication, telemetry, and control of most modern
+satellites. A satellite’s antenna tuned to receive a frequency the weapons radiate will
+amplify the received radiation. Thus, it could damage RF amplifiers, downconverters,
+or other devices in the front end of a receiver.
+
+Neutral-Particle-Beam Weapons. Particle accelerators have been used for high-
+energy nuclear physics research since the early 1930s, so the technology is well
+developed. Weapons using this technology must be based in space because the
+particles cannot penetrate the atmosphere. The particles would be accelerated as neg-
+ative hydrogen or deuterium ions, then neutralized by stripping an electron as they
+emerge from the accelerator. (The particles must be electrically neutral to avoid being
+deflected by the Earth’s magnetic field).
+
+8.2.3 Spacecraft Hardening
+
+Hardening of a space system’s elements is the single most effective action we can
+take to make it more survivable. Presently, we use hardening to prevent electronics
+upset or damage from nuclear-weapon effects. In the 2000s, we will see laser harden-
+ing in military satellites which must survive hostile attacks. If projected antisatellite
+weapons are developed and deployed, hardening will help reduce the effects of High-
+Power Microwave and Neutral-Particle-Beam weapons on satellites.
+
+Figure 8-16 gives approximate upper and lower bounds on the weight required to
+harden a satellite to nuclear weapons effects. The technology for hardening satellites
+against nuclear weapons is well developed up to a few tenths of cal/cm?. Above these
+levels, the hardening weight increases sharply, as Fig. 8-16 illustrates. Figure 8-17
+gives rough upper and lower bounds on hardening costs. Comparable cost data may be
+found in Webb and Kweder [1998].
+
+230 The Space Environment and Survivability 8.2
+
+% of Satellite Dry Weight
+
+10-5 10-4 10-3 1072 1071 1 10
+
+Hardness Level (cal/cm?)
+Fig. 8-16. Weight Required to Harden a Satellite as Percent of Satellite Weight.
+
+For X-rays with photon energy below 3 keV, shielding is very effective with almost
+any convenient material, such as aluminum. At higher photon energies, materials with
+higher atomic numbers, Z, are more effective than the low-Z materials. A commonly
+used shielding material is tantalum because of its availability and ease of manufacture.
+A satellite’s external surfaces are particularly vulnerable to crazing, cracking, delam-
+ination, or micro-melting. Therefore, we must carefully select materials for these
+surfaces to protect functions such as thermal control, optical transmission, or reflec-
+tion. In this category are covers for solar cells, optical coatings on lenses and thermal
+contro] mirrors, thermal control paints, metal platings, and optical elements made of
+quartz or glass. The data for typical satellite materials exposed in underground nuclear
+tests is, in general, classified.
+
+% of Total Satellite Cost
+
+1075 10-4 10-3 10-2 107? 1 10
+Hardness Level (caVvem?)
+
+Fig. 8-17. Cost to Harden a Satellite as a Percent of Total Satellite Cost. Costs include
+production cost plus proportional share of engineering costs.
+
+Prompt dose results from penetrating X-radiation and, to a lesser extent, from
+prompt gamma. Typically, the X-ray prompt dose is 3 to 4 orders of magnitude larger
+than the dose from prompt gamma. At typical spacecraft levels, prompt dose can break
+the bonds of the leads on susceptible integrated circuits and can cause electronic
+circuits to experience burnout, latchup, and temporary upset.
+
+8.2 Hardness and Survivability Requirements 231
+
+In most cases, shielding of the X-radiation can reduce the internal dose to manage-
+able levels. Figure 8-18 gives the prompt dose in silicon shielded by the basic
+0.040-inch aluminum enclosure plus a range of additional tantalum shielding in g/cm2.
+We can use this figure to estimate the extra tantalum weight required to shield against
+the prompt dose. The procedure is as follows:
+
+Dose Rads (Si)-cat™!-cm?
+
+0 0.5 1 1.5 2 2.5 3 3.5
+Thickness (g/cm?)
+
+Fig. 8-18. Prompt Dose as a Function of Additional Tantalum Shielding (Worst Case
+1-15 keV Spectrum).
+
+¢ Using Fig. 8-18, scale the maximum allowable prompt dose by the fluence
+appropriate to the system under consideration and determine the surface mass
+density (g/cm?) required;
+
+* Multiply the surface mass density required by the total area to be shielded on
+the satellite.
+
+The total dose is the sum of the ionizing dose from all sources of radiation and is
+usually expressed in rads (Si). In almost all cases, the total dose is dominated by
+trapped electrons in the geomagnetic field. Figure 8-19 gives the dose in silicon as a
+function of thickness of shielding material in g/cm, normalized to an incident 1 MeV
+electron fluence of 10!4 electrons/cm2. The asymptotic nature of the dose curve for
+large mass densities results from the bremsstrahlung electrons produce as they stop in
+the shielding material. Thus, we would shield interactively for total dose and prompt
+dose. The prompt dose shielding also attenuates the radiation from the Van Allen belts,
+and the extra aluminum needed to attenuate the Van Allen belt radiation also
+attenuates the prompt X-radiation. For example, as Fig. 8-18 shows, an aluminum box
+0.102 cm thick can reduce an external prompt dose of 3 x 108 rads (Si): cal“! - cm? to
+an internal dose of 4 x 105 rads (Si)- cal-!- cm2, We can reduce the prompt dose even
+further by adding more high-Z material, such as tantalum or tungsten as shown in
+Fig. 8-18. This high-Z material also reduces the dose caused by trapped electrons, as
+mentioned above.
+
+Metals are relatively unaffected by total dose. However, total dose degrades certain
+properties of organic materials, beginning between 0.1 and 1 Mrad, and makes them
+unusable above 10 to 30 Mrad. For example, organic materials may soften, become
+brittle, or lose tensile strength. NASA [1980] and Bolt and Carroll [1963] give data on
+how the total dose affects organic materials. Figure 8-20 shows the “sure-safe” total
+dose capabilities for commonly used satellite materials.
+
+232 The Space Environment and Survivability 8.2
+
+Rads (Si)
+
+0 0.5 1 1.5 2 2.5 3
+Shield Material — g/cm?
+
+Fig. 8-19. Dose from Trapped Electron Fiuence of 10'4 Electrons/cm? as a Function of
+Thickness of Shielding Material in g/cm.
+
+Polystyrene Fused Glass
+Teflon (FEP’
+(FeP) Silicon Carbon
++» <->
+Teflon (PTFE) Bakelite
+Rubber Gaskets
++>
+Germanium Optical Materials
+Neoprene Vycor Sealing Compounds
+cM
+Viton A iti Silicone Resin
+eanyiene ss’, 0 Silicone
+Polyvinyichloride Propylene Mylar i
+yviny! Ma + Mica
+Nylon Co sper. Clad Conductive Adhesive
+<a> Tipline Mm > Kapton
+Polychloroprene +— Gavartic
+Insulation Natural Rubber Polyethylene Epoxy Glass
+<> <+—_—> <> +> a
+108 106 107 108 109 1910
+Radiation Dose [rads (Si)]
+
+Fig. 8-20. Total Dose Capabilities of Satellite Materials.
+
+Silicon electronic devices suffer decreases in operating parameters such as gain,
+gate voltage, or lifetime of the minority carrier. We can measure these operating
+parameter changes as a function of dose and develop curves of radiation deratings.
+Thus, during circuit design, these radiation deratings are used to ensure that the
+devices will continue to operate satisfactorily at the design exposure level.
+
+Total dose also includes the ionization from prompt and delayed weapon radiation,
+as well as neutron-generated radiation. To the total dose from man-made sources of
+hostile radiation, we must add radiation from the natural environments. The total dose
+depends on the amount of shielding, orbital parameters, and satellite life. In the
+absence of nuclear-weapon detonations, the total dose will normally increase linearly
+with time on orbit. To harden a satellite against these effects, we would use silicon-
+based electronic devices which tolerate the effects and shield them to the appropriate
+level, depending on how long we want the satellite to last. In the future, we will
+increase the use of electronic devices based on gallium arsenide, because gallium
+arsenide appears to be unusually immune to total dose effects.
+
+8.2 Hardness and Survivability Requirements 233
+
+Radiation hardened parts are required for all designs that must operate in nuclear
+weapon environments, but some commercial communications satellites can consider
+using radiation tolerant parts (<50 krads capability) or even commercial off the shelf
+(COTS) Class B type parts (10-15 krads capability), particularly if they will only
+operate in low-Earth orbits (less than about 1,000 km) and have orbital design
+lifetimes of 2 to 3 years maximum. Table 8-7 shows a comparison of typical unhard-
+ened COTS parts and hardened parts capabilities.
+
+TABLE 8-7. COTS and Rad Hard Parts Comparison. Rad hardening increases radiation
+protection significantly, thus increasing spacecraft survivability.
+
+Dose-Rate-induced Latchup
+
+Neutrons 1011-1013 p/om2 1014-1015 n/em2
+
+Single-Event Upset (SEU) 10-3-10-7 errors/bit-day 10-8-10~10 errors/bit-day
+
+Single-Event Latchup/Single- | < 20 MeV-cm2/mg (LET) 37-80 MeV-cm2/mg (LET)
+Event Burnout (SEL/SEB)
+
+¢ COTS characteristics may vary unpredictably from lot to lot and even within a lot.
+¢ Higher margins and more testing (screening) are required with COTS usage, which will offset lower piece part costs.
+¢ LET is Linear Energy Transfer threshold.
+
+Whether designing satellite electronics with RAD Hard or COTS parts, a Radiation
+Hardness Assurance Control Plan (RHACP) is necessary to specify radiation design
+requirements, parts derating methods, required design margins, parts testing require-
+ments and the process for controlling all activities related to radiation hardness. Imple-
+mentation of the RHACP will help ensure the success of the hardness design and
+hardness verification process. The hardware is normally hardness qualified at an
+appropriate level, either piece part, unit, subsystem or system, whichever is economi-
+cally and technically correct.
+
+Displacement fluence is any electromagnetic or particulate radiation which dis-
+places atoms from their normal lattice positions. For nuclear weapons, neutron fluence
+is the primary cause of displacement. In the natural environment, electrons and protons
+are the principal contributors. The displaced atoms and their vacancies will react with
+the bulk material and form stable defects in the lattice structure. These defects
+significantly change the equilibrium-carrier concentration and minority-carrier life-
+time. In silicon solar cells, these changes degrade power output. In other solid-state
+electronic devices, they reduce gain and increase forward voltage drop and reverse
+leakage currents.
+
+We cannot harden to the neutron displacement fluence from a nuclear burst by
+shielding because the uncharged neutron is very penetrating and large amounts of
+shielding would be needed. In general, we harden to the neutron fluence by selecting
+devices that resist degradation by neutrons.
+
+To protect against displacement by electrons or protons, we must shield the solid-
+state devices. Solar cells are shielded by a layer of fused silica, varying in thickness
+with the amount of shielding required. At very high ionization dose, the cover glass
+material darkens, reducing the solar array’s power output. For solid-state devices
+
+234 The Space Environment and Survivability 8.2
+
+contained inside aluminum boxes, we choose the thickness of the aluminum to stop the
+electrons and ignore the protons, which penetrate much less in most commonly used
+orbits.
+
+Delayed beta radiation flux can also be shielded effectively in the same manner as
+total dose, since it is composed of electrons. In contrast, delayed gamma flux cannot
+be shielded easily due to its high energy content (up to about 12 MeV). As an example,
+a factor of 10 reduction requires about 1.1 inches (2.8 cm) of high Z material like tung-
+sten or tantalum. Mitigation of gamma debris noise spikes in sensor systems will
+require heavy shielding and/or pulse suppression signal processing (such as time delay
+integration), or even complementary satellite tasking. Even then, the gamma noise can
+still be high enough to cause sensor outages lasting from seconds to minutes, depend-
+ing on specific sensor performance characteristics and design. For example, a fairly
+robust sensor with an operational capability (noise threshold plus signal to noise ratio)
+of 10° photons/cm?2 /s will be “blind” for about 34 sec, given a 1 megaton burst at
+100 km away from the satellite, using Eq. (8-12).
+
+EMP is typically in the MHz range. At satellite altitudes, EMP intensities of a few
+V/m can easily cause damage and upset in unhardened satellites. To prevent this, Fara-
+day shields can keep the radiation from entering the satellite cavities. We can also use
+good external grounding, interconnect all conducting parts and surfaces, employ surge
+arrestors, and eliminate sensitive components. In addition, designing for electromag-
+netic compatibility, such as shielding of cables and harnesses, will reduce or eliminate
+much of the potential for EMP damage. Computers are particularly sensitive to EMP,
+as are the following components (in order of decreasing sensitivity): semiconductor
+diodes in microwave applications, field-effect transistors, RF transistors, silicon-
+controlled rectifiers, audio transistors and semiconductor diodes in power rectifier
+applications.
+
+SGEMP occurs when the incident flux of photons, both X-ray and gamma ray,
+creates a flux of electrons inside the satellite. Some of the energetic electrons are not
+stopped in solid material but emerge into satellite cavities, causing currents and fields
+within these cavities. At representative satellite fluence levels, these electrons can gen-
+erate cable injection currents of 10-100 amperes/meter of cable length and peak cavity
+electric fields of several hundred kilovolts/meter. The fields then couple electromag-
+netic energy into cables and other conductive elements in the cavity, and the sharp
+pulse of energy transmitted to sensitive components can make them fail.
+
+SGEMP hardening uses the same methods as EMP hardening except for external
+shielding, because SGEMP generates inside the satellite. We can also treat internal
+surfaces with low-Z (atomic number) paints to reduce electron emission into cavities.
+Using specially designed low-response cables will also reduce SGEMP effects.
+Finally, we can protect input/output circuits and terminals with various devices—
+zener diodes, low-pass filters, and bandpass filters—to limit current or to clamp
+voltage.
+
+The natural space phenomena causing single event upsets (SEUs) and other single-
+event effects (SEEs), as well as methods for predicting upset rates, were addressed in
+Sec. 8.1.5. Because shielding is ineffective in reducing SEEs, satellite systems must
+be designed to mitigate these effects, given that they will occur. Table 8-8 lists some
+classical approaches used in modern space system design. The extent to which these
+approaches are applied depends on the mission criticality, system upset specifications
+(allowable rates and outage times), and orbital environment expected. However, as
+indicated in the table, selection of acceptable parts is perhaps the single most important
+
+8.2 Hardness and Survivability Requirements 235
+
+of all approaches for SEE mitigation, albeit not sufficient by itself. Not indicated in
+Table 8-8 is the effect of orbital altitude. While geosynchronous altitude is the worst
+case for SEEs (due to galactic cosmic rays), orbits that traverse the proton belt (ellip-
+tical orbits and those between about 1,200 km and 8,000 km altitude) will have SEEs
+from high energy protons, in addition to galactic cosmic rays, and the proton SEUs can
+be 10 times worse.
+
+TABLE 8-8. Single-Event Effects. The effects caused by single events can be reduced by
+better parts, improved shielding, and process redundancy.
+
+—7
+Comments
+————
+
+Approach
+
+. Parts Selection:
+¢ Error rate < 10-8 errors/bit-day
+¢ Latchup immunity to LET 237 MeV-cm2/mg
+* MOSFET SEGR/SEB immunity to LET > 37
+« Derate power MOSFET to 30-40% of Vos
+
+¢< 10-19 desired
+
+¢ LET > 60-120 desired
+
+° LET > 60-80 desired
+
+* Vpg is rated drain to source voltage
+
+. Use parity and SECDED Single error correction, double error
+
+detection
+
+. Use dual or redundant logic for critical functions | 2 correct outputs for decision making
+
+. Use watchdog timers and triple modular redun-
+dancy (TMR) in spacecraft control processor.
+
+. Periodic refreshing of critical memories
+
+2 out of 3 voting logic used; switching to
+spare processor after repeated timeouts
+
+Periodic switchover to refreshed memory
+bank
+
+. Use of hard latches
+
+. Design digital circuits immune to analog circuit
+spikes
+
+. Eliminate nonrecoverable system modes and
+failures that could result from a soft error
+
+Eliminate soft error responses
+
+Long response time compared to spike
+transient
+
+Good design practice always required to
+ensure no damage and recoverable modes
+
+(bit flip)
+
+Note: LET is linear energy transfer threshold; SEGR/SEB is single-event gate rupture/single-event burnout.
+
+Surface charging and resultant electrostatic discharge (ESD) due to space plasmas
+were addressed briefly in Sec 8.1.4, including basic design guidelines for satellite
+survivability. Satellites that are highly exposed to electrons (those at high altitudes,
+geosynchronous and highly elliptical orbits) must also be designed to survive bulk
+charging, in which electrons embedded in bulk dielectrics (cable dielectrics and circuit
+boards) and isolated conductors (such as ungrounded circuit board metallizations and
+spot shields on parts) build up potentials sufficient to cause discharges. Such dis-
+charges can result in anomalous upset and/or damage to electronics, much like SEUs,
+discussed in the preceding paragraph.
+
+Much of the work on bulk charging is summarized by Vampola [1996], based on
+CRRES flight data. Mitigation approaches are indicated in Table 8-9. Designers can
+eliminate most bulk charging concerns simply by providing sufficient shielding to
+reduce both maximum current on circuit boards to less than 0.1 x 10-!? amps/cm? and
+maximum total integrated fluence to less than 3 x 10° electrons/em? on ungrounded
+localized spot shields [Frederickson et al., 1992]. For geosynchronous satellites, this
+shielding is about 0.305 cm of total equivalent aluminum (which is typically provided
+for total dose protection).
+
+236 The Space Environment and Survivability 8.2
+
+TABLE 8-9. Bulk Charging Mitigation Approaches. Careful planning can produce adequate
+solutions without large investments of time and money.
+
+Approach Implementation
+
+Prevention Use leaky dielectrics and bleed-off paths with < 109 ohms resistance to
+ground (at least 2 ground paths for contiguous areas >64.5 cm?)
+
+Double shielded wire harness and cables
+
+Adequate shielding (~0.305 cm aluminum) of circuit boards and part
+
+shields (vs. grounding of all metallizations and local part shields).
+
+Signal Response Design circuits to be unresponsive to the relatively short, low level
+Conditioning spurious ESD pulses which are typically less than 100 ns.
+
+Circuit Hardness Circuits should be designed for no damage by ESD pulses with energy
+levels up to 10 microjoules.
+
+8.2.4 Strategies for Achieving Survivability
+
+As described in Sec. 8.2.3 and summarized in Table 8-10, hardening is the single
+most effective survivability option. Table 8-11 presents other strategies for enhancing
+survivability. We use redundant nodes, also called proliferation or multiple satellites,
+to overlap satellite coverages. Thus, if one satellite fails, others will perform at least a
+part of the total mission. An attacker must use multiple attacks to defeat the space sys-
+tem-—a costly and therefore more difficult approach for the enemy. The development
+of the so-called lightsat technology—tight, inexpensive satellites performing limited
+functions—will support this strategy. To be effective, each node (ground station or
+satellite) must be separated from another node by a large enough distance to prevent a
+single attack from killing more than one node.
+
+TABLE 8-10. Space Survivability Hardening Design Summary. Though the space environ-
+ment is harsh, survivability can be designed into spacecraft subsystems.
+
+Threat Type Requirement Driver Mitigation Design Approach
+
+Natural Space Withstand total dose degradation. | Radiation resistant materials, optics,
+Radiation Minimize single-event upsets detectors and electronics. Shielding
+Enhanced Radiation | (SEU) at unit & part levels. Self-correcting
+from Nuclear Bursts features for SEU tolerance.
+
+Collateral Nuclear Withstand prompt X-ray, neutron, | Radiation resistant materials, optics,
+Burst EMP damage, minimize dose rate | detectors & electronics. High Z
+upsets. Tolerate induced noise shielding, current limiting/terminal
+due to debris. protection. Event detection,
+circumvention, recovery. Sensor
+
+noise suppression. Multiple satellite
+coverages.
+
+Redout Sensor tolerance to background | Processing algorithms. Multiple
+levels. satellites for detection.
+
+Ground Based Laser | Sensor tolerance to interference or | 2 color sensor detection, filtering
+damage. and processing.
+
+High Power Sensor and communications Protection of detectors and circuits,
+
+Microwave and EMP | tolerance to interference/damage. | processing for noise discrimination.
+
+RF Communications tolerance to Multiple links, processing,
+
+Jamming/Blackout _| interference/scintillation. modulation and frequency choices.
+
+
+8.2 Hardness and Survivability Requirements 237
+
+Prior to the end of the Cold War, fixed ground control stations were high priority
+targets of ICBM-launched nuclear weapons. Therefore, satellites needed to be auton-
+omous or capable of being controlled by multiple mobile ground control stations, or
+utilize a combination of the two survivability features. In the Post-Cold War era, these
+survivability features are less important. Nevertheless, the following principles of
+survivability are still relevant. Mobile ground stations are survivable because ICBMs
+cannot find targets whose Earth coordinates are unknown and continually changing.
+By deploying mobile ground stations so they are separate from one another, we allow
+a single nuclear weapon to kill, at most, one ground station.
+
+TABLE 8-11. Satellite System Survivability Options. Many options exist, each adding cost
+and design complexity.
+
+[ootion [coat [etectvoness [Features
+
+Satellite Very good Trapped electron shielding, prompt radiation
+Hardening shielding, latchup screening, radiation-tolerant
+electronics, degraded electronic parts deratings
+
+Essential functions performed by 2 or more
+nodes (e.g., satellites with overlapping
+
+coverage but separated by greater than 1 lethal
+diameter range)
+
+Redundant | Cost of extra | Good
+
+Nodes
+
+Onboard 1-10% Good, depending Credible decoys simulating both radar and
+
+Decoys upon type of threat optical signatures of the satellite; decoys are
+guidance launched when an attack is detected (detection
+
+system required)
+
+Maneuver Good, depending Thrust levels depend on satellite altitude
+Capability upon type of threat (warning time), nature of threat, threat detection
+
+guidance efficiency; additional satellite weight for high
+Self 20-40%
+Defense
+
+acceleration
+Escort Cost of 1 sat.
+Defense
+Autonomous | 3-8%
+Operations
+
+Mobile 2to3times | Very good; provides | Multiple mobile ground control stations; while
+
+Ground cost of large | survivable ground one is controlling, one is tearing down, one is
+
+Control grnd. stat. control station network | setting up, and one is changing its location;
+
+Stations survivability is achieved by physical location
+uncertainty.
+
+Surv. Mobile | 20-30% of Very good; provides | Hardened against high-altitude EMP, nuclear
+Grnd. Term. | fixed terminal | low-cost ground- biological chemicai warfare, jamming, small
+, control optiont arms fire. Survivability enhanced by physical
+location uncertainty.
+
+System records/reports time, intensity, or
+
+Kinetic energy kill homing missiles represent
+most likely first system
+
+Very good Kinetic kill homing missiles represent most
+likely first system; directed energy (e.g., high-
+energy laser or high-power microwave system)
+
+is future possibility
+
+Provides protection
+against loss of ground
+station
+
+Autonomous orbit control (e.g., station-keeping
+for geosynchronous orbits), momentum control,
+redundant unit control (fault detection) and
+
+substitution
+
+Onboard Essential for total
+
+Attack system survivability direction of all potentially hostile events (e.g.,
+Reporting FF, laser, nuclear, pellet impacts, and spoofing
+System or takeover attempts); allows appropriate
+
+military response to hostilities
+
+“Percent of total satellite cost.
+tSurvivable with min. essential com. connectivity.
+
+238 The Space Environment and Survivability 8.2
+
+Onboard systems for attack reporting tell ground-control stations that a satellite is
+being attacked and what the attack parameters are. Without such information, ground
+operators may assume a spacecraft fault or natural accident has occurred, rather than
+an attack. Thus, controllers could act incorrectly or fail to act when necessary. More
+importantly, national command authorities need timely information telling of any
+attack on our space assets.
+
+Decoys are an inexpensive way to blunt an antisatellite attack. They simulate the
+satellite’s optical or RF signature and deploy at the appropriate moment, thus diverting
+the attack toward the decoys. Decoys must be credible (provide a believable radar or
+optical simulation of the satellite) and must properly sense an attack to know the
+precise moment for the most effective deployment. We can also defeat a homing anti-
+satellite by including optical or RF jammers to nullify or confuse its homing system.
+Such jammers weigh little and, depending on how well we know the parameters of the
+homing system, can be very effective.
+
+A satellite can maneuver, or dodge, an antisatellite attack if it has thrusters for that
+purpose. Of course, almost every satellite has thrusters for attitude control and orbit
+changes. Thrusters for maneuvers are more powerful, generating higher accelerations
+and causing the need for stiffer, stronger solar arrays or other appendages. These extra
+requirements lead to weight penalties. In addition, we must supply more propellant,
+trading off the increased propellant weight against the increased survivability.
+
+A satellite can defend itself against an antisatellite attack if that capability is
+included in the design. One possible approach is to include a suite of optical or radar
+sensors and small, lightweight missiles. The sensors would detect the onset of an
+attack, determine approximate location and velocity of the attacker, and launch the
+self-guided, homing missiles to kill the attacker. Of course, we would have to consider
+weight, power, inertial properties, and other design factors, but a self-defense system
+is a reasonable way to help a high-value spacecraft survive. Alternatively, we could
+deploy an escort satellite carrying many more missiles and being much more able to
+detect, track, and intercept the antisatellite attack. An escort satellite would cost more
+than active defense on the primary satellite, but the latter’s weight and space limita-
+tions may demand it.
+
+References
+Bilitza, D., D.M. Sawyer, and J.H. King. 1988. “Trapped Particle Models at NSS-
+DC/WDC-A.” in Proceedings of the Workshop on Space Environmental Effects on
+Materials. ed. B.A. Stein and L.A. Teichman. Hampton, VA.
+
+Bolt, Robert O. and James G. Carroll, eds. 1963. Radiation Effects on Organic Mate-
+rials. Orlando, FL: Academic Press.
+
+Defense Nuclear Agency. 1972. Transient Radiation Effects on Electronics (TREE)
+Handbook. DNA H-1420-1. March 2.
+
+DeWitt, Robert N., D. Duston, and A.K. Hyder. 1993. The Behavior of Systems in the
+Space Environment. Dordrecht, The Netherlands: Kluwer Academic Publishers.
+
+Fennell, J.F., H.C. Koons, M.S. Leung, and P.F. Mizera. 1983. A Review of SCATHA
+Satellite Results: Charging and Discharging. ESA SP-198. Noordwijk, The Neth-
+erlands: European Space Agency.
+
+Feynman, J., T. Armstrong, L. Dao-Gibner, and S. Silverman. 1988. “‘A New Proton
+
+Fluence Model for E>10 MeV.” in Interplanetary Particle Environment, ed.
+J. Feynman and S. Gabriel, 58-71. Pasadena, CA: Jet Propulsion Laboratory.
+
+8.2 Hardness and Survivability Requirements 239
+
+Frederickson, A.R., E.G. Holeman, and E.G. Mullen. 1992. “Characteristics of Spon-
+taneous Electrical Discharging of Various Insulators in Space Radiations.” IEEE
+Transactions on Nuclear Science, vol. 39, no. 6.
+
+Glasstone, S. and P.J. Dolan. 1977. The Effects of Nuclear Weapons (3rd edition).
+Washington, DC: U.S. Departments of Defense and Energy.
+
+Goldflam, R. 1990. “Nuclear Environments and Sensor Performance Analysis.” Mis-
+sion Research Corp. Report MRC-R-1321, October 4, 1990.
+
+Gussenhoven, M.S., D.A. Hardy, F. Rich, W.J. Burke, and H.-C. Yeh. 1985. “High
+Level Spacecraft Charging in the Low-Altitude Polar Auroral Environment.”
+J. Geophys. Res. 90:11009.
+
+Hastings, D. and H. Garrett. 1996. Spacecraft-Environment Interactions. New York:
+Cambridge University Press.
+
+Hedin, A.E. 1986. “MSIS-86 Thermospheric Model.” J. Geophys. Res. 92:4649-4662.
+
+Heitler, Walter. 1954. The Quantum Theory of Radiation (3rd edition). Oxford: Clar-
+endon Press.
+
+Jacchia, L.G. 1977. Thermospheric Temperature, Density and Composition: New
+Models. Spec. Rep. 375. Cambridge, MA: Smithsonian Astrophysical Observ.
+
+Jursa, A.S., ed. 1985. Handbook of Geophysics and the Space Environment, Bedford,
+MA: Air Force Geophysics Laboratory.
+
+King, J.H. 1974. “Solar Proton Fluences for 1977~1983 Space Missions.” J. Space-
+craft and Rockets. 11:401.
+
+Konradi, A. and A.C. Hardy. 1987. “Radiation Environment Models and the Atmo-
+spheric Cutoff.” J. Spacecraft and Rockets. 24:284.
+
+Leger, L.J., J.T. Visentine, and J.F. Kuminecz. 1984. “Low Earth Orbit Oxygen
+Effects on Surfaces.” Paper presented at AIAA 22nd Aerospace Sciences Meeting,
+Reno, NV, January 9-12.
+
+Mcllwain, C.E. 1961. “Coordinates for Mapping the Distribution of Magnetically
+Trapped Particles.” J. Geophys. Res. 66:3681-3691.
+
+Mohanty, N., ed. 1991. Space Communication and Nuclear Scintillation. New York:
+Van Nostrand Reinhold.
+
+Mullen, E.G., M.S. Gussenhoven, and H.B. Garrett. 1981.A “Worst-Case” Spacecraft
+Environment as Observed by SCATHA on 24 April 1979. AFGL-TR-81-0231,
+Hanscom Air Force Base, MA: Air Force Geophysics Laboratory.
+
+National Aeronautics and Space Administration. 1980. Nuclear and Space Radiation
+Effects on Materials, NASA SP-8053. June 1980.
+
+NOAA/National Environmental Satellite, Data and Information Service. 1991.
+Monthly Mean 2800 MHz Solar Flux (Observed) Jan. 1948—Mar. 199]. Solar-Geo-
+physical Data prompt reports. Boulder, CO: National Geophysical Data Center.
+
+Petersen, E.L. 1995. “SEE Rate Calculation Using the Effective Flux Approach and a
+Generalized Figure of Merit Approximation.” IEEE Trans. Nucl. Sci., vol. 42,
+no. 6, December 1995.
+
+240 The Space Environment and Survivability 8.2
+
+Purvis, C.K., H.B. Garrett, A.C. Whittlesey, and N.J. Stevens. 1984. Design Guide-
+lines for Assessing and Controlling Spacecraft Charging Effects. NASA Technical
+Paper 2361.
+
+Ritter, James C. 1979. “Radiation Hardening of Satellite Systems.” J. Defense
+Research (classified Secret Restricted Data), vol. 11, no. 1.
+
+Robinson, P.A. 1989. Spacecraft Environmental Anomalies Handbook. GL-TR-89-
+0222. Hanscom Air Force Base, MA: Air Force Geophysics Laboratory.
+
+Schulz, M. and L.J. Lanzerotti. 1974. Particle Diffusion in the Radiation Belts. Heidel-
+berg: Springer-Verlag.
+
+Tascione, T. 1994. Introduction to the Space Environment (2nd Edition). Malabar, FL:
+Orbit Book Company.
+
+TRW, Inc. 1998. Spacecraft Hardening Design Guidelines Handbook. Vulnerability
+and Hardness Laboratory. September 1998.
+
+Tribble, A.C. 1995. The Space Environment: Implications for Spacecraft Design.
+Princeton, NJ: Princeton University Press.
+
+Tribble, A.C., B. Boyadjian, J. Davis, J. Haffner, and E. McCullough. 1996.
+Contamination Control Engineering Design Guidelines for the Aerospace Commu-
+nity. NASA CR 4740. May 1996.
+
+Tsyganenko, N.A. 1987. “Global Quantitative Models of the Geomagnetic Field in the
+Cislunar Magnetosphere for Different Disturbance Levels.” Planet. Space Sci.
+35:1347.
+
+U.S. Congress, Office of Technology Assessment. September 1985. Anti-Satellite
+Weapons, Countermeasures, and Arms Control, OTA-ISC-281.Washington, DC:
+U.S. Government Printing Office.
+
+Vampola, A.L., P.F. Mizera, H.C. Koons and J.F. Fennell. 1985. The Aerospace
+Spacecraft Charging Document. SD-TR-85-26, El Segundo, CA: U.S. Air Force
+Space Division.
+
+Vampola, A.L. 1996. “The Nature of Bulk Charging and Its Mitigation in Spacecraft
+Design.” Paper presented at WESCON, Anaheim, CA, October 22-24.
+
+Vette, J.1., A.B. Lucero and J.A. Wright. 1966. Models of the Trapped Radiation
+Environment, Vol. II: Inner and Outer Zone Electrons. NASA SP-3024.
+
+Visentine, J.T. ed. 1988. Atomic Oxygen Effects Measurements for Shuttle Missions
+STS-8 and 41-G, vols. I-III. NASA TM-100459.
+
+Walterscheid, R.L. 1989. “Solar Cycle Effects on the Upper Atmosphere: Implications
+for Satellite Drag.” J. Spacecraft and Rockets. 26:439-444.
+
+Webb, R.C., L. Palkuti, L. Cohn, G. Kweder, A. Constantine. 1995. “The Commercial
+and Military Satellite Survivability Crisis.” J. Defense Electronics. August
+
+Webb, R.C., G. Kweder. 1998. “Third World Nuclear Threat to Low Earth Orbit
+Satellites.” Paper presented at GOMAC, Arlington, VA, 16-19 March 1998.

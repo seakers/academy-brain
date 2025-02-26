@@ -14,8 +14,8 @@ from scipy.cluster.hierarchy import linkage, fcluster
 
 
 import openai
-# openai.api_key = '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'
-openai.api_key = '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'
+openai.api_key = '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'
+# openai.api_key = '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'
 
 
 def num_tokens(input):
@@ -39,7 +39,8 @@ def vector_similarity(x, y):
 class SimilaritySearch:
 
     def __init__(self):
-        self.root_dir = '/home/ec2-user/academy-brain/LLM_tasks/embeddings'
+        self.root_dir = os.path.dirname(os.path.abspath(__file__))
+        # self.root_dir = '/Users/mahima/Documents/daphne-academy/academy-brain/LLM_tasks/embeddings'
         self.embedding_model = 'text-embedding-ada-002'
         self.embedding_path = os.path.join(self.root_dir, 'embeddings.pickle')
         # self.embedding_path = "embeddings.pickle"

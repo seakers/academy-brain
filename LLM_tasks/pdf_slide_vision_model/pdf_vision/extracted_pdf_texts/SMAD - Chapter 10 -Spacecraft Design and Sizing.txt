@@ -1,0 +1,3284 @@
+
+Chapter 10
+
+Spacecraft Design and Sizing
+
+Emery I. Reeves, United States Air Force Academy
+
+10.1 Requirements, Constraints, and the Design Process
+
+10.2 Spacecraft Configuration
+
+10.3 Design Budgets
+
+10.4 Designing the Spacecraft Bus
+Propulsion Subsystem; Attitude Determination and
+Control Subsystem; Communications Subsystem;
+Command and Data Handling Subsystem; Thermal
+Subsystem; Power Subsystem; Structures and
+Mechanisms
+
+10.5 Integrating the Spacecraft Design
+Spacecraft Size; Lifetime and Reliability
+
+10.6 Examples
+
+Over the past four decades the engineering design of spacecraft has evolved from
+infancy to well-defined techniques supported by analysis tools, manufacturing
+technology, and space-qualified hardware. This chapter summarizes these techniques,
+with emphasis on the conceptual design of the spacecraft vehicle. The following two
+chapters present more detailed design and manufacturing information. To design a
+spacecraft, we must understand the mission, including the payload’s size and charac-
+teristics, plus significant system constraints such as orbit, lifetime, and operations. We
+then configure a space vehicle to carry the payload equipment and provide the
+functions necessary for mission success. The design process shown in Table 10-1
+involves identifying these functions, choosing candidate approaches for each function,
+and selecting the best approaches. This chapter presents design methods with rules of
+thumb that will help us roughly estimate the spacecraft design [Agrawal, 1986; Chetty,
+1991; Griffin and French, 1991}.
+
+An unmanned spacecraft consists of at least three elements: a payload, a spacecraft
+bus, and a booster adapter. The payload is the mission-peculiar equipment or instru-
+ments. The spacecraft bus carries the payload and provides housekeeping functions.
+The payload and spacecraft bus may be separate modules, or the vehicle may be an
+integrated design. The booster adapter provides the load-carrying interface with the
+boost vehicle. The spacecraft may also have a propellant load and a propulsion kick
+stage. The propellant, either compressed gas, liquid or solid fuel, is used for velocity
+corrections and attitude control. A kick stage,” if used, is a separate rocket motor or
+liquid stage used to inject the spacecraft into its mission orbit.
+
+* Also called apogee boost motor, propulsion module, or integral propulsion stage.
+
+301
+
+302 Spacecraft Design and Sizing
+
+TABLE 10-1. Overview of Spacecraft Design and Sizing. The process is highly iterative,
+normally requiring several cycles through the table even for preliminary designs.
+
+1. Prepare list of design requirements and constraints Sec. 10.1
+
+2. Select preliminary spacecraft design approach and overall configuration | Sec. 10.2
+based on the above list
+
+3. Establish budgets for spacecraft propellant, power, and weight Sec. 10.3
+
+4. Develop preliminary subsystem designs Sec. 10.4
+
+5. Develop baseline spacecraft configuration Secs. 10.4,10.5
+6. Iterate, negotiate, and update requirements, constraints, design budgets | Steps 1 to 5
+
+The top-level requirements and constraints are dictated by the mission concept,
+mission architecture, and by payload operation. For instance, the selection of orbit is
+intimately tied to the selected mission and payload as described in Chaps. 6 and 7.
+From a spacecraft design standpoint, the orbit also affects attitude control, thermal
+design, and the electric power subsystem. However, most of these design effects are
+secondary to the effect that the orbit can have on payload performance. The designer
+therefore selects the orbit based on mission and payload performance, and computes
+the required spacecraft performance characteristics such as pointing, thermal control,
+power quantity, and duty cycle. The spacecraft is then sized to meet these require-
+ments. We can summarize succinctly the spacecraft bus functions: support the payload
+mass; point the payload correctly; keep the payload at the right temperature; provide
+electric power, commands, and telemetry; put the payload in the right orbit and keep
+it there; and provide data storage and communications, if required. The spacecraft bus
+consists of subsystems or equipment groups which provide these functions. Table 10-2
+lists the somewhat arbitrary definitions of subsystems used here and in Chap. 11. The
+table also includes alternate terminology and groupings you may encounter, along
+with references to more detailed information. Sometimes the payload is also treated as
+a subsystem. Chapters 9 and 13 discuss payload design.
+
+The propulsion subsystem provides thrust for changing the spacecraft’s transla-
+tional velocity or applying torques to change its angular momentum. The simplest
+spacecraft do not require thrust and hence have no propulsion equipment. But most
+spacecraft need some controlled thrust, so their design includes some form of metered
+propulsion—a propulsion system that can be turned on and off in small increments.
+We use thrusting to change orbital parameters, correct velocity errors, maneuver,
+counter disturbance forces (e.g., drag), control attitude during thrusting, and control
+and correct angular momentum. The equipment in the propulsion subsystem includes
+a propellant supply (propellant, tankage, distribution system, pressurant, and propel-
+lant controls) and thrusters or engines. Compressed gasses, such as nitrogen, and
+liquids, such as monopropellant hydrazine, are common propellants. Significant sizing
+parameters for the subsystem are the total impulse and the number, orientation, and
+thrust levels of the thrusters. Chapter 17 describes design and equipment for propul-
+sion subsystems.
+
+The attitude determination and control subsystem measures and controls the
+spacecraft’s angular orientation (pointing direction), or, in the case of a guidance,
+navigation, and control system, both its orientation and linear velocity (which affects
+its orbit). The simplest spacecraft are either uncontrolled or achieve control by passive
+
+303
+
+TABLE 10-2. Spacecraft Subsystems. A spacecraft consists of functional! groups of equipment
+or subsystems,
+
+Subsystem Principal Functions
+
+Provides thrust to adjust orbit and | Reaction Control Sec. 10.4.1,
+attitude, and to manage angular System (RCS) Chap. 17
+momentum
+
+Propulsion
+
+Provides determination and control
+of attitude and orbit position, plus
+pointing of spacecraft and
+
+Attitude
+Determination &
+Control System
+
+Attitude Control System | Secs.
+(ACS), Guidance,
+Navigation, & Control
+
+(ADCS) appendages (GN&C) System,
+Control System
+Communication Communicates with ground & other | Tracking, Telemetry, Secs.
+(Comm) spacecraft; spacecraft tracking & Command (TT&C) 10.4.3, 11.2
+Command & Data | Processes and distributes Spacecraft Computer
+Handling (C&DH) | commands; processes, stores, System, Spacecraft
+and formats data Processor
+
+Thermal Maintains equipment within Environmental Secs.
+allowed temperature ranges Control System 10.4.5, 11.5
+Power Generates, stores, regulates, Electric Power System | Secs.
+and distributes electric power (EPS) 10.4.6, 11.4
+Structures and Provides support structure, booster | Structure Subsystem _| Secs.
+Mechanisms adapter, and moving parts 10.4.7, 11.6
+
+methods such as spinning or interacting with the Earth’s magnetic or gravity fields.
+These may or may not use sensors to measure the attitude or position. More complex
+systems employ controllers to process the spacecraft attitude, and actuators, torquers,
+or propulsion subsystem thrusters to change attitude, velocity, or angular momentum.
+Spacecraft may have several bodies or appendages, such as solar arrays or communi-
+cation antennas, that require individual attitude pointing. To control the appendages’
+attitude, we use actuators, sometimes with separate sensors and controllers. The
+capability of the attitude control subsystem depends on the number of body axes and
+appendages to be controlled, control accuracy and speed of response, maneuvering
+requirements, and the disturbance environment. Section 11.1 discusses design of the
+attitude determination and control subsystem.
+
+The communications subsystem links the spacecraft with the ground or other
+spacecraft. Information flowing to the spacecraft (uplink or forward link) consists of
+commands and ranging tones. Information flowing from the spacecraft (downlink or
+return link) consists of status telemetry and ranging tones and may include payload
+data. The basic communication subsystem consists of a receiver, a transmitter, and a
+wide-angle (hemispheric or omnidirectional) antenna. Systems with high data rates
+may also use a directional antenna. The communications subsystem receives and
+demodulates commands, modulates and transmits telemetry and payload data, and
+receives and retransmits range tones—modulation that allows signal turnaround time
+delay and hence range to be measured. The subsystem may also provide coherence
+between uplink and downlink signals, allowing us to measure range-rate Doppler
+shifts. We size the communications subsystem by data rate, allowable error rate,
+communication path length, and RF frequency. Section 11.2 and Chap. 13 discuss
+design of the communications subsystem.
+
+
+304 Spacecraft Design and Sizing 10.1
+
+The command and data handling subsystem distributes commands and accu-
+mulates, stores, and formats data from the spacecraft and payload. For simpler
+systems, we combine these functions with the communications subsystem as a track-
+ing, telemetry, and command subsystem. This arrangement assumes that distributing
+commands and formatting telemetry are baseband extensions of communications
+modulation and demodulation. In its more general form, the subsystem includes a
+central processor (computer), data buses, remote interface units, and data storage units
+to implement its functions. It may also handle sequenced or programmed events. For
+the most part, data volume and data rate determine the subsystem’s size. Section 11.3
+discusses subsystem design, and Chap. 16 covers computers and software.
+
+The power subsystem provides electric power for the equipment on the spacecraft
+and payload. It consists of a power source (usually solar cells), power storage (batter-
+ies), and power conversion and distribution equipment. The power needed to operate
+the equipment and the power duty cycle determine the subsystem’s size, but we must
+also consider power requirements during eclipses and peak power consumption.
+Because solar cells and batteries have limited lives, our design must account for power
+requirements at beginning-of-life (BOL) and end-of-life (EOL). Section 11.4 discusses
+design of the power subsystem.
+
+The thermal subsystem controls the spacecraft equipment’s temperatures. It does so
+by the physical arrangement of equipment and using thermal insulation and coatings to
+balance heat from power dissipation, absorption from the Earth and Sun, and radiation
+to space. Sometimes passive, thermal-balance techniques are not enough. In this case,
+electrical heaters and high-capacity heat conductors, or heat pipes, actively control
+equipment temperatures. The amount of heat dissipation and temperatures required for
+equipment to operate and survive determine the subsystem’s size. Section 11.5
+discusses temperature control in more detail.
+
+The structural subsystem carries, supports, and mechanically aligns the spacecraft
+equipment. It also cages and protects folded components during boost and deploys
+them in orbit. The main load-carrying structure, or primary structure, is sized by either
+(1) the strength needed to carry the spacecraft mass through launch accelerations and
+transient events during launch or (2) stiffness needed to avoid dynamic interaction
+between the spacecraft and the launch vehicle structures. Secondary structure, which
+consists of deployables and supports for components is designed for compact packag-
+ing and convenience of assembly. Section 11.6 discusses structural design.
+
+10.1 Requirements, Constraints, and the Design Process
+
+In designing spacecraft, we begin by developing baseline requirements and
+constraints such as those in Table 10-3. If some of the information is not available, we
+may need to assume values or use typical values such as those presented here or in the
+following chapters. For successful design, we must document all assumptions and
+revisit them until we establish an acceptable baseline.
+
+To get a feel for the size and complexity of a spacecraft design, we must understand
+the space mission: its concept of operations, duration, overall architecture, and con-
+straints on cost and schedule. Even if we select a mission concept arbitrarily from
+several good candidates, clearly defining it allows us to complete the spacecraft design
+and evaluate its performance.
+
+The payload is the single most significant driver of spacecraft design. Its physical
+parameters—size, weight, and power—dominate the physical parameters of the
+
+10.1 Requirements, Constraints, and the Design Process 305
+
+TABLE 10-3. Principal Requirements and Constraints for Spacecraft Design. These
+parameters typically drive the design of a baseline system.
+
+Requirements and
+Constraints Information Needed Reference
+
+Mission:
+Operations Concept
+Spacecraft Life & Reliability
+Comm Architecture
+Security
+Programmatic Constraints
+
+Payload:
+Physical Parameters
+
+Operations
+Pointing
+Slewing
+
+Environment
+
+Orbit:
+Defining Parameters
+Eclipses
+Lighting Conditions
+
+Maneuvers
+
+Environment:
+Radiation Dosage
+Particles & Meteoroids
+Space Debris
+Hostile Environment
+
+Launch:
+Launch Strategy
+
+Boosted Weight
+Envelope
+Environments
+Interfaces
+Launch Sites
+
+Ground-System Interface:
+Degree of Autonomy
+Ground Stations
+Space Links
+
+Type, mission approach
+
+Mission duration, success criteria
+Command, control, comm approach
+Level, requirements
+
+Cost and schedule profiles
+
+Size, weight, shape, power
+
+Duty cycle, data rates, fields of view
+Reference, accuracy, stability
+Magnitude, frequency
+
+Max and min temperatures, cleanliness
+
+Altitude, inclination, eccentricity
+Maximum duration, frequency
+Sun angle and viewing conditions
+
+Size, frequency
+
+Average, peak
+
+Size, density
+
+Density, probability of impact
+Type, level of threat
+
+Single, dual; dedicated, shared;
+use of upper kick stage
+
+Launch capabilities
+
+Size, shape
+
+g's, vibration, acoustics, temperature
+Electrical and mechanical
+
+Locations, allowed launch azimuths
+
+Required autonomous operations
+Number, locations, performance
+Space-to-space link, performance
+
+Chaps. 1, 2
+Sec. 1.4
+
+Secs. 1.4, 10.5, 19.2
+
+Sec. 13.1
+Secs, 13.1, 15.4
+Chaps. 1, 20
+
+Chaps. 9, 13
+
+Secs. 9.5,
+13.4, 13.5
+
+Secs. 9.5, 13.2
+
+Secs. 5.4, 9.3, 11.1
+
+Secs. 9.5, 11.1
+Sec. 9.5
+
+Chaps. 6, 7
+Secs. 7.4, 7.5
+Sec. 5.1
+Secs, 5.1, 5.2
+Secs. 6.5, 7.3
+
+Chap. 8
+
+Secs. 8.1, 8.2
+Secs. 8.1, 21.2
+Sec. 21.2
+
+Sec. 8.2
+
+Chap. 18
+Secs. 18.1, 18.2
+
+Secs, 18.1, 18.2
+Sec. 18.3
+Sec. 18.3
+Sec. 18.3
+Sec. 18.1
+
+Chaps. 14, 15
+
+Secs. 15.4, 16.1
+Secs. 15.1, 15.5
+Secs. 13.3, 13.4
+
+
+306 Spacecraft Design and Sizing 10.1
+
+spacecraft. Payload operations and support are key requirements for the spacecraft’s
+subsystems, as well. The payload may also impose significant special requirements
+that drive the design approach, such as cryogenic temperatures or avoidance of con-
+tamination. Fortunately, we often understand the payload’s characteristics better than
+the spacecraft’s overall characteristics in the early design phases. Thus, we can infer
+many important design features by understanding the payload and how it operates.
+
+Chapters 6 and 7 show how orbital characteristics affect the mission. In spacecraft
+design, the orbit affects propulsion, attitude control, thermal design, and the electric
+power subsystem. Most of these design effects are secondary to the orbit’s effect on
+payload performance. Therefore, we select the orbit based on mission and payload per-
+formance. Then we compute the performance characteristics needed for the spacecraft,
+such as pointing, thermal control, and power quantity and duty cycle. Finally, we size
+the spacecraft to meet these needs.
+
+The natural space environment—especially radiation—limits two aspects of space-
+craft design: usable materials or piece parts, and spacecraft lifetime. Radiation levels
+and dose must be considered in the design, but they do not normally affect the system’s
+configuration or ability. Chapter 8 provides useful space environment information.
+However, some types of hostile (weapon) environments may affect countermeasures,
+configuration, shielding, or maneuvering ability.
+
+Selecting a boost vehicle and the possible use of kick stages are central issues in
+designing a spacecraft. We must select a booster that can put at least the minimum
+version of our spacecraft into its required orbit. Chapter 18 describes available boost-
+ers, all of which have limited weight-lifting ability. In most cases, we must extrapolate
+published data to meet our mission requirements. Chapters 6 and 7 present the laws of
+orbital mechanics and the techniques of trajectory design. These include methods for
+computing velocity increments and guidance techniques. In some cases, the spacecraft
+must provide large amounts of velocity just to reach orbit or to guide the flight path.
+Chapter 17 presents performance characteristics for solid and liquid propulsion kick
+stages to implement these functions. Common nomenclature for a kick stage used to
+inject a spacecraft into transfer orbit is a perigee kick motor (PKM), whereas a kick
+stage used to circularize at high altitude is called an apogee kick motor (AKM).
+
+The booster selection will also affect a spacecraft’s linear dimensions. An aerody-
+namic cover, called a fairing, or shroud, protects the spacecraft as it travels through
+the atmosphere. The fairing’s diameter and length limit the spacecraft’ s size—at least
+while it is attached to the booster. Chapter 18 presents the size of standard fairings for
+various boosters. If the on-orbit spacecraft is larger than the fairing, it must be folded
+or stowed to fit within the fairing and unfolded or deployed on orbit. To design an item
+with a large area but small intrinsic mass, such as a solar array or antenna, we make
+the item as light as possible, fold it and protect it during boost, and deploy it (unfold,
+pull, or stretch it into shape) on orbit. Solar cells may rest on lightweight substrates or
+even on film that is folded or rolled for storage. Antenna reflectors have consisted of
+folded rigid panels or of fabric, either film or mesh. Thus, we meet the launch vehicle’s
+demands for a smaller spacecraft by using a stowed configuration and then deploying
+the spacecraft to meet the full size needed on orbit. We use weight efficiently by
+caging and protecting the light-weight deployables during boost.
+
+The ground system interface determines how much ground operators and the space-
+craft can interact—an important part of design. The periods of visibility between
+ground stations and the spacecraft limit ground control of spacecraft operations or
+corrections of errant behavior. Visibility periods and ground coverage issues are
+
+10.1 Requirements, Constraints, and the Design Process 307
+
+described in Chap. 5. If ground operations cost too much, we may want the spacecraft
+to operate autonomous] y—another major design decision.
+
+Table 10-4 lists initial configuration decisions or trade-offs designers often face.
+Weight, size, and power requirements for the payload place lower limits on
+spacecraft’s weight, size, and power. The spacecraft’s overall size may depend on such
+payload parameters as antenna size or optical system diameter. Our approach to space-
+craft design must match these dimensions and provide fields of view appropriate to the
+payload functions. The spacecraft must generate enough power to satisfy the payload
+needs as well as its own requirements. The amount of power and the duty cycle will
+dictate the size and shape of solar arrays and the requirements for the battery.
+
+TABLE 10-4. Initial Spacecraft Design Decisions or Trade-offs. Further discussion of these
+trades is in Sec. 10.2.
+
+Design
+Approach or Where Principal Options
+Aspect Discussed or Key Issues
+
+Spacecraft Table 10-10 Must allow for spacecraft bus weight and payload weight.
+Weight
+
+Spacecraft Tables 10-8, Must meet power requirements of payload and bus.
+Power 10-9
+
+Spacecraft Size | Sec. 10.1 Is there an item such as a payload antenna or optical
+system that dominates the spacecraft's physical size? Can
+the spacecraft be folded to fit within the booster diameter?
+Spacecraft size can be estimated from weight and power
+
+requirements.
+
+Attitude Control | Secs. 10.2, Options include no control, spin stabilization, or 3-axis
+
+Approach 10.4.2, 11.1 control: selection of sensors and control torquers. Key
+issues are number of items to be controlled, accuracy, and
+amount of scanning or slewing required.
+
+Solar Array Secs. 10.2, Options include planar, cylindrical, and omnidirectional
+
+Approach 10.4.6, 11.4 arrays either body mounted or offset.
+
+Kick Stage Use | Chaps. 17,18 | Use of a kick stage can raise injected weight. Options
+include solid and liquid stages.
+
+Propulsion Secs. 10.2, ls metered propulsion required? Options include no
+Approach 10.4.1, 17.2, propulsion, compressed gas, liquid monopropellant or
+17.3 bipropellant.
+
+Field-of-view and pointing considerations influence how we configure the space-
+craft. Instruments, sensors, solar arrays, and thermal radiators all have pointing and
+field-of-view requirements that must be satisfied by their mounting on the spacecraft
+and the spacecraft’s orientation. In the simplest case, all items are fixed to the body,
+and control of the body’s attitude points the field of view. In more complex cases,
+single or two-degree-of-freedom mechanisms articulate the field of view.
+
+We must also establish how to configure the spacecraft’s propulsion early in the
+design process. Although interaction with the Earth’s gravity or magnetic field can
+control attitude, it cannot change the spacecraft’s velocity state. If spacecraft velocity
+control is needed, some form of metered propulsion must be used. If we decide to use
+metered propulsion, we should look at using this system for such functions as attitude
+control or as an orbit transfer stage. Most attitude-control systems use metered pro-
+
+308 Spacecraft Design and Sizing 10.2
+
+pulsion to exert external torque on the spacecraft. Selecting a propulsion approach
+depends on the total impulse requirement, and the propulsion system’s performance,
+as discussed in Chap. 17.
+
+10.2 Spacecraft Configuration
+
+To estimate the size and structure of a spacecraft, we select a design approach,
+develop a spacecraft configuration (overall arrangement) and make performance
+allocations to the spacecraft subsystems. We then evaluate the resulting design and
+reconfigure or reallocate as needed. Subsequent iterations add design detail and pro-
+vide better allocations. The process of allocating design requirements involves two
+mutually supporting techniques. First, the allocated design requirements are dictated
+by considering the overall spacecraft design—a top-down approach. Alternatively, the
+allocated design requirements are developed by gathering detailed design informa-
+tion—a bottom-up approach. For instance, we may allocate 100 kg for structural
+weight based on 10% of the overall spacecraft weight. This is a top-down allocation.
+However, a detailed design of the structure may require 120 kg if aluminum is used
+and 90 kg if composites are used. These are bottom-up allocations, providing us with
+the opportunity to trade off alternatives and reallocate requirements to optimize the
+design. Most of the allocation methods presented in this chapter are top-down. They
+provide a starting point for the allocation process. However, we should use them in
+conjunction with bottom-up design from the more detailed information given in
+Chaps. 11, 16, and 17.
+
+Figure 10-1 shows different spacecraft configurations. First, observe that each of
+these spacecraft has a central body or equipment compartment that houses most of the
+spacecraft equipment. Second, note that these spacecraft all have solar arrays either
+mounted on external panels or on the skin of the equipment compartment. And finally
+note that some of the spacecraft have appendages carrying instruments or antennas
+attached to the main compartment. Let’s examine each of these configuration features
+in more detail.
+
+Table 10-5 lists the factors called configuration drivers leading to the various
+configurations. The weight, size and shape of the payload, and the boost vehicle diam-
+eter drive the size and shape of the equipment compartment. Table 10-5 also presents
+rules of thumb based on analysis of a large number of spacecraft designs. This analysis
+shows that the average spacecraft bus dry weight (spacecraft weight excluding propel-
+lant) is approximately twice that of the payload. The minimum spacecraft bus dry
+weight is equal to the payload weight and is achieved only when the payload is
+massive and compact. At the other extreme, low-density payloads or those consisting
+of multiple instruments can lead to a spacecraft bus as massive as 6 times the payload.
+Although this is a large range of possible spacecraft bus weights, these ratios are at
+least a bound. Section 10.3 shows how to refine the estimate.
+
+The spacecraft equipment compartment volume can be estimated from its weight.
+For 75 spacecraft launched between 1975 and 1984, the average spacecraft in launch
+configuration with propellant loaded and all appendages folded had a density of only
+79 kg/m> with a maximum of 172 kg/m} and a minimum of 20 kg/m3. However,
+appendages are usually lightweight, so the weight of the equipment compartment is
+only slightly less than the total spacecraft weight. We can use this experience to esti-
+mate the spacecraft size (volume and dimensions) by the steps shown in Table 10-6.
+We start with payload weight to obtain an estimate of spacecraft bus weight (e.g.,
+
+10.2 Spacecraft Configuration 309
+
+A. Spin-Stabilized Spacecraft
+
+Mission: Nuclear Detection
+
+Orbit: Super synchronous ~107,000 km
+
+Payload: Radiation instruments body
+mounted
+
+Configuration Features:
+
+— Equipment compartment: 1.6 m
+diapolyhedron; internal solid AKM
+
+— Solar array: Body mounted solar
+panels
+
+— Appendages: None
+
+- Attitude control: Spin-stabilized,
+inertially pointed
+
+Weight: 221 kg Power: 90 W
+
+Mission: Radiation Fields Measurement
+Orbit: 245 x 42,400 km
+47 deg inclination
+Payload: Radiation Instruments body
+mounted
+Configuration Features:
+
+~— Equipment Compartment:
+0.6 m dia sphere
+
+— Solar Array: Four deployed paddles
+2.2 m span
+
+— Appendages: Whip antennas
+— Attitude control: Spin-stabilized,
+inertially pointed
+
+Weight: 64.6 kg
+
+Mission: Communications
+
+Orbit: Geosynchronous
+
+Payload: Communications transponder;
+Earth coverage horn antennas, and
+steerable pencil beam antennas
+
+Configuration Features:
+
+— Equipment Compartment:
+3 m dia cylinder, 4.2 m long
+
+— Solar Array: Body mounted on cylinder
+
+— Appendages: Despun antenna platform
+with steerable parabolic antennas
+
+— Attitude control: Spin-stabilized,
+Me spin axis normal to orbit plane
+Weight: 523 kg
+Power: 535 W BOL, 360 W EOL
+
+Fig. 10-1. Typical Spacecraft Showing Different Configuration Options. FOV = field-of-
+view; BOL = beginning-of-life; EOL = end-of-life.
+
+310 Spacecraft Design and Sizing 10.2
+
+B. 3-Axis-Stabilized Spacecraft
+
+DSP Mission: Earth Observation
+Orbit: Geosynchronous
+Payload: Body mounted telescope and
+attitude sensors
+Configuration Features:
+— Equipment Compartment:
+4.5 m dia cylinder
+— Solar Array: Body mounted on cylinder
+and on deployed panels
+— Appendages: Solar panels and
+communications antennas
+— Attitude Control: Cylinder axis pointed
+toward nadir; Body rotates slowly about
+cylinder axis to scan the payload FOV
+
+Weight: 2,273kg Power: 1,274W
+
+To nadir
+
+LANDSAT 4, 5
+
+Mission: Earth Observation
+Orbit: 700 km, Sun synchronous
+
+Payload: Multispectral scanner fixed to
+spacecraft body with internal scanning mirror
+
+Configuration Features:
+
+— Equipment Compartment:
+Triangular cylinder 2 m dia, 4 m long
+
+— Solar Array: Four panel deployed planar,
+single axis pointing control
+
+— Appendages: Communication antenna
+
+— Attitude Control: 3-axis control, 1 face
+toward nadir, 1 axis in direction of flight
+
+Wt: 940 kg Power: 990 W BOL, 840 W EOL
+
+Mission: Communications
+Orbit: Geosynchronous
+Payload: S, K, and C band communication
+transponders with multiple antennas
+Configuration Features:
+— Equipment Compartment:
+2.5 m hexagonal cylinder. Auxiliary
+compartments behind each of the
+large steerable antennas
+— Solar Array: Deployed planar panels on
+both sides of equipment compartment.
+Single-axis articulation
+— Appendages: Two 5 m steerable para-
+bolic antennas, one 2 m steerable an-
+tenna, one 1.5 m fixed parabolic antenna
+- Attitude Control: 3-axis control, one face
+toward nadir, 1-axis in direction of flight
+
+Weight: 2,200kg Power: 1,700 W
+
+To nadir
+
+Fig. 10-1. Typical Spacecraft Showing Different Configuration Options. (Continued)
+FOV = field-of-view; BOL = beginning-of-life; EOL = end-of-life.
+
+10.2 Spacecraft Configuration 311
+
+C. Spacecraft Configurations Featuring Long Booms
+
+GEOSAT
+Mission: Mapping the Earth’s shape
+
+Payload: Radar altimeter
+
+Configuration Features:
+
+— Solar Array: Eight panels, each 3 m
+in length
+
+— Appendages: 7 m boom with 50 kg tip
+weight
+
+— Attitude Control: Gravity-gradient long
+axis vertical
+
+Weight: 636 kg
+
+| ¥ To nadir
+
+Mission: Observation of Geophysical
+Phenomena
+Payload: Multiple instruments for particle,
+fields and radiation measurements
+Configuration Features:
+— Equipment Compartment:
+Rectangular 1 mx 1mx2m
+— Solar Array: Planar panels with single
+axis articulation
+— Appendages: Boom-mounted
+instruments, single-axis articulated
+instrument package
+— Attitude control: 3-axis Earth-Sun control
+To nadir using reaction wheels and cold gas
+thrusters
+
+Weight: 520kg Power: 560 W
+
+Fig. 10-1. Typical Spacecraft Showing Different Configuration Options. (Continued)
+FOV = field-of-view; BOL = beginning-of-life; EOL = end-of-life.
+
+twice payload weight) and add an estimate of propellant weight (see Sec. 10.3) to yield
+spacecraft loaded weight. We now use an estimated density (e.g., 79 kg/m) to
+compute the spacecraft volume. We select an equipment compartment shape and
+dimensions to provide this volume, match the payload dimensions, and fit within the
+booster diameter.
+
+Usually, a spacecraft in folded launch configuration is cylindrically symmetric,
+mounted on the booster with the axis of symmetry parallel to the thrust axis. The
+folded spacecraft diameter is designed to fit within the boost vehicle diameter although
+on rare occasions a bulbous fairing may be used to provide a slightly larger diameter.
+(Bulbous fairings are generally avoided because they detract from booster perfor-
+mance.) Since the equipment compartment diameter is approximately the same as the
+folded spacecraft diameter, we can use the booster diameter as an upper limit for the
+equipment compartment diameter and select a compartment shape to fit within this
+diameter. Knowing its volume, we can readily compute the compartment’s length.
+Table 10-28 in Sec. 10.5 provides formulas for compartment parameters for a cubic
+
+312 Spacecraft Design and Sizing 10.2
+
+TABLE 10-5. Spacecraft Configuration Drivers.
+
+Configuration
+Driver Rule of Thumb Reference
+Payload Weight | Spacecraft dry Payload weight is between 17% and 50% | Chap. 9
+weight of spacecraft dry weight. Average is 30%
+Payload Size Spacecraft size Spacecraft dimensions must Chaps. 9,
+and Shape accommodate payload dimensions 10, 11, 13
+
+Payload Power | Spacecraft power | Spacecraft power is equal to payload Chap. 9,
+power plus an allowance for the 10.2, 10.3
+spacecraft bus and battery recharging
+
+Spacecraft Spacecraft size Spacecraft density will be between Secs.
+Weight 20 kg/m3 and 172 kg/m’. Average is 10.2, 10.3
+79 kg/m3
+
+Spacecraft Power | Solar array area__| The solar array will produce approxi- Sec. 11.4
+mately 100 W/m2 of projected area
+
+Solar Array Area | Solar array type If required solar array area is larger than | Sec.11.4
+area available on equipment compart-
+ment, then external panels are required
+
+Booster Diameter | Spacecraft Spacecraft diameter is generally less Sec.10.2,
+diameter than the booster diameter Table 18-3
+
+Pointing Spacecraft body | Two axes of control are required for each | Sec.11.1
+Requirements orientation and article to be pointed. Attitude control of
+
+number of the spacecraft body provides 3 axes of
+
+articulated joints —_| control
+
+TABLE 10-6. Estimating Spacecraft Equipment Compartment Dimensions.
+
+Procedure Comments
+
+. Payload Weight Starting point
+
+. Estimate Spacecraft Multiply payload weight by Average is 3.3
+Dry Weight between 2 and 7
+
+. Estimate Spacecraft Prepare a bottom-up Normal range is 0% to 25% of
+Propellant propellant budget or spacecraft dry weight (Table 10-7)
+arbitrarily select a weight
+
+. Estimate Spacecraft Divide spacecraft loaded Range of density is 20-172 kg/m3,
+Volume weight by estimated density | Average is 79 kg/m
+
+. Select Equipment Shape and dimensions In the folded configuration,
+Compartment Shape should match payload spacecraft are cylindrically
+and Dimensions dimensions and fit within the | symmetric about the booster thrust
+booster diameter axis. Cross-sectional shapes range
+from triangular to circular.
+
+compartment using a density of 100 kg/m3. Figure 10-1 shows examples of various
+spacecraft compartment shapes.
+
+Spacecraft solar arrays are of two types: body mounted and panel mounted. Exam-
+ples of both types are shown in Fig. 10-1. An array produces about 100 W/m? of
+projected solar cell area. This is unregulated power and represents an array efficiency
+of 7%. To use this rule of thumb, we need to estimate the total spacecraft power, as
+
+10.2 Spacecraft Configuration 313
+
+described in Sec. 10.3. However for initial configuration selection, we need only
+bound the power requirements and see if there is sufficient area on the equipment
+compartment to allow body-mounted cells. At a minimum, power must be provided
+for the payload. Prudent design would also make some allowance for spacecraft bus
+power and battery recharge power which are discussed in more detail in Sec. 10.3. If
+there is insufficient area on the spacecraft body for a body-mounted array, then we are
+forced to use panels.
+
+Evaluation of pointing and attitude control on spacecraft configuration starts with
+identifying all pointing requirements (see Table 10-13) for both the spacecraft bus and
+payload. The process of synthesizing a control approach to meet these requirements is
+discussed in Sec. 10.4.2. Although we must go through this process in detail to see the
+full effect of pointing on the spacecraft configuration, the basic implications can be
+derived by the process and rules of thumb in Table 10-5. The spacecraft configuration
+must provide 2 axes of control for each item that is to be pointed. The spacecraft body
+has 3 axes so the body alone can satisfy one pointing requirement; for instance, one
+body axis (i.e., the yaw axis) can be pointed toward nadir by control about the other 2
+axes (roll and pitch). If two items are to be pointed, then the spacecraft must be
+configured with at least one articulated joint between the two items. For illustration, a
+body-mounted antenna can be pointed toward nadir by controlling 2 axes of body
+attitude. A solar array can then simultaneously be pointed toward the Sun by using the
+third body axis and providing a single axis solar array drive to control the solar array
+attitude relative to the body. This approach is called yaw steering (see OGO,
+Fig. 10-1C). If the spacecraft has a second item that must point in another direction
+(say, an antenna that must point toward a communication relay satellite), then the
+configuration must provide 2 more axes of control. The TDRS spacecraft shown in Fig
+10-1B has 3 separate articulated antennas with a total of 6 mechanical axes of control
+in addition to 3 axes of body attitude control and 1 axis of solar array control. DSP,
+shown in Fig 10-1B, has a body-mounted payload and uses control of two body axes
+to point toward nadir. The third body axis is used to scan the payload field-of-view. A
+communication antenna is articulated about 2 axes to point toward a ground station,
+and although solar array panels are used to augment the solar array area, the array is
+not articulated.
+
+Spin stabilization is a particularly simple and robust method of attitude control.
+Satellites that employ spin stabilization are often cylindrical, such as DSCS II shown
+in Fig 10-1A. For such a satellite, the spin axis supplies 1 axis of control by using a
+motor-driven platform that is despun (spinning in a negative sense relative to the
+satellite body). This is sometimes called a dual-spin system.. Equipment mounted on
+the despun platform can be articulated about additional axes to achieve further point-
+ing capability.
+
+The attitude contro] method may also interact with the solar array configuration.
+Solar panels may be body-fixed such as Explorer VI and DSP, or they may be articu-
+lated, as shown on OGO and TDRS in Fig. 10-1. Spin-stabilized spacecraft usually
+have body-fixed arrays, and 3-axis-controlled spacecraft generally use articulated
+panels. The power generated by a solar array is proportional to the area that intercepts
+sunlight (the projected area). A planar array which is pointed toward the Sun has a
+ratio of total array area to projected area of one. A cylindrical array which has its
+axis perpendicular to the Sun line has a ratio of 1/7 and an array which projects equal
+area in all directions has a ratio of 1/4. The method of solar array pointing control and
+the type of array selected therefore affect the total array area.
+
+314 Spacecraft Design and Sizing 10.3
+
+Sometimes a spacecraft configuration is driven to use long booms either to control
+spacecraft moment of inertia or to separate delicate instruments from the spacecraft
+body electrical fields. GEOSAT, shown in Fig. 10-1C, uses a boom to increase the
+moment of inertia and provide gravity-gradient attitude stabilization, a passive attitude
+control technique described in Sec. 11.1. OGO, also shown in Fig.10-1C, uses booms
+to isolate payload magnetometers from the spacecraft body.
+
+10.3 Design Budgets
+
+We begin allocating performance by establishing budgets* or allocations for
+propellant, power, weight, and reliability. We can derive the propellant budget by
+estimating the propellant requirements for velocity changes (orbit correction and
+maintenance) and attitude control. At first, we estimate the power budget by adding
+the payload’s power requirements to power estimates for the spacecraft bus
+subsystems. To derive the first weight budget for the spacecraft, we add the payload
+weight to estimates for the spacecraft bus, including propulsion components and
+power components. We make the initial reliability budget by defining the probability
+of achieving acceptable spacecraft performance and lifetime.
+
+A typical propellant budget as shown in Table 10-7 contains four elements: veloc-
+ity-control propellant, attitude-control propellant, margin, and residual. The velocity-
+correction requirement is expressed as total velocity change or AV, which is obtained
+from Sec. 7.3. Chapter 17 presents the rocket equation Eq. (17-21) by which we
+convert velocity change to propellant mass. Attitude-control propellant is used for spin
+stabilization and maneuvering while spinning, countering disturbance torques (in-
+cluding control during AV thrusting), attitude maneuvering, and limit cycling or
+oscillation. Formulas for these entries are presented in Sec. 10.4.2 and summarized in
+Table 10-7. Propellant margin is a percentage of the identified propellant requirement,
+typically 25% for preliminary design. 1% or 2% is unavailable propellant.
+
+TABLE 10-7. Propellant Budget.
+
+Velocity Correction and Control
+
+Attitude Control
+Spinup and despin
+Maneuvering while spinning
+Cancelling disturbance torque
+Control during AV thrusting
+Attitude maneuvering
+
+Limit cycling
+
+Nominal Propellant
+
+Margin
+
+Residual
+
+Total Propellant
+
+Reference
+
+Eqs. (17-9), (7-14), Table 7-3
+Secs. 10.4.2, 11.1
+
+Eq. (10-9)
+
+Eq. (10-11)
+
+Table 10-18
+
+Table 10-18 and Eqs. (10-8a,b)
+Eq. (10-3)
+
+Eqs. (10-5) through (10-7)
+Sum of above
+10%-25% of nominal
+1%-2% of total
+Sum of above
+
+* See p. 4 in Chap. | for the definition of a budget.
+
+10.3 Design Budgets 315
+
+Table 10-8 outlines the three steps for estimating spacecraft power requirements.
+First, we prepare an operating power budget by estimating the power required by the
+payload and the spacecraft subsystems. If the spacecraft has several operating modes
+that differ in power requirements, we must budget separately for each mode, paying
+particular attention to peak power needs for each subsystem. The second step is battery
+sizing, or selecting the battery capacity appropriate to the spacecraft power require-
+ments and battery cycle life. With size established, we can compute the battery’s
+recharge power. The third step is accounting for power-subsystem degradation over
+the mission life by computing radiation damage to the solar array.
+
+TABLE 10-8. Steps in Preparing a Power Budget.
+| Steps What’s Involved Where Discussed
+1. Prepare Operating | Estimate power requirements for Chaps. 9, 11, 13
+Power Budget payload and each spacecraft bus
+subsystem
+
+2. Size the Battery Estimate power level that the battery | Generally. equal to or less than
+must supply the operating power level
+Compute discharge cycle duration, | Determined by orbit selection
+charge cycle duration, and number of | and mission duration (Chap. 7)
+
+charge-discharge cycles
+
+Select depth of discharge Sec.11.4
+Select charge rate Sec.11.4
+Compute battery recharge power Sec.11.4
+
+3. Estimate Power Compute degradation of power Secs. 8.1, 11.4
+Degradation Over | system from orbital environment
+Mission Life
+
+Table 10-9 lists references that discuss operating power for the payload and the
+spacecraft bus subsystems, and shows typical percentages of the operating power
+budget devoted to each subsystem. These percentages change with the spacecraft’s
+total power use, so I have presented ranges for a minimum (<100 W), a small (200 W),
+and a medium to large spacecraft (S00—10,000 W). We can use these values as a start-
+ing point if we do not have more information, but Sec. 10.6 and Chap. 11 give specific
+examples of various power requirements.
+
+Sections 10.4.6 and 11.3 discuss battery recharge power. At the minimum, the
+recharge energy must exceed the energy drawn from the battery during discharge by
+an amount that accounts for the efficiency of the charge-discharge process (typically
+80%). Most batteries also require recharge at a minimum rate—specified as a fraction
+of battery capacity (typically 1/15). These two requirements translate into recharge
+power ranging from 7% of the discharge power for geosynchronous orbits to 60% for
+low-altitude orbits.
+
+The solar array must supply enough power for operations and recharging the
+battery unti] end-of-life. The beginning-of-life power requirement must allow for
+degradation in the solar array. As Sec. 11.4 points out, this degradation depends on
+orbit altitude and radiation environment, but 30% is typical for 10 years at geosyn-
+chronous altitude. We can assume the same value for altitudes of 800 km or less.
+Between these altitudes the degradation is much larger.
+
+Table 10-10 shows the build-up of spacecraft weight. As pointed out in Sec. 10.2,
+the ratio of spacecraft dry weight to payload weight lies in the range of 2:1 to 7:1; the
+payload weight is typically less than half the spacecraft dry weight and may be as little
+
+316 Spacecraft Design and Sizing 10.3
+
+TABLE 10-9. Typical Power Consumption by Module or Subsystem.
+
+% of Operating Power
+
+References
+
+Subsystem*
+
+Payload Chaps. 9, 13
+Propulsion 0 Sec. 10.4.1, Chap.
+Attitude Control Secs. 10.4.2, 11.1
+Communications 5 Secs. 10.4.3, 11.2
+
+Command & 5 Secs. 10.4.4, 11.3
+Data Handling
+
+Thermal Secs. 10.4.5, 11.5
+Power Secs. 10.4.6, 11.4
+Structure Secs. 10.4.7, 11.6
+
+Average Power: Sum of above
+Margin: 5% to 25% of power based on design maturity
+Total Average Requirement for Operating Power: Total of above
+
+* Includes conversion and line losses.
+
+TABLE 10-10. Weight Budget. The percentages shown in the right-hand column are the
+percent of spacecraft dry weight.
+
+Payload Mey. Chaps. 9, 13 | 15% to 50% of Mary
+
+Spacecraft Subsystems Msg Sum of subsystem wts
+
+Propulsion Mpropulsion Chap.17
+Attitude Control Mgnc Sec. 11.1
+Communications Mcom Sec. 11.2
+
+Command & Mcadh Sec. 11.3
+Data Handling
+
+Thermal Sec. 11.5 2% to 5% of Mary
+Power Sec. 11.4
+
+Structure & Mechanisms Sec. 11.6 8% to 12% of Mipj or
+15% to 25% of Mary
+
+Margin Mmar 5% to 25% of wt based
+on design maturity
+
+Spacecraft Dry Weight Mary = Mey. + Mgg + Mmar
+
+Propellant Morop Table 10-7
+Loaded Weight Mioaded = Mary + Morop Chap. 17
+Kick Stage Mkick Sec. 17.3
+Injected Weight Minj = Mioaded + Mkick
+
+Adapter Madapter Sec. 11.6
+
+Boosted Weight Mboosted = Minj + Madapter | Chap. 18
+
+10.3 Design Budgets 317
+
+as 15% of the dry weight. Spacecraft structure weight generally falls in the range of
+15% to 25% of spacecraft dry weight (see Appendix A). Spacecraft structural weight
+may also be estimated at 8% to 12% of injected weight (dry weight + propellant +
+injection stage). Spacecraft thermal subsystem weight is between 2% and 5% of space-
+craft dry weight. Weight percentages for other subsystems vary widely and require
+more detailed investigation. (See Sec. 10.4.3, Chaps. 11 and 17.) To account for
+uncertainties during preliminary design we add 25% to these weights for new equip-
+ment and 5% or less for known hardware. We should hold a small allowance (1% to
+2%) at the system level to account for integration hardware, such as brackets and
+mounting hardware, which are often overlooked.
+
+TABLE 10-11. Preparing a Reliability Budget.
+
+Reference
+Chaps. 1, 2,3
+
+Comments
+
+1. Establish mission
+success criteria
+
+The criteria should be numerical and may have
+multiple elements. For instance, a communication
+spacecraft having multiple channels for several
+types of service might define success as one
+channel of each type of service or as a total number
+of channels and total radiated power.
+
+. Assign numerical
+success probability to
+each element of the
+mission success
+criteria and define the
+method for computing
+success probability
+
+. Create the reliability
+budget by allocating the
+success probability
+(reliability) to each item
+of hardware & software
+
+. Evaluate the system
+
+reliability and iterate the
+
+design to maximize
+reliability and identify
+and eliminate failure
+modes
+
+This might be stated as a probability of 0.5 of
+operating service “A” for 5 years and a probability of
+0.7 of operating service “B” for 2 years and 0.4 of
+operating service “B” for 7 years. For each element
+of the success criteria, numerical values and
+associated lifetimes are assigned.
+
+Several methods of evaluating success probability
+are available—see Chap. 19.
+
+If, for instance, a system reliability of 0.6 is required,
+
+it might be allocated as:
+Propulsion 0.95
+Structure 0.99
+Thermal 0.99 0.93
+ADCS 0.9 0.89 .
+
+0.93
+0.93
+
+Comm
+C&DH
+Power
+Payload
+
+Sec. 19.2
+
+Sec. 19.2
+
+Assuming independent, serial operation, hardware
+failure rate is generally evaluated by summing
+piece part failure rates. (See Chap. 19 and
+MIL-HDBK-17 [1991].) Failure mode analysis
+
+and elimination are discussed in Sec. 10.4. Effect
+of failures can be reduced and reliability raised by
+changing the design, selecting more reliable
+hardware, or adding redundant hardware and
+software.
+
+From the start of the spacecraft design we must design our hardware and software
+
+to achieve reliable operation. The process of design-for-reliability starts in the con-
+ceptual design phase with the determination of system reliability requirements and
+allocation of these requirements to the spacecraft subsystems. This is a four-part
+process as shown in Table 10-11. First, we establish the mission success criteria,
+which is a list of events and operations that together constitute success. Second, we
+assign a numerical probability to meeting each element of the mission success criteria
+and select a set of ground rules for computing the probability of success. Third, we
+allocate reliability requirements to all spacecraft hardware and software. Fourth, we
+
+318 Spacecraft Design and Sizing 10.4
+
+evaluate system reliability and iterate the design to maximize the reliability assess-
+ment, and identify and eliminate failure modes. (See Secs. 10.5.2 and 19.2 for further
+discussions of reliability.)
+
+10.4 Designing the Spacecraft Bus
+
+10.4.1 Propulsion Subsystem
+
+The propulsion equipment for a spacecraft includes tankage to hold the propellant,
+lines and pressure-regulating equipment, and the engines or thrusters. Common
+propellants are pressurized gas such as nitrogen, selected monopropellants such as
+hydrazine, and bipropellants. The pressurized feed systems typically used may be
+pressure regulated or blow down. Important design parameters are the number, orien-
+tation, and location of the thrusters; the thrust level; and the amount of impulse
+required. Chapter 17 discusses the design of propulsion subsystems and characteristics
+of propulsion components.
+
+The propulsion tanks rest at or near the spacecraft’s center of mass to avoid shifting
+of the center of mass as the propellant is used. Engines for translational control are
+aligned to thrust through the center of mass, whereas engines for attitude control thrust
+tangentially and are mounted as far away from the center of mass as possible to
+increase the lever arm and thus increase the torque per unit thrust. Attitude control
+engines which fire in the direction of flight (along or in opposition to the velocity
+vector) are generally used in pairs to produce a pure torque without net linear force.
+However, the spacecraft flight path is less sensitive to thrust at right angles to the
+velocity vector and single attitude control engines are sometimes used in these
+directions. Three-axis control requires a minimum of 6 attitude control thrusters, and
+many designs use 8 to 12 plus backup units for reliability.
+
+Table 10-12 gives weight and power estimates for the propulsion subsystem.
+Chapter 17 gives more detailed weights and Sec. 10.6 offers examples of integrated
+designs. The propulsion subsystem does not use much electrical power unless it
+employs thrusters with heated catalyst beds, heated thrusters, or electric propulsion.
+Electric propulsion is rare, but heated thrusters are common. Propulsion lines and
+tanks must be protected from freezing, usually by thermostatically controlled guard
+heaters. Power for these heaters is included in the thermal subsystem. Electrically
+operated solenoid valves control propellant flow to the thrusters, but we account for
+their power in the ADC subsystem.
+
+TABLE 10-12. Weight and Power Budget for Propulsion Subsystem. See Sec. 17.4 for
+specific design information.
+
+Weight (kg) Comments
+Propellant Table 10-7 Added to overall budget in Table 10-7;
+not part of propulsion subsystem
+
+Tank 10% of propellant Tanks for compressed gas may be up to
+weight 50% of gas weight
+
+Thrusters 0.35-0.4 kg for 5 W per
+
+0.44 to 4.4. N hydrazine | thruster
+
+units when firing
+Lines, Valves, | Dependent on detailed Example spacecraft of Sec. 10.6 used
+& Fittings spacecraft design 6.8 kg (HEAO) & 7.5 kg (FLTSATCOM)
+
+
+10.4 Designing the Spacecraft Bus 319
+
+10.4.2 Attitude Determination and Control Subsystem
+
+Attitude control requirements are based on those for payload pointing and the
+spacecraft bus pointing. Table 10-13 lists possible design requirements. If we must
+control the attitude of all or part of the payload, we have to decide whether to point the
+entire spacecraft or to articulate the payload or part of the payload. In the extreme case
+of a scanning payload fixed to the spacecraft’s body, we must scan with the entire
+spacecraft. Similar decisions are necessary for parts of the spacecraft that need orient-
+ing in other directions such as pointing at the Sun.
+
+TABLE 10-13. Typical Sources of Requirements for Attitude Control.
+
+Information Needed
+
+Entire payload or some payload subset such as
+antennas or a thermal radiator
+
+Requirement
+
+Payload Requirements:
+Article to be Pointed
+
+Pointing Direction Defined relative to what reference
+
+Pointing Range All of the possible pointing directions
+
+Pointing Accuracy Absolute angular control requirement
+
+Pointing Knowledge Knowledge of pointing direction either in real time
+
+or after the fact
+
+Pointing Stability Maximum rate of change of angular orientation
+
+Slew Rate Reorientation from one pointing direction to another
+
+in a specified time
+
+Exclusion Zones For example, “not within 10 deg of the Sun”
+
+Other Requirements:
+
+Sun Pointing May need for power generation or thermal control
+
+Pointing During Thrusting May need for guidance corrections
+
+Communications Antenna Pointing Toward a ground station or relay satellite
+
+Pointing in a particular direction requires control of angular orientation about each
+of the 2 axes perpendicular to the pointing axis. If, for example, a payload or antenna
+must point toward the Earth, we need to control its attitude about 2 horizontal axes. If
+the payload is fixed to the spacecraft’s body, these 2 axes are 2 of the 3 axes. Thus, we
+can use the third axis—+otation about the pointing axis—to satisfy a second pointing
+requirement, such as pointing one axis in the direction of flight. Table 10-14 lists types
+of pointing systems.
+
+Either spin stabilization or 3-axis control using sensors and torquers can be used to
+control the spacecraft’s attitude. Spin stabilization divides into passive spin, spin with
+precession control, or dual spin (spin with a despun platform). Classes of 3-axis
+control depend on the sensor type or torquing method. Possible sensors include Earth,
+Sun and star sensors, gyroscopes, magnetometers, and directional antennas. Torquers
+include gravity gradient, magnetic, thrusters, and wheels. Wheels include variable
+speed reaction wheels; momentum wheels, which have a nominal nonzero speed and
+therefore provide angular momentum to the spacecraft; and control moment gyros,
+
+320 Spacecraft Design and Sizing 10.4
+
+which are fixed-speed gimballed wheels. Table 10-15 summarizes these methods of
+control during thrusting and nonthrusting.
+
+TABLE 10-14. Design Approaches for Selected Pointing Requirements.
+
+[Requiement—[SS~C«S mid
+
+Nadir-Pointed Payload Body-fixed payload using 2 axes of body attitude control to meet
+the Earth-pointing requirement. The third axis is used to point a
+horizontal axis in the direction of flight.
+
+Can also use spin-stabilized spacecraft with spin axis normal to
+the orbit plane and payload mounted on despun platform.
+
+Payload Pointed ina Body-fixed payload using 2 axes of body attitude for payload-
+Fixed-inertial Direction pointing direction in inertial space. Third axis is used to keep one
+side toward the Sun.
+
+Sun-Oriented Solar Array Planar array requires 2 axes of control. May be achieved by
+
+1 axis of body attitude and 1 rotation axis.
+Cylindrical array with array axis perpendicular to Sun line.
+
+Communications Antenna 2-axis mechanism.
+
+TABLE 10-15. Types of Attitude Control.
+
+Control Mode Type of Control
+
+Control During Thrusting:
+
+Spin Stabilization with Axial Thrust | Passive spin in a fixed direction with thrust applied
+parallel to the spin axis.
+
+Spin Stabilization with Radial Thrust | Passive spin in a fixed direction with thrust applied
+perpendicular to the spin axis in short pulses.
+
+3-Axis Control Attitude is sensed with sensors whose output is used to
+control torquers. Torquers include thrusters operated
+off-on or swiveled to contro! thrust direction.
+
+Control While Not Thrusting:
+
+Spin Stabilization with Spin direction is controlled by applying precession
+Precession Control torque with an off-axis thruster.
+
+Dual Spin Spin-stabilized with a despun platform.
+
+3-Axis Control Control using attitude sensors and torquers.
+
+We use spin stabilization extensively for attitude control during kick-stage firing
+and for small spacecraft. Spin-stabilized satellites with a despun platform, called a
+dual spin system, frequently support communications payloads. In this case, we mount
+the payload antenna on the despun platform so we can control its pointing. If the spin
+axis is roughly perpendicular to the Sun line, we can mount solar cells on the space-
+craft’s cylindrical skin to produce electric power.
+
+Three-axis approaches range from passive control using gravity gradient or mag-
+netics to full active control with propulsion thrusters and wheels. Passive techniques
+can provide coarse control to support low-accuracy pointing requirements and simple
+spacecraft. The active 3-axis method gives us highly accurate pointing control, more
+efficient solar arrays (by allowing oriented planar arrays), and pointing of several
+payloads or spacecraft appendages. But active 3-axis systems are more complex and
+
+10.4 Designing the Spacecraft Bus 321
+
+usually heavier than spin-stabilized ones, and we may need to consider both
+approaches carefully before deciding between them. Table 10-16 summarizes how
+various requirements affect this decision.
+
+TABLE 10-16. Implication of Pointing Requirements on Attitude Control Approach.
+
+Control during kick-stage firing Spin stabilization preferred in most cases
+
+Coarse control (> 10 deg) Spin stabilization or passive control using gravity gradient
+Low-accuracy pointing (> 0.1 deg) | Either 3-axis control or dual spin
+
+Low power requirement (< 1 kW) | Either oriented planar array or spinning cylindrical array
+
+High-accuracy pointing (< 0.1 deg) | 3-axis control
+
+High power requirement (> 1 kW) | Oriented planar array
+
+Multiple pointing requirements 3-axis control
+
+Attitude slewing requirement Dual spin with articulation mechanism or 3 axis with wheels
+
+The guidance and navigation function on most spacecraft is a basic form of radio
+guidance. It uses ground tracking to measure the flight path (or spacecraft ephemeris),
+ground computing of desired velocity corrections, and command of the correction
+through the communications and command subsystems. The direction of the velocity
+correction is governed by the attitude control of the spacecraft body and the magnitude
+is controlled by engine firing time. Two elements limit performance: ground-tracking
+and spacecraft attitude-control during thrusting. The Global Positioning System (GPS)
+may provide another way to measure the flight path. Coupled with an appropriate
+guidance computer, a GPS receiver should be able to guide the boost phase and allow
+the spacecraft to navigate autonomously in orbit, at least for low altitudes. Other
+autonomous navigation methods are also available (see Sec. 11.7). Guiding spacecraft
+to intercept or rendezvous usually requires a guidance radar, a gyroscope reference
+assembly, and often accelerometers.
+
+Accurate attitude control depends on the attitude sensors. Table 10-17 summarizes
+what present sensors can do. Each sensor class is available in either a 1- or 2-axis
+version. Magnetometers, Earth sensors, and Sun sensors are available in forms which
+use the spin motion of a spinning spacecraft to scan the sensor’s field of view. Some
+magnetometers and Earth and Sun sensors do not require scanning, but some highly
+accurate Earth sensors use scanning detectors. Magnetometers apply only to altitudes
+below about 6,000 km because the Earth’s magnetic field falls off rapidly with alti-
+tude. Uncertainty in the Earth’s magnetic field and its variability with time limits the
+accuracy of a magnetometer. In the same way, horizon uncertainty limits an Earth
+sensor’s accuracy. Star sensors, however, allow us to measure attitude very accurately.
+Most star sensors are too slow (typically several seconds) to control a spacecraft’s
+attitude directly, so we normally use them with gyroscopes for high accuracy and rapid
+response. Gyroscope accuracy is limited by instrument drift, so most gyroscope sys-
+tems are used in conjunction with an absolute reference such as a star sensor or a
+directional antenna.
+
+After-the-fact processing can improve our knowledge of attitude. For example, we
+can monitor the Earth’s magnetic field continuously and therefore partially correct the
+variable effects of magnetic sensing. Variations in the Earth’s horizon tend to follow
+a daily cycle, so we can apply some filtering correction.
+
+322 Spacecraft Design and Sizing 10.4
+
+TABLE 10-17. Ranges of Sensor Accuracy. Microprocessor-based sensors are likely to
+improve accuracies in the future.
+
+Accuracy Characteristics and Applicability
+
+Magnetometers 1.0° (5,000 km ait) Attitude measured relative to Earth's local
+5° (200 km alt) magnetic field. Magnetic field uncertainties
+and variability dominate accuracy. Usable
+only below ~6,000 km.
+
+Earth Sensors 0.05 deg (GEO) Horizon uncertainties dominate accuracy.
+0.1deg (low altitude) | Highly accurate units use scanning.
+
+Sun Sensors 0.01 deg Typical field of view +130 deg.
+Star Sensors 2 arc sec Typical field of view +16 deg.
+
+Gyroscopes 0.001 deg/hr Normal use involves periodically resetting the
+: reference position.
+
+Directional Antennas 0.01deg to 0.5 deg Typically 1% of the antenna beamwidth.
+
+The attitude-control system can also produce attitude motions which combine with
+the attitude sensor’s accuracy to affect the total control accuracy. Control systems that
+use thrusters alone require a dead zone to avoid continuous firing of the thrusters. The
+control system’s accuracy is limited to half the dead-zone value plus the sensor
+accuracy. Systems which use wheels (either speed-controlled reaction wheels or
+gimballed constant-speed wheels) can avoid dead-zone attitude errors, so they usually
+can operate close to the sensor accuracy.
+
+Torquing methods for 3-axis-controlled spacecraft include gravity gradient, mag-
+netic, thrusters, and wheels. Spacecraft using gravity-gradient and magnetic torquing
+are clean and simple but do not provide high levels of control torque. We use thrusters
+on most spacecraft because they produce large torque and can control the spacecraft’s
+translational velocity as well as attitude. If the spacecraft must maneuver or suffers
+cyclical disturbances, such as those at orbit rate or twice orbit rate (see Chap. 11), we
+need to use wheels. A wheel can cyclically speed up or slow down, thus producing
+maneuvering torque or counteracting disturbance torques. A wheel system consumes
+less propellant than a thruster-only system because periodic effects do not require
+propellant use. On the other hand, wheel systems are heavier and more complex than
+those without wheels. Variable-speed reaction wheels produce only limited control
+torque (less than 1 N+m). To obtain large values of cyclic torque, we use control
+moment gyros—constant-speed wheels gimballed about an axis perpendicular to the
+spin axis. These gyros can develop torques up to several thousand N+ m. When we need
+more degrees of freedom or better pointing accuracy, we use mechanisms to point
+spacecraft appendages, such as solar arrays or directional antennas.
+
+Estimating Torque Requirements
+
+One important sizing parameter for the control subsystem is its torque capability.
+This capability, often called the control authority, must be large enough to counter-
+balance disturbance torques and control the attitude during maneuvers and following
+transient events such as spacecraft separation, deployment, and failure recovery.
+These latter events usually size the torque requirement. The separation transient is
+usually specified in terms of tip-off rate—the angular velocity, typically 0.1 to 1 deg/s,
+imparted to the spacecraft at release from the booster. We size the attitude control
+thrusters to capture or stabilize the spacecraft attitude before it has exceeded a speci-
+
+10.4 Designing the Spacecraft Bus 323
+
+fied value, as shown in Fig. 10-2A. The relation between required torque T, the tip-off
+rate, @, (in rad/s), spacecraft moment of inertia, J,, and the maximum attitude excur-
+sion, O9, (in rad), is:
+
+T= 4,07 (Iy/ Omar) (10-1)
+The torquing ability of a thruster system, a reaction wheel, a control moment gyro, or
+a pointing mechanism may be set by an acceleration requirement such as that arising
+from an attitude slew maneuver, shown in Fig 10-2B. The torque is simply 1, where I
+is the moment of inertia and a is the acceleration. Sometimes the attitude maneuver is
+specified as a change in angle of 9 in a time t,,,. The torque in this case is:
+
+T =461/t,,7 (10-2)
+
+As Fig. 10-2B shows, this is based on applying full accelerating torque for t,,,,/2 and
+full decelerating torque for the remaining time.
+
+Attitude Attitude
+Angle Angle
+e) e)
+Omax
+< initial Rate o,
+Time
+A. Attitude Capture Following Separation B. Attitude Maneuver in Time, ty,
+
+Fig. 10-2. Estimating Torque for Attitude Capture and Maneuvering.
+
+The control torque required to stabilize a spacecraft during velocity-correction
+firing of a rocket motor is the product of the rocket’s thrust level and the distance that
+its line-of-action is offset from the spacecraft center-of-mass. This torque can be due
+either to thruster misalignment or cg offset (see Table 10-18).
+
+Estimating Angular Impulse for 3-Axis Control
+
+Another major sizing parameter for the attitude control subsystem is the angular
+impulse capability of its torquers. Angular impulse is the time integral of torque. For
+thruster-produced torque, the angular impulse is related to the propellant mass ex-
+pended. For reaction wheels and control moment gyros, the angular impulse is related
+to wheel moment of inertia and speed. In all cases, angular impulse is related to control
+system weight.
+
+For 3-axis control systems, we calculate angular impulse by evaluating that needed
+for attitude maneuvering, for counteracting the effects of disturbance torques, and for
+oscillation or limit cycling. We determine the angular impulse required for man-
+euvering from spacecraft moment of inertia and maneuver angular rate. The angular
+impulse required to start an attitude maneuver L ya7_ is:
+
+Lstart = 1s Oman (10-3)
+
+where I, is spacecraft moment of inertia and @,,,, is the angular rate (rad/s) of the
+
+324 Spacecraft Design and Sizing 10.4
+
+TABLE 10-18. Disturbance Torques. These are vector equations where “x” denotes vector
+cross product and “*” denotes vector dot product. See Sec. 11.1 for simplified
+equations.
+
+Disturbance Equation Definition of Terms
+
+AV Thruster vector distance from center of .
+
+Misalignment mass to thrust application point
+vector thrust
+
+Aerodynamic 1 atmospheric density
+Torque py} pV?Cq A(Uy x Sop) drag coefficient (typically 2.25)
+area perpendicular to u,
+velocity
+unit vector in velocity direction
+vector distance from center of
+mass to center of pressure
+Gravity 3u Earth’s gravitational coefficient
+Gradient 3.986 X 1014 m3/s2
+Torque A, Distance to Earth’s center (m)
+Spacecraft inertia tensor
+Unit vector toward nadir
+Solar solar pressure constant
+Radiation 4.644 x 10-8 N/m2
+
+Torque uc(+ 14) + vector from spacecraft
+s(@+ Ig center of mass to area A
+
+3 unit vector toward the Sun
+
+surface absorptivity coefficient
+
+surface specular reflectance
+coefficient
+
+surface diffuse reflectance
+coefficient
+
+(Note: a@+ rg + fg= 1)
+
+K,(ug-u,) A xs i
+s (Us * Un) Un |2ts +3 ra} c unit vector normal to A
+
+maneuver. Stopping the maneuver requires an equal amount of angular impulse of
+opposite polarity.
+
+To compute angular impulse to cancel disturbance torques, we examine the
+disturbances affecting the spacecraft as shown in Table 10-18. These disturbance
+torques are all vector quantities. They can be expressed in any convenient system of
+coordinates, although spacecraft body coordinates are generally used. For a given
+spacecraft configuration, orbit, and spacecraft attitude, these torques can be computed
+and integrated over the spacecraft lifetime. The result is the accumulated angular
+impulse which, if uncontrolled, will disturb the spacecraft attitude. The control sub-
+system must counteract these disturbance torques by applying control torque and the
+control subsystem angular impulse capability must be at least equal to the disturbance
+angular impulse.
+
+In addition to the disturbance torques listed in Table 10-18, the control system may
+be sized by the requirement to interchange momentum between spacecraft body axes
+(sometimes referred to as Euler cross-coupling torque). Numerically this torque-like
+effect is:
+
+Ty =-Qx H, (10-4)
+
+10.4 Designing the Spacecraft Bus 325
+
+and comes about when the spacecraft dynamic equations are written in rotating
+coordinates. T,, is the torque, Q is the angular velocity of the coordinate system, and
+H, is the spacecraft angular momentum including that due to body rotation and
+internal moving parts (such as reaction wheels). For a circular orbit and the dynamic
+equations written in a coordinate system which rotates at orbit rate, the Euler cross-
+coupling torques are of the same form as gravity-gradient torques and these effects are
+often combined.
+
+Note that, for any single axis, the disturbance torque may have cyclic terms that
+integrate to zero over an integer number of cycles and secular terms that are not
+periodic. Also note that angular impulse required for maneuvering is all cyclic. Reac-
+tion wheels and control moment gyros can counteract cyclic torques by changing
+speed or direction. If we use reaction wheels or control moment gyros (CMGs), we can
+size them for the cyclic terms and counteract only the secular terms with thrusters. But
+if we are designing a system that has no wheels or CMGs, we must expel propellant to
+counteract all disturbances, and the angular impulse requirement is the sum of the time
+integrals of the absolute value of disturbance torque computed about each axis. The
+process of computing control system angular impulse from disturbance torques and
+identifying cyclic and secular components is shown in Table 10-19.
+
+Thruster control systems operate by pulsing a thruster when the attitude error
+exceeds a set value known as the dead-zone limit. The thruster’s design determines the
+length of the pulse—typically from 0.02 sec to 0.1 sec. The propellant consumption of
+such a system is proportional to the size of the pulses and the rate of pulse firing. A
+well designed control system will fire a minimum length pulse each time the dead-
+zone limit is exceeded. The angular velocity change, A@, produced by a minimum
+pulse Prin is:
+
+AQ® = Phin / I, (10-5)
+where P.
+
+‘min = 1 5 tmin» T is thrust level of the thruster, s is the lever arm through
+which the thruster works to produce torque, ¢,,;, is the minimum thruster firing time,
+and I, is the spacecraft’s moment of inertia. The mean angular velocity of the space-
+craft while in the dead-zone is A@/2 which implies that the spacecraft transverses
+a dead-zone of 26, in 46,/Aq@ seconds. Since the pulse firing time is negligible rel-
+ative to the time spent in traversing the dead-zone, the average impulse rate, IR, is one
+minimum pulse every 40,/Aq@ seconds, or:
+
+IR = P2,y in / (409 1;) (10-6)
+
+The total angular impulse expended during the mission, L,,, is IR times mission
+duration:
+
+Lin = IR * mission duration (10-7)
+
+The torque produced by a thruster is equal to its thrust T times its lever arm s. The
+time integral of thrust is linear impulse and is related to the mass of propellant used by
+the rocket equation (Eq. 17-6). An appropriate expression relating angular impulse to
+propellant use is:
+
+L=s| Tat =5 pgm, (10-8a)
+or equivalently:
+
+my = LI (5 Isp) (10-8b)
+
+326 Spacecraft Design and Sizing 10.4
+
+TABLE 10-19. Computing Control System Angular Impulse Requirements.
+
+Step Operation Comments
+
+. Calculate disturbance Use equations in Table 10-18
+torques
+
+. Compute time integral of
+disturbance torque for
+each control axis
+
+Ly, Ly, L, angular impulse
+requirements about x, y, and z
+control axes
+
+Tax, Tay» Taz disturbance
+torques about x, y, and z
+control axes
+
+. Identify cyclic and secular Either identify cyclic
+components of angular ‘Angular components from the
+impulse mpulse Secular equations or plot each
+Component | component of angular impulse
+to identify components
+
+. Size torquers Wheels or CMGs are sized for
+the cyclic terms. Thrusters, if
+used with wheels, are sized for
+the secular terms.
+
+. If thruster control is used
+without wheels or CMGs,
+compute time integrals of
+the absolute value of
+disturbance torque
+
+where L is angular impulse, ¢ is time, J, is specific impulse, g is gravitational accel-
+eration and m, is propellant mass expended.
+
+A reaction wheel produces torque by changing its speed. Its angular impulse
+capability is equal to its moment of inertia times its maximum speed—its total angular
+momentum. A control moment gyro produces torque by changing the direction of its
+constant-speed momentum wheel. The angular impulse capability of a CMG is its
+momentum (wheel mass moment of inertia times speed) times the angle through which
+it can be moved. The relation between momentum and weight and power for wheels
+and CMGs is presented in Table 10-20.
+
+Estimating Angular Impulse for Spin Stabilization
+
+For a spin-stabilized spacecraft, angular impulse is required for spinup, spin main-
+tenance, and spin-axis precession. If the spacecraft is spin-stabilized for only part of
+its mission (such as during kick-stage thrusting), then impulse is also needed for
+despin.
+
+10.4 Designing the Spacecraft Bus 327
+
+TABLE 10-20. Weight and Power of Components in an Attitude Determination and Control
+Subsystem. Note T= Torque in N-m, and H= angular momentum in N-m-s.
+
+Earth Sensor 2to3.5 2 to 10
+Sun Sensor 0.2to1 0to 0.2
+Magnetometer 0.2 to 1.5 0.2 to 1
+Gyroscope 0.8 to 3.5 5 to 20
+Siar Sensor 5 to 50 2 to 20
+
+Processors 5 to 25 5 to 25
+
+Reaction Wheels 2+04xH H«<10 10 to 20 at constant speed;
+5+0.1xH 10<H <100 | 500 to 1,000 W/(N-m) when torquing
+
+Control 35+0.05xH 15 to 30 standby;
+Moment Gyros 100 <H< 2,500 0.02 to 0.2 W/(N-m) when torquing
+
+Actuators 4+0.03 x T 1to5 W/(N-m)
+(single axis)
+
+The impulse requirement for spinup is:
+L spinup =I, Q, (10-9)
+
+where Lp inyp is the impulse required in N -m-s, 4, is the spacecraft moment of inertia
+about the spin axis in kg-m2, and 2, is the spin speed in rad/s. Typical values of spin
+speed range from 0.1 rad/s for spacecraft requiring minimal spin stability to 10 rad/s
+for stabilization during kick motor firing. Impulse required for despin is computed
+with this same equation. Note that the inertia of the spacecraft during despin may be
+different than during spinup.
+
+The principal merit of spin stabilization is that it is passive; that is, a spin-stabilized
+spacecraft will remain spinning at constant rate with its spin axis substantially fixed in
+inertial space. However, if the spacecraft has a thrusting mode such as kick-stage firing
+or thruster firing for velocity correction, both the spin speed and the spin axis orienta-
+tion may be changed. Disturbance torques as presented in Table 10-18 may also make
+spin corrections necessary.
+
+Variation in spin speed occurs when the thruster’s axis and spacecraft center of
+mass are misaligned. If the offset between center of mass and the thrust axis is L,,,, the
+angular impulse, AH, imparted by a velocity correction AV to a spacecraft of mass m,/,
+is:
+
+AH = my AV Lem (10-10)
+
+If the offset is in the direction that changes the spin speed, then impulse will be
+required to correct spin speed. If the offset is along the spin axis, the spacecraft
+angular-momentum vector will precess, thus changing the orientation of the spin axis.
+In either event, impulse is required to correct the unwanted change. If spin-speed
+correction is required, the impulse is about the spin axis and if precession is involved,
+it is normal to the spin axis. Typical thruster alignment tolerance is 0.1 deg. This
+tolerance, coupled with center of mass uncertainty, leads to typical thrust-axis to
+center-of-mass offset of 0.002s—0.01s where s is the distance from the thruster to the
+center of mass.
+
+328 Spacecraft Design and Sizing 10.4
+
+To change the direction of spin-axis orientation, we must precess the angular-
+momentum vector. This is usually done by synchronizing off-axis thruster pulses with
+the spin period of the spacecraft. The small increments of angular impulse imparted by
+properly synchronized firings add at 90 deg to the momentum vector to rotate the
+vector direction. Some nutation is also introduced by the thruster firings but this
+decays with time. The impulse required to precess a spinning spacecraft through an
+angle of @ radians is
+
+Lprecess = Iss Q, a (10-11)
+
+where J,, is the mass moment of inertia about the spin axis, Q, is the spin speed (in
+rad/s) and @ is the angle of rotation of the spin vector in radians.
+
+The total angular impulse is converted to propellant weight through the use of
+Eq. (10-10). Typical weight and power for attitude control components are summa-
+rized in Table 10-20 and discussed in Sec. 11.1. Actuators and wheels are available in
+a large number of sizes and capabilities. Their weight and power as a function of
+torque may be estimated by the relations given.
+
+10.4.3 Communications Subsystem
+
+The communications subsystem receives and demodulates uplink signals and
+modulates and transmits downlink signals. The subsystem also allows us to track
+spacecraft by retransmitting received range tones or by providing coherence between
+received and transmitted signals, so we can measure Doppler shift. Table 10-21 sum-
+marizes the main system considerations which drive the design of communications
+subsystems.
+
+TABLE 10-21. System Considerations for Design of Communications Subsystems.
+Consideration Implication
+Access Ability to communicate with the spacecraft requires clear field of view
+to the receiving antenna and appropriate antenna gain
+Frequency Selection based on bands approved for spacecraft use by international
+agreement. Standard bands are S (2 GHz), X (8 GHz), and Ku (12 GHz)
+
+Baseband Data Data bandwidth and allowable error rate determine RF power level
+Characteristics for communications
+
+Communication access to a spacecraft requires a clear field of view for the
+spacecraft antenna. It also requires sufficient received power to detect the signal with
+acceptable error rate. Access across many viewing angles demands an antenna with a
+wide beamwidth, so good spacecraft designs always include an antenna system that
+can receive signals over at least a hemisphere. The gain of a widebeam antenna is
+low—typically 0 dB for hemispheric coverage. Therefore, we must select a level of
+transmit power and a receiver sensitivity that allow us to detect signals with an
+acceptable error rate.
+
+The spacecraft receives data consisting of commands and range tones. Command
+rates range from 100 bits/s to 100 kbits/s, with most systems below 1,000 bits/s. The
+data rate depends on mission considerations and sets the communications subsystem’ s
+bandwidth, which establishes the received power required to detect signals (Chap. 13).
+
+10.4 Designing the Spacecraft Bus 329
+
+For spacecraft communicating directly with ground terminals, received signal strength
+is not a design driver because we can set the ground terminal’s transmitting power as
+high as necessary. However, received signal strength from a relay satellite does affect
+the communications subsystem’s receiver sensitivity and maximum data rate. Systems
+that require data communications at rates greater than 1,000 bits/s normally use high-
+gain, directional antennas and can operate at low bit rates to allow wide-angle access
+when needed.
+
+The downlink signal consists of range tones, telemetry for spacecraft status, and
+payload data. The baseband data is normally digital and multiplexed by frequency or
+time. Telemetry to report the spacecraft’s status operates between 100 bits/s and
+1,000 bits/s. If the downlink handles only status telemetry, or if the payload data will
+fit within a low-bandwidth link, we can communicate using a widebeam antenna. Data
+communication over a high bandwidth usually requires a high-gain, directional an-
+tenna and a low-bandwidth mode for widebeam coverage.
+
+Table 10-22 shows how we size the communications subsystem. To do so, we must
+identify the data bandwidths of the uplink and downlink, select communication
+frequencies, prepare RF power budgets for both links (Chap. 13), and select equip-
+ment. The basic communications subsystem consists of a transmitter, a receiver, a
+widebeam antenna, and an RF diplexer. We may also use a high-power transmitter or
+a directional antenna if the data rate requires it.
+
+TABLE 10-22. Steps in Designing a Communications Subsystem.
+
+1. Identify Data Rate Payload commands and data—Chap. 9
+Spacecraft bus commands and
+telemetry—Secs. 10.4.3, 11.3
+Decide which of the Sec. 13.1
+allowed bands to use
+3. Prepare RF Analyze characteristics Sec. 13.3
+Power Budget of RF links
+
+4. Select Equipment P Sec. 11.2
+
+Table 10-23 shows the characteristics of a standard communications subsystem. The
+system operates at S-band, radiates 2 W, has a data rate of 1,000 bits/s, and weighs
+5.9 kg. The transponder provides a coherent carrier response to measure range rates
+and retransmits ranging tones. Section 11.2 describes other equipment in com-
+munications subsystems, including transmitters with higher power and directional
+antennas.
+
+2. Select Frequencies
+
+TABLE 10-23. Characteristics of Communications Subsystems Using S-band.
+
+Weight Power
+Component (kg) (W)
+0.9 0
+
+S-band Antenna Hemispheric pattern 0 dB
+1.2 0
+
+1.8 4
+2 4.4
+
+Diplexer
+
+Receiver Two units required for redundancy
+
+Transmitter
+
+330 Spacecraft Design and Sizing 10.4
+
+10.4.4 Command and Data Handling Subsystem
+
+The command and data handling subsystem, (C&DH), receives and distributes
+commands and collects, formats, and delivers telemetry for standard spacecraft
+operations (housekeeping) and payload operations. We usually handle housekeeping
+data intermittently and at rates below 1,000 bits/s. Rates for payload commanding and
+telemetry depend on the payload’s design. They may require very high data rates
+(10 kb/s to 500 Mb/s) and storage of payload data.
+
+The C&DH subsystem may include encryptors, decryptors, a sequencer or timer, a
+computer for data processing, and equipment for data storage. It interfaces with the
+communications subsystem from which it receives commands and to which it sends
+the formatted telemetry stream. It also delivers commands to and receives telemetry
+from the other spacecraft subsystems and may have similar interfaces with the
+payload.
+
+The decoding of command signals is peculiar to the detailed design of the system.
+A typical command is a serial binary word containing a preamble, a user address, and
+the command word. The preamble allows the spacecraft to identify and authenticate
+the command. The command unit decodes the user addresses and then routes actual
+commands to the correct users, either by separate wires or by a data bus. Each user then
+decodes and executes the command.
+
+In some cases, we need several commands to do something. If the function is time
+critical, we can send precursor commands and verify their receipt before sending a
+precisely timed execute or a time-tagged execute. A sequencer or onboard computer
+can execute time-tagged commands. If we need to send commands over time, we can
+time-tag them or use a timer-execute command followed by a sequence of timer-reset
+commands. If the command system fails, the command halts when the timer times out.
+Ordnance normally requires separate arm and fire commands.
+
+Telemetry signals tell us about the spacecraft’s health and provide operational data
+needed to control the spacecraft. Normally, we convert telemetry measurements to
+digital signals, serially multiplex them in a telemetry frame using a repetitive pattern,
+and transmit the frame using a main frame word for frame synchronization. We may
+use a main frame word as a subcommutated channel or we may supercommutate
+signals if we need a sampling rate higher than the frame rate. Finally, we may place
+the telemetry frames in packets and multiplex them with other downlink data.
+
+Commands and telemetry signals depend on the spacecraft’s operation. Each of the
+spacecraft’s commandable functions needs a separate command. In addition, we must
+provide enough telemetry to define the spacecraft’s state of health, as well as data for
+operational control.
+
+Table 10-24 lists the steps to size the C&DH subsystem. In its simplest form, this
+subsystem consists of a command decoder and a telemetry multiplexer. More com-
+plex systems distribute the command decoding function by routing serial commands
+to user subsystems for final decoding. Telemetry multiplexing can also be distributed.
+High-performance subsystems use central digital computers for data processing.
+Table 10-25 presents typical characteristics. Chapter 11 describes more complex
+subsystems.
+
+10.4.5 Thermal Subsystem
+
+The thermal design of a spacecraft involves identifying the sources of heat and
+designing paths for transporting and rejecting heat, so components will stay within
+
+10.4 Designing the Spacecraft Bus 331
+
+TABLE 10-24. Steps in Sizing the Command and Data Handling Subsystem.
+
+Step What’s Involved Reference
+
+Prepare Prepare a complete list of commands for the payload and
+Command List each spacecraft bus subsystem. Include commands for
+each redundancy option and each commandable operation.
+
+Prepare Analyze spacecraft operation to select telemetry measure-
+Telemetry List ment points that completely characterize it. Include signals
+to identify redundancy configuration and command receipt.
+
+Analyze Timing Analyze spacecraft operation to identify time-critical Sec. 10.3,
+operations, and timeliness needed for telemetry data. Chap. 16
+
+Select Data Rates | Choose data rates that support command and telemetry Sec. 13.3
+requirements and time-critical operations.
+
+Identify Processing | Examine need for encryption, decryption, sequencing, Sec. 11.3
+Requirements and processing of commands and telemetry.
+
+Identify Storage Compare data rates of payload and spacecraft to the Sec. 11.3
+Requirement communications subsystems ability.
+
+Select Configure the subsystem and select components to meet | Sec. 11.3
+Equipment requirements.
+TABLE 10-25. Typical Characteristics of Basic Components for Command and Data
+Handling.
+Weight Power
+
+Component (kg) (W) Comments
+
+Command Unit 5.0 5.4 standby | Redundant unit, 9 user addresses capacity,
+14 operating | 18,892 commands
+Pulse Code 5.5 5.5 Redundant unit, 250 or 1,000 bits/s
+Modulation Encoder 64 word, 8 bit frame
+5 subcommutated channels
+
+required temperatures. The sources of heat include solar radiation, Earth-reflection
+and infrared radiation, and electrical energy dissipated in the electrical components.
+Conventional electronics operate at temperatures close to room temperature (25 °C)
+and will tolerate temperature variations of about +20 °C. Battery cells, particularly
+nickel-cadmium cells, are more sensitive to temperature than most electronics. But
+they can still stand temperature ranges of 5 °C to 20 °C. We can control the tempera-
+tures of compartments for conventional electronics by coating or insulating their outer
+surfaces. We select these coatings to strike a balance between the heat absorbed and
+the heat radiated to space. The coatings include various paints and tapes, and second
+surface glass mirrors. The weight of such coatings is almost independent of the
+quantity of heat dissipated and seldom exceeds 4% of the spacecraft dry weight. The
+thermal coatings, particularly insulation, can close out compartment openings and may
+also shield components from electromagnetic radiation.
+
+Components which have stringent temperature requirements or which dissipate
+large amounts of electrical power require more extensive thermal control. For exam-
+ple, we usually place gyros and precision oscillators in insulated compartments, or
+ovens, with active electrical heaters to control temperatures carefully. Traveling wave
+tubes and other elements which dissipate a lot of power concentrate their dissipation
+locally and produce hot spots. Normally, we conduct heat away from such hot spots
+
+332 Spacecraft Design and Sizing 10.4
+
+and spread it over a thermal panel where it radiates to space. If the hot spots are less
+than 50 W, we can simply increase the thickness of the mounting panel so it will carry
+the heat away. But more intense hot spots and equipment that must meet tight thermal
+limits usually require heat pipes to move the heat and thus equalize temperatures.
+
+The process of thermal design for spacecraft proceeds as follows. The first step is
+
+to identify heat sources and the location of radiating panels to dispose of excess heat.
+The heat sources include internal dissipation and external radiation from the Sun and
+the Earth. Often, particular surfaces of the spacecraft are not exposed or only partially
+exposed to the Sun or Earth. These faces are preferred locations for radiating panels
+_and for components which dissipate large amounts of heat. The latter should be next
+to the radiators. We can compute the total amount of radiating area from the static-
+heat-balance equation for the entire spacecraft. But a component’s thermal perfor-
+mance may differ markedly from the average.
+
+Most power for thermal control goes to heaters that keep components from getting
+too cold. Heaters also compensate for imperfections in insulation or heat leaks, and are
+used to heat areas such as articulation joints that are difficult to insulate and dissipate
+little heat internally. Heaters or heater-controlled heat pipes (see Sec. 11.5) offer very
+tight control or control at a particular temperature value for certain components. A
+typical medium-sized spacecraft (1,000 W) consumes 20 W in the thermal subsystem
+plus any power required for special thermal control. In most cases, heaters can operate
+from primary power.
+
+10.4.6 Power Subsystem
+
+The power subsystem generates power, conditions and regulates it, stores it for
+periods of peak demand or eclipse operation, and distributes it throughout the space-
+craft. The power subsystem may also need to convert and regulate voltage levels or
+supply multiple voltage levels. It frequently switches equipment on or off and, for
+increased reliability, protects against short circuits and isolates faults. Subsystem
+design is also influenced by space radiation, which degrades the performance of solar
+cells. Finally, battery life often limits the spacecraft’s lifetime.
+
+Earlier in this chapter, I described how to prepare a power budget for the spacecraft.
+This budget includes most of the information we need to size the power subsystem: the
+spacecraft’s needs for operating power, storage requirements, and how the power
+subsystem degrades over the spacecraft’s lifetime. The remaining steps to size the
+power subsystem are selecting a solar-array approach, sizing the array, sizing the
+batteries and the components that control charging, and sizing the equipment for
+distributing and converting power.
+
+Solar arrays are generally planar, cylindrical, or omnidirectional. Planar arrays are
+flat panels pointed toward the Sun. Their power output is proportional to the projection
+of their area toward the incident sunlight. Three-axis-stabilized spacecraft normally
+use planar arrays. Cylindrical arrays appear on spin-stabilized systems in which the
+spin axis is perpendicular or nearly perpendicular to the Sun line. The output of a solar-
+cell array is nearly proportional to the amount of solar energy intercepted, and the
+projected area of a cylinder is 1/n times the total area. Thus, the cylindrical array
+should have approximately 7m times as many cells as a planar array with the same
+power rating. But temperature effects slightly favor the cylindrical array, so the actual
+ratio is closer to 1/2.5. If the spacecraft can receive sunlight from any aspect, then its
+array must have equal projected area in all directions. In other words, it must have an
+omnidirectional array. A sphere has this property, but paddles or cylinders combined
+
+10.4 Designing the Spacecraft Bus 333
+
+with planar panels are also possible. The total area of an omnidirectional array must
+be approximately 4 times the projected area, so an omnidirectional array has about
+4 times the area of a planar array with the same power rating.
+
+The required area of a planar solar array is related to the required power, P, the solar
+constant (1,367 W/m2), and the conversion efficiency of the solar-cell system.
+Although cells have had efficiencies as high as 30%, practical array designs range
+from 5% to 15% when taking into account the operating conditions and degradation at
+end-of-life. An array with an efficiency of 7% would have a required area of
+
+0.07 x 1367
+
+where A, is in m2 and P is in watts. This area is characteristic of current arrays. The
+mass of a planar array with specific performance of 25 W/kg is
+
+M,, = 0.04 P (10-13)
+
+= 0.01P (10-12)
+
+where M, is in kg and P in watts. Current designs range from 14 to 47 W/kg at
+end-of- life. The high end would provide 66 W/kg at beginning-of-life. Solar arrays
+mounted on the spacecraft’s body usually weigh less than planar arrays.
+
+Rechargeable nickel-cadmium or nickel-hydrogen batteries are the usual devices
+for energy storage for unmanned spacecraft. They are available in various sizes and
+are highly reliable even though their performance characteristics are quite complex.
+The battery often represents one of the most massive components in the spacecraft. It
+also is very sensitive to temperature and to the use profile. Nickel-cadmium, and to a
+lesser extent nickel-hydrogen batteries perform best when operated between 5 °C and
+20 °C. This range is both lower and more restricted than the temperature requirements
+for most electronic components. The battery also has complex wear-out mechanisms,
+thus limiting cycle life as a function of depth-of-discharge. Other variables—temper-
+ature, rate of charge, rate of discharge, and degree of overcharge-—-also affect cycle life
+but in a less well-defined way. If a battery has shallow discharge cycles, it loses capac-
+ity. To counter this tendency, most spacecraft recondition their batteries from time to
+time by discharging them completely.
+
+We determine a battery’s capacity from the energy it must produce (discharge
+power times discharge duration) and from its depth-of-discharge. We select the
+battery’s depth-of-discharge to meet cycle life requirements. Table 10-26 gives guide-
+lines on depths-of-discharge for nickel-cadmium and nickel-hydrogen batteries.
+Section 11.4 discusses these concepts in more detail.
+
+TABLE 10-26. Allowed Battery Depth-of-Discharge vs. Cycle Life.
+
+Cycle Life Battery Type Depth of Discharge
+Less than 1,000 cycles NiCd 80%
+NiH> 100%
+10,000 cycles NiCd 30%
+NiH 50%
+
+To compute a battery’s capacity, we divide the discharge energy (watt-hours) by
+the depth-of-discharge. The ratio of battery weight to battery capacity is 30 to
+40 W-hr/kg for NiCd batteries and 35 to 50 W: hr/kg for NiHy.Often, several batteries
+
+
+334 Spacecraft Design and Sizing 10.4
+
+operate in parallel to provide the needed capacity. By using several small batteries, we
+can add some redundant batteries for backup with less weight penalty than for a second
+large battery.
+
+Spacecraft primary power—power produced by the solar array and batteries—is
+not well regulated (28 + 5 V is typical). Furthermore, we must match the solar array’s
+electrical output to the battery’s charging requirements and provide switching equip-
+ment that allows the battery to supply power when needed. Section 11.4 describes
+various ways to meet these needs. Significant features include limiting the battery’s
+charge rate, limiting overcharge, providing for low-impedance discharge, and provid-
+ing for reconditioning. The controller or regulator must cope with the voltage swings
+between charge and discharge. The power control unit must isolate faults and switch
+to redundant units while also serving as the center of the power distribution network.
+An estimate of the power control unit’s weight is 0.02 kg/W of controlled power.
+
+Most electronic equipment, for both the payload and the spacecraft, requires
+voltage regulation tighter than that provided by the arrays and batteries. We must
+either regulate the primary power or convert it to secondary power, which we can reg-
+ulate more tightly. In either case, power dissipates in the regulator or the power
+converters. This dissipation typically amounts to 20% of the power converted, which
+may be all of the spacecraft’s operating power. In sizing the power subsystem, we
+must therefore include the weight of the power conversion equipment—typically
+0.025 kg/W converted.
+
+The power subsystem includes wiring for distribution and may have components
+for switching and fault isolation. The power dissipated in wiring losses and switching
+equipment is 2% to 5% of the operating power, and the wiring harness takes up 1% to
+4% of the spacecraft dry weight. Spacecraft which must operate in high radiation
+environments may require shielded wire to distribute power. Table 10-27 summarizes
+the weight and power requirements of the power subsystem.
+
+TABLE 10-27. Weight and Power Budget for Power Subsystem. P = required power in watts.
+Note that Mg, is used here as in Table 10-10.
+
+Weight (kg) Power (W) Comments
+
+Solar Arrays 0.04 P x 1 for cylindrical body-mounted
+x 4 for omnidirectional body mounted
+
+Batteries C/35 (NiCd) C = capacity in W-hrs
+C/45 (NiH>)
+
+Power Control Unit 0.02 P P=controlled power
+
+Regulator/Converters | 0.025 P . P= converted power
+Wiring 0.01-0.04 Mgr | 0.02-0.05 P | May = spacecraft dry weight
+
+Primary power is distributed in most unmanned spacecraft as low-voltage direct
+current. But for systems with power needs above 10 kW, we should consider alternat-
+ing current distribution, both sine wave and square wave, at several hundred volts.
+
+Radioisotope thermoelectric generators (RTGs) have been designed for various
+power levels but have been applied only to low-power needs. In practice, the units
+consist of a radioisotope heat source which can produce power by thermoelectrics or
+provide thermal energy to a rotating generator. If we use one of these units, we must
+dispose of excess heat during all mission phases and particularly during launch
+
+10.4 Designing the Spacecraft Bus 335
+
+preparation and boost. We must also consider safety issues, but RTG sources are
+probably safer than most propellants. The design must ensure that the generator
+remains intact and shielded even during catastrophic launch failure.
+
+Using rotating machines to generate primary power is another design with
+potential. Closed-cycle, thermal engines should be nearly twice as efficient as solar
+cells, and rotating generators can provide sine-wave AC power with better regulation
+than solar-cell designs.
+
+10.4.7 Structures and Mechanisms
+
+The spacecraft structure carries and protects the spacecraft and payload equipment
+through the launch environment and deploys the spacecraft after orbit injection. The
+load-carrying structure of a spacecraft is primary structure, whereas brackets, closeout
+panels, and most deployable components are secondary structure.
+
+We size primary structure based on the launch loads, with strength and stiffness
+dominating its design. The size of secondary structure depends on on-orbit factors
+rather than boost-phase loads. Secondary structure only has to survive but not function
+during boost, and we can usually cage and protect deployables throughout this phase.
+
+Each of the launch boosters provides maximum acceleration levels to be used for
+design (see Chap. 18). These acceleration levels or load factors are typically 6 g’s
+maximum axial acceleration and 3 g’s maximum lateral acceleration. These levels
+work for conceptual design, but some designers prefer to increase them by as much as
+50% during early design phases. During preliminary sizing, we must remember that
+the primary structure must carry some weight, such as kick motors and propellant,
+which will drop away before orbit injection. Section 11.6 discusses structural design
+and presents methods for preliminary structural sizing.
+
+We use cylindrical and conical shell structures and trusses for primary structure,
+commonly building them out of aluminum and magnesium with titanium for end
+fittings and high-strength attachments. Composite materials have seen limited use in
+primary structure to date but they will become more common. We can size primary
+structure by modeling it as a cylindrical beam which is mass loaded by its own weight
+and the spacecraft’s components. The lateral load factors applied to this beam produce
+a moment that is a function of axial location. Compression in the extreme section of
+the beam carries the moment. By adding the axial load to the moment-induced,
+compressive load, we can estimate the critical load, which in turn sizes the primary
+structure (see Eq. 11-42). In these preliminary sizing calculations, we can exercise
+much license in assuming symmetry and in simplifying the loads. We can iterate the
+skin gage to withstand stress levels and check the tubular design for buckling (see
+Sec. 11.6.6).
+
+We use a similar approach to size a truss-based primary structure. We reduce the
+truss to its simplest form by successively removing redundant members until we reach
+a statically determinant structure. Simply combining loading conditions allows us to
+size the truss members.
+
+We must also locate and mount components on the basic, load-carrying cylinder or
+truss. Most electronic components have rectangular symmetry and are mounted with
+lugs or bosses integral to their housings. Mounting requirements include loads, good
+thermal contact with the mounting surface, and good electrical contact. Aluminum
+honeycomb is an excellent mount for components. It attaches to longeron-stringer
+frames to form a semi-monocoque (load-carrying skin) structure. Honeycomb sheets
+with composite faces occasionally substitute for other approaches.
+
+336 Spacecraft Design and Sizing 10.5
+
+Some components are not rectangular. For example, propellant tanks are normally
+spherical but may be elongated, have conical sections, or be toroidal. Electromechan-
+ical drives and reaction wheels are cylindrical, and control moment gyros are complex.
+These components include mounting provisions in their designs. Generally they have
+flanges, bosses, or lugs. In most cases, and particularly in the case of tanks and pres-
+sure vessels, the mounting must avoid loading the component. To do so, the mount
+must be statically determinant, and component loads from deflection of the mount
+must be minimal.
+
+Other components of complex geometric shape, such as thrusters and connectors,
+may mount through brackets specifically tailored to them. Hinges and similar items are
+machined fittings with integral flanges or mounting bosses. We can align components
+by shimming, but we must be careful not to disturb thermal and electrical bonds.
+
+A set of data on spacecraft subsystem mass is presented in Appendix A. These data
+show the structural mass to be approximately 20% of the spacecraft total. However
+these data do not include all of the injected mass (apogee kick motors carried in the
+spacecraft are not included). Therefore one should be careful about using these data
+for estimating new designs. However, structural mass of 10% to 20% of spacecraft dry
+mass is a reasonable starting point.
+
+We must have an interstage structure to mount the spacecraft to the booster. This
+structure conforms to the booster provisions for mounting and carries loads during the
+boost phase. Both truss structures and conical adapters are common. Because this
+structure is designed for strength under high loads, it is an excellent candidate for
+high-strength materials and weight-efficient design. The spacecraft usually provides
+this interstage structure and incorporates a separation joint to release the spacecraft at
+orbit.
+
+Common methods of attachment at the separation plane are marmon clamps or
+separation bolts. In the marmon clamp, the separation joint is a continuous ring held
+together by an annular clamp. Release of clamp tension allows the joint to separate. In
+the case of separation bolts, the joint is held by several bolts which are released by
+either severing the bolt or by releasing a nut. Once the separation joint is free, springs
+impart a small velocity increment to the spacecraft. After separation, the booster
+maneuvers to avoid accidental impact. For spin-stabilized spacecraft, the interstage
+structure may incorporate a mechanism to impart spin while ejecting the spacecraft.
+
+The Shuttle interfaces differently from the expendable boosters. It links with its
+payloads at a series of hard points located along the sill of the cargo bay and along the
+cargo bay’s centerline (keel fittings). The payload and its upper stages usually require
+acradle or fittings to translate the loads into these hard points. Mechanisms for deploy-
+ing the spacecraft may be spring-powered or motor-driven. Chapter 11 presents
+weight-estimating relations for motor-driven mechanisms. Spring-powered mecha-
+nisms must meet stiffness requirements, but they weigh about half as much as their
+motor-driven equivalents.
+
+10.5 Integrating the Spacecraft Design
+
+10.5.1 Spacecraft Size
+
+If we know the spacecraft’s weight and power, we can estimate its size. Most space-
+craft have a main body or equipment compartment. Many also have solar panels which
+wrap around the compartment for launch and deploy outside the compartment on orbit.
+
+10.5 Integrating the Spacecraft Design 337
+
+Table 10-28 gives estimating relations based on analysis of the volume and dimen-
+sions of a number of spacecraft. These spacecraft ranged from 135 kg to 3,625 kg and
+represent about 15% of the U.S. spacecraft launched between 1978 and 1984 [TRW
+Defense and Space Systems Group, 1980-1985]. Their density ranged from 20 kg/m3
+to 172 kg/m3, with an average of 79 kg/m3. The spacecraft were all cylindrically
+symmetric, although the cross section varied from rectangular to circular. The ratio of
+base diameter to cube root of mass ranged from 0.16 m/kg!3 to 0.31 m/kg!3, with an
+average of 0.23 m/kg!/3. The ratio of spacecraft height to cube root of mass ranged
+from 0.13 to 0.83, with an average of 0.39 m/kg!/3.
+
+TABLE 10-28. Rules for Estimating Volume, Dimension, Area, and Moments of Inertia.
+M = spacecraft loaded mass in kg as defined in Table 10-10.
+
+Characteristic Estimate
+
+Volume (m3) V=0.01M 0.005 to 0.05
+
+Linear Dimension (m) $=0.25 M13 0.15 to 0.30
+
+Body Area (m2) Ap= s? _
+Moment of Inertia (kg: m2) 1=0.01 M53 _—
+
+Section 10.4.6 presented relations for estimating the area of a solar array. Some-
+times, the required array area is smaller than the spacecraft’s body area, and the body
+can be oriented properly relative to the Sun. In this case, we can mount the solar cells
+directly on the body. But high-power spacecraft usually mount the solar cells on
+external panels, either off to one side or symmetrically on both sides of the equipment
+compartment. External solar arrays greatly increase the spacecraft’s moment of
+inertia, particularly about the axes perpendicular to the array axis. Suppose the solar
+array consists of two square panels, one on each side of the spacecraft, and the center
+of each of these panels is L, meters from the body’s center. If so, the increase in
+moment of inertia is approximately L,2M,, where M, is the solar array weight.
+Table 10-29 gives an approximate expression for L, in terms of the array area and the
+body dimension, s. It shows the solar array’s moment of inertia relative to the space-
+craft’s center. External solar arrays also affect the total projected spacecraft area,
+which in turn influences aerodynamic drag and solar-radiation pressure. Table 10-29
+summarizes estimating rules for solar-array moment of inertia and area offset. A, is the
+total solar array area. We must add these inertias to the inertias of the central compart-
+ment, assuming the latter to be equal to the values for the folded spacecraft computed
+above.
+
+TABLE 10-29. Rules for Estimating Area Offset and Moment of Inertia of a Solar Array.
+These should be added to the body values computed in Table 10-28. See text for
+definition of terms.
+
+Solar Array Area Offset (m) L,=1.58+0.5(Ag/2)12
+
+Solar Array Moment of Inertia (kg ?m?)
+Perpendicular to Array Face lax = (La? + Ag /12) Ma
+
+Perpendicular to Array Axis lay= (La2 + Ag/ 24) M,
+About Array Axis lag = (Ag/ 24) Ma
+
+
+338 Spacecraft Design and Sizing 10.5
+
+10.5.2 Lifetime and Reliability
+
+Reliability is a parameter under the designer’s control. We should consider its
+potential effect on spacecraft sizing during conceptual design by examining failures
+from wear-out and random causes. In other words, we should identify the ways in
+which the spacecraft may fail and tailor the design to eliminate or limit failures to
+acceptable levels. This implies identifying components or functions which can wear
+out and designing the system so that they meet the mission’s lifetime requirements.
+Propellant supply and battery-cycle life are examples of these components. If equip-
+ment does not wear out, we must evaluate how each part’s failure affects the mission
+and modify the design to eliminate any single-point failures. Then, we use statistics to
+compute the probability of mission success and tailor the design to acceptable levels.
+This process is not exact, but careful attention to reliability gives us the most balanced
+and able system possible.
+
+To design for reliability, we must understand what constitutes success. The more
+specifically and numerically we can state the success criteria, the easier we can trans-
+late these criteria into design requirements. After defining success, we should list the
+smallest amount of equipment or number of functions that will provide it. We can
+begin by placing these functions in a signal flow or block diagram. In this basic form,
+most functions involve only one path or set of equipment. For this reason, we some-
+times call it a single-string reliability model. Later in the design process, we can add
+multiple paths or backup modes to improve the probability of success, taking care to
+understand both the reliability enhancement and the cost.
+
+By understanding the functions needed for a successful mission, we understand the
+factors which limit mission life or threaten that success. Often a new mission depends
+on developing or exploiting new technology, so we need to know the technology and
+the factors that stress the components of our system. By reducing our knowledge to a
+set of specifications and applying the stresses to our design, we improve our ability to
+produce reliable hardware.
+
+One of the key steps in design for reliability is to numerically predict the probability
+of success. To do so, we must differentiate failures from wear-out and failures from
+random causes. Classic reliability models depict the rate of failure when plotted
+against time as a “bathtub”-shaped curve. Early on, systems fail at high rates because
+of infant mortality, late in life, they fail because of wear-out. We can eliminate failures
+from infant mortality with careful construction, testing, and burn-in. We can avoid
+wear-out by understanding and eliminating the factors that cause it or by providing
+enough hardware to replace worn-out equipment. Between the extremes of infant
+mortality and wear-out, the failure rate is more or less uniform and attributed to
+random effects.
+
+Wear-out shortens a mission. Random failures kill a spacecraft with accumulated
+effects. A successful design copes with them by providing enough backup components
+to cover them. Because we cannot determine when they will occur, our design must
+allow us to detect and correct them. Also, a good design tolerates some failures and
+remains useful in a degraded mode.
+
+Searching for and identifying the ways in which equipment can fail is a basic part
+of design for reliability. This process, called Failure Modes Effects and Criticality
+Analysis (FMECA) assumes that we can identify the ways in which equipment can fail
+and analyze the effect. Key to this process is identifying and eliminating single-point
+failure modes—failures that by themselves can kill the mission. If we cannot eliminate
+them, we must control their probability of occurrence.
+
+10.6 Examples 339
+
+We can analyze the failure modes of our equipment in several ways. For example,
+the all-part method simply analyzes each of the spacecraft’s parts to determine the
+effect of its failure. On a large spacecraft this method is a lot of work but is straight-
+forward and easy to do. The all-part method requires us to analyze shorts and opens
+—systematically searching for wires or printed traces on circuit boards that can cause
+failure if opened or shorted together. We can also use scenarios to find potential failure
+modes. To do so, we simulate the spacecraft’s launch, deployment, and operation to
+ensure that telemetry can detect failures and that the command system can correct
+them. This simulation normally occurs when operational procedures are being pre-
+pared, but it can more effectively detect design flaws if done earlier.
+
+Another way to identify failure modes is the jury method. In many cases new
+designs do not have a lot of experience behind them, but people have had experience
+with similar equipment. We can poll them as part of a formal design review or in a
+separate meeting, thus using their experience to identify likely failure modes and
+probable effects.
+
+10.6 Examples
+
+In this section, we discuss three examples of spacecraft sizing. First we develop a
+preliminary estimate of the FireSat spacecraft and then review two actual systems
+—FLTSATCOM and HEAO-B.
+
+The drivers for the FireSat spacecraft design are the FireSat payload design
+(Sec. 9-7, Table 9-15) and the orbit and AV requirements (Table 7-3). We will use
+these to get a broad estimate of the overall size, weight, and power for FireSat and then
+to break this down into approximate subsystem allocations. The results of the top-level
+process are summarized in Table 10-30. Keep in mind that these are crude estimates
+that allow us to begin the process of spacecraft design. We must continually evaluate
+and refine the requirements and resulting design and perform a variety of system trades
+to arrive at an acceptable, consistent design.
+
+Our first estimate of the spacecraft mass and power come directly from the payload
+estimates of Sec. 9-7 (Table 9-15). As given in Table 10-5, the payload mass is
+between 17% and 50% of the spacecraft dry weight with an average of 30% (see also
+Appendix A). We know very little about FireSat at this time, so we will add margin by
+estimating the payload at 20% of the spacecraft mass, well below the average percent-
+age. However, FireSat was scaled down from a flight unit. This implies that the bus
+will probably be a larger fraction of the spacecraft dry weight. Our knowledge of the
+weight is poor at this time because we have not yet done a preliminary weight budget.
+When we allocate the mass to subsystems below we will hold the margin at the system
+level to allow us to apply it as needed to various subsystems.
+
+Similarly, our initial power estimate is based on the payload power of 32 W and the
+estimate from Table 10-9 that for moderate size spacecraft, the payload represents
+40% of the spacecraft power. Our spacecraft is small with significant control and
+processing requirements. Therefore, we will again be conservative and assume that the
+payload represents only 30% of the power requirement for FireSat. Here the knowl-
+edge is very poor, because we have not yet budgeted the power and have not
+determined what payload duty cycle should be used—that is, should we turn the pay-
+load off over the poles and oceans? Because we will have to contend with eclipses
+(Sec. 5.1, Example 1), the solar array output will be estimated at 170 W to provide
+110 W to the spacecraft which then provides 32 W to the payload.
+
+340 Spacecraft Design and Sizing 10.6
+
+TABLE 10-30. Preliminary Estimate of FireSat Spacecraft Parameters. See text for discus-
+sion. These parameters are based primarily on the payload parameters defined
+in Sec. 9.6.
+
+FireSat Estimate Notes and References
+
+Table 9-15
+Table 9-15
+
+Spacecraft:
+Dry mass 140 kg Payload mass/0.2; Text + Table 10-5
+Average power 110 W Payload power/0.3; Text + Table 10-9
+Solar array power 170 W Eclipse allowance, Eq. (11-1)
+Solar array design Body-mounted omni array, | Sec. 10.4.6, array on 5 non-nadir
+1.7 m2 facing the Sun faces
+(8.5 m2 total area)
+Control approach 3-axis, nadir pointed Sec. 10.4.2
+Propellant:
+AV Table 7-3; Eq. (17-7)
+Attitude control + residual 7%; Secs. 10.4.2, 11.1
+Margin 15%; Table 10-7
+Total propeliant Sum of the above
+
+Propulsion approach Metered bipropellant Text
+(/sp = 300 s); no kick stage
+
+Spacecraft Loaded Mass: Dry mass + propellant
+
+Spacecraft Size
+
+and Moments:
+Volume Table 10-28
+Linear dimensions Table 10-28
+
+Body cross-sectional . Table 10-28
+area
+
+Moment of inertia Table 10-28
+
+In Sec. 7.5.1, we decided to try eliminating a kick stage and flying the spacecraft
+up using low-thrust chemical propulsion. In order to maintain reasonable efficiency,
+we initially assume a metered bipropellant system with an I,, of 300 s (Sec. 10.4.1,
+Chap. 17). Using the rocket equation (Eq. 17-7), we can compute the propellant mass
+as 28 kg and then add small amounts for attitude control and margin as given in
+Table 10-30. Here our knowledge of the propellant mass as a fraction of the spacecraft
+mass is good, although the spacecraft mass itself is not yet well known. Because the
+propellant mass is small, we may choose later to go to a simpler monopropellant
+system or to have the launch vehicle put FireSat directly into its end orbit.
+
+Given an approximate mass for the whole system we can estimate the size and
+moments of inertia from Table 10-28. This, in turn, can tell us something about the
+solar array configuration. We estimate the body area at 2.0 m2 and the required solar
+array area at 1.7 m2. So we can probably avoid solar panels altogether and use an
+omnidirectional array consisting of solar cells mounted on the non-nadir facing sides
+of the body. This will be compact, economical, and easy to control.
+
+Finally, Table 10-31 presents two ways of developing a preliminary weight budget
+for FireSat. We can estimate the mass of each subsystem as a percentage of spacecraft
+
+10.6 Examples 341
+
+dry mass or as a percentage of the payload mass. Column (1) lists the average percent-
+age of spacecraft dry mass devoted to each subsystem based on the historical data for
+spacecraft listed in Appendix A. The resulting mass distribution and margin are shown
+in column (3). Column (2) lists the same data expressed as the average percentage of
+payload mass devoted to each subsystem. The resulting FireSat mass distribution is
+shown in column (4). We recommend using the mass distribution shown in column
+(4). A weight margin of at least 25% at this stage of development is appropriate. The
+column (3) approach resulted in a “margin” of only 11.2 kg or 8% of the spacecraft
+dry mass. This approach prematurely divides the available margin among the
+subsystems. We recommend maintaining the margin at the system level and then allo-
+cating it to the payload or other subsystems as necessary throughout the development.
+
+TABLE 10-31. Preliminary FireSat Spacecraft Weight Budget.
+
+(1)"
+Est. % of
+
+Element of
+Weight
+Budget
+
+as [er
+Tec 4s| er [es | as | C~*d
+
+aia [ea | eo [CS
+aia [ea [eo | SS
+
+5
+Re)
+0
+
+Note that using the
+approach in Col. (4) the
+margin is maintained at
+the system level, not the
+subsystem level
+
+Estimate from
+Table 10-30
+
+4
+ae
+oT 140.0 140.0
+_ 35.0 35 Estimate from
+Table 10-30
+_ 175.0 175.0 Sum of spacecraft dry
+mass & propellant mass
+8.0% 28.6% | Margin/(Spacecraft
+dry mass) x 100%
+* The percentages in Column (1) are the average values listed in Appendix A.
+t The percentages in Column (2) are the average payload values listed in Appendix A.
+
+Propellant
+Mass (kg)
+Spacecraft
+Loaded Mass (kg)
+Margin as %
+of Dry Mass
+
+Spacecraft Dry
+Mass (kg)
+
+To provide more detailed examples of spacecraft design, we'll look at two actual
+spacecraft—FLTSATCOM [Reeves, 1979] and HEAO-B [Frazier, 1981] and use our
+estimating techniques to describe them. Figure 10-3 shows the basic configuration of
+these spacecraft and their principal mission parameters.
+
+Table 10-32 summarizes the design requirements for FLTSATCOM and HEAO-B.
+FLTSATCOM is a communications spacecraft that is part of a global network
+
+342 Spacecraft Design and Sizing 10.6
+
+=
+
+mas
+
+SSS
+Se
+
+<S
+
+—
+
+SSS
+=
+os
+=
+SS
+
+ANN
+
+CNVANN
+SE
+
+WN
+
+SN
+
+AAAS
+
+\“
+WN
+
+NN
+
+—
+SSeS
+
+ENS
+
+NS
+
+WY
+RAAQy
+WYO
+
+Se
+SN
+
+SN
+
+SSS
+
+A
+SN
+
+—S
+=
+NNN
+NSN
+YS
+
+Se
+SX
+
+FLTSATCOM
+Mission Military communications X-ray astronomy
+
+Payload Communication transponders X-ray telescope and instruments
+and antennas
+
+Size 4.9 m transmit antenna 2.3 m octagonal x 4.7m
+3.10 m helical receive antenna instrument compartment
+2.4 m hexagonal x 1 m deep
+electronics compartment
+
+Wt. (loaded) | 927 kg 3,154 kg
+
+Pointing 0.25 deg accuracy Telescope axis anywhere
+1 arcmin accuracy
+30 arcsec stability in 1 hr
+10 deg/min slew rate
+
+Data Rate 1 kbps/250 bps 6.4 kbps/128 kbps
+(selectable) 84 Mb data storage capability
+
+Geosynchronous, 2.5 deg inclined 540 km circular, 22.75 deg inclined
+Reliability 0.267 at 5 yrs 0.81 at 1 yr
+
+Fig. 10-3. Mission Parameters for FLTSATCOM and HEAO-B. Note that loaded weight is
+mass in kg; this use continues throughout the example.
+
+providing UHF communications between ground stations and mobile users. The
+communications payload equipment consists of receivers, processors, transmitters,
+and antennas. Its mission of global communications requires full-Earth antenna
+coverage. The antennas are body-fixed and oriented to point toward nadir. The orbit
+has a 24-hour period (geosynchronous) and initially is inclined 2.5 deg to the equator.
+There is no active inclination control. The launch vehicle is an Atlas-Centaur to inject
+the spacecraft into an elliptic transfer orbit. At apogee, a solid kick motor injects the
+spacecraft into geosynchronous orbit. The spacecraft uses the Air Force Satellite
+Control Network for command and control.
+
+The mission of HEAO-B was X-ray astronomy. Its payload consisted of 5 X-ray
+instruments mounted within a telescope assembly. The mission required the telescope
+
+10.6 Examples 343
+
+TABLE 10-32. FLTSATCOM and HEAO-B Requirements and Constraints (See Table 10-3).
+
+Space-
+craft Mission Payload Orbit
+
+FLTSAT- | Global Communications | 24-hrcircular | Atlas-Centaur | Atlas- Air Force
+COM UHF transponder & inclined launch; Centaur Satellite
+commu- antennas 2.5 deg 5 yrs in GEO | with solid | Control
+
+nications apogee Network
+kick motor | (SGLS)
+
+X-ray telescope | 540 km Atlas-Centaur | Atlas- NASA
+
+astronomy | & instruments circular launch; 12 mo | Centaur S-band
+inclined in LEO GSTDN
+22.75 deg network
+
+to be pointed anywhere and stabilized to 1 arcmin accuracy, with 30 arcsec stability
+over one hour. A slew rate of 10 deg/min was required. The orbit was circular at
+540 km altitude inclined at 22.75 deg. HEAO-B was launched on an Atlas-Centaur in
+late 1978 and had a design life of one year. It interfaced with NASA’s GSTDN S-band
+ground network.
+
+Table 10-33 presents the key design decisions for configuring the two spacecraft.
+Weight dominated the FLTSATCOM design. The payload was large and complex,
+and mission-reliability goals required complete payload redundancy. The Atlas-
+Centaur’s launch capability limited the weight, thus requiring tight weight control.
+Because the FLTSATCOM payload required over 1,000 W, designers selected an
+oriented planar solar array. The Atlas-Centaur’s fairing diameter also limited the
+spacecraft’s folded size. The spacecraft employs two attitude-control modes: spin
+stabilization for orbit injection and 3-axis stabilization for on-orbit control. All
+communication components are body-fixed, and the body is controlled to point the
+antennas toward nadir. A planar solar array is articulated about one axis to point
+toward the Sun. Liquid-hydrazine propulsion provides attitude and orbit control; a
+solid apogee kick motor injected the spacecraft into orbit.
+
+TABLE 10-33. Initial Design Decisions for FLTSATCOM and HEAO-B (See Tabie 10-4).
+
+Design Aspect FLTSATCOM Design Approach HEAO-B Design Approach
+
+Spacecraft Weight Dominated by heavy weight and Large margins established
+and Power high-power payload; constrained by | initially; not tightly constrained by
+booster capability booster capability
+
+Spacecraft Size Folded configuration limited by Folded configuration limited by
+fairing; deployed configuration fairing diameter; large
+dominated by antenna size and deployables not required
+solar array area
+
+Attitude Control Spin stabilization for kick motor 3-axis control used to provide
+Approach firing; 3-axis control on orbit precision
+
+Solar Array Approach | Planar-oriented array Planar body-fixed array
+
+Kick Stage Use Solid AKM used for orbit insertion | Not required
+
+Propulsion Approach | Liquid hydrazine thrusters used for
+attitudel
+Orbit Control Liquid hydrazine thrusters used for
+attitude control
+
+
+344 Spacecraft Design and Sizing 10.6
+
+Weight did not dominate the design for HEAO-B. Its payload instruments existed
+before the program developed the spacecraft to carry them. The program was able to
+establish large weight and power margins. The fairing diameter affected the space-
+craft’s size, but the instruments fit within this diameter. Power requirements were
+modest and a planar body-fixed array was used. The spacecraft mission required
+precision pointing of the payload, which led to 3-axis attitude control using
+gyroscopes, star sensors, and reaction wheels. Kick-stage propulsion was not required.
+Hydrazine monopropellant propulsion was used for attitude control.
+
+Design Budgets
+
+Table 10-34 presents the propellant budget, velocity increments, specific impulse,
+and spacecraft mass for FLTSATCOM. To derive the velocity required to insert the
+spacecraft into its final orbit, the designers used the methods in Chap. 7. That chapter
+also describes injection-error analysis which the designers used to derive the velocity
+increment that corrected the orbit. The ratio of this error to the AKM velocity (0.5%)
+is typical of current performance for solid motors. The stationkeeping velocity derives
+from analysis of orbit perturbations over the spacecraft’s design life. The stationkeep-
+ing increment developed from an operational requirement to move the spacecraft at a
+rate of 15 deg longitude per day. During orbit injection FLTSATCOM spin-stabilized
+at 60 rpm and maneuvered through an angle of 65 deg while spinning. Eqs. (10-7) and
+(10-9) translate these requirements into propellant weight. During its lifetime the
+spacecraft uses propellant for attitude control, mainly to counter solar radiation
+pressure. HEAO-B needed propellant only to acquire attitude and to cancel distur-
+bance torques (principally aerodynamics and gravity gradient; see Table 10-18). The
+propellant’s mass was 138 kg.
+
+TABLE 10-34. Propellant Budget for FLTSATCOM (See Table 10-4).
+
+Design Characteristics
+
+Velocity Correction and Control
+Orbit insertion (AKM) AV = 1,748.8 m/s; Igp = 285.5 8
+Guidance error correction . 9.0 m/s; Isp = 215.2 8; Msc = 988 kg
+Stationkeeping . 14.2 m/s
+Station change 115.2 m/s
+
+Attitude Control
+
+Spinup and despin . Spin speed = 60 rpm; S/C inertia = 995 kg- m2
+Maneuvering while spinning . Maneuver angle = 65 deg; Inertia = 917 kg: m2
+Attitude control . Isp = 100 s; lever arm = 1.25 m
+
+Residual
+
+Total Propellant
+Solid
+Liquid
+
+Tables 10-35 and 10-36 present the power and weight budgets for FLTSATCOM
+and HEAO-B. HEAO-B had two normal power modes: cruise and ground pass. The
+table shows power requirements for both modes, together with the orbital average. The
+batteries were sized for 20% depth of discharge because the mission life exceeded
+5,000 discharge cycles. For FLTSATCOM, payload power, including noted power
+conversion losses, is the main entry. The FLTSATCOM battery was large enough to
+
+10.6 Examples 345
+
+support the full operating power during the maximum eclipse of 1.2 hours. The bat-
+teries operated at a maximum depth of discharge of 70% and required a recharge
+power of 167 W. Designers sized the array for a beginning-of-life power of 1,800 W.
+
+TABLE 10-35. Power Budgets for FLTSATCOM and HEAO-B (See Tables 10-6, 10-7, and
+10-8).
+
+HEAO-B HEAO-B
+FLTSATCOM Power Budget Power Budget
+Power Budget Cruise Mode Ground Pass
+
+* Includes 192 W power conversion losses.
+Tt Inciudes guidance and navigation functions.
+$ Combined communication and command and data handling.
+
+TABLE 10-36. Weight Budgets for HEAO-B and FLTSATCOM (see Table 10-9).
+
+FLTSATCOM HEAO-B
+Weight Budget Weight Budget
+(kg) (kg)
+
+1468.0
+
+Spacecraft Bus
+
+Propulsion
+
+Attitude Control
+Communications
+
+Command and data handling
+Thermal
+
+Electric power
+
+Structure
+
+Spacecraft Dry Weight
+
+Propellant 85.41
+Loaded Weight 927.0 .
+
+Apogee Kick Motor 916.0
+
+Injected Weight
+Adapter
+
+* Combined communication and command and data handling. _t Includes 2.8 kg pressurant.
+
+346 Spacecraft Design and Sizing 10.6
+
+Subsystem Design
+
+Table 10-37 shows characteristics of the propulsion subsystems for the example
+spacecraft. Each subsystem uses liquid-hydrazine propellant stored in two tanks. The
+tanks are pressurized with a fixed amount of nitrogen gas, so the hydrazine pressure
+decays as propellant burns. The tanks can cross connect through commandable isola-
+tion valves. Thrusters and propellant plumbing are redundant and able to cross
+connect. HEAO-B used twelve 4.4-N thrusters mounted in six dual-thruster assem-
+blies. FLTSATCOM uses sixteen 4.4-N thrusters and four 0.44-N thrusters mounted
+in dual-thruster assemblies.
+
+TABLE 10-37. Characteristics of FLTSATCOM and HEAO-B Propulsion Subsystems.
+
+FLTSATCOM
+Hydrazine monoprop. Hydrazine monoprop.
+
+Characteristic
+Propeliant
+
+Capacity 83 kg 136.4 kg
+Tankage Two 0.6 m diameter titanium Two 0.74 m diameter titanium
+Pressurant 2.8 kg nitrogen 3.6 kg nitrogen
+
+Tank weight 14.4 kg 13.3 kg
+
+Central isolation valve distribution Central propellant distribution
+assembly module
+
+7.5 kg 6.8 kg
+
+Sixteen 4.4 N (4 roll, 4 pitch, 8 yaw and | Twelve 4.4N
+AV) Four 0.44 N (roll-yaw) (4 pitch, 8 roll-yaw)
+40 W (catalyst bed and line heaters) | 17.4W
+
+7.6 kg 5.5 kg
+
+Lines and Valves
+
+Weight
+Thrusters
+
+Power Consumption
+Weight
+
+Table 10-38 summarizes the attitude-control requirements for the two example
+spacecraft (see Table 10-13). FLTSATCOM employs body-mounted antennas for its
+payload and orients one body face to point the antennas toward nadir. FLTSATCOM
+also has a planar solar array which it orients toward the Sun by combining body
+orientation and rotation of the array axis. Finally, FLTSATCOM has a guidance
+requirement for AV corrections. HEAO-B was required to point anywhere except close
+to the Sun and hold accurate pointing for long periods. It also had modest power
+requirements and no requirement for orbit correction.
+
+TABLE 10-38. Attitude-Control Requirements for FLTSATCOM and HEAO-B.
+
+Payload Requirements
+Article to be pointed Communication antennas X-ray telescope
+Pointing direction Nadir Anywhere
+Pointing accuracy 0.25 deg 1 arcmin
+Pointing stability 30 arcsec in 1 hr
+Slew rate 10 deg/min
+Exclusion Within 15 deg of Sun
+
+Other Requirements
+
+Sun pointing Yaw (Z-axis) controlled to keep roll (X-axis) controlled to
+Y-axis normal to orbital plane keep Sun in X-Z plane
+
+Pointing during AV Yaw (Z-axis) control as above _
+
+
+10.6 Examples 347
+
+Both FLTSATCOM and HEAO-B are 3-axis-controlled spacecraft. Both space-
+craft had body-mounted payloads and controlled the body’s attitude to point the
+payloads (see Table 10-13). Both spacecraft use one axis of body attitude control to
+orient a planar solar array toward the Sun. FLTSATCOM, which requires more than
+1 kW of electric power, orients the array about a second axis.
+
+FLTSATCOM employs a solid apogee kick motor to inject it into orbit. Attitude is
+controlled during AKM firing by spin stabilization (see Tables 10-14 and 10-15). The
+spin direction can be rotated by using an off-axis thruster; the thruster fires pulses syn-
+chronized with the spin period. During normal operation and AV firing, FLTSATCOM
+is 3-axis stabilized. It uses Earth and Sun sensors for attitude sensing and thrusters and
+a reaction wheel for torque. HEAO-B did not have a AV mode. Under normal
+operation, it used gyroscopes and Sun sensors for attitude sensing with wheels and
+thrusters for torque. Its torqued gyroscopes slewed the reference-pointing direction,
+and payload star sensors allowed accurate reference and correction of gyro drift.
+Radiation pressure causes the main disturbance torques for FLTSATCOM. Gravity
+gradient and aerodynamics were the chief torques for HEAO-B. See Table 10-18 and
+Sec. 11.1.
+
+Table 10-39 shows weight and power values for components of the complete
+guidance, navigation, and control subsystems (including redundancy) for both
+FLTSATCOM and HEAO-B.
+
+TABLE 10-39. Weight and Power for the Attitude-Control Component.
+
+FLTSATCOM HEAO-B
+Component [Mass (a) Mass (0)
+
+Sensors
+Sun sensors 1.6
+Earth sensors
+Gyroscopes 19.6 =
+
+| Processing Electronics | | Processing Electronics |
+
+Reaction Wheels 11.3 (2) ——Ee 53.8 (4) —=—
+Solar Array Drives 13.9 (2) 0.2 (2) ee ee
+cr
+
+FLTSATCOM employed a single system for tracking, telemetry, and command
+(TT&C). This spacecraft uses only 977 commands for infrequent commanding. The
+telemetry requirements are 178 mainframe words (0.5 s frame rate) and fewer than
+1,000 subcommutated words—typical of a minimum subsystem for TT&C. A wide-
+beam antenna mounted on the tip of the main payload’s antenna mast ensures
+communications access to the satellite.
+
+The communications requirements for HEAO-B were driven by HEAO’s low-
+altitude and low-inclination orbit, which allowed infrequent access to the spacecraft
+for commanding and data readout. Table 10-40 summarizes characteristics of the
+communications subsystem and the subsystem for command and data handling.
+HEAO-B’s spacecraft had to maneuver and take payload data while out of sight of a
+ground station. The commanding subsystem included a stored command programmer
+which could store and execute 256 commands. Data remained on a tape recorder until
+the ground station read it out at communication intervals.
+
+348 Spacecraft Design and Sizing 10.6
+
+TABLE 10-40. Characteristics of the Subsystem for Communications and Command and
+Data Handling on HEAO-B.
+
+Characteristic Description
+
+Communications
+Frequency S band
+Radiated power 1.0W
+Antennas 2 wide beam cross strapped
+Weight 16.2 kg
+
+Tape Recorder
+Capacity 84 x 10 bits
+Data rate 6.4 kbps and 128 kbps
+
+Weight 13.8 kg
+
+Power (communications and 3.4 W cruise; 78.4 W ground pass
+tape recorder)
+
+Command and Data Handling
+Command rate 200 bps
+Stored commands 256 30 bit commands
+Telemetry rate 6.4 and 128 kbps
+Weight 28.4 kg
+Power 33.8 W cruise; 41.6 W ground pass
+
+The FLTSATCOM and HEAO-B components require temperatures of 5-50 °C
+—wno challenge to the designers. Thermal balance is achieved by mounting the com-
+ponents on external panels of the equipment compartment and allowing the panels to
+radiate excess heat to space. Second-surface mirrors serve as radiators, taking
+advantage of their low solar absorptivity and high infrared emissivity. Areas not
+required for radiation are insulated. The spacecraft’s interior surfaces are black to
+enhance internal heat transfer, and guard heaters prevent excessively low temperatures
+when equipment is off, or on sensitive assemblies such as propellant lines.
+
+Table 10-35 presented power budgets for FLTSATCOM and HEAO-B. Table
+10-41 shows the characteristics and components of their power subsystems. FLTSAT-
+COM uses planar arrays oriented toward the Sun by solar-array drives and controls the
+body’s attitude about the Z-axis (yaw control). The array produces 1,800 W at begin-
+ning of life. HEAO-B used planar solar panels which were body-mounted. They were
+oriented toward the Sun by X-axis (roll) attitude control which kept the Sun in the X-Z
+body plane. With this attitude, the Sun was up to 75 deg away from the array normal.
+To improve this poor illumination, designers sized the array for 1,500 W under full
+solar illumination.
+
+Both FLTSATCOM and HEAO-B use NiCd batteries. The cycle life for FLTSAT-
+COM was less than 1,000 cycles, and the three batteries operated at 70% depth of
+discharge. They also contain bypass electronics to allow removal of failed cells. The
+three HEAO-B batteries had a cycle life of over 5,000 cycles and operated at 20%
+depth of discharge.
+
+Table 10-41 also shows the characteristics of the power control, switching, cabling,
+and conversion equipment on FLTSATCOM and HEAO-B. The FLTSATCOM
+spacecraft uses an unregulated bus and switches power to user subsystems in central
+power-control units. A central power converter provides secondary power for the
+spacecraft bus subsystems. HEAO-B used a regulated solar array and also switched
+power to users in a set of integration assemblies. These units also contained power
+converters.
+
+10.6
+
+Examples
+
+349
+
+TABLE 10-41. Characteristics and Components of the Electric-Power Subsystems.
+
+Characteristics and
+
+Components
+
+FLTSATCOM
+
+Solar Arrays
+Power output BOL
+
+Size
+Weight
+Battery
+Capacity
+Weight
+Power Control
+Type
+Weight
+Power
+
+Power Switching
+Type
+
+Weight
+Power
+
+Power conversion
+Type
+
+Weight
+Power
+
+1,800 W BOL normal incidence
+1,200 W @ 7 year 23 degincidence
+Two 2.8 m x 3.8 m panels
+
+92.6 kg
+
+600 W-hr (24 A-hr)
+89.6 kg total
+
+Unregulated array
+9.7 kg
+12.9 W
+
+Central switching assemblies
+(1 for S/C, 2 for P/L)
+
+29.3 kg
+4.3 W (S/C bus)
+
+Central S/C bus converter;
+Separate P/L converters
+
+8.5 kg S/C bus, 78.3 kg P/L
+14.3 W SIC bus, 192 W P/L
+
+1,500 W normal incidence
+613 W @ 15 degincidence
+
+13.9 m2
+77.1 kg
+
+550 W «hr (20 A-hr)
+89.6 kg total
+
+Regulated array
+33.1 kg
+26 W
+
+Central switching assembly
+(1 for S/C, 1 for P/L)
+
+35.5 kg
+Included in power control
+
+Converter in switching assem-
+bly; Separate ACS and C&DH
+
+4.6 kg ACS, 3.3 kg C&DH
+included in subsystems
+
+133.8 kg
+Included above
+
+Table 10-42 summarizes the structural design of FLTSATCOM and HEAO-B.
+
+Figure 10-4 shows the structure of FLTSATCOM, and Fig. 10-5 shows the structure
+of HEAO-B. The HEAO-B structure was a semi-monocoque in which longerons, stiff-
+ened skin panels, and rings carried the loads. Both spacecraft were launched on the
+Atlas-Centaur and were designed to substantially the same boost loads. In the launch
+configuration, both spacecraft were about the same diameter, although HEAO-B was
+slightly longer. The on-orbit configurations of the spacecraft were quite different
+because FLTSATCOM has a large, deployable, solar array and deployed antennas.
+HEAO-B had essentially the same configuration on orbit as during launch. The two
+spacecraft had different designs for the load-carrying structure. FLTSATCOM carries
+loads with a central cylinder. The equipment compartment mounts around this cylin-
+der, and the deployables stay around the outside of the compartment during boost.
+
+Design Integration
+
+Table 10-43 gives relations for estimating the spacecraft’s size based on its weight.
+Equations (10-12) and (10-13) give relations for estimating solar-array area and
+weight based on the spacecraft’s total power. The table compares the actual parameters
+for FLTSATCOM and HEAO-B to the estimated values.
+
+10.6
+
+Spacecraft Design and Sizing
+
+350
+
+Fig. 10-4. FLTSATCOM Structure.
+
+Fig. 10-5. HEAO-B Structure.
+
+10.6 Examples 351
+
+TABLE 10-42. Structural Characteristics of FLTSATCOM and HEAO-B Designs.
+
+Weight
+
+Design Approach
+
+Primary structure Central cylinder Semi-monocoque
+
+Solar array Aluminum honeycomb panels Aluminum honeycomb panels
+deployed in two wings body mounted
+
+Equipment compartment | Honeycomb panels mounted to | Honeycomb panels mounted to
+longeron-stringer frame structural frame
+
+Deployables Wrapped around or folded over
+equip compartment during boost
+
+TABLE 10-43. Estimated vs. Actual Sizes of FLTSATCOM and HEAO-B.
+
+FLTSATCOM
+Spacecraft
+Parameters
+
+Spacecraft Loaded Weight
+
+Spacecraft Power BOL
+
+Volume
+Compartment
+Folded Spacecraft
+
+Linear Dimension
+Diameter
+Length
+
+Solar-Array Area
+
+Moments of Inertia
+Folded w/ AKM . Imin 6,783.2
+w/o AKM ; Imax 8,783.2
+
+Deployed I,
+
+ly
+
+
+352 Spacecraft Design and Sizing 10.6
+
+References
+
+Agrawal, Brij N. 1986. Design of Geosynchronous Spacecraft. Englewood Cliffs, NJ:
+Prentice-Hall, Inc.
+
+Chetty, P.R.K. 1991. Satellite Technology and Its Applications (2nd edition). New
+York: TAB Books.
+
+Frazier, R.E. 1986. HEAO Case Study in Spacecraft Design. AIAA Professional Study
+Series. TRW Report 26000-100-102. Washington, DC: American Institute of
+Aeronautics and Astronautics.
+
+Griffin, Michael D. and James R. French. 1991. Space Vehicle Design. Washington,
+DC: American Institute of Aeronautics and Astronautics.
+
+Reeves, Emery I. 1979. FLTSATCOM Case Study in Spacecraft Design. AIAA
+Professional Study Series. TRW Report 26700-100-054-01.Washington, DC:
+American Institute of Aeronautics and Astronautics.
+
+TRW Defense and Space Systems Group. 1980-1985. TRW Space Log, vols. 17-21.
+Redondo Beach, CA: TRW, Inc.
+
+U.S. Department of Defense. 1991. Reliability Prediction of Electronic Equipment.
+MIL-HDBK-217 (f).

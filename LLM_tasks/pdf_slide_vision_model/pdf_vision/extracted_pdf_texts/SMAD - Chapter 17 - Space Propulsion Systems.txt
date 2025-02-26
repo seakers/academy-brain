@@ -1,0 +1,2275 @@
+
+Chapter 17
+Space Propulsion Systems
+
+Robert L. Sackheim, TRW, Inc.
+Sidney Zafran, TRW, Inc.
+
+17.1 Propulsion Subsystem Selection and Sizing
+17.2 Basics of Rocket Propulsion
+17.3. Types of Rockets
+Liquid Rockets; Solid Rockets, Hybrid Rockets;
+Electric Propulsion
+17.4. Component Selection and Sizing
+17.5 Staging
+
+In the broadest sense, space propulsion systems do three things. They lift the launch
+vehicle and its payload from the launch pad and place the payload into low-Earth orbit.
+They transfer payloads from low-Earth orbits into higher orbits for mission operations
+or into trajectories for planetary encounters. Finally, they provide thrust for attitude
+control and orbit corrections. Table 17-1 lists the specific functions these systems
+perform during various mission phases and some typical performance requirements.
+
+. Performance requirements for propulsion systems include thrust, total impulse, and
+duty cycle specifications derived from mission profiles. Individual designs must meet
+other performance requirements, such as operating pressure, and internal and external
+leakage. Other specifications include physical characteristics, propellant, and mass
+properties. Configuration requirements include envelope dimensions, thruster loca-
+tions, and alignment. In addition, plume efflux is frequently a design driver for
+payloads sensitive to contamination.
+
+Once a payload is placed in low-Earth orbit by the launcher, an upper stage or
+onboard spacecraft integral propulsion system (see Table 17-2) is frequently used to
+transfer the payload to its operational orbit. These in-space propulsion system designs,
+especially their weight, size, and volume, are strongly driven by the performance and
+weight efficiency of the primary propulsion system. The specific impulse, propellant
+density, and overall stage mass fraction of the primary propulsion system are key
+parameters. Table 18-5 in Sec. 18.2 summarizes key features and performance charac-
+teristics of existing and planned upper stages for use with various launch vehicles.
+
+With the heavy emphasis on driving down the cost of access to space, while still
+staying within the capabilities of the current fleet of launch vehicles, many space
+systems’ prime contractors are designing and emphasizing higher efficiency and
+
+685
+
+686 Space Propulsion Systems
+
+TABLE 17-1. Typical Functions and Requirements for Space Propulsion. The change in
+velocity required for orbit maneuvers is called AV. See Table 7-3 in Sec. 7.3 for
+specific AV requirements.
+
+Propulsion Function Typical Requirement
+
+Orbit transfer to GEO (orbit insertion)
+¢ Perigee burn 2,400 m/s
+¢ Apogee burn 1,500 (low inclination) to 1,800 m/s (high inclination)
+
+Initial spinup 1 to 60 rpm
+
+LEO to higher orbit raising AV
+¢ Drag-makeup AV
+¢ Controlled-reentry AV
+
+60 to 1,500 m/s
+60 to 500 m/s
+120 to 150 m/s
+
+Acceleration to escape velocity
+from LEO parking orbit
+
+3,600 to 4,000 m/s into planetary trajectory
+
+On-orbit operations (orbit maintenance)
+¢ Despin
+
+¢ Spin control
+
+¢ Orbit correction AV
+
+¢ East-West stationkeeping AV
+
+¢ North-South stationkeeping AV
+
+60 toO rpm
++1to+5rpm
+
+15 to 75 m/s per year
+3 to 6 m/s per year
+45 to 55 m/s per year
+
+¢ Survivability or evasive maneuvers 150 to 4,600 m/s
+
+(highly variable) AV
+
+Attitude contro! 3-10% of tofal propellant mass
+
+Low total impulse, typically <5,000 Nvs, 1 K to 10K
+pulses, 0.01 to 5.0 sec pulse width
+
+100 K to 200 K pulses, minimum impulse bit of
+0.01 Nes, 0.01 to 0.25 sec pulse width
+
+Low total impulse, typically <7,000 Nvs, 1 K to 10 K
+pulses, 0.02 to 0.20 sec pulse width
+
+5 to 10 pulse trains every few days, 0.02 to 0.10 sec
+pulse width
+
+On/off pulsing, 10 K to 100 K pulses, 0.05 to 0.20 sec
+pulse width
+
+¢ Acquisition of Sun, Earth, Star
+
+¢ On-orbit normal mode control with
+3-axis stabilization, limit cycle
+
+¢ Precession control
+(spinners only)
+
+¢ Momentum management
+(wheel unloading)
+
+* 3-axis control during AV
+
+low-cost, onboard spacecraft integral propulsion systems (IPS). The functions of the
+onboard IPS are to provide much of the propulsion energy for ascent from low-Earth
+orbit to higher operational orbits and for controlled de-orbit/reentry at the end of
+mission life, in addition to the normal on-orbit attitude and velocity control propulsion
+functions. Spacecraft IPS have become almost routine for most designs. More than
+85% of all spacecraft launched have operational orbits of greater than 500 km. In
+addition, new international regulations make controlled de-orbit a mandatory require-
+ment which increases the onboard IPS energy requirements.
+
+With this need for higher onboard IPS propulsion energy almost all spacecraft
+today employ one of three IPS designs or some combination: (1) storable bipropellant
+(i.e., employing N.O4 and monomethylhydrazine, or MMH, as the propellants);
+(2) Dual mode propulsion (employing N,O, and hydrazine as high performance
+
+17.1 Propulsion Subsystem Selection and Sizing 687
+
+bipropellants for AV and monopropellant attitude control); (3) one of several different
+electric propulsion options, depending upon power available, burn time vs. weight
+requirements and considerations such as propellant commonality, volume limitations
+and electromagnetic issues. Typical spacecraft electric propulsion options are resisto-
+jets (delivering ~300 sec I,, using decomposed hydrazine), arcjets (delivering
+~500-700 sec Isp, using decomposed hydrazine or ammonia), Hall effect thrusters
+(delivering ~1,500—2,000 sec Js, using Xenon and derived from Russian technology
+applied to Russian satellites such as GALS and GONAS), and ion propulsion (delivers
+~2,000-3,000 sec Isp, also using Xenon). As more and more of the orbit raising
+impulse is incorporated on board the spacecraft instead of using a separate upper stage,
+modern designs are typically using an optimized combination of chemical and electric
+or hybrid onboard propulsion.
+
+17.1 Propulsion Subsystem Selection and Sizing
+
+The process for selecting and sizing the elements of the propulsion subsystem is
+shown in Table 17-2. We must carefully estimate the key performance requirements
+in steps 1 to 3 since they have the greatest impact on operation, weight, and cost. In
+step 4 we identify as many reasonable options as possible, and pare the list down to a
+few that have merit. We then proceed to step 5 to develop sufficient detail to estimate
+the performance, mass, and cost of each option.
+
+TABLE 17-2. Propulsion Subsystem Selection and Sizing Process.
+
+Reference
+Table 17-1
+
+Description of Process
+
+List applicable spacecraft propulsion functions, e.g., orbit insertion,
+orbit maintenance, attitude control, and controlled de-orbit or reentry
+
+Determine AV budget and thrust level constraints for orbit insertion
+and maintenance
+
+Sec. 7.3
+
+Determine total impulse for attitude control, thrust levels for control
+authority, duty cycles (% on/off, total number of cycles) and mission
+life requirements
+
+Table 17-1,
+Sec. 10.3,
+Chap. 11
+
+Secs. 17.1, 17.3
+
+Determine propulsion system options:
+
+* Combined or separate propulsion systems for orbit and attitude
+
+control
+
+¢ High vs. low thrust
+
+¢ Liquid vs. solid vs. electric propulsion technology
+Estimate key parameters for each option
+
+* Effective /,,, for orbit and attitude control
+
+¢ Propellant mass
+
+¢ Propellant and pressurant volume
+
+¢ Configure the subsystem and create equipment list
+Estimate total mass and power for each option
+Establish baseline propulsion subsystem
+
+Document results and iterate as required
+
+Secs. 17.1, 17.3
+Table 17-3
+Tables 17-4,
+17-6, 17-7
+
+Table 10-7
+
+Table 17-3 lists the primary options. Cold gas propulsion systems are inexpensive,
+low performance systems that are rarely used unless there is an overriding requirement
+to avoid the hot gases and safety concerns of liquid and solid systems. Solid
+
+688 Space Propulsion Systems 17.2
+
+propellant-based systems have been used extensively for orbit insertion, but the space-
+craft propulsion subsystem must be augmented with another technology to provide
+orbit maintenance and attitude control. Liquid systems are divided into monopropel-
+lant and bipropellant systems with a third alternative, dual mode, that is a bipropellant
+derivative. Monopropellant systems have successfully provided orbit maintenance and
+attitude control functions, but lack the performance to provide high efficiency large AV
+maneuvers required for orbit insertion. Bipropellant systems are attractive because
+they can provide all three functions with one higher performance system, but they are
+more complex than the historic solid rocket and monopropellant combined systems.
+
+TABLE 17-3. Principal Options for Spacecraft Propulsion Subsystems. See Sec. 17.3 fora
+definition of specific rocket types.
+
+Propulsion Orbit Maintenance | Attitude tate |
+Technology Apogee | and Maneuvering | Control (s) sP
+
+| Apogee |
+Cold Gas v v 30-70
+Solid v v 280-300
+Liquid
+Monopropellant v v 220-240
+Bipropellant v v v v 305-310
+Dual mode v v v v 313-322
+Hybrid v Vv v 250-340
+Electric v v 300-3,000
+
+Dual-mode systems are integrated mono and bipropellant systems fed by common
+fuel tanks. These systems are actually hybrid designs that use hydrazine (N2H4) both
+as a fuel for high performance bipropellant engines (i.e., N2>O4/N2H4) and as a mono-
+propellant with conventional low-thrust catalytic thrusters. The hydrazine is fed to
+both the bipropellant engines and the monopropellant thrusters from the common fuel
+tank. In this manner, high specific impulse is provided for long AV burns at high thrust
+(e.g., apogee circularization) and reliable, precise, minimum-impulse burns are pro-
+vided by the monopropellant thrusters for attitude control. An additional capability to
+enhance dual-mode propulsion is the development of a bimodal thrust device which
+can operate either as a simple catalytic monopropellant thruster or as a high per-
+formance bipropellant thruster known as the Secondary Combustion Augmented
+Thruster or SCAT shown in Fig. 17-1.
+
+Practical considerations may restrict the propellant choices to those that are readily
+available, storable, and easy to handle. Also, we must trade the lead time needed to
+develop new hardware against the combination of existing components or stages.
+Finally, limits on payload acceleration may dictate the maximum permissible thrust
+levels.
+
+17.2 Basics of Rocket Propulsion
+
+Two basic parameters of rocket engine design are thrust and specific impulse.
+Thrust, F, is the amount of force applied to the rocket based on the expulsion of gases:
+
+F= mv, +A,[B -B.]= nv, (17-1)
+
+17.2 Basics of Rocket Propulsion 689
+
+Thermal Standoff/
+Barrier Tube
+
+156:1 Nozzle
+
+Propellant
+Valves (2) f poh 405 ;
+oe lonopropelilant
+Nitrogen
+Tetroxide In a Catalyst Bed
+
+Thermal
+Standoffs (4)
+
+Monopropellant
+Catalyst Bed
+
+“~
+
+Hydrazine In ‘~
+
+Secondary Combustion Chamber/
+So Combustion Heat Exchanger
+
+Fig. 17-1. Secondary Combustion Augmented Thruster (SCAT). Bimodal spacecraft attitude
+and velocity control RCS thruster.
+
+where A, is nozzle exit area, P, is the gas pressure at the nozzle exit, P, is the ambient
+pressure, V, is propellant exhaust velocity, and m is propellant mass flow rate. We
+simplify this expression by defining an effective exhaust velocity, C, as:
+
+A
+C=V, +—[R -R.] (17-2)
+Equation (17-1) then reduces to:
+F= mC (17-3)
+
+At very high altitudes and in space, P, is essentially zero; at lower altitudes, a rocket
+engine’s thrust increases with altitude until the vehicle leaves the atmosphere.
+
+Specific impulse, I,,, is the ratio of the thrust, F, to the weight flow rate, mg, of
+propellant.
+
+ly = E/rhg (17-4)
+
+Is is a measure of the energy content of the propellants, and how efficiently it is
+converted into thrust. For a chemical rocket, Js, is directly proportional to the square
+root of the ratio of the chamber temperature, T,, to the average molecular weight of the
+exhaust gases, M, as follows:
+
+Ip =KYT./M (17-5)
+
+where K is a proportionality constant depending on the ratio of specific heats of the
+exhaust gas and the engine pressure ratio. This important relationship shows that we
+can maximize specific impulse by matching the highest possible total temperature
+with the lowest average molecular weight of the combustion products.
+
+690 Space Propulsion Systems 17.2
+
+The primary measure of propulsion system performance capability is the velocity
+change, AV, that it can produce. We quantify this relationship by the rocket equation:*
+
+AV= gly fe] =g ly 2] = g 1, In(R) (17-6)
+oP f
+
+where my = m,—m,is the final vehicle mass, m, is the initial vehicle mass, m, is the
+mass of the propellant consumed, and R = m,/m, is the mass ratio. This equation
+assumes zero losses due to drag and gravity, and is thus a limiting ideal case. In prac-
+tice, the AV achieved will be somewhat smaller. Gravity and drag losses for launch
+vehicles are typically 1,500-2,000 m/s.
+
+Another form of Eq. (17-6) provides the mass of propellant required for a given
+
+increment of velocity, AV:
+
+my = myo Ip) _ ] = mo ~ eV ") (17-7)
+
+This equation allows us to calculate the mass of propellant required based on either the
+initial or final mass of the rocket.
+
+We obtain the highest thrust when exit pressure equals ambient pressure. Although
+Eq. (17-1) suggests that greater thrust can be obtained with an exit pressure greater
+than the ambient pressure, the exhaust velocity is reduced, resulting in a loss of thrust.
+As a result, we design rocket exhaust nozzles with an exit pressure equal to the ambi-
+ent pressure whenever possible. The exit pressure is governed by the nozzle-area
+expansion ratio:
+
+e=A,/A, (17-8)
+
+where A, is the nozzle exit area and A, is the area of the throat of the nozzle. Note that
+as the expansion ratio increases, the nozzle exit pressure decreases.
+
+For launch vehicles (particularly first stages) where the ambient pressure varies
+during the burn period, trajectory computations are performed to determine the opti-
+mum exit pressure. However, an additional constraint is the maximum allowable
+diameter for the nozzle exit cone, which in some cases is the limiting constraint. This
+is especially true on stages other than the first, where the nozzle diameter may not be
+larger than the outer diameter of the stage below.
+
+For space engines, where the ambient pressure is zero, thrust is always higher with
+larger nozzle expansion ratios. On these engines, we increase the nozzle expansion
+ratio until the additional weight of the longer nozzle (and increase in real nozzle inter-
+nal boundary layer or drag losses) costs more performance than the extra thrust it
+generates.
+
+Another important relationship for evaluating rocket performance involves two key
+Figures of Merit, the characteristic velocity of the combustion gases and the thrust
+coefficient. The characteristic velocity, C*, is a measure of the energy available from
+the combustion process and is given by:
+
+* The rocket equation was developed in the late nineteenth century and first published by Kon-
+stantin Tsiolkovsky [1903], a deaf Russian schoolteacher who was the first to develop much
+of the mathematical theory of modern rocketry. The most dramatic crater on the far side of the
+Moon was named Tsiolkovsky following its discovery in 1959 by the Soviet probe Luna 3.
+
+17.3 Types of Rockets 691
+
+C* = FA, (17-9)
+m
+where A, is area of the nozzle throat, and P, is the combustion chamber pressure.
+Delivered values of C* range from 1,333 m/s for monopropellant hydrazine (N»H,) to
+1,640 m/s for Earth-storable bipropellants (N»O,/MMH) and up to 2,360 m/s for
+cryogenic LO./LH>. The thrust coefficient, C,, is a measure of the efficiency of con-
+verting the energy to exhaust velocity and characterizes the nozzle performance.
+
+G = F (17-10)
+P, cAy
+Representative values for Cy are 1.6 (for nozzle expansion ratio, € =30:1) and 1.86
+(for € = 200:1). The product of these two Figures of Merit, divided by the gravity
+constant, gives the specific impulse:
+
+Ip = F/mg = C* CG /2 (17-11)
+
+The physical parameters that interact to produce hot gases and associated thrust inside
+a chemical rocket chamber are illustrated in Fig. 17-2. Further information is given by
+NASA [1963].
+
+Fuel
+Iniet
+Ae
+le
+Thrust <_q— P| P Combustion => Exhaust
+(F) > Chamber
+%
+Oxidizer
+Inlet
+
+Fig. 17-2. Simplified Diagram of a Chemical Rocket. Combustion of fuel and oxidizer in the
+combustion chamber produces expansion of the reaction product gases which are
+then expelled through the nozzle. The differential between pressure inside the cham-
+ber (P,) and at the nozzle exit (P,) produces a reaction that propels the chamber and
+the vehicle in a direction opposite to that of the exhaust gases. Atmospheric pressure
+(P.,) reduces the effective thrust (F), so that a rocket engine actually works more effi-
+ciently in outer space than in the Earth’s atmosphere. This simplified combustion
+chamber diagram is also representative of a monopropellant rocket (one fuel inlet only
+and the upper portion of the chamber is packed with catalyst), and of a solid rocket
+(where there are no inlets because both the fuel and oxidizer are preloaded in the
+chamber and burn only upon command for ignition).
+
+17.3 Types of Rockets
+
+Currently available space propulsion systems can be categorized as either cold gas,
+chemical, or electric. More exotic types, such as nuclear, solar sails or beamed-energy
+approaches may be feasible someday, but their consideration is beyond the scope of
+this book. Table 17-4 and Table 17-5 list the general characteristics of several types of
+propulsion systems,
+
+692
+
+Space Propulsion Systems
+
+17.3
+
+TABLE 17-4. Performance and Operating Characteristics of Propeliants and Energy
+Sources for Spacecraft Propulsion Systems. These propellant and energy
+sources start with the low-efficiency cold gas system and work up to the highest
+efficiency, space-qualified system, electromagnetic.
+
+Type
+Cold Gas
+
+Solid Motor
+
+No, NH3,
+Freon,
+helium
+
+Propellant
+
+Energy
+
+High
+pressure
+
+Liquid:
+
+Monopropellant
+
+Bipropellant
+
+H2O2, NaH,
+
+Exothermic
+decom-
+position
+
+Oz and RP-1 Chemical
+Og and Hy Chemical
+N2O, and Chemical
+
+MMH (NoHy,
+
+UDMH)
+Fo and NaH, Chemical
+
+OF, and BaHg
+
+Chemical
+
+Isp
+
+Thrust
+Range
+(N)
+
+Avg Bulk
+Density
+(g/cm)
+
+50-75
+
+0.05-200
+
+0.01-50 0.28", 0.60,
+
+0.96"
+
+150-225
+
+350
+450
+300-340
+
+425
+430
+350
+330
+340-380
+
+Electrostatic:
+
+lon
+
+Colloid
+
+Hall Effect
+Thruster
+
+Xenon
+
+Hg/A/Xe/Cs
+
+Glycerine
+
+CIF, and NjH,| Chemical
+Dual Mode N2O,/N2H, | Chemical
+Water H20-»H2z + Og] Electric /
+Electrolysis chemical
+Hybrid Oz and rubber} Chemical
+Electrothermal:
+Resistojet No, NH3, Resistive
+NoaHy, Ho heating
+Arcjet NH3, NaH4, He} Electric arc
+
+heating
+
+Electrostatic
+
+Electrostatic
+
+Electrostatic
+
+150-700
+
+450-1,500
+
+Chemical 280-300 | 50-5 x 106 10-106
+
+0.05-0.5
+
+5-5 x 106
+5-5 x 106
+5-5 x 106
+
+5-5 x 106
+5-5 x 106
+5-5 x 106
+3-200
+50-500
+
+225-3.5 x 105
+
+1.80
+
+0.01-0.1 1.44, 1.0
+
+1.14 and 0.80
+1.14 and 0.07
+
+1.43 and 0.86
+(1.0, 0.79)
+
+1-106
+4-108
+4-106
+
+1.5 and 1.0
+1.5 and 0.44
+1.9 and 1.0
+1.9 and 1.0
+1.0
+
+50-75,000 |} 1.14and1.5
+
+Electromagnetic:
+MPDt
+
+Pulsed
+Piasma
+
+Pulsed Inductive
+
+Argon
+
+Teflon
+
+Argon
+NaH,
+
+Magnetic
+
+Magnetic
+
+Magnetic
+Magnetic
+
+0.005-0.5 0.001-0.1 | 0.28", 0.60, 1.0,
+0.019*
+0.05-5 0.01-1 | 0.60, 1.0, 0.019"
+5x 10-6-0.5 | 10-8 0.1 | 13.5/0.44*/2.73*
+/1.87
+5 x 10-8-0.05 | 10-8-0.01 1.26
+5 x 10°8-0.1 | 10-6-0.02 0.22
+25-200 5-50 0.44*
+5 x 10-6-0.005; 10-6-0.001 2.2
+2-200 0.5-50 0.44
+2-200 0.5-50 1.0
+
+* Gas densities at standard conditions of pressure and temperature
+
+Several types in use: Organic polymers + ammonium perchlorate + powdered aluminum.
+MPD = magnetoplasmadynamic
+
+17.3 Types of Rockets 693
+
+Cold gas propulsion is just a controlled, pressurized gas source and a nozzle. It
+represents the simplest form of rocket engine. Cold gas has many applications where
+simplicity is more important than high performance. The Manned Maneuvering Unit
+used by astronauts is an example of such a system.
+
+Chemical combustion systems are the most common systems for space applica-
+tions. They can be divided into three basic categories: liquid, solid, and hybrid. The
+terminology refers to the physical state of the stored propellants. Typically, rockets
+using solid propellants are called motors and rockets using liquids are called engines
+or thrusters.
+
+TABLE 17-5. Advantages and Disadvantages of Propellants and Energy Sources for
+Spacecraft Propulsion Systems.
+
+Propellant Advantages Disadvantages
+
+No, NH3, Extremely simple, reliable, very Very low performance, heaviest of
+Freon, helium | low cost all systems for given performance
+level
+
+Solid Motor Simple, reliable, relatively low cost| Limited performance, higher thrust,
+safety issues; performance not
+adjustable
+
+Liquid:
+Monopropellant H2O2, NaH, | Simple, reliable, low-cost Low performance, higher weight
+than bipropellant
+
+Bipropellant OQ, and RP-1 | High performance More complicated system
+OQ, and Hz ‘| Very high performance Cryogenic, complicated
+N20, and =| Storable, good performance Complicated
+MMH (NoH,,
+UDMH)
+Fo and NoH, | Very high performance Toxic, dangerous, complicated
+OF 2 and Bolg | Very high performance Toxic, dangerous, complicated
+CIFs and NaH, | High performance Toxic, dangerous
+Dual Mode N2O,4/NaH4 | High performance Toxic, dangerous
+
+Water H20—>Hp + Oo | High performance Complicated, not developed,
+Electrolysis high power
+
+Qs and Throttleable, nonexplosive; Requires oxidizer fuel system;
+rubber nontoxic, restartable bulkier than solids
+Electrothermal:
+Resistojet No, NH3, NoHg, | High performance, low power, More complicated interfaces, more
+
+Hp simple feed system power than chemical; low thrust
+
+Arcjet NH3, NaH,, Hz | High performance, simple feed High power, complicated interfaces
+system (especially thermal)
+
+Electrostatic:
+
+lon Hg/A/Xe/Cs_ | Very high performance Very high power, low thrust,
+complicated, not well developed
+
+Colloid Glycerine _| Moderately high performance High development risk, high power,
+complicated
+
+Hall Effect Xenon High performance, relatively High development risk, high power,
+Thruster high power/thrust density complicated
+
+Electromagnetic:
+
+MPD Argon Very high performance Very high power, high development
+risk, expensive, complicated
+
+Pulsed Plasma Teflon High performance Low thrust, high power,
+. contamination, complicated
+
+Pulsed NoH, Very high performance, High develop. risk, complicated,
+Inductive Argon moderate thrust expensive, very high power
+
+
+694 Space Propulsion Systems 17.3
+
+17.3.1 Liquid Rockets
+
+In a liquid rocket system propellants are stored as liquids in tanks and fed on
+demand into the combustion chamber by gas pressurization or a pump. Bipropellant
+engines chemically react a fuel and an oxidizer, and monopropellant engines catalyti-
+cally decompose a single propellant. Bipropellant engines deliver a higher specific
+impulse but involve additional system complexity and cost. Table 17-6 shows liquid
+rocket engines used for upper stages or integral propulsion systems on spacecraft.
+
+TABLE 17-6. Examples of Available Liquid Rocket Engines. For up-to-date and more
+detailed information, contact the developer.
+
+Nominal | Spec.
+Thrust | Impulse
+
+Engine | Developer (N) (sec) | Propellants | (sec) Status
+XLR-132 Rocketdyne | 1.67 x 104 340 N20,4/MMH 5,000} 51.26 |In development
+Transtar Aerojet 1.67 x 104 | 330-338 | N2O,/MMH 5,400] 57.15 |in development
+
+3.56x104| 315 | NzO,/A-50 | 1,000] 107.95 [Flown
+Peta [Aeroiet__| 4.36x104| 320 | NsO,/MMH | 1,200| 99.79 [Flown
+
+4.00 x 108 309 NzO,4/MMH | 25,000] 7.26 | Qualified
+
+Aerojet 2.67 x 104 340 N2O,4/MMH 1,200] 90.72 |Modified Orbiter
+maneuvering
+engine
+
+Pratt & 7.34 x 104 446 400] 138.35 | Flight qualified
+
+Whitney (Centaur)
+
+TRW 4.45 x 102 315 NzOq/NaHy | 15,000} 4.54 |Flown
+
+R4-D Marquardt | 4.89 x 102 | 310 N2O,4/MMH |} 20,000 3.76 |Flown
+R42 Marquardt 8.90 x 102 305 MON-3/MMH | 15,000 4.54 | Qualified
+MMBPS TRW 4.45 x 102 302 N2O4/MMH | 20,000} 5.22 |Flight qualified
+
+RS-41 Rocketdyne | 1.11 x 104 312 N2O,/MMH 2,000) 113.40 | Flight qualified
+(Peacekeeper)
+
+4.45x102| 330 | N,O,/NoH, | 28,000] 4.50 [In qual.
+4.25x 103] 322.5 | N,O,/NoH, | 25,000] 4.5 | Flight qualified
+
+ARC/LPG 4.89 x 102 N2O,4/MMH 4.08 |In development
+AKE
+R-40A Marquardt | 4.00 x 103 N2O,4/MMH | 25,000 7.26 | Qualified (mod.
+of Shuttle res
+engine)
+HPLAM TRW 4.45 x 102 325 N2O04/MMH ; 30,000] 4.60 |!n advanced
+development
+
+Liquid Bipropellant Engines. Figure 17-3 is a schematic of a bipropellant pro-
+pulsion system used to change a spacecraft’s velocity and to adjust its orbit. It is
+pressure-fed, uses Earth-storable propellants, and is designed for long life. This system
+contains one 100-lbs, radiation-cooled liquid-fueled engine that uses Nj,O,4 and
+monomethylhydrazine (MMH) propellants. There are two positive expulsion tanks for
+the fuel and two for the oxidizer. A pressurant tank stores helium at about 4,000 psia,
+and a quad-redundant regulator—coupled with a burst disc and relief valve—tegulates
+
+17.3 Types of Rockets 695
+
+Pressurant
+Tank Assembly
+
+Fill and Vent
+Assembly
+
+Assembly
+
+Check Valve
+
+I
+
+I
+
+I
+
+I
+
+rl
+
+i}
+
+Pressurant Control !
+1
+
+!
+
+1
+
+I
+
+Explosive Valve :
+1
+
+Teflon Bladder
+Positive Expulsion
+
+=)
+1
+
+1
+
+!
+
+!
+PropellantTank ;
+Assembly I
+1
+
+1
+
+1
+
+1
+
+5
+
+1
+
+1
+
+1
+
+200 psia Nominal
+Operating Pressure
+
+Propellant Supply |
+Assembly
+
+si si ai aa
+
+Nominal Thruster
+
+I
+Chamber Pressure, Engine and Heat !
+
+_— P.=100 psia
+, Bipropeliant Valve VS came Shield Assembly |
+I
+
+Fig. 17-3. Pressure-Fed Propulsion System Using Earth-Storable Bipropellant (N20,/
+MMH). Propulsion system designers trade-off reliability and safety with complexity
+and mass.
+
+flow. Together, they ensure 200 psia feed pressure to the propellant tanks, even after
+any single regulator failure. Both the fuel and oxidizer tanks can use propellant
+management devices to feed propellants to the 100 lby-engine on demand. Burst discs
+and pyrotechnically actuated squib valves isolate propellants from the engine (and
+high-pressure gas from the propellant tanks) until the system is ready for operation.
+Isolating the fluid enhances overall system reliability. This system also has manual fill
+and drain valves to load propellant and pressurant gas into the system, as well as
+additional manual valves for system leak checking on both sides of the pyro-isolation
+valves and regulators. Check valves ensure that fluid flow is only in the correct
+
+696 Space Propulsion Systems 17,3
+
+direction and that the fuel and oxidizer can never mix anywhere in the system, except
+in the engine. Finally, pressure transducers, filters, temperature sensors, and line and
+component heaters are provided to ensure proper subsystem operation.
+
+Another type of system uses a cryogenic topping cycle engine. The fuel first travels
+through the thrust chamber’s cooling jacket in a technique known as regenerative
+cooling. All of the fuel burns with part of the oxidizer in a high-pressure precombustor.
+The combustion products provide high-energy gas to drive the engine pump turbines.
+The total exhaust flow from the turbine is then injected into the main combustion
+chamber, where it burns with the remaining oxidizer. Because of the precombustor, the
+cycle lends itself to high-pressure operation, which results in a smaller thrust chamber.
+The extra pressure drop in the precombustor and turbines requires the pump-discharge
+pressure of both the fuel and the oxidizer to be much higher than with open-cycle
+engines. The topping cycle therefore needs heavier and more complex pumps, tur-
+bines, and piping. It can, however, provide the highest specific impulse for a given
+propellant combination.
+
+The Space Shuttle’s main engine uses a variation of the topping cycle by employing
+two separate precombustion chambers, each mounted directly on a separate main
+turbopump. The oxygen precombustor and turbopump burn an oxygen-rich mixture
+that expands through the oxidizer turbine to drive the pump. Then the mixture enters
+the main combustion chamber, where it burns with the fuel-rich mixture from the fuel-
+precombustor and turbine assembly. The Space Shuttle’s main engine develops the
+highest specific impulse (455 sec at vacuum) of any flight-proven rocket engine using
+chemical] propulsion.
+
+The expander cycle is somewhat different, in that the engine pump turbines are
+driven by gaseous fuel which vaporizes in the thrust chamber cooling jacket. The
+expander cycle requires no precombustor. An expander cycle engine is shown in
+Fig. 17-4.
+
+Liquid Oxygen »> é5
+
+le
+
+Oxidizer Pump a“
+
+OA
+
+Fuel Pump a“
+
+Liquid Hydrogen »>
+
+Fuel Coolant
+Passage
+
+Fig. 17-4. RL10 Expander Power Cycle. 16,500 Ib¢ thrust engine used for the Centaur LOo/LHo
+upper stage.
+
+17.3
+
+Types of Rockets 697
+
+Liquid Monopropellant Engines. By far the most widely used type of propulsion
+for spacecraft attitude and velocity control is monopropellant hydrazine (NjH,). Its
+excellent handling characteristics, relative stability under normal storage conditions,
+and clean decomposition products have made it the standard. The general sequence of
+operations in a hydrazine thruster (Fig. 17-5) is:
+
+Hydrazine (N
+From Fuel Tank
+
+When the attitude-control system signals for thruster operation, an electric-
+solenoid valve opens, allowing hydrazine to flow. This action may be pulsed
+(as short as 5 ms) or long duration (steady state).
+
+The pressure in the propellant tank forces liquid hydrazine into the injector. It
+enters as a spray into the thrust chamber and contacts the catalyst beds.
+
+The catalyst bed consists of alumina pellets impregnated with iridium. The
+most widely used catalyst, manufactured by Shell Oil Company, is called Sheil
+405. Incoming liquid hydrazine heats to its vaporizing point by contact with
+the catalyst bed and with the hot gases leaving the catalyst particles. The tem-
+perature of the hydrazine rises to a point where the rate of its decomposition
+becomes so high that the chemical reactions are self-sustaining.
+
+By controlling the flow variables and the geometry of the catalyst chamber, a
+designer can tailor the proportion of chemical products, the exhaust tempera-
+ture, the molecular weight, and thus the enthalpy for a given application
+(Fig. 17-5). For a thruster application where specific impulse is paramount, the
+designer attempts to provide 30-40% ammonia dissociation, which is about
+the lowest percentage that can be maintained reliably. For a gas-generator
+application, where lower temperature gases are usually desired, the designer
+provides for higher levels of ammonia dissociation.
+
+Finally, in the space thruster, the hydrazine decomposition products leave the
+catalyst bed and exit from the chamber through a high expansion ratio exhaust
+nozzle to produce thrust.
+
+Injector
+Distribution Upper
+
+Valve Element Catalyst
+Body Seat Injector Bed Lower Catalyst
+Valve Feed Tube (Shell 405) Bed
+Inlet Poppet
+
+Filter 5
+RA KAXT | BOO
+
+Exhaust Gases
+NHg, No, Hy
+
+aes]
+OOK | OOOSAS
+BO
+
+MW - 11.5 - 15 Ib/MOLE
+~ Nozzle
+
+oH 4)
+\ Lower
+Screen
+
+Tax- 1800? F
+
+Injection Element 4,
+
+Protective Screen
+Trax — 200° F
+
+Midscreen
+
+Fig. 17-5. Typical Hydrazine (N2H,) Rocket Engine.
+
+Figure 17-6 shows a schematic of the monopropellant-hydrazine system used for
+the GRO spacecraft. One of the largest hydrazine systems ever built, it contains about
+1,800 kg of hydrazine, and is the first such system designed to be refueled in orbit. It
+
+698 Space Propulsion Systems 17.3
+
+operates in a blowdown mode. For this operation, the propellant and pressurant gas are
+stored in the same tank. As propellant is expelled from the tank, the pressure level
+drops. The system has eight thrusters operating at a maximum thrust of 30 N for reac-
+tion control and four thrusters operating at a maximum thrust of 535 N to adjust the
+orbit and control altitude. Both sets of hydrazine thrusters are completely redundant
+for all functions. Both use Shell 405 catalyst and operate as described above. The sys-
+tem also has four large positive-expulsion tanks with elastomeric diaphragms, each
+holding about 450 kg of hydrazine.
+
+Refueling Coupling
+
+Fill/Drain Module
+
+Propellant
+Distribution
+
+Adjust |
+Thruster ! [>
+Module oo Propellant Tank
+Pressure Assembly
+i... Transducer
+ACS Dual |
+Thruster a ><
+Module |
+
+Adjust |
+
+P: Primary Thruster
+R: Redundant Thruster
+
+Fig. 17-6. GRO Propulsion System Schematic. Monopropellant hydrazine fuel. Blowdown fuel
+system going from 400 to 100 psia tank pressure.
+
+The system is completely two-fault tolerant (a Space Shuttle launch safety require-
+ment) and therefore has three solenoid-latching isolation valves in series for every
+flow “leg” (between tanks and any one thruster) for a total of 18 latching isolation
+valves. They are called latching valves because they stay in whatever position they
+were last commanded (that is, open or closed), therefore only requiring power for the
+command period of approximately 200 ms. The system also has eight manual fill-and-
+drain valves. Each tank has one propellant and one gas valve to load the hydrazine and
+GN, pressurizing gas on their respective sides of the positive-expulsion tank. The
+GRO propulsion system also has miscellaneous components such as filters (to keep
+from contaminating the system), pressure transducers, temperature sensors, and ther-
+mostatically controlled catalyst bed and line heaters. These heaters increase thruster
+lifetime and prevent the propellant from freezing.
+
+17.3 Types of Rockets 699
+
+17.3.2 Solid Rockets
+
+Solid rockets store propellants in solid form. The fuel is typically powdered
+aluminum, and the oxidizer is ammonium perchlorate. A synthetic rubber such as
+polybutadiene holds the fuel and oxidizer powders together. Though lower performing
+than liquid rockets, the operational simplicity of a solid rocket motor often makes it
+the propulsion system of choice. Table 17-7 gives representative examples of solid
+rocket motors.
+
+TABLE 17-7. Representative Solid Rocket Motors. The firm United Technologies/Chemical
+Systems Division supplies the |US SRM-1 and 2, as well as the current MinuteMan
+third-stage motor version of Leasat PKM. Thiokol Corp. supplies the STAR rocket
+motors as well as the LEASAT PKM.
+
+iUS SRM-1 2.81 x 107 | 10,374 198,435] 260,488
+(ORBUS-21)
+
+LEASAT PKM | 9.26x106| 3,658 157,356] 193,200
+STAR 48A 6.78 x 106 | 2,559 79,623; 100,085
+
+STAR 48B(S) | 5.67x 106} 2,135 66,034) 70,504
+STAR 48B(L) | 5.79x 106} 2,141 67,435| 72,017
+
+STAR 62 7.12106 | 2,459
+STAR 75 213x107 | 8,066 198,426| 242,846
+
+JUSSRM-2 | g.41x108| 2,995 80,157| 111,072
+(ORBUS-6)
+
+STAR 13B 1.16 x 105 47 7,015 9,608
+STAR 30BP 1.46 x 106 26,511} 32,027
+STAR 30C 1.65 x 106 31,760} 37,031
+STAR 30E 1.78 x 106 35,185} 40,990
+STAR 37F 3.02 x 106 44,086) 49,153
+
+Figure 17-7 is a schematic diagram of a typical rocket motor using a solid propel-
+lant. This motor, used for geosynchronous spacecraft, provides a circularizing burn
+when the spacecraft is at apogee, thus placing the vehicle into its operating orbit. The
+internal grain is shaped in a star configuration, so the grain’s surface area will remain
+relatively constant as the motor burns. We often desire a constant burning area because
+it produces relatively constant pressure (and thrust) over the full burn period for a pre-
+dominantly radial burning motor. An igniter in the forward or head end of the motor
+starts the burn on command from a control system. The igniter, when lit, sends burning
+particles into the main motor grain. These burning particles fully ignite the rocket
+motor. A solid motor typically operates with a single start and burns until the propel-
+lant is gone [Timnat, 1987].
+
+17.3.3 Hybrid Rockets
+
+A hybrid rocket is one in which the propellants are stored in different forms. Nor-
+mally, the fuel is a solid and the oxidizer is.a liquid or gas (Fig. 17-8). Hybrid rockets
+
+700 Space Propulsion Systems 17.3
+
+AFT insulation
+
+Closure
+Forward
+Insulation rors fo Fo
+y Exit Cone
+al An
+
+(2 Maza
+
+Nozzle
+Closure
+
+Igniter
+Assembly
+
+Through
+Bulkhead
+Initiators
+
+Nozzle Throat
+
+Fig. 17-7. Typical Solid Propellant Rocket Motor. ETA is the Explosive Transfer Assembly.
+
+have several attractive features. These include: (1) safety—it is impossible to create
+an explosive mixture of fuel and oxidizer; (2) throttling—we can throttle the engine
+by modulating the oxidizer flow rate (useful for load alleviation during maximum
+dynamic pressure and for trajectory shaping). We can idle the engine also (10% thrust)
+to ensure system operation prior to launch commit; (3) restart—we can shut it off and
+restart it; (4) storability—the fuel is storable, as are many oxidizers; (5) environmen-
+tally clean—unlike solid rockets, hybrids can be made which produce no hydrochloric
+acid or aluminum oxide exhaust.
+
+Combustion
+Chamber
+Oxidizer Tank Main Valve
+Injector
+
+lief Vi
+Relief Vent Fill Drain
+Gas Generator Nozzle
+
+Fig. 17-8. Schematic Drawing of a Hybrid Rocket.
+
+The California Rocket Society built hybrid rockets in the 1930s. The California-
+based Pacific Rocket Society also conducted research in the mid-1940s, using liquid
+oxygen with various fuels including wood, wax loaded with carbon black, and rubber.
+The LOX-rubber combination was the most successful, and was test-flown to an
+altitude of 9 km in June, 1951 [Altman, 1981].
+
+17.3 Types of Rockets 701
+
+ONERA in France developed a hybrid sounding rocket using amine fuel and nitric
+acid oxidizer. The 3.3-m long, 75-kg rocket first flew in 1964. These flights continued
+for three years, ultimately reaching altitudes in excess of 100 km [Salmon, 1968]. At
+the same time, United Technologies and Beach Aircraft developed a high-altitude
+supersonic target drone using H7PB (hydroxyl-terminated polybutadiene) fuel and
+IRFNA (inhibited red fuming nitric acid) oxidizer. This air-launched Sandpiper mis-
+sile (later renamed HAST) first flew in 1968 and had a range in excess of 150 km
+[Altman, 1981].
+
+Hybrid rocket technology has progressed slowly since the 1960s. As of 1990,
+engines with thrust levels of 75,000 Ib have been demonstrated in ground tests [Guth-
+rie and Wolf, 1990]. Engines with thrust of 3,000,000 lb, have been proposed, but sig-
+nificant technical hurdles remain before such large hybrids will be feasible [Jensen,
+1990]. Table 17-8 gives characteristics of several hybrid rockets.
+
+TABLE 17-8. Representative Hybrid Rockets.
+
+Average | Average; Burn
+Thrust | Thrust | Duration
+(Ibs) (KN) (sec) Oxidizer Comments
+
+American Rocket Company
+
+75000 | | 7 | HTPB Qualified for flight
+32,000 2{ HTPB <7 In development
+H-50 10,000
+
+HTPB In development
+6,500 HTPB | LOx | iIndevelopment
+0.44
+
+HTPB In development
+
+Flown on Firebolt air-
+launched target drone,
+1968
+
+United a
+
+StarsTruck
+
+40,000 178 LOx Flown on Dolphin water-
+launched sounding
+rocket, 1984
+USAF Academy
+2.3 | HTPB GOx | Flown on 4-ft tall rocket
+for student project, 1991
+
+Electric propulsion uses externally provided electrical power either from the Sun
+(converted through photovoltaic solar arrays—100% to date) or from nuclear or
+thermodynamic conversion thermal engines, to accelerate the working fluid to
+produce useful thrust. For example, in an ion engine, an electric field accelerates
+charged particles which exit at high velocity. Alternatively, in a magnetoplasmady-
+namic, or MPD thruster, a current-carrying plasma interacts with a magnetic field
+resulting in a Lorentz acceleration to expel the plasma.
+
+17.3.4 Electric Propulsion
+
+702 Space Propulsion Systems 17.3
+
+There is no fundamental limit (other than the speed of light) to the exhaust velocity
+that we can obtain with an electric rocket. However, the power required may grow to
+the point where further acceleration is pointless. There is therefore an optimum
+exhaust velocity, and hence an optimum specific impulse, which depends largely on
+the electric power subsystem [Stuhlinger, 1964].
+
+The propulsion system weight varies with the specific impulse (exhaust velocity),
+thrust level, and total impulse. Propellant weight clearly drops off as specific impulse
+increases. The power source requirements, however, are proportional to J,,,. Thus, the
+weight of the power source increases with specific impulse, leading to a minimum
+weight of the combined system (fuel and power source) at a particular value of I,,,. We
+may usually obtain cost savings by operating slightly below the optimum specific
+impulse, since propellant is usually cheaper than more power supply.
+
+For an electric propulsion device, efficiency is defined as the ratio of kinetic energy
+expelled to the input energy. For small time intervals, where mass flow is constant, we
+express efficiency, 7, as a power ratio:
+
+2
+__ nv (17-12)
+"=P
+
+where 7 is the overall efficiency, m is mass flow rate, v is exhaust velocity, and P is
+the input power. Recognizing that thrust F = mv, and that specific impulse J, =
+F/mg , where g is the gravitational constant, we rearrange Eq. (17-12) to get power
+required:
+
+F? _ Fly (17-13)
+2mn 2n
+
+For a given J,, and thrust, we use Eq. (17-13) to estimate power and mass flow rate
+of the working fluid. Typical values of 7 are included in Table 17-4, which also
+includes useful information on selected propellants and energy sources. See Sec. 11.4
+for more on the power subsystem, or Clark [1975].
+
+Electric Propulsion Systems Design Concepts
+
+The five electric propulsion (EP) concepts shown on Tables 17-9 and 17-10 have
+achieved operational status and many programs are underway to increase the number
+and types of missions served by EP. The following will briefly highlight the char-
+acteristics of mature EP systems that have become operational, or for which near-
+term flight programs are firmly planned, and comment on the potentials of various
+classes of EP systems. Table 17-9 illustrates the three basic types of electrical energy
+thrusters. Table 17-10 and Fig. 17-9 show key characteristics of selected, mature EP
+systems. Figure 17-10 illustrates the fundamental concepts that enable operations for
+all electric propulsion systems. To mitigate the effects of mission specifics, the system
+specific mass (in kg/kW) only includes the mass of the thruster and power processor.
+(The masses of the propellant subsystem, gimbals, and other mission specifics are not
+included.)
+
+Resistojets have been used for North-South stationkeeping and orbit insertion of,
+respectively, communications satellites in the United States and for orbit control and
+ACS functions on Russian spacecraft. Propellant temperatures are fundamentally
+determined by material limits in resistojets which implies modest (propellant specific)
+maxima for specific impulses of about 300 sec for the 0.5—1 kW-class resistojets
+
+17.3
+
+TABLE 17-9.
+
+Types of Rockets
+
+703
+
+Electric Propulsion; Three Classes of Accelerator Concepts.
+
+Mechanism
+
+arc and
+through
+
+¢ Arcjets
+
+Electrothermal
+
+¢ Gas heated via
+resistance element or
+
+¢ Resistojets
+
+¢ lons
+
+expanded
+nozzle
+
+* lon
+
+Electrostatic
+
+electrostatically
+accelerated
+¢ Hall effect (HET)
+
+¢ Field emission
+
+Electromagnetic
+
+* Plasma accelerated via
+interaction of current and
+magnetic field
+
+¢ Pulsed plasma (PPTs)
+
+* Magnetoplasmadynamic
+(MPD)
+
+¢ Pulsed inductive (PIT)
+
+0
+
+4-2 kW
+
+1-50 kw
+
+50 kW-1 MW
+
+Specific
+Impulse, Ign
+
+300-800 sec
+
+1,000-3,000 sec
+
+2,000-5,000 sec
+
+TABLE 17-10. Characteristics of Selected Electric Propulsion Flight Systems.
+
+Characteristics
+
+800
+
+Pulsed Plasma
+Thruster (PPT)
+
+Hall Effect
+Thruster (HET)
+
+26*
+
+Specific ; Input Thrust/ | Specific
+Impulse, | Power, | Power, Mass,
+Concept (sec) (kW) | (mMN/kKW) | (kg/kW) | Propellant Supplier
+Resistojet 296 0.5 1.6 NoHg Primex
+299 0.9 1 Nowy Primex, TRW
+Arcjet 480 0.85 3.5 NH3 IRSATT
+502 1.8 3.1 NoHy Primex
+>580 2.17 2.5 NoHy Primex
+
+NH3
+Teflon
+Teflon
+
+TRW, Primex, CTA
+JHU/APL
+
+Primex, TSNIIMASH,
+NASA
+
+IST, Loral, Fakel
+TSNIIMASH, NASA
+
+SPI, KeRC
+
+lon Thruster
+
+(7)
+
+* Thruster input power.
+t+ Power dependent on puls
+
+e rate.
+
+HAC
+MELCO, Toshiba
+MMS
+
+HAC, NASA
+DASA
+
+developed by Primex. Resistojets have several desirable features including values of
+thrust/power far higher than other EP options (due to their high efficiencies and
+modest specific impulses), the lowest EP system dry masses (primarily due to the lack
+of a requirement for a power processor), and uncharged/benign plumes. These features
+will continue to make resistojets attractive for low-to-modest energy applications,
+especially where power limits and/or thrusting times, and/or plume impacts are
+mission drivers. In addition, resistojets can operate on a wide variety of propellants
+which led to their proposed use as a propulsion/waste gas management concept on
+Space Station and, operated on hydrogen, for Earth-orbit insertions.
+
+704 Space Propulsion Systems 17.3
+
+200
+1 a: ©
+
+rc
+<=
+a
+a
+by
+=
+2
+i
+0 500 1,000 1,500 2,000 2,500 3,000 3,500
+Specific Impulse (sec)
+1,000
+900+ O
+©  AResistojet
+800 OO Arcjet
+A °) PPT
+HET
+s 150 ION
+—
+5
+PS
+g& 100
+a
+2
+<<
+=
+
+0 500 1,000 1,500 2,000 2,500 3,000 3,500
+Specific Impulse (sec)
+
+Fig. 17-9. Key Characteristics of Mature Electric Propulsion Systems. (A) Specific. Mass,
+and (B) Thrust/Power.
+
+Table 17-10 shows three low-power arcjets. The two hydrazine concepts are pro-
+duced by Primex and are being used for stationkeeping. The ammonia version was
+supplied by the Institut fur Raumfahrt Systeme and the Institut fur Thermodynamik
+und Technische Gebaudeausrustung in Germany and will be used for orbit raising and
+inclination change of a German amateur radio spacecraft. Arcjets have about twice the
+specific impulse of resistojets while maintaining some desirable features such as use
+of standard propellants and relatively low dry masses. The increased specific impulse,
+coupled with relatively low efficiencies of about 0.3 to 0.4, lead to significant
+decreases (> 6X) of thrust/power relative to resistojets. In addition, as complex
+plasma/arc phenomena must be controlled, arcjets require relatively complex power
+conditioning which results in dry masses about twice those of resistojet systems.
+
+17.3 Types of Rockets 705
+
+Power
+wa”, Subsystem
+
+* Solar
+* Nuclear
+* “Beamed"
+
+Thruster
+Power Subsystem
+Conversion
+* Solar Arrays
+« Batteries
+« Others
+
+Power
+Conditioning
+* Specific to Power
+
+and Thruster
+
+* Many
+Concepts
+
+Exhaust
+
+Propellant
+
+Propellant a Subsystem
+
+* Many Options
+
+* Electric Propulsion Converts Power and Propellant to Thrust
+* System Conveniently Divided into Three Subsystems
+
+— Power
+
+— Thrust
+
+— Propellant
+
+Fig. 17-10. Generic Electric Propulsion System. Functional Block Diagram.
+
+Significant efforts including development of novel materials were necessary to define
+and validate the 600-sec, hydrazine arcjet. It is likely, therefore, that 600-650 sec rep-
+resents the upper range of specific impulses that can be expected of low-power arcjets
+using storable propellants. Arcjets do provide major mass benefits for many space-
+craft, are relatively simple to integrate, and are the least complex and costly of any
+plasma propulsion device. For those reasons, low-power arcjets can be expected to
+undergo evolutionary improvements and be used well into the future for a variety of
+medium-to-high energy propulsion functions. Figure 17-11 also shows a 26 kW,
+ammonia arcjet which operates at a specific impulse of 800 sec. The arcjet is part of a
+flight system called ESEX, built under a U.S. Air Force program by a TRW, Primex,
+and CTA Systems team, which includes the arcjet, supporting subsystems, and a diag-
+nostic suite to evaluate plume and EMI effects. The increased specific impulse relative
+to low-power arcjets is largely due to reduction of losses associated with low Reynolds
+number flows that are fundamental penalties for low-power arcjets. The space test will
+represent a greater than tenfold increase in power level of flight-demonstrated EP
+devices and will address integration and mission issues critical to potential users of
+high-power (orbit-transfer-class) electric propulsion.
+
+Pulsed plasma thrusters (PPTs) are inherently pulsed devices and versions which
+operate at about 847 sec specific impulse and were built by the Johns Hopkins
+University, Applied Physics Laboratory (JIHU/APL) have successfully maintained
+precision control of three NOVA spacecraft for many years. PPTs feature very small
+(< 4 x 10-4N:s) impulse bit capability, use of a solid propellant (Teflon), and the
+ability to operate at near constant performance over large power ranges. An improved
+
+706 Space Propulsion Systems 17.3
+
+}
+
+Fig. 17-11. The 26 kW, ESEX Arcjet System.
+
+version PPT which operates up to 1,200 sec specific impulse (Table 17-9), is being.
+developed by a NASA/Primex team and a flight test in 1999 is planned on the Earth
+Observer 1 spacecraft to demonstrate propulsive ACS. The characteristics of PPTs
+will likely limit their power operating range to under a few hundred watts and, as sug-
+gested by Table 17-10, they have large dry masses. Within their operating capability,
+however, PPTs promise a combination of low-power, high specific impulse, and
+small-impulse bit that is unique. It is anticipated that PPTs will find uses for ACS and
+for modest energy AV applications for small spacecraft where the power and thrust
+limitations of PPTs are acceptable and/or desirable.
+
+Hall effect thrusters (HETs) and ion thrusters (ITs) represent the highest perfor-
+mance EP options and characteristics of mature versions of both concepts are shown
+in Table 17-10. HETs were developed and flown on dozens of Russian space missions
+for various functions and are under intense development for use on other nations’
+spacecraft. Flight-type HETs have been produced by Fakel Enterprise (Fakel), Kel-
+dysh Research Center (KeRC), and TSNIIMASH, all of Russia, and quite aggressive
+HET R&D programs are in place in Europe, Japan, and the U.S. Table 17-10 lists three
+HET concepts to illustrate the state-of-the-art. The 1,600 sec specific impulse concept
+was developed to flight ready status by a team including International Space Technol-
+ogy, Inc., Loral, and Fakel; the 1,638 sec Isp device was built, qualified, and delivered
+for flight test (at reduced levels of power and specific impulse) by a NASA, Primex,
+TSNIIMASH team; and the high power HET is being built by Space Power Inc. and
+KeRC for a 1999 flight test on a Russian GEOSAT. In addition, two versions of
+
+17.3 Types of Rockets 707
+
+1.5 kW-class HETs traceable to the Fakel concept, are planned to provide stationkeep-
+ing for nine years on the French Stentor spacecraft. Table 17-11 summarizes the status
+of HETs.
+
+TABLE 17-11. Hall Effect Thruster (HET) Status Summary.
+Power| ‘sp | T | DemoLife
+(kW) | (sec) | (mN)} (Khrs) Maturity
+SPT-100 | Fakel 1.35 | 1,500 >5.7 Flight Most mature
+(Russia) 1.5 kW-class
+concept. Multiple
+life tests >5 Khrs
+TsNIIMASH | 1.39 | 1,638 “ 6 Under Several technical
+(Russia) Development | deifferences
+from SPT-100
+T-100 KeRC 1.29 | 1 a Under Nearly identical
+(Russia) Development | to SPT-100
+SPT-140 | Fakel 1,579 | 177 Under Operated from
+(Russia) 1,929 | 263 Development | 1.5 to 5 kW
+D-100 TeNIMASH 1,849 | 184 Under
+Development
+_ 1,772} 192 New high fidelity
+SPI (USA) 1,909 | 257 Development | data from NASA
+
+Five mature ion thrusters are also shown on Table 17-10. The 2,585 sec Isp system
+was built by the Hughes Aircraft Company and is operational on a commercial
+COMSAT launched in 1997. The 2,906 sec J, concept was built by a team of Mitsu-
+bishi Electric Corporation and Toshiba Corporation of Japan and was flown on the
+ETS-VI spacecraft in 1994. An orbit insertion issue prevented the system from
+performing its planned stationkeeping function but in-space characterizations were
+performed in 1995 and an identical system will soon be flown on the Japanese
+COMETS spacecraft. The 3,250 and 3,400 sec I, systems were built in Europe by
+teams headed by, respectively, Matra Marconi Space (MMS) and DASA. These de-
+vices have been baselined for stationkeeping on the European Space Agency’s
+Artemis spacecraft to be launched in 2000. The 3,280 sec, 2.5 kW device is the highest
+power, mature ion thruster for which data is available and is used on NASA’s New
+Millennium DS-1 mission.
+
+HETs and ITs are the highest specific impulse options available for mission
+planners, and many analyses have been conducted to evaluate their use for high energy
+missions. Comparisons of the two devices are difficult due to the relative lack of
+maturity of devices built to comparable powers and standards. ITs operate reliably at
+higher specific impulses than HETs and their performance and specific mass are
+deeply penalized by operation at specific impulses less than about 2,500 sec, due to
+the constraints imposed by the ion optics systems. On the other hand, HET systems
+perform at values of thrust/power 30% or more larger than those of ITs and are con-
+siderably lighter but HET operations above about 2,500 sec will pose major lifetime,
+or redesign challenges. Both concepts eject high-velocity, charged plumes and present
+
+
+708 Space Propulsion Systems 17.4
+
+approximately the same issues regarding spacecraft integration. Both HETs and ITs
+provide extreme benefits for emerging space missions and the choice between them
+will likely be quite mission specific. In general, however, ITs become increasingly
+beneficial as mission energies increase and HETs appear optimum for many time-
+constrained situations, typical of Earth-space missions.
+
+17.4 Component Selection and Sizing
+
+The simplest way to feed the propellant (or working fluid) to the thrust chamber on
+demand is to displace it from its storage vessels with a high-pressure gas. Alternative
+systems employ a pump, such as a piston or turbopump, which can be driven by tur-
+bines, gas pressure intensifiers, or directly by electric motors. Turbine-driven pump
+assemblies may obtain drive power either from a hot-gas cycle (the most common
+method) or, in a few cases, from electromechanical actuators that in turn receive power
+from batteries or solar arrays. A feed system using intensified gas pressure may soon
+find application in propulsion systems.
+
+We typically use pressure-fed systems for rockets which deliver low to moderate
+levels of thrust and total impulse (see Fig. 17-12). The simplified propellant feed
+system reduces the overall weight of the propulsion systems. This simplicity, often
+resulting in increased reliability, is particularly attractive for spacecraft applications.
+However, as total impulse and/or thrust requirements increase, the weight of the
+propellant tanks may become prohibitive. This is because the propellant tanks for a
+pressure-fed system have to withstand a pressure somewhat higher than the engine
+combustion pressure, thus they tend to be heavier than those for pump-fed systems.
+Pump-fed systems are definitely lighter for applications using high thrust and longer
+total burn, such as for launch vehicles or large upper stages [Fritz and Sackheim,
+1982]. Because of these variables, we must conduct design studies and trade-offs to
+select the best propellant feed approach. The next section includes schematic diagrams
+of typical liquid-propulsion systems using pressure or pump-fed systems. Sutton
+[1992] provides a more detailed discussion of turbopump assemblies.
+
+Regulated System Blowdown System
+
+Typicaily 3,000 to
+6,000 psia
+
+High
+Pressure
+
+Gas Typical Pressure
+
+Blowdown Ratio:
+
+Fill 300 to 400 psia
+Valve (Beginning of Life)
+Reguiator to ~100 psia (End
+of Life)
+r4 Relief Propellant
+Valve
+
+Propellant
+a Tank
+Typically 200 to >_>
+300 psia
+
+Fig. 17-12. Pressurization Systems.
+
+17.4 Component Selection and Sizing 709
+
+For gas storage systems, only the pressure vessel, valving, and feed plumbing are
+required to direct the gaseous propellants under high pressure to the thrust chamber.
+Liquid storage systems are more complex, needing to manage the liquid propellant
+under zero gravity to ensure that liquid, rather than gas or vapor, is expelled from the
+tank. To manage the liquid propellant, we may use artificial gravity induced by a spin-
+ning spacecraft or by a settling burn from another small rocket, positive expulsion, or
+a surface-tension device. Positive expulsion systems use an active element (a bladder,
+diaphragm, piston, or bellows) to separate the pressurant gas from the liquid
+propellants under all dynamic conditions and to force the liquid from the tank into the
+feed lines on demand. The slightly higher differential gas pressure acting on the expul-
+sion device forces the liquid to flow. Table 17-12 shows basic options using a positive
+expulsion tank.
+
+TABLE 17-12. Available Options for Positive Expulsion Tanks. AP = pressure difference.
+After deciding that our spacecraft requires a liquid propulsion system, we must
+decide on system characteristics.
+
+Metal Diaphragm ¢ High volume ¢ High weight ¢ Spacecraft control &
+efficiency * High cost maneuvering
+
+* Good center of ° High-expulsion AP | * Launch vehicles
+gravity control * Optimizes only for |° Upper stages
+
+* No ullage volume special envelope ¢ Missiles
+¢ No sliding seals
+
+¢ Proven design
+
+Rolling Diaphragm ¢ Light weight
+¢ Low cost
+
+¢ Low AP during
+expulsion
+
+¢ Inspection of internal
+welds
+
+¢ Missile interceptors
+
+¢ Maneuvering
+missiles
+
+¢ Extensive database
+
+¢ Low AP during
+expulsion
+
+¢ Design adapts easily
+
+to growth
+
+Piston ¢ High cost
+
+¢ Low volumetric
+efficiency
+
+* Critical tolerance on
+shell
+
+* Sliding seals
+
+possible blowby
+
+¢ High acceleration
+missiles
+
+¢ Extensive database
+
+¢ Low AP during
+expulsion
+
+¢ Not cycle limited
+¢ Proven design
+¢ High expulsion
+efficiency
+
+Rubber Diaphragm ¢ Compatibility limits
+
+on propellants
+
+¢ Spacecraft control &
+maneuvering
+
+¢ Launch vehicles
+¢ Upper stages
+
+* Missiles
+¢ Spacecraft
+¢ Launch vehicles
+
+Metal Bellows ¢ No sliding seals
+* Good center of
+
+gravity control
+
+* High weight
+¢ High cost
+¢ Limited cycle
+
+¢ Proven design capability
+¢ Good compatibility | * Low volumetric
+* Hermetically sealed | efficiency
+
+710 Space Propulsion Systems 17.4
+
+Surface tension systems passively manage propellants in a near zero-gravity
+environment by using vanes, screens, or sponges to wick the propellant into the
+propellant-tank outlets. In this manner the pressurizing gas bubble is always main-
+tained in the center of the tank. All of these devices rely on surface tension forces to
+separate liquids from gases [Martin, 1986].
+
+Depending upon the specific mission requirements, a spacecraft can employ from
+a few to as many as 30 thrust units. These thrusters may have to generate long, steady-
+state burns for velocity control maneuvers to adjust or maintain the orbit. They may
+also fire in short pulses of several milliseconds each to control attitude and manage
+momentum. In some applications, an attitude-control thruster may have to deliver in
+excess of a million pulses over its lifetime. This wide range of operating conditions
+places great demands on propulsion systems that control the attitude and velocity of
+spacecraft. Thus, designers of these thrusters place at least as much emphasis on oper-
+ating life as on performance. In fact, in some cases absolute performance is secondary
+to requirements for extended lifetimes and reliability. Table 17-13 presents operating
+and performance specifications for typical flight-qualified attitude and velocity con-
+trol thrusters.
+
+Some means of directing the thrust vector may be required to ensure that the thrust
+vector points through the spacecraft’s center of mass. This system must account for
+center-of-mass shifts as propellant burns and allow for necessary manufacturing toler-
+ances. If the disturbance torques resulting from a misaligned thrust vector are small,
+the spacecraft’s reaction-control system (that is, pulsing thrusters) can overcome them.
+In other cases, the entire vehicle may be spun intentionally during firings of the main
+engine to cancel out any misalignment of rocket thrust. If not, we may gimbal the large
+rocket or only its nozzle. Alternatively, several rocket clusters may provide the main
+thrust, with opposing rockets turned off briefly to compensate for the disturbance
+torques. Similarly, we can use a rocket engine’s shallow-throttling ability to modulate
+its disturbances relative to any opposing rocket in the cluster.
+
+Other techniques for thrust-vector control, such as exhaust-jet deflectors (vanes or
+tabs), are not as common as the ones mentioned above for exoatmospheric use.
+Table 17-14 lists some representative values for the range of control authority that we
+can achieve with various techniques for controlling the thrust vector.
+
+To design a propulsion system, we must analyze requirements, trade off design
+features, and size the system iteratively until we arrive at the best configuration for a
+particular mission. Analyzing requirements includes performance, interfaces, and
+physical characteristics. Design trades investigate different types of propulsion
+systems, selection criteria, and design factors for the specific mission. Using sizing
+calculations, interface considerations, and safety criteria, we determine the types and
+quantities of propellants and pressurants, as well as how to configure the tanks, com-
+ponents, instrumentation, and power conditioning (if applicable). All choices must
+meet design requirements within suitable margins.
+
+The total impulse that the propulsion system must deliver derives from the velocity
+increment (AV) it must impart to the spacecraft for maneuvers, the impulse required
+by the attitude-control system for limit cycling and managing momentum, and the
+spacecraft’s weight. The allowable offset for center-of-mass affects the number and
+location of propellant tanks (or solid rockets), which usually occupy most of the pro-
+pulsion system’s volume. The ranges for maximum acceleration establish criteria for
+thruster sizing, whereas duty cycling determines the type, response time, and operating
+thermal characteristics of thrusters. Lifetime affects component selections. For
+
+17.4 Component Selection and Sizing 711
+
+TABLE 17-13. Flight-Qualified Thrusters Used to Control Spacecraft Attitude and Veloc-
+ity. Thruster life is expressed in terms of total impulse or number of pulses.
+
+Isp Range
+Total (sec)
+Impulse Steady
+Propellants* Developers (103 N-s)| State Pulset
+Mono H TRW, Olin/RRC 205-215 | 110-180} 0.1-0.2
+
+ERNO, Marquardt,
+[Hac
+
+90-800 | 285-320 | 250-290 | 0.5-0.9
+0.5 |MonoH Olin/RRC, Marquardt | 40-200 | 215-230 | 120-200] 0.1-0.2
+
+4.45 1.0 Mono H TRW, SEP, HAC, 40-1,100 | 210-230 | 120-210} 0.1-0.2
+Marquardt, Olin/RRC
+
+13-18 3-4 |Mono H TRW, SEP, ERNO 40-1,100 | 215-235 | 150-210 | 0.2-0.3
+
+22-36 Mono H TRW, Olin/RRC, 40-1,100 | 215-240 | 120-210 | 0.2-0.3
+Marquardt, HAC
+2
+
+TRW (SCAT)
+
+Marquardt, TRW 40-1,300 | 215-240
+5
+40-80 |MonoH Olin/RRC, TRW
+
+Olin/RRC
+2,669 | 600 [Mono H Olin/RRC N/A
+N>O,/MMH_ |Marquardt, ARC/LPG| 200-400
+400-489 | 90-110 |N50,/MMH_ |ARC/LPG 9,000
+450 | 100 |NeO4/MIMH MBB 7,000
+105 |N>O,/MMH 11,000
+
+440
+
+Mono Ht TRW, Olin/RRC
+
+Bimodal 2.3 x106 | 305-325
+
+290
+
+25.0 Marquardt 1,100 3
+
+3
+
+00
+08
+305
+325
+309
+322
+
+| 105 [NeOu/NoH« TRW 10,000 | 330
+| 110 |NeO4/NoH, Royal Ordnance 7,000 317
+
+* Mono His monopropellant hydrazine (NoH4) and MMH is monomethy! hydrazine.
+
+t For low duty cycles (<10%) and short pulse width (10-15 ms), use the lower pulsed Isp. For duty
+cycles >10% and pulse widths greater than 50 ms, use the higher pulsed Isp.
+
++ Electrothermally augmented (resistojet/ EHT)
+
+
+712 Space Propulsion Systems 17.4
+
+TABLE 17-14. Representative Control-Authority Ranges for Some Typical Ways to Con-
+trol the Thrust Vector.
+
+Gimbals +7 deg
+Off-pulsing 20 to 40% of thrust
+Shallow Throttling +10 to 20% of thrust
+
+Exhaust jet Deflectors +10 deg
+(jet tabs and jet vanes)
+
+RCS Thruster Control Full range of attitude-control rates as determined by
+thrust level, moment arm (torque), and duty cycle
+
+example, thrusters are designed and qualified for specific operating lifetimes. Mainte-
+nance, or maximum interval for resupply, affects propellant loads and tank sizing.
+
+The propellant budget must include enough propellant to correct for errors stem-
+ming from injection dispersion. Both the number and accuracy of maneuvers affect the
+reserves that must be carried. When a solid rocket performs a AV maneuver, especially
+a solid rocket restricted to a single firing, off-nominal performance will result in posi-
+tion errors and on-orbit velocity errors. For example, the Inertial Upper Stage has a
+three-sigma, geosynchronous position error of 43 km and a velocity error of 6 m/s.
+
+For a typical design, we first size the propellant load based on the information pro-
+vided in Table 10-7 of Chap. 10. For initial sizing, we may consider only the first two
+items. Using the rocket equation presented in Sec. 17.2 (Eq. 17-6), we estimate the
+propellant load, m,, from total impulse requirements:
+
+My = 1118 Igy (17-14)
+
+where J, is total impulse, /,, is the specific impulse, and g is the universal gravity con-
+stant 32.17 ft/s2. Knowing the propellant mass, we can determine the propellant vol-
+ume by dividing by propellant density. For gaseous propellant, density should be at the
+storage pressure and maximum anticipated temperature.
+
+Besides expelled propellant mass, many other things contribute to the weight of
+propulsion systems. Some examples are thrusters, tanks, fluid components, instrumen-
+tation, lines, fittings, power conditioning equipment, dedicated power equipment,
+pressurant, and residual propellants (depending upon propulsion type). Initial sizing
+should take into‘account known hardware weights. Table 17-13 summarizes some rep-
+resentative, flight-qualified, spacecraft thrusters. We should use similar data to select
+flight-qualified, off-the-shelf hardware that are close to meeting mission requirements.
+A schematic or functional block diagram (see Sec. 17.2) builds on the basic concept
+and size, as do the equipment list and weight summary. For a conceptual design, we
+may use the methods outlined below.
+
+We usually size solid propellant systems so that each motor in the system provides
+the total impulse for a single maneuver. Thus, we need only know the mass fraction of
+each motor to calculate total system weight, because the weight of the other hardware
+-—such as the safe-and-arm device, explosive transfer assembly, and initiators—is
+usually small by comparison. Solid rocket motors are typically over 90% propellant
+by mass, including case and nozzle assemblies. A value from 91-94% is reasonable
+for present-day solid rocket motors with total impulse greater than 450,000 N<s.
+
+17.4 Component Selection and Sizing 713
+
+Improvements in materials of construction should increase this value to more than
+95% by the mid-1990s.
+
+For liquid propulsion systems, we size the tank after determining the propellant
+load because the tanks are the largest and heaviest components. For bipropellant sys-
+tems, we determine the oxidizer and fuel requirements from:
+
+O/F = tg, tipyet (17-15)
+
+where O/F is the mixture ratio needed to deliver the required specific impulse, m,, is
+the oxidizer mass, and my,,; is the mass of the fuel. We calculate tank volumes from
+propellant volumes loaded into each tank, plus reasonable allowances for ullage (gas
+volume in the propellant tank, approximately 5%), design margin, and propellant
+remaining in each tank because of trapped liquids or uncertainties in loading and
+performance. The mixture ratio is a critical parameter in propulsion system sizing;
+therefore, its selection is the first step in determining the propellant quantities for a
+given set of propulsion-system requirements (total impulse). Very often, we select the
+mixture ratio for system benefits other than just maximum /,,. Consider the example
+of storable-bipropellant systems using N.O,/MMH for space systems. They almost
+always use an O/F ratio of 1.64 because this value results in tanks of equal size. Equal
+sizing simplifies tank manufacturing, packaging of propulsion systems (configuration
+layout), and integration.
+The O/F ratio at which the engine is operating is defined as:
+
+OIF = ting, Ite (17-16)
+
+where 7, is the oxidizer mass flow rate, and "yuei is the fuel flow rate. The
+maximum theoretical value of the characteristic exhaust velocity, C*, is achieved at a
+specific mixture ratio. This optimum O/F ratio depends on the particular propellant
+combination. Usually, we choose the O/F ratio so that the reaction products have the
+maximum achievable value of T,/M and thus the highest possible specific impulse
+[Gordon and McBride, 1976].
+
+In some situations a different O/F ratio results in a better overall system. For a
+volume-constrained vehicle with a low density fuel such as liquid hydrogen, we can
+significantly reduce vehicle size by shifting to an oxidizer-rich O/F ratio. In this case,
+the losses in specific impulse are more than compensated for by the reduced fuel tank-
+age requirement, because combustion performance is not a particularly strong function
+of mixture ratio. A large orbital transfer vehicle transported to orbit by the Space Shut-
+tle would use this type of mixture ratio, though there may be other situations as well.
+
+Pressurant gas requirements depend on the type of pressurization system
+employed—regulated or blowdown (Fig.17-12), or some combination of the two.
+About 5% to 10% ullage is provided in the propellant tanks for pump-fed or regulated
+pressure systems.The total propellant tank volume for a blowdown system is the total
+of the propellant volume, V> and initial gas volume, Veis in the tank. They relate
+through the blowdown ratio, R, as follows:
+where Vy is the final gas volume, neglecting the propellant volume remaining at
+end-of-life as well as density changes with temperature. Design margin for liquid pro-
+pellant loads depends on the mission but can be as high as 25% for early conceptual
+
+714 Space Propulsion Systems 17.4
+
+designs. Analyzing the residual propellant can get very detailed, involving statistical
+and deterministic error sources. A reasonable initial estimate is 5%.
+
+For most systems, we can determine pressurant mass from the perfect gas law, but
+only when the propellant is withdrawn isothermally (in blowdown systems at low duty
+cycles). Otherwise, calculating requirements for pressurant mass of regulated systems
+can become complicated thermodynamically. Using a conservation-of-energy approx-
+imation to calculate the pressurant mass yields the following relationship:
+
+war k
+Mgi = (17-18)
+"RT; [1-(B/F)
+where m,; is the initial pressurant mass, Pp and Vp are instantaneous gas pressure and
+
+gas volume in the propellant tank, P, (300-600 psia) and P; (3,000-6,000 psia) are
+instantaneous gas pressure and initial gas pressure in the pressurant tank, respectively;
+T; is initial gas temperature (275-300 K); k is specific heat ratio for a pressurant gas
+(1.40 for nitrogen, 1.67 for helium); and R is the pressurant gas constant (296.8
+J/(kg:K) for nitrogen, 2077.3 J/(kg-K) for helium).
+
+This equation does not apply to very high storage pressures, for which the com-
+pressibility factor becomes important. A more complete solution and derivation is in
+Sutton [1992].
+
+We may estimate the propellant and pressurant gas tank weights using:
+
+o= a (cylindrical) (17-19)
+and:
+o= on (spherical) (17-20)
+
+where o is the allowable stress from Table 11-52," p is the maximum expected
+operating préssure, r is the tank radius, and t is tank wall thickness. Usually, we select
+the material, estimate the tank size, determine the thickness from Eq. (17-19) or
+(17-20), and then compute the tank weight using the density of the material selected.
+For typical spacecraft propulsion, the tank weight will be about 5-15% of the propel-
+lant weight, depending on the basic design, safety factors, and construction materials.
+We must add 20-30% of the overall tank weight for mounting hardware and propellant
+management devices. See Sec. 11.6 for more detail.
+
+We can estimate total weight of the liquid-propulsion system in a similar manner
+as for solid systems by estimating the fraction of the propulsion system mass that is
+propellant. Liquid propulsion systems are typically 85-93% propellant by mass, with
+the remainder consisting of pressurant, thrusters, tanks, fluid components, lines,
+fittings, and instrumentation. This fuel mass fraction, however, can be considerably
+lower in small systems. The higher fuel mass fractions are usually associated with
+large propellant loads and use of composite, overwrapped tanks. These tanks are
+fabricated with advanced materials which have higher strength-to-weight ratios. An
+example would be thin, metal-lined tanks using an overwrapping of high-strength
+carbon fibers, such as graphite-epoxy.
+
+* Use the column labeled “F,,, = Allowable Tensile Ultimate Stress” plus a safety factor.
+
+17.4 Component Selection and Sizing 715
+
+A significant part of the weight in cold gas propulsion systems is in the high-
+pressure tanks needed for storing the gaseous propellant. These systems most often
+appear in applications demanding low total impulse or extreme sensitivity to
+contamination. In this case, we can estimate tank weight with the aid of Eqs. (17-19)
+and (17-20). For example, the propulsion system which uses a nitrogen propellant for
+the Orbital Maneuvering Unit has a mass fraction (ratio of propellant mass to propul-
+sion system mass) of 0.64. Thirty-five percent of its dry weight is in nitrogen gas
+tankage.
+
+Thruster design requires specialized development to produce the best performance,
+life, chamber pressure, and expansion ratio. Often, existing thrusters can provide a
+basis for initial sizing. Sizes for fluid components (especially valves), as well as lines
+and fittings, develop from flow-rate requirements, which depend on the number of
+thrusters involved and the definition of specific impulse given in Sec. 17.2. Pressure
+drops across fluid components also depend on flow rates. A pressure schedule starts
+with requirements of the thruster’s inlet pressure and works up through the pressure
+drops in each sequential component to the propellant and pressurant tanks.
+
+To design a propulsion system, we must consider some additional special topics:
+interactions with the rocket exhaust plume, staging, maneuver accuracy, and thrust-
+vector control. Rocket exhaust plumes present three basic design issues. The first is
+plume heating of surfaces next to the rocket. The second concerns forces and moments
+that the plume places on the spacecraft. For example, thrusters that control inclination
+on geostationary satellites can lose about 10% of their delivered thrust because of
+plume drag on the solar arrays. To avoid this drag, we must mount the thrusters far
+from the solar array axis or cant them away from the arrays. The applied thrust vector
+is then degraded by the cosine of the thruster cant angle, because the applied thrust is
+no longer normal to the vehicle. A third issue concerns contamination by the plume.
+Depending on the propellants involved and the nature of their exhaust products, the
+plume may contaminate sensitive surfaces (such as optics or thermal control surfaces)
+of both the host and nearby spacecraft, such as the Space Shuttle or, eventually, the
+space station.
+
+Rocket-plume exhausts divide into three regions: a continuous, forward-directed
+core flow; a transition region; and a rarefied backflow regime. By carefully placing
+thrusters on the spacecraft, we can usually avoid the first two regions. Avoiding back-
+flow effects is difficult, but we can reduce them with large separation distances, plume
+shields, covers on sensitive surfaces, and operational constraints on thruster firings.
+Determining plume effects in specific applications may require extensive analytical
+modeling supported by selected test data [Furstenau, McCoy, and Mann, 1980].
+
+Optimizing weight for a given space propulsion system depends upon its type and
+specific operating parameters. Typically, for a system using a cold gas or pressure-fed
+liquid chemical, thrust-chamber pressure is the key to establishing its weight. Increas-
+ing the chamber pressure in a system design and trade study produces several effects.
+The engine will tend to be smaller and perform better because of increased area ratio
+and, to a much lesser extent, improved chemical kinetics (combustion efficiency).
+Therefore, the engine weight and propellant quantity will tend to decrease. But the
+propellant tank, components, and plumbing weights will increase because of the
+higher level of operating pressure required to force-feed propellants to the system, its
+components, and into the thrust chamber. The thrust chamber operates at some nomi-
+nal pressure, which adds resistance by acting as a back pressure. Thus, for a given set
+of design and operating conditions, we can find an optimum design point for chamber
+
+716 Space Propulsion Systems 17.5
+
+pressure that results in a minimum weight for the propulsion system. For a turbopump-
+fed system, the weight of the feed system upstream of the pump inlet will not depend
+on the chamber pressure, so we can obtain the best size and pressure for the thrust
+chamber without considering the rest of the system. In this case, as mentioned earlier,
+we would trade the weight of a turbopump assembly against the weight of the
+pressure-fed components to determine which approach is better for a given propulsion
+system.
+
+17.5 Staging
+
+Multistage rockets allow improved payload capability for vehicles with a high AV
+requirement such as launch vehicles or interplanetary spacecraft. In a multistage
+rocket, propellant is stored in smaller, separate tanks rather than a larger single tank as
+in a single-stage rocket. Since each tank is discarded when empty, energy is not
+expended to accelerate the empty tanks, so a higher total AV is obtained. Alternatively,
+a larger payload mass can be accelerated to the same total AV. For convenience, the
+separate tanks are usually bundled with their own engines, with each discardable unit
+called a stage.
+
+The same rocket equation as single-stage rockets describes multistage rocket per-
+formance, but must be determined on a stage-by-stage basis. The velocity increment,
+AV,, for each stage is calculated as before:
+
+m .
+AV, = 8 Isp i ma (17-21)
+t
+
+where m,; represents the total vehicle mass when stage i ignites, and mi is the total
+vehicle mass when stage i burns out but is not yet discarded. We must always realize
+that the payload mass for any stage consists of the mass of all subsequent stages plus
+the payload. Then, the total velocity increment for the vehicle is the sum of those for
+the individual stages:
+
+n
+AVsorat = AV, + AVy +--+ AV, = DY AV; (17-22)
+is]
+where 7 is the total number of stages.
+We define the payload fraction A as the ratio of payload mass, Mp, tO initial mass,
+m,. We do this for the overall vehicle:
+
+A= My / my (17-23)
+or for each individual stage:
+A= Mil, I Moi (17-24)
+
+where the subscript i indicates the stage number. Recall that the payload for each stage
+includes the mass of all subsequent stages. The overall vehicle payload fraction is then
+the product of those for the individual stages:
+
+A= Ay dyed, =] YA: (17-25)
+
+i=l
+
+References 717
+
+Another required definition is the structure fraction:
+
+€, =m, /m,, =m, ;/|m,, +m,; + m,y;| (17-26)
+where m, = Mp— My = My m, and m, is the propellant mass.
+Note that the mass ratio, Re from n Eq, (17- 6) i is related to the payload and structure
+
+fractions as follows:
+
+1
+Rr Aj + €si (17-27)
+
+i
+
+Thus we can determine AV, for any stage knowing Isp, A;, and &,;.
+
+We say a multistage vehicle with identical specific impulse, payload fraction and
+structure fraction for each stage has similar stages. For such a vehicle, we maximize
+the payload fraction by having each stage provide the same velocity increment. We
+calculate the payload fraction for each stage by:
+
+Ai = 2 (Mott! ep) -€ (17-28)
+and the overall vehicle payload fraction by:
+A=(A;)" (17-29)
+
+For a multistage vehicle with dissimilar stages the overall vehicle payload fraction
+depends on how we partition the AV requirement among stages. We reduce payload
+fractions when we partition the AV suboptimally. Techniques have been developed
+which yield an analytical solution for the optimal AV distribution [Hill and Petersen,
+1970], or we may determine the optimal distribution by trial and error. In the latter
+approach, a AV distribution is postulated and the resulting payload fraction calculated
+as previously outlined. We have to vary the AV distribution until the payload fraction
+is maximized. Once we select the AV distribution, we size the vehicle by starting with
+the uppermost or final stage (whose payload is the payload) and calculating the initial
+mass of this assembly. This assembly then forms the payload for the previous stage
+and the process repeats until all stages are sized.
+
+Results reveal that to maximize the payload fraction for a given AV requirement:
+
+1. Stages with higher Jsp should be above stages with lower Isp.
+2. More AV should be provided by the stages with the higher Jsp.
+3. Each succeeding stage should be smaller than its predecessor.
+4. Similar stages should provide the same AV.
+
+References
+
+Altman, D.E. 1981. Presented at the AIAA Annual Meeting.
+
+Clark, K.E. 1975. “Survey of Electric Propulsion Capability.” Journal of Spacecraft
+and Rockets. 12 (11):641-654.
+
+Fritz, D.E., and R.L. Sackheim. 1982. “Study of a Cost-Optimized Pressure-Fed
+Liquid Rocket Launch Vehicle.” Paper No. AIAA-82-1108 presented at the AIAA
+18th Joint Propulsion Conference, Cleveland, Ohio.
+
+718 Space Propulsion Systems
+
+Furstenau, R.P., T.D. McCoy, and David M. Mann. 1980. “US Air Force Approach to
+Plume Contamination.” in Proceedings of the Seminar in Optics in Adverse
+Environments. Society for Photo-Optical Instrumentation Engineers.
+
+Gordon, S., and B.J. McBride. 1976. Computer Program for Calculation of Complex
+Chemical Equilibrium Compositions, Rocket Performance, Incident and Reflected
+Shocks, and Chapman-Jouget Detonations. NASA SP-273, Interim Revision.
+NASA Lewis Research Center: National Aeronautics and Space Administration.
+
+Guthrie, Douglas M., and Robert S. Wolf. 1990. “Non-Acoustic Combustion
+Instability in Hybrid Rocket Motors.” Paper presented at the JANNAF Propulsion
+Conference. Anaheim, CA.
+
+Hill, Philip G., and Carl R. Peterson. 1970. Mechanics and Thermodynamics of
+Propulsion. Reading, MA: Addison-Wesley Publishing Co.
+
+Humble, Ronald W., G.N. Henry, and W.J. Larson. 1995. Spacecraft Propulsion Anal-
+ysis and Design. New York: McGraw-Hill.
+
+Huzel, Dieter K., and David H. Huang. 1992. Design of Liquid Rocket Propellant
+Rocket Engines. Washington DC: AIAA.
+
+Jensen, G.E., et al. 1990. Hybrid Propulsion Technology Program Final Report.
+United Technologies Chemical Systems. NASA/MSFC Contract NAS 8-37778.
+
+Martin, J.W. 1986. “Liquid Propellant Management in Space Vehicles.” Quest
+Magazine (TRW, Inc.) 9(1).
+
+Sackheim, R.L. and D.H. Hook. 1996. “Development of a Bimodal Secondary
+Combustion Augmented Thruster (SCAT).” Penn State 8th Annual Symposium on
+Space Propulsion, State College, Penn., October 31.
+
+Salmon, M. 1968. World Aerospace Systems.
+
+Stuhlinger, Emst. 1964. Ion Propulsion for Space Flight. New York: McGraw-Hill
+Book Company.
+
+Sutton, George P. 1992. Rocket Propulsion Elements (6th edition). New York: John
+Wiley and Sons.
+
+Timnat, Y.M. 1987. Advanced Chemical Rocket Propulsion. London: Academic
+Press.
+
+Tsiolkovsky, Konstantin E. 1903. “Exploration of the Universe with Reaction
+Machines.” The Science Review #5 (St. Petersburg, Russia).

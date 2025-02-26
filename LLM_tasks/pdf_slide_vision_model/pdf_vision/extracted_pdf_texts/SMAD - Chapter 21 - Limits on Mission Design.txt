@@ -1,0 +1,1807 @@
+
+Chapter 21
+
+Limits on Mission Design
+
+21.1 Law and Policy Considerations
+Space Law; U.S. Space Policy;
+Responsibility—Liability, and Insurance,
+Remote Sensing; Import and Export Restrictions,
+Environmental Concerns; FireSat Legal and Policy
+Issues; Asteroids
+
+21.2 Orbital Debris—A Space Hazard,
+Environmental Definition; Design Considerations:
+Spacecraft Hazard and Survivability Analysis
+
+21.1 Law and Policy Considerations
+
+William B. Wirin, University of Colorado, Colorado Springs
+
+Why Worry About Law and Policy?
+
+Engineers accustomed to precise answers often find that legal and political issues
+intrude on the space mission design process just when everything is going smoothly.
+However, I hope to shed some light on potential policy “show stoppers,” and more
+importantly, provide some insight into legal thinking about space missions and valid,
+even critical, perils in the design process.
+
+Policy results from balancing conflicting interests, so “valid” arguments may be
+rejected. Lawyers tend to give “answers” rather than an evaluation of political and
+legal risks. They unfairly believe that individuals from other disciplines will not
+understand and appreciate the balancing of interests. General James V. Hartinger, first
+Commander of Space Command, put it succinctly, “Lawyers are asked common sense
+questions so often that they begin to believe they have common sense.” The mission
+planner should look to lawyers to evaluate policy and legal risks for various mission
+alternatives so they can be weighed along with technical factors.
+
+Why worry about law and policy? The simple answer is that a perfect engineering
+solution is useless until it can be implemented. An example is the Apstar satellite. It
+was launched in July 1994 by the PRC without obtaining coordination from “owners”
+of nearby communications satellites as required by the International Telegraphic
+Union (ITU) regulations. Without the required consultations the satellite would not be
+permitted to transmit signals and therefore would be of little value. The result was a
+flurry of activity to conclude the negotiations quickly and this was accomplished a few
+months after launch. Had this been a U.S. launch it would have been postponed until
+the proper authorizations were accomplished, resulting in needless expense.
+
+821
+
+822 Limits on Mission Design 21.1
+
+Another example is the Shuttle mission 51C to retrieve the Palapa and Westar VI
+satellites. These satellites remained in low-Earth orbit because the motors which
+should have transferred them to geostationary orbit failed. Hughes and NASA engi-
+neers worked out the technical solutions in a little more than 6 weeks. The lawyers
+spent more than 6 months resolving the legal questions concerning ownership, salvage
+rights, insurance coverages, and release of liability between the insurance carriers,
+Western Union Company and the Indonesian government. Also Hughes Aircraft
+Company and NASA had to agree on technical roles, liability, and compensation
+before the recovery effort began.
+
+Without the implementing legislation in the Commercial Space Act of 1998 the
+DOT was not authorized to license private organizations to conduct space operations
+which included reentry of reusable space vehicles. This is a vital provision not only for
+NASA's X-33 and X-34 programs, but for companies building commercial reusable
+launch vehicles which will need to renter the Earth's atmosphere after delivering their
+payloads to orbit. Moreover the law is now clear that launch and recovery by definition
+are not an export or import. The first private launch of the Conestoga downrange to
+Matagorda Island off Texas required an export license in addition to other licenses.
+These additions to the law make way for commercial exploitation of new space oppor-
+tunities and begin to strip away some restrictions on space activity.
+
+21.1.1 Space Law
+
+For a multinational project such as a space station, mission designers must recog-
+nize that lawyers from some nations approach policy and legal issues differently.
+England and her progeny are common law nations; all others are civil law nations. The
+latter seek to establish civil codes of law which in effect create all of the rules up front.
+Common law nations, in contrast, see law as evolving to solve particular problems.
+They look to past precedent and attempt to fashion a modern answer, while civil law
+judges apply the code and leave “changes” to legislators.
+
+An interesting example of space law is that spacecraft have the right to pass over
+the territory and air space of other nations without their consent, whereas aircraft do
+not. But no one has defined where space begins. The Russians proposed 100-110 km
+because aircraft presently cannot fly at that altitude, and space objects burn up in the
+atmosphere below it. The U.S. position is to wait to see how technology will develop
+since there have been no particular problems. Equatorial nations have argued in vain
+that their sovereignty goes up to ~36,000 km (geostationary orbit) so they can control
+access and obtain compensation from space-faring nations who use slots above their
+territory.
+
+Space missions are inherently an international activity, because space touches the
+sovereign territory of every nation on Earth. We must, therefore, consider diverse
+views on space issues. For example, space-faring nations may diverge from the feel-
+ings of developing nations, or Eastern and Western nations may disagree. Differences
+of opinions can arise from different cultures, economic status, political imperatives,
+and world view.
+
+International law, including space law, evolves in part from treaties, including the
+U.N. Charter and U.N. resolutions plus organic documents of international organiza-
+tions. It also depends on the practice of nations, as well as the writings of established
+authorities. Unlike U.S. domestic law, space law has no legislature to write the rules
+and no court to enforce them. Sovereign nations enter into treaties but may disregard
+
+21.1 Law and Policy Considerations 823
+
+them when they no longer serve their national security needs. The U.N. may pass
+resolutions, but they are not absolutely binding even when unanimous. Besides,
+treaties tend to have ambiguous language, permitting a nation to pursue its best inter-
+ests. An example is Article IV of the Outer Space Treaty, which says that the Moon
+and other celestial bodies shall be used exclusively for “peaceful purposes,” whatever
+that means.
+
+The International Court at the Hague does hand-down decisions, but nations must
+usually agree to have the Court hear the case. Even when they do, there is no effective
+mechanism to enforce a decision. Having said all this, we must not conclude that space
+law has no value. There is a body of rules and a general understanding among nations
+as to what is proper and improper in space. Nevertheless, even though they may be
+ambiguous and no policeman enforces them, treaties are seldom if ever ignored.
+
+Basic Do’s and Don’ts: The Outer Space Treaty of 1967*
+
+As the so-called Principles Treaty, this document lays down the basic philosophy
+and legal principles for outer space. In general, it says what should or should not be
+done, but does not spell out how to implement a given policy. Its preamble emphasizes
+that international cooperation is essential and recognizes that exploring space is in the
+common interest of all mankind. It goes further to declare that exploration should
+benefit all peoples. Provisions of the treaty include:
+
+¢ Allnations may scientifically investigate space, with international cooperation
+encouraged.
+
+¢ No nation may claim sovereignty over outer space, including the Moon and
+other celestial bodies. As an illustration, Neil Armstrong claimed the Moon for
+mankind (not the United States) by stating that the mission had taken “One
+small step for a man, one giant leap for mankind.” The American flag was
+present, but not to claim new territory, as Columbus and other explorers did
+when they came to the New World.
+
+¢ The rules in space will follow the established principles and rules of interna-
+tional law and the U.N. Charter.
+
+¢ No nation will place nuclear weapons or any other weapons of mass destruc-
+tion in orbit around the Earth, or on the Moon, or on other celestial bodies. This
+restriction does not apply to nuclear power sources. The Treaty Banning
+Nuclear Weapon Tests in the Atmosphere, in Outer Space and Under Water
+(August 5, 1963) prohibits tests but not placement of nuclear devices in space.
+
+* Nations must use the Moon and other celestial bodies exclusively for “peaceful
+purposes,” but they may use military personnel in scientific research. The U.S.
+defines peaceful as “non-aggressive,” thus permitting defensive measures.
+
+¢ Astronauts are envoys of mankind. So long as they conform to accepted rules
+of activity in space, they have a form of immunity. Therefore, we must return
+them to their home nation promptly, and implicitly, may not charge to rescue
+them. The Agreement on the Rescue of Astronauts, the Return of Astronauts,
+
+* The classic treatise on space policy is by Professor Carl Q. Christol, The Modern International
+Law of Outer Space, Pergamon Press, New York (1982). Other material is in the annual
+reports of the Colloquium on the Law of Outer Space, by the International Institute of Space
+Law, published by the American Institute of Aeronautics and Astronautics, Washington, DC.
+
+824
+
+Limits on Mission Design 21.1
+
+and the Return of Objects Launched into Outer Space (April 22, 1968) could
+also apply.
+
+Recovered space objects must go back to the launching nation at its request
+and expense.
+
+Nations bear international responsibility for their activities in outer space,
+whether done by governmental agencies or private citizens. Thus, the U.S.
+must authorize and continuously supervise all space activities of its citizens.
+This requirement is unique to space activities, resulting from a compromise
+between the U.S. and the former USSR. The USSR had insisted that only
+governments should be permitted to go into space, whereas the U.S. insisted
+on permission for private entrepreneurs. The Commercial Launch Act of 1984
+was enacted partly to carry out the U.S. obligations under the 1967 Outer
+Space Treaty. It has been amended from time to time to update policies and
+procedures.
+
+Launching nations are liable for damages to citizens of other nations caused by
+national and private launch activities. The Convention on International Liabil-
+ity for Damage Caused by Space Objects (March 29, 1972) could also apply.
+
+Nations must maintain a register of their launches. The purpose is to establish
+ownership, jurisdiction, and control over the spacecraft and its personnel. In
+essence, a U.S. spacecraft or space station is its sovereign territory. Other
+nations retain jurisdiction over their spacecraft and modules even when
+attached to another’s station. Space debris falls in the same category, making
+clean-up politically difficult. Launches are also reported to the U.N. to provide
+an opportunity for the world community to learn about space activity. If a sat-
+ellite or other space object were not registered, it would be considered a rogue
+and likely forfeit any legitimate status and protection under the Outer Space
+Treaty or international law. It would be awkward to put in a claim for damage
+to such a satellite under the liability convention. A nation that chooses for any
+reason not to play by the rules, cannot easily demand their enforcement. Of
+course, policy and politics would also restrain it from complaining.
+
+The Convention on Registration of Objects Launched into Outer Space
+(January 4, 1975) requires a launching nation to advise the U.N. Secretary
+General of the following: name of the launching nation, description or regis-
+tration number, date and location of launch, basic orbital parameters (nodal
+period, inclination, apogee, and perigee) and general function of the space
+object. A nation need not update this information but may do so if it wishes.
+
+Nations must conduct space activities so as to avoid harming or contaminating
+the environment. Project West Ford influenced this provision. In 1963, the
+U.S. placed 480 million copper dipoles into orbit 2,000 miles above the Earth
+in an attempt to create an artificial ionosphere to enable radio messages to
+bounce from coast to coast. The in-house name for the project was Needles,
+which was an unfortunate choice. Complaints came from astronomers who
+were convinced the belt of copper needles would ruin their view of the uni-
+verse. They also thought it might lead to worse experiments. The Soviets said,
+“What if one of the needles pierces the heart of a cosmonaut or puts out some-
+one’s eye when it reenters the atmosphere?” Although these objections were
+
+211 Law and Policy Considerations 825
+
+not reasonable, public ignorance made them real. Simply put, even though the
+project caused no significant problems, the planners had failed to consider
+fully the effects of adverse public opinion. A key question you won’t find writ-
+ten anywhere is, “Does it pass the common sense test?” Project West Ford
+failed. Space law now requires that if a project might cause harm or interfer-
+ence with others, international consultations must occur before it proceeds (see
+Sec. 21.1.6 on Environmental Concerns). Planners should also review the
+Convention on the Prohibition of Military or any Other Hostile Use of
+Environmental Modification Techniques (May 18, 1977) if they anticipate
+large-scale effects.
+
+Nuclear reactors in space create an environmental concern because they cause
+gamma-ray interference with some scientific satellites. NASA’s Solar Maxi-
+mum Mission is a case in point; its gamma-ray spectrometer suffered interfer-
+ence from reactors on Soviet radar satellites for ocean reconnaissance
+(RORSATs). If we plan a project such as the Gamma Ray Observatory, we
+must evaluate precautions and risks. At the same time, if we plan to use a
+nuclear power source for a mission, we must consider possible effects and
+protests. Some legislators in the U.S. have proposed a ban on the use of
+nuclear power sources in space. Although Congress is not likely to pass such a
+measure, the proposed ban illustrates environmental concerns.
+
+* Stations on the Moon and other celestial bodies shall be open mutually to
+representatives of other nations after reasonable advance notice. Even this
+general language does not apply in space to space stations, shuttles, platforms,
+or satellites. Neither by treaty, international law, nor custom may anyone
+inspect sovereign facilities in space. Although the U.S. may agree to inspec-
+tions on the Moon, Russia has taken a very stern stand against inspections;
+therefore, in my opinion, these inspections are unlikely. The Antarctic Treaty,
+in contrast, allows unannounced inspection of stations, installations, and
+equipment; therefore we must not confuse these provisions with those of the
+Outer Space Treaty. The Antarctic Treaty permits unconditional free access at
+all times. This could change if there were more than scientific interest in
+Antarctica. The Moon Treaty of 1979 has extensive inspection provisions but
+little force or effect, because no space-faring nation of the West or East ratified
+it. The “common heritage of mankind” provisions, which envision sharing
+profits with all nations even though they have not contributed, is a major stick-
+ing point.
+
+Conflicts Between U.S. Law and International Law
+
+Federal statutes and treaties are of equal authority. If a statute and a treaty conflict,
+the later in time controls (87 Corpus Juris Segundum Treaties 89). Therefore, statutes
+and regulations may control the activities of U.S. industry and government, even to the
+extent of revoking portions of an earlier international agreement or treaty.
+
+Satellite Telecommunications. Communications have been the most commercially
+profitable use of space, with primary applications in telephone, telegraph, television,
+and data transmissions. The unique properties of the stationary orbit over the equator,
+which permits stationary positioning of a satellite, make it a limited natural resource.
+Space at 35,680 km above the Earth is ample to accommodate many satellites with
+little risk of collision. But the radio frequency and its bandwidth limit spacing to 2 deg
+
+826 Limits on Mission Design 21.1
+
+in order to avoid interference. Reducing this spacing further will be expensive. The
+ITU authorizes and controls the effective use of geostationary orbits and frequencies.
+Under the International Telecommunication Convention and Final Protocol (Nairobi,
+1982) and the ITU’s radio regulations, the system uses a “first-come, first-served”
+procedure; once a satellite is registered with the ITU no subsequent system may inter-
+fere with its signal transmission. Generally, a similar replacement will retain the rights
+of a registered satellite.
+
+A number of concerns over allocation of slots led to a call for a Space World
+Administrative Radio Conference in 1985, which reconvened in 1988 and 1992. In
+particular, developing nations worried that no slots would be left for them. A compro-
+mise left the conventional part of C and Ku radio frequency bands allocated only to
+the Fixed Satellite Service on a “first-come, first-served” basis. At the same time, all
+nations could obtain orbital slots and frequency channels on the expansion part of the
+Service’s frequency bands. Policies set up at the first two WARCs began to be im-
+plemented at the most recent conference. However, it was also apparent that this
+implementation will continue to evolve as power shifts among participants. The
+nations also occasionally hold multilateral planning meetings to resolve area con-
+flicts between themselves. Access to all other radio frequency bands allocated to all
+other satellite services is still “first-come, first-served” except the 12 GHz and 17 GHz
+bands for Broadcasting Satellite Service.
+
+In exercising its registration function, the International Frequency Registration
+Board does not evaluate the particular nation’s reasons for making a particular assign-
+ment. The Board seeks only to ensure that the national assignment conforms to iden-
+tified services for the assigned frequency and that transmissions do not interfere with
+other broadcasts. Nations then determine how they will parcel out the allocated
+frequencies to their people.
+
+If a proposed satellite could cause interference, the sponsoring nation resolves
+issues under negotiation procedures established by the ITU. The ITU conducts much
+of its technical activities through the International Frequency Registration Board and
+the International Radio Consultative Committee. Since 1973, orbital positions have
+been associated with particular frequencies and technical characteristics.
+
+In the U.S., the FCC allocates orbital slots and frequencies. To obtain an orbital
+position or frequency, your legal department’s FCC expert submits a formal applica-
+tion. The approval process may take 3 to 5 years for a new communications service or
+up to a year for an existing satellite.
+
+An ongoing concern is the need to protect the GPS spectrum from disruption and
+interference. The Europeans at the World Administrative Conference in 1997 sought
+to overlay a commercial broadcast signal on the public service radionavigation band.
+This issue was addressed in the Commercial Space Policy Act of 1998 with the Con-
+gress encouraging regional agreements with foreign countries, like the 1998 agree-
+ment with Japan, in order to make the U.S. GPS signal a globally accepted standard.
+
+Commercial Launches, Commercial launch planners must consider the Commer-
+cial Launch Act of 1984. As amended, it requires the DOT to approve and license all
+commercial expendable vehicles if launched from U.S. territory or by a U.S. citizen or
+corporation outside the U.S.
+
+As the Federal Register indicates, before issuing a launch license the DOT requires
+both a mission review and a safety review. The first review focuses on the payload
+itself and the flight plan to ensure that the mission is in accord with U.S. policy and
+meets U.S. responsibilities under international treaties. Regulations require the DOT
+
+21.1 Law and Policy Considerations 827
+
+to review how missions affect national interests. Although some fear this authority will
+be used to block missions, Congress has declared privately conducted commercial
+launches to be consistent with the national security and foreign policy interests of the
+US. Time will tell what limitations will be imposed, but the Commercial Launch Act
+thus far gives government considerable power over commercial activity.
+
+The DOT also reviews procedures for launch safety, including:
+
+¢ Procedures for safety controls for launch sites and flight corridors
+¢ Range safety expertise
+
+¢ Procedures for ground and flight safety
+
+* Range tracking and instrumentation
+
+* Vehicle safety systems
+
+* Proposed vehicle design
+
+For the foreseeable future, I expect this review to be conservative. Missions using
+proven government launchers and national launching facilities should receive quick
+approval. But a mission proposing to use a new and untested vehicle or launch site will
+suffer close scrutiny.
+
+DOT must coordinate commercial launches with all other interested agencies in the
+Federal Government, particularly the DoD and the Department of State. For current
+guidelines, contact the FAA.
+
+The policy is now to require maximum utilization of commercial launch capability
+by the federal government. This includes planning missions in such a way so that they
+match the space transportation capabilities of our commercial launch providers. The
+main exceptions are national security or international collaborative efforts relating to
+Science or technology. Congress additionally mandated in the Commercial Space Act
+of 1998 that DoD study Vandenberg AFB and Cape Canaveral Air Station to see what
+upgrades are needed to enable a flourishing commercial launch industry.
+
+Military Space Activities. The development, testing, and deployment of a space-
+based defensive system must abide by the terms of the Anti-Ballistic Missile Limita-
+tions Treaty between the U.S. and the USSR (October 3, 1972). Administration policy
+will determine whether the U.S. will develop this system.
+
+We also must acknowledge the possibility that international partners of the U.S.
+may object to legitimate national security activity. For example, our allies who signed
+up to help us develop the Space Station took exception to its potential undefined DoD
+activities, which they took to be SDI activities. Canada announced it would withdraw
+support for Space Station Freedom if the U.S. chose to conduct military activities,
+unless those activities were limited to research.
+
+Patent Issues. Patent law and intellectual property rights in the U.S. stem from the
+first national patent law enacted in 1790. It was based upon the U.S. Constitution
+(1787), article 1, section 8, paragraph 8 that states, “Congress shall have power to. . .
+promote the progress of science and useful arts by securing for limited times to authors
+and inventors the exclusive right to their respective writings and discoveries.” That
+limited period in the U.S. is now 20 years from the date of filing for the patent with the
+U.S. Patent and Trademark Office.
+
+The U.S. law did not cover “space” so the U.S. Space Bill was enacted in 1990. It
+provides that, “Any invention made, used or sold in outer space on a space object of
+component thereof under the jurisdiction or control of the United States shall be
+considered to be made, used or sold within the United States.” This legislation follows
+
+828 Limits on Mission Design 21.1
+
+the “flagship” principle, which applies U.S. laws to ships on the high seas and aircraft
+flying over international water. With regard to the International Space Station, the
+International Governmental Agreement provides “... for purposes of intellectual
+property law, an activity occurring in or on a Space Station flight element shall be
+deemed to have occurred only in the territory of the Partner State of that element’s reg-
+istry, except that for ESA-registered elements any European Partner State may deem
+that activity ... occurred within its territory.”
+
+In view of the U.S. Space Bill, the IGA, the Registration Convention and the
+provisions on registration in the Outer Space Treaty in appears that U.S. law is the law,
+which is most often applicable. In situations where U.S. law is not applicable there are
+no clear answers, and therefore considerable commercial risk to space missions from
+both a policy and economic perspective may be present.
+
+The mission planner should be aware of two patent cases. Hughes Aircraft
+Company/Williams in 1973 obtained a patent relating to the spin stabilization of
+satellites to assure obtaining and maintaining satellite attitude on orbit. Hughes Air-
+craft Company sued the U.S. Government for infringement of its patent, because the
+government used the concept without paying for it. It was not until 1983 that multi-
+billion-dollar decision against the Government was handed down after the U.S. and
+others had launched 108 satellites, which infringed the patent rights of Hughes Aircraft
+Company. The lesson is clear; patent infringement may have very significant eco-
+nomic consequences
+
+The second concern stems from a patent granted to TRW/Horstein et al. in 1995.
+Patent rights are based upon the “claims” in the patent application. The main claim of
+this patent in essence is an “orbital shell” above the Earth from 5,600 to 10,000
+nautical miles reserved for TRW exclusively, for all communications applications to
+mobile handsets. Soon after the patent was granted TRW sued ICO Global Communi-
+cations Ltd. to prevent them from launching satellites into the proscribed altitudes. The
+case was dismissed because there was no present infringement.
+
+Nevertheless, this is a troublesome patent, because it flies directly in the face of the
+Outer Space Treaty provisions on nonappropriation of space by any nation including
+its private entities. In my opinion the patent is fatally flawed if it is interpreted to give
+any property rights to a spatial location. Were another nation to raise the issue in the
+UN. or some other forum, the U.S., under its treaty obligations, would have no alter-
+native but to “correct” the situation by legislation or cause a review of the original
+patent by the U.S. Patent and Trademark Office. A mission planner must, however,
+face the risks of litigation, which entail not only lost time but also the economic
+consequences.
+
+21.1.2 U.S. Space Policy
+
+A cohesive, consistent U.S. space policy does not exist. This conclusion follows
+from the lack of success of the program to get us into space. It has not reached new
+technological or cultural plateaus nor even maintained the initial pace.
+
+What then must the mission planner consider from a U.S. policy prospective in
+mission design? Policy direction can change so quickly that the shorter the design and
+construction cycle, the better. Experience teaches us that government funding for
+projects can evaporate overnight. This being the case, get your money up front if
+possible, or at least attempt to obtain “fenced” funding.* For government projects you
+will need a single powerful backer or several who can provide funding. Political and
+economic support may be available from various sources. However, the advantage of
+
+21.1 Law and Policy Considerations 829
+
+securing interest and support from a number of sources may be more than offset by the
+necessity to serve various conflicting goals.
+
+Policy edicts may be forthcoming from an administration, particularly the National
+Space Council, vocal committees of the Congress, and of course, industry groups. Do
+not be misled by the apparent credibility of the source or the clarity of the proposed
+goal. Words are cheap. All too often promises are made but are not backed up with
+budgeting and funding.
+
+Even if you are doing a commercial project you will need an expert to advise you
+on national space policy sensitivities. The problem is you do not need to find
+friends—you only need to avoid enemies. The most likely enemies are potential com-
+petitors. While they probably cannot block your project directly, they may have
+friends in government who can. Accordingly, if it is possible, design the project in
+such a way that it is cooperative with others and not in direct competition. You should
+also be careful to assess what law and policy implications may arise from the proposed
+mission. These concerns may be national and international.
+
+An example of this intergovernmental coordination was the effort by Space Indus-
+tries, Inc., to secure government funding for the ISF (Industrial Space Facility).
+Hoping to get a fast start, they submitted the proposal to a congressional committee
+without adequate coordination with NASA and other interested governmental agen-
+cies. They were successful in getting support from the committee and the National
+Space Council. They were even mentioned specifically in President Reagan’s 1988
+space policy report. All of this withered and died because they had not made their
+peace with the supporters of the Space Station who felt that money spent on the ISF
+would be taken from Space Station funding and might ultimately result in the Space
+Station project being reduced or cancelled. The net result was that the ISF became tied
+up in red tape and did not get funding.
+
+The bottom line is that space mission analysis and design must concern itself with
+the vagaries of policy and the multitude of concerns and interests that exist in the
+political arena.
+
+Tighter constraints of federal budgets and an increasing demand for some form of
+economic return on federal investments has led to insistence by Congress that the
+federal government work with industry and buy from the private sector when possible.
+The 1998 legislation requires NASA to identify opportunities for commercial pro-
+viders to participate in the International Space Station and to study the possibility of
+turning the space shuttle operation plus the space station over to commercial operators
+after it is assembled in orbit. Additionally space science data must be purchased from
+commercial providers to the extent possible.
+
+21.1.3 Responsibility—Liability and Insurance
+
+The Outer Space Treaty, Article VI, first established a nation’s responsibility for its
+acts in space, as well as those of its citizens acting privately. This provision looks to
+the future and requires a nation to authorize and continually supervise all of its space
+activity to assure it conforms with treaties and international law. We must take into
+account this risk of regulation when we design a project and plan how to accommodate
+governmental supervision.
+
+* Fenced funding is a term deriving from appropriations usage, meaning that monies allocated
+for a certain purpose cannot be otherwise allocated, even within the same agency or
+organization.
+
+830 Limits on Mission Design 21.1
+
+Liability, the other side of the responsibility coin, looks to the past. The Outer Space
+Treaty, Article VII, first specified liability for space activity. Then came the 1972
+Convention on International Liability for Damage Caused by Space Objects. This
+Convention was intended to protect the nonspace-faring nations, so it held space-
+faring nations absolutely liable if they caused injury or damage on Earth. Absolute
+liability simply means that someone who is injured may claim compensation just by
+proving damage and who did it, without having to demonstrate negligence or fault. If
+damage occurs in space, however, space-faring nations must prove fault to recover
+damages.
+
+The procedure for settling claims calls first for negotiations by the nations involved.
+The only claimant under the Convention is another nation, bringing a claim on its own
+behalf or on behalf of its citizens. If these negotiations fail, a three-member claims
+commission is formed. Each nation involved appoints one member. The two appointed
+members then appoint a third, the chairman.
+
+The first case under this Convention involved the reentry of Cosmos 954 over the
+Northwest Territory of Canada on January 24, 1978. Negotiations between Canada
+and the USSR were successful. The nuclear reactor scattered radioactive debris over
+124,000 km2. The search and recovery effort (Operation Morning Light) cost Canada
+almost $14M Canadian dollars, but it settled for $3M. Canada elected not to claim the
+cost of $8M for its officials and employees nor for equipment. The USSR argued that
+Canada was too meticulous in the clean-up operations and that if this event had
+occurred in Siberia, she would not have expended that much effort. Additionally, the
+USSR asserted that she had offered to help clean up, but Canada rejected the offer. Had
+she been permitted to help, the costs would have been much less. This amicable settle-
+ment for 50% of the claim set a positive precedent for the future.
+
+Under the Liability Convention, the U.S. must pay when her space activities injure
+citizens of other nations or their property. U.S. citizens may recover for personal injury
+or damage under the Federal Tort Claims Act. Thus, the government requires insur-
+ance before authorizing a commercial launch. Government launches, both military and
+civil, do not have formal insurance coverage, as the government is a self-insurer. If the
+government suffers a loss, it allocates more funds from the public coffers.
+
+For commercial launches and potentially those conducted for foreign governments,
+we need to consider the following types of insurance:
+
+¢ Pre-Launch. Pre-launch coverage insures against the risks from damage
+during shipment of the launcher and the satellite, as well as during integration
+and movement to the launch pad.
+
+Government Equipment. The government now requires launches on commer-
+cial expendable vehicles to provide insurance for loss to government launch
+equipment and facilities. The Commercial Space Launch Act (amended 1988)
+caps the amount at $100M. The Secretary of Transportation determines for
+each launch vehicle if less is appropriate; examples are $75M for the Atlas and
+$80M for either the Titan or Delta.
+
+Third-Party Liability. Launch vehicle operators and satellite owners may
+cause injury to others through the reentry. The risk is small because these
+objects generally burn up in the atmosphere during reentry. If they do not, they
+would typically strike the ocean or one of the uninhabited areas that make up
+most of the Earth’s surface. Because of this low risk, coverage is less expen-
+
+21.1
+
+Law and Policy Considerations 831
+
+sive though still required by DOT for launch vehicles and satellites and by
+NASA for commercial satellites.
+
+When NASA was the only means of access to space for commercial satellites,
+their regulations established an insurance policy of $500M, with the gov-
+ernment assuming the risk above that amount. This limit was a practical one
+because the insurance community could not insure a greater amount. Now that
+commercial launch vehicles will be the prime means of transportation into
+space, Congress has established a similar cap of $500M, until the world’s
+insurance community can provide greater coverage. The purpose of this
+provision of the 1988 Amendment to the Commercial Launch Act was to
+attempt to level the commercial playing field as Arianespace requires an
+FF400M insurance policy. This amount was based upon the prior NASA pol-
+icy of requiring $500M coverage.
+
+Private operators of launch vehicles must also concern themselves with
+liability claims from citizens of the U.S. and around the world. The DOT reg-
+ulations require coverage against this risk before issuing a launch license.
+
+Launch Failure. The most expensive insurance coverage insures the satellite
+value from the moment of lift-off to on-orbit checkout. The prices for this
+coverage have risen from 5%—10% of the satellite value to 25%—30% and then
+settled back to 16%-20%. Shuttle launches enjoyed about a 5% discount.
+Because it was a man-rated vehicle, the insurance community had a high con-
+fidence in its reliability. In the early days, insurance companies charged very
+low premiums for three reasons: they had few insurance losses; brokers knew
+little about space vehicles and the risks involved; and they competed to get into
+the business because space had pizazz.
+
+Premiums rose dramatically with the loss of the Shuttle Challenger in 1986
+and several failures of expendable launch vehicles shortly thereafter. In fact,
+the space insurance community paid out 3 times more in loss claims than they
+took in through premiums. Once the U.S. and Ariane programs were back on
+track, premiums moderated. Still, as we plan commercial launches, we must
+try to choose launch vehicles and satellites with a history of success. Other-
+wise, insurance probably will be unavailable or prohibitively priced.
+
+Reflight. A corollary risk which the launch-vehicle manufacturer may cover is
+a guarantee to refly the mission or indemnification of the value of launch
+service. Whether a company will provide either at no cost depends on the
+launch vehicle’s past experience and the competitive climate. A contract nor-
+mally covers this risk, but Iam sure the insurance community would cover it
+for a price.
+
+Loss to Others on the Flight. Under provisions of NASA launch contracts, the
+risk of damage to a payload by another payload or by NASA’s actions falls
+under a Hold Harmless Clause. This provision means that all parties to the
+launch agree not to sue each other regardless of what happens. This practical
+remedy came about because it is very difficult to calculate the risk and deter-
+mine the premium. The risk also seemed low, and experience bears out this
+assessment as no incidents have occurred. This solution is also true for com-
+panion satellites launched commercially.
+
+832 Limits on Mission Design 21.1
+
+* On-Orbit Performance. A further risk concerns whether a satellite will con-
+tinue to perform. Communications satellites especially need coverage when
+the launch insurance terminates after on-orbit checkout. Satellite owners must
+have this “life” insurance coverage if they do not have sufficient resources to
+“self insure” the risks. Banks that finance communications systems usually
+demand this insurance. An alternative may be enough satellites on orbit to
+back-up the system.
+
+In the past, buyers of space services (particularly communications service) con-
+tracted to build a satellite, sought a launch aboard the Shuttle or on Ariane, and then
+tried to secure one or more of the insurance coverages explained above. But compe-
+tition in the satellite-construction and expendable-launch-vehicle industries has
+changed this procedure. Instead, the buyer puts out a request for proposals calling for
+on-orbit delivery with acceptance after checkout. This change shifts the burden and
+risks. Only time will tell whether the cost to the buyer of a space service will be higher.
+If competition is intense enough, which I predict it will be through the year 2010, the
+cost may decrease. If so, this turnkey package arrangement will be the norm rather than
+the exception.
+
+One further note is appropriate. It might appear reasonable for one of the aerospace
+giants—manufacturer of satellites or expendable launch vehicles—to step up and
+provide insurance guarantees themselves. But the IRS has taken the position that a cor-
+poration may not set aside funds from successful launches to act as a reserve, without
+paying taxes on these funds. If companies could set aside untaxed reserves, they could
+gain a considerable economic advantage by offering insurance potentially unavailable
+from the insurance community, whose worldwide reserves are less than $20 billion.
+As an alternative, launch companies could acquire a block of insurance commitments
+for its launches from the insurance community and offer these to customers to sweeten
+a deal.
+
+In a perfect world, actuarial risk would reflect the cost of risk plus overhead
+and profit. Cost of risk is simply the total value of all losses experienced divided
+by the total number of events or launches. Unfortunately, despite manufacturers’
+quoted success rates of 85%-98%, we do not have enough total launches to derive ac-
+tuarially correct figures. Therefore, the price of insurance tends to depend on “feel”
+and various intangibles. As pointed out above, failures drive prices up, and successes
+decrease them. Interestingly, these variations occur whether or not a failure was
+insured. Space insurers paid nothing for the 1986 Challenger disaster; yet they were so
+shaken that insurance coverage was not available for a period of time. For up-to-
+date insurance coverage provisions and costs, contact Alexander and Alexander,
+Washington, DC; Coroon and Black, Bethesda, MD; or Marsh and McLennon, Wash-
+ington, DC.
+
+21.1.4 Remote Sensing
+
+Anyone planning to launch a satellite that can sense the Earth needs to know the
+Principles Relating to Remote Sensing of the Earth from Space, a resolution adopted
+by the U.N. General Assembly on December 3, 1986. The USSR sought to prohibit
+the sensing of a nation without its consent and the developing nations sought to
+prohibit the release of information about a nation without its consent. Instead, this
+resolution was a victory for the “open skies” policy of the U.S. and the space-faring
+nations.
+
+21.1 Law and Policy Considerations 833
+
+The key points are:
+
+¢ Itis a resolution, not a treaty, but as the world continues to follow its precepts
+it will become international law through custom.
+
+* The resolution applies only to sensing “for the purpose of improving natural
+resource management, land use and the protection of the environment.” It does
+not apply to applications related to national security.
+
+* Data is divided into classes: primary or raw data, processed data, and analyzed
+information. Primary data is the same as unenhanced data under the Land
+Remote-Sensing Commercialization Act of 1984, so it must be released to all
+customers at reasonable cost. Processed data and analyzed information is data
+resulting from “value added activity” over which a company can assert
+property rights and refuse its release.
+
+¢ The resolution states that nations will conduct remote-sensing activities with
+respect for other nations’ sovereignty, not damaging the legitimate rights and
+interests of the sensed nation.
+
+Legal arguments may affect how a reconnaissance or imaging satellite operates.
+Originally, in a classified memorandum, President Carter prohibited a U.S. company
+from disclosing remote-sensing information with a resolution better than 10 m. Pres-
+ident Reagan’s space policy rescinded this prohibition in February 1988, because the
+USSR was selling photographic images with 5 m resolution. France, Russia, Canada,
+China, Japan, and India provide commercially available remote sensing imagery;
+therefore if a nation or corporation wants to keep something secret, it had best hide it.
+The press will be the least of its worries. In my view, only cost will limit these
+activities.
+
+Since 1982 the U.S. government policy towards remote sensing technologies has
+evolved from a very restrictive view of remote sensing as an intelligence gathering
+methodology which was classified to a broader view which promotes privatization,
+declassification and commercial exploitation. Efforts to expand this industry included
+requiring NASA to acquire remote sensing data from commercial providers. However,
+the industry has not developed as quickly as it might have because of lengthy coordi-
+nation required by various federal agencies before a license to launch and operate a
+satellite system is issued. Unless the Department of State yields to the Department of
+Commerce and permits a reasonably unfettered development of a U.S. industry the
+market will be served by foreign competitors. In order to encourage the emergence of
+a competitive U.S. commercial remote sensing industry it will be necessary for the
+government to support investments in new remote sensing technologies, remove
+unnecessary restrictions on the dissemination of privately gathered data, and stream-
+line the licensing process.
+
+21.1.5 Import and Export Restrictions
+
+We need not consider restrictions on imports into the U.S. unless a project has
+federal funding. In that event, the Buy America Act and domestic preference provi-
+sions in various other acts and regulations could affect purchases. In the past, an
+exploding number of statutes and regulations direct federal agencies to give domestic
+sources absolute or qualified preferences when they procure goods and services. These
+provisions, with exceptions and qualifications, appear in trade legislation, appropria-
+
+834 Limits on Mission Design 21.1
+
+tion statutes, procurement laws and regulations, Executive Orders, treaties, and
+Memoranda of Understanding with foreign governments.
+
+In general, the Buy America Act prohibits buying foreign goods rather than
+services, but NASA has held that a supplier of space services may not use foreign
+goods to provide the service. Under this Act, a product is not foreign if more than 50%
+comes from domestic sources, and the DoD may buy from NATO countries. The Act’s
+provisions and rules will give American mission planners headaches and keep many
+contracting officers and lawyers fully employed.
+
+Three mechanisms control exports from the U.S. First, commodities and technical
+data on the commodities control list fall under the licensing requirement of the Export
+Administration Act of 1979. The Commerce Department’s Office of Export Admin-
+istration runs this program and has published a series of detailed regulations. An
+example of this process in the space sector was the approval for Payload Systems, Inc.
+to fly a crystal-growth experiment aboard the MIR space station.
+
+The second control applies when a patent involves military technology. The
+Departments of Defense and Energy review the export application, and either depart-
+ment may classify the information to keep it secret, thus preventing export.
+
+The third restriction stems from the Arms Export Control Act. The Office of
+Munitions Control under the Department of State determines along with other Federal
+agencies what items fall under the Act’s licensing provisions. This office has consid-
+erable discretion in determining whether a license should be issued. As a result, the
+United States Munitions List once included satellites and computer programs and
+many other items not traditionally thought of as weapons.
+
+The International Traffic in Arms Regulations implement the Arms Export Control
+Act. The Munitions List specifically includes rockets, spacecraft, space electronics,
+and guidance equipment. Defense services are also included, defined as furnishing
+help to foreigners “in the design, engineering, development, production, processing,
+manufacturing, use, operations, overhaul, repair, maintenance, modification or recon-
+struction of articles.” Included is the furnishing to foreigners any technical data
+whether in the U.S. or abroad. Finally, no one may provide foreigners technical data,
+meaning information classified or even related to defense articles.
+
+Under these regulations, an export does not have to cross a border. For example, an
+export occurs when an individual discloses technical data concerning a spacecraft or
+rocket, even if the disclosure is part of a potential sale and within the U.S. These rules
+do not apply to NATO members, Australia, New Zealand, or Japan, but they still pose
+significant hurdles if we are seeking a world market. An example of this was the
+application to the Department of State by United Technologies Corporation to assist
+the Cape York Space Agency in developing a launch complex in Australia for the
+Soviet Zenit Launch Vehicle.
+
+21.1.6 Environmental Concerns
+
+The National Environmental Policy Act and its implementing regulations call for
+review of the Federal Government’s actions to determine their effect on the environ-
+ment. Major actions involve substantial time, money, and resources. They affect large
+areas or act strongly on small areas. Recommendations on these actions must consider
+their effects with special care.
+
+When an action occurs in the U.S., we must take into account social, economic, and
+other environments. When it occurs outside the U.S., the requirements narrow.
+Whether environmental protection extends to activities in outer space depends on how
+
+21.1 Law and Policy Considerations 835
+
+we interpret the concept of global commons. In international law, “global commons”
+includes those territories outside the jurisdiction of any nation, such as the high seas,
+the upper atmosphere, the oceans, Antarctica, and particularly, outer space. Official
+U.S. documents which discuss “global commons” have not specifically mentioned
+outer space.
+
+Whether the National Environmental Policy Act applies to outer space is not
+entirely clear, but the U.S. still has obligations under Article IX of the Outer Space
+Treaty which provides for international protection of the outer-space environment.
+Thus, we must comply with either the letter of the Act’s provisions or their essence. If
+a proposed mission “has been done before,” environmental questions may quickly be
+resolved. But if it includes something new, we may wait some time for approval,
+depending on how strongly the mission affects outer space or, especially, any celestial
+body.
+
+For a government mission, the responsible agency must analyze the environmental
+effects. If more than one agency is involved, a lead agency supervises the preparation
+of the environmental documentation. For a private or commercial launch, the DOT
+would require an environmental impact assessment under its mandate from the
+Commercial Launch Act.
+
+Under the National Environmental Policy Act, we must complete either an en-
+vironmental assessment or an environmental impact statement. An assessment helps
+determine whether we need an impact statement for a particular action. It must include
+enough information to determine whether the proposed action is major and whether it
+significantly harms the environment of the “global commons.” We must assess the
+environmental effects and the need for the proposed action plus available alternatives.
+Unless security restrictions intervene, the assessment is available to the public upon
+request. There is no need to obtain public comment. An assessment is less formal and
+rigorous than an impact statement. Typically, it applies to:
+
+* Spacecraft development projects in space science and in space and terrestrial
+applications
+
+* Specific experimental projects in space and energy technology
+¢ Development and operations of new space transportation systems
+
+* Advanced development of new space transportation and spacecraft systems
+
+In contrast, we would need to file an impact statement when an action is “expected
+to have a significant impact on the quality of the human environment.” Our draft state-
+ment should be thorough enough to permit analysis and comment. If it is complete
+enough after agency review, it goes to the public for comment. At this time, the
+Department of State, the Council on Environmental Quality, and other federal
+agencies also have the chance to comment. For the proposed action and reasonable
+alternatives, the environmental impact statement: (1) considers purpose and need;
+(2) provides a detailed description; (3) analyzes the environmental effects; (4) briefly
+describes the affected environment of the “global commons”; and (5) compares the
+alternatives’ effects on the “global commons.”
+
+If we do not know something because it is unavailable or scientifically uncertain,
+we must say so in the impact statement. Public hearings are not required, but may be
+appropriate, depending on circumstances. After agencies and the public have com-
+mented, we redo the statement, further analyzing any issues they have raised. Then we
+
+836 Limits on Mission Design 21.1
+
+publish it in the Federal Register before forwarding it to the decision maker for final
+action.
+
+Normally, we would need an impact statement for R&D activities associated with
+developing and operating new launch vehicles, space vehicles likely to release large
+amounts of foreign materials into the Earth’s atmosphere or into space, and certain
+systems for nuclear propulsion and generating power. Some listed exclusions do not
+require a statement, but we probably will have to do an assessment if any “significant
+environmental effects” are possible. Unless the project has been done before, we can
+expect a bureaucrat to require an assessment of environmental effects, so he or she can
+determine if an assessment is required! The first assessment should determine what is
+required: (1) no environmental assessment; (2) only an environmental assessment; or
+(3) an environmental impact statement. Although it is difficult to predict exactly how
+long this process will take, we should anticipate 3 to 6 months for a simple assessment,
+one to 2 years for a simple impact statement, and up to 5 years for international con-
+cerns or a suit in federal court.
+
+In some cases, the action may affect the environment of a foreign nation or a
+resource designated as one of global importance. If so, we would use slightly different
+procedures. First, we would prepare an environmental survey or review. An environ-
+mental survey is a cooperative action and may be bilateral or multilateral. Whether or
+not we do a review depends on consultations which determine if the proposed action
+would do significant harm. The content is flexible, but generally includes (1) a review
+of the affected environment, (2) the predicted environmental effects, and (3) signif-
+icant known actions that governmental entities are taking to protect or improve the
+environment against the proposed action. If the government is not acting, is this inac-
+tivity an oversight or a conscious decision?
+
+The U.S. prepares an environmental review unilaterally. In effect, it is an internal
+action, by which one or more governmental agencies surveys the important environ-
+mental issues associated with the proposed action. It contains essentially the same
+information as an environmental survey.
+
+Lasers and Particle Beams
+
+Lasers and particle beams illuminating into space have caused almost no problems.
+The reason is fairly straightforward: in the U.S., such experiments are carried out by
+government laboratories or under government control. They have agreements with
+NORAD/USSPACECOM to search the space catalog and provide windows of oppor-
+tunity, so illuminating does not interfere with operational spacecraft.
+
+Nuclear Power Sources
+
+Nuclear power sources have raised questions since they were first used. The U.S.
+program began using a radioisotope thermoelectric generator with SNAP-3A in the
+summer of 1961 and continued to 1977. In April 1965, SNAP 10 was the only U.S.
+space nuclear reactor. The U.S. safety program includes an Interagency Nuclear Safety
+Review Panel composed of three coordinators appointed by the Secretary of Defense,
+the Administrator of NASA, and the Secretary of Energy. The Nuclear Regulatory
+Agency, the Environmental Protection Agency, and the National Oceanic and Atmo-
+spheric Administration also participate in these reviews. The safety review ascertains
+whether the benefits of using nuclear power are worth the risks. The policy of the U.S.
+in using radioisotope thermoelectric generators following an aborted SNAP-A mission
+in April 1964 was to design the container so that all nuclear material would survive
+intact, regardless of the nature of the accident. The policy makers specifically envi-
+
+21.1 Law and Policy Considerations 837
+
+sioned reentry and impact on earth. On May 18, 1968, the range safety officer aborted
+the launch of NIMBUS-81 at an altitude of 30 km over the Santa Barbara Channel. The
+generator capsules were recovered without incident. Those who launched SNAP 10A
+with a nuclear reactor in 1965 launched the reactor in a subcritical mode, designed it
+to remain subcritical at or after impact should it reenter the atmosphere before start-
+up, and delayed its start-up until it had reached orbit. It is in an almost circular polar
+orbit, which has a decay life of 4,000 years. Additionally, this reactor package was
+designed to come apart on reentry.
+
+Design for safety must include both system and mission design. The methods to
+reduce risks from nuclear materials include containing them within radioisotope
+thermoelectric generators, diluting and dispersing them with reactors, delaying their
+effects by boosting them into a higher orbit, and possibly retrieving them using a
+vehicle like the Shuttle.
+
+On the international front, the untimely reentry of Cosmos 954 in 1978 (see
+Sec 21.1.3) caused great concern around the world and has been the subject of dis-
+cussion in the U.N. Committee on the Peaceful Uses of Outer Space. A working
+group’s February 1981 report on Cosmos 954 reaffirmed that nuclear power is safe in
+outer space if it meets safety requirements. Some people still suggest a ban on nuclear
+power, and Australia has specified solar rather than nuclear power in a request for
+proposals for surveillance satellites.
+
+Only the former USSR routinely used nuclear power to run its Radar Ocean
+Reconnaissance Satellites (RORSATSs). In the future, other nations will consider this
+power source to serve particular needs. For example, the U.S. had under discussion
+powerful reactors to provide power to space components of the Strategic Defense
+Initiative (SDI). The SP100s would generate 100 kW, some 25 times more powerful
+than the RORSATs. These developments pose two risks: return to Earth with much
+more fissionable material than on RORSATs and increases in radiation from gamma
+rays and positrons. The positrons from the reactor temporarily form an artificial
+radiation belt in the Earth’s magnetic field. When they strike another spacecraft, the
+positrons produce penetrative gamma-rays. This radiation interferes with astrono-
+mers’ readings of natural radiation from such phenomena as solar flares, neutron stars,
+and black holes.
+
+In the late 1980s, such radiation from Soviet spacecraft occasionally overloaded the
+gamma-ray spectrometer on board the U.S. Solar Maximum Mission satellite. The
+Japanese X-ray satellite, GINGA, also suffered, and the U.S. Gamma-Ray Observa-
+tory may be affected.
+
+Thus, as the need for nuclear power increases, we can expect greater pressure,
+particularly from the scientific and astronomical communities, to stop its use. Consid-
+ering its unique abilities, I predict that nuclear power will not be banned from space,
+but its use will be closely regulated. Unless we must use a nuclear power source to
+complete a mission, we should select another form of power.
+
+Space Debris
+
+Space debris is the other significant environmental issue. It affects mission
+designers in two ways. First, we must plan the mission to prevent or abate space debris
+as much as possible. Second, we must design satellites to meet the risk of collision
+with debris. Aside from a few cries in the wilderness, space debris received little
+official notice until the late 1980s. Johnson and McKnight [1991] provide an extended
+technical discussion of this problem, and Reijnen and de Graff [1990] provide a
+discussion from a legal perspective.
+
+838 Limits on Mission Design 21.1
+
+In 1986, the U.S. Air Force Science Advisory board questioned its 1983 position
+that debris did not appear to be a problem. As a result, the DoD established in March
+1987 a space debris policy. It states in part that the “design and operation of DoD space
+tests, experiments, and systems will strive to minimize or reduce accumulation of
+space debris consistent with mission requirements.”
+
+In a final statement on space policy, released in February 1988, President Reagan
+called for a review of the U.S. policy on space debris. As a result, a Report on Orbital
+Debris by the Interagency Group (Space) was released in February 1989. It reflected
+the Group’s uncertainty as to the urgency for action. Its major recommendation was a
+joint study by NASA and DoD that would develop a comprehensive plan to improve
+the monitoring of debris, so debris predictions could be more accurate. The report
+identifies two critical areas in space for the near term. Low-Earth orbit requires atten-
+tion because of the large masses of material and the high relative velocities. At the
+same time, the geosynchronous arc requires attention because of the number of space-
+craft which will lose their maneuvering ability within the next few years. The report
+then echoes the DoD policy on managing debris.
+
+This report stands in contrast with the report of the ESA’s Space Debris Working
+Group, dated November, 1988. The Director General observed that clearly the present
+debris in the space environment poses little threat to either manned or unmanned
+missions. However, “‘we must adopt a conscious policy aimed at curbing the growth
+of debris.” The report lists the same two areas of concern— low-Earth and geosyn-
+chronous orbits—and notes another concern for astronomical observers. It concludes
+by requiring preventive measures: observing and analyzing present debris, avoiding
+collisions, and minimizing collision effects and future space debris. It asks nations to
+reduce the number of pieces and the mass of space debris.
+
+Strikingly, the ESA’s report is a call to action. The agency is urged to start taking
+steps—organizational, technical, and institutionat—to seek cooperation with others and
+thereby counter the threat to space flight. Why then does the U.S. simply want to study
+the matter further? The answer is both political and economic. Politically, the U.S. has
+had difficulty discussing technical issues with developing nations in the U.N. Time and
+again the U.S. has been outvoted on philosophical grounds and is not ready to hear
+political dialogues in the Committee on the Peaceful Uses of Outer Space. The U.S.,
+therefore, looks to multilateral discussions with space-faring nations to solve problems.
+
+The economic issue is equally sensitive. The U.S. is a space-faring nation which
+plays a major role in launching its own satellites and those of its western partners into
+space. Thus, it is loath to set a policy “prematurely” which could cost a lot of money
+to solve the space debris problem. The key words in the U.S. report are “where feasible
+and cost-effective.” The U.S. recognizes that the problem demands multinational
+solutions but wants to avoid expensive “political solutions.”
+
+Advice: stay out of the politics if at all possible. Choose a launch vehicle that is at
+least no worse than average in terms of causing debris and plan the mission with space
+debris abatement features. If you minimize debris, you will get much faster approval
+for your space mission.
+
+21.1.7 FireSat Legal and Policy Issues
+
+At first blush it would seem that there could be no issues at all. However, the first
+question is whether FireSat is going to be a U.S. Government project or a project with
+private financing.
+
+21.1 Law and Policy Considerations 839
+
+If this is a government project the mission planner needs to evaluate whether the
+Department of Agriculture or U.S. Forest Service is going to support funding or at-
+tempt to sabotage the project. Will they see it as a boon to their fire fighting mission
+or a threat, because there will be less need for fire fighting equipment and personnel,
+which will jeopardize Congressional funding? What agency will be responsible for the
+project after it is launched? Will their staffing and funding be increased to cover addi-
+tional responsibilities? What international agreements cover firefighting support? Will
+foreign nations have a right to the information from FireSat? Does the U.S. face any
+liability from the release of the information on fires? In other words, would there be
+liability if FireSat did not report a fire? Under the U.N. Principles on Remote Sensing
+the U.S. is obligated to provide data to all nations at cost. Will the data supplied be raw
+data or enhanced data? Who will supply the equipment to analyze the data? Will the
+FireSat mission as planned support all requests for information? What infrastructure
+will be necessary to support the U.S.’s treaty obligations? Who will pay for it?
+
+From a mission perspective how many satellites will be necessary? What is the
+replacement strategy? Who are the launch providers going to be? Can these satellites
+be launched with other satellites (size and position questions) or do they require dedi-
+cated launches? Are there any satellites using these altitudes? What is the space debris
+situation? Are any special shields required to protect the satellite? Do the FireSat sen-
+sors pose any threat of interference to other satellites? Are the mission and function of
+the FireSat satellites in total conformity with U.S. international policy? Might not
+Brazil, for example, object to the monitoring of their forests, fearing that the U.S. was
+trying to make a case to hold them responsible for their failure to control burning in
+the forests?
+
+These are examples of the kinds of questions that need to be answered. Inevitably
+the answers cause more questions. From the limited information we have about the
+FireSat Mission, I believe that from a legal and policy perspective the mission is
+doable. J am aware of the saying, “If you cannot stand the answer do not ask the
+question.” However, it is a foolish mission planner that refuses to at least know of the
+risks,
+
+21.1.8 Asteroids
+
+There has been recent interest in asteroids (Space Development Corporation) as a
+potential mining opportunity. Private businessmen have proposed launching missions
+to asteroids to bring back rare and precious metals. There is also interest in the Moon
+and it is said to contain aluminum, calcium, iron, silicon, and small amounts of chro-
+mium, magnesium, manganese and titanium. It also has oxygen and sulfur. Some have
+proposed to do this regardless of the legal and policy issues. The question of ownership
+of asteroids and the right to sever valuable ore is not totally clear.
+
+The Moon Treaty of 1979 addresses the subject of mining the Moon, asteroids and
+other celestial bodies. In general it provides for the establishment of an International
+Regime to authorize and control any mining activity at such time as the exploitation
+of natural resources becomes feasible. A critical element of the Moon Treaty is the
+principle of the Common Heritage of Mankind. Under this principle there is the com-
+mitment that all nations must share in the management and benefits from such activity.
+It is this provision for sharing of benefits without contribution of investment that has
+caused the U.S. and other space-faring nations to refrain from joining the treaty. Only
+Australia, Austria, Chile, Mexico, Morocco, The Netherlands, Pakistan, The Philip-
+pines and Uruguay have ratified the agreement.
+
+840 Limits on Mission Design 21.2
+
+The argument could be made that as long as the U.S. is not a party to the treaty U.S.
+corporations should be permitted to conduct mining operations on the theory that what
+is not prohibited is permitted. Standing alone this logic is sound, but it overlooks the
+give and take in the international community on a vast number of issues. Many of the
+developing nations firmly believe that they are entitled to share in the profits from
+space activity and would deeply resent actions by U.S. or others from developed
+countries “stealing” from them. Accordingly it is a virtual certainty that the U.S.
+government would not issue a license to conduct mining activity on the Moon or other
+celestial bodies.
+
+The United Societies in Space has proposed a Lunar Economic Development
+Authority and some modifications to the Moon Treaty so that mining operations could
+be explored. Creating legal certainty will be the first step in financing such a project.
+
+There was a similar situation with the 1982 Law of the Sea Treaty which was
+resolved in 1994 by a U.N. General Assembly resolution. The provisions were modi-
+fied to give the U.S. and other key nations a major say in the undersea mining and that
+has facilitated exploration and the beginning of operations. This appears to be the most
+viable solution to asteroid mining, but a first priority will be reducing transportation
+costs.
+
+21.2 Orbital Debris—A Space Hazard
+
+Ronald A. Madler, Embry-Riddle Aeronautical University
+Darren S. McKnight, Titan Research and Technology
+
+About 20,000 tons of natural material consisting of interplanetary dust, meteoroids
+and asteroid/comet fragments filter down to the Earth’s surface every year, with
+several hundred kilograms in LEO at any one time (Kessler, 1985; Zook et al., 1970].
+This natural hazard has been recognized as a danger to space travel since the 1940s,
+but now human activities in space have created a hazard of even greater concern.
+Figure 21-1 portrays both the natural environment and the artificially created debris
+population [Adapted from NASA and NRC sources]. Millions of kilograms of artifi-
+cial debris orbit the Earth and present a serious concern to continued safe access to
+space. The growth of orbital debris poses a series of difficulties for space mission
+designers. To control the growth of debris and its associated hazards, we should take
+a number of steps during the design process. As seen in Fig. 21-2, the debris mitigation
+process spans all phases of the mission profile. Similarly, NASA debris mitigation
+guidelines cover all aspects of the mission design process. These guidelines can be
+found in NASA Safety Standard 1740.14 [1995], while software to parallel the safety
+standard is also available from NASA.
+
+21.2.1 Environmental Definition
+
+Meteoroids have been a concern since the beginning of human spaceflight.
+Engineers performed a tremendous amount of work to understand the hazard posed to
+spacecraft by meteoroids. While meteoroid-effect studies and model improvements
+continue, researchers have understood the meteoroid background flux fairly well since
+the late 1960s. One meteoroid flux model is represented in Fig. 21-1. There has been
+a resurgence of interest in meteoroids due to the possible storm conditions associated
+with the Leonid meteor stream in 1998-1999 [Yeomans, 1998]. While most meteor-
+
+21.2 Orbital Debris—A Space Hazard 841
+4 Meteoroid and Orbital Debris Fluxes
+10 ECT ore T TTT TTT T | T | T TUTTI T TUTTI on"
+103 E + — Meteoroids
+E + E
+1075 A Goldstone Radar Data
+_ E (562-589 km) E
+a 10'E xX Arecibo Radar Data J
+ES E (200-1,000 km) E
+x 10° E -—- Catalog Data a
+= LE (400-500 km) 5
+2 100 & Catalog Data q
+8 E (800-1,100 km) 5
+2 19? &
+ae: E
+3 10°F q
+ire -4 i”
+10 E
+10-5 F © LDEF Craters
+10° F * LDEF Craters ;
+1077 = + Solar Max Data ~ ~
+E \
+10-8 F veel el el et
+10-5 10-4 1073 10-2 10-7 10° 10! 102 108
+Diameter (cm)
+Fig. 21-1. Comparison of the Fluxes of Meteoroids and Orbital Debris for Low-Altitude
+
+Orbits (Adapted from the National Research Council and NASA sources). This
+figure shows that human-generated orbital debris has much higher impact rates than
+meteoroids for large and very small debris diameters. :
+
+Mitigation of. . .
+
+* Operational Debris
+
+¢ Explosions/Collisions
+¢ Secondary Debris
+
+* Deterioration
+
+Satellite Operations
+
+Mitigation of. . . —> Removal by. . .
+
+¢ Spent Rocket Stages 4 ~~ * Disposal Orbit
+
++ Separation Devices a * Deorbit by
+
+* Deployment — Design
+Mechanisms A
+
+Launch/
+
+Deployment
+
+. — Active Deboost
+
+y
+
+Protect Assets by...
+
+¢ Shielding
+
+¢ Active/Passive Avoidance
+¢ Redundancy
+
+Mission
+Termination
+
+Fig. 21-2. Debris Mitigation Processes.
+
+842 Limits on Mission Design 21.2
+
+oids have relative velocities of about 19-20 km/s with respect to the Earth, the Leonids
+have a relative velocity of approximately 70 km/s.* This higher velocity will produce
+more damage on impact, which could be of concern to spacecraft owners and
+operators. There were no significant anomalies associated with the 1998 Leonids.
+
+We define debris as any nonoperational manmade object in space. These objects
+include nonfunctioning payloads, used rocket bodies, mission-related debris (e.g., lens
+covers or separation devices), debris from surface degradation (e.g., insulation or paint
+chips), and debris from on-orbit fragmentation. This derelict hardware accounts for
+93% of the cataloged objects in orbit; only 7% are active payloads. Table 21-1 shows
+the breakdown of cataloged objects [Johnson et al., 2002]. Table 21-2 shows causes
+for these on-orbit fragmentation events. Debris from the more than 175 fragmentation
+events are by far the largest source of orbital debris.
+
+TABLE 21-1. Cataloged Orbital Debris Objects. We can help reduce the amount of orbit
+debris by acting responsibly.
+
+Breakup Debris Spacecraft
+
+Rocket Bodies Operational Debris
+
+TABLE 21-2. Causes for On-Orbit Fragmentation [Johnson et al., 2002]. We can reduce frag-
+mentation debris by properly venting propulsion systems.
+
+Deliberate Breakup
+Propulsion System Malfunctions
+Unknown Cause
+
+Battery
+
+Aerodynamics
+Collision
+
+The U.S. Space Command compiles the trackable debris tracked by its worldwide
+Space Surveillance Network (SSN) in a satellite catalog. This worldwide network of
+radar and optical facilities senses, tracks, identifies, and catalogs data on over 8,500
+large orbiting objects. It senses objects with diameters as small as 10 cm in LEO and
+1 min GEO. This detection limit is due to the original design of the system for tracking
+large objects—debris detection was never envisioned as a task for the network. We
+know that there exists a much larger population of smaller objects. This has been con-
+firmed by recent campaigns with more sensitive radars. Figure 21-1 shows that there
+are approximately an order of magnitude more objects in the 1 cm size than exists in
+the catalog. The 1 cm size is significant because it is the largest size fragment that we
+can effectively shield against. Thus, there are a significant number of objects that we
+cannot track, but which can cause substantial spacecraft damage.
+
+We can quantify how crowded space has become by using the spatial density, 1.e.,
+the number of objects per volume of space. Figure 21-3 plots spatial density values out
+
+* Editor’s Note: The Leonids are remnants of Comet 55P/Tempel-Tuttle. They are in a retro-
+grade orbit and collide with the Earth nearly head-on such that their velocity adds to the
+Earth’s orbital velocity of about 30 km/s.
+
+21.2 Orbital Debris—A Space Hazard 843
+
+to 2,000 km altitude for cataloged objects of various sizes. The GEO curve represents
+the spatial density within 1 deg of the equatorial plane. The average density between
+800 and 1,000 km is just above 10-8 km-3. The smallest trackable objects may weigh
+tens to hundreds of grams. We cannot shield against objects of this size. In GEO the
+average spatial density is one to two orders of magnitude less than LEO. The average
+relative velocity in LEO between orbiting objects is 9 to 10 km/s with maximum
+values above 14 km/s due to eccentric and retrograde orbits. In comparison, the rela-
+tive velocity between debris and satellites in GEO ranges between 100 and 500 m/s.
+The difference in relative velocities is due mainly to the lower orbital velocities and
+smaller inclination distribution of objects in GEO. This physical phenomenon couples
+with the lower spatial density values in GEO to make the collision hazard much
+smaller in GEO than LEO.
+
+107 T T T T T T T T
+3 All catatog (May 1998) (highest line)
+Fos
+2"?
+a
+c
+o
+a
+£10°
+Big
+a
+77)
+
+Catalog objects > 0.5 m diameter (May 1998) (lower dashed line)
+40-10 en _1__ 1
+200 400 600 800 1,000 1,200 1,400 1,600 1,800 2,000
+Altitude (km)
+10-8 1
+
+Cataloged GEO objects (May 1998)
+
+=
+Ss
+o
+
+40711
+
+Spatial Density #/km>
+3
+1
+3
+
+NOTE: GEO data is for + 1 degree latitude
+—12 1 1 —L.
+35,200 35,400 35,600 35,800 36,000 36,200 36,400
+Altitude (km)
+
+Fig. 21-3. Spatial Density Values. Densities in GEO are approximately 10 times less than in
+LEO. The probability of a spacecraft getting hit by something big is small, while the
+chance of getting hit by something small is big. See text for discussion.
+
+In addition to the spatial density being different in LEO vs. GEO, the natural
+cleansing effects also differ. In GEO and geosynchronous transfer orbit the major per-
+turbations are solar/lunar gravitational effects. For very small debris, solar radiation
+pressure may also significantly affect lifetimes, however, atmospheric drag at GEO
+has no measurable influence. Hence, a major breakup in geosynchronous orbit will af-
+fect all future operations in that regime. On the other hand, atmospheric drag greatly
+affects the lifetimes of objects in LEO. The smaller debris fragments have significant-
+ly larger area to mass ratios and thus drag affects them more. This natural removal of
+
+844 Limits on Mission Design 21.2
+
+orbital debris is very important in the long-term definition of the environment. We
+have sensed decreases in the cataloged population only during periods of maximum
+solar activity (1979-80 and 1988-90). However, in the 2000-2001 period of high solar
+activity the overall cataloged population stayed fairly constant due to several signifi-
+cant breakup events.
+
+The other major variables in debris growth are the number and types of satellite
+fragmentation events. As the debris population grows, the environment may become
+so severe that satellite or object fragmentations due to hypervelocity collisions with
+debris may occur [Kessler and Cour-Palais, 1978]. This type of event will mark a clear
+trend toward a worsening environment. The first confirmed collision between cata-
+loged objects occurred in July 1996. The altitude of a breakup will foretell the effect
+on the long-term debris environment. Breakups below 500 km may have a major
+influence for less than a decade while fragmentations above 500 km may pose large
+hazards for many decades. Presently, there is no cost-effective method of removing
+debris already in orbit. The prudent design of future spacecraft will lessen the chance
+of debris generation and satellite fragmentation.
+
+It is difficult to describe precisely the present status of the dynamic near-Earth
+debris environment, much less to accurately predict the future debris environment, due
+to uncertainties in traffic models and fragmentation rates. The trackable population
+grew at a nearly linear rate from 1960 to 1990. We don’t know exactly how the
+undetectable population grew, but it is more strongly influenced by the fragmentation-
+event rate, satellite operational patterns, and the solar cycle [Johnson and McKnight,
+1991]. Predictions of the actual number and flux of all debris rely on accurate model-
+ing of its sources and sinks. We compare debris models with our best measurements
+of the environment: impact rates on returned spacecraft surfaces for very small debris
+and special radar measurements for detectable objects. We continually improve and
+update these models as our understanding of the debris environment grows. Spacecraft
+designers can look for the latest environmental models through one of the NASA,
+DoD, ESA, or other international space agency Space Debris program offices.
+
+21.2.2 Design Considerations: Spacecraft Hazard and Survivability Analysis
+
+Mission designers must address two main issues concerning space debris. First, we
+need to design debris protection for large, long-lived spacecraft to ensure mission suc-
+cess. Second, we must use debris mitigation methods to ensure that space activities
+will not continue to litter our near-Earth environment with more derelict hardware
+[NSS 1740.14, 1995].
+
+We can approximate the probability, P., of a piece of debris impacting a space
+system using the kinetic theory of gases:
+
+Po = | —e@ SPD ACT “VREL) (21-1)
+
+where SPD is the spatial density of debris objects (i.e., average number of objects per
+volume in space), AC is the collision cross-sectional area, T is the mission duration,
+and VREL is the relative velocity between the satellite and debris population. Using
+this simple equation, the rough order of magnitude approximation for collision
+probability for one year in orbit for a range of altitudes and satellite sizes is listed in
+Table 21-3. These values are approximate and only show the order of magnitude for
+the probability of collision. Detailed analysis should use a more accurate debris envi-
+ronment model [for example, Klinkrad et al., 1997 or Liou et al., 2002], as well as a
+
+21.2 Orbital Debris—A Space Hazard 845
+
+more refined representation of the spacecraft’s cross-sectional area. Also space
+satellite designers must take the meteoroid environment into account. Meteoroids
+dominate the hazard for sub-millimeter up to millimeter size, and can penetrate thin
+honeycomb structures.
+
+TABLE 21-3. Collision Probability per Year (in 1999). The table vaiues are approximated over
+all inclinations for a cross-sectional area range of 5 to 40 m2. The cross-sectional
+area is defined as the area viewed from one orientation, and is approximately 1/4
+of the total surface area for simple convex shapes.
+
+Collision Probability per Year
+
+Altitude
+(km) Trackable 1 cm diameter 1 mm diameter
+
+10-6—10-5 10~4—10-3 1072-1071
+10-5—10-4 10-4-10-3 10-14
+10-5-10-4 10~4-10-8 10~1-4
+
+10-5—-10°3 10-4-10-2 10-1-1
+10-4—10-3 10-3-10-2 10-1-1
+10-4—10°3 10-3-10-2 10-1-1
+10-4-10°3 10-3-10-2 1071-4
+10-5—10-3 10-8—10-2 1071-4
+10-6—10-5 10-5—10-3 10°2-10-1
+
+The cataloged population presents a manageable debris hazard to even large
+spacecraft. However, incorporation of nontrackable objects into the hazard assessment
+produces much larger probabilities of collision. The flux rate increases several orders
+of magnitude for untrackable debris that can still cause damage. An encounter with a
+1 cm fragment will likely produce significant amounts of debris, much of it trackable,
+while a 1 mm impact most likely will cause surface degradation, localized craters and
+small penetrations.
+
+For GEO satellites, we may use alternate forms of probability of collision equations
+which are more convenient due to the physically and dynamically different environ-
+ment (Johnson and McKnight, 1991]. The objects have lower orbital velocities and
+most reside in a narrow latitudinal band resulting in a distinct contrast to the more
+randomly distributed LEO environment. The hazard in GEO appears to be about a
+decade behind LEO, but the GEO population will grow quickly because there are
+fewer natural sinks.
+
+While we can determine the expected rate of impact for certain sized meteoroids
+and debris relatively easily with one of the available orbital debris environment
+models, determining the hazard to a spacecraft is not as straightforward. Christiansen
+et al. [1992] outline this process as:
+
+1. Determine failure or damage conditions for the mission
+2. Determine impact conditions causing failure or damage
+
+3. Determine likelihood of failure (integrating the step 2 equations over the flux,
+direction, velocity, and projectile characteristics from debris environment
+models)
+
+846 Limits on Mission Design 21.2
+
+4. Assess sufficiency of the design
+
+5. Modify the design or requirements, if needed
+
+Due to the dynamic nature of the debris environment, the best strategy is to inte-
+grate debris awareness into all phases of the design process. However, it will be
+increasingly expensive to actually implement any system changes the later in the
+design process. Special attention to the protection of mission critical systems may still
+be considered late in the design process.
+
+The first step mentioned above entails determining what constitutes a failure or
+unacceptable mission degradation. This is something each spacecraft may define dif-
+ferently and will influence the hazard assessment. For the International Space Station,
+loss of a module or loss of life may be the unacceptable damage level, while for an
+unmanned spacecraft it may be loss of any critical system, such as attitude control.
+
+The second step depends on the many unknowns of the projectile and the spacecraft
+structures. In order to proceed with the hazard analysis, we must derive some kind of
+equation relating damage to projectile characteristics. For pressure vessels, where
+penetration will have serious implications, a ballistic limit equation is determined
+which relates the projectile characteristics to the penetration ability for a specific
+spacecraft wall. Researchers have determined equations for single walled spacecraft
+and multilayered shielding configurations [Hayashida and Robinson, 1991; Chris-
+tiansen et al., 1995; Christiansen, 1993]. Armed with the performance equations for
+the spacecraft surfaces, we can determine a probability of failure by integrating over
+all the expected projectiles from the debris models (step 3 above). The next step is to
+determine if the probability of success is sufficient for the mission. If the probability
+of success is not sufficient, then we need further protective measures or design modi-
+fications. The RADARSAT mission is an example of a spacecraft that did not have an
+acceptable level of risk after the preliminary design. Approximately 17 kg of shielding
+was added to reach a comfortable level [Warren and Yelle, 1994].
+
+Debris Protection
+
+We often describe the expected damage of a debris impact, to first order, by the
+relative kinetic energy of the impacting object. For a relative impact velocity of 10
+km/s, a 100 g fragment (6—10 cm diameter) possesses the kinetic energy equivalent to
+1 kg of TNT. On the smaller end of the scale, a 1.6 mm debris object has the same
+kinetic energy as a 9 mm pistol slug. The amount of energy absorbed by the structure
+and the level of damage is highly dependent on the impactor characteristics, satellite
+structure and location of impact. Thus, it is difficult to determine the effect of a hyper-
+velocity debris impact on a satellite without a considerable amount of specific satellite
+and collision information. Nevertheless, a 100 g object impacting at 10 km/s will
+produce extensive damage on any satellite, and would destroy any small, compact
+satellite, given a center of mass collision.
+
+Spacecraft will encounter micrometeoroids and orbital debris during their func-
+tional lifetime. However, there are passive and active means to protect them from most
+debris. Passive means include shielding and redundancy, while active generally refers
+to collision avoidance. Bumper shields are effective for passive protection against
+fragments smaller than 1 cm in diameter (mg range).
+
+Figure 21-4 qualitatively shows how effective shielding systems are at defeating
+an impacting particle. The bottom curve is for a single sheet wall, while the other
+
+21.2 Orbital Debris—A Space Hazard 847
+
+curves are for different shielding configurations which have the same weight as the
+single wall. Shielding systems have one or more outer bumpers and sometimes in-
+termediate backup layers before the innermost wall. Bumper shielding systems work
+by fragmenting or vaporizing the projectile with the first layer when the projectile has
+a very high velocity. The resulting debris cloud expands and hits the next layers over
+a larger area, dispersing the energy of the projectile and the impulsive load. In the case
+of a pressure vessel, this shielding increases the probability that the pressure hull will
+survive impacts—without penetration, rupture or spall with a much thinner pressure
+wall. In other words, when we optimize bumper shields, the resulting two or more
+walls weigh less and provide better protection from particulate impact than a single
+wall design. The bumper system has three main design parameters:
+
+1. Thickness and material of the outer wall (shield or bumper)
+2. Spacing between the shield and the backup layers
+
+3. Thickness and material of the backup layers
+
+Multi-Layer Shield
+
+Whipple Shield
+
+Penetrating Projectile Diameter (cm)
+
+Single Wall
+0.05
+
+0 2 4 6 8 10 12 14
+Impact Velocity (km/s)
+
+Fig. 21-4. Ballistic Limit Curves for Several Satellite Wall Configurations. This figure
+qualitatively shows the penetrating diameter of an impacting projectile vs. the impact
+velocity for a single wall and two shielding options. The three sections of the shielding
+curves correspond to projectile deformation, projectile fragmentation, and projectile
+melt or vaporization, respectively, as the impact velocity increases. This assumes
+spherical aluminum projectiles.
+
+The design of the shield depends on the shield-to-projectile mass density ratio and
+the projectile’s impact velocity. The debris environment parameters will vary by
+altitude and change over time as events alter the environment. For a given environment
+and spacecraft configuration (exposed area, structure and mission duration), we opti-
+mize the shield thickness, ¢,, and wall spacing, S, to insure projectile fragmentation.
+
+848 Limits on Mission Design 21.2
+
+This highlights the main function of the shield: to break apart the impacting object so
+that its debris will hit the backup layer(s) over a larger area, causing less damage.
+
+The ability of the shield to lessen the effect of the projectile’s impact is directly
+proportional to the shield’s ability to break it apart. The optimum situation occurs when
+the shield and projectile fragments vaporize or liquefy. In this state they present less
+hazard to the backup layer(s). Testing by NASA has shown that the ratio ¢,/d, where d
+is the impacting particle’s length, is around 0.1 to 0.2 for a functional shield [Cour-
+Palais, 1979]. This range is good for aluminum-on-aluminum impacts in the velocity
+range 5-12 km/s. We obtain more beneficial effects if the shield has a low melt-
+ing point and high mass density, both of which will produce more damage to the
+projectile and a lower probability of solid particles striking the backup sheet [Cour-
+Palais, 1979].
+
+The equation for determining the “optimum” backup sheet thickness, t,, assumes
+that shield and projectile debris are mostly in molten or vaporized states. For a basic
+form of aluminum (7075-16), the equation for the condition where the backup sheet
+will not deflect, rupture, or spall is given by Cour-Palais [1979]:
+
+= Cmyv
+b 52
+
+where ¢, is the backup sheet thickness in cm, m is the projectile mass in g, v is the
+projectile velocity in km/s, S is the spacing in cm, and an empirically derived constant
+C= 41.5 +14.0 (cm3g—!km=!5).
+
+The optimum design of a shield depends on the physical properties of the projectile
+and its velocity. A design which works at one speed may not be as effective at other
+speeds due to the characteristics of hypervelocity impacts. Also, the composite and
+sandwich construction methods common on many commercial spacecraft have differ-
+ent properties than simple aluminum structures [Taylor et al., 1998]. System designers
+should look for the latest references because the science and art of shielding progresses
+rapidly.
+
+Structures such as the International Space Station must have extensive shielding to
+survive the particle environment. Multilayered shielding will greatly reduce the prob-
+ability of a penetration to the pressure hulls of the Station. Other spacecraft also have
+vulnerable systems and components that must be protected to ensure a successful
+mission. Mission critical systems and components must either have special shielding
+from debris, or be shielded by less critical structures. An understanding of the debris
+hazard can help spacecraft designers to minimize the cost of the spacecraft by design-
+ing survival into the vehicle from the beginning. Table 21-4 lists some common sense
+design guidelines.
+
+(21-2)
+
+Debris Avoidance
+
+Some satellites may face a significant hazard due to trackable objects. In this case,
+designers and operators may need to use passive and active avoidance techniques.
+Passive collision avoidance methods include minimizing the size (cross section) of the
+spacecraft, either by reducing the actual size or controlling the attitude to have a
+smaller profile with respect to the debris impact directions. For most LEO spacecraft,
+the normalized average relative impact rates by spacecraft surface are: 10 km/s for
+leading edge + 45°, 2 km/s for surfaces 90° to the ram direction, | km/s for trailing
+edge, 0.1 km/s for space pointing, and 0.01 km/s for Earth pointing surfaces. Operators
+
+21.2
+
+TABLE 21-4.
+
+* Design for end-of-life environment.
+¢ Have a “debris expert” on the project.
+
+¢ Make sure everyone on a project is familiar
+with the debris hazard.
+
+* Perform a cost-benefit tradeoff study of
+
+systems to allow for degraded performance
+
+due to debris (e.g., thermal control, power).
+
+¢ Orient sensitive objects that must be
+exposed to space on the spacecraft’s
+trailing edge or facing the Earth to decrease
+particle strikes.
+
+Orbital Debris—A Space Hazard 849
+
+Common Sense Design Guidelines.
+
+* Make critical systems redundant.
+¢ Don't create or leave debris in orbit.
+
+* Shield or shadow sensitive surfaces and
+systems with less sensitive components
+when possible.
+
+¢ Recognize that impacts of small debris
+make surfaces more susceptible to atomic
+oxygen damage and degradation.
+
+* Consider possibile damage beyond
+perforation: spallation, high-velocity
+fragments from impact site, impulsive
+loading, and plasma from particle strikes on
+
+solar arrays (leading to possible electrical
+discharge).
+
+could also place the spacecraft in a less populated orbital regime; however, this is not
+possible for most missions.
+
+We may need active debris avoidance for critical space structures such as space
+stations or satellite constellations. This requires active tracking of co-orbiting objects,
+additional propellant, coordination with satellite tracking facilities (such as
+USSPACECOM), and coordination with co-orbiting spacecraft operators. At the pres-
+ent time, systems such as the International Space Station, the Space Shuttle, and LEO
+satellite constellations are the only missions using or planning to use active collision
+avoidance. The Shuttle has made several highly publicized maneuvers to avoid cata-
+loged objects. Active avoidance is only practical for protection from the largest of
+fragments and may still be suspect since ground-based tracking accuracy is poor for
+most orbiting objects (unless the tracking system expends extra effort to update a
+specific satellite). Thus, it is not a cost-effective option for most satellite operators at
+this time.
+
+Debris Mitigation
+
+All space users have a responsibility to include debris mitigation techniques in their
+mission profiles. As identified in Fig. 21-2, there are three phases where users can min-
+imize the addition of debris to the environment. While non-governmental missions do
+not have any debris mitigation regulations at this time, the U.S. Government requires
+its missions to minimize debris [NSS 1740.14, 1995; NMI 1700.8, 1993]. Additional
+regulations and guidelines are in work by both NASA and the UN.
+
+Launch system designers should plan their scenarios to reduce launch-related
+debris such as protective shrouds, separation devices and expended rocket bodies.
+They should not allow this hardware to reach long-lived orbits. Historically, an
+average of three large pieces of debris are produced from each successful mission.
+However, the launch process probably generates many more nontrackable pieces.
+
+As a Satellite is inserted into its final orbit, we should take care not to produce
+debris during the last impulsive maneuvers. A major source of debris in the past was
+exploding rocket stages. Some of these propulsion-related explosions occurred during
+attempted burns while others resulted from inadvertent mixing of hypergolic fuels or
+
+850 Limits on Mission Design
+
+tank overpressurization years after the rocket’s last use. Designers corrected this
+problem on many rocket bodies by venting the fuel or conducting an idle burn.
+
+Before we declare a satellite operational, we must deploy its solar panels, uncover
+its instruments, and stabilize its orientation. Given the present design of satellites, all
+these activities may release hardware into space. As a Satellite operates and ages, paint
+chips off and small pieces of hardware work themselves free, creating more orbital
+debris.
+
+Once that satellite or rocket body ceases to perform a useful purpose, we may
+consider the entire system to be debris, and we should remove it for the sake of the
+remaining operational payloads. We should add this mission termination phase to
+the mission profile, using propulsive maneuvers to put it into a disposal orbit or re-
+entry trajectory. We use disposal orbits mostly for GEO satellites, while reentry is
+most economical for many LEO orbits. We must consider these maneuvers in the
+design process to control the growth of orbital debris. Regardless of our regime, all
+energy sources should be passivated (e.g., fuel and pressure tanks vented, batteries
+safed, and momentum wheels despun).
+
+The design decision in response to orbital debris is basically a cost balance between
+design and risk costs. As discussed in Sec. 19.2, the risk cost is the expected cost of
+failure. This value is simply the probability of a debris encounter causing a failure
+times the cost to compensate for this failure. This may entail accepting degraded
+performance or launching a substitute. A worsening debris environment may increase
+the space segment failure probability (Sec. 19.2) which we can offset by changes in
+design such as shielding, redundancy, or avoidance maneuvers. Each of these counter-
+measures exact a financial burden of increased direct costs (design and manufacturing)
+and indirect costs (launch and maintenance), yet may result in greater reliability for all
+space systems.
+
+References
+
+Christiansen, E.L. 1993. “Design and Performance Equations for Advanced Meteor-
+oid and Debris Shields.” Int. J. Impact Engineering, vol. 14, pp. 145-156.
+
+Christiansen, E.L., J.L. Crews, J.E. Williamsen, J.H. Robinson, and A.M. Nolen.
+1995. “Enhanced Meteoroids and Orbital Debris Shielding.” Int. J. Impact Engi-
+neering, vol. 17, pp. 217-228.
+
+Christiansen, E.L., J. Hyde, and G. Snell. 1992. “Spacecraft Survivability in the
+Meteoroid and Debris Environment.” Paper No. AIAA 92-1409, presented at the
+AIAA Space Programs and Technologies Conference, Huntsville, AL, March
+24-27.
+
+Christol, Carl Q. 1982. The Modern International Law of Outer Space. New York:
+Pergamon Press.
+
+Cour-Palais, B.G. 1979. “Space Vehicle Meteoroid Shielding Design.” Paper No. ESA
+SP-153 in Proceedings of Comet Halley Micrometeoroid Hazard Workshop,
+Noordwijk, The Netherlands: ESA Scientific and Technical Publications Branch.
+
+Goldman, Nathan C. 1988. American Space law, International and Domestic. Ames,
+Iowa: Iowa State University Press.
+
+References 851
+
+Hayashida, K.B. and J.H. Robinson. 1991. “Single Wall Penetration Equations,”
+NASA TM-103565, December.
+
+Jasentuliyana, N. and R.S.K. Lee. 1979. Manual on Space Law. New York: Oceana
+Publications.
+
+Johnson, N.L., A. Bade, P. Eichler, E. Cizek, S. Robertson, and T. Settecerri. 2002.
+“History of On-Orbit Satellite Fragmentations.” 11th edition, July, JSC-28383,
+NASA Johnson Space Center.
+
+Johnson, N.L., and D.S. McKnight. 1991. Artificial Space Debris. Malabar, FL:
+Krieger Publishing.
+
+Kessler, D.J. 1985. “Orbital Debris Issues.” Advances in Space Research. 5 (2): 3-10.
+
+Kessler, D.J. and B.G. Cour-Palais. 1978. “Collision Frequency of Artificial Sat-
+ellites: The Creation of a Debris Belt.” Journal of Geophysical Research.
+83:2637-2646.
+
+Klinkrad, H., J. Bendisch, H. Sdunnus, P. Wegener, and R. Westerkamp. 1997. “An
+Introduction to the 1997 ESA MASTER Model.” in Proceedings of the Second
+European Conference on Space Debris, Darmstadt, Germany, March 17-19, 1997,
+W. Flury, ed, ESA SP-393, May, pp. 217-224.
+
+Liou, J.C., M.J. Matney, P.D. Anz-Meador, D. Kessler, M. Jansen, and J.R. Theall.
+2002. “The New NASA Orbital Debris Engineering Model: ORDEM 2000.”
+NASA/TP-2002-210780, May.
+
+NASA. 1993. “Policy For Limiting Orbital Debris Generation.” NASA Management
+Instruction (NMI) 1700.8, April 5.
+
+National Research Council, Committee on Space Debris. 1995. Orbital Debris: A
+Technical Assessment. Washington, DC: National Academy Press.
+
+National Research Council, Committee on International Space Station Meteoroid/
+Debris Risk Management. 1997. Protecting the Space Station from Meteoroids and
+Orbital Debris. Washington, DC: National Academy Press.
+
+Natural Orbital Environment Guidelines for Use in Aerospace Vehicle Development.
+1994. B.J. Anderson, ed. NASA TM 4527. June.
+
+Office of Safety and Mission Assurance. 1995. “Guidelines and Assessment Pro-
+cedures for Limiting Orbital Debris.” NASA Safety Standard (NSS) 1740.14,
+August.
+
+Reynolds, Glenn H. and Robert P. Merges. 1989. Outer Space, Problems of Law and
+Policy. Boulder, Colorado: Western Press.
+
+Taylor, E.A., M.K. Herbert, D.J. Gardner, L. Kay, R. Thomson, and M.J. Burchell.
+1998. “Hypervelocity Impact on Carbon Fibre Reinforced Plastic (CFRP)/
+Aluminum Honeycomb.” In Proceedings of the Institution of Mechanical Engi-
+neers Part G: Journal of Aerospace Engineering.
+
+Warren, H. and M.J. Yelle. 1994. “Effects of Space Debris on Commercial Spacecraft
+—-The RADARSAT Example.” In Preservation of Near-Earth Space for Future
+Generations, John A. Simpson, ed. New York: Cambridge University Press.
+
+852 Limits on Mission Design
+
+Yeomans, D.K. 1998. “Comet 55P/Tempel-Tuttle and the Leonid Meteors.” LEONID
+Meteoroid Storm and Satellite Threat Conference, Manhattan Beach, CA, April
+
+27-28.
+Zhukov, G. and Y. Kolosov. 1984. International Space Law. New York: Praeger.
+
+Zook, H.H., R. Flaherty, and D.J. Kessler. 1970. “Meteoroid Impact on the Gemini
+Windows.” Planetary and Space Sciences. 18:953-964.

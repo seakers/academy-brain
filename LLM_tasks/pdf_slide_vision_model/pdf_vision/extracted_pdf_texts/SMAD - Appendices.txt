@@ -1,0 +1,2465 @@
+
+Appendices
+
+Simon D. Dawson, Microcosm, Inc.
+
+A. Mass Distribution for Selected Satellites 894
+B. Astronautical and Astrophysical Data 897
+C. Elliptical Orbit Equations 902
+D. Spherical Geometry Formulas 904
+E. Universal Time and Julian Dates 913
+F. Units and Conversion Factors 919
+Earth Satellite Parameters 977
+Fundamental Physical Constants 988
+Spaceflight Constants 988
+Index to Process Tables 989
+
+ine 1unuamentai pnysicai constants and conversions factors based on them are
+those determined by the National Bureau of Standards using a least squares fit to the
+best available experimental data [Cohen, 1986]. Their intent is to create a set of
+constants which are mutually consistent to within the experimental accuracy. Other
+constants and conversion factors, such as the speed of light in vacuum or the conver-
+sion between feet and meters, are adopted as exact definitions of the units involved.
+For astronomical and astronautical constants, such as the values of GM for various
+objects in the solar system, values adopted by the International Astronomical Union
+are used. Many of these are quoted from Astrophysical Quantities [Cox, 1999], which
+kindly permitted use of proof copies for obtaining the most current data. We highly
+recommend this volume for those who need additional quantitative detail about the
+solar system or other astronomical topics.
+
+References
+
+Cohen, E. Richard and B.N. Taylor, 1986. CODATA Bulletin No. 63, Nov. New York:
+Pergamon Press.
+
+Cox, A.N. ed. 1999. Astrophysical Quantities. New York: Springer-Verlag.
+
+893
+
+894 Appendix A
+
+Appendix A
+
+Mass Distribution for Selected Satellites
+
+Table A-1 lists representative satellite masses with and without propellant for
+various types of spacecraft. Table A—2 further breaks down the dry mass by the
+percentage devoted to each subsystem. See Table 18-2 for definitions of the mass cat-
+egories and Table 10-2 for definitions of the various subsystems. Statistical data for
+the various classes of missions are also provided. Table A—-2 also includes subsystem
+masses as a percentage of the payload mass, since this may be the only mass known
+during early mission design.
+
+The data here can be used as either a preliminary estimate or check on the reason-
+ableness of more detailed methods (see Chaps. 10 and 11 for other methods). How-
+ever, such historical data should always be used with caution and substantial margin
+should be applied. The first three categories are more traditional, older DoD space-
+craft. The LightSats are newer, typically much less expensive systems from many
+developers, both US and international. As the satellite microminiaturization process
+continues, individual components will get smaller and percentages will shift, depend-
+ing on both the component mix and the mission needs.
+
+TABLE A-1. Actual Mass for Selected Satellites. The propellant load depends on the
+satellite design life.
+Loaded Propellant | Dry Mass Dry Mass
+Mass (kg) | Mass (kg) (kg) (%)
+
+Communications Satellites
+[aay] C«CT,
+FLTSATCOM6 | __9800| 109.1, 70.8] 11.1%] 68.9%
+7150.9, _1090/ _t0ata|—_—9.5%| __—~90.5%
+joscsii | 1095.9 2286] —~867.3[ —20.9%| 79.1%)
+
+Propellant
+Mass (%)
+
+Spacecraft Name
+
+NATO Tl [346i 856 92.6%
+Intelsat IV | 669.2] 136.4] 532.8 20.4% 79.6%
+
+TDRSS 2150.9 585.3 1565.7 27.2% 72.8%
+g817| 166.2| 815.6] —*16.9%| —«83.1%
+Standard Deviation | 549.9] 179.9 7.3%
+
+Navigation Satellites
+GPS Block 1 508.6 29.5 479.1 5.8% 94.2%
+699.1
+
+a) 5.7%] 94.3%
+__60.6[ 858.0] 6.6% 03.4%
+
+[866] —*T7OKA——=C« TH] _—~C«MT OM
+DSPs ___—SC*d~Ct ar s| steal atta 7% —a 0%
+DMSP5D2 «| —iaaS S| ——SCiét|—~CéTA| CHL C«T TH
+DMSPSDS | _10ass| 3.1] —t0123|_—«s 2% —iow
+[Average ——SC~*dtC*‘i TNS —~Cé
+
+Standard Deviation : a] 60as| 2am] —a
+
+coz]
+[oz]
+So
+o
+coz]
+oa
+eo
+
+
+Mass Distribution for Selected Satellites 895
+
+TABLE A-1. Actual Mass for Selected Satellites. The propellant load depends on the
+satellite design life.
+
+Loaded Propellant Propellant | Dry Mass
+Spacecraft Name Mass (kg) | Mass (kg) Mass (%) (%)
+
+LightSats
+HETE
+Clementine 232.0 49.9% 50.1%
+[Pluto Fast Fiyby 3 [eral S880] 7.8% 82.1% |
+100.0%
+60.0%
+[AMSATAO-16____| 9.0 nopropulsion| __—9.0[___—_—anfal_—*100.0%
+63.0
+Average S| ~~ 70.0| —st09.3| =| 77.4%
+44.8 g22] tal ATM] (18a
+
+Various algorithms and data are provided in Chaps. 10 and 11 to determine the
+mass of individual subsystems. Actual mass distributions are provided in Table A—2
+to develop initial estimates or perform reasonableness checks. Be careful using this
+data. The percentages given do not necessarily represent the full spectrum of satellite
+mass and subsystem mass distributions.
+
+TABLE A-2. Mass Distribution for Selected Spacecraft.
+
+Percentage of Spacecraft Dry Mass
+Spacecraft Name | Payload | Structure | Thermal | Power | TT&C | ADCS | Propulsion
+FLTSATCOM 1-5
+
+Communications Satellites
+joa%| 18%
+30%| 6a%| 3.8%
+203% | 7.0% | 115% 8.0%
+intelsarV
+TDRSS 41% | 6.2% 6.9%
+Average aT Ate
+Navigation Satellites
+GPS Block 1 20.5%] 19.9%] 8.7%
+54% | 3.3%
+a7%| 63% | 2.7% |
+21.2%| 23.5%
+Standard Deviation| 1.6% 3.1%
+
+
+896 Appendix A
+
+TABLE A-2. Mass Distribution for Selected Spacecraft.
+
+Percentage of Spacecraft Dry Mass
+
+Spacecraft Name | Payload] Structure | Thermal] Power | TT&C [ADCS | Propulsion|
+
+Remote Sensing Satellites
+
+SS «CRemote Sensing Sateliies
+
+DSP-15 36.9%
+
+DMSP 5D-2 29.9%
+
+DMSP 5D-3 29.0%
+
+Average 24.3%
+Standard Deviation
+
+LightSats
+
+,
+SAMPEX 63
+
+HETE 35.3% 16.0% 1.8% | 20.3%] 85%] 18.1%
+Pluto Fast Flyby ‘93 18.1% 4.6%| 24.1%| 23.9%] 8.3%
+
+Orsted
+
+82
+PoSat 12.2%| 13.9% | 0.0% | 36.1%] 17.5% | 21.1%
+[Bremsat | a78%[ 208%|  o0%| eas%| 109%| 7.9%|— none|
+
+Standard Deviation 9.3% | 7.7%
+
+Standard Deviation 5.3% 3.0% | 6.6%
+
+. 4.
+Average % of 100.0% 81.1%| 12.7% | 104.6%] 28.2%) 29.9% 13.9%
+Payload Mass
+Standard Deviation 0.0%
+of % of Payload
+Mass
+
+The average values and the associated standard deviation for each of the spacecraft
+subsystems are also listed in Table A-2. The final row lists the percentage of the pay-
+load mass devoted, on the average, to the individual subsystems. This information is
+useful in the beginning of a program when we only know the mass of the payload.
+When using these estimates, be sure to apply an appropriate margin for error (See
+Chap. 10).
+
+
+Appendix B
+
+897
+
+Astronautical and Astrophysical Data
+
+See Inside Front Cover for Fundamental Physical Constants and Spaceflight Con-
+
+stants. See Inside Rear Cover for tabular Earth Satellite Data.
+
+TABLE B-1.
+Radius of the Photosphere
+
+Angular Diameter of the Photosphere at 1 AU
+Mass
+
+Mean Density
+Total Radiation Emitted
+Total Radiation per Unit Area at 1 AU
+
+Apparent Visual Magnitude at 1 AU
+
+Absolute Visual Magnitude (Magnitude at Distance of 10 parsecs)
+Color index, B-V
+
+Spectral Type
+
+Effective Temperature
+
+Inclination of the Equator to the Ecliptic
+
+Adopted Period of Sidereal Rotation (L = 17 deg)
+
+Period of Synodic Rotation Period (¢ = latitude)
+
+Mean Sunspot Period
+
+Dates of Former Maxima
+
+Mean Time from Maximum to Subsequent Minimum
+
+Physical Properties of the Sun. (Data from Cox [1999]; Seideimann [1992].)
+
+6.95508 +0.00026 x 108 m
+0.533 13 deg
+
+1.989 1 x 1029 kg
+1.409 g/cm
+3.845 x 1078 J/s
+
+1,367 Wm
+
+~26.75
+
++4.82
+
++0.650
+
+G2Vv
+
+5,777 K
+
+7.25deg
+
+25.38 days
+
+26.90 + 5.2 sin? ¢ days
+11.04 years
+
+1968.9, 1980.0, 1989.6
+6.2 years
+
+TABLE B-2. Physical Properties of the Earth. (Data from Cox [1999]; Seidelmann [1992]; Zee
+
+(1989]; McCarthy [1996].)
+Equatorial Radius, a
+Flattening Factor (Ellipticity), f= (a—c)/a
+Polar Radius,” c
+Mean Radius,* (a2c)'/3
+Eccentricity,* (a2 - eyV2q
+Surface Area
+
+Volume
+
+Ellipticity of the Equator (amax— @min)/amean
+
+Longitude of the Maxima
+Ratio of the Mass of the Sun to the Mass of the Earth
+Geocentric Gravitational Constant, GMe =“ue
+
+Mass of the Earth
+
+6.378 136 49 x 106 m
+1/298.256 42 = 0.003 352 819 70
+
+6.356 751 7x 108m
+6.371 000 3 x 108m
+0.081 819 301
+
+5.100 657 x 1014 m2
+1.083 207 x 1027 m3
+
+~1.6x 10-5
+14.805° W, 165.105°E
+332,945.9
+
+3.986 004 418 x 1014 m3s-2
+5.973 7 x 1024 kg
+
+
+898 Appendix B
+
+TABLE B-2. Physical Properties of the Earth. (Data from Cox [1999]; Seidelmann [1992]; Zee
+
+[1989]; McCarthy [1996].)
+
+Mean Density
+
+Gravitational Field Constants (Data from JGM-2; the
+following constants should be used in conjunction with
+these data: Re = 6,378.136 3 km;
+
+GMe = 398,600.441 5 km3/s2;
+We = 7.292 115 855 3 x 1075 rades~!)
+
+Mean Distance of Earth Center from Earth-Moon
+Barycenter
+
+Average Lengthening of the Day
+
+Annual General Precession in Longitude
+(i.e., Precession of the Equinoxes), at J.2000
+(T in centuries from J.2000)
+
+Obliquity of the Ecliptic, at Epoch 2000
+
+Rate of Change of the Obliquity. (T in Julian
+Centuries, T = (JD-2,451,545.0)/36,525))
+
+Amplitude of the Earth’s Nutation
+Sidereal Period of Rotation, Epoch 2000
+
+Length of Tropical Year (ref. = Y), (T in Julian
+Centuries, T = (JD-2,451 ,545.0)/36,525))
+
+T=(JD~2,451 ,545.0)/36,525
+
+Length of Anomalistic Year (Perihelion to Perihelion),
+Epoch 1999.0
+
+Mean Angular Velocity
+
+Mean Orbital Speed
+
+Mean Distance From Sun
+
+*Based on adopted values of fand a.
+
+5,554.8 kg m3
+
+Jo 1
+
+Jy 0
+
+Jp 0.108 262 692 563 881 5x 107?
+Jg 0.253 230 781 819 177 4x 10-5
+J ~0-162 042 999 x 10°
+
+4,671 km
+
+0.0015 sec/century
+
+50.290 966" + 0.022 222 6" T
+-0.004 2" T2
+
+23° 26' 21.4119"
+
+—46.815 0" T
+
+~0.000 59" T?
+
++ 0.001 813" T3
+
+2.556 25 x 10-3 deg
+
+0.997 269 68 dg
+
+= 86 164.100 4s
+
+= 29%56™ 04.098 9
+
+365.242 189 669 8 +
+
+0.000 006 15359 T-7.29x 10710 T2
++ 2.64 x 10-19 T3q,
+
+365.259 635 4 d,
+
+= 31,558,432.5 s
+
+= 7.292 1150 x 10-5 rads!
+
+= 15.041 067 178 669 10 arcsec+s7!
+= 2.978 48 x 104 mes“!
+
+= 1.000 001 057 AU
+
+= 1.495 980 29x 1011m
+
+Phase Law and Visual Magnitude of the Moon
+
+To determine the Moon’s visual magnitude, V(R,), at any distance and phase, let
+
+R be the observer-Moon distance in AU and & be the phase angle at the moon between
+the Sun and observer. Then
+
+V(R,¢) = 0.21 + SlogigR—2.5logioP(é) (B-1)
+
+where the phase law, P(é), for the Moon is given in Table B—3 (Hapke, 1974]. Note
+that the visual magnitude of the Moon at opposition (i.e., full Moon) at the mean dis-
+tance of the Moon from the Earth is —12.73.
+
+Astronautical and Astrophysical Data 899
+
+TABLE B-3. Phase Law and Visual Magnitude of the Moon.
+
+E
+E P(é) V(R.E) ~ V(F,0) P(é) V(A,E) ~ V(R,0)
+
+FullMoon| Moon | FullMoon] Moon Full Moon} Moon | Full Moon} Moon
+
+[+000 [+000 | 0.000 [0000 | 8 | 0120 | 0111 | 2001 | 2.086
+[10 |-07e7 [0759 | 0258 | 0.209 | 90 | 0.0824 [0780 | 2.709 | 2769
+580 | 100 | 0. ; 3.089
+3.481
+3.958
+4.503
+5.078
+
+5.842
+
+20 109 3.129
+30 | 0.466 | 0.453 3.558
+0.356 | 0.350 | 1.121 4.009
+Pozi [oat | 1680 [1680 | 140 | — | 0.0003
+
+so | — |
+
+Geocentric and Geodetic Coordinates on the Earth
+
+As shown in Fig. B-1, geocentric coordinates are defined with respect to the center
+of the Earth. However, latitude and longitude are frequently given in geodetic coordi-
+nates which are defined with respect to an oblate reference ellipsoid (i.e., a figure
+created by rotating an ellipse about its minor axis), with the height, 4, measured per-
+pendicular to a plane tangent to the ellipsoid. A triaxial ellipsoid is not generally used
+since the gain in representation is smal]. Although not normally used for space mission
+work, astronomical latitude and longitude are defined relative to the local vertical, or
+the normal to the equipotential surface of the Earth. Thus, astronomical latitude is
+defined as the angle between the local vertical and the Earth’s equatorial plane. Max-
+imum values of the deviation of the vertical, or the angle between the local vertical and
+the normal to a reference ellipsoid, are about 1 minute of arc. Maximum variations in
+the height between the ellipsoid and mean sea level (also called the equipotential
+surface) are about 100 m. Seidelmann [1992] provides an extended discussion of
+coordinate systems and transformations.
+
+Axis of Rotation
+
+Reference
+Ellipsoid
+
+Polar
+Radius
+
+Tangent to
+Ellipse at p’
+
+Equatorial
+Radius
+
+Fig. B-1. Geocentric vs. Geodetic Coordinates.
+
+900 Appendix B
+
+The geocentric latitude, 0’, of a point, p, on the surface of the Earth is the angle at
+the Earth’s center between p and the equatorial plane. The geodetic or geographic lat-
+itude, @, is the angle between the normal to the reference ellipsoid (at point p’) and the
+equatorial plane. The ellipsoid is typically defined by the flattening, f, or the inverse
+flattening, \/f, given by
+
+a-b
+a
+
+f=
+
+where a and b are the semimajor and semiminor axes of the ellipsoid.
+
+The geocentric longitude, A, is defined by the angle between the reference (or zero)
+meridian and the meridian of point p (and p’), measured eastward around the Earth
+from 0° to 360°. The geodetic longitude will be identical to the geocentric longitude
+assuming that the reference ellipsoid has the same axes and reference meridian as the
+geocentric system.
+
+The ellipsoidal height, h, of point p is measured along the normal to the ellipse, and
+with respect to the point of intersection of that normal with the ellipsoidal surface, that
+is, from point p’. Other ‘heights’ are possible—for example, the geocentric radius, r,
+and the height above mean sea level or geoidal height, H.
+
+We often express the position of a point, p, on or near the Earth in a right-handed
+geocentric cartesian coordinate system (X, Y, Z). Here the direction of the Z-axis is
+that of the rotational reference ellipsoid, the X-axis is perpendicular to Z through the
+reference meridian. The Y-axis completes the triplet in a right-handed sense.
+
+Conversion from geocentric to geocentric cartesian coordinates is given by
+
+= 1/ 298,256 42 for the Earth (B-2)
+
+xX cos ¢’ cos (B-3)
+Y| =r\ cosd’sinA
+Z > sind’
+Conversion from geodetic to geocentric cartesian coordinates is given by
+(", + h)cospcosA (B-4)
+
+Xx
+y| = (, + h) cos sin A
+Z|, (( -e*)N, + h)sing
+where ¢ is the eccentricity of the ellipsoid
+e= Va —B? fa=\2f-S? (B-5)
+and Ng is the ellipsoidal radius of curvature in the meridian, given by
+— af fi 22 eim2
+N, =a/ 1—e* sin’ @ (B-6)
+Conversion from geocentric cartesian to geocentric coordinates is given by
+g’ tan-"(Z Vx? +y?)
+A| = tan7'(Y/X) (B-7)
+
+|p VX? 4742?
+
+
+Astronautical and Astrophysical Data 901
+
+Note that # = sin“! (Z/r) may also be used to determine ¢", and that these functions
+are evaluated such that -90° <# <+90°, and 0° <A <360°.
+
+To convert from geocentric cartesian to geodetic coordinates is not as simple a pro-
+cedure. An exact solution has been given by Borkowski [1989] based on using an
+expression for the reduced latitude in a solvable fourth-degree polynomial.
+
+We first calculate intermediate variables as follows:
+
+R=VX?+Y? Q =2(E? - F’)
+F =[bZ + (a? -b*)|/aR v=(D-0)" -(p+9)"
+
+P=4(EF +1)/3 o=4[ Jey +e]
+
+|”
+
+t=[G? +(F-vG)/(2G-E)] -G
+
+Finally, the latitude and ellipsoidal height are computed from:
+
+o=tan™(a(1-17)/ (201)}
+h =(R-at)cos@+(Z— b)sing (B-8)
+
+To obtain the correct sign, set the sign of b to that of Z before beginning. This
+solution is singular for points at the Z-axis (r = 0) or in the XY-plane. For which:
+
+ry ee g=9'=0
+
+h=Z~-b Fag [AY plane
+
+(B-9)
+Additionally, for points close to these conditions, some round-off error may be
+avoided and the accuracy improved slightly be replacing the value of v with
+
+v=v?+2Q/3P (near Z axis or XY plane) (B-10)
+
+Finally,
+
+A= tan '(Y /X) (B-11)
+
+References
+
+Borkowski, K. M. 1989. “Accurate Algorithms to Transform Geocentric to Geodetic
+Coordinates,” Bulletin Géodésique 63, no.1, p. 50-56.
+
+Cox, A.N. ed. 1999. Astrophysical Quantities, 1999. New York: Springer-Verlag.
+Hapke B. 1974. “Optical Properties of the Lunar Surface.”
+McCarthy, Dennis D., USNO. 1996. “TERS Technical Note 21.” IERS Conventions.
+
+Seidelmann, P. Kenneth, USNO, ed. 1992. The Explanatory Supplement to the
+Astronomical Almanac. Mill Valley, CA: University Science Books.
+
+Zee, Chong-Hung. 1989. Theory of Geostationary Satellites. Netherlands: Kluwer.
+
+902
+
+Appendix C
+
+Elliptical Orbit Equations
+
+Argument of perigee: @ Inclination: i
+
+ion
+
+See Table 6-2
+if (e, <0) then =22-@
+
+Mean anomaly: M
+
+See Table 6-2 M= n(t _ to) + My
+Eccentric anomaly: E
+
+1/2
+wn( =) = = taf 4) F) «(t-t9) + Mo
+2 ite 2
+
+5 M=E-esinE
+V1-—e* sinv See Table 6-3
+
+1+ecosv M. ;
+e+cosv ean motion: n
+
+E=———
+ees 1+ecosv n=/u/a°
+
+See Table 6-3 See Table 6-3
+Eccentricity: e
+
+sin E =
+
+Nodal vector: n
+=r,
+
+a
+ll
+i Vm
+at jat
+
+n=zxh
+
++" See Eq. (6-8)
+
+is) |x
+
+Period: P
+
+-% P=2n/n P=2nJa'/u
+e =
+R COSY, ~ F COSV, See Table 6-2
+See Eq. (6-3)
+Eccentricity vector: e
+
+a
+Q [s™
+I
+_
+a
+tl
+_
+I
+
+Radius of perigee: ly
+= a(1 - e)
+
+e-1 (7-H) (e-vyy| (1-e)
+
+r= Se
+See Eq. (6-9) rp *(1te)
+Flight path angle: y a-h
+
+esinv (1+ ecos v, )
+
+l+e
+
+tan y = —— _
+y 1+ecosv =
+
+See Table 6-5 See Table 6-2
+
+
+Elliptical Orbit Equations 903
+
+Radius of apogee: r, Time since periapsis: t
+(E -esin E)
+
+n
+See Table 6-3
+
+True anomaly: v
+
+(1 + ecosv, ) v=cor"| 9]
+
+=F er
+mn Y - ‘) if \ 0 th =2
+See Table 6-2 if (r°V)< en v=2n-v
+
+1+
+Radius: r cosV = nlite) _l
+
+a(l - e”)
+
+~ 1+ecosv
+
+1+ecosv
+See Eq. (6-3)
+Right ascension of the node: Q
+
+t=
+
+Q= col a See Table 6-2
+x| {n
+
+if (ny <0) then Q=227-Q | Velocity: V
+where n is the nodal vector not the V= 2u
+
+mean motion r a
+
+See Table 6-2
+
+. : tV, ="aVa
+Semimajor axis: a
+
+See Eq. (6-4)
+
+Circular velocity: Vi.
+Veire = YI
+
+See Eq. (6-5)
+
+Escape velocity: V5.
+
+Vese = ¥2u/r
+
+See Eq. (6-6)
+
+See Table 6-2
+
+Specific angular momentum: h
+h=rxV
+h=r,V,= tyVp
+
+See Eq. (6-7) oo
+
+
+904
+
+Appendix D
+
+Spherical Geometry
+
+D.1 General Formulas
+
+This appendix provides a summary of basic rules. More detailed discussions are
+provided by Green [1985], Smart [1977], and Newcomb [1960]. Wertz [2001] pro-
+vides a detailed discussion of global geometry and its application to problems of space
+mission analysis, including a discussion of “full-sky” techniques that eliminate the
+quadrant ambiguities which make automated spherical geometry solutions complex
+and inconvenient.
+
+A right spherical triangle is one with at least one right angle. (Unlike plane trian-
+gles, spherical triangles can have 1, 2, or 3 right angles.) Any two of the remaining
+components, including the two remaining angles, serve to completely define the trian-
+gle. Napier’s Rules, given in any of the above books, provide a concise formulation
+for all possible right spherical triangles. However, experience has shown that it is
+substantially more convenient to write out explicitly the rules for the relatively small
+number of possible combinations of known and unknown sides and angles. These are
+listed in Table D-1.
+
+A quadrantal spherical triangle is one with at least one side which is 90 deg in
+length. As with right spherical triangles, any two of the remaining five components
+completely define the triangle. These are given by a corresponding set of Napier’s
+Rules. Again, it is more practical to write out explicitly all possible relationships.
+These are given in Table D-2.
+
+An oblique spherical triangle has arbitrary sides and angles. Sides and angles are
+generally defined over the range of 0 to 180 deg, although most of the spherical geom-
+etry relations continue to hold in the angular range up to 360 deg. A set of basic rules
+which can be applied to any spherical triangle are given in Table D-3. Finally, these
+general rules can be used to write explicit expressions for any of the unknown compo-
+nents in any oblique spherical triangle with any three components known. These are
+given in full by Wertz [2001].
+
+References
+
+Green, Robin M. 1985. Spherical Astronomy. Cambridge: Cambridge University
+Press.
+
+Newcomb, Simon. 1960. A Compendium of Spherical Astronomy. New York: Dover.
+
+Smart, W.M. 1977. Textbook on Spherical Astronomy, 6th ed. Cambridge: Cambridge
+University Press.
+
+Wertz, James R. 2001. Mission Geometry; Orbit and Constellation Design and Man-
+agement. El Segundo, CA, and Dordrecht, The Netherlands: Microcosm Press and
+Kluwer Academic Publishers.
+
+Spherical Geometry 905
+
+Table D-1. Right
+Spherical Triangles
+
+The line below each formula indicates the
+
+quadrant of the answer. Q(A) = Q(a) means h
+that the quadrant of angle A is the same as
+
+that of side a. “2 possible solutions” means
+that either quadrant provides a correct solu-
+tion to the defined triangle.
+
+b
+
+Given Find
+
+a,b cos h = cos a cos b tan A = tana/sin b tan B = tan b/sina
+Qh) = {Q(a) Q(B)}* — Q(A) = Qa) Q(B) = Qi)
+
+a,h cos b = cosh /cosa sin A =sina/sinh cos B = tana/tanh
+Qid) = {Q(a)/Q()}** QA) = Qa) Q(B) = {Q@)/Qh) }**
+
+b,h cos a=cosh/cos b cos A = tanb/tanh sin B =sinb/sinh
+Qa) = (Q(B) / QUA) }F*  Q(A) = (Q(2)/Q(A)}** Q(B) = QS)
+
+aA sin b = tana/tanA sinh =sina/sinA sin B = cos A/cosa
+2 possible solutions 2 possible solutions 2 possible solutions
+
+a, B tan b =sina tanB tan h = tana/cos B cos A =cosa sin B
+Qs) = QB) Qh) = {Q@) QB)}* QA) = Q@)
+
+b,A tana =sin b tanA tanh =tanb/cosA cos B=cos b sinA
+Qa) = QA) Qh) = {Q(b) QA)}* = Q(B) = QS)
+
+b, B sina = tanb/tanB sinh =sin b/sin B sin A = cos B/cos b
+2 possible solutions 2 possible solutions 2 possible solutions
+
+h,A sina =sin hk sinA tan b=tanhcosA tan B=1/coshtanA
+Qa) = Q(A) QUd) = {QA)/ QUA} F* Q(B)={ QUA) /Q(h) } **
+
+h, B sin b = sinh sinB tan a = tanh cos B tanA =1/cosh tanB
+Qs) = Q(B) Qla) = {Q(B) / QUA} **  Q(A)={ Q(B) /Q(A) } **
+
+A, B cosa =cosA/sin B cos b=cos B/sin A cosh=1/tanA tan B
+Qa) = Q(A) Q(s) = Q(B) Qh) = {Q(A) Q(B) }*
+
+* {Q(x) Q(y)} = Ist quadrant if Q(x) = Q(y), 2nd quadrant if Q(x) # Q(y)
+** {Q(x)/Q(h)} = quadrant of x if h <90 deg, quadrant opposite x ifh > 90 deg.
+
+906
+
+Appendix D
+
+Table D-2. Quadrantal
+Spherical Triangles
+
+The line below each formula indicates the quadrant of
+the answer. Q(A) = Q(a) means that the quadrant of
+angle A is the same as that of side a. “2 possible
+solutions” means that either quadrant provides a
+correct solution to the defined triangle.
+
+Given
+
+A,B
+
+A,b
+
+B,a
+
+B, b
+
+a,b
+
+Find
+
+cos H =-cos A cosB
+
+Q(H) = {Q(A) Q(B)}*
+
+cos B=~—cos H/cosA
+
+Q(B) = {Q(A)\Q)}**
+
+cos A =—cos H/cos B
+
+Q(A) = (Q(B) \ OCA) }**
+
+sin B =tan A/tana
+2 possible solutions
+
+tan B =sin A tan b
+
+Q(B) = Q(b)
+tan A =sin B tana
+Q(A) = Qa)
+
+sin A = tan B/tanb
+2 possible solutions
+
+sin A = sin H sina
+
+Q(A) = Qa)
+
+sin B = sin H sin b
+
+Q(B) = Q(d)
+
+cos A = cosa/sin b
+
+Q(A) = Q(a)
+
+tana =tanA/sinB
+
+Q(a) = QA)
+
+sina =sinA/sinH
+
+Q(a) = Q(A)
+
+cos a =— tan B/tan H
+
+Q(a) = {Q(B)\ OA) }**
+
+sin H =sin A /sina
+2 possible solutions
+
+tan H =-tanA/cos b
+Q(A) = {Q(A) Q(b)}*
+
+tan H =-tan B/cosa
+Q(H) = {Q(B) Q(a)}*
+
+sin H = sin B/sinb
+2 possible solutions
+
+tan B =-tan H cosa
+
+Q(B) = {Q(a)\ Q(A)}**
+
+tan A =-tan H cos
+
+Q(A) = {Q()\ OC)}**
+
+cos B = cos b/sina
+
+Q(B) = Qe)
+
+90°
+
+tan b =tan B/sinA
+Q(b) = Q(B)
+
+cos b =—tan A/tan H
+Q(b)={ Q(ANQ(A) } **
+
+sin b =sin B/sin H
+
+Q(d) = Q(B)
+
+sin b =cosa/cosA
+2 possible solutions
+
+cos a= cosA sin b
+
+Q(a) = Q(A)
+cos b = cos B sina
+Q(s) = Q(B)
+
+sina =cos b/cosB
+2 possible solutions
+
+tan b =-1/ cos H tana
+Q(b)={ Q(a) \O(H) } **
+tana =—I/ cos H tanb
+Q(a)={ Q(b) \Q(A) }**
+
+cos H =-1/tana tanb
+QUA) = {Qla@) Q(4)}*
+
+*{Q(x) Q(y)} = Ist quadrant if Q(x) = Q(y), 2nd quadrant if Q(x) ¥ QO)
+**{Q(x)\ Q(H)} = quadrant of x if H > 90 deg, quadrant opposite x if H<90 deg.
+
+Spherical Geometry 907
+
+Table D-3. Oblique
+Spherical Triangles
+
+The following rules hold for any
+spherical triangle:
+
+sina sinb _ sinc
+sinA sinB sinC
+
+The Law of Sines:
+
+The Law of Cosines for Sides:
+cos a=cos bcosc+sinb sine cosA
+cos b=cosc cos a+ sinc sinacos B
+cos c=cosacosb+sinasinbcos C
+
+The Law of Cosines for Angles:
+cos A=-—cos Bcos C + sin B sinC cos a
+cos B=-cos CcosA + sin C sinA cos b
+cos C=-cos A cos B + sinA sin B cos c
+
+Gauss’s Formula:
+
+Pn
+sin [4 (a- b)|
+
+- cos C/2
+sinc/2
+
+sin[5.(A-B)| =
+Useful Derived Formulas:
+
+c= tan! (tan bcos A) + tan-!(tan a cos B)
+
+C= tan" — 2 stan)
+tan Acosb tan Bcosa
+
+D.2 Thermal Geometry*
+
+As discussed in Sec. 11.5, thermal calculations are made more complex by both the
+IR and albedo radiation from the Earth or other nearby planet. Because the planet fills
+a large area of the sky from low orbit, the calculation of geometrical factors is complex
+and not amenable to simple approximations. Consequently, the thermal IR and albedo
+
+* New section added to the Sth printing, Sept. 2003.
+
+908 Appendix D
+
+inputs are both adjusted by thermal geometry factors, Fp and F yypedg, which are listed
+for a common range of spacecraft altitudes and attitudes in the tables below. Compu-
+tation of the values needed for the table look-up are described here and the application
+of the geometry factors is described in Sec. 11.5.
+
+The tables are applicable to a flat plate, with normal vector, N, in the vicinity of a
+planetary body. The whole spacecraft can then be approximated as a series of flat
+plates, with the geometry for each surface computed independently. (See Examples 1,
+2, and 3 in Sec. 5.1 for computation of eclipses, Sun angle geometry, and orbit average
+solar thermal input on a flat plate.) The thermal IR radiation from the Earth is modeled
+only as a function of 7, the nadir angle between N and the center of the Earth and H,
+the altitude of the spacecraft above the surface of the Earth. The albedo geometry
+factor is a function of 7, H, 82, and @. As shown in Fig. D-1, @ is the rotation angle
+about the nadir vector from the Sun to N. (Because it is a rotation angle, it is the same
+angle whether measured on the spacecraft or on the Earth’s surface.) 0 is the Earth
+central angle from the Sun to the spacecraft which, to the accuracy of the thermal
+computations, is equal to 180 deg minus the angle at the spacecraft from the Sun to
+nadir.
+
+Plane Parallel
+to Face
+
+/ z yN Sun Path
+Direction Normal {ff / / aN
+
+to Face Xx / XL / ,
+
+Fig. D-1. Computation of Inputs to be Used in Determining the Thermal Geometry Factors.
+See text for discussion.
+
+For an Earth-oriented spacecraft, the nadir angle, 7, is known or can be computed by
+any of the methods in Secs. 5.1 and 5.2. The Earth central angle from the Sun to the
+spacecraft, 0, is given by:
+
+cos (180 deg — &) = -cos 0 = cos Azg,,, cos Bs (D-1)
+where AzZg,,, is the azimuth of the Sun relative to nadir and Bs, often called the “B
+angle,” is the angle of the Sun out of the orbit plane. The rotation angle Q is then given
+by:
+cos By +cos@cosn
+sin@sinn (D-2)
+
+cos Q =
+
+where fy is the angle from the Sun to the normal, N, to the plate in question. (See
+Sec. 5.1.)
+
+Spherical Geometry 909
+
+For planets other than the Earth, the same geometry factors can be used with the
+planetary albedo and thermal IR characteristics from Table 11-46. The altitudes listed
+in Table D-1 should be interpreted as the altitudes proportional to the planetary radius.
+Thus, in Table D-1, the data for 500 km altitude corresponds to 0.0784 Rg, where Rg
+is the Earth’s equatorial radius of 6,378.14 km. For Mars with an equatorial radius of
+3,397 km, the data for 500 km in Table D-1 corresponds to an altitude above Mars of
+3397 x 0.0784 = 266 km.
+
+TABLE D-4. Geometric Factor for Earth IR on a Flat Plate
+
+200
+(0.0314 Re)
+500
+(0.0784 Re)
+1000
+(0.158 Re)
+
+1500
+(0.235 Re)
+
+2000
+(0.314 Re)
+GEO
+(5.611 Re)
+
+
+910 Appendix D
+
+TABLE D-5. Geometric Factor for Earth Albedo on a Flat Plate for y = 0.
+
+Altitude
+(km)
+
+500
+(0.0784 Re)
+
+TABLE D-6. Geometric Factor for Earth Albedo to a Flat Plate, n = 30.
+
+F, albedo
+_ secon) ease [mae [aeee | Seen [ae ae [ae [oa Ta
+0
+
+200
+(0.0314 Re)} 30
+60
+90
+500 0
+(0.0784 Re)| 30
+60
+90
+1000 0
+(0.158 Re) | 30
+60
+
+1500
+(0.235R,)
+
+2000
+(0.314 Re)
+
+
+Spherical Geometry 911
+
+TABLE D-7. Geometric Factor for Earth Albedo on a Flat Plate for n = 60.
+
+Att. am) a=%0
+
+200
+(0.0314 Re)
+500
+(0.0784 Re)
+
+1000
+(0.158 R-)
+
+1500
+(0.235 Re)
+
+TABLE D-8. Geometric Factor for Earth Albedo on a Flat Plate for n = 90.
+
+Atom) [oT a0 [aaa
+0
+30
+60
+90
+
+500 0
+(0.0784 R-)| 30
+60
+90
+
+0
+30
+60
+
+
+912 Appendix D
+
+TABLE D-9. Geometric Factor for Earth Albedo on a Fiat Plate for n = 120.
+
+200 0
+(0.0314 Re)
+
+500
+(0.0784 Re)
+
+)
+)
+)
+
+1000
+(0.158 Re
+
+1500
+(0.235 Re
+2000
+(0.314 Re)
+GEO
+(5.611 Re)
+
+200
+(0.0314 Re)
+500
+(0.0784 Re)
+60
+90
+1000 0
+(0.158R_) | 30
+60
+90
+1500 0
+(0.235 Re) | 30
+60
+90
+)
+)
+
+2000 0
+(0.314 Re) | 30
+
+GEO
+(5.611 Re
+
+913
+
+Appendix E
+Universal Time and Julian Dates
+
+James R. Wertz, Microcosm, Inc.
+
+Calendar time in the usual form of date and time is used only for input and output
+because arithmetic is cumbersome in months, days, hours, minutes, and seconds.
+Nonetheless, this is used for most human interaction with space systems because it’s
+the system with which we are most familiar. Even with date and time systems,
+problems can arise, because time zones are different throughout the world and
+spacecraft operations typically involve a worldwide network. The uniformly adopted
+solution to this problem is to use the local standard time corresponding to 0 deg
+longitude (i.e., the Greenwich meridian) as the assigned time for events anywhere in
+the world or in space. This is referred to as Universal Time (UT), Greenwich Mean
+Time (GMT), or Zulu (Z), all of which are equivalent for most practical spacecraft
+operations. The name Greenwich Mean Time is used because 0 deg longitude is
+defined by the site of the former Royal Greenwich Observatory in metropolitan
+London.
+
+Civil time, T,;,;, as measured by a standard wall clock or time signals, differs from
+Universal Time by an integral number of hours, corresponding approximately to the
+longitude of the observer. The approximate relation is:
+
+Teivil = UT+(L+ 7.515 (E-1)
+
+where T,.;,;; and UT are in hours, and L is the longitude in degrees with the plus sign
+corresponding to East longitude and the minus sign corresponding to West longitude.
+The conversion between civil time and Universal Time for most North American and
+European time zones is given in Table E-1. Substantial variations in time zones are
+created for political convenience. In addition, most of the United States and Canada
+observe Daylight Savings Time from the first Sunday in April until the last Sunday in
+October. Most European countries observe daylight savings time (called “summer
+time’) from the last Sunday in March to the first Sunday in October. Many countries
+in the southern hemisphere also maintain daylight savings time, typically from
+October to March. Countries near the equator typically do not deviate from standard
+time.
+
+Calendar time is remarkably inconvenient for computation, particularly over long
+time intervals of months or years. We need an absolute time that is a continuous count
+of time units from some arbitrary reference. The time interval between any two events
+may then be found by simply subtracting the absolute time of the second event from
+that of the first. The universally adopted solution for astronomical problems is the
+Julian Day, JD, a continuous count of the number of days since Greenwich noon
+(12:00 UT) on January 1, 4713 BC", or, as astronomers now say, -4712. Because
+Julian Days start at noon UT, they will be a half day off with respect to civil dates.
+While this is inconvenient for transforming from civil dates to Julian dates, it was
+useful for astronomers because the date didn't change in the middle of the night (for
+European observers).
+
+914 Appendix E
+
+TABLE E-1. Time Zones in North America, Europe, and Japan. In most of the United
+States, Daylight Savings Time is used from the first Sunday in April until the last
+Sunday in October. In Europe, the equivalent “surnmer time” is used from the last
+Sunday in March to the first Sunday in October.
+
+| rimezone | Standard Meridian UT Minus Daylight
+Time Zone (Deg, East Long.) Time (Hours) Time cm
+SC
+[Eestem fC
+[Central [70
+
+Mountain
+
+Paste [ea
+rasta
+Hawaii at
+apa
+[eentaleupe [OC
+[United Kingom [0
+
+As described below, there are four general approaches for converting between cal-
+endar dates and Julian dates.
+
+Table Look-Up
+
+Tabulations of the current Julian Date are in most astronomical ephemerides and
+almanacs. Table E-2 lists the Julian Dates at the beginning of each year from 1990
+through 2031. To find the Julian Date for any given calendar date, simply add the day
+number within the year (and fractional day number, if appropriate) to the Julian Date
+for Jan 0.0 of that year from Table E-2. Day numbers for each day of the year are on
+many calendars or can be found by adding the date to the day number for day 0 of the
+month from Table E-3. Thus 18:00 UT on April 15, 2002 = day number 15.75 +90 =
+105.75 in 2002 = JD 105.75 + 2,452,274.5 = JD 2,452,380.25.
+
+To convert from Julian Days to dates, determine the year in which the Julian Date
+falls from Table E-2. Subtract the Julian Date from the JD for January 0.0 of that year
+to determine the day number within the year. This can be converted to a date (and time,
+if appropriate) by using day numbers on a calendar or subtracting from the day number
+for the beginning of the appropriate month from Table E-3. Thus, from Table E-2,
+JD 2,451,608.25 is in the year 2000. The day number is 2,451,608.25 — 2,451,543.5 =
+64.75. From Table E-3, this is 18:00 UT, March 4, 2000.
+
+Software Routines Using Integer Arithmetic
+A particularly clever procedure for finding the Julian Date, JD, associated with any
+current year, Y, month, M, and day of the month, D, is given by Fliegel and Van
+
+* This strange starting point was suggested by an Italian scholar of Greek and Hebrew, Joseph
+Scaliger, in 1582 as the beginning of the current Julian period of 7,980 years. This period is
+the product of three numbers: the solar cycle, or the interval at which all dates recur on the
+same days of the week (28 years); the lunar cycle, containing an integral number of lunar
+months (19 years); and the indiction or the tax period introduced by the Emperor Constantine
+in 313 AD (1S years). The last time that these started together was 4713 BC and the next time
+will be 3267 AD. Scaliger was interested in reducing the astronomical dating problems asso-
+ciated with calendar reforms of his time and his proposal had the convenient selling point that
+it pre-dated the ecclesiastically approved date of creation, October 4, 4004 BC.
+
+Universal Time and Julian Dates 915
+
+TABLE E-2. Julian Date at the Beginning of Each Year from 1990 to 2031. See text for
+explanation of use. The day number for the beginning of the year is called “Jan.
+0.0” (actually Dec. 31st of the preceding year) so that day numbers can be found
+by simply using dates. Thus, Jan. 1 is day number 1 and has a JD 1 greater than
+that for Jan.0. * =leap year.
+
+Year for Jan 0.0 UT Year for Jan 0.0 UT for Jan 0.0 UT
+47,891.5 53,004.5 58,118.5
+48,256.5 53,370.5 58,483.5
+48,621.5 53,735.5 58,848.5
+48,987.5 54,100.5 59,214.5
+49.352.5 54,465.5 59,579.5
+49,717.5 54,831.5 59,944.5
+50,082.5 55,196.5 60,309.5
+50,448.5 55,561.5 60,675.5
+50,813.5 55,926.5 61,040.5
+51,178.5 56,292.5 61,405.5
+51,543.5 56,657.5 61,770.5
+51,909.5 57,022.5 62,136.5
+52,274.5 57,387.5 62,501.5
+52,639.5 57,753.5 62,866.5
+
+TABLE E-3. Day Numbers for Day 0.0 of Each Month. Leap years (in which February has 29
+days) are those evenly divisible by 4. However, years evenly divisible by 100 are
+not leap years, except that those evenly divisible by 400 are. Leap years are
+indicated by * in Table E-2.
+
+iw)
+pS
+b
+
+
+916 Appendix E
+
+Flandern [1968] as a computer statement using integer arithmetic. Note that all of the
+variables must be defined as integers (i.e., any remainder after a division must be
+truncated) and that both the order of the computations and the parentheses are critical.
+This procedure works in FORTRAN, C, C++, and Ada for any date on the Gregorian
+calendar that yields JD > 0. (Add 10 days to the JD for dates on the Julian calendar
+prior to 1582.)
+
+JD = D — 32,075 + 1461 x (Y + 4800 + (M — 14)/12)/4
++ 367 x (M—2—(M - 14)/12 x 12)/12
+-3 x ((Y + 4900 + (M — 14) / 12) / 100) /4 (E-2a)
+
+Here JDg is the Julian Day beginning at noon UT on the given date and must be an
+integer. For a fractional day, F, in UT (i.e., day number D.F), the floating point Julian
+Day is given by:
+
+JD =JDg+F-0.5 (E-2b)
+For example, the Julian Day beginning at 12:00 UT on December 25, 2007 (Y = 2007,
+M = 12, D=25) is JD 2,454,460 and 6:00 UT on that date (F = 0.25) is JD
+
+2,454,459.75.
+The inverse routine for computing the date from the Julian Day is given by:
+
+L = JDp + 68,569 (E-3a)
+N = (4xL)/ 146,097 (E-3b)
+L=L-(146097 x N+3)/4 (E-3c)
+I = (4000 x (L + 1))/ 1,461,001 (E-3d)
+L=L-(1461x1)/4+31 (E-3e)
+J=(80xL)/ 2,447 (E-3f)
+D=L- (2447 x J)/80 (E-3g)
+L=J/1 (E-3h)
+M=J+2-12xL (E-3i)
+Y = 100x(N-49)+1+L (E-3))
+
+where integer arithmetic is used throughout. Y, M, and D are the year, month, and day,
+and I, J, L, and N are intermediate variables. Finally, again using integer arithmetic,
+the day of the week, W, corresponding to the Julian Date beginning at 12:00 on that
+day is given by:
+
+W=JD9-7X (JD+ 1)/7)+2 (E-4)
+where W = | corresponds to Sunday. Thus, December 25, 2007 falls on Tuesday.
+
+Software Routines Without Integer Arithmetic
+
+While most computer languages provide integer arithmetic, spreadsheets such as
+Excel or MatLab typically do not. (See below for use of Excel and MatLab DATE
+functions.) Similar capabilities are available using integer (INT) or truncation
+(TRUNC in Excel, FIX in MatLab) functions. INT and TRUNC are identical for
+positive numbers, but differ for negative numbers: INT(-3.1) = -4, whereas
+TRUNC(-3.1) = -3. It is the TRUNC or FIX function which is equivalent to integer
+
+Universal Time and Julian Dates 917
+
+arithmetic. Thus, using the same variables as above, we can rewrite Eqs. (E-2) for
+computation of JD from the date as:
+
+C = TRUNC((M — 14)/12) (E-5a)
+
+JDp = D — 32,075 + TRUNC(1,461 x (Y + 4,800 + C)/4)
++ TRUNC(367 x (M —2 —C x 12/12)
+~TRUNC(3 x (TRUNC(Y + 4,900 + C) / 100) /4) (E-5b)
+
+JD =JD9+F-05 (E-5c)
+
+where again JDo, Y, M, D, and C are integers and F and JD are real numbers. Applying
+the same rules to Eq. (E-3) gives the inverse formula for the date in terms of JD as:
+
+L=JD + 68,569 (E-6a)
+N = TRUNC((4 x L) / 146,097) (E-6b)
+L=L-—TRUNC((146097 x N + 3) / 4) (E-6c)
+I = TRUNC((4000 x (L + 1)) / 1,461,001) (E-6d)
+L=L-TRUNC((1,461 x I) / 4) +31 (E-6e)
+J = TRUNC((80 x L) / 2,447) (E-6f)
+D = L—TRUNC((2,447 x J) / 80) (E-6g)
+L=TRUNC(J/ 11) (E-6h)
+M=J+2-12xL (E-6i)
+Y = 100x(N~49)+1+L (E-6j)
+
+where the variables are the same as Eq. (E-3), except that D is now a real number cor-
+responding to the date and fraction of a day. Finally, Eq. (E-4) for the day of the week
+becomes:
+
+W=JD-—7x TRUNC ((JD + 1.5)/7) +25
+=JD-—7xINT((JD + 1.5)/7) +25 (E-7)
+
+where 1 < W < 2 corresponds to Sunday. The examples given above can also serve as
+test cases for Eqs. (E-5), (E-6), and (E-7).
+
+Modified Julian Date
+
+The Julian Date presents minor problems for space applications. Because it was
+introduced principally for astronomical use, Julian Dates begin at 12:00 UT rather than
+0 hours UT, as the civil calendar does (thus the 0.5 day differences in Table E-2). In
+addition, the 7 digits required for the Julian Date did not permit the use of single
+precision arithmetic in older computer programs. This is no longer a problem with
+modern computer storage and number formats. Nonetheless, various forms of trun-
+cated Julian dates have gained at least some use.
+
+The most common of the truncated Julian dates for astronomical and astronautics
+use is the Modified Julian Date, MJD, given by:
+
+MJD = JD — 2,400,000.5 (E-8)
+
+MJD begins at midnight, to correspond with the civil calendar. Thus, in using
+Table E-2, the MJD is given by adding the day of the year (plus fractions of a day, if
+
+918 Appendix E
+
+appropriate) to the number in the table, with the “5” at the end of the table-listing
+dropped. For example, the MJD for 18:00 UT on Jan. 3, 2002 = MJD 52,277.75. The
+definition of the MJD given here is that adopted by the International Astronomical
+Union in 1997. Note, however, that other definitions of the MJD have been used. Thus,
+the most unambiguous approach remains the use of the full Julian Date.
+
+Spreadsheets such as Excel or MatLab
+
+Spreadsheets, such as Excel or MatLab, typically store dates internally as some
+form of day count and allow arithmetic operations, such as subtraction. Thus, we can
+either subtract two dates directly to determine a time interval or convert them to Julian
+Dates by simply finding the additive constant, K, given by:
+
+K=JD-I (E-9)
+
+where I is the internal number representing a known date, JD. Once this is determined,
+then the JD for any date is:
+
+ID=K+I (E-10)
+
+Many versions of Excel use Jan. 1, 1904, as “day 0,” such that Kp,., = 2,416,480.5.
+However, this should be checked for individual programs because other starting points
+are sometimes used and the starting point is a variable parameter in some versions of
+Excel. While this can be a very convenient function, Excel date routines run only from
+1904 to 2078.
+
+MatLab typically uses Jan. 1, 0000, 0:0:0 as ‘“‘day 0.” Thus, in the formula above,
+
+Any of the day counting approaches will work successfully over its allowed range.
+However, systems intended for general mathematics or business use may not account
+correctly for leap years and calendar changes when historical times or times far in the
+future are being evaluated. Thus, the use of the full Julian Date remains the most
+unambiguous solution, particularly if a program or result is to be used by more than
+one person or program. For a more extended discussion of time systems, see for exam-
+ple, Seidelmann [1992] or Wertz [2001].
+
+References
+
+Fliegel, Henry F. and Thomas C. Van Flandern. 1968. “A Machine Algorithm for
+Processing Calendar Dates.” Communications of the ACM, vol. I, p. 657.
+
+Seidelmann, P. Kenneth. 1992. Explanatory Supplement to the Astronomical
+Almanac. Mill Valley, CA: University Science Books.
+
+Wertz, James R. 2001. Mission Geometry; Orbit and Constellation Design and Man-
+agement. E] Segundo, CA, and Dordrecht, The Netherlands: Microcosm Press and
+Kluwer Academic Publishers.
+
+919
+
+Appendix F
+Units and Conversion Factors
+
+Robert Bell, Microcosm, Inc.
+
+The metric system of units, officially known as the International System of Units,
+or SI, is used throughout this book, with the exception that angular measurements are
+usually expressed in degrees rather than the SI unit of radians. By international agree-
+ment, the fundamental SI units of length, mass, and time are defined as follows (see
+National Institutes of Standards and Technology, Special Publication 330 [1991)}):
+
+The meter is the length of the path traveled by light in vacuum during a
+time interval of 1/299,792,458 of a second.
+
+The kilogram is the mass of the international prototype of the kilogram.
+
+The second is the duration of 9,192,631,770 periods of the radiation
+corresponding to the transition between two hyperfine levels of the
+ground state of the cesium-133 atom.
+
+Additional base units in the SI system are the ampere for electric current, the kelvin
+for thermodynamic temperature, the mole for amount of substance, and the candela for
+luminous intensity. Taylor [1995] provides an excellent summary of SI units for
+scientific and technical use.
+
+The names of multiples and submultiples of SI units are formed by application of
+the following prefixes:
+
+Factor by Which
+Unit is Multiplied
+
+Factor by Which
+Unit is Multiplied
+
+d
+Cc
+m
+iv
+n
+p
+f
+a
+z
+y
+
+For each quantity listed below, the SI unit and its abbreviation are given in brackets.
+For convenience in computer use, most conversion factors are given to the greatest
+available accuracy. Note that some conversions are exact definitions and some (speed
+of light, astronomical unit) depend on the value of physical constants. “. . .” indicates
+a repeating decimal. All notes are on the last page of the list.
+
+920
+
+To convert from
+
+Acceleration [meter/second2, m/s]
+
+Gal (galileo)
+Inch/second?, in/s2
+Foot/second?, ft/s?
+Free fall (standard), g
+
+Angular Acceleration [radian/second?, rad/s]
+
+Degrees/second?, deg/s2
+Revolutions/second2, rev/s2
+Revolutions/minute?, rev/min?
+
+Revolutions/minute2
+Radians/second?, rad/s?
+
+Revolutions/second?, rev/s2
+
+Appendix F
+
+To
+
+m/s2
+m/s2
+m/s2
+m/s2
+
+rad/s2
+rad/s2
+rad/s2
+
+deg/s?
+deg/s2
+
+deg/s2
+
+Angular Area [sr], book also uses deg?
+
+Degree?, deg?
+Minute2, min2
+Second?, s?
+Steradian, sr
+Minute?, min?
+Second?, s?
+
+Steradian, sr
+
+st
+st
+st
+deg?
+deg?
+deg?
+
+rad2
+
+Multiply by
+
+0.01
+0.025 4
+0.304 8
+9.806 65
+
+77/180
+= 0.017 453 292 519 943 295 77
+
+20
+= 6.283 185 307 179 586 477
+
+1 /1,800
+
+Notes
+
+tm tm tm tH
+
+=1.745 329 251 994 329 577x103 E
+
+0.1
+
+180/r
+=57.29 577 951 308 232 088
+
+360
+
+(1/180)2
+
+= 3.046 174 197 867 086 x 10-4
+(1/10,800)2
+
+= 8.461 594 994 075 237 x 10-8
+(1/648 000)?
+
+= 2.350 443 053 909 289 x 10-4
+
+(180/1)2
+= 3.282 806 350 011 744 x 103
+
+1/3,600
+
+=2.777...x 10-4
+
+(1/3,600)2
+
+7.716 049 382 716 049 x 10-8
+1 rad2
+
+E
+
+E
+E
+
+Angular Measure [radian, rad]. This book uses degree (abbreviated “deg’’) as the basic
+
+unit.
+Degree, deg
+
+Minute (of arc), min
+Second (of arc), s
+Radian, rad
+
+Minute (of arc), min
+
+Second (of arc), s
+
+rad
+rad
+rad
+deg
+deg
+
+deg
+
+7/180
+
+= 0.017 453 292 519 943 295 77
+77/10,800
+
+= 2.908 882 086 657 216 x 10-4
+72/648 000
+
+= 4.848 136 811 095 360 x 10-6
+= 180/n
+
+= 57.295 779 513 082 320 877
+1/60
+
+= 0.01666...
+
+1/3,600
+
+=2.777...x 104
+
+Units and Conversion Factors 921
+
+To convert from To Multiply by Notes
+
+Angular Momentum [kilogram - meter2/second, kg - m2/s]
+Gram + cm?/second, g + cm?/s kg - m2/s 1x 10-7 E
+Ibm: inch2/second, Ibm - in2/s kg « m2/s 2.926 396 534 292 x 10-4 E
+Slug - inch2/second, slug -in2/s kg - m/s 9.415 402 418 968 x 10-3 D
+Ibm: foot?/second, Ibm - ft?/s kg + m2/s 0.042 140 110 093 80 D
+Inch - Ibf: second, in « Ibf - s kg - m/s 0.112 984 829 027 6 D
+Slug + foot?/second, slug - ft2/s kg + m/s 1,355 817 948 331 D
+
+= foot « lbf - second, ft - Ibf+s
+
+Angular Velocity [radian/second, rad/s]. This book uses degrees/second as the basic unit.
+
+Degrees/second, deg/s rad/s 7/180
+= 0.017 453 292 519 943 295 77 E
+Revolutions/minute, rpm rad/s 1/30
+= 0.104 719 755 119 659 774 6 E
+Revolutions/second, rev/s rad/s 20
+= 6.283 185 307 179 586 477 E
+Revolutions/minute, rpm deg/s 6 E
+Radians/second, rad/s deg/s 180/r
+= 57.295 779 513 082 320 88 E
+Revolutions/second, rev/s deg/s 360 E
+Area [meter2, m2]
+Acre m2 4.046 856 422 x 103 E
+Foot?, ft2 m2 0.092 903 04 E
+Hectare m2 1 x 104 E
+Inch2, in2 m2 6.451 6 x 104 E
+Mile? (U.S. statute) m2 2.589 110 336 x 106 E
+Yard?, yd? m2 0.836 127 36 E
+(Nautical mile)2 m? 3.429 904 x 106 E
+Density [kilogram/meter>, kg/m>]
+Gram/centimeter3, g/cm3 kg/m3 1.0 x 103 E
+Pound mass/inch}, lbm/in3 kg/m3 2.767 990 471 020 x 104 D
+Pound mass/foot3, lbm/ft3 kg/m3 16.018 463 373 96 D
+Slug/ft3 kg/m3 515.378 818 393 2 D
+Electric Charge [coulomb, C]
+Abcoulomb Cc 10 E
+Faraday (based on carbon-12) Cc 9.648 70 x 104 NIST
+Faraday (chemical) Cc 9.649 57 x 104 NIST
+Faraday (physical) Cc 9.652 19 x 104 NIST
+Statcoulomb Cc 3.335 641 x 10-10 NIST
+Electric Conductance [siemens, S]
+Abmho S 1x 109 E
+Mho (Q-!) S 1 E
+Electric Current [ampere, A]
+Abampere A 10 E
+
+922
+
+To convert from
+
+Gilbert
+
+Statampere
+Electric Field Intensity
+
+[volt/meter = kilogram - meter -
+
+Electric Potential Difference
+[volt = watt/ampere = kilogram - meter? - ampere~! - second-3, V = W/A = kg - m2
+
+Abvolt
+Statvolt
+
+Electric Resistance
+
+Appendix F
+
+To
+A
+
+A
+
+ampere! - second-3, V/m = kg -m- A-! - s-3]
+
+Vv
+Vv
+
+Multiply by
+10/4n
+
+= 0.795 774 715 459 5
+3.335 641 x 10-10
+
+1 x 10-8
+299.792 5
+
+Notes
+
+NIST
+
+-A-1. 5-3]
+E
+NIST
+
+[ohm = volt/ampere = kilogram - meter? - ampere-? - second-3, Q = V/A =kg - m2 - A-2 - 5-3]
+
+Abohm
+Statohm
+
+Energy or Torque
+
+Q
+Q
+
+1 x 10-9
+8.987 552 x 10!1
+
+[joule = newton -meter = kilogram - meter2/s? , J = N -m=kg : m/s?]
+
+British thermal unit, Btu (mean)
+
+Calorie (IT), cal
+Kilocalorie (IT), kcal
+Electron volt, eV
+Erg = gram - cm2/s2
+
+= pole - cm « oersted
+Foot poundal
+
+Foot lbf = slug - foot2/s?
+
+Kilowatt hour, kW - hr
+
+Ton equivalent of TNT
+
+J
+J
+J
+J
+
+J
+J
+J
+J
+
+J
+
+1.055 055 852 62 x 103
+4.1868
+
+4.186 8 x 103
+
+1.602 177 33 x 10-19
+
+1 x 10-7
+
+0.042 140 110 093 80
+1.355 817 948 3314
+3.6 x 106
+
+4.184 x 10°
+
+Force [newton = kilogram - meter/second?, N = kg - m /s?]
+
+Dyne
+Kilogram-force (kgf)
+
+Ounce force (avoirdupois)
+
+Poundal
+
+Pound force (avoirdupois),
+
+Ibf = slug - foot/s?
+
+N
+
+N
+N
+N
+N
+
+1x 10-5
+
+9.806 65
+
+0.278 013 850 953 8
+0.138 254 954 376
+4.448 221 615 260 5
+
+Illuminance [lux = candela - steradian/meter2, Ix = cd - sr/m2]
+
+Footcandle
+Phot
+
+Length [meter, m]
+Angstrom, A
+Astronomical unit ($1)
+
+Astronomical unit (radio)
+Earth equatorial radius, Re
+
+Fermi (1 fermi = 1 fm)
+Foot, ft
+Inch, in
+
+cd + sr/m2
+cd + sr/m?
+
+BEBS8s8
+
+8538
+
+10.763 910 416 709 70
+1x 104
+
+1 x 10-10
+
+1.495 978 706 6 x 101!
+1.495 978 9 x 1011
+6.378 136 49 x 106
+6.378 14 x 106
+
+1x 10-15
+
+0.304 8
+
+0.025 4
+
+E
+NIST
+
+mmom maimom atm”
+
+ies)
+
+AA
+
+NIST
+
+TIERS
+AQ
+
+Units and Conversion Factors 923
+
+To convert from To Multiply by Notes
+Light year m 9.460 730 472 580 8 x 10!5 D
+Micron, 1m m 1x 10-6 E
+Mil (10-3 inch) m 2.54 x 10-5 E
+Mile (U.S. statute), mi m 1.609 344 x 103 E
+Nautical mile (U.S.), NM m 1.852 x 103 E
+Parsec (IAU) m 3.085 677 597 49 x 1016 D
+Solar radius m 6.960 00 x 108 AA
+Yard, yd m 0.9144 E
+
+Luminance [candela/meter? = cd/m2]
+
+Footlambert cd/m? =3.426 259 099 635 39 E
+Lambert cd/m? (1/r) x 104 = 3.183 098 862x 103 E
+Stilb cd/m? 1 x 104 E
+Magnetic Field Strength, H [ampere turn/meter, A/m]
+Oersted (EMU) A/m (1/4 ) x 103
+= 79.577 471 545 947 667 88 E,1
+
+Magnetic Flux
+
+[weber = volt - s = kilogram - meter? - ampere-!*second-2, Wb = V -s =kg - m2 - A-! - s-?]
+Maxwell (EMU) Wb 1x 10° E
+Unit pole Wb 1,256 637 x 10-7 NIST
+
+Magnetic Induction, B
+
+[tesla = weber/meter2 = kilogram - ampere~! - second-2, T = Whb/m2 = kg - A~! - 5-2]
+Gamma (EMU) (y) T 1x 10-9 El
+Gauss (EMU) T 1x 104 El
+
+Magnetic Dipole Moment
+
+[weber - meter = kilogram - meter? - ampere! - second-?, Wb - m = kg - m3 - A-! - s-2]
+Pole - centimeter (EMU) Wb-m 4n x 19-10
+
+= 1.256 637 061 435 917 295 x 10-9 E,1
+Gauss - centimeter} (Practical) Wb-m 1 x 10-10 El
+
+Magnetic Moment [ampere turn - meter? = joule/tesla, A - m2 = J/T]
+
+Abampere - centimeter27EMU) = A+ m2 1x 10-3 E, 1
+Ampere « centimeter? A-m?2 1x 104 E, 1
+Mass [kilogram, kg]
+y (= 1 ug) kg 1 x 10-9 E
+Atomic unit (electron) kg 9.109 389 7 x 10-31 Cc
+Atomic mass unit (unified), amu _—_—kg 1.660 540 2 x 10-27 Cc
+Metric carat kg 2.0 x 10-4 E
+Metric ton kg 1x 103 E
+Ounce mass (avoirdupois), 0z kg 0.028 349 231 25 E
+Pound mass, Ibm (avoirdupois) kg 0.453 592 37 E
+Slug kg 14.593 902 937 21 D
+Short ton (2,000 Ibm) kg 907.184 74 E
+Solar mass kg 1.989 1 x 1030 AA
+
+924
+
+To convert from
+
+Moment of Inertia [kilogram - meter?, kg - m7]
+Gram - centimeter?, gm + cm2
+Pound mass: inch2, lbm - in?
+Pound mass- foot?, Ibm - ft?
+
+Slug - inch?, slug : in2
+
+Inch - pound force: s2, in - Ibf - s2
+
+Slug « foot? = ft - Ibf - s2
+
+Appendix F
+
+To
+
+kg
+kg
+
+kg
+kg
+
+Power [watt = joule/second = kilogram
+Foot + pound force/second, ft Ibf/s W
+
+Horsepower (550 ft - Ibf/s), hp
+Horsepower (electrical), hp
+
+Solar luminosity
+Pressure or Stress
+
+WwW
+WwW
+WwW
+
+-m2
+m2
+kg:
+
+m2
+
+- m2
+- m2
+kg:
+
+m2
+
+- meter2/second3, W = J/s = kg - m2/s3]
+
+Multiply by
+
+1x 10-7
+
+2.926 396 534 292 x 10-4
+4.214 011 009 380 x 10-2
+9.415 402 418 968 x 10-3
+0.112 984 829 027 6
+1.355 817 948 3314
+
+1.355 817 948 331
+745.699 871 582 3
+746.0
+
+3.845 x 1026
+
+Notes
+
+mooonmm
+
+>
+amo
+
+[pascal = newton/meter2 = kilogram « meter~! - second-2, Pa = N/m2 = kg - m-! - s~?]
+
+Atmosphere, atm
+Bar
+
+Centimeter of mercury (0° C)
+Dyne/centimeter2, dyne/cm2
+
+Inch of mercury (32° P)
+
+Pound force/foot2, Ibf/ft2, psf
+Pound force/inch2, Ibffin2, psi
+
+Torr (0° C)
+
+Solid Angle (See Angular Area)
+
+Specific Heat Capacity
+
+Pa
+
+1.013 25 x 105
+
+1 x 105
+
+= 1,333 223 874 145 x 103
+0.1
+
+3.386 388 640 341 x 103
+47 880 258 980 34
+
+6.894 757 293 168 x 103
+(101325/760)
+
+= 133.322 368 421 052 631
+
+Seumm™ am
+
+[joule - kilogram-! - kelvin-! = meter? - second2 - kelvin-!, J - kg-! - K-! = m2 - s2 - K-!]
+
+cal - g~! - K-! (mean)
+
+Btu - Ibm! - °F-! (mean)
+Stress (see Pressure)
+Temperature [kelvin, K]
+
+Celsius, °C
+
+Fahrenheit, °F
+
+Rankine °R
+
+Fahrenheit, °F
+
+Rankine °R
+
+J- kg-! -K-1
+j- kg“! +K-1
+
+QAAKRKRA
+
+4.186 80 x 103
+4.186 80 x 103
+
+ty = te + 273.15
+tk = (5/9) (te + 459.67)
+ty = (5/9) tp
+
+te = (5/9) (tp - 32.0)
+
+te = (5/9) (tp ~ 491.67)
+
+E
+E
+
+Mmmm mi
+
+Thermal Conductivity [watt - meter~! - kelvin-! = kilogram - meter - second-3 - kelvin-!,
+
+W-nr!. K-lekg-m-s3-K-!]
+cal -cmz! - s-! - K-! (mean)
+Btu « ft-! - hr! - °F-! (mean)
+
+Time [second, s]
+Sidereal day, d, (ref. = Y)
+
+Ephemeris day, d,
+
+W-m!-k-!
+W-m!-kK-!
+
+418.68
+
+1.730 734 666 371 39
+
+8.616 410 035 2 x 104
+
+= 23h 56m 4.100 352s
+
+8.64 x 104
+
+AQ
+AQ
+
+Units and Conversion Factors 925
+
+To convert from
+
+Ephemeris day, d,
+Keplerian period of a satellite
+in low-Earth orbit
+
+Keplerian period of a
+satellite of the Sun
+
+Tropical year (ref.= Y)
+Tropical year (ref.= Y)
+
+Sidereal year (ref.=fixed stars)
+Sidereal year (ref.=fixed stars)
+
+Calendar year (365 days), yr
+Julian century
+Gregorian calendar century
+Torque (see Energy)
+Velocity [meter/second, m/s]
+Foot/minute, ft/min
+Inch/second, ips
+Kilometer/hour, km/hr
+Foot/second, fps or ft/s
+Miles/hour, mph
+Knot (international)
+Miles/minute, mi/min
+Miles/second, mi/s
+Velocity of Light
+
+oO
+
+wn wn
+vv &
+
+&
+
+ann
+
+Multiply by Notes
+1.002 737 795 056 6 AQ
+
+1.658 669 010 080 x 10+ x @3/2
+
+(ain km) Table 6-2
+3.652 568 954 757 x
+
+102 x @3/2 (a in AU) AA
+3.155 692 597 47x 107 AA
+365.242 198 781 D
+
+3.155 814 976 320 x 107 AA
+365.256 363 AA
+3.153 6 x 107 E
+
+36,525 E
+
+36,524.25 E
+
+5.08 x 10-3 E
+
+0.025 4 E
+
+(3.6)-! = 0.277777... E
+
+0.304 8 E
+
+0.447 04 E
+
+(1852/3600) = 0.514444. .. E
+
+26.822 4 E
+
+1,609 344 x 103 E
+
+2.997 924 58 x 108 E
+
+Viscosity [pascal - second = kilogram - meter-! - second-! , Pa -s = kg - m=! - s-1]
+
+Stoke
+Foot + second, ft? +s
+
+Pound mass: foot"! - second-!,
+
+Ibm - ft-! «571
+
+Pound force: second/foot2,
+Ibf - s/ft2
+
+Poise
+
+Poundal second/foot?,
+poundal s/ft2
+
+Slug - foot! - second-!,
+slug: ft"! - 571
+
+Rhe
+
+Volume [meter3, m3]
+A(IA=1yb=1x10-6L)
+Foot, ft3
+Gallon (U.S. liquid), gal
+Inch3, in3
+
+m2/s
+m2/s
+
+Pa:
+
+Pa:
+Pa:
+
+Pa-
+
+Pa:
+
+(Pa: s)-}
+
+m3
+m3
+m3
+m3
+
+)
+
+1.0x 10-4 E
+0.092 903 04 E
+1.488 163 943 570 D
+47.880 258 980 34 D
+0.1 E
+1.488 163 943 570 D
+47.880 258 980 34 D
+10 E
+1 x 10-9 E
+2.831 684 659 2x 10-2 E
+3.785 411 784 x 10-3 E
+1.638 706 4 x 10-5 E
+
+926 Appendix F
+
+To convert from To Multiply by Notes
+Liter, L m3 1x 10-3 E
+Ounce (U.S. fluid), oz m3 2.957 352 956 25 x 10-5 E
+Pint (U.S. liquid), pt m3 4.731 764 73 x 10-4 E
+Quart, qt m3 9.463 529 46 x 10-4 E
+Stere (st) m3 1 E
+Yard}, yd3 m3 0.764 554 857 984 E
+
+Notes for the preceding table:
+AA _ Values are those of Astronomical Almanac [Hagen and Boksenberg, 1991].
+
+moa eS
+
+Q__ Values are those of Astrophysical Quantities (Cox, 1991].
+Values are those of Cohen and Taylor [1986].
+Values that are derived from exact quantities, rounded off to 13 significant figures.
+(Exact) indicates that the conversion is exact by definition of the non-SI unit or that it
+
+is obtained from other exact conversions.
+IERS Numerical standards of the IERS.
+NIST Values are those of National Institute of Standards and Technology [McCoubrey,
+
+1991]
+
+(1) Care should be taken in transforming magnetic units, because the dimensionality of mag-
+netic quantities (B, H, etc.) depends on the system of units. Most of the conversions given
+here are between SI and EMU (electromagnetic). The following equations hold in both
+sets of units:
+
+ag e 4
+
+mxB= dxH
+
+pH
+
+JA for a current loop in a plane
+ym
+
+with the following definitions:
+
+r-™~ 3B me
+
+d=
+=
+
+torque
+
+magnetic induction (commonly called “magnetic field”)
+magnetic field strength or magnetic intensity
+
+magnetic moment
+
+current loop
+
+vector normal to the plane of the current loop (in the direction of the angular
+velocity vector of the current loop about the center of the loop) with magnitude
+equal to the area of the loop.
+
+magnetic dipole moment
+magnetic permeability
+
+The permeability of vacuum, Ho, has the following values, by definition:
+Uo = 1 (dimensionless) EMU
+Hg = 4 x 10-7 N/A? SI
+
+Therefore, in electromagnetic units in vacuum, magnetic induction and magnetic field strength
+are equivalent and the magnetic moment and magnetic dipole moment are equivalent. For prac-
+tical purposes of magnetostatics, space is a vacuum but the spacecraft itself may have 1 # Up.
+
+Units and Conversion Factors 927
+
+Useful Mathematical Constants and Values
+
+= 3.141 592 653 589 793 238 462 643
+= 2.718 281 828 459 045 235 360 287
+= 23.140 692 632 779 269 006
+
+= 0,434 294 481 903 251 827 651 128 9 log.x
+= 2,302 585 092 994 045 684 017 991 log; ox
+= 1.144 729 885 849 400 174 143 427
+
+(A) are from The Handbook of Mathematical Functions, with Formulas, Graphs, and
+Mathematical Tables [Abramowitz and Stegun, 1970]
+
+References
+
+Abramowitz, Milton and Irene A. Stegun, eds. 1970. The Handbook of Mathematical
+Functions with Formulas, Graphs, and Mathematical Tables. New York: Dover.
+
+Cohen, E. Richard and B.N. Taylor, 1986. CODATA Bulletin No. 63, Nov. New York:
+Pergamon Press.
+
+Cox, A.N. ed. 1999. Astrophysical Quantities. New York: Springer-Verlag
+
+Hagen, James B. and A. Boksenberg, eds. 1991. The Astronomical Almanac. Nautical
+Almanac Office, U.S. Naval Observatory and H. M. Nautical Almanac Office.
+1992. Washington, D.C.: U.S. Government Printing Office.
+
+McCarthy, Dennis D., USNO. 1996. “Technical Note 21.” IERS Conventions.
+
+McCoubrey, Arthur O. 1991. Guide for the Use of the International System of Units
+(SJ). National Institute of Standards and Technology (NIST), Special Publication
+811, U.S. Department of Commerce: U.S. Government Printing Office.
+
+Seidelmann, Kenneth P., USNO, ed. 1992. The Explanatory Supplement to the
+Astronomical Almanac. Mill Valley, CA: University Science Books.
+
+Taylor, Barry N. 1991. The International System of Units (SI). National Institute of
+Standards and Technology (NIST), Special Publication 811, U.S. Department of
+Commerce: U.S. Government Printing Office.

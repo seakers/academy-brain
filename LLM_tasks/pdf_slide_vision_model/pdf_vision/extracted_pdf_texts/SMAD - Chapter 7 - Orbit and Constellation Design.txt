@@ -1,0 +1,2430 @@
+
+Chapter 7
+
+Orbit and Constellation Design
+
+James R. Wertz, Microcosm, Inc.
+
+7.1. The Orbit Design Process
+
+7.2. Earth Coverage
+Analytic Approximations, Numerical Simulations,
+Coverage Figures of Merit
+
+7.3 The AV Budget
+
+7.4 Selecting Orbits for Earth-Referenced Spacecraft
+
+7.5 Selecting Transfer, Parking, and Space-Referenced Orbits
+Selecting a Transfer Orbit, Parking and Space-Referenced
+Orbits
+
+7.6 Constellation Design
+Coverage and Constellation Structure;
+Summary of Constellation Design
+
+Chapters 5 and 6 introduced the geometry and physics of spacecraft orbits, as well
+as formulas for computing orbit parameters. In contrast, this chapter deals with select-
+ing or designing orbits to meet the largest number of mission requirements at the least
+possible cost. The orbit selection process is complex, involving trades between a
+number of different parameters. The orbit typically defines the space mission lifetime,
+cost, environment, viewing geometry, and, frequently, the payload performance. Most
+commonly, we must trade the velocity required to achieve the orbit as a measure of
+cost vs. coverage performance.
+
+Chapter 6 lists several references on astrodynamics. Unfortunately, very few of
+these references contain any discussion of the orbit selection or design process.
+Chobotov [1996] and Vallado [1997] have some information. By far the most exten-
+sive discussion of this topic is in Wertz [2001]. Soop [1994] contains an excellent
+discussion of the design of geostationary orbits.
+
+Ordinarily, spacecraft will be in various orbits during the space mission life. These
+could include, for example, a parking orbit for spacecraft checkout or storage, a
+transfer orbit to move it from the injection orbit where the spacecraft separated from
+the launch vehicle to its operational orbit or orbits for mission activities, and possibly
+a final disposal orbit where the spacecraft will do minimum damage when we are
+through using it. In early mission design, we pay most attention to defining the space-
+craft’s operational orbit. However, preliminary mission design needs to consider all
+mission phases to meet the needs of more complex missions.
+
+159
+
+160 Orbit and Constellation Design 7.1
+
+7.1 The Orbit Design Process
+
+Orbit design has no absolute rules; the method described below and summarized in
+Table 7-1 gives a starting point and checklist for the process.
+
+TABLE 7-1. Summary of the Orbit Selection Process. See text for discussion of each step.
+
+Step Where Discussed
+
+. Establish orbit types. Sec. 7.1
+. Determine orbit-related mission requirements. Sec. 7.1
+
+. Assess applicability of specialized orbits. Secs. 7.4, 6.3
+. Evaluate whether single satellite vs. constellation is needed. Secs. 7.1, 7.6
+
+. Do mission orbit design trades Secs. 7.4, 7.5
+~ Assume circular orbit (if applicable)
+— Conduct altitude/inclination trade Sec. 7.4
+— Evaluate use of eccentric orbits Sec. 7.4
+
+. Assess launch and retrieval or disposal options. Secs. 2.1, 6.5, 18.3, 21.2
+. Evaluate constellation growth and replenishment (if applicable). | Sec. 7.6
+. Create AV budget. Sec. 7.3
+
+. Document orbit parameters, selection criteria, and allowed ranges.
+Iterate as needed.
+
+Effective orbit design requires clearly identifying the reasons for orbit selection,
+reviewing these reasons regularly as mission requirements change or mission defini-
+tion improves, and continuing to remain open to alternatives. Several different designs
+may be credible. Thus, communications may work effectively through a single large
+satellite in geosynchronous orbit or a constellation of small satellites in low-Earth
+orbit. We may need to keep both options for some time before selecting one.
+
+Step 1. Establish Orbit Types
+
+To design orbits we first divide the space mission into segments and classify each
+segment by its overall function. Each orbit segment has different selection criteria, so
+we evaluate it separately, placing it into one of the four basic types:
+
+¢ Parking Orbit—a temporary orbit which provides a safe and convenient
+location for satellite checkout, storage between operations, or at end-of-life.
+Also used to match conditions between phases such as post-launch and pre-
+orbit transfer.
+
+¢ Transfer Orbit—ased for getting from place to place. Examples: transfer orbit
+to geosynchronous altitude; interplanetary orbit to Mars.
+
+* Space-referenced Orbit—an operational orbit whose principal characteristic is
+being somewhere in space (specific orbit parameters may not be critical).
+Examples: Lagrange point orbits for space sampling and observations; orbits
+for celestial observations or space manufacturing.
+
+¢ Earth-referenced Orbit—an operational orbit which provides the necessary
+coverage of the surface of the Earth or near-Earth space. Examples: geosyn-
+chronous satellites, low-Earth satellites for Earth resources, meteorology, or
+communications.
+
+71 The Orbit Design Process 161
+
+A Shuttle-launched communications satellite in geosynchronous orbit provides an
+example of dividing a mission into segments. Once ejected from the Shuttle, the space-
+craft may briefly stay in a parking orbit near the Shuttle to provide test and checkout
+of spacecraft and transfer vehicle systems. The second mission segment uses a transfer
+orbit to move the spacecraft from its parking orbit to geosynchronous equatorial orbit.
+The spacecraft then enters its operational orbit in the geostationary ring where it will
+spend the rest of its active life. At the end of its life we must move it out of the geosta-
+tionary ring to avoid a possible collision with other satellites and to free the orbital slot
+for a replacement. (See Sec. 21.2.) Putting the nearly dead spacecraft into a final
+disposal orbit above the geostationary ring requires a relatively small transfer orbit.
+(Going above the geostationary ring rather than below avoids collisions with other
+satellites in geosynchronovs transfer.)
+
+Step 2. Establish Orbit-Related Mission Requirements
+
+For each mission segment, we define the orbit-related requirements. They may
+include orbital limits, individual requirements such as the altitude needed for specific
+observations, or a range of values constraining any of the orbit parameters. Section 7.4
+discusses in detail the requirements we would follow in designing an operational orbit.
+Ordinarily, these multiple requirements drive the orbit in different directions. For
+example, resolution or required aperture tend to drive the orbit to low altitudes, but
+coverage, lifetime, and survivability drive the spacecraft to higher altitudes.
+
+Selecting of parking, transfer, and space-referenced orbits is normally conceptually
+simpler, although it may be mathematically complex. Here the normal trade is meeting
+the desired constraints on a mission, such as lifetime, thermal, or radiation environ-
+ments, at the lowest possible propellant cost. Section 7.5 discusses the key mission
+requirements for these orbits.
+
+Step 3. Assess Specialized Orbits
+
+In selecting the orbit for any mission phase, we must first determine if a specialized
+orbit applies. Specialized orbits are those with unique characteristics, such as the
+geostationary ring in which satellites can remain nearly stationary over a given point
+on the Earth’s equator. We examine each specialized orbit to see if its unique charac-
+teristics are worth its cost. This examination precedes the more detailed design trades,
+because specialized orbits constrain parameters such as altitude or inclination, and
+thus often lead to very different solutions for a given mission problem. Consequently,
+we may need to carry more than one orbit into more detailed design trades.
+
+Step 4. Choose Single Satellite or Constellation
+
+The principal advantage of a single satellite is that it reduces cost by minimizing
+the mission overhead. Thus, one satellite will have one power system, one attitude
+control system, one telemetry system, and require only a single launch vehicle. A
+constellation, on the other hand, may provide better coverage, higher reliability if a
+satellite is lost, and more survivability. We may also need a constellation to provide
+the multiple conditions to carry out the mission, such as varying lighting conditions
+for observations, varying geometries for navigation, or continuous coverage of part or
+all of the Earth for a communications constellation.
+
+To meet budget limits, we must often trade a single large satellite with larger and
+more complex instruments against a constellation of smaller, simpler satellites. This
+
+162 Orbit and Constellation Design 71
+
+decision may depend on the technology available at the time of satellite design. As
+small satellites become more capable through miniaturized electronics (Chap. 22) and
+onboard processing (Chap. 16), we may be able to construct constellations of small,
+low-cost satellites, frequently called LightSats, that were not previously economically
+feasible. Another major cost element for large constellations is the operational
+problem of providing continuous navigation and control. The introduction of low-cost
+autonomous navigation and control (See Sec. 11.7) should promote larger constella-
+tions of small satellites in the future.
+
+Step 5. Do Mission Orbit Design Trades
+
+The next step is to select the mission orbit by evaluating how orbit parameters affect
+each of the mission requirements from Table 7-6 in Sec. 7.4. As the table shows, orbit
+design depends principally on altitude. The easiest way to begin is by assuming a
+circular orbit and then conducting altitude and inclination trades. (See Sec. 7.4 and the
+example in Sec. 3.3.1.) This process establishes a range of potential altitudes and
+inclinations, from which we can select one or more alternatives. Documenting the
+results of this key trade is particularly important, so we can revisit the trade from time
+to time as mission requirements and conditions change. If a satellite constellation is
+one of the alternatives, then phasing the satellites within that constellation is a key
+characteristic, as Sec. 7.6 describes.
+
+Note that constellations of satellites are normally at a common altitude and inclin-
+ation because the orbit’s drift characteristics depend largely on these parameters.
+Satellites at different altitudes or inclinations will drift apart so that their relative
+orientation will change with time. Thus, satellites at different altitudes or inclinations
+normally do not work well together as a constellation for extended times.
+
+Step 6. Assess Launch and Retrieval or Disposal Options
+
+Chapter 18 discusses satellite launch systems in detail. The launch vehicle contrib-
+utes strongly to mission costs, and ultimately will limit the amount of mass that can be
+placed in an orbit of any given altitude. As we define the mission early on, we must
+provide enough launch margin to allow for later changes in launch vehicles or
+spacecraft weight. Naturally, new designs require more margin than existing ones,
+with 20% being typical for new missions.
+
+Although given little consideration in the past, retrieval and disposal of spacecraft
+have become important to mission design (Sec. 21.2). Spacecraft that will reenter the
+atmosphere must either do controlled reentry, burn up in the atmosphere, or break up
+into harmless pieces.
+
+If the spacecraft will not reenter the atmosphere in a reasonable time, we must stil]
+dispose of it at the end of its useful life so it is not hazardous to other spacecraft. This
+problem is particularly acute in geosynchronous orbit where missions compete
+strongly for orbit slots.* As Sec. 21.2 points out, a collision between two spacecraft
+not only destroys them but also causes debris dangerous to their entire orbit regime.
+
+A third option is satellite retrieval, done either to refurbish and reuse the satellite,
+or to recover material (such as radioactive products) which would be dangerous if they
+entered the atmosphere uncontrolled. Currently, the Shuttle can retrieve spacecraft
+
+* Cefola [1987] gives an excellent analysis of the requirements for removing satellites from
+geosynchronous orbit.
+
+7.2 Earth Coverage 163
+
+only from low-Earth orbit. In the future, it would be desirable to retrieve satellites as
+far away as geosynchronous orbit and return them to either the Orbiter or Space
+Station for refurbishment, repair, disposal, or reuse.
+
+Step 7. Evaluate Constellation Growth and Replenishment
+
+An important characteristic of any satellite constellation is growth, replenishment,
+and graceful degradation. A constellation that becomes operational only after many
+satellites are in place causes many economic, planning, and checkout problems.
+Constellations should be at least partly serviceable with small satellite numbers.
+Graceful degradation means that if one satellite fails, the remaining satellites provide
+needed services at a reduced level rather than a total loss of service. Section 7.6
+discusses further the critical question of how we build up a constellation and how to
+plan for graceful degradation.
+
+Step 8. Create AV Budget
+
+To numerically evaluate the cost of an orbit, we must create a AV budget for the
+orbit, as described in Sec. 7.3. This then becomes the major component of the propel-
+lant budget as described in Sec. 10.3.
+
+Step 9. Document and Iterate
+
+A key component of orbit or constellation design is documenting the mission
+requirements used to define the orbit, the reasons for selecting the orbit, and the
+numerical values of the selected orbit parameters. This baseline can be reevaluated
+from time to time as mission conditions change. Because mission design nearly always
+requires many iterations, we must make the iteration activity as straightforward as
+possible and readdress orbit parameters throughout the design process to ensure they
+meet all requirements.
+
+7.2 Earth Coverage
+
+Earth coverage refers to the part of the Earth that a spacecraft instrument* or
+antenna can see at one instant or over an extended period. The coverage available for
+a particular location or region is frequently a key element in mission design. In evalu-
+ating coverage, two critical distinctions must be made. First, as Fig. 7-1 shows, the
+instantaneous field of view, typically called the FOV or footprint, is the actual area the
+instrument or antenna can see at any moment. In contrast, the access area is the total
+area on the ground that could potentially be seen at any moment by turning the space-
+craft or instrument. In the case of a truly omni-directional antenna, these two would
+always be the same. For most operational instruments they are not.
+
+The second important distinction is between the area which can be seen at any one
+instant vs. the rate at which new land comes into view as the spacecraft and instrument
+move. Both are important, and either can be vital to mission success. In geosynchro-
+nous orbit, the instantaneous area is typically most important because the spacecraft is
+
+* Throughout this section we will use instrument to refer to any spacecraft sensor or antenna for
+which we want to compute coverage.
+
+164 Orbit and Constellation Design 72
+
+. Access Area
+
+Sub-Satellite Point
+
+Spacecraft
+
+Footprint
+
+Fig. 7-1. The Instrument Footprint or FOVis the Instantaneous Region on the Ground Be-
+ing Covered. The instantaneous access area is the total area in view.
+
+nearly stationary relative to the Earth’s surface. In low-Earth orbit, satellites are mov-
+ing rapidly over the surface, so the rate at which new land appears is usually critical.
+The two distinctions above lead to four key parameters for Earth coverage:
+
+* Footprint Area (,, also FOV area or instantaneous coverage area) = area
+that a specific instrument or antenna can see at any instant.
+
+¢ Instantaneous Access Area (IAA) = all the area that the instrument or antenna
+could potentially see at any instant if it were scanned through its normal range
+of orientations.
+
+¢ Area Coverage Rate (ACR) = the rate at which the instrument or antenna is
+sensing or accessing new land.
+
+¢ Area Access Rate (AAR) = the rate at which new land is coming into the space-
+craft’s access area.
+
+For an instrument which covers all of the area available to it as the spacecraft moves
+along, the coverage rate and access rate will be the same. For instruments operating
+only part of the time or continuously selecting the region to be examined, the coverage
+rate and access rate may be dramatically different. Generally the access area and
+access rates depend only on the orbit and limiting geometry of the system, so we can
+easily compute them with only a minimal knowledge of the detailed system design. On
+the other hand, the actual area coverage rate during spacecraft operations may well
+depend on the spacecraft control, power, and management systems, as well as the
+details of mission operations.
+
+Coverage assessment conveniently divides into two areas: first, an analytic assess-
+ment to provide approximate formulas for coverage parameters as a function of
+mission variables; second, numerical simulations to provide coverage Figures of Merit
+for more detailed studies.
+
+72 Earth Coverage 165
+
+7.2.1 Analytic Approximations
+
+In this section we present analytic approximations for various Earth coverage
+parameters. All of the formulas here take into account the spherical surface of the
+Earth, but do not account for oblateness, or the rotation of the Earth underneath the
+orbit. These effects, in addition to those of coverage by multiple satellites, are ordi-
+narily accounted for in numerical simulations as described in Sec. 7.2.2.
+
+All of the formulas here are derived directly from the single-satellite geometry
+described in Sec. 5.2. In particular, we will use the notation developed there and
+summarized in Fig. 5-13 in Sec. 5.2. In this section we will parameterize coverage in
+terms of the Earth central angle, A.* However, we can use Eqs. (5-24) to (5-28) to
+transform each of the formulas below into one for either the spacecraft-centered nadir
+angle, 7, or spacecraft elevation angle, €, seen from the ground.
+
+As Fig. 7-1 shows, the instrument footprint is normally a beam with circular cross
+section substantially smaller than the access area projected onto the Earth’s surface.
+The nomenclature and computational geometry for the footprint are in Fig. 7-2. (For
+instruments which see very large portions of the Earth, we can use the access area
+formulas below. For those which have noncircular cross sections, the logic here along
+with the formulas of Sec. 5.2 allows us to develop mission-specific formulas for
+footprint size and area.)
+
+Z co Spacecraft
+
+Subsatellite
+Point
+
+or Height
+
+Earth Center
+
+Fig. 7-2. Computational Geometry for Instrument Footprint. Note that € is typically mea-
+sured at the toe because of performance budgeting. (See also Fig. 5-13.)
+
+The length (also called the height) of the footprint, Ly, is given by
+Lp=K, Aro—Arp (7-1a)
+= D sin 0 /sin € (7-1b)
+where the variables are defined in Fig. 7-2 and, for A expressed in degrees,
+* Amay be thought of either as an angle at the Earth’s center or as a distance measured along the
+
+Earth’s surface. We will use these two views interchangeably as convenient for the problem
+at hand.
+
+166 Orbit and Constellation Design 7.2
+
+K,=1 for length in deg
+K,, = 111.319 543 for length in km
+K,, = 60.107 7447 for length in nmi
+
+Note: The linear approximation given in Eq. (7-1b) is computationally convenient
+but can be very inaccurate, particularly near the horizon where € is small. (For a satel-
+lite at an altitude of 1,000 km with a 1 deg diameter beam, the error in Eq. (7-1b) is
+400% at €= 1 deg, 10% at e€= 15 deg, and 1% at € = 60 deg.) However, the alternative
+computation of Eq. (7-1a) is much less convenient. To find the footprint length for a
+given spacecraft elevation angle at the toe of the beam, ¢, we begin by computing 7
+and A at the toe, then subtract the beam width, 0, from 7 to determine 17 at the heel,
+compute A at the heel, and finally subtract to get the footprint length from Eq. (7-1a).
+An alternative that improves the approximation somewhat is to use the center rather
+than the toe of the beam. Because the toe represents the worst-case link budget (see
+Chap. 13), it is most often used for performance computations and, therefore, is
+commonly used for geometry calculations as well.
+
+The footprint width, Wr, is given by
+
+Wr = Rg sin“! (D sin 0/Rz) (7-2a)
+~ D sin 0 (7-2b)
+
+where Ry = 6,378.14 km is the radius of the Earth, @ is the beam width, and D is the
+distance from the spacecraft to the toe of the footprint.* Here the error in the approxi-
+mation in Eq. (7-2b) is proportional to 1 -(W;-/sin W;)' and is generally small relative
+to other errors. Thus, Eq. (7-2b) is adequate for most practical applications.
+
+Finally, if we assume that the projection on the ground is an ellipse, then the foot-
+print area, F, , is given by
+
+FE, = (0/4) Lp Wp (7-3)
+
+Assuming that Lp was computed by Eq. (7-1a), the error in ignoring the curvature of
+the Earth in Eq. (7-3) is again proportional to 1 - (W-/sin W,) and is negligible for
+most applications.
+
+The instantaneous area coverage rate for the beam is defined by
+
+ACR instantaneous = fy /T (7-4)
+
+where T is the exposure time or dwell time for the instrument. The average area
+coverage rate, ACRaye, will also be a function of the duty cycle, DC, which is the
+fraction of the total time that the instrument is operating, and the average overlap
+between the footprint, O,,., which is the amount by which two successive footprints
+cover the same area (typically about 20%):
+
+R(1-oO DC 7-5
+
+* In the case of a noncircular beam, Eq. (7-1) can be used with the beam width, 6, perpendicular
+to the horizon and Eq. (7-2) can be used independently with the beam width parallel to the
+horizon.
+
++ Here Wz should be expressed in radians as seen from the center of the Earth.
+
+72 Earth Coverage 167
+
+Computing the instantaneous access area, JAA, will depend on the shape of the
+potential coverage area on the ground. Figure 7-3 shows several typical shapes. The
+most common of these is Fig. 7-3A, which assumes that the instrument can work at
+any point on the Earth within view for which the spacecraft elevation is above é. This
+corresponds to a small circle on the Earth of radius A centered on the current sub-
+satellite point. Some instruments, such as radar, cannot work too close to the subsatel-
+lite point. As Fig. 7-3B shows, these instruments have both an outer horizon, A;, and
+
+an inner horizon, Ap.
+
+Ground Track Ground Track
+
+es ee a, Geometric
+™. Horizon
+
+Line *,
+Scans \
+
+~~. Geometric ”
+“Horizon ra
+
+PN /
+
+‘
+
+i ‘Effective i
+i Horizon |
+
+\ i \
+
+. aa
+
+‘ . . Subsatellite
+ne eee Point
+a oe a“
+A ena Cc eteeeeteaereet oe
+
+Ground Track Ground Track
+
+nn in “~~. Geometric a “~~. Geometric
+en eee “Horizon Va Horizon
+fo. ms Outer /
+f / Poa Wane . er Horizon / \
+
+é i / orizon i i
+Line Scan f
+X Subsatellite
+
+»’ Subsatellite
+Point Point
+
+Fig. 7-3. Typical Access Areas for Spacecraft Instruments. See Table 7-2 for formulas.
+
+For instruments with an access pattern as shown in Fig. 7-3A, the instantaneous
+access area, JAA, will be just the area of the small circle, that is,
+
+IAA = Ky (1-cos A) (7-6)
+where
+
+Ky, = 2n = 6.283 185 311 for area in steradians
+
+K, = 20,626.480 6 for area in deg2
+
+Ky, = 2.556041 87x 108 _ for area in km2
+
+7.452 225 69 x 107 for area in nmi2
+
+x
+u
+
+168 Orbit and Constellation Design 7.2
+
+The instantaneous access areas or access lengths for the other patterns in Fig. 7-3
+are given in Table 7-2, which also summarizes all of the coverage formulas for these
+patterns. These access area formulas do take into account the curved surface of the
+Earth and are accurate for any access area size or satellite altitude to within very small
+corrections for the Earth’s oblateness.
+
+TABLE 7-2. Coverage Formulas for Patterns Shown in Fig. 7-3. See text for definition of
+variables. In pattern D, the minus sign applies if A, is on the same side of the ground
+track as A, The approximation for footprint area is invalid when €=0. The ACR
+formulas for pattems C and D assume that the instrument is side-looking. P is the
+orbit period.
+
+Instantaneous
+Typical Access Area Area Area
+Appli- Footprint (IAA) or Coverage Access
+cation Area (FA) Length (IAL) Rate (ACR) Rate (AAR)
+
+Omni- (n DK, /4) | IAA = K,(1-cos A) :
+antenna, | sin @ x 2k, sind
+
+Ground _ P
+stationcov, (Aro — Ar)
+
+General | ~(" 02/4) x
+sensing sin? 6/sine
+
+Radar Asabove | /AA=K,(cosd, | As above 2K, sindy
+
+P
+Synthetic |Asabove | /AL=2 K; (A; —A») 2K, (sind, sind.) | 2K, (sind, - sina.)
+Aperture ~2K, Dsin 6/ sine | ——5—-| —
+Radar
+Scanning |Asabove | /AL = K; (A; +49) | K, (sind, sind.) | K,(sind, tsina,)
+Sensor ns - ee es
+
+We now wish to determine the length of time a particular point on the Earth is
+within the satellite access area and the access area rate at which the land enters or
+leaves the access area. Consider a satellite in a circular orbit at altitude H. The orbit
+period, P, in minutes is given by
+
+P = 1.658 669 x 10-4 x (6,378.14 + H)3/2 Hinkm (7-7)
+P = 4.180 432 x 10-4 x (3,443.9 + H)3/2 H in nmi
+
+We define the maximum Earth central angle, Ajq,, a8 the radius of the access area
+for the observation in question. Twice Ajo, is called the swath width and is the width
+of the coverage path across the Earth. As shown in Fig. 7-4, the coverage for any point
+P on the surface of the Earth will be a function of A,,,,, and of the off-track angle, A,
+which is the perpendicular distance from P to the satellite ground track for the orbit
+pass being evaluated. The fraction of the orbit, F,,,,,, over which the point P is in view
+is
+
+Fyiew = AV/180 deg (7-8a)
+
+7.2 Earth Coverage 169
+
+DEEL TKS
+
+lox =
+
+re]
+TIS
+NTS
+Wh
+KP
+Shee
+SN
+i
+
+H
+cI
+Xi
+
+\
+
+ae
+
+Fig. 7-4. Earth Coverage Geometry. Ais the off ground track angle and 2 Ama, is the swath
+width. P is the target or ground station.
+
+where
+cos AV= 0S Ayig,/cos A (7-8b)
+
+Therefore the time in view, 7, for the point P will be
+
+P cosa
+= PF, =| —~— |cos™! ma (7-9)
+T= PE ew a waa) cosa
+
+which is equivalent to Eq. (5-49). Note that here we use A rather than A,,,;, for the off
+ground-track angle and that Av is one half of the true anomaly range (i.e., angle along
+the ground track) over which the point P is in view by the satellite. See Fig. 5-17 in
+Sec. 5.3.1 for the geometry of this computation.
+
+Finally, the area‘access rate as the satellite sweeps over the ground for the access
+area of Fig. 7-3A is
+
+AAR = (2 Kg sin A)/P (Pattern A) (7-10)
+
+Formulas for other patterns are in Table 7-2. Again note that because of the curva-
+ture of the Earth’s surface, this area access rate is not equal to the diameter of the
+access area times the subsatellite point velocity.
+
+As an example of the above computations, consider a spacecraft at 2,000 km
+altitude with a 1 deg diameter beam staring perpendicular to the ground track at an
+elevation angle of 10 deg as seen from the ground. Our linear estimate of the footprint
+height is 446 km from Eq. (7-1b).* However, from Table 7-2 we see that the true height
+is 355 km and therefore need to use the somewhat more complex Eq. (7-1a). From
+
+* As indicated previously, this estimate would be substantially improved if the 10 deg elevation
+angle was at the center of the beam. However, we would then need to keep track of beam-
+center parameters for the geometry and beam-edge parameters for performance estimates.
+
+170 Orbit and Constellation Design 7.2
+
+Eqs. (5-24), (5-26), and (5-27) we determine Ago = 31.43 deg and Ayy= 28.24 deg. The
+footprint width from Eq. (7-2a) is 77 km. From Eq. (7-3) the footprint area is 21,470
+km2. The accuracy of the area is proportional to 1 — (77/6,378) / sin (77/6,378) =
+0.002%. The ground track velocity is the circumference of the Earth divided by the or-
+bit period (from Eq. 7-7) = 40,075 km/127 min = 315.6 km/min = 5.26 km/s. Mullti-
+plying this by the footprint height of 355 km gives a crude estimate of the area
+coverage rate of 1,867 km/s. Using the more accurate formula in Table 7-2 (Pattern
+D) and the values of A above, we obtain a more accurate value of ACR = 2.556 x 108
+x (sin 31.43 deg — sin 28.24 deg) / (127 x 60) = 1,620 km2/s which implies an error of
+15% in the less accurate approximation.
+
+The above formulas are in terms of off-ground-track angle, which is computation-
+ally convenient. But we often need to know the coverage as a function of latitude, Lat,
+for a satellite in a circular orbit at inclination, i. We assume that the pattern of
+Fig. 7-3A applies and that observations can be made at any off-track angle less than or
+equal to Ang, on either side of the satellite ground track. We also assume that Lat is
+positive, that is, in the northern hemisphere. (The extensions are straightforward for
+the southern hemisphere or nonsymmetric observations.) Depending on the latitude,
+there will be either no coverage, a single long region of coverage, or two shorter
+regions of coverage for each orbit as follows (See Fig. 7-5).
+
+Ground Trace
+
+y+ Two coverage region
+
+Fig. 7-5. Single Orbit Coverage is a Function of Latitude, Orbit Inclination, and Swath
+Width. See text for formulas.
+
+Number of Percent
+
+Latitude Range Coverage Regions Coverage
+Lat > Amay + i 0 0 (7-11a)
+i+ Amax > Lat > i - Amax 1 ¢,/180 (7-11b)
+i-Amay > Lat > 0 2 (9, — @)/180 = (7-1 1c)
+
+where
+
+tsind +cosisin Lat
+max
+
+cos = ——@_—__\_\_ 7-12
+
+1 or2 sinicos Lat (7-12)
+
+7.2 Earth Coverage 171
+
+where the minus sign applies for @, and the plus sign for ¢>. Here @¢ is one-half the
+longitude range over which coverage occurs. The formula in the third column above
+represents the fraction of all points at a given latitude in view of the satellite during
+one orbit. This is approximately equal to the fraction of orbits that will cover a given
+point at that latitude.
+
+As an example of the above formula, consider a satellite in a 62.5-deg inclined orbit
+which can see to an off-ground-track angle, A,,,,, = 20 deg. At a ground station latitude
+of 50 deg, the percent coverage will be 49.3%. On any orbit, 49% of the points at a
+latitude of 50 deg will be within view of the satellite at some time. Conversely, a given
+point at 50-deg latitude will be covered at some time on approximately 49% of the
+satellite orbits. Because there is only one coverage region, the covered orbits will
+occur successively during the day. If the satellite orbit period is 2 hr, then our
+hypothetical ground station at 50-deg latitude will typically see the satellite on 6
+successive orbits followed by 6 orbits of no coverage. The number and duration of
+coverage passes on a given day will depend on where the ground station is located with
+respect to the orbit node.
+
+As a final example, consider a satellite in a 1,000-km circular orbit at an inclination
+of 55 deg. From Eq. (5-24), in Sec. 5.2, 9 = 59.82 deg and from Eq. (7-7) the orbit
+period is 105 min. We assume that the satellite can make observations out to a space-
+craft elevation angle of 10 deg as seen by the target, corresponding to a nadir angle
+Nmax = 58.36 deg from Eq. (5-26) and maximum off-track angle, Aj _, = 21.64 deg
+from Eq. (5-27). From Eq. (7-10), the potential area search rate is 1.8 x 106 km2/min.
+From Eq. (7-9) a point 15 deg from the ground track will remain in view for 9.2 min.
+Finally, from Eqs. (7-11), a satellite in such an orbit will see 45.7% of all points at a
+latitude of 50 deg and 33.4% of all points at a latitude of 20 deg.
+
+7.2.2, Numerical Simulations
+
+The analytic formulas above provide an easy and rapid way to evaluate Earth
+coverage, but this approach has several limitations. It does not take into account non-
+circular orbits, the rotation of the Earth under the spacecraft, or possible overlapping
+coverage of several satellites. Although we could extend the analytic expressions,
+numerically simulating the coverage is a better approach for more complex situations.
+Any modern office computer can do a simple simulation that takes these effects into
+account with sufficient accuracy for preliminary mission analysis.
+
+Analytic approximations also do not allow us to assess coverage statistics easily.
+For example, while we can determine the coverage time for a given orbit pass, we
+cannot easily compute how often we will see a given point or where regions of cover-
+age or gaps between coverage will occur. We usually need these statistics for Earth
+observation applications.
+
+Numerical simulations of coverage can become extremely complex. They may
+consider such activities as scheduling, power and eclipse conditions, and observability
+of the target or ground station. Chapter 3 briefly describes an example. In the follow-
+ing paragraphs we will consider two simple simulations of considerable use during
+preliminary mission design.
+
+The simplest “simulation” is a ground track plot of the mission geometry, clearly
+revealing how the coverage works and the possible coverage extremes. Figure 7-6
+shows ground trace plots for our example satellite in a 1,000-km circular orbit with a
+period P = 105 min, corresponding to approximately 14 orbits per day. The longitude
+spacing, AL, between successive node crossings on the equator is
+
+172 Orbit and Constellation Design 72
+
+P
+
+AL= + 36min
+
+-360 deg (7-13)
+The heavy circle on Fig. 7-6 represents the subsatellite points corresponding to
+spacecraft elevations, €, greater than 5 deg (equivalent to A,,,,, < 25.6 deg). For the
+25-deg latitude shown, we can see by inspection that we will see the point P on either
+two or three successive upward passes and two or three successive downward passes.
+The downward coverage passes will normally begin on the fourth orbit after the last
+upward coverage pass. Individual passes within a group will be centered approxi-
+mately 105 min apart and will be up to 105 x 51.2 / 360 = 14.9 min long.
+
+Fig. 7-6. Ground Track of 8 Successive Orbits (out of 14 per day) for a Satellite at
+1,000 km. The heavy circle covers subsatellite points over which spacecraft will be at
+an elevation angle, e, greater than 5 deg. See text for discussion.
+
+The details of each day’s potential observations will depend on how the orbit falls
+relative to the point P. However, the general flow will be as follows. Two or three
+passes of approximately 12 min each will occur 105 min apart. (Twelve minutes is
+estimated by inspection relative to the maximum pass duration of 15 min.) After a
+break of 5 hr, there will be another group of 2 or 3 passes. The process will repeat after
+a break of 12 hr. Though we would like to have more statistical data, the ground track
+analysis can rapidly assess performance, represent the coverage distribution, and
+crosscheck more detailed results. From this process we could, for example, generate
+timelines for the most and least coverage in one day.
+
+The next step in the numerical modeling hierarchy is a point coverage simulation.
+To do this, we conceptually create a grid of points on the surface of the Earth, fly one
+or more spacecraft over the grid, and track the observation characteristics for each of
+the grid points. We can then collect and evaluate data over different geographical
+regions. The most common way is to collect data along lines of constant latitude and
+present statistical coverage results as a function of latitude. This type of simulation is
+an excellent way to evaluate coverage statistically. The main disadvantage is that it
+
+72 Earth Coverage 173
+
+does not let us see the problem physically or admit the general analytic studies
+stemming from the formulas of Sec. 7.2.1. Thus, the best choice is to evaluate cover-
+age by combining analytic formulas, ground trace plots, and numerical simulations.
+
+Although the technique for the numerical point coverage simulation is straight-
+forward, the analyst must be aware of three potential pitfalls. First, if we want to
+compare coverage performance at different latitudes, then we need to have grid points
+covering approximately equal areas over the surface of the globe. If grid points are at
+equal intervals of latitude and longitude, (at every 10 deg, for example), then the
+number of points per unit area will be much greater near the poles, thus incorrectly
+weighting polar data in the overall global statistics. We can easily resolve this artificial
+weighting by using grid points at a constant latitude spacing with the number of points
+at each latitude proportional to the cosine of that latitude. This covers the globe with
+an approximately equal number of points per unit area and properly balances the
+global statistics.
+
+Our second problem is to adjust for gaps where the simulation begins and ends.
+Otherwise, these gaps will make gap statistics unrealistic because true gaps and
+coverage regions will not begin and end at the start and end points of the simulation.
+The easiest solution is to run the simulation long enough that start and end data have
+minimal impact on the statistics.
+
+The third, and perhaps most significant, problem is that we are trying to collect
+Statistical data on a process for which statistical distributions do not apply. Most
+statistical measures, such as the mean, standard deviation, or the 90th percentile
+assume that the data being sampled has a Gaussian or random distribution. While the
+distribution which we found by examining the ground track plot above was not
+uniform, it was also not at all important for some activities. Our estimation of above 2
+to 3 passes of 12 min each, twice per day, gives an average percent coverage on the
+order of 1 hr/24 hr = 4%. But just collecting statistical data and concluding that the
+percent coverage is about 4% is remarkably uniformative. That could be the result of
+1 hr of continuous coverage and 23 hr of no coverage or 2.5 min of coverage every
+hour. Similar problems plague all of the normal statistical measures applied to orbit
+analysis. The important point is:
+
+Statistical analysis of inherently nonstatistical data, such as orbit
+coverage, can lead to dramatically incorrect conclusions.
+
+Simple techniques such as ground track analysis are imperative to understand and
+validate the conclusions we reach.
+
+7.2.3 Coverage Figures of Merit
+
+Having established a simulation technique, we need to find a way to accumulate
+coverage statistics and to evaluate the quality of coverage. As described in Chap. 3, we
+can quantify coverage quality by providing a coverage Figure of Merit (an appro-
+priate numerical mechanism for comparing the coverage of satellites and constella-
+tions). We wish to find a Figure of Merit which is physically meaningful, easy to
+compute in our numerical simulation, and fair in comparing alternative constellations.
+The most common general purpose coverage Figures of Merit are:
+
+° Percent Coverage
+
+The percent coverage for any point on the grid is simply the number of times
+that point was covered by one or more satellites divided by the total number
+
+174
+
+Orbit and Constellation Design 72
+
+of simulation time steps. It is numerically equal to the analytically computed
+percent coverage in Eq. (7-11). The advantage of percent coverage is that it
+shows directly how much of the time a given point or region on the ground is
+covered. However, it does not provide any information about the distribution
+of gaps in that coverage.
+
+Maximum Coverage Gap (= Maximum Response Time)
+
+The maximum coverage gap is simply the longest of the coverage gaps
+encountered for an individual point. When looking at statistics over more than
+one point, we can either average the maximum gaps or take their maximum
+value. Thus the worldwide mean maximum gap would be the average value of
+the maximum gap for all the individual points, and the worldwide maximum
+gap would be the largest of any of the individual gaps. This statistic conveys
+some worst-case information, but it incorrectly ranks constellations because a
+single point or a small number of points determine the results. Thus, the
+maximum coverage gap, or maximum response time, is a poor Figure of Merit.
+
+Mean Coverage Gap
+
+The mean coverage gap is the average length of breaks in coverage for a given
+
+point on the simulation grid. To compute gap statistics, we must have three
+counters for each point on the simulation grid. One counter tracks the number
+of gaps. A second tracks total gap duration. The third tracks the duration of the
+current gap and is reset as needed. During the simulation, if no satellite covers
+a given point on the grid, we increment the gap length counter (3) by one time
+step. If the point is covered but was not covered the previous time (indicated
+by a value of the gap length counter greater than 0), then we have reached the
+end of an individual gap. We increment the counter for the number of gaps (1)
+by one and add the gap duration to the total gap counter (2) or incorporate it
+in other statistics we want to collect. The final mean coverage gap is computed
+by dividing the total gap length by the number of gaps. As noted above, what
+happens at the beginning and end of the simulation influences all statistics
+relating to gap distribution.
+
+Time Average Gap
+
+The time average gap is the mean gap duration averaged over time. Alterna-
+tively, it is the average length of the gap we would find if we randomly
+sampled the system. To compute the time average gap, two counters are
+required-—one for the current gap length and one for the sum of the squares of
+gap lengths. During the simulation, if no satellite covers a given point on the
+grid, add one to the current gap length counter. If the point is covered, square
+the current gap length, add the results to the sum of the squares counter, and
+reset the current gap length counter to zero. (If the current gap length counter
+was previously 0, then no change will have occurred in either counter.) The
+time average gap is computed at the end of the simulation by dividing the sum
+of the squares of the gaps by the duration of the simulation.
+
+Mean Response Time
+
+The mean response time is the average time from when we receive a random
+request to observe a point until we can observe it. If a satellite is within view
+
+7.2 Earth Coverage 175
+
+of the point at a given time step, the response time at that step will be 0.* If the
+point in question is in a coverage gap, then the response time would be the
+time until the end of the coverage gap. In principle, response time should be
+computed from a given time step to the end of a gap. But by symmetry we
+could also count the time from the beginning of the gap—a computationally
+convenient method with the same results. Thus the response time counter will
+be set to O if a point is covered at the current time step. We advance the
+response time counter by one time step if the point is not now covered. The
+mean response time will then be the average value of all response times for all
+time steps. This Figure of Merit takes into account both coverage and gap
+Statistics in trying to determine the whole system’s responsiveness. As shown
+below, the mean response time is the best coverage Figure of Merit for
+evaluating overall responsiveness.
+
+To illustrate the meaning and relative advantages of these Figures of Merit, Fig. 7-7
+diagrams a simplified coverage simulation from three satellite systems: A, B, and C.
+These could, for example, be three sample FireSat constellations. Our goal is to see
+events as quickly as possible, and therefore, minimize gaps. Constellation B is
+identical to A except for one added gap, which makes B clearly a worse solution than
+A. C has the same overall percent coverage as A, but the gaps are redistributed to
+create a rather long gap, making C the worst constellation for regular coverage.
+
+Observation Gap
+
+en
+
+Time
+Coverage Gap Gap Average Gap Response Time
+ees
+a
+
+Fig. 7-7. Coverage Figures of Merit. See text for explanation.
+
+| 8
+Cc
+
+* One advantage of response time as a Figure of Merit is that delays in processing or communi-
+cations (for both data requests and responses) can be directly added to the coverage response
+time. This results in a total response time, which measures the total time from when users
+request data until they receive it. We can also evaluate minimum, mean, and maximum total
+response times which have much more operational meaning than simple gap statistics but are
+still easy to compute.
+
+176 Orbit and Constellation Design 73
+
+The table below Fig. 7-7 shows the numerical values of the Figures of Merit defined
+above. The percent coverage correctly ranks constellation A better than B, but because
+it does not take gap Statistics into account it cannot distinguish between A and C.
+Similarly, the maximum gap cannot distinguish between A and B, even though B is
+clearly worse by having an additional gap. In this-case the maximum gap tells us which
+constellation is worst but cannot distinguish between two constellations which are
+clearly different.
+
+The mean gap statistic is even more misleading. By adding a short gap to constel-
+lation B, the average length of the gaps has been decreased, and consequently, this
+Figure of Merit ranks constellation B above constellation A. (This can happen in real
+constellation statistics. By adding satellites we may eliminate some of the very small
+gaps, thus increasing the average gap length, even though more satellites provide
+more and better coverage.)
+
+Finally, the time average gap and mean response time in the fourth and fifth
+columns correctly rank the three constellations in order of preference by taking into
+account both the percent coverage and gap statistics. Consequently, both of these are
+better Figures of Merit than the other three. I believe the mean response time is the
+stronger Figure of Merit because it provides a more useful measure of the end per-
+formance of the system and because it can be easily extended to include delays due to
+processing, communications, decision making, or the initiation of action. However,
+because each of the Figures of Merit represent different characteristics we should
+evaluate more than one. Specifically, I recommend evaluating mean response time,
+percent coverage, and maximum gap, and qualitatively (not quantitatively) weighting
+the results in that order, keeping strongly in mind the caveat at the end of Sec. 7.2.2.
+
+7.3 The AV Budget
+
+To an orbit designer, a space mission is a series of different orbits. For example, a
+satellite may be released in a low-Earth parking orbit, transferred to some mission
+orbit, go through a series of rephasings or alternative mission orbits, and then move to
+some final orbit at the end of its useful life. Each of these orbit changes requires
+energy. The AV budget is traditionally used to account for this energy. It is the sum of
+the velocity changes required throughout the space mission life. In a broad sense the
+AV budget represents the cost for each mission orbit scenario. In designing orbits and
+constellations, we must balance this cost against the utility achieved.
+
+Chapter 10 shows how to develop a propulsion budget based on a given AV budget.
+For preliminary design, we can estimate the “cost” of the space mission by using the
+rocket equation to determine the total required spacecraft plus propellant mass, my =
+mg + mp, in terms of the dry mass of the spacecraft, mg, the total required AV, and the
+propellant exhaust velocity, Vp:
+
+my = me vO? (7-14)
+
+This is equivalent to Eqs. (17-6) and (17-7) in Sec. 17.1, with V, replaced by Ispg,
+where the specific impulse, I, = Vo/g, and g is the acceleration of gravity at the Earth’s
+surface. Typical exhaust velocities are in the range of 2 to 4 km/s and up to 30 km/s
+for electric propulsion. We can see from Eq. (7-14) that AV requirements much smaller
+than the exhaust velocity (a few hundred meters per second), will require a propellant
+
+73 The AV Budget 177
+
+mass which is a small fraction of the total mass. If the total AV required is equal to the
+exhaust velocity, then we will need a total propellant mass equal to e — 1 = 1.7 times
+the mass of the spacecraft. Propulsion systems require additional structure such as
+tanks, so a AV much greater than the exhaust velocity is difficult to achieve. It may
+scuttle the mission or require some alternative, such as staging or refueling.
+
+Table 7-3 summarizes how to construct a AV budget. We begin by writing down the
+basic data required to compute AVs: the launch vehicle’s initial conditions, the mission
+orbit or orbits, the mission duration, required orbit maneuvers or maintenance, and the
+mechanism for spacecraft disposal. We then transform each item into an equivalent AV
+requirement using the formulas listed in the table. The right-hand column shows how
+these formulas apply to the FireSat mission. Figure 7-8 shows the AV required for
+altitude maintenance for typical spacecraft and atmosphere parameters.
+
+107
+
+10° + =
+Ballistic Coefficient m/CpA = 100 kg/m? |
+
+—o
+—
+aan
+
+10°
+107]
+= | Solar Maximum
+o®
+ane K
+5 10
+a F10.7=225, ap=20
+SS teed
+E 10 | F10.7=175, ap=16
+>
+<j
+
+Solar Minimum ww ; =
+1074 =e |Time Averaged Density
+
+10° : at
+| F10.7=075, ap=08
+-14 —- ——
+10 [F10.7=125, ap=12| SSS
+107 — -
+
+100 200 300 400 500 600 700 800 900 1,000
+Altitude (km)
+
+Fig. 7-8. Altitude Maintenance AVs for a Ballistic Coefficient of 100 kg/m2. See Sec. 8.1.3
+for ballistic coefficient and atmosphere parameters. The AV for altitude maintenance is
+inversely proportional to the ballistic coefficient. The F10.7 index is in units of 10-22
+W/(m2Hz). Ap is an index of geomagnetic activity ranging from 0 (very quiet) to 400
+(extremely disturbed).
+
+The AV budget relates strongly to the propulsion requirements and to the final cost
+of a space mission. Yet other conditions may vary the propellant requirements relative
+to the nominal AV budget. For example, although rocket propulsion usually provides
+the AV, we can obtain very large AVs from a flyby of the Moon, other planets, or even
+the Earth itself [Kaufman, Newman, and Chromey, 1966; Meissinger, 1970]. In a fly-
+by, a spacecraft leaves the vicinity of some celestial body with the same velocity
+
+178 Orbit and Constellation Design 7.3
+
+TABLE 7-3. Creating a AV Budget. See also summary tables on inside back cover.
+
+Where Equation
+Discussed Source FireSat Example
+Basic Data
+
+Initial Conditions Chap. 18 150 km, 55 deg
+Mission Orbit(s) Secs. 7.4, 7.5 | 700 km, 55 deg
+Mission Duration (each phase) | Sec. 2.3 5 yr
+
+Orbit Maintenance Requirements | Secs. 6.2.3, 6.5 Altitude maintenance
+
+Drag Parameters Secs. Table 8-3, m/Cq A = 25 kg/m?
+P max = 2.73 10 ~13 kg/m
+
+6.2.3, 8.1.3 Fig. 8-2, inside
+rear endleaf
+
+Orbit Maneuver Requirements Sec. 6.3 None
+
+Final Conditions Secs. 6.5, 21.2 Positive reentry
+Delta V Budget (m/s)
+
+Orbit Transfer
+
+1st burn Sec. 6.3.1*
+2nd burn Sec. 6.3.1*
+
+Altitude Maintenance (LEO) Secs. 6.2.3, 7.3 | (6-26), Fig. 7-8
+North/South Stationkeeping (GEO) | Sec. 6.5 (6-51), (6-52)
+East/West Stationkeeping Sec. 6.5 (6-53)
+
+Orbit Maneuvers
+
+(6-32), (6-39)
+
+Rephasing, Rendezvous Sec. 6.3.3 (6-41)
+Node or Plane Change Sec. 6.3.2 (6-38), (6-39)
+Spacecraft Disposal Sec. 6.5 (6-54)
+
+Total AV Sum of
+the above
+
+Other Considerations
+ACS & Other Requirements
+AV Savings 7. See text
+
+Margin Included in propellant
+budget
+
+*Sec. 6.3.2 if plane change also required.
+
+relative to the body as when it approached, but in a different direction. This phenom-
+enon is like the elastic collision between a baseball and a bat, in which the velocity of
+the ball relative to the bat is nearly the same, but its velocity relative to the surrounding
+baseball park can change dramatically. We can use flybys to change direction, to
+provide increased heliocentric energy for solar system exploration, or to reduce the
+amount of energy the satellite has in inertial space. For example, one of the most
+energy-efficient ways to send a space probe near the Sun is to use a flyby of Jupiter to
+reduce the intrinsic heliocentric orbital velocity of Earth associated with any space-
+craft launched from Earth.
+
+74 Selecting Orbits for Earth-Referenced Spacecraft 179
+
+A second way to produce a large AV without burning propellant is to use the
+atmosphere of the Earth or other planets to change the spacecraft’s direction or reduce
+its energy relative to the planet. The manned flight program has used this method from
+the beginning to dissipate spacecraft energy for return to the Earth’s surface. Mars
+Pathfinder used aerobraking for planetary exploration. It can also be used to produce
+a major plane change through an aeroassist trajectory [Austin, Cruz, and French,
+1982; Mease, 1988].
+
+The solar sail is a third way to avoid using propellant. The large, lightweight sail
+uses solar radiation to slowly push a satellite the way the wind pushes a sailboat. Of
+course, the low-pressure sunlight produces very low acceleration.
+
+The aerospace literature discusses many alternatives for providing spaceflight
+energy. But experimental techniques (those other than rocket propulsion and atmo-
+spheric braking) are risky and costly, so normal rocket propulsion will ordinarily be
+used to develop the needed AY, if this is at all feasible.
+
+The AV budget described in Table 7-3 measures the energy we must give to the
+spacecraft’s center of mass to meet mission conditions. When we transform this AV
+budget into a propellant budget (Chap. 10), we must consider other characteristics.
+These include, for example, inefficiencies from thrusters misaligned with the AV
+direction, and any propulsion diverted from AV to provide attitude control during orbit
+maneuvers. Chapters 10 and 17 describe propulsion requirements in detail.
+
+For most circumstances, the AV budget does not include margin because it results
+from astrodynamic equations with little error. Instead, we maintain the margin in the
+propellant budget itself, where we can reflect such specific elements as residual
+propellant. An exception is the use of AV to overcome atmospheric drag. Here the AV
+depends upon the density of the atmosphere, which is both variable and difficult to
+predict. Consequently, we must either conservatively estimate the atmospheric density
+or incorporate AV margin for low-Earth satellites to compensate for atmospheric
+variations.
+
+7.4 Selecting Orbits for Earth-Referenced Spacecraft
+
+The first step in finding the appropriate orbit for an Earth-referenced mission is to
+determine if a specialized orbit from Table 7-4 applies.* We should examine each of
+these orbits individually to see if its characteristics will meet the mission requirements
+at reasonable cost. Space missions need not be in specialized orbits, but these orbits
+have come into common use because of their valuable characteristics. Because they do
+constrain such orbit parameters as altitude and inclination, we must determine whether
+or not to use them before doing the more detailed design trades described below.
+
+It is frequently the existence of specialized orbits which yields very different solu-
+tions for a given space mission problem. Thus, a geosynchronous orbit may provide
+the best coverage characteristics, but may demand too much propellant, instrument
+resolution, or power. This trade of value versus cost can lead to dramatically different
+solutions, depending on mission needs. For a traditional communications system, the
+value of providing continuous communications coverage outweighs the cost and
+performance loss associated with the distance to geostationary orbit. Some communi-
+cations systems provide continuous coverage with a low-Earth orbit constellation as
+described in Sec. 7.6. In the case of FireSat, continuous coverage is not required and
+
+* For an extended discussion see Cooley [1972] or Wertz [2001].
+
+180 Orbit and Constellation Design 74
+
+TABLE 7-4. Specialized Orbits Used for Earth-Referenced Missions. For nearly circular low-
+Earth orbits, the eccentricity will undergo a low-amplitude oscillation. A frozen orbit
+is one which has a small eccentricity (~0.001) which does not oscillate due to a
+balancing of the Jz and J, perturbations.
+
+Geosynchronous | Maintains nearly fixed Communications, Sec. 6.1.4
+(GEO) position over equator weather
+
+Sun-synchronous | Orbit rotates so as to Earth resources, Sec. 6.2.2
+maintain approximately weather
+constant orientation with
+respect to Sun
+
+Molniya Apogee/perigee do not rotate | High latitude Sec. 6.2.2
+communications
+
+Frozen Orbit Minimizes changes in orbit | Any orbit requiring | See Chobotov [1996]
+parameters stable conditions
+
+Repeating Ground | Subsatellite trace repeats Any orbit where Sec. 6.5
+constant viewing
+angles are desirable
+
+the need for fine resolution on the ground for an IR detection system precluded a
+geosynchronous orbit, so its mission characteristics are dramatically different. There
+is no a priori way of knowing how these trades will conclude, so we may need to carry
+more than one orbit into detailed design trades. In any case, we should reconsider
+specialized orbits from time to time to see whether or not their benefits are indeed
+worth their added constraints.
+
+Orbit design is inherently iterative. We must evaluate the effects of orbit trades on
+the mission as a whole. In selecting the orbit, we need to evaluate a single satellite vs.
+a constellation, specialized orbits, and the choice of altitude and inclination. For
+example, alternative solutions to a communications problem include a single large
+satellite in geosynchronous equatorial orbit and a constellation of small satellites in
+low-Earth orbit at high inclination.
+
+The first step in designing mission orbits is to determine the effect of orbit param-
+eters on key mission requirements. Table 7-5 summarizes the mission requirements
+that ordinarily affect the orbit. The table shows that altitude is the most important of
+orbit design parameter.
+
+The easiest way to begin the orbit trade process is by assuming a circular orbit and
+then conducting altitude and inclination trades as described below and summarized in
+the table. This process establishes a range of altitudes and inclinations, from which we
+can select one or more alternatives. Documenting the reasons for these results is
+particularly important, so we can revisit the trade from time to time as mission require-
+ments and conditions change.
+
+Selecting the mission orbit is often highly complex, involving such choices as
+availability of launch vehicle, coverage, payload performance, communication links,
+and any political or technical constraints or restrictions. Thus, considerable effort may
+go into the process outlined in Table 7-1. Figure 3-1 in Sec. 3.2.3 shows the results of
+the altitude trade for the FireSat mission. Typically these trades do not result in
+specific values for altitude or inclination, but a range of acceptable values and an
+indication of those we would prefer. Ordinarily, low altitudes achieve better instru-
+
+7.4 Selecting Orbits for Earth-Referenced Spacecraft 181
+
+TABLE 7-5. Principal Mission Requirements That Normally Affect Earth-Referenced Orbit
+
+Design.
+Parameter Affected
+
+Altitude
+
+Inclination
+
+Node (only relevant for some orbits)
+Eccentricity
+
+Mission Requirement Where Discussed
+
+Coverage
+Continuity
+Frequency
+Duration
+Field of view (or swath width)
+Ground track
+Area coverage rate
+Viewing angles
+Earth locations of interest
+
+Sensitivity or Performance
+Exposure or dwell time
+Resolution
+Aperture
+
+Chaps. 9,13
+
+Environment and Survivability
+Radiation environment
+Lighting conditions
+Hostile action
+
+Launch Capability
+Launch cost
+On-orbit weight
+Launch site limitations
+
+Ground Communications
+Ground station locations
+Use of relay satellites
+
+Altitude
+(inclination usually secondary)
+
+Altitude
+Inclination
+
+Altitude
+Inclination
+Eccentricity
+
+Data timeliness
+
+Altitude
+Eccentricity
+
+Orbit Lifetime Secs. 6.2.3, 8.1.5
+
+Altitude
+Inclination
+Longitude in GEO
+
+Legal or Political Constraints Sec. 21.1
+Treaties
+Launch safety restrictions
+
+International allocation
+
+ment performance because they are closer to the Earth’s surface. They also require
+less energy to reach orbit. On the other hand, higher orbits have longer lifetimes and
+provide better Earth coverage. Higher orbits are also more survivable for satellites
+with military applications. Orbit selection factors usually compete with each other
+with some factors favoring higher orbits and some lower.
+
+Often, a key factor in altitude selection is the satellite’s radiation environment. As
+described in Sec. 8.1, the radiation environment undergoes a substantial change at
+approximately 1,000 km. Below this altitude the atmosphere will quickly clear out
+charged particles, so the radiation density is low. Above this altitude are the Van Allen
+belts, whose high level of trapped radiation can greatly reduce the lifetime of
+spacecraft components. Most mission orbits therefore separate naturally into either
+low-Earth orbits (LEO), below 1,000 to 5,000 km, and geosynchronous orbits (GEO),
+
+182 Orbit and Constellation Design 7.4
+
+which are well above the Van Allen belts. Mid-range altitudes may have coverage
+characteristics which make them particularly valuable for some missions. However,
+the additional shielding or reduced life stemming from this region’s increased
+radiation environment also makes them more costly.
+
+Having worked the problem assuming a circular orbit, we should also assess the
+potential advantages of using eccentric orbits. These orbits have a greater peak altitude
+for a given amount of energy, lower perigee than is possible with a circular orbit, and
+lower velocity at apogee, which makes more time available there. Unfortunately,
+eccentric orbits also give us non-uniform coverage and variable range and speed.
+
+Eccentric orbits have an additional difficulty because the oblateness of the Earth
+causes perturbations which make perigee rotate rapidly. This rotation leads to rapid
+changes in the apogee’s position relative to the Earth’s surface. Thus, with most orbits,
+we cannot maintain apogee for long over a given latitude. As Sec. 6.2 describes, the
+first-order rotation of perigee is proportional to (2 — 2.5 sin2i) which equals zero at an
+inclination, i = 63.4 deg. At this critical inclination the perigee will not rotate, so we
+can maintain both apogee and perigee over fixed latitudes. Because this orientation can
+provide coverage at high northern latitudes, the Soviet Union has used such a Molniya
+orbit for communications satellites for many years. Geosynchronous orbits do not
+provide good coverage in high latitude regions.
+
+Eccentric orbits help us sample either a range of altitudes or higher or lower
+altitudes than would otherwise be possible. That is why scientific monitoring missions
+often use high eccentricity orbits. As discussed in Sec. 7.6, Draim [1985, 1987a,
+1987b] has done an extensive evaluation of the use of elliptical orbits and concluded
+that they can have significant advantages in optimizing coverage and reducing the
+number of satellites required.
+
+FireSat Mission Orbit. Our first step for the FireSat mission orbit is to look at the
+appropriateness of the specialized orbits from Table 7-4. This is done for FireSat in
+Table 7-6. As is frequently the case, the results provide two distinct regimes. One pos-
+sibility is a single geosynchronous FireSat. In this case, coverage of North America
+will be continuous but coverage will not be available for most of the rest of the world.
+Resolution will probably be the driving requirement.
+
+TABLE 7-6. FireSat Specialized Orbit Trade. The conclusion is that in low-Earth orbit we do
+not need a specialized orbit for FireSat. The frozen orbit can be used with any of the
+low-Earth orbit solutions.
+
+Good for
+Advantages Disadvantages FireSat
+
+Geosynchronous | Continuous view of High energy requirement
+continental U.S. No world-wide coverage
+Coverage of Alaska not good
+
+Sun-synchronous | None High energy requirement No
+
+Molniya Good Alaska coverage High energy requirement No, unless
+
+Acceptable view of Strongly varying range Alaska is
+continental U.S. critical
+
+Frozen Orbit Minimizes propellant usage | None Yes
+
+Repeating Ground | Repeating viewing angle Restricts choice of altitude {| Probably not
+Track (marginal advantage) Some perturbations stronger
+
+
+75 Selecting Transfer, Parking, and Space-Referenced Orbits 183
+
+The alternative is a low-Earth orbit constellation. Resolution is less of a problem
+than for geosynchronous. Coverage will not be continuous and will depend on the
+number of satellites. None of the specialized low-Earth orbits is needed for FireSat. (A
+frozen orbit can be used with essentially any low-Earth orbit.) Thus, for the low-Earth
+constellation option, there will be a broad trade between coverage, launchability,
+altitude maintenance, and the radiation environment.
+
+For low-Earth orbit, coverage will be the principal driving requirement. Figure 3-1
+in Sec. 3.2.3 summarized the FireSat altitude trades and resulted in selecting an alti-
+tude range of 600 to 800 km with a preliminary value of 700 km. This may be affected
+by further coverage, weight, and launch selection trades. FireSat will need to cover
+high northern latitudes, but coverage of the polar regions is not needed. Therefore, we
+select a preliminary inclination of 55 deg which will provide coverage to about 65 deg
+latitude. This will be refined by later performance trades, but is not likely to change by
+much.
+
+Zero eccentricity should be selected unless there is a compelling reason to do
+otherwise. There is not in this case, so the FireSat orbit should be circular. Thus, the
+preliminary FireSat low-Earth orbit constellation has a = 700 km, i = 55 deg, e = 0,
+and the number of satellites selected to meet minimum coverage requirements.
+
+7.5 Selecting Transfer, Parking, and Space-Referenced Orbits
+
+Selecting transfer, parking, and space-referenced orbits proceeds much the same as
+for Earth-referenced orbits, although their characteristics will be different. Table 7-7
+summarizes the main requirements. We still look first at specialized orbits and then at
+general orbit characteristics. Table 7-8 shows the most common specialized orbits.
+The orbits described in this section may be either the end goal of the whole mission or
+simply one portion, but the criteria for selection will be the same in either case.
+
+TABLE 7-7. Principal Requirements that Normally Affect Design of Transfer, Parking, and
+Space-Referenced Orbits.
+
+Requirement Where Discussed
+
+Accessibility (AV required) Secs. 6.3, 7.3
+
+Orbit decay rate and long-term stability Sec. 6.2.3
+Ground station communications, especially for maneuvers Secs. 5.3, 7.2
+
+Radiation environment Sec. 8.1
+
+Thermal environment (Sun angle and eclipse constraints) Secs. 5.1, 10.3
+
+Accessibility by Shuttle or transfer vehicles Sec. 18.2
+
+7.5.1 Selecting a Transfer Orbit
+
+A transfer orbit must get the spacecraft where it wants to be. For transfer orbits
+early in the mission, the launch vehicle or a separate upper stage was traditionally
+tasked with doing the work as described in Chap. 18. Because of the continuing drive
+to reduce cost, integral propulsion upper stages have become substantially more
+common (see Chap. 17).
+
+184 Orbit and Constellation Design 75
+
+TABLE 7-8. Specialized Orbits Used for Transfer, Parking, or Space-Referenced Opera-
+tions.
+
+| Orbit Characteristic Application | Section |
+
+Lunar or Same relative velocity Used to provide energy change |7.3
+Planetary Flyby | approaching and leaving or plane change
+flyby body
+
+Aeroassist
+Trajectory
+
+Use atmosphere for plane
+change or braking
+
+Used for major energy savings for | 7.3
+plane change, altitude reduction
+or reentry
+
+Solar observations; missions
+concerned about Sun
+interference or uniform lighting
+
+Orbit rotates so as to
+maintain approximately
+constant orientation with
+respect to Sun
+
+Sun-synchronous
+
+Maintains fixed position
+relative to Earth/Moon
+system or Earth/Sun system
+
+Lagrange Point
+Orbit
+
+Interplanetary monitoring;
+potential space manufacturing
+
+Two distinct changes can occur during transfer orbit: a change in the total energy
+of the satellite, and a change in direction without changing the total energy. As
+discussed in Sec. 6.1, the total energy of a Keplerian orbit depends only on the semi-
+major axis. Consequently, only transfer orbits which change the mean altitude, such as
+transfer from LEO to GEO, require adding energy to the satellite. Clearly, if we wish
+to go to an orbit with a higher energy level then we must find some process to provide
+the additional energy, such as rocket propulsion or a lunar or planetary flyby. If we
+must remove energy from the orbit, we can frequently use atmospheric drag.
+
+A change in satellite direction without changing energy normally involves a plane
+change (inclination or node), although we may also change the eccentricity without
+changing the mean altitude. (Any small thrust perpendicular to the velocity cannot
+change the orbit energy, or therefore, the mean altitude.) To change the satellite orbit
+plane or eccentricity without changing the total energy, several options are available.
+
+If we choose to change directions by using propulsion, then propellant require-
+ments will typically be large; the AV required to change directions is directly
+proportional to the spacecraft velocity, which is about 7 km/s in low-Earth orbit.
+Fortunately, other techniques for changing the orbit plane require less energy. For
+example, suppose we want to shift the node of an orbit to create a constellation with
+nodes equally spaced around the Earth’s equator or to replace a dead satellite. If the
+constellation is at an altitude other than that of the replacement satellite, we can use
+the node regression provided by normal orbit perturbations. The rate at which the node
+of an orbit precesses varies substantially with altitude, as described in Sec. 6.2.
+Specifically, if we have a final constellation at a high altitude, we can inject and leave
+the replacement satellite at low altitude so that the node rotates differentially with
+respect to the high-altitude constellation. When the satellite reaches the desired node,
+an orbit transfer is made with no plane change, thus using much less energy. In this
+case we are trading orbit transfer time for energy.
+
+A second way to reduce the AV for large plane changes is to couple them with
+altitude changes. The net required AV will be the vector sum of the two perpendicular
+components changing the altitude and direction—substantially less than if the two
+burns were done separately.
+
+7.5 Selecting Transfer, Parking, and Space-Referenced Orbits 185
+
+Because the AV required to change the plane is directly proportional to satellite
+velocity, plane changes are easier at high altitudes where the satellite velocity is lower.
+That is why most of the plane change in geosynchronous transfer orbit is done at
+apogee rather than perigee.
+
+If the required plane change is large, it may cost less total propellant to use a three-
+burn transfer rather than a two-burn transfer [Betts, 1977]. In this case, the first perigee
+burn puts apogee at an altitude above the ultimate altitude goal, because the apogee
+velocity is lower there. During a second burn, the plane change is made using a smaller
+AV and perigee is raised to the final altitude. The third burn then brings apogee back
+to the desired end altitude. This process is not more efficient for small plane changes
+such as those associated with launch from mid-latitudes to geosynchronous equatorial
+orbit. A third proposed way to make large plane changes is the aeroassist orbit
+described in Sec. 7.3 [Austin, Cruz, and French, 1982; Mease, 1988].
+
+Ordinarily, we want to transfer a satellite using the smallest amount of energy,
+which commonly leads to using a Hohmann transfer as described in Sec. 6.3. How-
+ever, as illustrated in Fig. 7-9 and described in Table 7-9, other objectives may
+influence the selection of a transfer orbit. For example, we can reduce the transfer time
+relative to a Hohmann orbit by using additional energy. These transfers are not
+common, but they may be appropriate if transfer time is critical as might be true for
+military missions or a manned mission to Mars.
+
+OO
+
+A. High Energy B. Hohmann Transfer
+C. Low Thrust Chemical D. Electric Propulsion
+
+Fig. 7-9. Alternative Transfer Orbits. See Table 7-9 for characteristics.
+
+We should also consider a low-thrust transfer, using low thrust chemical or
+electrical propulsion. (See Chap. 17 for hardware information.) To do a low-thrust
+chemical transfer with maximum acceleration of 0.05 to 0.10 g’s, the satellite under-
+takes a series of burns around perigee and then one or two burns at apogee to reach the
+
+186 Orbit and Constellation Design 75
+
+TABLE 7-9. Alternative Transfer Orbit Methods. (See Chap. 17 for discussions of hardware
+alternatives.)
+
+Typical! Orbit
+Accel. Type Advantages Disadvantages
+
+High Energy | 10g Elliptical & | Table 6-5 | * Rapid transfer ¢ Uses more energy
+hyperbolic than necessary +
+Hohmann
+disadvantages
+
+Minimum Hohmann | Eq. (6-32) | * Traditional ¢ Rough environment
+Energy, * High efficie ° Thermal proble
+High Thrust ig efficiency rma problems
+(Hohmann) ¢ Rapid transfer * Can't use S/C
+
+* Low radiation subsystems
+
+exposure ¢ Failure
+unrecoverable
+
+Low Thrust Hohmann | Same as _ |* High efficiency ¢ Moderate radiation
+Chemical transfer Hohmann |, Low engine weight exposure
+
+segments e
+g * Low orbit deployment | * 3-4 day transfer to
+
+& check-out GEO
+
+* Better failure
+recovery
+
+* Can use spacecraft
+subsystems
+
+¢ Failure recovery
+possible
+
+Electric 0.0001 to * Can use very high /,, | * 2 to 6 month
+Propulsion |0.001g engines = major transfer to GEO
+weight reduction * High radiation
+*Low orbit deployment | exposure
+and check-out * Needs autonomous
+¢ Can have reusable transfer for cost
+transfer vehicle efficiency
+¢ Failure recovery
+possible
+
+final orbit, as illustrated in Fig 7-9C. In this case the total efficiency will approximate
+that of a two-burn Hohmann transfer, because all of the energy is being provided near
+perigee or apogee, as it is for the Hohmann transfer. With a low-thrust chemical
+transfer, we can deploy and check out a satellite in low-Earth orbit where we can still
+recover it before transferring it to a high-energy orbit where we cannot. Low-thrust
+transfer provides substantially lower acceleration and, therefore, a more benign
+environment. Also, we are more likely to be able to recover a satellite if the propulsion
+system fails. The principal disadvantage of low-thrust chemical transfer is that it is a
+very nontraditional approach. Wertz, Mullikin, and Brodsky [1988] and Wertz [2001]
+describe low-thrust chemical transfer further.
+
+Another type of low-thrust transfer uses electric propulsion, with extremely low
+acceleration levels—at levels of 0.001 g or less [Cornelisse, Schéyer, and Wakker,
+1979]. Transfer therefore will take several months, even when the motors are thrusting
+continuously. Consequently, as Fig. 7-9D shows, electric propulsion transfer requires
+
+75 Selecting Transfer, Parking, and Space-Referenced Orbits 187
+
+spiralling out, with increased total AV (see Table 7-9). We need far less total propellant
+because of electric propulsion’s high /,,. Electric propulsion transfer greatly reduces
+the total on-orbit mass and, therefore, the launch cost. However, much of the weight
+savings is lost due to the very large power system required. In addition, the slow
+transfer will keep the satellite longer in the Van Allen belts, where radiation will
+degrade the solar array and reduce mission life.
+
+Flybys or gravity-assist trajectories can save much energy in orbit transfers.
+Because they must employ a swing-by of some celestial object, however, missions
+near Earth do not ordinarily use them. Gravity-assist missions can use the Earth, but
+the satellite must first recede to a relatively high altitude and then come back near the
+Earth.* For a more extended discussion of gravity-assist missions, see Kaufman,
+Newman, and Chromey [1966], or Wertz [2001]. Meissinger et al. [1997, 1998] and
+Farquhar and Dunham [1998] have separately proposed interesting techniques for
+using a different orbit injection process to substantially increase the mass available
+(and, therefore, reduce the launch cost) for high-energy interplanetary transfers.
+
+FireSat Transfer Orbit. We assume that FireSat will be launched into a 150-km,
+circular parking orbit at the proper inclination and need to determine how to get to the
+operational orbit of 700 km. For now, we assume some type of orbit transfer. When
+the spacecraft weight becomes better known and a range of launch vehicles selected,
+another trade will be done to determine whether it is more economical for the launch
+vehicle to put FireSat directly into its operational orbit.
+
+The FireSat orbit transfer AV from Table 7-3 is a modest 309 m/s. It is not worth
+the added cost, solar array weight, or complexity for electric propulsion transfer. There
+is no reason for a high-energy transfer. We are left to select between a Hohmann
+transfer and a low-thrust chemical transfer. The Hohmann transfer is the traditional
+approach.
+
+Low-thrust chemical transfer provides a more benign transfer environment and the
+potential for low-orbit deployment and checkout so that satellite recovery would be a
+possibility. The propulsion system would be lighter weight and require less control
+authority. We may be able to do the orbit transfer using just the mission orbit control
+modes and hardware which could completely eliminate a whole set of components and
+control logic.
+
+For FireSat we will make a preliminary selection of low-thrust chemical transfer.
+This is non-traditional, but probably substantially lower cost and lower risk. Later in
+the mission design, the launch vehicle may eliminate this transfer orbit entirely.
+
+7.5.2 Parking and Space-Referenced Orbits
+
+In parking or space-referencéd orbits, the position of the spacecraft relative to the
+Earth is unimportant except for blockage of communications or fields of view. Here
+the goal is simply to be in space to observe celestial objects, sample the environment,
+or use the vacuum or low-gravity of space. These orbits are used, for example, for
+space manufacturing facilities, celestial observatories such as Space Telescope and
+Chandra X-Ray Observatory, or for testing various space applications and processes.
+Because we are not concerned with our orientation relative to the Earth, we select such
+orbits to use minimum energy while maintaining the orbit altitude, and possibly, to
+gain an unobstructed view of space. For example, Sun-synchronous orbits may be
+
+*Using the Earth for a gravity assist was first proposed by Meissinger [1970].
+
+188 Orbit and Constellation Design 76
+
+appropriate for maintaining a constant Sun angle with respect to a satellite instrument.
+Another example is the parking or storage orbit: a low-Earth orbit high enough to re-
+duce atmospheric drag, but low enough to be easy to reach. We may store satellites
+(teferred to as on-orbit spares) in these orbits for later transfer to other altitudes.
+
+An interesting class of orbits which have been used for environmental monitoring
+and proposed for space manufacturing are libration point orbits or Lagrange orbits,
+named after the 18th century mathematician and astronomer, Joseph Lagrange. The
+Lagrange points for two celestial bodies in mutual revolution, such as the Earth and
+Moon or Earth and Sun, are five points such that an object placed at one of them will
+remain there indefinitely. We can place satellites in “orbit” around the Lagrange points
+with relatively small amounts of energy required to maintain these orbits. (For more
+details, see Wertz [2001].)
+
+7.6 Constellation Design
+
+In designing a constellation, we apply all of the criteria for designing a single-
+satellite orbit. Thus, we need to consider whether each satellite is launchable,
+survivable, and properly in view of ground stations or relay satellites. We also need to
+consider the number of satellites, their relative positions, and how these positions
+change with time, both in the course of an orbit and over the lifetime of the
+constellation.
+
+Specifying a constellation by defining all of the orbit elements for each satellite is
+complex, inconvenient, and overwhelming in its range of options. A reasonable way
+to begin is by looking at constellations with all satellites in circular orbits ata common
+altitude and inclination, as discussed in Sec. 7.4. This means that the period, angular
+velocity, and node rotation rate will be the same for all of the satellites. This leads to
+a series of trades on altitude, inclination, and constellation pattern involving prin-
+cipally the number of satellites, coverage, launch cost, and the environment (primarily
+drag and radiation). We then examine the potential of elliptical orbits and the addition
+of an equatorial ring. The principal parameters that will need to be defined are listed
+in Table 7-10. After exploring the consequences of some of the choices, we will
+summarize the orbit design process in Sec. 7.6.2. A more detailed discussion is given
+in Wertz [2001].
+
+No absolute rules exist. A constellation of satellites in randomly spaced low-Earth
+orbits is a serious possibility for a survivable communications system. The Soviet
+Union has used a constellation of satellites in highly eccentric Molniya orbits for
+decades. Various other missions may find satellite clusters useful. One of the most
+interesting characteristics of the low-Earth orbit communications constellations is that
+the constellation builders have invested billions of dollars and arrived at distinctly
+different solutions. For example, a higher altitude means fewer satellites, but a much
+more severe radiation environment (as discussed in Sec. 8.1), such that the cost of each
+satellite will be higher and the life potentially shorter. Similarly, elliptical orbits allow
+an additional degree of freedom which allows the constellation to be optimized for
+multiple factors, but requires a more complex satellite operating over a range of
+altitudes and velocities and passing through heavy radiation regimes. (See, for
+example, Draim [1985].) Because the constellation’s size and structure strongly affect
+a system’s cost and performance, we must carefully assess alternate designs and doc-
+ument the reasons for final choices. It is this list of reasons that allows the constellation
+design process to continue.
+
+7.6 Constellation Design 189
+
+TABLE 7-10. Principal Factors to be Defined During Constellation Design. See Sec. 7.6.2
+for a summary of the constellation design process.
+
+Where
+Factor Effect Selection Criteria Discussed
+
+PRINCIPAL DESIGN VARIABLES
+
+Number of Satellites Principal cost and Minimize number Sec. 7.6.1
+coverage driver consistent with meeting
+other criteria
+
+Constellation Pattern Determines coverage vs. | Select for best cover- Sec. 7.6.1
+latitude, plateaus age
+
+Minimum Elevation Principal determinant of | Minimum value consis-
+Angle single satellite coverage | tent with constellation
+pattern
+
+Altitude Coverage, environment, | System levei trade of Secs. 7.2, 7.6.1
+launch, & transfer cost | cost vs. performance
+
+Number of Orbit Planes | Determines coverage Minimize consistent Sec. 7.6.1
+plateaus, growth and with coverage needs
+degradation
+
+Collision Avoidance Key to preventing Maximize the intersatel- | Sec. 7.6.2
+Parameters constellation seif- lite. distances at plane
+destruction crossings
+
+SECONDARY DESIGN VARIABLES
+
+Inclination Determines latitude Compare latitude cover- | Secs. 7.2, 7.6.1
+distribution of coverage | age vs. launch costs *
+
+Between Plane Phasing | Determines coverage Select best coverage
+uniformity among discrete phasing
+options *
+
+Eccentricity Mission complexity and Secs. 7.4, 7.6.1
+
+coverage vs. cost
+
+Normally zero; nonzero
+may reduce number of
+satellites needed
+
+Minimize consistent
+with low-cost mainte-
+nance approach
+
+Size of Stationkeeping | Coverage overlap
+needed; cross-track
+pointing
+
+Wertz [2001]
+
+Elimination of orbital Sec. 6.5
+
+debris
+
+End-of-Life Strategy Any mechanism that
+allows you to clean up
+
+after yourself
+
+*Fine tune for collision avoidance
+
+7.6.1 Coverage and Constellation Structure
+
+For most constellations, Earth coverage is the key reason for using multiple satel-
+lites.” A constellation can provide observations and communications more frequently
+than a single satellite can. Given this objective, the normal trade in constellation design
+is Coverage as a measure of performance versus the number of satellites as a measure
+of cost. Thus, we normally assume that a five-satellite constellation will be less
+
+* The principal alternative is the scientific satellite constellation which may, for example, want
+to sample simultaneously the magnetosphere and solar particle flux at various locations and
+altitudes.
+
+190 Orbit and Constellation Design 7.6
+
+expensive than a six-satellite one, but this assumption may be wrong. The larger con-
+stellation may be at a lower altitude or inclination and, therefore, cost less to launch or
+have a less harsh radiation environment. Alternatively, we may be able to have a
+smaller constellation with elliptical orbits, for which increased spacecraft complexity
+could offset the lower cost due to the number of satellites.
+
+A principal characteristic of any satellite constellation is the number of orbit planes
+in which the satellites reside. Symmetry in constellation structure requires an equal
+number of satellites in each orbit plane. This means that an eight-satellite constellation
+may have either one, two, four, or eight separate orbit planes. But because moving
+satellites between planes uses much more propellant than moving them within a plane,
+it is highly advantageous to place more satellites in a smaller number of planes.
+Moving satellites within an orbit plane requires only a slight change in the satellite
+altitude. This changes the period so we can slowly rephase the satellite within the con-
+stellation, and then return it to the proper altitude to maintain its position relative to the
+rest. Thus, we can rephase many times using relatively little propellant. If a satellite
+fails or a new satellite is added to a given orbit plane, we can rephase the remaining
+satellites so that they are uniformly spaced. The consequence of this is to provide a
+significant premium to constellations which contain more satellites in a smaller
+number of orbit planes.
+
+The number of orbit planes relates strongly to a coverage issue often overlooked in
+constellation design: the need to provide the constellation both performance plateaus
+and graceful degradation. Ideally one would like to achieve some performance level
+with the very first satellite launched and to raise that level of performance with each
+succeeding satellite. Generally, however, performance tends to come in plateaus as we
+put one more satellite into each orbit plane of the final constellation. If a constellation
+has seven orbit planes, we will achieve some performance with the first satellite, but
+the next major performance plateau may not come until one satellite is in each of the
+seven planes. We would expect this constellation to have plateaus at one, seven, four-
+teen, twenty-one, (and so on) satellites. Again, constellations with a small number of
+orbit planes have a distinct advantage over many-plane ones. A single-plane constel-
+lation produces performance plateaus with each added satellite, whereas one with two
+planes would have plateaus at one, two, four, six, eight, (and so on) satellites. Thus,
+more complex constellations will require more satellites for each performance plateau.
+
+Frequent performance plateaus have several advantages. First, because individual
+satellites are extremely expensive, we may want to build and launch one or two
+satellites to verify both the concept and the constellation’s ultimate usefulness. If a
+constellation is highly useful with just one or two satellites, it offers a major advantage
+to the system developer.
+
+Another advantage is that coverage requirements are rarely absolute. More cover-
+age is better than less, but we may not know at the time the constellation is designed
+how useful added coverage will be. For example, we may design the FireSat system
+for 30-min revisits, then later revise the response strategy so 45-min revisits can
+provide nearly equal performance. Communications constellations are normally
+thought of as having a very rigid requirement of continuous global coverage. Even
+here, however, they may want more coverage or greater redundancy over regions of
+high population density.
+
+A constellation of one or two planes can be more responsive to changing user needs
+than a system with multiple planes can. Because we often design constellations many
+years before many launch, we may not be able to correctly balance performance vs.
+
+7.6 Constellation Design 191
+
+cost. Both needs and budgets follow political constraints and economic priorities over
+much shorter periods than a constellation’s lifetime. Thus if an eight-satellite constel-
+lation is highly useful with only six satellites, budget constraints may delay the launch
+of the remaining two.” At the same time, the constellation may expand to ten satellites
+if the first set generates substantial demand for more performance or greater capacity.
+This responsiveness to political and performance demands provides perhaps the
+largest advantage to constellations with a smaller number of orbit planes.
+
+Finally, a smaller number of orbit planes leads to more graceful degradation. In an
+eight-satellite, two-plane constellation, if one satellite is lost for any reason, we may
+rephase the constellation at little propellant cost and thereby maintain a high perfor-
+mance level corresponding to a six-satellite plateau. This rephasing and graceful
+degradation may be impossible for constellations with a large number of orbit planes.
+
+Another important characteristic is the orbit inclination. In principle, one could
+design satellite constellations with many different inclinations to get the best coverage.
+In practice this is extremely difficult because the rate of nodal regression for a satellite
+orbit is a function of both altitude and inclination. Consequently, satellites at a
+common altitude but different inclinations will regress at different rates, and a set of
+orbit planes which initially have a given geometric relationship with respect to each
+other will change that relationship with time. Otherwise, we would have to expend
+propellant to maintain the relative constellation spacing, a technique that is extremely
+expensive in terms of propellant and is achievable for only a short time or under unique
+circumstances. Thus, we usually design constellations to have all the satellites at the
+same inclination. A possible exception is to have all satellites at a single inclination
+except for a set of satellites in a 0 inclination (equatorial) orbit. Regression of the
+nodes is not meaningful for the equatorial orbit, so we can maintain constant relative
+phasing indefinitely between satellites in equatorial and inclined orbits, An example
+of such a constellation is satellites in three mutually perpendicular orbit planes—two
+polar and one equatorial.
+
+As shown in Fig. 7-10, the spacing between satellites in a single orbit plane
+determines whether coverage in that plane is continuous and the width of the con-
+tinuous coverage region. Assume that A,,,,, is the maximum Earth central angle as
+defined in Sec. 5.3.1 and that there are N satellites equally spaced at S = 360/N deg
+apart in a given orbit plane. There is intermittent coverage throughout a swath of half-
+width A,,gy. If S > 2 Amgy, the coverage is intermittent throughout the entire swath. If
+S <2 Ang, there is a narrower swath, often called a street of coverage, centered on the
+ground trace and of width 2 A,,,-.¢;, in which there is continuous coverage. This width
+is given by:
+
+COS Astree = COS Agy/ cos (S/2) (7-15)
+
+If the satellites in adjacent planes are going in the same direction, then the “bulge” in
+one orbit can be used to offset the “dip” in the adjacent orbit as shown in Fig. 7-11. In
+this case, the maximum perpendicular separation, D,,q,, between the orbit planes
+required for continuous coverage is
+
+Dinaxs = Astreet + Amax (moving in the same direction) (7-16)
+
+* One hopes that procuring agencies will not purposely select a rigid alternative to protect
+budgets.
+
+192 Orbit and Constellation Design 7.6
+
+“Bulge”
+
+Astreet Ground Track
+
+Fig. 7-10. The “Street of Coverage” is a Swath Centered on the Ground Track for which
+there is Continuous Coverage.
+
+HA
+
+\
+
+Fig. 7-11. Coverage in Adjacent Planes. If the planes are moving in the same direction, the
+overlap pattern can be designed to provide maximum spacing between adjacent
+planes.
+
+Street of
+Coverage
+
+Orbit 1
+
+Dmaxs
+
+If the satellites are moving in opposite directions, then the bulge and dip cannot be
+made to line up continuously and, therefore,
+
+Daxd = 2 Astreet (moving opposite directions) (7-17)
+
+This leads to a polar constellation often called Streets of Coverage, illustrated in
+Fig. 7-12, in which M planes of N satellites are used to provide continuous global
+coverage. At any given time, satellites over half the world are going northward and sat-
+ellites over the other half are going southward. Within both regions, the orbit planes
+are separated by D,,,,,5. Between the two halves there is a seam in which the satellites
+are going in opposite directions. Here the spacing between the planes must be reduced
+to Dnaxo in order to maintain continuous coverage.
+
+This pattern clearly shows another critical characteristic of constellations—cover-
+age does not vary continuously and smoothly with altitude. There are discrete
+
+7.6 Constellation Design 193
+
+' Seam
+
+Fig. 7-12. “Streets of Coverage” Constellation Pattern. View seen from the north pole.
+Northward portions of each orbit are drawn as solid lines and southward portions are
+dashed. To achieve full coverage, orbit planes on either side of the seam must be
+closer together than the others.
+
+jumps in coverage which depend primarily on A,,,,, which, in turn, depends on the
+minimum elevation angle, €,,;,, and the altitude (See Eqs. 5-35 and 5-36). If we keep
+Emin fixed and lower the constellation altitude, then we will reach an altitude plateau
+at which we will need to add another orbit plane, and N more satellites, to cover the
+Earth. The Iridium communications constellation was originally intended to have 77
+satellites in a streets of coverage pattern. (The element iridium has an atomic number
+of 77.) By slightly increasing the altitude and decreasing the minimum elevation angle,
+the number of orbit planes was reduced by one, and the number of satellites required
+for continuous coverage was reduced to only 66. (Unfortunately, dysprosium is not a
+compelling constellation name.)
+
+As the altitude changes, the fundamental constellation design changes and, conse-
+quently, the number of satellites and coverage characteristics change in steps. As a
+result, we cannot provide a meaningful chart of, for example, number of satellites vs.
+altitude without examining different constellation designs at different altitudes. While
+we may use this sort of chart to estimate constellation size, it would not provide
+realistic data for orbit design.
+
+Requirements other than coverage can also be important in constellation design, but
+most are directly related to coverage issues. For example, we may need several satel-
+lites to cover a point on the ground or in space at the same time. Navigation with GPS
+requires that four satellites be in view with a reasonably large angular separation. A
+similar requirement is cross-link connectivity among satellites in the constellation.
+Cross-link connectivity is geometrically the same issue as overlapping coverage. At
+any time when the coverage of two satellites overlaps (that is, they can both see at least
+one common point on the ground), then the two satellites can see each other and we
+can establish a cross-link. Thus, forming cross-links is equivalent to the problem of
+multiple coverage.
+
+Even apparently simple design problems can be very difficult, with solutions
+depending on various mission conditions. Perhaps the simplest constellation design
+problem is the question ‘What is the minimum number of satellites required to provide
+
+194 Orbit and Constellation Design 7.6
+
+continuous coverage of the Earth?” In the late 1960s, Easton and Brescia [1969] of the
+United States Naval Research Laboratory analyzed coverage by satellites in two
+mutually perpendicular orbit planes and concluded we would need at least six satellites
+to provide complete Earth coverage. In the 1970s, J.G. Walker [1971, 1977, 1984] at
+the British Royal Aircraft Establishment expanded the types of constellations
+considered to include additional circular orbits at a common altitude and inclination.
+He concluded that continuous coverage of the Earth would require five satellites.
+Because of his extensive work, Walker constellations are a common set of
+constellations to evaluate for overall coverage. More recently in the 1980s, John
+Draim [1985, 1987a, 1987b] found and patented a constellation of four satellites in
+elliptical orbits which would provide continuous Earth coverage. A minimum of four
+satellites are required at any one instant to provide full coverage of the Earth.
+Consequently, while the above progression looks promising, the 1990s are unlikely to
+yield a three-satellite full Earth coverage constellation or the 2000s a two-satellite
+constellation.
+
+While extensively studying regular, circular orbit patterns, Walker [1984]
+developed a notation for labeling orbits that is commonly used in the orbit design
+community and frequently used as a starting point for constellation design. Spe-
+cifically, the Walker delta pattern contains a total of ¢ satellites with s satellites evenly
+distributed in each of p orbit planes. All of the orbit planes are assumed to be at the
+same inclination, i, relative to a reference plane—typically the Earth’s equator. (For
+constellation design purposes, this need not be the case. But orbit perturbations depend
+on the inclination relative to the equator and, therefore, the equator is the most practi-
+cal standard reference plane.) Unlike the streets of coverage, the ascending nodes of
+the p orbit planes in a Walker pattern are uniformly distributed around the equator at
+intervals of 360 deg/p. Within each orbit plane the s satellites are uniformly distributed
+at intervals of 360 deg/s.
+
+The only remaining issue is to specify the relative phase between the satellites in
+adjacent orbit planes. To do this we define the phase difference, Ad, in a constellation
+as the angle in the direction of motion from the ascending node to the nearest satellite
+at a time when a satellite in the next most westerly plane is at its ascending node. In
+order for all of the orbit planes to have the same relationship to each other, A@ must be
+an integral multiple, f, of 360 deg/t, where f can be any integer from 0 to p — 1. So long
+as this condition holds, each orbit wil] bear the same relationship to the next orbit in
+the pattern. The pattern is fully specified by giving the inclination and the three
+parameters, t, p, and f. Usually such a constellation will be written in the shorthand
+notation of i: t/p/f. For example, Fig. 7-13 illustrates a Walker constellation of 15/5/1
+at i= 65 deg. Table 7-11 gives the general rules for Walker delta pattern parameters.
+
+While Walker constellations are important to constellation design, they are not the
+only appropriate options and do not necessarily provide the best characteristics for a
+given mission. Walker intended to provide continuous multiple coverage of all the
+Earth’s surface with the smallest number of satellites. This plan may or may not meet
+all the goals of a particular program. For example, equally distributed coverage over
+the Earth’s surface may not be the most beneficial. We may wish to provide global
+coverage with the best coverage at the poles, mid-latitude regions, or the equator. In
+these cases, we may want constellation types other than Walker orbits.
+
+If the regions of interest do not include the poles, then an equatorial constellation
+may provide all of the coverage with a single orbit plane, which leads to flexibility,
+multiple performance plateaus, and graceful degradation. Thus, for example, if all of
+
+7.6 Constellation Design 195
+
+Fig. 7-13. A15/5/1 Walker Constellation at 65 deg Inclination. Circles are centered on each
+of the 15 satellites. The double circle is on a satellite at its ascending node.
+
+TABLE 7-11. Characteristics of a Walker Delta Pattern Constellatlon. See Walker [1984].
+
+T/P/F — Walker Delta Patterns
+
+t= Number of satellites.
+p= Number of orbit planes evenly spaced in node.
+f= Relative spacing between satellites in adjacent planes.
+
+Define s = /p = Number of satellites per plane (evenly spaced).
+Define Pattern Unit, PU = 360 deg/t.
+
+Planes are spaced at intervals of s PUs in node.
+Satellites are spaced at intervals of p PUs within each plane.
+
+If a satellite is at its ascending node, the next most easterly satellite will be f PUs past the node.
+fis an integer which can take on any value from 0 to (p—-1).
+
+Example: 15/5/1 constellation shown in Fig. 7-13.
+
+15 satellites in 5 planes (t= 15, p = 5).
+
+3 satellites per plane (s = t/p = 3).
+
+PU = 360/t = 360/15 = 24deg.
+
+In-plane spacing between satellites = PU x p= 24 x 5 = 120 deg.
+Node spacing = PU xs = 24 x 3 = 72deg.
+
+Phase difference between adjacent planes= PU x f= 24 x 1 = 24deg.
+
+the regions of interest were within 50 deg of the equator, we would want to consider a
+constellation having several equatorial satellites with enough altitude to provide the
+appropriate coverage at the smallest spacecraft elevation angle.
+
+If all or most regions of interest are above a given latitude, a directly polar constel-
+lation would allow all satellites to see the region of the pole on every orbit. Thus, if all
+targets of interest were within 50 deg of the pole, a polar constellation with a single
+orbit plane could provide excellent coverage. If most targets were in the polar region
+
+196 Orbit and Constellation Design 7.6
+
+with lesser interest in the equatorial regions, a two-plane polar constellation could
+provide continuous or nearly continuous coverage of the pole while providing reduced
+but good coverage of the equatorial regions. One might also consider a mix of polar or
+high inclination satellites with some satellites at the equator to provide the added
+coverage needed there.
+
+Another class of non- Walker constellations consists of two planes at right angles to
+each other. If both planes are perpendicular to the equator it will be a polar constella-
+tion. Although it will have substantial symmetry, it is not one of the Walker delta
+patterns. The two planes can also be tipped relative to the equator to achieve any
+inclination from 90 to 45 deg. Again the ascending nodes are such that they are not
+Walker constellations except when the inclination is 45 deg, in which case they reduce
+to a Walker two-plane configuration. Figure 7-14 shows examples of several non-
+Walker constellations.
+
+C. 2 Perpendicular Non-polar Planes D. 5-plane Polar “Streets of Coverage”
+
+Fig. 7-14. Examples of Typical Non-Walker Constellations. All orbits are assumed to be
+circular.
+
+7.6 Constellation Design 197
+
+A final example of non-Walker constellations is the Molniya orbits used for
+Russian communication satellites. Sections 6.2 and 7.4 describe them in more detail.
+As mentioned above, these constellations can fully cover high northern latitudes while
+requiring much less energy than circular high-altitude orbits.
+
+7.6.2 Summary of Constellation Design
+
+_ Constellation design is complex, requiring us to assess many issues and orbit char-
+acteristics. We must certainly pick a preliminary design, but this complexity demands
+that we document the reasons for that design and remain aware of alternatives as orbit
+design continues. Unfortunately, systematic reassessments of constellation design are
+difficult under typical budget constraints and the constellation pattern is often locked
+in very early in mission design.
+
+Unfortunately, we cannot use analytic formulas to design a constellation. With
+numerical simulation, we can evaluate some of the Figures of Merit defined in
+Sec. 7.2. (That section discusses how to lay out the simulation for unbiased results.)
+Generally the results of such a simulation are best expressed as Figures of Merit vs.
+latitude for the various performance plateaus. Thus, a typical decision plot might
+include mean response, percent coverage, and maximum gap as a function of latitude
+for the various constellations being considered. Often, we must also evaluate coverage
+data for different instruments on board a spacecraft. Each instrument has its own
+coverage area and, therefore, a different swath width will apply for each principal
+observation type. Thus, the coverage associated with one instrument may differ
+dramatically from that associated with another instrument or operating mode. Alterna-
+tive operating modes or instruments will likely lead us to prefer distinctly different
+constellation designs. We may then choose either different satellites or a compromise
+between the alternative instruments or modes.
+
+Table 7-12 summarizes the constellation design process. Wertz [2001] provides a
+much more extended discussion of constellation design and techniques for evaluating
+the factors involved. Mora et al. [1997] provide an excellent chronological summary
+of constellation design methods. As with single-satellite orbits, we normally start by
+assuming circular orbits at a common altitude. Depending upon the coverage
+requirements, I recommend beginning with either the Walker delta orbits, the one-
+plane equatorial, or streets of coverage polar orbits. We should also consider elliptical
+orbits, either as a full constellation or to fill in missing coverage. Generally, we
+evaluate each constellation design for three criteria:
+
+¢ Baseline Coverage vs. Latitude
+
+The coverage associated with different instruments or operating modes is best
+expressed as coverage vs. latitude (see Secs. 7.2.2 and 7.2.3). I regard the mean
+response time as the best overall measure of coverage, although percent
+coverage and maximum gap can also be important in some applications. We
+must use the maximum gap measure carefully because this single point should
+not be allowed to drive the design of an entire constellation as it will typically
+not provide the best overall performance for the cost.
+
+* Growth and Degradation
+
+As described in Sec. 7.6.1, this is a key issue in practical constellation design.
+It will be different for each constellation type. In evaluating growth and deg-
+radation we should assume that rephasing within the orbit plane can be done at
+very modest propellant cost, and that changing orbit planes is not feasible.
+
+198 Orbit and Constellation Design 7.6
+
+TABLE 7-12. Constellation Design Summary. See text for discussion. See also Tables 7-11,
+
+7-14, and 7-15 for additional details.
+¢ Goals for growth and degradation plateaus
+3. Do trades between swath width (or maximum Earth central Sec. 7.6.1
+
+[Step Wier iscussed
+¢ Requirements for different modes or sensors
+angle), coverage, and number of satellites.
+
+1. Establish mission requirements, particularly Chap. 5
+Sec. 7.2
+¢ Limits on system cost or number of satellites
+
+¢ Latitude-dependent coverage
+2. Do all single satellite trades except coverage
+
+¢ Evaluate candidate constellations for:
+~ Coverage Figures of Merit vs. latitude
+— Coverage excess
+— Growth and degradation
+— Altitude plateaus
+— End-of-life options
+¢ Consider the following orbit types
+— Walker Delta pattern
+— Streets of coverage polar constellation with seam
+— Equatorial
+— Equatorial supplement
+— Elliptical
+
+4. Evaluate ground track plots for potential coverage holes or Sec. 7.1
+methods to reduce number of satellites.
+5. Adjust inclination and in-plane phasing to maximize the [Wertz, 2001}
+intersatellte distances at plane crossings for collision
+avoidance.
+
+6. Review the rules of constellation design in Table 7-13. Table 7-13
+7. Document reasons for choices and iterate. Po
+
+¢ Existence of Altitude Plateaus
+
+We should evaluate each constellation to see if plateaus exist in which the
+number of orbit planes or other key characteristics make a discrete step. Pla-
+teaus may be different for different instruments and operating modes, but usu-
+ally are functions of the swath width for each instrument or operating mode.
+
+There are no absolute rules for choosing the proper constellation. Selection is based
+on the relative importance of the various factors to the owners and users of the
+constellation. A summary of the most common rules and the reason for them is given
+in Table 7-13. As with all aspects of mission design, we must document our selection,
+our reasons, and the coverage characteristics. It is critical to keep in mind possible
+alternatives and to reevaluate orbits with advances in mission definition and
+requirements.
+
+Finally, one of the most important characteristics of any constellation is collision
+avoidance. The reason for this is not merely the loss of the satellites which collide
+because we anticipate losing satellites for many reasons in any large constellation. The
+fundamental problem is the debris cloud that results from any satellite collision. The
+velocity imparted to the particles resulting from the collision is small relative to the
+orbital velocity. Consequently, the net effect of a collision is to take two trackable,
+possibly controllable satellites and transform them into thousands of untrackable
+
+7.6 Constellation Design 199
+
+TABLE 7-13. Rules for Constellation Design. While there are no absolute rules, these broad
+
+guidelines are applicable to most constellations.
+Where
+Discussed
+. To avoid differential node rotation, all satellites should be at the same | Sec. 6.2.2
+inclination, except that an equatorial orbit can be added.
+
+2. To avoid perigee rotation, all eccentric orbits should be at the critical Sec. 6.2.2
+inclination of 63.4 deg.
+
+. Collision avoidance is critical, even for dead satellites, and may be a Table 7-14
+driving characteristic for constellation design.
+
+. Symmetry is an important, but not critical element of constellation Sec. 7.6.1
+design.
+
+. Altitude is typically the most important of the orbit elements, followed by | Secs. 7.4, 7.6.1
+inclination. Zero eccentricity is the most common, although eccentric
+orbits can improve some coverage and sampling characteristics.
+
+. Minimum working elevation angle (which determines swath width) is as | Sec. 5.2,
+important as the altitude in determing coverage. Fig. 5-21
+
+7. Two satellites can see each other if and only if they are able to see the | Sec. 7.6.1
+same point on the ground.
+
+. Principal coverage Figures of Merit for constellations:
+* Percentage of time coverage goal is met
+¢ Number of satellites required to achieve the needed coverage
+* Mean and maximum response times (for non-continuous coverage)
+* Excess coverage percent
+* Excess coverage vs. latitude
+
+9. Size of stationkeeping box is determined by the mission objectives, the | [Wertz, 2001]
+perturbations selected to be overcome, and the method of control.
+
+10. For long-term constellations, absolute stationkeeping provides [Wertz, 2001]
+significant advantages and no disadvantages compared to relative
+stationkeeping.
+
+11. Orbit perturbations can be treated in 3 ways: [Wertz, 2001]
+¢ Negate the perturbing force (use only when necessary)
+¢ Control the perturbing force (best approach if control required)
+¢ Leave perturbation uncompensated (best for cyclic perturbations)
+
+12. Performance plateaus for the number of orbit planes required are a Sec. 7.6.1
+function of the altitude.
+
+13. Changing position within the orbit plane is easy; changing orbit planes | Sec.7.6.1
+is hard; implies that a smaller number of orbit planes is better.
+
+14. Constellation build-up, graceful degradation, filling in for dead satellites, | Sec. 7.6.2
+
+and end-of-life disposal are critical and should be addressed as part of
+constellation design.
+
+15. Taking satellites out of the constellation at end-of-life is critical for Secs. 6.5, 7.6.2
+long-term success and risk avoidance. This is done by:
+¢ Deorbiting satellites in LEO
+¢ Raising them above the constellation above LEO (including GEO)
+
+
+200 Orbit and Constellation Design 7.6
+
+particles that spread out with time in the same orbits as the original satellites.
+Because the energy is proportional to mv2, even a small piece of a satellite carries an
+enormous amount of kinetic energy at orbital velocities.” Because the debris cloud re-
+mains in the constellation orbit, it dramatically increases the potential for secondary
+collisions which, in turn, continues to increase the amount of debris and the possibility
+of making the orbit “uninhabitable.” The implication for constellation design is that
+we should go to great lengths to design the constellation and the spacecraft to avoid
+collisions, explosions, or generation of extraneous debris. Methods for doing this are
+summarized in Table 7-14.
+
+TABLE 7-14. Key Issues in Designing a Constellation for Collision Avoidance.
+
+Approach or Issue Comment
+
+1. Maximize the spacing between satellites when May impact phasing between planes
+crossing other orbit planes. and, therefore, coverage.
+
+2. Remove satellites at end-of-life. Either deorbit or raise them above the
+constellation, if still functioning.
+3. Determine the motion through the constellation of a | Constellations at low altitude have an
+satellite that “dies in place.” advantage.
+4. Remove upper stages from the orbital ring or leave {Do not leave uncontrolled objects in
+them attached to the satellite. the constellation pattern.
+5. Design the approach for rephasing or replacement of | Allintersatellite motion should assess
+satellites with collision avoidance in mind. collision potential.
+6. Capture any components which are ejected. Look for explosive bolts, lens caps,
+Marmon clamps, and similar discards.
+
+7. Avoid the potential for self-generated explosions. Vent propellant tanks for spent space-
+craft.
+
+References
+
+Austin, R.E., M.I. Cruz, and J.R. French. 1982. “System Design Concepts and
+Requirements for Aeroassisted Orbital Transfer Vehicles.” AIAA Paper 82-1379
+presented at the AIAA 9th Atmospheric Flight Mechanics Conference.
+
+Ballard, A.H. 1980. “Rosette Constellations of Earth Satellites.” IEEE Transactions
+on Aerospace and Electronic Systems. AES-16:656—673.
+
+Betts, J.T. 1977. “Optimal Three-Burn Orbit Transfer.” AJAA Journal. 15:861—864.
+
+Cefola, P. J. 1987. “The Long-Term Orbital Motion of the Desynchronized Westar II.”
+AAS Paper 87-446 presented at the AAS/AIAA Astrodynamics Specialist Confer-
+ence. Aug. 10.
+
+Chobotov, V.A. ed. 1996. Orbital Mechanics (2nd Edition). Washington, DC: Amer-
+ican Institute of Aeronautics and Astronautics.
+
+*The relative velocity of two objects in low-Earth orbit will be approximately 14 km/s x sin
+(6/2), where 6 is the angle of intersection between the orbits. 14 km/s times the sine of almost
+anything is a big number.
+
+7.6 Constellation Design 201
+
+Cooley, J.L. 1972. Orbit Selection Considerations for Earth Observatory Satellites.
+Goddard Space Flight Center Preprint No. X-551-72-145.
+
+Cornelisse, J.W., H.F.R. Schéyer, and K.F. Wakker. 1979. Rocket Propulsion and
+Spaceflight Dynamics. London: Pitman Publishing Limited.
+
+Draim, John. 1985. “Three- and Four-Satellite Continuous Coverage Constellations.”
+Journal of Guidance, Control, and Dynamics. 6:725-730.
+
+. 1987a. “A Common-Period Four-Satellite Continuous Global Coverage
+Constellation.” Journal of Guidance, Control, and Dynamics. 10:492-499.
+
+——.. 1987b. “A Six-Satellite Continuous Global Double Coverage Constella-
+tion.” AAS Paper 87-497 presented at the AAS/AIAA Astrodynamics Specialist
+Conference.
+
+Easton, R.L., and R. Brescia. 1969. Continuously Visible Satellite Constellations.
+Naval Research Laboratory Report 6896.
+
+Farquhar, Robert W. and David W. Dunham. 1998. “The Indirect Launch Mode: A
+New Launch Technique for Interplanetary Missions.” IAA Paper No. L98-0901,
+3rd International Conference on Low-Cost Planetary Missions, California Institute
+of Technology, Pasadena, CA. Apr. 27—May 1.
+
+Farquhar, Robert W., D.W. Dunham, and S.-C. Jen. 1997. “CONTOUR Mission
+Overview and Trajectory Design.” Spaceflight Mechanics 1997, Vol. 95, Advances
+in the Astronautical Sciences, pp. 921-934. Presented at the AAS/AIAA Space-
+flight Mechanics Meeting, Feb. 12.
+
+Karrenberg, H.K., E. Levin, and R.D. Luders, 1969. “Orbit Synthesis.” The Journal of
+the Astronautical Sciences. 17:129-177.
+
+Kaufman, B., C.R. Newman, and F. Chromey. 1966. Gravity Assist Optimization
+Techniques Applicable to a Variety of Space Missions. NASA Goddard Space
+Flight Center. Report No. X-507-66-373.
+
+Mease, K.D. 1988. “Optimization of Aeroassisted Orbital Transfer: Current Status.”
+The Journal of the Astronautical Sciences. 36:7-33.
+
+Meissinger, Hans F. 1970. “Earth Swingby—A Novel Approach to Interplanetary
+Missions Using Electric Propulsion.” AIAA Paper No. 70-117, AIAA 8th Electric
+Propulsion Conference, Stanford, CA. Aug. 31—Sept. 2.
+
+Meissinger, Hans F., Simon Dawson, and James R. Wertz. 1997. “A Low-Cost
+Modified Launch Mode for High-C3 Interplanetary Missions.” AAS Paper
+No. 97-711, AAS/AIAA Astrodynamics Specialist Conference, Sun Valley, ID.
+Aug. 4-7.
+
+Meissinger, Hans F. and S. Dawson. 1998. “Reducing Planetary Mission Cost by a
+Modified Launch Mode.” IAA Paper No. L98-0905, 3rd IAA International Con-
+ference on Low-Cost Planetary Missions, California Institute of Technology,
+Pasadena, CA. 1997.
+
+202 Orbit and Constellation Design 7.6
+
+Mora, Miguel Bellé, José Prieto Mufioz, and Genevieve Dutruel-Lecohier. 1997.
+“Orion—A Constellation Mission Analysis Tool.” International Workshop on
+Mission Design and Implementation of Satellite Constellations, International As-
+tronautical Federation, Toulouse, France. Nov. 17-19.
+
+Soop, E.M. 1994. Handbook of Geostationary Orbits. Dordrecht, The Netherlands:
+Kluwer Academic Publishers.
+
+Vallado, David A. 1997. Fundamentals of Astrodynamics and Applications. New
+York: McGraw-Hill.
+
+Walker, J.G. 1971. “Some Circular Orbit Patterns Providing Continuous Whole Earth
+Coverage.” Journal of the British Interplanetary Society. 24: 369-384.
+
+. 1977. Continuous Whole-Earth Coverage by Circular-Orbit Satellite Pat-
+terns, Royal Aircraft Establishment Technical Report No. 77044.
+
+. 1984. “Satellite Constellations.” Journal of the British Interplanetary
+Society. 37:559-572.
+
+Wertz, J.R., T.L. Mullikin, and R.F. Brodsky. 1988. “Reducing the Cost and Risk of
+Orbit Transfer.” Journal of Spacecraft and Rockets. 25:75—80.
+
+Wertz, J.R. 2001. Mission Geometry; Orbit and Constellation Design and Manage-
+ment. Torrance, CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer
+Academic Publishers.

@@ -1,0 +1,1056 @@
+
+Chapter 1
+The Space Mission Analysis and Design Process
+
+James R. Wertz, Microcosm, Inc.
+Wiley J. Larson, United States Air Force Academy
+
+1.1 Introduction and Overview
+1.2 The Space Mission Life Cycle
+1.3 Step 1: Definition of Mission Objectives
+
+1.4 Step 2: Preliminary Estimate of Mission Needs,
+Requirements, and Constraints
+
+Space mission analysis and design begins with one or more broad objectives and
+constraints and then proceeds to define a space system that will meet them at the
+lowest possible cost. Broad objectives and constraints are the key to this process.
+Procurement plans for space systems too often substitute detailed numerical require-
+ments for broad mission objectives. To get the most performance for the money spent,
+we must require of the system only what it can reasonably achieve. Thus, while our
+overall objectives to communicate, navigate, or observe will generally remain the
+same, we will achieve these objectives differently as technology and our understand-
+ing of the process and problem evolve. This chapter summarizes, and the book as a
+whole details, this process of defining and refining both what is to be done and what
+mission concept will do it at the lowest cost.
+
+There are now a number of references available on the mission design process and
+the definition of mission objectives. Rechtin [1991] and Ruskin and Estes [1995]
+provide general discussions of this process. Shishko [1995] provides an overview from
+the NASA perspective and Przemieniecki [1993] gives a similar treatment for defense
+missions. Davidoff [1998] and Wertz and Larson [1996] discuss this process from the
+perspective of very low-cost missions and methods for dramatically reducing mission
+cost, respectively. Boden and Larson [1996] discuss the analysis and design process
+specifically for mission operations. Finally, Kay [1995] examines the fundamental
+difficulty of doing technical trades within a democratic political environment.
+
+1.1 Introduction and Overview
+
+Table 1-1 summarizes our approach to the space mission analysis and design
+process. Space missions range widely from communications, to planetary exploration,
+to proposals for space manufacturing, to burial in space. No single process can fully
+cover all contingencies, but the method in Table 1-1 summarizes a practical approach
+evolved over the first 40 years of space exploration.
+
+2 The Space Mission Analysis and Design Process 11
+
+Space is expensive. Cost is a fundamental limitation to nearly all space missions
+and is becoming more so. Consequently, this and subsequent tables reflect the assess-
+ment of each author on how things traditionally have been done and how they should
+be done differently, both to lower cost and to achieve the greatest return from the space
+investment.
+
+Analysis and design are iterative, gradually refining both the requirements and
+methods of achieving them. Thus, we must repeat the broad process defined in
+Table 1-1 many times for each mission. The first several iterations may take only a
+day, but more detailed assessments will take far longer.
+
+Successive iterations through Table 1-1 will usually lead to a more detailed, better-
+defined space mission concept. But we must still return regularly to the broad mission
+objectives and search for ways to achieve them at a lower cost. In defining and refining
+the approach, there is strong pressure to proceed to ever greater detail, and never revise
+a decision once it has been made. Although we must maintain orderly progress, we
+must also review the mission design regularly for better ways to achieve the mission
+objectives. Methods may change as a result of evolving technology, a new understand-
+ing of the problem, or simply fresh ideas and approaches as more individuals become
+involved.
+
+TABLE 1-1. The Space Mission Analysis and Design (SMAD) Process. Tables of this type
+appear throughout the book. The far right column refers to sections in the book that
+give details of each step. See text for further explanation.
+
+1. Define broad objectives and constraints
+Objectives 2. Estimate quantitative mission needs and
+requirements
+
+. Define alternative mission concepts
+Characterize . Define alternative mission architectures
+the Mission . Identify system drivers for each
+. Characterize mission concepts and
+architectures
+
+. Identify critical requirements 3.1
+. Evaluate mission utility 3.3
+. Define mission concept (baseline)
+
+3.4
+Define . Define system requirements 4.
+Requirements | 11. Allocate requirements to system elements | 4.2-4.4
+
+Evaluate
+the Mission
+
+’
+’
+’
+’
+’
+’
+’
+’
+
+|
+
+}
+
+Finally, we must document the results of this iterative process. If we wish to go
+back and reexamine decisions as new data becomes available, we must clearly under-
+stand and convey to others the reasons for each decision. We need this documentation
+for decisions based on detailed technical analyses, and, equally important, for those
+based on simplicity, ease of assessment, or political considerations.
+
+This book presents many examples from real space missions. To illustrate the
+mission analysis and design process without being tied to existing space systems, we
+invented the hypothetical FireSat space mission. Figure 1-1 shows the broad mission
+statement we used to begin the process of space mission design for FireSat. We wish
+
+11 Introduction and Overview 3
+
+to stress that the parameters developed throughout the book are by no means the only
+possible set for FireSat, nor necessarily the best. To show how solutions may vary,
+Chap. 22 presents a very low-cost spacecraft as an alternative for FireSat. Our example
+system simply illustrates the iterative process of space mission analysis and design.
+Different assumptions, requirements, or proposed solutions may lead to dramatically
+different results.
+
+FireSat
+Mission Statement
+
+Because forest fires have an increasing impact on recreation and
+commerce and ever higher public visibility, the United States needs a
+more effective system to identify and monitor them. In addition, it would
+be desirable (but not required) to monitor forest fires for other nations;
+
+collect statistical data on fire outbreaks, spread, speed, and duration; and
+provide other forest management data.
+
+Ultimately, the Forest Service’s fire-monitoring office and rangers in the
+field will use the data. Data flow and formats must meet the needs of both
+groups without specialized training and must allow them to respond
+promptly to changing conditions.
+
+Fig. 1-1. Origin of the Hypothetical FireSat Mission. FireSat is used as the primary example
+throughout this book.
+
+To illustrate the broad process of Table 1-1, we will go through each of the top-
+level steps for the FireSat mission and indicate the type of information that needs to be
+developed:
+
+In Step 1, we define what the mission needs to achieve. What are our qualitative
+goals, and why? This information should come largely from the mission statement of
+Fig. 1-1. We need to return to this broad goal over and over to ask whether we are
+doing what we set out to do.
+
+Step 2 is significantly different. It quantifies how well we wish to achieve the
+broad objectives, given our needs, applicable technology, and cost constraints. These
+quantitative requirements should be subject to trade as we go along. A major error in
+many space-system procurements is to set requirements in concrete at a relatively
+early stage. An example for FireSat might be a 100 m positioning accuracy for initial
+fire detection. A 100 m requirement seems to be a reasonable place to start, but
+compared to an accuracy of 200 m, it could add tens or even hundreds of millions of
+dollars to the overall system cost. We might spend this extra money better in acquiring
+fire detection airplanes, providing more personnel on the ground, or using better fire-
+fighting technology. Congress, the Department of the Interior, and the Forest Service
+must ultimately decide how well FireSat should do and at what cost. Space mission
+analysis and design provides the quantitative data needed to support such decisions.
+
+Our next step is to define and characterize a space mission to meet the objectives.
+Step 3 begins this process by developing alternative mission concepts. A mission
+concept or concept of operations is a broad statement of how the mission will work in
+practice. It includes issues such as how the data will be sensed and delivered to the end
+user, how the mission will be controlled, and the overall mission timeline. Alternative
+mission concepts include, for example, conceptually distinct approaches to the prob-
+lem such as the very low-cost approach defined in Chap. 22. These would also include
+
+4 The Space Mission Analysis and Design Process 11
+
+different orbits or different wavelength bands for fire detection that would require
+dramatically dissimilar systems.
+
+Step 4 defines alternate combinations of mission elements or the space mission
+architecture to meet the requirements of the mission concept. The space mission
+architecture is the mission concept plus a definition of each of the elements of the
+mission shown in Fig. 1-3 (Sec. 1.2). A good way to begin Step 4 is to look at the
+mission elements in Fig. 1-3 and consider what alternatives for each of them would
+best meet mission objectives.
+
+In any real system, many things influence overall cost, performance, or the design
+of detailed components. However, these are influenced mainly by a relatively small
+number of key parameters or components, called drivers. Thus, there may be cost,
+performance, or system drivers which affect the design of the overall space system. In
+Step 5 we identify the principal cost and performance drivers for each alternative
+mission concept. For most space missions, system drivers include the number of
+satellites, altitude, power, and instrument size and weight. (Sec. 2.3 gives a more
+detailed list.) By explicitly identifying the system drivers, we can concentrate our
+effort on parameters having the most impact on the design and therefore on the cost of
+the space mission. This method improves our chances of getting the best possible
+design within the available budget.
+
+Step 6 is typically the most involved in mission design because it defines in detail
+what the system is and does. Here we determine the power, weight, and pointing
+budgets* and decide what to process on the ground or in space. Characterizing the
+mission is the most costly step because it requires the expertise of many people.
+Developing detail is always comforting in managing any design process but, as noted
+earlier, we must take care not to overdo details while characterizing the mission.
+System-level requirements and trades must remain our primary focus.
+
+The next step in mission analysis and design is to evaluate the systems we have
+defined. Having defined and characterized alternative mission concepts, we return in
+Step 7 to our initial quantitative requirements and identify the critical requirements,*
+that is, the key requirements principally responsible for determining the cost and
+complexity of the system. Recall that the system drivers are those defining parameters,
+such as altitude or payload aperture, which most strongly affect the cost, performance,
+and system design. System drivers are not normally system requirements. However, a
+critical requirement for coverage or resolution may result in altitude and aperture
+becoming performance or system drivers. The implication of this for mission analysis
+and design is that we must put substantial effort into understanding the quantitative
+relationship between, for example, altitude, aperture, coverage, and resolution, in
+order to set intelligently both the requirements (coverage and resolution) and system
+parameters (altitude and aperture). For FireSat, the critical requirements might be fire
+location accuracy, resolution, coverage, or timeliness of the data. We should concen-
+trate on these requirements to determine how firm they are, how good we should make
+them, and how much we will pay for them to achieve our broad objectives. Critical
+requirements may differ for alternative mission concepts.
+
+* A budget is a numerical list of the components of any overall system parameter. Thus, the total
+spacecraft weight budget would consist of the weights assigned to the payload instruments,
+the various subsystems, the propellant required, and typically some margin for growth.
+
+¥ In the first and second editions of this book, critical requirements were called driving require-
+ments. We changed the terminology to avoid confusion with the system drivers of Step 5.
+
+11 Introduction and Overview 5
+
+The above questions form the basis of mission utility analysis, Step 8, in which we
+quantify how well we are meeting both the requirements and the broad objectives as a
+function of either cost or key system-design choices. We would like to provide the
+decision maker a single chart of potential performance vs. cost. More typically, we
+must settle for something less ideal, such as the percent of fires detected within 2 hours
+vs. the aperture of the instrument, or the delay time in detecting forest fires vs. altitude
+and the number of satellites in the constellation. Only the user or developer of the sys-
+tem can ultimately determine the goodness of these critical performance measures,
+called Measures of Effectiveness or Figures of Merit. Consequently, mission definition
+must be to some degree a joint process between those who understand the mission
+analysis and design process and those who eventually must use the system or justify
+its cost.
+
+Having evaluated alternative designs and done a preliminary assessment of mission
+utility, we select one or more baseline system designs in Step 9. A baseline design is
+a single consistent definition of the system which meets most or all of the mission
+objectives. A consistent system definition is a single set of values for all of the system
+parameters which fit with each other—e.g., resolution and coverage rates which cor-
+respond to the assigned altitude, aperture, and resulting spacecraft weight. In actually
+designing a space system, many parameters are being defined and changed simulta-
+neously. The baseline provides a temporary milestone against which to measure
+progress. It also allows us to limit the number of options which must be evaluated.
+Rather than looking at all possible combinations of altitude, aperture, power, and
+spectral band (a nearly impossible task), it is much more feasible to look at the impact
+of varying each of these individually relative to one or two baseline designs. As the
+system design matures, the baseline becomes more firm, and eventually becomes the
+system design. However, we should always remember that the baseline is only a start-
+ing point for the iterative trade process and should not be regarded as an ironclad
+definition of mission parameters.
+
+Because builders of a space system work from specific requirements, we must
+translate the broad objectives and constraints of the mission into well-defined system
+requirements in Step 10. In Step 11, we flow down or allocate these numerical
+requirements to the components of the overall space mission in the same way that a
+budget allocates weight and power to the spacecraft’s components. The final list of
+detailed requirements reflects how well we have done the job of space mission
+analysis, design, and allocation.
+
+1.1.1 Changes in Future Space Missions
+
+The way we analyze and design space missions is itself continually evolving. In
+particular, we expect major changes in this process because of increasing techno-
+logical maturity, increasing use of onboard processing, and continuing emphasis on
+low-cost missions.
+
+Technological limits on space exploration are giving way to those of policies,
+politics, and economics. Nearly any mission is technically feasible. It is well within
+our technical capacity to build a lunar base, mount manned explorations to Mars or
+other planets, create an industrial base in space, or build networks of satellites to
+provide truly global communications and observations. Our activity in space depends
+on what we can afford to do or what we choose to do. Therefore, we must carefully
+analyze why we choose to use or explore space. We must select each space mission,
+not just to achieve something that could not have been done before, but to achieve
+something that should be done or is worth doing.
+
+6 The Space Mission Analysis and Design Process 1.1
+
+A major technological change in future space missions will be increased use of
+onboard computers. Space system developers have been very slow to use computers
+because of the conservative approach to spacecraft design, long lead times in space-
+craft production, and very real difficulties associated with running a computer reliably
+in space.* The shift to increased onboard processing is moving spacecraft toward more
+autonomy and increased complexity in terms of the tasks they undertake. Whether this
+change drives space costs up or down depends upon the government and industry’s
+approach to autonomy and software development for space. Spacecraft may follow the
+example of ground systems, carrying either low-cost commercial systems or vastly
+more expensive but more capable special purpose systems.
+
+We anticipate continuing emphasis on low-cost spacecraft. Small spacecraft will
+increase for future space missions. These could be either individual, single-purpose,
+small satellites or large constellations of small satellites used for communications,
+space-based radar, or tactical applications. Again, the community appears to be divid-
+ing into those who can build small, low-cost spacecraft and those who continue to
+build large, expensive systems. Creating LightSats represents a new ethic and a new
+way of doing business in space. If the space business is to grow and prosper as com-
+mercial aviation has, we must find a way to reduce the costs of using space. Lowering
+cost is the real challenge for space mission analysis and design, as well as the govern-
+ment and industrial groups which have created and used this process.
+
+Finally, the mission concept and associated space mission architecture largely
+determine the cost, complexity, and efficiency of the overall system, This is com-
+pounded greatly when you begin to consider integrating the operational aspects of
+many different missions. For example, today within DoD, we have communication,
+navigation, signal intelligence, reconnaissance, and weather systems; each with their
+own mission concept and architecture. The upcoming challenge is to find ways for
+these systems to operate together to meet user needs.
+
+The fundamental question is ““Who are the customers, and what products or services
+do they require?” In trying to answer this we find ourselves dealing with information-
+related issues: What information is required, where, and in what form? Most
+customers don’t care about the existence of communications, navigation, or weather
+satellites. They need specific information and are not interested in what systems
+provide it. Today’s challenge is to blend the capabilities and information available
+from multiple systems to meet customer needs. Military people often express this as
+tasking, processing, interpretation, and dissemination, whereas commercial people
+often express the same issues as customer requests processing, formatting, and
+delivery.
+
+Figure 1-3 is divided along somewhat arbitrary, functional boundaries. We need to
+find ways to dissolve these artificial boundaries and create cost-effective solutions to
+our customer’s information needs. For example, instead of trying to integrate the
+separate systems discussed above, we might consider having multimission payloads
+and spacecraft that have the ability to gather intelligence information, weather, and
+provide navigation using one payload—multimission payloads.
+
+An alternative to creating multimission payloads is to divide the architecture
+differently by placing all sensors on one space asset, processing capability on another
+
+* Space computers are far more susceptible than ground computers to single-event upsets caused
+by the high-radiation environment or randomly occurring cosmic rays. To protect against this
+damage, we must design computers specifically for use in space, as described in Chap. 16.
+
+1.2 The Space Mission Life Cycle 7
+
+and using existing or proposed communications links to move the information around.
+A third alternative might be to use a series of low-cost LightSats each doing a separate
+function, but in such a way that the end results can be easily and directly integrated by
+the user’s equipment on the ground.
+
+These examples provide a slightly different perspective which is difficult for many
+organizations, both industrial and government, to adopt because we think and organize
+functionally—tlaunch, spacecraft, operations, and so on. Being able to functionally
+decompose our missions and divide them into workable pieces has been one of the
+reasons, for our success. On the other hand, if we think only functionally it may cause
+significant problems. We must also think horizontally and create systems that can be
+integrated with other space and ground systems to create capabilities that are greater
+than the sum of their parts. As always, our goal is to meet the total user needs at
+minimum cost and risk.
+
+1.2 The Space Mission Life Cycle
+
+Table 1-2 illustrates the life cycle of a space mission, which typically progresses
+through four phases:
+
+* Concept exploration, the initial study phase, which results in a broad definition
+of the space mission and its components.
+
+¢ Detailed development, the formal design phase, which results in a detailed
+definition of the system components and, in larger programs, development of
+test hardware or software.
+
+¢ Production and deployment, the construction of the ground and flight hard-
+ware and software and launch of the first full constellation of satellites.
+
+* Operations and support, the day-to-day operation of the space system, its
+maintenance and support, and finally its deorbit or recovery at the end of the
+mission life.
+
+These phases may be divided and named differently depending on whether the
+sponsor—the group which provides and controls the program budget—is DoD,
+NASA, one of the many international organizations, or a commercial enterprise. The
+time required to progress from initial concept to deorbiting or death of the space asset
+appears to be independent of the sponsor. Large, complex space missions typically
+require 10 to 15 years to develop and operate from 5 to 15 years, whereas small,
+relatively simple missions require as few as 12 to 18 months to develop and operate
+for 6 months to several years.
+
+Procurement and operating policies and procedures vary with the sponsoring
+organization, but the key players are the same: the space mission operator, end user or
+customer, and developer. Commercial space missions are customer driven. The main
+difference between users and customers is that customers usually pay for a service,
+whereas users receive services that others pay for. Operators control and maintain the
+space and ground assets, and are typically applied engineering organizations. End
+users receive and use the products and capability of the space mission. They include
+astronomers and physicists for science missions, meteorologists for weather missions,
+you and me for communication and navigation missions, geologists and agronomists
+for Earth resources missions, and the war fighter for offensive and defensive military
+
+8 The Space Mission Analysis and Design Process 1.2
+
+TABLE 1-2. Space Program Development Phases. Every space program progresses through
+the top-level phases. Subphases may or may not be part of a given program. The
+time required to complete the process varies with the scope. (Diagram courtesy
+R. Bertrand.)
+
+0 D
+Mission
+Analysis,
+Needs
+Identified
+
+MDR SRR SORPDPR CDR
+
+Demon- | Engineering and | Production
+stration Manufacturing and
+and Development
+Validation
+
+© DoD Milestone DR = Decommissioning Review PRR Preliminary Requirements
+v Major Review (Control Gate) FRR Flight Readiness Review Review
+Vv Review MCR Mission Concept Review QR Qualification Review
+q Launch MDR_ Mission Definition Review SAR System Acceptance Review
+AR Acceptance Review ORR Operational Readiness SDR_ System Definition Review
+CDR Critical Design Review Review SRR System Requirements
+
+PDR Preliminary Design Review Review
+
+space missions. The developer is the procuring agent, be it government or a commer-
+cial enterprise, and includes the contractors, subcontractors, and government develop-
+ment, and test organizations. The operators and users must generate technically and
+fiscally responsible requirements; the developer must provide the necessary product
+or capability on time and within changing political and funding constraints.
+
+Three basic activities occur during the Concept Exploration Phase (see Fig. 1-2).
+Users and operators develop and coordinate a set of broad needs and performance
+objectives based on an overall concept of operations. At the same time, developers
+generate alternative concepts to meet the perceived needs of the user and operating
+community. In addition, the sponsor performs long-range planning, develops an
+overall program structure, and estimates budgetary needs and available funding to
+meet the needs of the users, operators, and developers. In order to be successful in pro-
+ducing and deploying a new space capability, the four key players in this activity must
+closely integrate their areas of responsibility.
+
+This book emphasizes the concept exploration phase which further divides into
+needs analysis and concept development, as detailed in Table 1-3. The goal during
+concept exploration is to assess the need for a space mission and to develop affordable
+alternatives that meet operator and end-user requirements. The Needs Analysis is a
+
+1.2 The Space Mission Life Cycle 9
+
+Concept Exploration Detailed Development
+
+Requirements
+
+: Ve
+Generation br ae se area Requirements
+(Users and needs jectives
+
+Studies Prototyping Design & Test
+
+Acquisition
+Management
+(Developers)
+
+Concept
+Concepts Selection
+
+Planning,
+Programming,
+and Budgeting
+(Sponsors)
+
+Affordability
+
+Constraints Firm Unit Costs
+Goals
+
+Azm=~<~Orvwmo o2F 2ZO-ANQCIOODVNV
+
+Fig. 1-2. Organizations and People that Play Key Roles in Space Missions. During concept
+exploration users and operators provide requirements, developers create the design of
+the mission and systems, while sponsors provide funding.
+
+continuing process which culminates in a new program start. Operators and end users
+develop potential mission requirements based on the considerations shown in the left-
+hand column of Table 1-3. The process is different for each organization, but at some
+point a new program begins with a set of mission objectives, concept of operations,
+and desired schedule. In DoD, the Mission Needs Statement documents this informa-
+tion and becomes part of the planning, programming, and budgeting system [Defense
+Systems Management College, 1990]. If approved, the program receives funding and
+proceeds to concept development.
+
+At the Program Initiation milestone, the funding organization commits to pro-
+ceeding through concept development. The program will receive different levels of
+scrutiny depending on its scope, political interest, and funding requirements. In DoD,
+programs classed as major programs receive the utmost attention at the highest levels
+of the Defense Department. Various components of the military use distinct criteria to
+identify major programs [Defense Systems Management College, 1990]. A DoD crit-
+ical requirements program is “major” if it requires more than $200 million in research,
+development, test, and evaluation funds or more than $1 billion in production costs.
+Programs that require participation by more than one component of the armed forces
+or have congressional interest may also be classified as major programs.
+
+During Concept Development the developer must generate alternative methods of
+meeting the operator’s and end user’s needs. This procedure includes developing and
+assessing different concepts and components for mission operations, as well as
+
+10 The Space Mission Analysis and Design Process 12
+
+TABLE 1-3. Further Breakdown of Concept Exploration Phase. During concept exploration
+the operator and end users define their needs and requirements and pass them to
+the developing organization for concept development. A basic premise of this book
+is that the operator, user, and developer should work together to create realistic and
+affordable mission objectives and requirements that meet user needs.
+
+Concept Exploration and Definition
+Needs Analysis Concept Development
+
+Generate potential requirements based on Reassess potential requirements generated
+Mission objectives during needs analysis
+
+Concept of operations Develop and assess alternative mission
+
+Schedule 7 operations concepts
+Life-cycle cost and affordability
+
+Changing marketplace Develop and assess alternative space mission
+
+Research needs architectures
+
+National space policy Estimate
+
+Long-range plan for space performance supportability
+Changing threats to national defense life-cycle cost produceability
+Military doctrine schedule funding profiles
+
+New technology developments risk return on investment
+Commercial objectives
+
+estimating the factors shown in the right-hand column of Table 1-3. The information
+becomes part of an overall system concept. High-level managers in the user, operator,
+and development communities evaluate whether the concepts, initial mission objec-
+tives, and potential requirements meet the mission’s intentions. If the program satisfies
+the need at a reasonable cost, it passes the Requirements Validation milestone and
+proceeds into the Detailed Development Phase.
+
+This book provides the technical processes and information necessary to explore
+concepts for many space missions. Table 1-3 identifies a major concern that can
+undermine the entire process: in many cases, users and operators analyze the needs and
+formulate mission requirements apart from the development community. Then they
+pass these requirements “over the wall” without negotiating. The developer often
+generates alternatives without the operators and users. These autonomous actions
+produce minimum performance at maximum cost.
+
+To explore a concept successfully, we must remove the walls
+between the sponsor, space operators, users or customers, and
+developers and become a team.
+
+A good team considers the mission’s operations, objectives, and requirements as
+well as the available technology to develop the best possible mission concept at the
+lowest possible life-cycle cost.
+
+All space missions consist of a set of elements or components as shown in
+Fig. 1-3. The arrangement of these elements form a space mission architecture.
+Various organizations and programs define their mission elements differently,
+although all of the elements are normally present in any space mission.
+
+The subject of the mission is the thing which interacts with or is sensed by the space
+payload: moisture content, atmospheric temperature, or pressure for weather missions;
+types of vegetation, water, or geological formations for Earth-sensing missions; or a
+rocket or intercontinental ballistic missile for space defense missions. We must decide
+
+1.2 The Space Mission Life Cycle 11
+
+a
+Command, Control and
+Communications Subject
+Architecture
+a
+Orbitand —~.._
+Constellation ,.-~ i
+ca
+
+j——— Mission MISSION
+Operations t CONCEPT
+
+Ground
+Element
+
+Launch
+Element 5
+
+Fig. 1-3. Space Mission Architecture. All space missions include these basic elements to
+some degree. See text for definitions. Requirements for the system flow from the
+operator, end user, and developer and are allocated to the various mission elements.
+
+what part of the electromagnetic spectrum to use in order to sense the subject, thus
+determining the type of sensor as well as payload weight, size, and power. In many
+missions, we may trade off the subject. For example, if we are trying to track a
+missile during powered flight, the subject could be the rocket body or exhaust plume,
+or both.
+
+For communications and navigation missions the subject is a set of equipment
+on the Earth or on another spacecraft, including communication terminals, televisions,
+receiving equipment for GPS navigation, or other user-furnished equipment. The key
+parameters of this equipment characterize the subject for these types of missions.
+
+12 The Space Mission Analysis and Design Process 13
+
+The payload consists of the hardware and software that sense or interact with the
+subject. Typically, we trade off and combine several sensors and experiments to form
+the payload, which largely determines the mission’s cost, complexity, and effective-
+ness. The subsystems of the spacecraft bus support the payload by providing orbit and
+attitude maintenance, power, command, telemetry and data handling, structure and
+rigidity, and temperature control. The payload and spacecraft bus together are called
+the spacecraft, space segment, or launch vehicle payload.
+
+The launch system includes the launch facility, launch vehicle and any upper stage
+required to place the spacecraft in orbit, as well as interfaces, payload fairing, and
+associated ground-support equipment and facilities. The selected launch system
+constrains the size, shape, and mass of the spacecraft.
+
+The orbit is the spacecraft’s path or trajectory. Typically, there is a separate initial
+parking orbit, transfer orbit, and final mission orbit. There may also be an end-of-life
+or disposal orbit. The mission orbit significantly influences every element of the
+mission and provides many options for trades in mission architecture.
+
+The communications architecture is the arrangement of components which satisfy
+the mission’s communication, command, and control requirements. It depends strong-
+ly on the amount and timing requirements of data to be transferred, as well as the num-
+ber, location, availability, and communicating ability of the space and ground assets.
+
+The ground system consists of fixed and mobile ground stations around the globe
+connected by various data links. They allow us to command and track the spacecraft,
+receive and process telemetry and mission data, and distribute the information to the
+operators and users.
+
+Mission operations consist of the people, hardware, and software that execute the
+mission, the mission operations concept, and attendant policies, procedures, and data
+flows. Finally, the command, control, and communications (C3) architecture contains
+the spacecraft, communications architecture, ground segment, and mission operations
+elements.
+
+1.3 Step 1: Definition of Mission Objectives
+
+The first step in analyzing and designing a space mission is to define mission
+objectives: the broad goals which the system must achieve to be productive. Figure 1-4
+shows sample objectives for FireSat. We draw these qualitative mission objectives
+largely from the mission statement. In contrast, the mission requirements and
+constraints discussed in Sec. 1.4 are quantitative expressions of how well we achieve
+our objectives—balancing what we want against what the budget will allow. Thus,
+whereas we may modify objectives slightly or not at all during concept exploration,
+we often trade requirements throughout the process. For FireSat to be FireSat, it must
+detect, identify, and monitor forest fires. As we trade and implement elements of the
+system during concept exploration, we must ensure that they meet this fundamental
+objective. An excellent example of the careful definition of broad mission objectives
+for space science missions is given by the National Research Council [1990].
+
+Ordinarily, space missions have several objectives. Some are secondary objectives
+which can be met by the defined set of equipment, and some are additional objectives
+which may demand more equipment. Nearly all space missions have a hidden agenda
+which consists of secondary, typically nontechnical, objectives. Frequently political,
+social, or cultural, they are equally real and equally important to satisfy. For example,
+a secondary objective for FireSat could be to show the public a visible response to
+
+1.3 Step 1: Definition of Mission Objectives 13
+
+FireSat
+Mission Objectives
+
+Primary Objective:
+
+To detect, identify, and monitor forest fires throughout the UnitedStates,
+including Alaska and Hawaii, in near real time.
+
+Secondary Objectives:
+
+To demonstrate to the public that positive action is underway to contain
+forest fires.
+
+To collect statistical data on the outbreak and growth of forest fires.
+To monitor forest fires for other countries.
+To collect other forest management data.
+
+Fig. 1-4. FireSat Mission Objectives. Unlike requirements, which specify numerical levels of
+performance, the mission objectives are broad statements of what the system must do
+to be useful.
+
+frequent forest fires. Third World nations produce satellites in part to show that their
+developing technology makes them important players in international politics. Of
+course, this secondary political objective for space programs has been important for
+many years in both the United States and the former Soviet Union. If we are to meet
+all of a space mission’s objectives, we must identify secondary and nontechnical
+objectives as well as primary ones.
+
+Multiple objectives also occur when we use a single satellite to meet different
+demands. For example, we may use FireSat’s temperature-sensing instruments to
+monitor global changes in ocean temperatures. In this case, the secondary objectives
+could become as important as the primary ones. A second example would be adding a
+communications payload to FireSat to permit better communications among the
+distributed groups who fight forest fires. Although the primary objective usually will
+be quite stable, secondary objectives may shift to meet the users’ needs and the
+redefined potential of the space mission concept.
+
+As in the case of most of the top-level trades, we recommend strongly against
+numerical formulas that try to “score” how well a mission meets its objectives. We can
+compute probabilities for achieving some technical objectives, but trying to
+numerically combine the coverage characteristics of different FireSat constellations
+with the political impact of launching FireSat is too simplistic for effective decision
+making. Instead, we must identify objectives separately so we can judge how to
+balance alternative objectives and mission concepts.
+
+Good mission objectives incorporate user needs and, at least indirectly, the space
+characteristics we are exploiting to achieve them. As stated earlier, space is expensive.
+If our end objective does not use one of the fundamental space characteristics, it will
+likely cost less to do on Earth. For example, there is little reason to manufacture low-
+cost consumer goods or publish books in space.
+
+What fundamental characteristics of space make space missions desirable?
+Table 1-4 lists some of them with their corresponding missions. Exploring and using
+space serves various objectives, from extremely practical telecommunications and
+weather, to major scientific observatories hoping to understand the universe better, to
+advanced military applications and exploring and exploiting the Moon and planets.
+Our objectives are diverse partly because we use many different space characteristics.
+
+14 The Space Mission Analysis and Design Process 13
+
+For example, materials processing uses the microgravity and high vacuum of space,
+disregarding the spacecraft’s position over the Earth. Conversely, communications or
+observation satellites emphasize Earth coverage as the most fundamental space
+characteristic is achieve their objectives.
+
+TABLE 1-4. Characteristics of Space Exploited by Various Space Missions. Note the wide
+variety and that many are only beginning to be used. (Spacecraft acronyms are
+defined in the index.)
+
+Relevant Degree of Sample
+Characteristic Missions Utilization Missions
+
+Global Communications Some are mature intelSat
+Perspective Navigation industries; major new GPS
+Weather advances will come with | NOAA satellites
+Surveillance increased onboard DBS
+processing
+
+Above the Scientific observations | Well developed; space | Space Telescope
+Atmosphere at all wavelengths observatories will GRO
+continue to dramatically | Chandra X-Ray
+change our view of Observatory
+the universe IVE
+
+Gravity-free Materials processing | Now in infancy; Industrial Space Facility
+Environment in space may be many future ISS
+applications Comet
+
+Abundant Space industrialization | Essentially none Space colonies
+Resources Asteroid exploration Solar power satellites
+Solar power satellites NEAP
+
+Exploration of | Exploration of Moon Initial flybys have been | Manned lunar or
+Space Itself and planets, scientific | done; Some landings Martian bases
+probes, asteroid and done or planned; limited | Apollo
+comet missions manned exploration Galileo
+
+Table 1-4 reveals a second important feature: the varying levels of exploitation for
+different space characteristics. Many current missions use the global perspective of
+space—for telecommunications, weather, navigation, and other aspects of Earth
+monitoring. Space-based telecommunications will continue to grow, but it is already
+a major and mature industry. Satellite communications by telephone and television
+have become a part of everyday life and have helped to bring about a communications
+revolution largely responsible for our shrinking world. Equally dramatic changes are
+likely in the future as new applications for space-based communications and naviga-
+tion continue to emerge.
+
+In contrast to telecommunications, materials processing and precision manu-
+facturing in gravity-free space is only in its infancy. Major strides appear possible in
+pharmaceutical and semiconductor devices that may bring about an entirely new
+industrial segment. Exploiting space’s almost limitless resources is even further
+removed. Unlimited continuous power and huge, accessible supplies of physical
+materials may, in the long run, maintain an industrialized society without destroying
+the Earth’s fragile environment. These objectives will require greater vision than
+those for the more fully developed areas of communications, resource mapping, and
+monitoring.
+
+We see from Table 1-4 that we have either not used or only begun to use most of
+the major characteristics of space, so changes in future space exploration should be far
+
+1.4 Step 2: Preliminary Estimate of Mission Needs, Requirements, and Constraints 15
+
+larger than present development. To take practical advantage of these characteristics,
+we must greatly reduce the costs of exploring and exploiting space. Finding ways to
+lower these costs is a principal objective of this book. (See Wertz and Larson [1996].)
+
+1.4 Step 2: Preliminary Estimate of Mission Needs,
+Requirements, and Constraints
+
+Having defined the broad objectives that the space mission is to achieve, we wish
+to transform them into preliminary sets of numerical requirements and constraints on
+the space mission’s performance and operation. These requirements and constraints
+will largely establish the operational concepts that will meet our objectives. Thus, we
+must develop requirements which truly reflect the mission objectives and be willing to
+trade them as we more clearly define the space system.
+
+To transform mission objectives into requirements, we must look at three broad
+areas:
+
+¢ Functional Requirements, which define how well the system must perform to
+meet its objectives.
+
+* Operational Requirements, which determine how the system operates and how
+users interact with it to achieve its broad objectives.
+
+* Constraints, which limit cost, schedule, and implementation techniques
+available to the system designer.
+
+The needs, requirements, and constraints for any specific mission will depend upon
+the mission itself and how we implement it. For example, the mission may be a
+commercial venture, a government scientific program, or a crash emergency program
+responding to dire need. Still, most space missions develop their requirements accord-
+ing to the basic characteristics in Table 1-5.
+
+Establishing top-level mission requirements is extremely difficult, depending on
+mission needs and on the perceived complexity or cost of meeting them. Therefore,
+contrary to frequent practice, we should iterate the numerical requirements many times
+in the design process. The first estimate of mission requirements must come from the
+goals and objectives combined with some view of what is feasible. Often, we can
+reiterate or slightly modify requirements and specifications from previous missions,
+thus carrying over information known from those missions. Of course, we must be
+prepared to trade these requirements as we develop the mission concept, thereby
+avoiding the problem of keeping old and inappropriate requirements.
+
+The next step in setting up preliminary mission requirements is to look for the
+“hidden agenda” discussed in Sec. 1.3 and Chap. 2. This agenda contains the devel-
+oper’s implicit goals and constraints. For example, the FireSat mission may need to be
+perceived as responding quickly to public demand. Thus, an extended R&D program
+to develop the most appropriate FireSat satellite may not be acceptable.
+
+As discussed further in Chap. 21, we must recognize that developing a space
+mission depends on political, legal, and economic elements, as well as technology.
+Thus, the most appropriate solution must meet mission technical requirements and the
+developer’s political and economic goals. For example, satellite systems for a small
+nation may use components built in that nation or develop some new components
+locally, even though they would cost less if bought in other countries. In this case, we
+would spend more money to meet a political constraint: using the space mission to
+
+16 The Space Mission Analysis and Design Process 1.4
+
+TABLE 1-5. Examples of Top-Level Mission Requirements. We typically subdivide these
+top-level requirements into more specific requirements applicable to specific space
+missions.
+
+Where Factors which Typically
+Requirement Discussed | Impact the Requirement FireSat Example
+
+FUNCTIONAL
+
+Performance Chaps. Primary objective, payload | 4 temperature levels
+9,13 size, orbit, pointing 30 m resolution
+500 m location accuracy
+Coverage Sec. 7.2 Orbit, swath width, number | Daily coverage of 750 million
+
+acres within continental U.S.
+Send registered mission data
+
+of satellites, scheduling
+Responsiveness | Sec. 7.2.3, Communications
+
+Chap. 14 architecture, processing within 30 min to up to 50 users
+delays, operations
+Secondary Chap. 2 As above 4 temperature levels for pest
+Mission management
+OPERATIONAL
+
+Duration Secs. 1.4,
+
+10.5.2, 19.2
+Sec. 19.1
+
+Experiment or operations,
+level of redundancy, altitude
+
+Level of redundancy
+
+Mission operational at least
+10 years
+
+98% excluding weather,
+3-day maximum outage
+
+Availability
+
+Sec. 8.2
+
+Chaps.
+13, 15
+
+Survivability
+
+Data
+Distribution
+
+Orbit, hardening, electronics
+
+Communications
+architecture
+
+Natural environment only
+
+Up to 500 fire-monitoring offices
++ 2,000 rangers worldwide (max.
+of 100 simultaneous users)
+
+Location and extent of fire on
+Form, and any of 12 map bases, average
+Format temperature for each 30 m2 grid
+
+CONSTRAINTS
+
+Cost Chap. 20 Manned flight, number < $20M/yr + R&D
+of spacecraft, size and
+complexity, orbit
+
+Data Content, Chaps. 2,
+
+9, 13, 14
+
+User needs, level and place
+of processing, payload
+
+Schedule Secs. Technical readiness, Initial operating capability within
+1.3, 19.1, program size 5 yrs, final operating capability
+Chaps. 2, 12 within 6 yrs
+
+Regulations Sec. 21.1 Law and policy NASA mission
+
+Political Sec. 21.1 Sponsor, whether Responsive to public demand
+
+international program for action
+
+Environment Secs. 8.1, Orbit, lifetime Natural
+21.2
+
+interfaces Chaps. Level of user and operator | Comm. relay and interoperable
+14, 15 infrastructure through NOAA ground stations
+
+Development Chap. 2 Sponsoring organization Launch on STS or expendable;
+
+Constraints No unique operations people at
+
+data distribution nodes
+
+develop and promote national engineering resources. The technical community often
+sets aside nontechnical considerations and regards them as less important or less real
+than technical constraints. But a successful mission design must include all require-
+ments and constraints placed on the system.
+
+1.4 Step 2: Preliminary Estimate of Mission Needs, Requirements, and Constraints 17
+
+Finally, we reiterate that preliminary mission requirements should be established
+subject to later trades. Mission designers often simply try to meet the procuring
+group’s requirements and constraints, because not meeting them appears to be a strong
+competitive disadvantage. Consequently, designers may not modify them, even if
+changes could make the system cost less or perform better for a given cost. Section 3.3
+and Chap. 4 detail this process of trading on system requirements to maximize per-
+formance vs. cost.
+
+As an example, we consider the requirement for mission duration or spacecraft
+lifetime, which may or may not be the same. This parameter exemplifies the difficulty
+of establishing requirements. The length of the mission is often indefinite. We want to
+detect, identify, and monitor forest fires continuously at a reasonable cost per year. In
+practice, however, we must develop a system that meets this need and then deploy it
+with an established design life and, perhaps, a replenishment philosophy. The design
+life of the individual FireSat spacecraft will strongly affect cost and will determine the
+level of redundancy, propellant budgets, and other key system parameters. In princi-
+ple, we would like to obtain a graph of spacecraft cost vs. design life as shown in Fig.
+1-5. We could then easily compute the total expected cost per year for different design
+lives, as shown by the dashed line, and the minimum spacecraft cost per year. We
+could also assess technological obsolescence, or the point at which we wish to replace
+the spacecraft because of better or cheaper technology.
+
+\
+\ <—_ Cost per Year
+
+Cost
+
+o
+ee
+
+ween ew eee
+\
+Spacecraft ~
+Cost
+
+Best Spacecraft Design Life
+
+Launch Cost
+
+Spacecraft Design Life
+
+Fig. 1-5. Hypothetical Curve of Cost vs. Spacecraft Design Life. The cost per year is the
+total cost divided by the design life. In principle, we should use such curves to set the
+Spacecraft Design Life requirement. In practice, they rarely exist. See Sec. 20.5 fora
+Cost vs. Design Life curve for FireSat.
+
+In practice, figures such as 1-5 are almost never done or, at best, are done
+qualitatively. The mission duration is normally assigned rather arbitrarily with a
+general perception of cost per year. Thus, there may be a push to produce spacecraft
+lasting 5 or 10 years because people believe these will be more economical than ones
+lasting only a few years. No matter how we choose the design life, we would like to
+go through the process described above for decisions about mission lifetime. If at all
+
+18 The Space Mission Analysis and Design Process
+
+possible, it would be desirable to create a chart similar to Fig. 1-5 based on even crude
+estimates of spacecraft cost. Doing so provides a much stronger basis for establish-
+ing mission requirements and, e.g., determining whether we should push harder for a
+longer spacecraft lifetime or back off on this requirement to reduce spacecraft
+cost.
+
+Having made a preliminary estimate of mission requirements and constraints, we
+proceed in Chap. 2 to define and characterize one or more baseline mission concepts.
+The issue of refining requirements and assessing how well objectives can be met is
+discussed in Chaps. 3 and 4.
+
+References
+Boden, Daryl G. and Wiley J. Larson. 1996. Cost Effective Space Mission Operations.
+New York: McGraw-Hill.
+
+Davidoff, Martin. 1998. The Radio Amateur’s Satellite Handbook. Newington, CT:
+American Radio Relay League.
+
+Defense Systems Management College. 1990. System Engineering Management
+Guide. Ft. Belvoir, VA: U.S. Government Printing Office.
+
+Kay, W.D. 1995. Can Democracies Fly in Space? The Challenge of Revitalizing the
+U.S. Space Program. Westport, CT: Praeger Publishing.
+
+National Research Council. 1990. Strategy for the Detection and Study of Other
+Planetary Systems. Washington, DC: National Academy Press.
+
+Przemieniecki, J.S. 1993. Acquisition of Defense Systems. Washington, DC: American
+Institute of Aeronautics and Astronautics, Inc.
+
+Rechtin, Eberhardt. 1991. Systems Architecting. Englewood Cliffs, NJ: Prentice Hall.
+
+Ruskin, Arnold M. and W. Eugene Estes. 1995. What Every Engineer Should Know
+About Project Management (2nd Edition). New York: Marcel Dekker, Inc.
+
+Shishko, Robert. 1995. NASA Systems Engineering Handbook. NASA.
+
+Wertz, James R. and Wiley J. Larson. 1996. Reducing Space Mission Cost. Tor-
+rance, CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer Academic
+Publishers.

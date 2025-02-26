@@ -1,0 +1,1435 @@
+
+Chapter 3
+Mission Evaluation
+James R. Wertz, Microcosm, Inc.
+
+3.1 Step 7: Identification of Critical Requirements
+
+3.2 Mission Analysis
+The Mission Analysis Hierarchy, Studies with Limited
+Scope; Trade Studies, Performance Assessments
+
+3.3 Step 8: Mission Utility
+Performance Parameters and Measures of Effectiveness:
+Mission Utility Simulation; Commercial Mission Analysis
+and Mission Utility Tools
+
+3.4 Step 9: Mission Concept Selection
+
+Chapter 2 defined and characterized alternative concepts and architectures for
+space missions. This chapter shows how we evaluate the ability of these options to
+meet fundamental mission objectives. We address how to identify the key require-
+ments which drive the system design, how to quantify mission performance, and how
+to select one or more concepts for further development or to decide that we cannot
+achieve the mission within current constraints or technology.
+
+Although essentially all missions go through mission evaluation and analysis stages
+many times, there are relatively few discussions in the literature of the general process
+for doing this. Fortescue and Stark [1995] discuss the process for generic missions;
+Przemieniecki [1993, 1994] does so for defense missions; and Shishko [1995] pro-
+vides an excellent overview for NASA missions. Kay [1995] discusses the difficulty
+of doing this within the framework of a political democracy and Wertz and Larson
+[1996] provide specific techniques applicable to reducing mission cost.
+
+The key mission evaluation questions for FireSat are:
+
+¢ Which FireSat requirement dominates the system design or is the most diffi-
+cult or expensive to meet?
+
+¢ How well can FireSat detect and monitor forest fires, and at what cost?
+
+¢ Should the FireSat mission evaluation proceed, and if so, which alternatives
+should we pursue?
+
+We must readdress these questions as we analyze and design the space mission. By
+addressing them when we first explore concepts, we cannot obtain definitive answers.
+But we can form the right questions and identify ideas, parameters, and requirements
+we should be monitoring throughout the design. More extensive discussions of this
+systems engineering process are provided by Rechtin [1991] and the System Engineer-
+
+47
+
+48 Mission Evaluation 3.1
+
+ing Management [Defense Systems Management College, 1990]. The NASA Systems
+Engineering Handbook |Shishko, 1995] provides an excellent and detailed account of
+the process used by NASA. Przemieniecki [1990a, b] provides a good introduction to
+mathematical methods associated with military programs and has an associated
+software package. Other software packages intended specifically to support mission
+evaluation include Satellite Tool Kit (STK) from Analytical Graphics (1998), the Mis-
+sion Utility/Systems Engineering module (MUSE) from Microcosm (1998), and the
+Edge product family from Autometric (1998).
+
+3.1 Step 7: Identification of Critical Requirements
+
+Critical requirements are those which dominate the space mission’s overall design
+and, therefore, most strongly affect performance and cost*. For a manned mission to
+Mars, the critical requirements will be clear: get to Mars all of the required mass to
+explore the planet and return, and maintain crew safety for a long mission in widely
+varying environments. For less ambitious space missions, we cannot establish the crit-
+ical requirements so easily. Because we want to achieve the best performance at
+minimum cost, we need to identify these key requirements as early as possible so they
+can be a part of the trade process.
+
+Table 3-1 lists the most common critical requirements, the areas they typically
+affect, and where they are discussed. There is no single mechanism to find the critical
+requirements for any particular mission. Like the system drivers discussed in Sec. 2.3,
+they may be a function of the mission concept selected. Consequently, once we
+establish the alternative mission concepts, we usually can determine the critical
+requirements by inspection. Often, concept exploration itself exposes the requirements
+which dominate the system’s design, performance, and cost. One approach to identi-
+fication of critical requirements is as follows:
+
+1. Look at the principal performance requirements. In most cases, the principal
+performance requirement will be one of the key critical requirements. Thus,
+for FireSat, the requirements on how well it must detect and monitor forest
+fires would normally be principal drivers of the system design.
+
+2. Examine Table 3-1. The next step is to look at the requirements list in
+Table 3-1 and determine which of these entries drive the system design, per-
+formance, or cost.
+
+3. Look at top-level requirements. Examine each of the top-level requirements
+established when we defined the mission objectives (Sec. 1.3) and determine
+how we will meet them. For each, ask whether or not meeting that require-
+ment fundamentally limits the system’s design, cost, or performance.
+
+4. Look for hidden requirements. In some cases, hidden requirements such as
+the need to use particular technologies or systems may dominate the mission
+design, and cost.
+
+* Critical requirements should be distinguished from system drivers (as discussed in Sec. 2.3),
+which are the defining mission parameters most strongly affecting performance, cost, and risk.
+The goal of mission engineering is to adjust both the critical requirements (e.g., coverage and
+resolution) and the system drivers (e.g., altitude and aperture) to satisfy the mission objectives
+at minimum cost and risk.
+
+3.2 Mission Analysis 49
+
+TABLE 3-1. Most Common Critical Requirements. See text for discussion.
+
+Where
+Requirement What it Affects Discussed
+
+Coverage or Number of satellites, altitude, inclination, communications] Secs. 7.2, 13.2
+Response Time _| architecture, payload field of view, scheduling, staffing
+requirements
+
+Instrument size, altitude, attitude control
+
+Payload size, complexity; processing, and thermal control;| Secs. 9.5, 13.5
+altitude
+
+Mapping Attitude control, orbit and attitude knowledge, mechanical| Sec. 5.4
+Accuracy alignments, payload precision, processing
+Payload size and power, altitude Secs. 11.2, 13.5
+
+On-orbit Lifetime | Redundancy, weight, power and propulsion budgets, Secs. 6.2.3,
+component selection 8.1.3, 10.4, 19.2
+Survivability Altitude, weight, power, component selection, design of
+space and ground system, number of satellites, number of
+ground stations, communications architecture
+
+For most FireSat approaches, resolution and coverage are the principal critical
+requirements, and we could find them by any of the first three options listed above.
+The critical requirements depend on a specific mission concept. For the low-cost
+FireSat of Chap. 22, they are coverage and sensitivity. Resolution no longer concerns
+us because the sensing is being done by ground instruments whose positions are
+known well enough for accurate location.
+
+3.2 Mission Analysis
+
+Mission analysis is the process of quantifying the system parameters and the result-
+ing performance. A particularly important subset of mission analysis is mission utility
+analysis, described in Sec. 3.3, which is the process of quantifying how well the sys-
+tem meets its overall mission objectives. Recall that the mission objectives themselves
+are not quantitative. However, our capacity to meet them should be quantified as well
+as possible in order to allow us to make intelligent decisions about whether and how
+to proceed. Mission requirements, introduced in Chap. 1 and discussed in more detail
+in Chap. 4, are the numerical expressions of how well the objectives must be met. They
+represent a balance between what we want and what is feasible within the constraints
+on the system and, therefore, should be a central part of the mission analysis activity.
+In practice, mission analysis is often concerned with how and how well previously
+defined mission requirements can be met. In principle, mission analysis should be the
+process by which we define and refine mission requirements in order to meet our broad
+objectives at minimum cost and risk.
+
+A key component of mission analysis is documentation, which provides the orga-
+nizational memory of both the results and reasons. It is critical to understand fully the
+choices made, even those which are neither technical nor optimal. We may choose to
+apply a particular technology for political or economic reasons, or may not have
+enough manpower to investigate alternatives. In any case, for successful analysis, we
+must document the real reasons so others can reevaluate them later when the situation
+may be different. Technical people often shy away from nontechnical reasons or try to
+
+50 Mission Evaluation 3.2
+
+justify decisions by exaggerating their technical content. For example, we may choose
+for our preliminary FireSat analysis a circular orbit at 1,000 km at an inclination of
+60 deg because this is a good mid-range starting point. If so, we should document this
+as the reason rather than trying to further justify these parameters. Later, we or others
+can choose the best altitude and inclination rather than having to live by choices for
+which there is no documented justification.
+
+3.2.1 The Mission Analysis Hierarchy
+
+I like to think of the mission analysis process as a huge electronic spreadsheet
+model of a space system. On the left side of the spreadsheet matrix are the various
+parameters and alternatives that one might assess, such as power, orbit, number of sat-
+ellites, and manning levels for ground stations. Along the bottom row are the system’s
+quantitative outputs, indicating its performance, effectiveness, cost, and risk. The
+matrix itself would capture the functional relationships among the many variables. We
+would like to wiggle any particular parameter, such as the diameter of the objective in
+a detector lens or the number of people assigned to the ground station, and determine
+the effect on all other parameters. In this way, we could quantify the system’s perfor-
+mance as a function of all possible variables and their combinations.
+
+Fortunately for the continuing employment of mission analysts, the above spread-
+sheet model does not yet exist.* Instead, we analyze as many reasonable alternatives
+as possible so we may understand how the system behaves as a function of the princi-
+pal design features—that is, the system drivers. This approach does not imply that we
+are uninterested in secondary detail, but simply recognizes that the mission analysis
+process, much like the space system we are attempting to analyze, is ultimately limited
+in both cost and schedule. We must achieve the maximum level of understanding with-
+in these limits.
+
+If the resources available for concept exploration are limited, as is nearly always
+the case in realistic situations, then one of the most critical tasks is to intelligently limit
+the scope of individual analyses. We must be able to compute approximate values for
+many parameters and to determine at what level of detail we should reasonably stop.
+In practice, this is made difficult by the continuing demand for additional detail and
+depth. Thus, we must be able to determine and make clear to others what elements of
+that detail will significantly affect the overall system performance and what elements,
+while important, can reasonably be left to a more detailed design phase.
+
+We use two main methods to limit the depth of analysis in any particular area. The
+first is to clearly identify each area’s system drivers by the methods in Sec. 2.3 and to
+concentrate most of the mission analysis effort on these drivers. The second is to
+clearly identify the goal of the system study and to provide a level of detail appropriate
+to that goal. This approach leads to a mission analysis hierarchy, summarized in
+Table 3-2, in which studies take on increased levels of detail and complexity as the
+activity progresses. The first three types of studies are meant to be quick with limited
+detail and are not intended to provide definitive results. The last three are much more
+complex ways to select an alternative to provide the best system performance.
+
+* The Design-to-Cost model at JPL [Shishko, 1996] and similar models being developed
+throughout the aerospace community are attempting to automate this basic design process of
+evaluating the system-wide implication of changes. In due course, system engineers may
+become technologically obsolete. Much like modern chess players, the challenge to future
+system engineers will be to stay ahead of the computer in being creative and innovative.
+
+3.2 Mission Analysis 51
+
+TABLE 3-2. The Mission Analysis Hierarchy. These help us decide how much detail to study
+during the preliminary design phase.
+
+-
+Analysis
+Type Goal
+
+Feasibility To establish whether an objective is achievable and
+Assessment | its approximate degree of complexity
+
+Sizing To estimate basic parameters such as size, weight, Quick,
+Estimate power or cost umited
+
+Point Design | To demonstrate feasibility and establish a baseline for
+comparison of alternatives
+
+Trade Study | To establish the relative advantages of alternative
+approaches or options
+
+Performance | To quantify performance parameters More
+Assessment | (e.g., resolution, timeliness) for a particular approach detailed,
+complex
+a. . trades
+Utility To quantify how well the system can meet overall
+
+Assessment | mission objectives
+
+3.2.2 Studies with Limited Scope
+
+The first three types of analyses in Table 3-2 provide methods for undertaking a
+quick-look assessment. They provide limited detail, but can frequently be done
+quickly and at low cost. Consequently, these quick-look assesments are important in
+any situation which is funding-limited. We will outline these methods very briefly
+here. However, nearly the entire book is devoted to the process of making initial
+estimates, which is the basic goal of limited scope studies. We want to be able to
+understand whether or not a particular project is feasible, and to get some idea of its
+size, complexity, and cost. Doing this requires that we be able to make numerical
+estimates and undertake limited studies in order to develop insight into the nature of
+the problem we are trying to solve.
+
+The biggest difficulty with limited scope studies is the tendency to believe that they
+are more accurate than they really are. Thus it is not uncommon to use a feasibility
+assessment or point design to establish the requirements for a mission in such detail
+that in practice the point design becomes the only alternative which can meet them. As
+long as we recognize the limited scope of these studies, they have a valuable place in
+the mission analysis activity and represent one of the most important tools that we can
+use to understand the behavior of the system we are designing.
+
+Feasibility Assessment. The simplest procedure in the mission analysis hierarchy
+is the feasibility assessment, which we use to establish whether a particular objective
+is achievable and to place broad bounds on its level of complexity. Frequently, we can
+do a feasibility assessment simply by comparison with existing systems. Thus, we are
+reasonably convinced that FireSat is feasible because most FireSat tasks could be
+performed by existing Earth resources satellites. Similarly, it is feasible to land a man
+on the Moon and return him safely to Earth because we have done so in the past.
+
+We can also determine whether a particular goal is feasible by extrapolating our
+past experience. Is it feasible to send people to Mars and bring them back safely? Here
+we need to look at the principal differences between a Mars mission and a lunar
+
+52 Mission Evaluation 3.2
+
+mission. These differences include a longer flight time and higher gravity and,
+therefore, higher lift-off velocity required to leave Mars. These factors make the job
+more challenging and possibly more expensive than going to the Moon, but there is
+nothing about the Mars mission which makes it inherently impossible. Getting to Mars
+is feasible. The problem is being able to do so at modest cost and risk.
+
+The third method of providing a feasibility assessment is to provide a very broad
+design of how such a mission might be accomplished. For example, in the 1970s,
+Gerard O’ Neill of Princeton University proposed building large space colonies at the
+Lagrange points between the Earth and the Moon [O’ Neill, 1974]. No mission of this
+scope had ever been undertaken, and it certainly was not a straightforward
+extrapolation of any of our normal space experience. O’Neill and his colleagues
+proceeded to establish the feasibility by developing a variety of alternative designs
+for such space colonies [Richard D. Johnson and Charles Holbrow, 1977]. While the
+work done was far in excess of a simple feasibility assessment, it clearly estab-
+lished that such colonies were feasible and gave at least an estimate of the scope of the
+problem.
+
+Sizing Estimate. The purpose of the sizing estimate is to provide an estimate of
+basic mission parameters such as size, weight, power, or cost. We can do sizing esti-
+mates in much the same manner as the feasibility assessment: by analogy with existing
+systems. Thus, if we are aware of an Earth observation system which has resolution
+and information characteristics comparable to what we believe are needed for FireSat,
+we can use these parameters to give us an initial estimate of the FireSat parameters.
+
+We can provide a quantitative estimate of key mission parameters by scaling the
+parameters from existing missions or payloads in order to obtain estimates of the com-
+ponent sizes for our particular mission. This scaling process is described in Sec. 9.5
+for space payloads, and in Sec. 10.5 for the spacecraft as a whole. The process of sizing
+by scaling existing equipment is an extremely powerful approach to estimating what
+it will take to achieve mission objectives. It is of use not only during the conceptual
+design process, but throughout the hardware design definition and development
+phases to evaluate the system design as it evolves. If scaling existing systems leads to
+the suggestion that a particular component should be twice as heavy as the current
+design suggests, this gives us reason to look very closely at the current design and to
+try to determine whether or not any factors have been overlooked. We assume that
+designers of previous systems did a reasonable job of optimizing their system. If the
+current design is significantly different, either better or worse, then we would like to
+understand the reasons for these differences. This is a good way to gain confidence in
+the design process as we proceed.
+
+As the design proceeds, more and more accurate sizing estimates come from the
+scaling process. We proceed by breaking down the system into components and sizing
+individual components based on scaling estimates with prior systems. Thus, we may
+initially estimate the system as a whole divided into a spacecraft and ground station.
+As the design becomes more detailed, we will break down the spacecraft into its rela-
+tive components and estimate the size, weight, and power of each element based upon
+scaling from prior systems or engineering estimates of the new system to be built. Sim-
+ilarly, we initially size the ground station by comparison with existing systems and
+eventually by building a list of all the ground system components and undertaking
+similar sizing estimates for each component. As introduced in Chap. 1, this process of
+creating a list of components and estimating parameters for each is known as budget-
+ing and is described in more detail in Sec. 10.3.
+
+3.2 Mission Analysis 53
+
+Point Design. A point design is a design, possibly at a top level, for the entire
+system which is capable of meeting the broad mission objectives. We refer to it as a
+point design if we have not attempted to optimize the design to either maximize
+performance or minimize weight, cost, or risk. The point design serves two basic
+purposes. It demonstrates that the mission is feasible, and it can be used as a baseline
+for comparison of alternatives. Thus, if we can establish a point design for FireSat that
+meets mission objectives with a spacecraft that weighs 500 kg and costs $50 million,
+then we can use this as a comparison for later systems. If other systems cost more,
+weigh more, and do not perform as well, then we will abandon those alternatives in
+favor of the original baseline. If we continue to optimize the design so that the cost and
+risk decrease, then we will let the baseline evolve to take into account the new design
+approaches.
+
+A point design is valuable because we can do it quickly and easily. There is no need
+to optimize any of the parameters associated with the design unless it is necessary to
+do so to meet mission objectives. This gives us a sense of whether it will be easy or
+hard to meet the mission objectives and what are likely to be the most difficult aspects.
+One of the biggest problems in a point design is taking it too seriously at a later stage.
+We are always likely to regard work which we have done as representing the best
+approach, even though we may not have been aware of alternatives. The key issue here
+is to make use of point designs but at the same time to recognize their limitations and
+to continue to do trades to reduce overall cost and risk and to look for alternative
+approaches to meet mission objectives.
+
+3.2.3 Trade Studies
+
+Deciding whether to proceed with a mission should be based on a strawman system
+concept or point design which shows that the mission objectives can be met within the
+assigned constraints. Of course, the point design may not be the best solution, and we
+would ordinarily consider a number of alternatives. The system trade process evalu-
+ates different broad concepts to establish their viability and impact on performance
+and cost. We then combine the system trade results with the mission utility analysis
+described in Sec. 3.3 to provide input for concept selection.
+
+System trades consist of analyzing and selecting key parameters, called system
+drivers, which determine mission performance. We use these parameters to define a
+mission concept and mission architecture which can then be used for performance
+analysis and utility analysis as described in Sec. 3.3. The key system trades are those
+that define how the system works and determine its size, cost, and risk. Typically, the
+key system trades will be in one of the following major areas:
+
+* Critical requirements
+
+* Mission concept
+
+¢ Subject
+
+¢ Type and complexity of payloads
+* Orbit
+
+Table 3-3 shows typical examples of areas in which there are key system trades for
+representative missions. For essentially all missions, specification of the critical
+requirements will be a key system trade. For the FireSat mission, the subject is
+
+54 Mission Evaluation 3.2
+
+probably the heat from the fire itself and the payload is probably an IR sensor. Thus,
+the principal system trades are probably the mission concept, the resolution and
+coverage requirements, and the orbit. For a mission such as the Space Telescope, the
+orbit is of marginal importance and the subject is moderately well defined, if only very
+poorly known. Here the principal trades will be the resolution and pointing require-
+ments, the payload, and the mission concept. Communications satellite systems are
+normally in geosynchronous orbit with a well defined concept of operations. Here the
+only real trade is with the required traffic load, the subject, and the size and complexity
+of the payload.
+
+Truly innovative approaches—those that really change how we think about a
+problem—typically involve finding a new option among these key system trades.
+Motorola’s Iridium program and subsequent low-Earth orbit communications constel-
+lations represent a new way of thinking about using satellites for communications.
+These have a very different concept of operations and different orbit from traditional
+systems. Similarly, Chap. 22 presents an innovative approach to thinking about
+FireSat that provides a totally different concept of operations and type of payload.
+Innovative solutions are never easy to come by. To try to find them, a good place to
+Start is with the key system trade areas given in Table 3-3.
+
+TABLE 3-3. Representative Areas for Key System Trades. Although these system trades are
+critical, we can’t expect numerically precise answers to our system design problem.
+
+Where Space Communications
+Trade Area Discussed FireSat | Telescope Satellite
+
+Critical Requirements
+Mission Concept Chap. 2
+Subject Chap. 9
+
+Payload Type and Complexity | Chaps. 9, 13
+
+We cannot normally do system trades in a straightforward numerical fashion.
+Choosing a different concept of operations, for example, will result in changes in most
+or all of the mission parameters. Consequently, the fact that Option A requires twice
+the power of Option B may or may not be critical, depending on the orbit and number
+of satellites for the two options. We need to look at the system as a whole to understand
+which is better.
+
+The best approach for key system trades is a utility analysis as described in Sec. 3.3.
+We use the utility analysis to attempt to quantify our ability to meet mission objectives
+as a function of cost. We then select the option which fulfills our objectives at the low-
+est cost and risk. As described in Sec. 3.4, this is still not a straightforward numerical
+comparison, but does have quantitative components.
+
+The simplest option for system trades is a list of the options and the reasons for
+retaining or eliminating them. This allows us to consider the merits and demerits at a
+high level without undertaking time-consuming trades. This, in turn, allows our list to
+be challenged at a later date. We should go back to our key system trades on a regular
+basis and determine whether our assumptions and conclusions are still valid. It is this
+process of examination and review that allows us to use technical innovation and new
+ideas. It is a process that must occur if we are to drive down the cost of space systems.
+
+3.2 Mission Analysis 55
+
+The alternative to simply articulating trade options or conducting a complex mis-
+sion utility analysis is a system trade in which we make a quantitative comparison of
+multiple effects. This can be particularly effective in providing insight into the impact
+of system drivers. For the purpose of trade studies, system drivers generally divide into
+two categories—those for which more is better and those with multiple effects. By far
+the easier to deal with are the ‘more is better” drivers, for they simply require us to
+ask: “What is the cost of achieving more of the commodity in question?” For example,
+in a space-based radar, added power improves performance but costs more money.
+Thus, the designer will want to understand how much performance is available for
+how much power. A second example is coverage. For virtually any Earth-oriented
+system, including our FireSat example, more coverage means better performance at
+higher cost. Increasing coverage ordinarily means adding satellites or, perhaps,
+increasing a single satellite’s coverage by increasing its altitude or the range of its
+sensors. Therefore, we often do a coverage trade considering performance vs. number
+of satellites, substituting the latter for cost. Assessing performance as a function of
+power or coverage may take considerable work, but it is relatively easy to present the
+data for judging by the funding organization, the users, or other decision makers.
+
+System drivers and critical requirements which cause multiple effects demand
+more complex trade studies. Pushing parameters one way will improve some charac-
+teristics and degrade others. In trades of this type, we are looking for a solution which
+provides the best mix of results. Examples of such trade studies include instrument
+design, antenna type, and altitude. Each antenna style will have advantages and dis-
+advantages, so we must trade various possible solutions depending upon the end goals
+and relative importance of different effects.
+
+In trades with multiple effects, selecting the correct independent parameter for each
+trade is critical. Consider, for example, selecting either a reflector or a phased-array
+antenna for a space-based radar [Brookner and Mahoney, 1986]. From the radar equa-
+tion, we know that a principal performance parameter for a radar is the antenna
+aperture. All other things being equal, larger antennas will provide much better perfor-
+mance. Thus, for our example, we might choose to compare reflector and phased-array
+antennas of equal aperture. On this basis, we would choose the phased array because
+its electronic steering makes it more agile than a reflector antenna, which must be
+mechanically steered. But our choice becomes more complex when we recognize that
+weight typically limits large space structures more than size does. Generally, we can
+build a reflector larger than a phased array for a given weight. Based on weight, a
+reflector may have considerably more power efficiency and, therefore, be a better
+radar than a phased-array system. Thus, we would have to trade the better performance
+of a larger reflector vs. the better agility of a smaller phased array. Depending upon
+the application, the results may be the same as for an aperture-based trade or reverse.
+The important point is the critical nature of selecting the proper independent variable
+in system trades. To do so, we must find the quantities which inherently limit the
+system being considered. These could be weight, power, level of technology, cost, or
+manufacturability, depending on the technology and circumstances.
+
+Table 3-4 summarizes the system trade process for parameters with multiple
+effects. Typically the trade parameter is one of our system drivers. We begin by iden-
+tifying what performance areas or requirements affect or are affected by the trade
+parameter. For example, the altitude of the spacecraft will have a key effect on cover-
+age, resolution, and survivability and will be limited by launchability, payload weight,
+communications, and radiation. We next assess the effect in each of these areas and
+
+56 Mission Evaluation 3.2
+
+document and summarize the results, generally without trying to create a numerical
+average of different areas. Figure 3-1 shows this step for FireSat. We use the summary
+to select the parameter value and a possible range. Although the process is complex
+and may not have a well defined answer, it is not necessarily iterative unless we find
+that the results require fundamental changes in other system parameters.
+
+TABLE 3-4. System Trade Process for Parameters with Multiple Effects. The example is the
+altitude trade for the FireSat mission. See also Fig. 3-1.
+
+FireSat Where
+Step Example Discussed
+
+1. Select trade parameter Altitude
+(typically a system driver)
+
+2. Identify factors which Coverage Sec. 7.2
+affect the parameter or Deployment strategy (coverage evolution) Sec. 7.6
+are affected by it Orbit period Secs. 6.1, 7.2
+Time in view Sec. 7.2
+Eclipse fraction Sec. 5.1
+Response time Sec. 7.2
+Number of spacecraft needed Secs. 7.2, 7.6
+Launch capability Sec.
+Resolution Sec.
+Payload weight Sec.
+Radiation environment Sec.
+
+Survivability Sec. 8.2
+Jamming susceptibility Secs. 8.2, 13.5
+Communications Secs. 13.1, 13.2
+Lifetime Secs. 6.2.3, 8.1.5
+
+3. Assess impact of Can launch up to 1,800 km
+each factor Best coverage above 400 km
+Resolution—ower is better
+Survivability not an issue
+
+4. Document and Launch
+summarize results Coverage
+Resolution
+Survivability
+
+and possible range 600 to 800 km
+
+Altitude trades are perhaps the most common example of a trade in which multiple
+influences push the parameter in different ways. We would normally like to move the
+satellite higher to achieve better coverage, better survivability, and easier communica-
+tions. On the other hand, launchability, resolution, and payload weight tend to drive
+the satellite lower. The radiation environment dictates specific altitudes we would like
+to avoid, and the eclipse fraction may or may not play a crucial role in the altitude
+trade. We must assess each of these effects and summarize all of them to complete a
+trade study. One possible summary is a numerically weighted average of the various
+outcomes, such as three times the coverage in square nautical miles per second divided
+by twice the resolution in furlongs. Although this provides a convenient numerical
+answer, it does not provide the physical insight or conceptual balance needed for
+
+intelligent choices. A better solution is to provide the data on all of the relevant param-
+eters and choose based on inspection rather than numerical weighting.
+
+
+3.2 Mission Analysis 57
+
+The FireSat altitude trade provides an example of trading on parameters with
+multiple effects. For FireSat, neither survivability nor communications is a key issue,
+but coverage does push the satellite upward. On the other hand, payload weight and
+good resolution tend to push the satellite lower. Figure 3-1 shows the results of a
+hypothetical FireSat altitude trade. Notice that each parameter has various possible
+outcomes. Altitudes above or below a certain value may be eliminated, or we may
+simply prefer a general direction, such as lower altitude providing better resolution.
+Based on these results, we select a nominal altitude of 700 km for FireSat and a
+possible range of 600 to 800 km. This selection is not magic. We have tried to balance
+the alternatives sensibly, but not in a way that we can numerically justify.
+
+Characteristic Allowed Range (km) Comments
+
+Launch Capability Launch Vehicle Limit
+Radiation Inner Radiation Belt
+Coverage Higher is Better
+Coverage Evolution Major Plateau at 375 km
+Payload Resolution Lower Is Better
+Communications Higher is Better
+
+Lifetime Trade with Launch Limit
+
+1,000 2,000 3,000
+
+Fig. 3-1. Results of FireSat Altitude Trade. See Table 3-4 and Table 7-6 in Sec. 7.4 for a list
+of trade issues. Political constraints and survivability were not of concern for the
+FireSat altitude trade.
+
+3.2.4 Performance Assessments
+
+Quantifying performance demands an appropriate level of detail. Too much detail
+drains resources away from other issues; too little keeps us from determining the
+important issues or causes us to assess the actual performance incorrectly.
+
+To compute system performance, we use three main techniques:
+
+¢ System algorithms
+¢ Analogy with existing systems
+
+¢ Simulation
+
+System algorithms are the basic physical or geometric formulas associated with a
+particular system or process, such as those for determining resolution in diffraction-
+limited optics, finding the beam size of an antenna, analyzing a link budget, or
+assessing geometric coverage. Table 3-5 lists system algorithms typically used for
+space mission analysis. System algorithms provide the best method for computing
+performance. They provide clear traceability and establish the relationship between
+design parameters and performance characteristics. Thus, for FireSat, we are inter-
+ested in the resolution of an on-orbit fire detector. Using the formula for diffraction-
+limited optics in Chap. 9, we can compute the achievable angular resolution from the
+instrument objective’s diameter. We can then apply the geometric formulas in Chap. 5
+to translate this angular resolution to resolution on the ground. This result gives us a
+
+58 Mission Evaluation 3.2
+
+direct relationship between the altitude of the FireSat spacecraft, the size of the
+payload, the angles at which it works, and the resolution with which it can distinguish
+features on the ground.
+
+TABLE 3-5. Common System Algorithms Used for Quantifying Basic Levels of Perfor-
+mance. These analyses use physical or geometrical formulas to determine how
+system performance varies with key parameters.
+
+Where
+Algorithm Used For Discussed
+
+Link Budget Communications and data rate analysis Sec. 13.3.6
+
+Diffraction-limited Aperture sizing for optics or antennas;
+Optics determining resolution
+
+Payload Sensitivity Payload sizing and performance estimates Secs. 9.4, 9.5
+Radar Equation Radar sizing and performance estimates [Cantafio,1989]
+Earth Coverage, Coverage assessment; system sizing; Secs. 5.2, 7.2
+Area Search Rates performance estimates
+
+Mapping and Geolocation; instrument and antenna pointing;
+Pointing Budget image sensing
+
+System algorithms are powerful in that they show us directly how performance
+varies with key parameters. However, they are inherently limited because they pre-
+sume the rest of the system is designed with fundamental physics or geometry as the
+limiting characteristic. For FireSat, resolution could also be limited by the optical
+quality of the lens, by the detector technology, by the spacecraft’s pointing stability,
+or even by the data rates at which the instrument can provide results or that the satellite
+can transmit to the ground. In using system algorithms, we assume that we have
+correctly identified what limits system performance. But we must understand that
+these assumptions may break down as each parameter changes. Finding the limits of
+these system algorithms helps us analyze the problem and determine its key compo-
+nents. Thus, we may find that a low-cost FireSat system is limited principally by
+achieving spacecraft stability at low cost. Therefore, our attention would be focused
+on the attitude control system and on the level of resolution that can be achieved as a
+function of system cost.
+
+The second method for quantifying performance is by comparing our design with
+existing systems. In this type of analysis we use the established characteristics of
+existing sensors, systems, or components and adjust the expected performance accord-
+ing to basic physics or the continuing evolution of technology. The list of payload
+instruments in Chap. 9 is an excellent starting point for comparing performance with
+existing systems. We could, for example, use the field of view, resolution, and integra-
+tion time for an existing sensor and apply them to FireSat. We then modify the basic
+sensor parameters such as the aperture, focal length, or pixel size, to satisfy our mis-
+sion’s unique requirements. To do this, we must work with someone who knows the
+technology, the allowable range of modifications, and their cost. For example, we may
+be able to improve the resolution by doubling the diameter of the objective, but doing
+sO may cost too much. Thus, to estimate performance based on existing systems, we
+need information from those who understand the main cost and performance drivers
+of that technology.
+
+The third way to quantify system performance is simulation, described in more
+detail in Sec. 3.3.2. Because it is time-consuming, we typically use simulation only for
+
+3.3 Step 8: Mission Utility 59
+
+key performance parameters. However, simulations allow much more complex mod-
+eling and can incorporate limits on performance from multiple factors (e.g., resolution,
+stability, and data rate). Because they provide much less insight, however, we must
+review the results carefully to see if they apply to given situations. Still, in complex
+circumstances, simulation may be the only acceptable way to quantify system perfor-
+mance. A much less expensive method of simulation is the use of commercial mission
+analysis tools as discussed in Sec. 3.3.3.
+
+3.3 Step 8: Mission Utility
+
+Mission utility analysis quantifies mission performance as a function of design,
+cost, risk, and schedule. It is used to (1) provide quantitative information for decision
+making, and (2) provide feedback on the system design. Ultimately, an individual or
+group will decide whether to build a space system and which system to build based on
+overall performance, cost, and risk relative to other activities. As discussed in Sec. 3.4,
+this does not mean the decision is or should be fundamentally technical in nature.
+However, even though basic decisions may be political, economic, or sociological, the
+best possible quantitative information from the mission utility analysis process should
+be available to support them.
+
+Mission utility analysis also provides feedback for the system design by assessing
+how well alternative configurations meet the mission objectives. FireSat shows how
+this process might work in practice. Mission analysis quantifies how well alternative
+systems can detect and monitor forest fires, thereby helping us to decide whether to
+proceed with a more detailed design of several satellites in low-Earth orbit or a single
+larger satellite in a higher orbit. As we continue these trades, mission analysis
+establishes the probability of being able to detect a given forest fire within a given
+time, with and without FireSat, and with varying numbers of spacecraft. For FireSat,
+the decision makers are those responsible for protecting the forests of the United
+States. We want to provide them with the technical information they need to determine
+whether they should spend their limited resources on FireSat or on some alternative.
+If they select FireSat, we will provide the technical information needed to allow them
+to select how many satellites and what level of redundancy to include.
+
+3.3.1 Performance Parameters and Measures of Effectiveness
+
+The purpose of mission analysis is to quantify the system’s performance and its
+ability to meet the ultimate mission objectives. Typically this requires two distinct
+types of quantities—performance parameters and measures of effectiveness. Perfor-
+mance parameters, such as those shown in Table 3-6 for FireSat, quantify how well
+the system works, without explicitly measuring how well it meets mission objectives.
+Performance parameters may include coverage statistics, power efficiency, or the
+resolution of a particular instrument as a function of nadir angle. In contrast, measures
+of effectiveness (MoEs) or figures of merit (FoMs) quantify directly how well the
+system meets the mission objectives. For FireSat, the principal MoE will be a numer-
+ical estimate of how well the system can detect forest fires or the consequences of
+doing so. This could, for example, be the probability of detecting a given forest fire
+within 6 hours, or the estimated dollar value of savings resulting from early fire detec-
+tion. Table 3-7 shows other examples.
+
+60 Mission Evaluation 3.3
+
+TABLE 3-6. Representative Performance Parameters for FireSat. By using various perfor-
+mance parameters, we get a better overall picture of our FireSat design.
+
+Performance Parameter How Determined
+
+Instantaneous maximum area coverage rate Analysis
+
+Orbit average area coverage rate Simulation
+
+(takes into account forest coverage, duty cycle)
+
+Mean time between observations Analysis
+Ground position knowledge
+System response time (See Sec. 7.2.3 for definition) Simulation
+
+TABLE 3-7. Representative Measures of Effectiveness (MoEs) for FireSat. These Measures
+of Effectiveness help us determine how well various designs meet our mission
+objectives.
+
+MoE How Estimated
+
+Detection Probability of detection vs. time Simulation
+(milestones at 4, 8, 24 hours)
+
+Prompt Knowledge Time late = time from observation Analysis
+to availability at monitoring office
+
+Monitoring Probability of containment Simulation
+
+Simulation +
+Analysis
+
+Save Property Value of property saved plus savings in
+and Reduce Cost firefighting costs
+
+We can usually determine performance parameters unambiguously. For example,
+either by analysis or simulation we can assess the level of coverage for any point on
+the Earth’s surface. A probability of detecting and containing forest fires better
+measures our end objective, but is also much more difficult to quantify. It may depend
+on how we construct scenarios and simulations, what we assume about ground
+resources, and how we use the FireSat data to fight fires.
+
+Good measures of effectiveness are critical to successful mission analysis and
+design. If we cannot quantify the degree to which we have met the mission objectives,
+there is little hope that we can meet them in a cost-effective fashion. The rest of this
+section defines and characterizes good measures of effectiveness, and Secs. 3.3.2 and
+3.3.3 show how we evaluate them.
+
+Good measures of effectiveness must be
+
+* Clearly related to mission objectives
+
+¢ Understandable by decision makers
+
+* Quantifiable
+
+* Sensitive to system design (if used as a design selection criterion)
+
+MoEs are useless if decision makers cannot understand them. “Acceleration in the
+marginal rate of forest-fire detection within the latitudinal coverage regime of the end-
+of-life satellite constellation” will likely need substantial explanation to be effective.
+On the other hand, clear MoEs which are insensitive to the details of the system design,
+such as the largest coverage gap over one year, cannot distinguish the quality of one
+system from another. Ordinarily, no single measure of effectiveness can be used to
+quantify how the overall] system meets mission objectives. Thus, we prefer to provide
+
+3.3 Step 8: Mission Utility 61
+
+a few measures of effectiveness summarizing the system’s capacity to achieve its
+broad objectives.
+
+Measures of effectiveness generally fall into one of three broad categories associ-
+ated with (1) discrete events, (2) coverage of a continuous activity, or (3) timeliness of
+the information or other indicators of quality. Discrete events include forest fires,
+nuclear explosions, ships crossing a barrier, or cosmic ray events. In this case, the best
+measures of effectiveness are the rate that can be sustained (identify up to 20 forest
+fires per hour), or the probability of successful identification (90% probability that a
+forest fire will be detected within 6 hours after ignition). The probability of detecting
+discrete events is the most common measure of effectiveness. It is useful both in pro-
+viding good insight to the user community and in allowing the user to create additional
+measures of effectiveness, such as the probability of extinguishing a forest fire in a
+given time.
+
+Some mission objectives are not directly quantifiable in probabilistic terms. For
+example, we may want continuous coverage of a particular event or activity, such as
+continuous surveillance of the crab nebula for extraneous X-ray bursts or continuous
+monitoring of Yosemite for temperature variations. Here the typical measure of effec-
+tiveness is some type of coverage or gap statistics such as the mean observation gap or
+maximum gap under a particular condition. Unfortunately, Gaussian (normal proba-
+bility) statistics do not ordinarily apply to satellite coverage; therefore, the usual
+measure of average values can be very misleading. Additional details and a way to
+resolve this problem are part of the discussion of coverage measures of effectiveness
+in Sec. 7.2.
+
+A third type of measure of effectiveness assesses the quality of a result rather than
+whether or when it occurs. It may include, for example, the system’s ability to resolve
+the temperature of forest fires. Another common measure of quality is the timeliness
+of the data, usually expressed as time late, or, in more positive terms for the user, as
+the time margin from when the data arrives until it is needed. Timeliness MoEs might
+include the average time from ignition of the forest fire to its initial detection or,
+viewed from the perspective of a potential application, the average warning time
+before a fire strikes a population center. This type of information, illustrated in
+Fig. 3-2, allows the decision maker to assess the value of FireSat in meeting commu-
+nity needs.
+
+3.3.2 Mission Utility Simulation
+
+In analyzing mission utility, we try to evaluate the measures of effectiveness
+numerically as a function of cost and risk, but this is hard to do. Instead, we typically
+use principal system parameters, such as the number of satellites, total on-orbit weight,
+or payload size, as stand-ins for cost. Thus, we might calculate measures of effective-
+ness as a function of constellation size, assuming that more satellites cost more money.
+If we can establish numerical values for meaningful measures of effectiveness as a
+function of the system drivers and understand the underlying reasons for the results,
+we will have taken a major step toward quantifying the space mission analysis and
+design process.
+
+Recall that mission utility analysis has two distinct but equally important goals—to
+aid design and provide information for decision making. It helps us design the mission
+by examining the relative benefits of alternatives. For key parameters such as payload
+type or overall system power, we can show how utility depends on design choices, and
+therefore, intelligently select among design options.
+
+62 Mission Evaluation 3.3
+
+State Preparations Evacuation Fire
+of Alert Begin Period Hits
+
+% of Fires
+
+-96 -72 -48 -24 0
+Measure of Effectiveness = Warning Time (hours)
+
+Fig. 3-2. Forest Fire Warning Time for Inhabited Areas. A hypothetical measure of effective-
+ness for FireSat.
+
+Mission utility analysis also provides information that is readily usable to decision
+makers. Generally those who determine funding levels or whether to build a particular
+Space system do not have either the time or inclination to assess detailed technical
+studies. For large space programs, decisions ultimately depend on a relatively small
+amount of information being assessed by individuals at a high level in industry or
+government. A strong utility analysis allows these high-level judgments to be more
+informed and more nearly based on sound technical assessments. By providing sum-
+mary performance data in a form the decision-making audience can understand, the
+mission utility analysis can make a major contribution to the technical decision-
+making process.
+
+Typically, the only effective way to evaluate mission utility is to use a mission
+utility simulation designed specifically for this purpose. (Commercial simulators are
+discussed in Sec. 3.3.3.) This is not the same as a payload simulator, which evaluates
+performance parameters for various payloads. For FireSat, a payload simulator might
+compute the level of observable temperature changes or the number of acres that can
+be searched per orbit pass. In contrast, the mission simulator assumes a level of
+performance for the payload and assesses its ability to meet mission objectives. The
+FireSat mission simulator would determine how soon forest fires can be detected or
+the amount of acreage that can be saved per year.
+
+In principle, mission simulators are straightforward. In practice, they are expensive
+and time consuming to create and are rarely as successful as we would like. Attempts
+to achieve excessive fidelity tend to dramatically increase the cost and reduce the
+effectiveness of most mission simulators. The goal of mission simulation is to estimate
+measures of effectiveness as a function of key system parameters. We must restrict the
+simulator as much as possible to achieving this goal. Overly detailed simulations
+require more time and money to create and are much less useful, because computer
+time and other costs keep us from running them enough for effective trade studies. The
+
+3.3 Step 8: Mission Utility 63
+
+simulator must be simple enough to allow making multiple runs, so we can collect
+Statistical data and explore various scenarios and design options.
+
+The mission simulation should include parameters that directly affect utility, such
+as the orbit geometry, motion or changes in the targets or background, system sched-
+uling, and other key issues, as shown in Fig. 3-3. The problem of excessive detail is
+best solved by providing numerical models obtained from more detailed simulations
+of the payload or other system components. For example, we may compute FireSat’s
+capacity to detect a forest fire by modeling the detector sensitivity, atmospheric char-
+acteristics, range to the fire, and the background conditions in the observed area. A
+detailed payload simulation should include these parameters. After running the pay-
+load simulator many times, we can, for example, tabulate the probability of detecting
+a fire based on observation geometry and time of day. The mission simulator uses this
+table to assess various scenarios and scheduling algorithms. Thus, the mission simu-
+lator might compute the mission geometry and time of day and use the lookup table to
+determine the payload effectiveness. With this method, we can dramatically reduce
+repetitive computations in each mission simulator run, do more simulations, and
+explore more mission options than with a more detailed simulation. The mission sim-
+ulator should be a collection of the results of more detailed simulations along with
+unique mission parameters such as the relative geometry between the satellites in a
+constellation, variations in ground targets or background, and the system scheduling
+or downlink communications. Creating sub-models also makes it easier to generate
+utility simulations. We start with simple models for the individual components and
+develop more realistic tables as we create and run more detailed payload or component
+simulations.
+
+Simulator &
+Main Models Output Processors Principal Outputs
+Energy Animation sequence
+Time utilization Observation data
+System performance System parameters
+Scheduling Energy used
+Background characteristics Pointing statistics
+Search logic Time used
+Data utilization Gap Statistics
+Probability of
+Observation Types detection/containment
+(FireSat example) Principal Inputs Response times
+Search mode Scenarios Scheduling statistics
+Map mode Tasking Cloud cover
+Fire boundary mode System parameters Fire detection MoEs
+Temperature sensing Constellation parameters
+
+Fig. 3-3. Results of FireSat Altitude Trade. See Table 3-4 and Table 7-6 in Sec. 7.4 for a list
+of trade issues. Political constraints and survivability were not of concern for the
+FireSat altitude trade.
+
+Table 3-8 shows the typical sequence for simulating mission utility, including a
+distinct division into data generation and output. This division allows us to do various
+Statistical analyses on a single data set or combine the outputs from many runs in dif-
+ferent ways. In a constellation of satellites, scheduling is often a key issue in mission
+utility. The constellation’s utility depends largely on the system’s capacity to schedule
+
+64 Mission Evaluation 3.3
+
+resource use appropriately among the satellites. At the end of a single simulation run,
+the system should collect and compute the statistics for that scenario, generate appro-
+priate output plots or data, and compute individual measures of effectiveness, such as
+the percent of forest fires detected in that particular run.
+
+TABLE 3-8. Typical Sequence Flow of a Time-Stepped Mission Utility Simulation. Follow-
+ing this sequence for many runs, we can create statistical measures of effective-
+ness that help us evaluate our design.
+
+Phase | — Data Generation
+Advance time step
+Compute changes in target or background characteristics
+Update satellite positions
+Update viewing geometry parameters
+Schedule observations or operations
+Compute pointing changes
+Compute and save performance statistics
+Update satellite consumables
+Save data for this time step
+Go to next time step
+
+Phase II — Output Generation and Statistics Collection
+Compute scenario statistics
+Compute measures of effectiveness for the individual run
+Prepare output plots and data for the individual run
+
+Phase Iil — Monte Carlo Runs
+Set new scenario start time
+Repeat Phase | and |i
+Collect multi-run statistics
+Compute statistical measures of effectiveness
+Prepare Monte Carlo output plots and data
+
+The next step is to run more simulations using new start times or otherwise varying
+the conditions for the scenarios. Changing the start times alters the relative timing and
+geometry between the satellites and the events they are observing, thus, averaging
+results caused by these characteristics. Collecting statistics on multiple runs is called
+a Monte Carlo simulation. For example, we might average the percentage of forest
+fires detected over different runs with different timing, but on the same scenario, to
+estimate the overall probability of detecting forest fires—our ultimate measure of
+effectiveness. The system simulator should accumulate output statistics and prepare
+output plots over the Monte Carlo runs.
+
+Frequently, in running mission simulations, we must choose between realistic and
+analytical scenarios. Realistic scenarios usually are too complex to help us understand
+how the system works but are still necessary to satisfy the end users. On the other hand,
+simple scenarios illuminate how the system is working but do not show how it will
+work in a real situation. The best answer is to use simple scenarios for analysis and
+realistic scenarios to assess mission performance. In the FireSat example, we might
+begin by studying a single satellite to determine how it behaves and then expand to a
+more complex simulation with several satellites. We might also start evaluating a
+
+3.3 Step 8: Mission Utility 65
+
+multi-satellite constellation by looking at its response to a simple situation, such as one
+fire or a small group of uniformly distributed fires. This trial run will suggest how the
+system performs and how changes affect it. We can then apply this understanding as
+we develop more realistic simulations.
+
+A related problem concerns using a baseline scenario to compare options and
+designs. Repeating a single scenario allows us to understand the scenario and the
+system’s response to it. We can also establish quantitative differences by showing how
+different designs respond to the same scenario. But this approach tends to mask char-
+acteristics that might arise solely from a particular scenario. Thus, we must understand
+what happens as the baseline changes and watch for chance results developing from
+our choice of a particular baseline scenario.
+
+Finally, mission simulations must generate usable and understandable information
+for decision makers—information that provides physical insight. Two examples are
+strip charts of various system characteristics and animated output. A strip chart plot is
+similar to the output of a seismograph or any multi-pin plotter, in which various char-
+acteristics are plotted as a function of time. These characteristics might include, for
+example, whether a particular satellite is in eclipse, how much time it spends in active
+observation, and the spacecraft attitude during a particular time step. Plots of this type
+give a good feel for the flow of events as the simulation proceeds.
+
+A valuable alternative for understanding the flow of events is looking at an anima-
+tion of the output, such as a picture of the Earth showing various changes in the target,
+background, and observation geometry as the satellites fly overhead. Thus, as Fig. 3-4
+illustrates, an animated simulation of FireSat output could be a map of a fire-sensitive
+region with areas changing color as fires begin, lines showing satellite coverage, and
+indications as to when fires are first detected or when mapping of fires occurs.
+Animation is not as numerical as statistical data, but it shows more clearly how the
+satellite system is working and how well it will meet broad objectives. Thus, mission
+analysts and end users can assess the system’s performance, strengths and short-
+comings, and the changes needed to make it work better.
+
+3.3.3. Commercial Mission Analysis and Mission Utility Tools
+
+Creating a mission utility simulation for your specific mission or mission concept
+is both time consuming and expensive. It is not uncommon for the simulation to be
+completed at nearly the same time as the end of the study, such that there is relatively
+little time to use the simulation to effectively explore the multitude of options available
+to the innovative system designer.
+
+In my view, the single largest step in reducing software cost and risk is the use of
+commercial, off-the-shelf (COTS) software. The basic role of COTS software in space
+is to spread the development cost over multiple programs and reduce the risk by using
+software that has been tested and used many times before. Because the number of
+purchasers of space software is extremely small, the savings will be nowhere near as
+large as for commercial word processors. Nonetheless, reductions in cost, schedule,
+and risk can be substantial. Most COTS software should be at least 5 times cheaper
+than program-unique software and is typically 10 or more times less expensive. In
+addition, COTS software will ordinarily have much better documentation and user
+interfaces and will be more flexible and robust, able to support various missions and
+circumstances.
+
+The use of COTS software is growing, but most large companies and government
+agencies still develop their own space-related software for several reasons. One of the
+
+66 Mission Evaluation 3.3
+
+Satellite 1 A 5 Satellite 2
+? Coverage i Coverage
+
+5
+
+3
+3
+:
+
+Fig. 3-4. Hypothetical Animation Output for FireSat Mission Utility Simulator. Color dis-
+plays are very valuable for animation sequences because we need to convey multiple
+parameters in each frame.
+
+best ways to develop and maintain expertise is to create your own systems and models.
+Thus, organizations may want to support their own software group, particularly when
+money is tight. Also, it’s hard to overcome the perception that it costs less to incre-
+mentally upgrade one’s own system than to bear the cost and uncertainty of new COTS
+tools. In this trade, the “home built” systems often don’t include maintenance costs.
+Finally, customers often don’t know which COTS tools are available. Professional
+aerospace software doesn’t appear in normal software outlets, advertising budgets are
+small, and most information is word-of-mouth through people already in the commu-
+nity. Despite these substantial obstacles, many organizations are now using COTS
+software in response to the strong demand to reduce cost.
+
+In order to use COTS tools to reduce space system cost, we need to change the way
+we use software. We need to adapt to software not being exactly what we want, look
+for ways to make existing software satisfy the need, or modify COTS software to more
+closely match requirements. This is a normal part of doing business in other fields.
+Very few firms choose to write their own word processor, even though no single word
+processor precisely meets all needs. Instead, they choose one that most closely
+matches what they want in terms of functions, support, and ease of use. We should use
+the same criteria for COTS space software. In addition, we need to set realistic
+expectations concerning what COTS software can do. Clearly, we can’t expect the low
+prices and extensive support that buyers of globally marketed commercial software
+enjoy. We have to adjust our expectations to the smaller market for space-related soft-
+ware, which means costs will be much higher than for normal commercial products.
+Maintenance and upgrades will ordinarily require an ongoing maintenance contract.
+Within the aerospace community, a standard arrangement is for a maintenance and
+upgrade contract to cost 15% of the purchase price per year.
+
+Using COTS software and reusing existing noncommercial software requires a
+different mindset than continuously redeveloping software. We need to understand
+both the strengths and weaknesses of the relatively small space commercial software
+
+3.3 Step 8: Mission Utility 67
+
+industry. Because the number of copies sold is small, most space software companies
+are cottage industries with a small staff and limited resources. We shouldn’t expect
+space-software developers to change their products at no cost to meet unique needs.
+For example, it would be unrealistic to expect a vendor of commercial software for
+low-Earth orbit spacecraft to modify the software for interplanetary missions at no
+cost, because few groups will buy interplanetary software. On the other hand, the small
+size of the industry means developers are eager to satisfy the customers’ needs, so
+most are willing to work with their customer and to accept contracts to modify their
+products for specific applications. This can be far less expensive than developing soft-
+ware completely from scratch.
+
+There is a hierarchy of software cost, going from using COTS software as is, to
+developing an entirely new system. In order of increasing cost, the main options are
+
+1. Use COTS software as sold
+2. Use COTS software libraries
+
+3. Modify COTS software to meet specific program needs (modification may be
+done by mission developer, prime contractor, or software developer)
+
+4. Reuse existing flight or ground software systems or modules
+5. Develop new systems based largely on existing software components
+
+6. Develop new systems from scratch using formal requirements and develop-
+ment processes
+
+This hierarchy contains several potential traps. It may seem that the most economical
+approach would be for the prime contractor or end-user to modify COTS software to
+meet their needs. However, it is likely that the COTS software developer is in a better
+position to make modifications economically and quickly. Although the end-users are
+more familiar with the objectives and the mission, the software developer is more
+familiar with the organization and structure of the existing code.
+
+Secondly, there is frequently a strong desire to reuse existing code. This will likely
+be cheaper if the code was developed to be maintainable and the developers are still
+available. On the other hand, for project-unique code developed with no requirement
+for maintainability, it may be cheaper, more efficient, and less risky simply to discard
+the old software and begin again.
+
+Commercial mission analysis tools fall into three broad categories, each of which
+is described below. Representative examples of these tools are listed in Table 3-9.
+
+Generic Analysis Systems. These are programs, such as MatLab™, which are
+intended to allow analysis and simulation of a wide variety of engineering and science
+problems. They typically cost a few hundred to several thousand dollars and can
+dramatically reduce the time needed to create simulations and analyze the results.
+Because these are generic tools, specific simulation characteristics are set up by the
+user, although subroutine libraries often exist. Thus, we will need to create orbit
+propagators, attitude models, environment models, and whatever else the problem
+dictates. We use this type of simulation principally for obtaining mathematical data
+and typically not for animation.
+
+Low-Cost Analysis Programs. These are programs intended for a much wider
+audience such as the amateur astronomy or space science community. However, when
+carefully selected and used appropriately, they can provide nearly instant results at
+very low cost. The programs themselves cost a few hundred dollars or less, are
+
+68 Mission Evaluation 3.3
+
+TABLE 3-9. Commercial Space Mission Analysis and Design Software. New versions are
+typically released roughly annually. Because of the very small size of the space
+market, commercial space software both enters and leaves the marketplace on a
+regular basis.
+
+Approx.
+Cost Purpose
+Dance of Arc Science Amateur visual and gravitational model of the solar
+the Planets Simulations system useful for interplanetary mission design
+Autometric $5,000 + | Professional mission analysis system; many
+modules; can be customized
+EWB Maxwell High Professional tool for space mission trade studies;
+Labs used for Space Station
+MUSE module | Microcosm =| $6,500 Mission Utility/Systems Engineering tool; evaluates
+figures of merit; can be customized by user
+AIAA < $100 Orbit analysis tool included with the book
+Spacecraft Mission Design, primarily interplanetary
+
+Orbit Works ARSoftware Orbit analysis, pass geometry, related tools; used by
+many ground operations groups
+
+SMAD KB Sciences | $500 10 software modules that implement equations in
+Software the SMAD book
+
+Satellite Tool | Analytical Professional mission analysis system; many
+Kit, STK Graphics modules
+
+* Base program is free; modules range from $2,000 to $30,000.
+
+immediately available from mail-order retailers, and can be run within a few hours of
+receiving them. A typical program in this category is Dance of the Planets, developed
+by Arc Science Simulations, for simulating astronomical events and allowing amateur
+space enthusiasts to create simulations of solar system events and obtain views from
+spacecraft which they define. A key characteristic of this program is that it creates
+simulations by integrating the equations of motion of celestial objects, thus allowing
+the user to define an interplanetary spacecraft orbit and determine its interaction with
+various celestial bodies. While less accurate than high-fidelity simulations created
+after a mission is fully funded, this type of tool can produce moderately accurate
+results quickly and at very low cost.
+
+A second type of system used by amateurs consists of data sets, such as star
+catalogs, and the associated programs used to access and manipulate the data. For
+example, the complete Hubble Guide Star Catalog, created for the Space Telescope
+mission and containing over 19 million stars and nonstellar objects, is available on two
+CD-ROMs for less than $100. Smaller star catalogs contain fewer entries, but typically
+have much more data about each of the stars. All of the electronic star catalogs can be
+read and star charts created by any of the major sky plotting programs, again available
+off-the-shelf for a few hundred dollars.
+
+Space Mission Analysis Systems. These are professional engineering tools created
+specifically for the analysis and design of space missions. Prices are several thousand
+dollars and up. These tools can create very realistic simulations, including data gener-
+ation, animation, user-defined figures of merit, and Monte Carlo simulations. One of
+the most widely used tools in this category is Satellite Tool Kit (STK), developed by
+Analytical Graphics, which provides a basic simulation capability and a variety of add-
+
+3.4 Step 9: Mission Concept Selection 69
+
+on modules for animation generation, orbit determination and propagation, coverage
+analysis, and mission scheduling. The Mission Utility/Systems Engineering Module
+(MUSE) by Microcosm allows the evaluation of a variety of generic figures of merit
+(such as coverage or timeliness) and provides Monte Carlo simulation runs to create
+statistical output. MUSE is intended specifically to allow the user to define new fig-
+ures of merit to allow the rapid creation of mission-specific simulations. The Edge
+product family by Autometric provides very high-fidelity animation of a variety of
+space missions and is intended to be adapted by either the company or the user to
+become a mission-specific simulation. Each of the tools in this category can provide
+high-fidelity simulations at a much lower cost than creating systems from scratch.
+
+3.4 Step 9: Mission Concept Selection
+
+This section is concerned not with the detailed engineering decisions for a space
+mission, but with the broad trades involved in defining the overall mission—whether
+to proceed with it and what concept to use. Decisions for space missions fall into three
+broad categories: (1) go/no-go decision on proceeding with the mission; (2) selection
+of the mission concept; and (3) detailed engineering decisions, which are generally
+described throughout this book.
+
+In principle, the go/no-go decision depends on only a few factors, the most impor-
+tant of which are:
+
+* Does the proposed system meet the overall mission objectives?
+
+* Is it technically feasible?
+
+* Is the level of risk acceptable?
+
+¢ Are the schedule and budget within the established constraints?
+
+¢ Do preliminary results show this option to be better than nonspace solutions?
+
+In addition to the above technical issues, a number of nontechnical criteria are ordi-
+narily equally or more important in the decision-making process:
+
+¢ Does the mission meet the political objectives?
+
+¢ Are the organizational responsibilities acceptable to all of the organizations
+involved in the decision?
+
+¢ Does the mission support the infrastructure in place or contemplated?
+
+For example, a mission may be approved to keep an organization in business, or it
+may be delayed or suspended if it requires creating an infrastructure perceived as not
+needed in the long term. The mission analysis activity must include nontechnical
+factors associated with space missions and see that they are appropriately addressed.
+
+The top-level trades in concept selection are usually not fully quantitative, and we
+should not force them to be. The purpose of the trade studies and utility analysis is to
+make the decisions as informed as possible. We wish to add quantitative information
+to the decisions, not quantify the decision making. In other words, we should not
+undervalue the decision-maker’s judgment by attempting to replace it with a simplis-
+tic formula or rule.
+
+Table 3-10 shows how we might try to quantify a decision. Assume that a system
+costs $500 million, but an improvement could save up to $300 million. To save this
+
+70 Mission Evaluation 3.4
+
+money, we could use option A, B, or C. Option A would cost $35 million, but the prob-
+ability of success is only 70%; B would cost $100 million with 99% probability of
+success; C would cost $200 million with a 99.9% probability of success.
+
+TABLE 3-10. Mathematical Model of Hypothetical Decision Process (costs in $M). Numer-
+ically, we would choose B or A if it were available. Realistically, any of the choices
+may be best depending on the decision criteria.
+
+Current Cost $500M
+Potential Savings if Improvement is Successful $300M
+Cost of Probability Total Cost TotalCost Expected Expected
+Option improvement of Success _ if Successful if Failed Total Cost Savings
+70% 235 535 325 175
+B 100 99% 300 600 303 197
+Cc 200 99.90% 400 700 400.3 99.7
+N 35 80% 235 535 295 205
+
+Which option should we select? The table gives the cost if successful, the cost if the
+improvement fails, and the expected values of both the cost and net savings. By
+numbers alone, we would select option B with an expected savings of $197 million.
+However, reasonable and valid cases can be made for both A and C. In option A, we
+risk only $35 million, and, therefore, are minimizing the total cost if the improvement
+succeeds or if it fails. In fact, the $600 million cost of failure for option B may be too
+much for the system to bear, no matter the expected savings. Option C provides a net
+savings of “only” $100 million, but its success is virtually certain. Although savings
+for this option are less dramatic, it does provide major savings while minimizing risk.
+In this case, we may assume the cost to be a fixed $400 million, with failure being so
+unlikely that we can discount it. Option B, of course, balances cost and risk to maxi-
+mize the expected savings.
+
+Suppose, however, that option A had an 80% probability of success as shown in A’,
+rather than the original 70% probability. In this case, the expected savings of A’ would
+increase to $205 million, and would make it the preferred approach in pure expectation
+terms. However, most individuals or groups faced with decisions of this sort are
+unlikely to change from option B to A’ based solely on the increase in estimated prob-
+ability to 80%. Their decisions are more likely to depend on perceived risk or on
+minimizing losses. Using nonmathematical criteria does not make the decisions
+incorrect or invalid, nor does it make the numerical values unimportant. We need
+quantitative information to choose between options but we do not have to base our
+decisions exclusively on this information.
+
+As a second example, we can apply the results of utility analysis to concept selec-
+tion for FireSat. In particular, the number of satellites strongly drives the cost of a
+constellation. If we select the low-Earth orbit approach for FireSat, how many sat-
+ellites should the operational constellation contain? More satellites means better
+coverage and, therefore, reduces the time from when a fire starts until it is first de-
+tected. Consequently, one of our key parameters is the time late, that is, the time from
+when a fire starts until the system detects its presence and transmits the information to
+the ground. Figure 3-5 plots the hypothetical time late vs. the number of satellites for
+
+3.4 Step 9: Mission Concept Selection 71
+
+FireSat. The details of such plots will depend on the latitude under consideration,
+swath coverage, altitude, and various other parameters. However, the characteristic of
+increasing coverage with more satellites eventually reaches a point of diminishing
+returns. This will normally be true irrespective of the coverage assumptions.
+
+4 6 8 10
+
+Number of Satellites
+
+Time Late (hr)
+
+0
+
+Fig. 3-5. Hypothetical Coverage Data for FireSat. See text for definitions and discussion. As
+discussed in Sec. 7.5, satellite growth comes in increments or plateaus. These are
+assumed to be 2-satellite increments for FireSat.
+
+If we assume an initial goal for time late of no more than 5 hours, we see from the
+plot that a system of 6 satellites can meet this goal. Alternatively, a 4-satellite system
+can achieve a time late of 6 hours. Is the smaller time late worth the increased number
+of satellites and the money to build them? Only the ultimate users of the system can
+judge. The additional warning may be critical to fire containment and, therefore, a key
+to mission success. However, it is also possible that the original goal was somewhat
+arbitrary, and a time of approximately 5 hours is what is really needed. In this case,
+fire-fighting resources could probably be used better by flying a 4-satellite system with
+6 hours time late and applying the savings to other purposes. Again, mission utility
+analysis simply provides quantitative data for intelligent decision making.
+
+Of course, we must remember that the number of FireSat satellites will depend not
+only on the utility analysis but also on politics, schedules, and resources. The public
+must see FireSat as an appropriate response to the problem, as well as an efficient use
+of scarce economic resources compared to, for example, more fire fighters. In addi-
+tion, a satellite system may serve several missions, with multiple mission criteria and
+needs. Just as we cannot apply only one criterion to some system drivers, we may not
+be able to balance numerically the several criteria for mission selection. Instead, the
+developers, operators, and users must balance them using the insight gained from the
+system trades and mission utility analysis.
+
+Having undertaken a round of system trades, evaluated the mission utility, and
+selected one or more baseline approaches, we are ready to return to the issue of system
+
+72 Mission Evaluation 3.4
+
+requirements and their flow-down to various components. Chapter 4 treats this area,
+which is simply the next step in the iterative process of exploring concepts and defin-
+ing requirements.
+
+References
+
+Brookner, Eli, and Thomas F. Mahoney. 1986. “Derivation of a Satellite Radar Archi-
+tecture for Air Surveillance.” Microwave Journal. 173-191.
+
+Cantafio, Leopold J., ed. 1989. Space-Based Radar Handbook. Norwood, MA:
+Artech House.
+
+Defense Systems Management College. 1990. System Engineering Management
+Guide. Ft. Belvoir, VA: U.S. Government Printing Office.
+
+Fortescue, P., and J. Stark. 1995. Spacecraft Systems Engineering (2nd Edition). New
+York: John Wiley & Sons.
+
+Johnson, Richard D., and Charles Holbrow, eds. 1977. Space Settlements, A Design
+Study. NASA SP-413. Washington, DC: National Aeronautics and Space Admin-
+istration.
+
+Kay, W.D. 1995. Can Democracies Fly in Space? The Challenge of Revitalizing the
+U.S. Space Program. Westport, CT: Praeger Publishing
+
+O’Neill, Gerald. 1974. “The Colonization of Space.” Physics Today. 27:32-A0.
+
+Przemieniecki, J.S. 1990a. Introduction to Mathematical Methods in Defense Analy-
+sis. Washington, DC: American Institute of Aeronautics and Astronautics.
+
+. 1990b. Defense Analysis Software. Washington, DC: American Institute of
+Aeronautics and Astronautics.
+
+. 1993. Acquisition of Defense Systems. Washington, DC: American Institute
+of Aeronautics and Astronautics, Inc.
+
+. 1994. Mathematical Models in Defense Analysis. Washington, DC: American
+Institute of Aeronautics and Astronautics, Inc.
+
+Rechtin, Eberhardt. 1991. Systems Architecting. Englewood Cliffs, NJ: Prentice Hall.
+
+Shishko, Robert. 1995. NASA Systems Engineering Handbook, National Aeronautics
+and Space Administration.
+
+Shishko, Robert, et al. 1996. “Design-to-Cost for Space Missions.” Chapter 7 in
+Reducing Space Mission Cost, James R. Wertz and Wiley J. Larson, eds. Torrance,
+CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer Academic
+Publishers.

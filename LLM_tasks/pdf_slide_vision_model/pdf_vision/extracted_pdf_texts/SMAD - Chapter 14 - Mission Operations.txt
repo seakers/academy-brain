@@ -1,0 +1,2087 @@
+
+Chapter 14
+Mission Operations
+
+John B. Carraway, Gael F. Squibb, Jet Propulsion Laboratory
+Wiley J. Larson, United States Air Force Academy
+
+14.1 Developing a Mission Operations Plan
+14.2 Overview of Space Mission Operations Functions
+14.3 Estimating the Size and Cost of Mission Operations
+
+14.4 Automating Spacecraft and Ground Operations
+Functions
+
+Mission operations is the collection of activities performed by operations teams
+during the flight phase of the mission, together with the operations design activities
+they perform pre-launch, including development of a mission operations concept,
+policies, data flows, training plans, staffing plans, and cost estimates. The mission
+operations system is the integrated system of people, procedures, hardware, and soft-
+ware that must cooperate to accomplish these tasks. NASA, the DoD, industry, and
+other organizations have different requirements for mission operations and each orga-
+nization has developed it’s own philosophy and style for carrying out the mission.
+
+Mission operations focuses on the period after launch, but substantial work must be
+done during all phases of mission design and development to prepare for operations.
+Failing to take operations into account in preliminary mission design will significantly
+increase both the cost and risk of the mission.
+
+We must distinguish between the mission concept—how we conduct the overall
+mission and how the elements of the mission fit together (Chap. 1)—and the mission
+operations concept—how we do operations to carry out the mission objectives. In this
+chapter we define 13 key functions performed by mission operations (see Fig. 14-1)
+and discuss how they combine to meet the mission operations concept. Hardware, soft-
+ware, people and procedures operate together to complete these 13 functions. We must
+carefully trade automation against ground crew operations—on the ground and in
+space. Automating some of these functions can lead to lower operations costs and, in
+most cases, lower life-cycle costs. Organizations may group or name these functions
+differently, but we believe our list captures the tasks essential to mission operations.
+
+The operations director must first define and negotiate the requirements on opera-
+tions; then try to influence them to reduce cost and complexity. With requirements and
+constraints in place, the director must decide which functions to do, as well as their
+scope and how they can be done. Depending on the size and complexity of the mission,
+a director may even have to add functions to the list. In addition, the director must
+address organizational, hardware, and software interfaces between the functions.
+
+587
+
+588 Mission Operations
+
+_
+o
+
+MANAGING MISSION OPERATION 13
+
+MISSION DATA BASE
+
+MAn<D
+
+=
+
+2
+
+Activity Planning and Mission
+
+Mission Planning Development Control
+
+vOrm<mMOo mBrsaTnNoOMHw
+
+Data Transport
+
+E
+N
+T
+&
+
+9 And Delivery
+Archiving & Maintaining
+The Mission Database
+
+8
+
+Navigation
+Data | Payload Spacecraft & Orbit
+Processing Ops Ops
+—
+
+Control
+We 6 5
+
+MOZPrZ2ZMAZ—Pr=e
+
+4AQOm4+ %© 2ZO—ArPDOMAZ— O2Z-WBMM2Z2-O2M
+
+11 COMPUTER & COMMUNICATION SUPPORT |
+
+ry
+i)
+
+Fig. 14-1. The 13 Functions of Mission Operations System and How they Interact. Func-
+tions in the shaded area share data within the mission database. We briefly discuss
+them in Sec. 14.2. Functions 4, 8, and 9 are part of a broader category called data
+services.
+
+Figure 14-1 overviews a mission operations system that carries out the mission
+operations concept. This system processes information and controls the ground and
+space assets so users and operators get needed information and services. Most
+missions today focus on providing information to users or customers—the downlink.
+But control drives much of the cost and complexity of operations—the uplink. We will
+see this in the following sections.
+
+There is a fundamental difference in mindset between designers and operators of
+space systems. Designers expect things to work; operators expect things to go wrong!
+Both perspectives are necessary. Mission operators usually help develop the mission
+concept, but they often get involved too late—long after the initial design phase in
+which teams can make cost-effective choices, Operators should get involved early
+enough to influence planning and design, so they can reduce the life-cycle costs of
+space missions. They help develop flight rules, which govern operators’ responses to
+anomalies and ensure timely responses consistent with mission success.
+
+Figure 14-1 shows 13 mission operation functions. We can combine or eliminate
+some of them to reduce cost and complexity. Nine share data through the mission
+database and the space element’s avionics and they require extensive data processing:
+
+1. Mission planning—deciding what to do and when
+
+2. Activity planning and development—creating operational scenarios and devel-
+oping command loads
+
+3. Mission control—managing daily activities
+
+589
+
+4. Data transport and delivery—establishing communication links and managing
+data flow
+
+5. Navigation and orbit control—determining where the spacecraft is and plan-
+ning maneuvers
+
+. Spacecraft operations—managing the spacecraft bus
+. Payload operations—managing the spacecraft’s payload
+. Data processing-——managing the data flow on the spacecraft and on the ground
+
+Oo Om ~1 DH
+
+. Archiving and maintaining the mission database—managing all data generated
+by the mission
+
+The order from upper left (mission planning) clockwise to lower left reflects the usual
+order in processing: analyzing uplinks, analyzing downlinks, and then planning new
+uplink activities. The other four functions provide support for all aspects of mission
+operations:
+
+10. Systems engineering, integration, and test—maintaining the mission operations
+concept
+
+11. Computers and communications support—planning for and maintaining the
+infrastructure
+
+12. Developing and maintaining software—spread throughout all functions
+
+13. Managing mission operations—maintaining the big-picture perspective, man-
+aging interfaces, and budget
+
+A big question is, “How many people must we have to do mission operations?” The
+obvious answer is, “It depends.” It depends on the organization’s operational require-
+ments and constraints, as well as the number and complexity of functions, complexity
+of the mission design, complexity of flight and ground systems, and how much risk the
+operations organization will take.
+
+The number of operations people required can vary significantly between military,
+commercial, and scientific spacecraft and can vary significantly between individual
+missions within each category. The cost difference between a 5 person operations team
+and a 50 person operations team is 6 to 7 million dollars per year. This chapter will try
+and identify how differences in payload and spacecraft design, space environment,
+ground systems, the ops organization design, and risk policies can influence opera-
+tions costs.
+
+Section 14.1 describes a process for operations design and development. We
+emphasize the importance of defining an early operations concept to clarify require-
+ments on the operations system. Armed with these requirements, we can meet goals
+for operations costs by negotiating with the other space mission elements to reduce
+their operational complexity, thus keeping costs acceptable across the full mission life
+cycle. Once we’ve iterated through the process, gotten costs within guidelines, and
+developed a workable mission operations concept and design, we can more effectively
+deal with the cost drivers for mission operations.
+
+Section 14.2 defines mission operations in terms of 13 functions that are common
+across a wide variety of mission types and operations team sizes. Analyzing each
+function helps us understand recent trends in trying to reduce costs and in automation.
+Section 14.3 then discusses what determines the size and cost of space mission
+operations.
+
+590 Mission Operations 14.1
+
+We’ re now converting functions that people have done into ones that hardware and
+software can do. We’re also moving onto the spacecraft parts of operations functions
+traditionally done on the ground. Using software in place of people doesn’t always
+save money but we need to assess this option. Section 14.4 provides some guidelines
+and insights about high payoffs from investments in operations technology and
+automation.
+
+For a detailed discussion of the design of mission operations for scientific remote
+sensing missions, see Wall and Ledbetter [1991]. Because of the continuing pressure
+to contain cost, a number of authors has described methods for operations cost reduc-
+tions on both individual missions [Bloch, 1994; Mandl et al., 1994; van der Ha, 1992]
+and various classes of missions [Cameron, Landshof, and Whitworth, 1994; Hughes,
+Shirah, and Luczak, 1994; Landshof, Harvey, and Marshall, 1994]. Much of this cost
+reduction strategy has been summarized by Boden and Larson [1995] and Marshall,
+Landshof, and van der Ha [1996].
+
+14.1 Developing a Mission Operations Plan
+
+For unmanned space missions the Mission Operations Plan (MOP) describes in
+operators’ and users’ terms the operational attributes of the flight and ground-based
+elements. The plan usually results from the cooperative work of several disciplines. Its
+development is similar to that of a space mission concept but the MOP is more detailed
+and emphasizes the way we operate the mission and use the flight vehicle (operational
+characteristics), crew, and ground operations team. It is generated in phases and
+becomes more detailed as our mission design progresses.
+
+The MOP follows from, and must be consistent with, the mission concept. It is one
+of the most important deliverables from the mission operations organization before
+launch. A good MOP helps assure that the operations organization provides a tested
+and certified mission operations system that meets requirements at the lowest cost. The
+operations organization and management also use the MOP as their main tool to influ-
+ence the design and operability of the mission and spacecraft. Its iterative development
+often changes the mission concept, flight vehicle, and software, both flight and
+ground. By combining the operations concept with assessments of operational
+complexity, we can determine the probable costs of operations early in the mission
+design. Table 14-1 outlines the steps needed to develop a useful MOP.
+
+Step 1. Identify the Mission Concept, Supporting Architecture, and
+Key Performance Requirements
+
+We begin developing the MOP by examining the mission concept and supporting
+architecture. By obtaining the information listed below, we can describe the mission
+in language that users and operators understand. Sometimes information isn’t avail-
+able. Sometimes, the operations design isn’t very far along or isn’t specified in the
+mission architecture. In these cases, we make assumptions and document them in the
+MOP. Of course, we update the MOP as the assumptions change or more data becomes
+available. We can then determine the cost of changes by modifying the operations con-
+cept and re-evaluating the cost and complexity of the mission operations.
+
+Mission objectives identify what the ground crew, spacecraft, and payload must do
+for mission success. They help us define and describe how people will use the payload
+data. We also need to know the timeliness requirements for payload-processed data
+and the mission’s overall criteria for success, such as the amount of data to be returned.
+
+14.1 Developing a Mission Operations Plan 591
+
+TABLE 14-1. Developing a Mission Operations Plan. Many items are detailed by Boden and
+Larson [1995]. See text for a discussion of each step.
+
+Step Key Items
+
+1. Identify the mission concept,
+supporting architecture, and
+performance requirements
+(Chap.1)
+
+* Mission scope, objectives, and payload requirements
+¢ Mission philosophies, strategies, and tactics
+
+* Characteristics of the end-to-end information system
+¢ Identify performance requirements and constraints
+
+2. Determine scope of functions
+needed for mission operations
+(Sec. 14.2)
+
+¢ Identify functions necessary for different mission phase
+
+¢ Functions usually vary for different mission concepts and
+architectures. Combine or eliminate if possible
+
+¢ Where functions are accomplished (space or ground)
+¢ Space-based crew capabilities
+
+* Degree of automation on the ground
+
+* Degree of autonomy on spacecraft and for flight crew
+¢ Software reuse (space and ground)
+
+. Identify ways to accomplish
+functions and whether
+capability exists or must be
+developed (Sec. 14.2)
+
+4. Do trades for items identified
+in the previous step.
+
+¢ Try to define operational scenarios before selecting
+options. These trades occur within the operations element
+and include the flight software
+
+5. Develop operational scenarios |* Operations scenarios and flight techniques are step-by-
+and flight techniques step activity descriptions. Identify key issues and drivers
+
+¢ Develop scenarios and flight techniques for functions from
+step 2 and options selected in step 4
+
+6. Develop timelines for each * Timelines identify events, their frequency, and which
+scenario organization is responsible. They drive the characteristics
+for each operations function
+
+7. Determine resources needed | Allocating hardware, software, or people depends on
+for each step of each scenario | what, how quickly, and how long functions must be done
+
+8. Develop data-flow diagrams ¢ Data-flow diagrams drive the data systems and the
+
+(Sec 2.1.1) command, control, and communications architecture
+{
+
+9. Characterize responsibilities ¢ Identify organizations involved and their structure,
+of each team responsibility, interfaces, and size. To be cost-effective,
+minimize the number of organizations and interfaces
+
+* Develop training plan for ground team and flight crew
+
+¢ Refine development and operations costs each time you
+update the Mission Operations Plan
+
+10. Assess mission utility,
+complexity, and operations
+cost driver
+
+11.Identify derived requirements |* Identify derived requirements and ensure consistency
+
+with top-level requirements
+¢ Identify cost and complexity drivers
+¢ Negotiate changes to mission concept and architecture
+
+* If the technology to support mission operations doesn’t
+exist, generate a plan to develop it
+
+12.Generate technology
+development plan
+
+13.{terate and document ¢ Iteration may occur at each step
+¢ Document decisions and their reasons
+
+
+592 Mission Operations 14.1
+
+The mission description tells us the trajectory, launch dates and windows, trajec-
+tory profile, maneuver profile needed to meet mission objectives, mission phases, and
+the activities required during each phase. Observation strategies describe how we’ll
+collect the mission data. We define and finalize the observation strategies and mission
+description before launch or adapt them to data gathered during the mission.
+
+Sometimes, the operations organization develops the operating philosophies, strat-
+egies, and tactics. They may relate to the mission objectives or simply derive from the
+designer’s background or experience. We must determine whether the philosophies,
+strategies, and tactics are mandatory, highly desirable, or just personal or organiza-
+tional preference. Examples include
+
+* Maximize real-time contact and commanding versus onboard autonomy and
+data-storage
+
+* Maximize the involvement of educational institutions and teach students key
+aspects of issues like operations or space physics
+
+¢ Make sure a central authority approves all commands
+¢ Limit the image budget to 50,000 images
+¢ Deploy a communications satellite early in the mission
+
+The mission sponsor and the project manager may impose nontechnical con-
+straints. Operators usually follow these constraints until the project manager learns
+they increase the mission’s cost or make operations unacceptable or unsafe. Examples
+of program constraints include
+
+¢ Limit mission cost and cost profiles
+* Use a specific tracking network (for example, TDRS)
+¢ Use existing flight hardware
+
+¢ Use existing ground systems and design the spacecraft to be compatible with
+them
+
+« Centralize or distribute operational teams
+¢ Use multi-mission versus project-dedicated teams
+* Involve educators and the academic community, including students
+
+We must identify capabilities and characteristics of the end-to-end information
+system early on so we clearly understand the mission’s information needs. These
+requirements at the system level include
+
+¢ Using information standards
+* Locating capabilities and processes (includes both space and ground)
+
+¢ Characterizing inputs and outputs for the information systems
+
+We must state the information systems requirements in terms that operators and
+users can understand, not in jargon used by computer scientists and programmers.
+
+As discussed in Chap. 15, most missions are designed around a specific agency’s
+ground system, such as the Air Force’s Satellite Control Network, NASA’s Satellite
+Tracking and Data Network (STDN), or the European Space Operations Center. Each
+ground system has standard services that support the mission at lower cost if the
+
+14.1 Developing a Mission Operations Plan 593
+
+mission meets specified interfaces and standards. We follow these requirements on the
+flight system until they hinder our ability to meet mission objectives.
+
+This first step is key to the overall success and cost of mission operations. Here we
+gain insight about what to do and why. We begin determining performance require-
+ments and constraints that will drastically affect the mission’s cost and complexity. If
+we get the requirements wrong, we get the system wrong.
+
+Step 2. Determine Scope of Functions Needed for Mission Operations
+
+Before deciding how functions must be done, we usually divide the mission into
+discrete, workable phases such as launch, early orbit, normal operations, entry,
+descent, and landing. These phases usually have distinct goals and objectives, so their
+operational requirements are different. The mission concept drives top-level functions,
+but abilities of the crew, spacecraft, and payload determine the detailed functions we
+must carry out. A completely autonomous payload requires few crew operations,
+whereas a spacecraft payload that can’t compute or store enough data onboard may
+require more control or automation on the ground. Thus, to determine what we must
+do, we have to understand characteristics of the spacecraft bus and payload. Charac-
+teristics essential to the mission concept may become clear early in the conceptual
+design phase. Or we may develop them as part of the Mission Operations Plan.
+Through iterative discussions, the operators and developers define the characteristics
+described below.
+
+Users often ask operators to support a wide variety and number of payloads during
+a mission. Including payload designers and mission planners while developing the
+mission concept leads to timely definition of the payload characteristics. For a
+multiple-payload mission, we must understand early how each payload’s constraints
+interact with the operations of other payloads and the ground system.
+
+To understand how a payload operates, we must describe what the payload does
+during an operational period by asking
+
+* What are the payload attributes?
+
+* What is the commanding philosophy—buffer use, micro-commands, tables?
+* Does the payload use default values? Can ground operators change them?
+
+* Can some commands damage the payload or endanger the spacecraft?
+
+* Do some operations depend on previous commands?
+
+* Does the payload use position commands or incremental commands to control
+rotating or stepping mechanisms?
+
+¢ What command classes does the payload use—real-time, stored, 2-stage?
+
+* What processing occurs within the instrument?
+
+* How can we describe the payload in terms of
+
+— CPU/memory, closed-loop functions, and predictive commanding vs. event-
+driven commanding?
+
+— Instruments the space element must control?
+
+— Mechanical power and thermal attributes?
+
+— Avoidance areas (Sun, Earth, South Atlantic Anomaly, Venus, or Moon)?
+— Requirements for controlling the space element?
+
+— Safety constraints?
+
+594 Mission Operations 14.1
+
+* Do the payload apertures drive the space vehicle’s pointing control?
+
+* What are the user-specified parameters for operation?
+
+* How do these parameters convert into payload commands?
+
+* What is the payload heritage?
+
+* What ground processing and analysis do we need to support its operation?
+
+The example below shows how planning payload operations helps us define the
+mission concept. It also shows how operational workarounds support mission success.
+
+An instrument’s aperture had a field of view of ten arc-sec. The spacecraft had pointing
+capability of 20 arc-sec. In this case, the operators could never be sure the object was in the
+instrument’s field of view. The solution was to:
+
+* Command the spacecraft to the desired position
+
+* Observe with a different instrument having a wider field of view to see how far the
+spacecraft was off the desired position
+
+* Generate attitude commands to move the spacecraft slightly (tweak commands) until
+the actual attitude corresponded to the desired attitude
+
+* Verify the attitude errors were gone
+
+* Select the instrument with the narrow aperture and observe as specified
+
+This single design error caused real-time operations, such as decision making and command-
+ing, to become nonroutine for this mission—a big cost driver. These operations required more
+ground software, controllers trained in commanding the attitude-control system, and more
+people whenever they used the instrument. The goal of generating a MOP is to identify early
+any incompatibilities and cost drivers like this one—before we design and build any hardware.
+
+It’s a good idea to ask the designer of a payload instrument how to go from an
+observer requirement to a set of commands for the instrument. Sometimes, the answer
+is simple, but it could be complex if instruments have been designed for a laboratory
+rather than for space operation.
+
+As is true for the payload’s capabilities and characteristics, timely definition of the
+spacecraft’s characteristics depends on including spacecraft designers and mission
+planners in developing the mission concept. People working on the concept have to
+answer the following types of questions for the overall spacecraft and its subsystems:
+
+¢ What are the spacecraft’s operational attributes?
+* How are the values of these commands determined?
+* How many commandable states are required?
+
+* Are engineering calibrations required? What are the purpose, frequency, and
+schedule constraints of the calibrations?
+
+* How many engineering channels need monitoring?
+
+* Do these channels provide subsystem-level information to the operators, or
+must operators derive information about subsystems?
+
+* Are guide stars used? If so, how are they selected?
+
+* How does the pointing-control accuracy compare to instrument requirements?
+
+14.1 Developing a Mission Operations Plan 595
+
+« What types of payload, ground and spacecraft system margins exist and which
+must be monitored and controlled in real time?
+
+* What expendables need monitoring during flight?
+* Does the spacecraft subsystem use any onboard, closed-loop functions?
+* What are the attributes of the spacecraft’s data system?
+« What processing must we do on the ground to support spacecraft operations?
+« What is the heritage for each of the spacecraft’s subsystems?
+Consider an example of how a simple design decision affects operations:
+
+The Galileo spacecraft was designed to take heat from the radio-
+isotopic thermoelectric generators and use it to warm the propulsion
+system. This design saved weight and power, and it cost less to
+develop. But the spacecraft’s operational characteristics tied together
+subsystems for propulsion health and safety, thermal transfer, and
+power. Operators had to check each command load to see how it
+changed power states and affected the propulsion subsystem. Engi-
+neers from power, thermal, and propulsion had to check each activity,
+even if only the payload instrument’s states changed. For example,
+turning an instrument on or off caused the heat output of the thermo-
+electric generator to change.
+
+This example shows that highly-coupled subsystems can make operating the system
+more complex and costly.
+
+We must work with the end-users or customers to determine how, and how often,
+they require data from the payload. We also need to identify key operator tasks to
+operate the payload successfully. By understanding these data products and required
+actions, we can start designing how to operate the payload, as well as to retrieve and
+process the data.
+
+We must understand how confident the end-users are about the products. Often,
+they don’t know what they want until they see how the payload works in flight and
+what it observes. In these cases, we must develop baseline processes before launch and
+refine them after launch. For attached and deployable payloads from manned space-
+craft, the payload must be mature enough to ensure no safety risks exist, either within
+a payload, or with another payload running simultaneously. We must develop early the
+procedures for payloads that we can maintain in flight, so we can use them during
+stand-alone and integrated crew training.
+
+We also need to define the product’s relationship to the payload data by answering
+the following questions:
+
+* Is the product based on the payload’s raw data or must we remove the payload
+instrument’s signatures?
+
+* Must the data be calibrated? How? Does it involve processing special calibra-
+tion observations? At what rate do we expect the calibration files to change?
+
+* Does the data need to be converted into geophysical units? How? Where do
+the algorithms for this conversion come from? Must the project generate them
+and update the mission database, as they become more refined?
+
+596 Mission Operations 14.1
+
+¢ What are the formats and media of the payload’s data products? Is there a
+community standard, such as the Flexible Image Transport System format
+used on all NASA’s astrophysics missions?
+
+¢ What ancillary data must we provide so the end-user can interpret the payload
+data—spacecraft position and attitude, ground truth, or crew commentary?
+
+¢ Who processes the payload data—project or end user?
+
+* How is the processed data archived—through the project or end user? How is
+quality of the product controlled?
+
+¢ What, if anything, must the project archive after the flight phase is over? How
+long must information be stored?
+
+Planners and payload engineers must consider these issues jointly to understand
+operationally what will occur during flight.
+
+Step 3. Identify Ways to Accomplish Functions and Whether Capability Exists
+or Must Be Developed
+
+At this level, many functions and the ways to do them are straightforward. For
+example, to track an interplanetary spacecraft, we use NASA’s Deep Space Network.
+For other functions, we must identify options and describe them. For example, to
+determine a spacecraft’s orbit, we might use the Global Positioning System and auto-
+mated procedures on board, or we might track the spacecraft from the ground and
+calculate its orbit on the ground. Mainly, we must decide where the prime responsibil-
+ity for each function lies—onboard autonomy, ground-based operators, or automated
+functions. Then we must review our decisions in light of the capabilities on board and
+on the ground, as well as how critical the action is.
+
+To understand options, try building a table that contains the operations functions
+which apply to the mission’s database and space element’s avionics. Then, identify
+whether the avionics (automated) or the mission operations system are to do each func-
+tion. If functions must be done on the ground, further determine whether the hardware,
+software, or operators should complete it. If a function could be done in more than one
+place, describe what to do in each place and options for doing it. Table 14-2 shows how
+such a table would look.
+
+If the ground hardware and software do something, ask, “Could the avionics
+partially or completely do this function and lower the mission's life-cycle costs?” For
+example, if we were considering orbit determination, we’d ask, “Could we determine
+the spacecraft location within the avionics?” Then, we’d look at the accuracy of the
+GPS system, check the cost of GPS receivers that are flight qualified, and do a first-
+order estimate of the change in life-cycle costs compared to a more typical approach.
+Don’t forget that the costs of tracking facilities are important in this type of trade. The
+longer the mission, the more ground systems cost.
+
+Step 4. Do Trades for Items Identified in the Previous Step
+
+For the options identified in step 3 that drive either performance or cost, a small
+group of operators, crew and designers need to do trades and decide how to carry them
+out. At this point these trades should involve areas that are very costly, controversial,
+or not well understood. In some cases, we may develop an operations scenario for each
+option to describe it in detail. Usually, these trades result in a traditional allocation of
+
+14.1 Developing a Mission Operations Plan 597
+
+TABLE 14-2. Identifying Where to Carry Out Functions. Using a table similar to this one helps
+us identify options for carrying out mission operations. We assume functions not
+included in table are done on the ground. As you evaluate each function, place a
+check mark in the table to show where you complete the function.
+
+Where Accomplished
+MOS Function Spacecraft Avionics | Ground
+
+Mission Planning Operator augmented with
+automated tools is primary
+
+Activity Planning Operator augmented with
+
+and Development automated tools is primary
+
+Mission Control Operator is primary
+
+Data Transport Many LEO telecommunications Software and hardware
+and Delivery spacecraft implement much of this provide primary capability
+function onboard
+
+Navigation and Orbit | Software and hardware on spacecraft | Software and hardware is
+Control is an option primary
+
+Spacecraft Operations Short- and long-term planning
+by operators, augmented with
+automated tools
+
+Payload Operations Short- and long-term planning
+by operators, augmented with
+automated tools
+
+functional responsibilities to the flight crew, avionics, and operators. The key here is
+to look for approaches that truly minimize life-cycle cost without jeopardizing the
+safety and reliability of the mission and systems.
+
+Step 5. Develop Operational Scenarios and Flight Techniques
+
+Operational scenarios are key to an operations concept. A scenario is a list of steps,
+and we can often describe a mission operations concept with several dozen top-level
+scenarios. Typically, we generate three types of scenarios:
+
+* User Scenario—How the user interacts with the system elements and receives
+data.
+
+* System Scenario—How systems and subsystems within an element work
+together.
+
+* Element Scenario—How the elements of the space mission architecture work
+together to accomplish the mission.
+
+During the early study phases of a mission, users develop a scenario to show how
+they want to acquire data and receive products from the payload. For a science mis-
+sion, the user would be the principal investigator or science group or, for a facility
+spacecraft such as the Hubble Space Telescope, an individual observer.
+
+We create a system scenario after we’ ve developed the operations architecture.
+Here, we emphasize the steps within a process needed to conduct the mission. Finally,
+
+598 Mission Operations 14.1
+
+during element design, we expand these system scenarios to include more detailed
+information and subsystems. Once we have created scenarios for the user, system, and
+element, we must integrate them to understand what happens throughout the mis-
+sion and make sure we’ve included all key activities and eliminated overlaps. The
+scenarios give us our first look at how our system operates as a unit to produce the
+mission data.
+
+The mission concept, Mission Operations Plan, and design of the space and ground
+elements are closely related. As design proceeds, we should keep cost in mind and
+recognize that engineers normally focus on the technical challenge, with costs second-
+ary. All participants in the conceptual design not only must keep cost in mind, but
+should view it as a design variable. As designs mature for all elements of the space
+mission architecture, we must do trade studies to get the most cost-effective mission
+design. If the budget is constrained, which it usually is, we must look for ways to
+reduce costs by changing the mission concept, mission requirements, and potentially,
+the mission’s overall objectives.
+
+Step 6. Develop Timelines for Each Scenario
+
+Now we can add times needed to do each set of steps and determine which steps
+can run in parallel or have to be serial. This information becomes a source of derived
+requirements for the mission operations system’s performance.
+
+Many different timeline tools are used. None is standard, but many are modified
+from commercial, off-the-shelf software. Most missions use the same timeline tools
+for operational scenarios and activity planning. For many smaller payload users,
+asking for planning support from the MCC is less expensive than investing in a parallel
+planning system. These requirements must fit within the scope of the agreements
+among the program, operations, and the user. In many cases, the MCC has already
+required information that it can make available to you. In other cases, teams must
+generate ancillary data or change plans to fit unique needs for payload planning. If
+these changes are extensive, a separate planning system may be the effective solution.
+
+Step 7. Determine the Resources Needed for Each Step of Each Scenario
+
+Once we’ve developed scenarios, we may assign machines or people to do each
+step. This choice is obvious for many steps, but people or machines may do others,
+depending on performance requirements and available technology. The trend is
+toward automation on the ground and autonomy in space. We must be careful to iden-
+tify, as specifically as possible, which tasks the flight crew should do.
+
+Having allocated resources (hardware, software, or people), we must assign steps
+to hardware and software within data-flow diagrams. For steps assigned to people, we
+select an existing organization or develop an operational organization and assign steps
+and functions to teams.
+
+At this point, we examine each step to which we’ve assigned an operator and ask,
+“Can this process be automated to eliminate the operator?” How? Allow a person to
+do something only when the complexity or flexibility or life-cycle costs mandate
+human involvement. Don’t accept the idea that we need a person because we’ve
+always done it that way. Technology is advancing so rapidly that a machine may very
+well do now what a person had to do on the last mission. Through this process, we’ll
+also discover areas on which to focus research and development funding for possible
+automation in future missions.
+
+14.1 Developing a Mission Operations Plan 599
+
+Step 8. Develop Data-flow Diagrams
+
+System-engineering tools can convert machine steps into data-flow diagrams
+showing processes, points for data storage, and interrelationships. They also generate
+a data dictionary that ensures a unique name for each process or storage point in the
+data flow. These computer-aided systems engineering tools then generate information
+you can use for development. One of the most effective actions you can take to reduce
+overall life-cycle cost is to understand where data originates and the flow it takes
+throughout your system to the end user or customer and to your archive. Figure 2—2 in
+Sec. 2.1.1 shows a top-level data-flow diagram for FireSat.
+
+Step 9. Characterize Responsibilities of Each Team
+
+Once we’ve defined functions and processes, gathered the people-related steps,
+and formed an organization around them, we can assign teams to the steps and analyze
+the organization to establish operational interfaces. Generally, the more inputs we get
+from different teams, the more complicated, costly, and slow the operations organiza-
+tions are. The goal of this step is to identify the number of people required to do
+mission operations during each mission phase. We’ll use this information to estimate
+the cost of operations. We should be open to approaches and trade-offs that reduce
+overall life-cycle cost.
+
+Step 10. Assess Mission Utility, Complexity, and Operations Cost Drivers
+
+To assess mission utility, we follow the overall process defined in Sec. 3.3. To do
+so early in design may require flexible simulations, in which input parameters and sys-
+tem parameters have a range of values. Operational simulations that produce outputs
+which meet mission objectives are candidates for the Mission Operations Plan. As the
+plan matures, assessing mission utility yields confidence in the design or highlights
+shortcomings for re-design.
+
+To assess operations complexity and how it drives mission operations cost, we use
+a complexity model that shows the relationship between operational parameters and
+full time equivalent operators. This model requires us to evaluate each of our opera-
+tional activities as low, medium, or high complexity. Then, based on previous mis-
+sions of the same class, the model produces the number of operations personnel.
+During design, this model gives us rules for trade studies to reduce operations costs.
+Boden and Larson [1996, Chap. 5] describe this model in detail. See Sec. 14.3 for a
+summary.
+
+Step 11. Identify Derived Requirements
+
+At this point, we’ ve updated the Mission Operations Plan with new information
+associated with the mission operations concept, requirements, existing and new capa-
+bilities, scenarios, timelines. and the anticipated life-cycle cost. Now, we can identify
+new or derived requirements necessary to reduce cost and complexity and enhance the
+safety and reliability of operations. We should document these derived requirements
+in the Mission Operations Plan, being careful to identify what is to be done—not
+how—and why the requirements are necessary. Then, we should communicate the
+derived requirements to the group that develops the mission’s conceptual design and
+negotiate them into the requirement baseline.
+
+600 Mission Operations 14,2
+
+Step 12. Generate a Technology Development Plan
+
+The technology to support a mission operations concept may not exist or may not
+be focused and prototyped appropriately for mission approval. With each iteration of
+the Mission Operations Plan, we must identify needed or risky technology, so some-
+one can develop the technology or create work-arounds.
+
+Step 13. Iterate and Document
+
+The last, and usually most painful, step is to document the results of the iteration
+through the Mission Operations Plan to develop a baseline from which we can con-
+tinue to improve and reduce life-cycle cost. The documentation should include at least
+these elements:
+
+* Requirements and mission objectives
+
+¢ Key constraints—cost, schedule, and technical performance
+* Assumed mission and flight rules
+
+¢ Scenarios—described in terms of functions
+
+* Timelines for each key scenario
+
+* Ground and flight crew tasks
+
+¢ Organization and team responsibilities and structure
+
+* Hardware and software functions
+
+¢ Data-flow diagrams
+
+* Payload requirements and derived requirements
+
+Remember that this document is the basis for communicating the overall operations
+approach to users, operators, and system developers. If done and used properly, it can
+help save millions of dollars in the design and operation of space systems. We strongly
+recommend keeping the Mission Operations Plan in electronic form and making it
+readily available to all members of the conceptual design team, so they can keep the
+big picture in mind as they further develop concepts, systems, and approaches. The
+earlier the first Mission Operations Plan appears, the greater the leverage for reducing
+life-cycle costs.
+
+Now that we understand how to develop a Mission Operations Plan, we need a
+more detailed understanding of what mission operators do, so we can create a better
+and more detailed plan.
+
+14.2 Overview of Space Mission Operations Functions
+
+Although space mission types vary widely across military, scientific, and commer-
+cial applications, flight teams on the ground operate with fairly common tasks and
+activities. In this section we’ll describe these common operational tasks and then show
+how mission differences can influence performance requirements and hence the styles
+and costs of accomplishing the tasks.
+
+Figure 14-1 at the beginning of the chapter shows 13 functions for space mission
+operations. Table 14-3 summarizes the associated attributes of these functions. For
+small projects, members of a single team may do these tasks. For larger projects,
+
+14.2 Overview of Space Mission Operations Functions 601
+
+subteams may form; each dedicated to one of the functions in the table. On some
+projects, a single subteam does several of the functions, whereas another subteam may
+do only a part of one function.
+
+TABLE 14-3. Functions and Attributes for Space Mission Operations.
+
+Ops Design
+Key Responsibilities Inputs Outputs Considerations
+
+1. Mission * Coordinate science, |* Planning * Activity ¢ Number and
+
+Planning trajectory, and requests timelines complexity of
+engineering plans ¢ Science * Activity flight rules?
+* Allocate and manage | objectives Planning « Consumables,
+mission consumables|e Eng. & nav. guidelines performance,
+constraints * Mission rules and timeline
+¢ Mission margins?
+
+performance
+metrics
+
+2. Activity * Integrate activity plan |* Flight rules * Activity Plan Activity Plan
+
+Planning & requests ¢ Guidelines from review products | duration?
+Development |e Develop time- mission planning |* Spacecraft * Quantity and
+ordered, constraint- |+ Activity timelines | command load quality of
+checked activities ° Activity Plan * Ground activity | constraint
+requests schedule checks?
+
+* Activity level:
+over vs. under-
+subscribed?
+
+3. Mission ¢ Monitor in real-time |* Telemetry alarm |* Pass reports * Around the
+Control ¢ Command in real- limits * Real-time clock staffing?
+time * Real-time commands * Joystick vs.
+* Configure and control | command * Ground system | stored seq. ops?
+ground data system requests schedule
+
+¢ Ground system
+availability times
+
+4, Data Delivery — See Function (8)
+
+5. Navigation & |* Design trajectories or |* Radiometric data |* Trajectories or |* Trajectory
+Orbit Control orbits ¢ Optical orbits accuracy reqs?
+¢ Determine position navigation data Prop. maneuver |* Propellant
+and velocity * Ephemerides designs margin?
+* Design maneuvers |+* Spacecraft Antenna Disturbance
+propulsion projects force
+performance complexity?
+
+6. Spacecraft * Ensure spacecraft e Spacecratt Spacecraft
+Operations safety and health engineering data | constraints
+
+Fault response
+vs. fault
+
+* Calibrate the * Activity Plan * Consumables prediction
+spacecraft and review products status trending?
+establish engineering |+ Flight system * Activity Plan * Spacecraft
+performance testbed data requests performance
+
+* Analyze anomalies * Real-time margins?
+
+¢ Maintain flight command ¢ Significant post-
+
+launch software
+
+software requests
+development?
+
+7. Payload ¢ Ensure payload ¢ Payload Payload reqs. Payload
+
+Operations safety and health engineering data | andconstraints | complexity?
+* Calibrate the payload |* Activity Plan ¢ Activity Plan « Payload
+* Do quick-look review products requests interactivity?
+payload analysis « Real-time ¢ Number and
+command complexity of
+requests outputs?
+
+
+602 Mission Operations 14.2
+
+TABLE 14-3. Functions and Attributes for Space Mission Operations. (Continued)
+
+I Function
+
+Ops Design
+Considerations
+
+Key Responsibilities Inputs Outputs
+
+8. Data Serv. * Receive, stage, * Noisy telemetry |* Detected » Payload data
+Includes: transport, process, data telemetry data volume?
+
+(4) Data Delivery;| display, and archive |* Radiometric data |» Processed * Data products?
+
+(8) Data data * Ground system | engineering — {+ Sensitivitytolost
+Processing; |* Transmit commands | monitor data data data?
+
+(9)Archiving and |* Manage computer, |* Command files |* Processed Error free vs.
+
+comm. and database
+
+Maintaining payload data nonerror free
+Database * Transmitted data?
+command data
+10. System ¢ Manage external System technical |* Operations * System
+Engineering interfaces requirements and | concept optimization
+& integration |» Manage system constraints * Interface criteria?
+and Test performance and * Optimization agreements * Peer vs.
+internal interfaces goals * 1&T plans hierarchical
+* Recover from system |* Engineering ¢ Test results system _
+failures change requests engineering?
+
+* Test policies?
+* Distributed vs.
+
+. Computer * Maintain the Anomaly reports |* Maintenance
+and Com- hardware * Outage reports and upgrade centralized
+munication _|* Maintain data links plans * PC’s vs.
+Support workstations or
+
+—|
+[” Software De- |* Maintain the system |* New req’s
+
+mainframes
+* Development |* Dedicated dev.
+
+plans staffing?
+
+velopment & |» Upgrade the system |* Approved eng.
+
+Maintenance |. Train and certify change requests |¢ Training plans {+ Other dev.
+operators * Continuous « New, improved resources?
+improvement capabilities * Training
+initiatives tools/aids?
+* Operator cert.
+policies?
+
+13. Management |* Manage the overall Mission reqs. and |* Mission goals |* Keep or
+mission constraints * Project policies delegate
+¢ Work with sponsors |* Budgets * Allocated technical
+and users Ops concept budgets decisions?
+Ops component |e Status reports |* Approval
+status reports to sponsors | policies
+
+These 13 operations functions in are useful for collecting and organizing require-
+ments on operations and to break out work for estimating, bookkeeping, and compar-
+ing operations costs. You can design an operations system by defining the interfaces
+between these 13 functions—specifying the flow of data products, interface formats,
+time-critical processes, and hardware and software tools. A thorough understanding of
+each function is important for efficient design, estimating costs, and managing space
+mission operations.
+
+1. Mission Planning
+
+Mission planning starts before activity planning. It defines how to use resources
+best in accomplishing mission goals. Mission planning produces rough activity time-
+lines across mission phases that identify the schedule and resources to complete major
+activities. The interface between mission planning and activity planning can be as gen-
+eral as operations based activity guidelines or as specific as a detailed timeline of
+activity requests that later gets converted into commands.
+
+Resources that mission planners and designers are concerned with include the
+trajectory or orbit design, consumables over the spacecraft’s lifetime, and long-range
+
+14.2 Overview of Space Mission Operations Functions 603
+
+facility support. This task can be relatively easy for missions with low activity levels,
+simple trajectories, and reasonable margins for spacecraft consumables. It’s also easy
+for supporting facilities with high availability that we can schedule far in advance.
+Mission planning can be very complex for missions that have oversubscribed time-
+lines, a complex trajectory, tight budgets for spacecraft consumables, and over-used,
+shared resources. Timelines become oversubscribed whenever requests for engineer-
+ing and payload activities overwhelm the time for the spacecraft to do them. Examples
+of complex trajectory design include planetary gravitational assists, rendezvous and
+docking, formation flying and planetary landers. Consumables that may have tight
+margins—requiring mission planning to allocate and manage budgets—include power
+(battery charge-discharge cycles), propellant, cryogen, total radiation dose, and cycles
+of mechanical devices, such as number of thruster firings, valve openings, and slewing
+of a scan platform. Examples of shared resource facilities that may be overbooked and
+complicate mission planning include the Deep Space Network’s 70 m antennas and
+wide-band links on TDRSS. Complexity and costs for mission planning grow geo-
+metrically, rather than linearly, as each factor increases in complexity because their
+interactions increase.
+
+Contingency planning is another task assigned to Mission Planning. We usually
+add contingency reserves to consumable budgets and design busy timelines to include
+a few planned, low-activity periods that are available for unplanned, contingency
+activities. Some missions demonstrate cost effectiveness by scheduling “bonus”
+payload activities they can drop to respond to contingencies, but which get executed
+if everything goes as planned. The most common form of operations contingencies we
+plan for are spacecraft or payload anomalies, degraded performance, and changes to
+facility schedules. Contingency planning for more adaptive missions sometimes
+include responding quickly to surprise opportunities or changing conditions.
+
+2. Activity Planning and Development
+
+This operations function produces the spacecraft’s stored sequences discussed
+above. Activity planning converts requests for spacecraft and payload activities into a
+file of timed commands for uplink to the spacecraft. This command file is a sequence
+of commands that are integrated, time-ordered, constraint-checked, simulated, validat-
+ed, reviewed, approved, and defect-free. Activity planning often generates real-time
+commands that may require simulation or constraint checking before passing them to
+Mission Control for uplinking.
+
+Three factors influence the difficulty and cost of activity planning: complexity of
+the process for integrating requests, required accuracy of the constraint checking and
+performance models used to simulate and validate the activity plans, and duration for
+which the activity plan is to be active.
+
+Missions with simple activity inputs and integration processes usually have a small
+number of users. They use an efficient format for activity requests, often electronic,
+with requests written by users in the command language. In addition, their mission
+resources are under-subscribed, so most requests can be scheduled and executed with
+few conflicts between requests. Examples of constrained mission resources that can
+complicate how we integrate the activity plan include limited onboard sequencing
+memory, limited time to carry out activities, limited power, limited onboard data stor-
+age or downlink bit rate, and limited tracking resources or downlink time. Missions
+that must develop highly constrained activity plans sometimes reduce costs by pre-
+allocating resources and then pushing conflict-resolution tasks back on the requesting
+teams from Mission Design, Spacecraft Engineering, Payload, or Operations.
+
+604 Mission Operations 14.2
+
+Accuracy in spacecraft-performance models can also drive activity planning. For
+example, suppose we need to plan a spacecraft-pointing maneuver to move a sensor’s
+boresight from target A to target B, using pre-planned, timed commands. This plan
+requires a predictive model of slew rates, turn times, and settling times. Models for
+propulsion, attitude control, thermal, power, and telecom can all require frequent
+tuning and calibration. That means designing and doing flight tests, as well as
+measuring and downlinking a spacecraft’s performance parameters and then compar-
+ing them with predictions. After analysis, we would update the models. This process
+can consume a lot of operations resources, not just in activity planning but also in data
+collection and analysis. Missions with performance margins can use lower fidelity
+models and save money. But some missions, such as a planetary flyby, spend hundreds
+of millions of dollars to do a few hours of an activity plan for closest approach. They
+want to “optimize” spacecraft and instrument performance, so they’re willing to invest
+in high-fidelity, accurately calibrated performance models.
+
+Selecting the duration of a stored activity plan is a third factor that can significantly
+influence activity planning costs. Activity plans that last only a few hours require fre-
+quent uplinks, extra station coverage, and around-the-clock staffing. Short activity
+plans can be timed to correspond to mission events (such as orbit duration), don’t
+require large memory storage on board, can respond to last-minute requests from
+users, and often can adapt to activity-request conflicts in the current sequence under
+development by postponing the activity to the next one. Activity plans designed to last
+for weeks or even months may require more onboard sequencing memory and more
+time for uplink transmissions. With longer activity plans, requesters must think over
+much longer planning epochs and, if an activity doesn’t get scheduled in the current
+plan, it must wait until the next one. Requesters who miss getting commands inte-
+grated into lengthy activity plans often resort to real time commands, bypassing the
+stored sequence process and increasing the load on Mission Control. Missions that
+operate in this mode usually enjoy the advantage of being able to staff activity
+planning 5 days per week, prime shift only. We can reduce staffing by decreasing the
+number of activity plans and making each one last longer.
+
+3. Mission Control
+
+Mission Control handles activities that must be done in real or near real time. They
+do last-minute adjustments to pre-scheduled mission timelines. They manage the
+ground system’s configuration and coordinate interface with operations facilities such
+as tracking stations and communication services. They also manage the spacecraft’s
+configuration using real-time commands and telemetry monitoring. Mission control-
+lers detect a spacecraft’s telemetry alarms and anomalies, isolate problems, and call in
+appropriate experts on the spacecraft or ground system. They maintain a log of
+mission-significant events. They often work whenever the spacecraft is being tracked,
+so controllers may have to take other than prime shifts.
+
+Mission control tasks may require significant staffing and high activity levels for
+missions that do many activities in near real time. This operations style is called joy-
+Stick operations. It’s often characteristic of missions that have short communication
+delays, continuous or nearly continuous coverage, and less elaborate software for
+onboard autonomy. These missions require rapid ground reaction to unplanned events.
+Joystick style missions must be able to tolerate occasional wrong commands or other
+operational mistakes common when people must respond rapidly.
+
+Mission Control staffing is lower for missions that de-emphasize real-time deci-
+sions by ground operations. Instead, these missions rely on the ability to pre-plan
+
+14.2 Overview of Space Mission Operations Functions 605
+
+activities and load the spacecraft with a timed command sequence that has a high
+probability of executing successfully with minimum ground interaction. What this
+stored-sequence style saves in real-time mission control, it usually more than pays for
+through increased costs for design and simulation tools. Missions often use it if they
+have long two-way light times, long periods without tracking or ground contact, and
+at least a modest investment in software for onboard autonomy. This software allows
+the spacecraft to react to unplanned events. Missions using stored sequences can’t
+tolerate errors in critical events such as a planetary flyby or injection maneuver. Thus
+they rely on elaborate planning, simulation, and review to produce and store
+zero-defect plans. Software now handles most reflexive actions, such as monitoring
+and responding to faults in real time.
+
+4. Data Delivery (see Data Services in Function 8)
+
+§. Navigation and Orbit Control
+
+This operations function delivers the flight system to the target or maintains an
+operational orbit. It designs trajectories to meet various requirements and constraints.
+Efficient designs for trajectories or orbits can save a lot in launch-vehicle costs and the
+spacecraft’s required propellant mass. As described in detail in Chapter 7, techniques
+such as planetary gravity assists, aerobraking, and electric propulsion are some of the
+methods navigation uses to achieve efficiency goals.
+
+As discussed in Section 11.7, navigation determines the flight system’s location
+and velocity by using several types of data. Radiometric data collected during telem-
+etry and command passes may include one- and two-way Doppler, as well as ranging
+codes. Some planetary spacecraft with imaging instruments use images of planets or
+asteroids and the star field background to give very precise spacecraft location data.
+Some Earth-orbiting spacecraft use onboard GPS receivers to locate the spacecraft.
+Navigation analyzes this position data to determine trajectory or orbit corrections
+needed to meet mission requirements. They also furnish position data to teams in Pay-
+load Operations who use it to interpret or calibrate instrument measurements. They
+also send trajectory and orbit data to Data Services, so these teams know when to
+schedule antenna tracks and where to point them.
+
+Once the actual trajectory has been determined, orbit control function defines pro-
+pulsive maneuvers needed for correction. Orbit control and Spacecraft Operations
+work together closely on this process, particularly the attitude-control and propulsion
+analysts. Desired changes to the spacecraft’s velocity vector get converted to turns and
+propulsion burn times and then into spacecraft commands. Designing and analyzing a
+trajectory correction maneuver can get complicated. We may need to model the thrust-
+ers’ performance, analyze gravitational effects and disturbance forces, and complete
+nominal and ‘“‘clean-up” maneuver designs.
+
+6. Spacecraft Operations
+
+This spacecraft engineering function oversees the spacecraft’s health and safety in
+flight and calibrates and maintains equipment to keep the spacecraft’s performance
+within specifications. Engineers define detailed operational configurations and states
+necessary to support payload activities, such as modes for pointing, power, and data
+service. They also maintain flight software and analyze spacecraft failures.
+
+Spacecraft Operations provides Mission Planning with requirements for calibrating
+and maintaining equipment to be integrated into mission activity plans. They also pro-
+vide mission planners actual resource consumption data together with performance
+models to help them plan and manage mission resources.
+
+606 Mission Operations 14.2
+
+Spacecraft Operations sends requests to Activity Planning for engineering activities
+to be converted into timed commands in an integrated sequence. They often review
+activity plans before uplinking to make sure they don’t violate flight rules from space-
+craft engineering and that they meet operational peculiarities and constraints of the
+subsystems. Reviews can be simple for missions that execute a routine daily set of
+standard commands and for missions that have invested in simulation software which
+automatically checks constraints. But they can be time consuming for missions that
+have a high percentage of new or unique activities every day, that can’t simulate ac-
+tivities and constraints, and that have subsystems which strongly constrain operations.
+
+Spacecraft Operations delegates to Mission Control the responsibility for real-time
+monitoring of the spacecraft’s health and performance (such as monitoring telemetry
+alarm limits). This delegation allows Spacecraft Engineering to concentrate on more
+deliberative, non-real-time tasks, such as analyzing performance and predicting long-
+term trends. It also often allows them to staff only 8 hours per day, 5 days per week.
+
+There are two styles of fault detection and anomaly analysis. The first—a detect-
+respond style—is less expensive. Operators watch for alarms or other unexpected
+failures, analyze them, and prepare strategies to correct or work them. The second—-a
+predict-prevent style—costs more. Planners predict trends and performance, trying to
+forecast faults before they might occur and then plan preventative action. This task can
+involve elaborate models for telemetry, power, thermal, dynamics, and other systems
+and can require significant calibrations and performance tests during a flight. Detect-
+respond fault operations are characteristic of space missions that can handle occasional
+unplanned down times to recover from faults. Often these missions have single-string
+hardware configurations with limited options for recovering from failures. Predict-pre-
+vent fault operations are characteristic of space missions with engineering or science
+events, for which an unplanned down time could cause loss of a mission or loss of mis-
+sion critical science data that we can’t recover. Often these missions have block redun-
+dant hardware, allowing operators to select a back-up component when trending data
+suggests a possible future failure in the main on-line, component.
+
+Failure analysis sometimes requires using test beds on the ground that allow
+analysts to simulate or recreate problems observed in flight. Spacecraft Operations
+runs and maintains them, which can become a significant operations cost for test-bed
+hardware (usually, engineering models for flight hardware) and managing and updat-
+ing software.
+
+Spacecraft Operations also maintains and fixes flight software, then continues to
+develop it after launch. Missions with long flight times, changing mission goals, or
+major anomaly recovery work-arounds will often require significant software re-de-
+velopment during flight. Some missions that have long flights to targets may even
+deliberately postpone developing target-related software until after launch. Software
+test and validation becomes another use for the flight-system testbed and another
+potential expense for Spacecraft Operations.
+
+7. Payload Operations
+
+This operations function has similar interfaces as the Spacecraft Operations func-
+tion, but with responsibility for the payload instead of the spacecraft. Payload opera-
+tors send measurement goals and activity requests to Mission Planning and Activity
+Planning respectively, which convert payload requests into mission timelines and
+integrated command loads. Some designs for mission operations try to simplify these
+interfaces by allowing payload controllers to directly command the payload’s config-
+uration and method of returning data, sometimes from sites located remotely from the
+
+14.2 Overview of Space Mission Operations Functions 607
+
+Mission Operations Center. This approach works best when individual payload instru-
+ments and sensors don’t interact and when instruments don’t contend much for
+spacecraft resources, such as power, pointing, data storage, and downlink bandwidth.
+
+Payload operations use different data types. Operators monitor the payload
+engineering data to check the status of its health and safety. Often, Mission Control
+handles this task. Operators analyze data from the payload to verify that it is producing
+results in ranges of expected values. This is known as quick-look analysis. It doesn’t
+replace the interpretation that becomes part of longer-term scientific discovery. Quick-
+look analysis happens quickly, so operators can discover and correct anomalies for
+instruments, sensors, and sequencing before they have collected, calibrated, and
+archived a lot of data. Quick-look analysis often requires concurrent recovery and
+analysis of a payload’s ancillary data (such as where the spacecraft was located—orbit
+data), which direction it was pointed (attitude or scan-platform data), engineering
+states of instruments (gain settings or filter selections), and sometimes relevant envi-
+ronmental measurements (radiation field and temperature).
+
+Complexity of instruments and investigations directly influence the size of the
+Payload Operations task. Instruments cost more to operate if they have many control
+states, are sensitive to interactions with other instruments or the background environ-
+ment, must manage their own consumables (batteries or cryogen), and face many
+operational constraints (such as avoiding the Sun or Earth, warm up, cool down, radi-
+ator field of view). Investigations with complex targets, payload tasks (such as ground
+rovers Or space weapons) and activity timelines cost more to operate. Some missions
+are designed to use correlative data from other sources (such as multiple spacecraft) or
+multiple sensors (such as measurements from ocean buoys). These missions may need
+more effort to plan operations and analyze data.
+
+8. Data Services (Includes: (4) Data Delivery, (8) Payload Data Processing and
+(9) Archiving and Maintaining the Mission Database)
+
+This function does various Data Service tasks including tracking and acquiring
+data, transmitting commands, transporting data, handling local computer and commu-
+nication services, processing and displaying data, simulating data flow, maintaining
+the mission’s database, building data products, and archiving data. IT also plans and
+analyzes performance, and coordinates operation of the ground data system. It sup-
+ports all other operations functions. Well designed, well run data services can be vital
+to how efficiently other operations functions do their tasks. If a mission must return a
+lot of mission data, data services can dominate operations costs. New technologies,
+such as CD-ROMs and the worldwide web, have greatly reduced the cost of historical
+data products such as photographs and magnetic tape libraries.
+
+Well engineered data systems apply existing data standards so we can use standard
+data services and tools. Handbooks from the Consultative Committee for Space Data
+Standards document standards for space data. International teams develop these
+handbooks with U.S. representation from DoD, NASA, and industry. The standards
+separate into layers for data timing, synchronization, transport, coding and representa-
+tion. The direction has been away from data-stream services, such as the older systems
+using time-division multiplexed telemetry, and toward packet-based or file-based pro-
+tocols that permit standard services independent of content.
+
+Operations can be very efficient with well engineered data designs. These designs
+consider capabilities for ground processing and archiving while planning for onboard
+data capture, processing, and packaging. On the other hand, operating a poorly
+
+608 Mission Operations 14.2
+
+engineered data system can be costly. Such designs require operators to recover,
+extract, and correlate various separated data types. Other cost drivers include the
+robustness of payload data processing to data loss or drop-out and the project’s poli-
+cies on what percentage of data must be recovered for mission success. Many anec-
+dotes describe missions that used 90% of their resources trying to recover the last few
+percent of data.
+
+Operations design must choose between two competing approaches to data
+systems: multi-mission vs. mission-unique. Advocates of multi-mission data systems
+emphasize the efficiency of using a common design and a common set of operators to
+provide data services to more than one mission. We can amortize costs for parts of a
+ground data system that require large capitol investments, and this makes it more
+affordable. This approach also helps us use data standards and reuse systems. Cost-
+sharing efficiencies free up money to invest in data systems and to pay for overhead
+costs such as maintenance, planned upgrades, and new technologies. However,
+detractors point.out that multi-mission, generic systems and organizations may be less
+efficient than those designed for, and focused on, a specific project’s needs. Large
+heritage systems with significant capitol investments are expensive to change and
+can’t respond to new technology innovations as rapidly as smaller, unique systems.
+
+Usually, we decide on generic or unique data services for individual elements. Con-
+sider, for example, capturing telemetry data from deep space. This requires a network
+of large, expensive antennas—too expensive to build for each project. But calibrating
+payload data might require unique project software and processes, as well as operators
+dedicated to each project. Recent development of commercial off-the-shelf software
+that handles things like orbit analysis, command management, telemetry decommuta-
+tion and display, and simulation has allowed us to take a cost-effective hybrid
+approach. These tools have made it easier to tailor commercial, multi-mission tools for
+unique data services.
+
+Shared, multi-mission data services can present a problem when they are oversub-
+scribed. Competition with other users can sometimes lead to complex scheduling that
+uses up a project’s resources and complicates mission planning. Late schedule changes
+responding to other users’ emergencies can require major replanning. Over-subscrip-
+tion can become significant whenever institutions fund multi-mission data services
+and provide them “free” to users. To help reduce this problem, NASA is starting full-
+cost accounting: it will allocate costs of multi-mission institutional services to individ-
+ual users. The move to data-system architectures on workstations and personal
+computers also helps relieve over-subscription. Hardware dedicated to a project can
+host multi-mission software, and operators for that project can run it.
+
+10. System Engineering and Integration and Test
+
+This task considers the operations system as a whole, managing interfaces and
+adjudicating competing desires and requirements between operational teams, tasks,
+and functional elements. For example, activity planning is easier if Mission Planning
+produces a conflict-free timeline. Mission planning is easier if they only provide
+schedule requests and conflict-resolution guidelines to Activity Planning. System
+Engineering resolves issues like these to get the best performance from the system.
+They also define criteria for a best system, such as low cost, high reliability, minimum
+staffing, quick response, or all of these and more.
+
+Just as System Engineering defines and manages interfaces between elements of a
+mission’s internal operations, it does the same for elements of external operations,
+such as providers of institutional services or correlative data for a payload. System
+
+14.2 Overview of Space Mission Operations Functions 609
+
+engineers focus on technical-interface agreements, such as data formats, procedures,
+and protocols. Management focuses on program interfaces such as funding agree-
+ments. System engineers develop and maintain operations concepts to help design and
+refine system architecture, team responsibilities, and operations interfaces. Operations
+concepts include scenarios, timelines, and product flows that capture the operations
+system performance requirements, design constraints, and requirements derived from
+the design.
+
+System Engineering also plans for contingencies, resolves anomalies, and handles
+failure recoveries. System engineers coordinate anomaly analysis that involves inter-
+action among several engineers or teams and provide technical approval of engineer-
+ing change requests to develop fault repairs or work-arounds.
+
+During operations, the Integration and Test task supports development by testing
+new or redelivered capabilities. It also supports testing of system interfaces when new
+institutional capabilities get delivered. Teams must develop test schedules to fit
+operational schedules. Engineers have to save previous versions of software to permit
+return to a known good system whenever testing shows the new version has problems.
+Independent verification and validation, i.e. assigning the Integration and Test task to
+engineers different from those in Development is a common practice to ensure inde-
+pendent, objective testing.
+
+11. Computers and Communications Support
+
+This function entails designing and buying or building hardware for the end-to-end
+information system. Because space missions typically produce so much data in elec-
+tronic form, mission operations planners must ensure data moves efficiently. To do so,
+we prepare data-flow diagrams, requirements for computers or workstations,
+requirements for networking and data communication (within the control center and
+around the world), and requirements for voice communications. Having accurate data-
+flow diagrams (see Sec. 2.2.1) is the starting point for designing the hardware. From
+mission objectives, we learn how much data must flow, between which nodes, and
+how frequently. We use this information to diagram the data flow and allocate data-
+handling processes to software and hardware. From the diagrams, we list the numbers
+and types of computers, workstations, and other hardware. Knowing the communica-
+tions architecture and organizational design helps us choose the hardware correctly.
+For example, a decentralized organization for mission operations requires us to
+connect dispersed staff members, which usually means preparing a communications
+network.
+
+The networking requirements also come from the data-flow diagrams and usually
+require more support equipment. Other networking factors are availability, capacity,
+and security for mission data.The final piece of communication support is the voice
+and video-teleconferencing requirements. Early in design, we must establish any need
+for these special links so the operations organization can communicate efficiently dur-
+ing the mission.
+
+Because of the proliferation of modern computing and communication equipment,
+planning for their support may be no more complex than ordering from industry
+catalogs. Designing and building unique hardware usually isn’t cost effective, but spe-
+cial requirements may drive us to do trade-offs in this area. Finally, maintaining and
+administering the computer and communication hardware throughout the mission is a
+vital concern. Good designs allow us to repair and replace equipment and allocate staff
+for this activity.
+
+610 Mission Operations 14.2
+
+12. Development, Maintenance and Training
+Throughout a project’s life cycle, we must develop and maintain software for:
+* Creating normal space and ground system operations before launch
+* Correcting spacecraft and ground system errors after launch
+* Implementing changes in mission requirements after launch
+
+One modern trend for interplanetary missions is developing operations software
+after launch. We program basic functions before launch, but create most of the opera-
+tions software during the long cruise phase, then upload it in time for the planetary
+encounter. Similarly, some commercial communications constellations have been able
+to substantially shorten their deployment time by completing the onboard software
+subsequent to launch of the initial phase.
+
+Another reason that flight software gets developed after launch is to deal with in-
+flight hardware failures. An example of an in-flight failure is the Galileo spacecraft’ s
+high-gain antenna. After launch it failed to deploy. So, programmers had to redesign
+the flight software during the transfer phase to provide data formats and enhanced
+onboard coding for the low-gain antenna to complete the mission.
+
+To develop and maintain software for any mission, we need to know
+
+* System requirements—use existing software from previous missions or devel-
+op new software for new requirements
+
+¢ Error reports—error reports drive software maintenance
+* Change requests—system capability changes usually require software changes
+
+* As-built documentation—knowing the current software as “built” (not as
+designed), helps us develop and maintain it more effectively.
+
+Several techniques for developing and maintaining software improve our probabil-
+ity of having software that works:
+
+* Know the requirements and ensure they are testable and agree with the mission
+operations concept
+
+* Use rapid prototyping to demonstrate system capabilities early
+* Deliver the ground data system in increments
+
+* Plan to develop and maintain software during operations (don’t send the soft-
+ware design team home too early)
+
+* Match software schedules to hardware schedules, so integration and testing
+aren’t delayed
+
+* Thoroughly test the software, usually incrementally
+
+* Keep operations informed of software status so operators are ready when it is
+* Use the new software in training, so operators know its capabilities and trust it
+¢ Plan further software maintenance after delivery
+
+Similar to computer hardware, software development and maintenance change
+rapidly. The software package that was unique on one mission may be commercially
+available for the next. New, highly flexible designs spring from unusual places, such
+as microsatellite designs and large constellations. Communicating what’s available
+and what will work is a demanding process.
+
+14.3 Estimating the Size and Cost of Mission Operations 611
+
+13. Management
+
+Operations Management has overall responsibility for operations success. Manag-
+ers must meet operations requirements within negotiated values for cost, schedule, and
+system performance. They provide the resources to make the other operations
+functions work. They focus on planning, monitoring, directing, and reporting of pro-
+grammiatic resources such as costs, schedules, and staffing.
+
+Managers work with the sponsors and customers and negotiate mission goals vs.
+resources. They define the mission’s operational policies and guidelines. An effective
+management technique is to allocate resources to each operations function or team and
+then not get involved in technical decisions or approvals unless they exceed the re-
+sources allocated. If management retains technical authority, managers also partici-
+pate in and approve technical operations decisions. For any project, we have to think
+through how much we want management to participate in the daily approval of oper-
+ations products in terms of operations response time, efficiency, team motivation, and
+value added. This operations element usually carries the budget for operational re-
+serves and funding for other tasks, such as administrative support.
+
+14.3 Estimating the Size and Cost of Mission Operations
+
+How do you estimate the size of the operations task for a given mission? To some
+extent the size is influenced by the operations design itself which includes consider-
+ations such as the efficiency of how the teams are organized, how tasks are assigned,
+team member experience, how team members are trained and certified, and how the
+team is motivated and managed. But operations design efficiency typically can
+influence team size by only 10 to 20%. It does not explain why some missions can fly
+with only a few people, whereas others require an operations team of several hundred.
+
+Decreases
+
+Combioxity Gq
+
+> Iner, eases
+
+'S
+Complexity
+
+4-Operati
+io
+Policias
+
+Fig. 14-2. Four Factors that Drive the Cost of Mission Operations.
+
+Decisions made in designing missions, payloads and spacecraft, communication
+and ground systems, and policies on operational risk all affect operations cost and size.
+Operations often become expensive when we make these design decisions first, with-
+out considering how they affect operations. Instead, we should develop the operations
+concept concurrently with other elements, so we can select the best overall approach
+
+612 Mission Operations 14.3
+
+based on affordability and lifecycle cost. This section identifies important drivers of
+operations costs and organizes them into 4 factors you can use to estimate the size and
+cost of space mission operations. Figure 14-2 shows these 4 factors and their effect on
+an operations team’s size and cost as operations complexity increases or decreases.
+
+TABLE 14-4. How Mission Design Factors Affect Operational Complexity (Chaps. 1-8).
+Simple, Low-cost Ops < > Complex, High-cost Ops
+(10 People or less) (50 People or more)
+
+¢ Well defined
+
+¢ Single goal
+
+¢ Constant
+
+* Few mission phases
+
+* Single spacecraft
+
+* Loose timelines
+
+¢ Low activity level
+
+° Repetitive activities
+
+¢ Repetitive opportunities
+
+¢ Stable trajectory dynamics
+
+¢ Comfortable AV margin
+
+¢ Few nav data types
+
+¢ Loose accuracy reqs for nav.
+control and reconstruction
+
+¢ Known environment
+
+¢ Stable environment
+
+° Ambiguous
+* Multiple competing goals
+
+¢ Changes with time and data
+° Many mission phases
+¢ Constellation
+
+¢ Tight timelines
+
+¢ High activity level
+
+¢ Many one-time-only activities
+¢ One-time-only opportunities
+¢ Rapidly changing trajectory dynamics
+¢ Tight AV consumables budget
+
+¢ Many nav. data types
+
+Design
+¢ Tight accuracy reqs for nav. control
+and reconstruction
+
+Space ¢ New space environment
+Environment * Rapidly changing environment
+
+TABLE 14-5. How Design Factors for the Payload and Spacecraft Affect Operational
+Complexity (Chaps. 9-12).
+
+Mission
+Objectives
+
+Mission
+Concept
+
+Orbit/Trajectory
+
+Simple, Low-cost Ops Complex, High-cost Ops
+
+(10 People or less) <—_—— jp (50 People or more)
+
+¢ Single sensor/instrument ¢ Many sensors/instruments
+¢ Independent sensor data ¢ Correlative data dependency
+¢ Simple calibration ¢ Complex calibration
+¢ Low rate data output ¢ High rate data output
+¢ Mature technology « New technology
+¢ Small amount of software ¢ Large amount of software
+¢ Simple pointing ¢ Complex targeted pointing
+¢ Instrument dedicated resources | Instruments compete for shared resources
+(power, pointing, data storage) * Many payload modes
+* Few payload modes * Many data formats
+* Few data formats * Complex data processing, compression,
+¢ Simple data processing and editing options
+Spacecraft |« Single string ¢ Block redundant
+¢ Mature technology ° New technology
+¢ Comfortable margins (power, ¢ Low or negative margins
+memory, thermal) * 3-axis stabilized
+* Spinner or gravity-gradient * Many flight rules and constraints
+* Few flight rules and constraints | « Many onboard engineering measurements
+¢ Few onboard engineering meas- routinely downlinked
+urement routinely downlinked e Many telemetry rates and formats
+* Few telemetry rates and formats | Many articulating devices
+¢ Few articulating devices
+
+Payload
+Design
+
+
+14.3 Estimating the Size and Cost of Mission Operations 613
+
+TABLE 14-6. How Design Factors for Communications and Ground Systems Affect Oper-
+ational Complexity (Chaps. 13, 15, and 16).
+
+Simple, Low-cost Ops Complex, High-cost Ops
+(10 People or less) —_——P- (50 People or more)
+Communication ¢ Infrequent tracking required * Near continuous tracking required
+
+System Design * Telemetry, command, and ¢ Telemetry, command, and
+radiometric tracking reqs are radiometric tracking reqs
+compatible compete
+
+¢ Dedicated or undersubscribed ¢ Shared, oversubscribed tracking
+tracking resource resource
+
+¢ Low data volume ¢ High data volume
+
+¢ High com link margins * Low com link margins
+
+¢ Loose coupling between onboard | ¢ Tight coupling between onboard
+and ground events and ground events
+
+¢ No station reconfiguration during |* Frequent station reconfiguration
+pass during pass
+
+¢ Highly repetitive tracking ¢ Many uniquely scheduled tracks
+
+schedule
+
+Ground System ¢ Dedicated or undersubscribed ¢ Multimission, shared,
+Design ground system oversubscribed, ground system
+
+¢ Stable ground system and * Frequently changed ground
+software design post-launch system and software design after
+
+* Prime shift only ops team staffing | !aunch
+
+° Project specialists, multi-tasked | ° 24-hour-per-day ops steam
+
+staffing
+
+¢ Minimum number of operator a. oo.
+tasks for data capture and alarm |* Task specialists, multi-project
+monitoring * Many operator tasks for data
+
+* Ops tasks done in single control | Capture and alarm monitoring
+
+center ¢ Operations tasks distributed
+across many locations
+
+TABLE 14-7. How Operational Risk Policies Affect Operational Complexity.
+
+Simple, Low-cost Ops im, Complex, High-cost Ops
+(10 People or less) —_—p- (50 People or more)
+Operational Risk « Low investment in spacecraft and | « Highinvestmentin spacecraft and
+Policies ~ payload development payload development
+¢ Few mission critical events ¢ Many mission critical events
+
+¢ Spacecraft can safe itself without | * Spacecraft depends on ground to
+ground action respond to anomaly
+
+¢ Performance analysis limited to | ¢ Performance analysis includes
+
+fault detection trending and fault prevention
+
+¢ Command activity plans require | * Command activity plans require
+simple simulation and constraint elaborate simulation and
+checking constraint checking
+
+¢ High tolerance for “lost” payload | * Lowtolerance for “lost” payload or
+or engineering data engineering data
+
+
+614 Mission Operations 14.3
+
+* Mission design involves defining mission objectives, developing a mission
+concept, designing orbits and trajectories, and evaluating the space environ-
+ment. Chapters 1 through 8 cover these design processes in detail. Table 14-4
+shows how these design decisions affect operational complexity and the
+operations team’s size.
+
+* Payload and spacecraft design, is covered in Chaps. 9 through 12. It involves
+design choices that affect the flight system’s operability. Table 14-5 shows
+how these design choices affect operational complexity.
+
+* Design of communications, operations and ground systems is covered in
+Chaps. 13 to 16. It involves design and implementation choices that influence
+what tools and communication resources the operations team uses to support
+their tasks. Table 14-6 shows how design decisions here affect operational
+complexity.
+
+* Policies on operational risk all effect cost and complexity. The more dollars
+and time we spend in developing a mission, the less operational risk we’ re usu-
+ally willing to take. Operationally complex spacecraft require more cautious
+operations. Table 14-7 shows how these policies affect operations
+complexity.
+
+After reviewing operations cost data for many government, commercial, and
+scientific missions, we have found that operations costs can be predicted reasonably
+accurately as a percentage of the total development cost of the spacecraft (i.e., payload
+plus bus). This makes sense because spacecraft that must perform complex missions
+and operate in severe environments tend to have higher development and operations
+costs while spacecraft with simpler missions and which operate in less severe en-
+vironments tend to have lower development and operations cost. Organizations are
+willing to accept more operational risks (e.g. lower ops costs) for low cost spacecraft,
+while organizations that have a significant investment in an expensive spacecraft or
+payload, usually insist on more risk averse, higher cost operations. Table 14-8 shows
+an experienced-based model of this relationship between first unit spacecraft plus
+payload total development cost and first year ops costs.
+
+TABLE 14-8. Estimating Mission Operations Cost per Year. First estimate the theoretical first
+unit cost from Chap. 20 and determine the category of spacecraft. Using the
+percentages in the second column estimate the low, high, and average mission
+operations costs per year. A more detailed ops cost model is available on-line from
+the Johnson Space Center home page, http:/Awww.jsc.nasa.gov/bu2/SOCM/
+SOCM.html
+
+Spacecraft plus Payload % of Theoretical Estimated Mission Operational
+Theoretical First Unit First Unit Cost Per Cost per Year for FireSat
+Cost Category Year for Mission Ops ($M FY99)
+
+Traditional > $5M (FY99) 1-5 (average 3) 0.9-4.3 (average 2.7)
+Low Cost < $5M (FY99) 3-12 (average 8)
+
+In order to refine the estimate obtained from Table 14-8, you can assess overall
+complexity of the mission systems using Tables 14-4 through 14-7. If your assessment
+results in amore complex mission, a higher percentage should be used from the second
+column of Table 14-8. A lower percentage would be used for a less complex mission.
+
+14.3 Estimating the Size and Cost of Mission Operations 615
+
+One of the most important operational issues is whether support is required around
+the clock or only 40 hours per week. If the mission is designed with this in mind such
+that continuous operational support is not required, then personnel costs can be
+reduced by a factor of 4 or more. If continuous support is required to meet specific
+mission needs, we must then determine whether 4 or 5 operations teams are needed,
+based on the assessment in Table 14-9. Finally, we multiply the number of teams times
+the number of people per team to get the total operations personnel for the mission.
+This should be done separately for each of the major mission phases, since some
+phases may be much more operations intensive than others.
+
+TABLE 14-9. Operations Concept Using Four and Five Teams. Typically we arrive at a staff-
+ing solution employing between four and five teams, giving duties besides space-
+craft operations to the fifth team.
+
+Number of | Standard Required Management
+Teams hr/yr/team hr/yriteam Concern
+4 190 hr/yr/team Highly sensitive to personnel
+Overtime Wages | absence and turnover
+1,752 248 hr/yr/team Increased number of people to
+Available Labor | train and manage
+TABLE 14-10. Relative Cost of Mission Operations Functions. The cost of each function is
+given as a percentage of the average annual operations cost for that mission. Data
+
+is from CSP Associates [1999]. Note that the functional breakdown differs slightly
+from that of Fig. 14-1 due to the categories in which data was collected in the CSP
+
+study.
+Development Annual Operations
+
+Low | Typical | High | Low | Typical | High
+(%) | (%) | (%) | (%) (%) (%)
+
+ee
+
+3. Command Management
+
+5. Data capture
+
+6. Navigation
+
+re]
+[7 Spcecat aigananayss | © |
+Sines panirgarderanss | 0 |
+a ee
+fons i |
+
+P|
+
+P|
+
+11. Systems engineering, integration, & test
+12. Computers and communications
+TOTALS
+
+
+616 Mission Operations 14.4
+
+Other, more elaborate cost models have been developed to predict operations costs.
+One model, based on estimating the value ranges of 91 operations complexity factors
+that correspond closely to the factors in tables 14-4 through 14-7, successfully pre-
+dicted ops costs to within 25% for 13 out of 14 scientific mission case studies
+{Carraway, 1994, 1996]. NASA has also recently developed a Space Operations Cost
+Model that has operations cost estimation modules for planetary and Earth orbiter
+missions, orbiting space facilities, launch system ops, and human spaceflight (lunar/
+Mars) mission operations.
+
+14.4 Automating Spacecraft and Ground Operations Functions”
+
+As discussed in Secs. 2.1.2, 11.7 and Chap. 23, continuing technology advances in
+spacecraft computing and memory capacity, together with improved software capabil-
+ities, are now making it possible to do things on board the spacecraft that people on
+the ground have done. Some examples are
+
+¢ Monitoring alarms
+
+* Managing spacecraft resources
+
+¢ Analyzing performance and trends
+
+¢ Onboard navigation and orbit control
+
+¢ Adaptively planning activities
+
+¢ Processing payload data
+
+¢ Detecting faults—safing the vehicle—recovering from failures
+* Adaptively capturing and downlinking data
+¢ Constraint checking commands
+
+* Mining data
+
+¢ Archiving data
+
+Migrating these functions from the ground to the spacecraft can save a lot of money
+by reducing ground operations tasks and the need for continuous staffing and fast
+response from the operations team. It can reduce the amount of routine data we must
+transmit over expensive space communication links, process on the ground, and
+analyze. Processes performed on the spacecraft can use timely data, free from delays
+in space communication links and uncorrupted by transmission errors.
+
+It’s helpful to distinguish four levels of autonomy. The first level of autonomy is
+onboard closed-loop processes. Examples might be closed-loop thermal control,
+momentum management, attitude control, and even navigation and orbit control. The
+second level of autonomy is the ability of a spacecraft to execute planned events with-
+out human intervention via a stored onboard sequence of timed commands. At the
+
+* This section discusses general characteristics of autonomy, not necessarily related to reducing
+mission cost. Sec. 2.1.2 discusses the use of autonomy to reduce cost. Sec. 11.7 discusses the
+specific example of autonomous navigation and orbit control as a means of reducing both cost
+and risk. Finally, Sec. 23.3 discusses implementing the concept of “autonomy in moderation”
+for general spacecraft functions to reduce cost and risk.
+
+14.4 Automating Spacecraft and Ground Operations Functions 617
+
+third level of autonomy, the spacecraft can react to unplanned events through event-
+driven rules. At the fourth level of autonomy, spacecraft react to unplanned events not
+just by executing rules but by using forms of onboard intelligence, inference engines,
+and planning agents.
+
+Most spacecraft have level 1 autonomy and exploit onboard control loops. Most
+spacecraft have level 2 autonomy and can execute pre-planned sequences by using
+time-tagged commands referenced to their own clocks. Many spacecraft have level
+three autonomy in that they can sense and respond to unplanned hardware failure
+events by executing fault response rules that switch them to safe modes or that auton-
+omously reconfigure the spacecraft to backup, redundant hardware components. Some
+spacecraft go beyond just hardware failure event response and have the capability to
+execute rule-based responses to payload-sensor events as well. Spacecraft are testing
+out level 4 autonomy by flying software that will perform autonomous onboard
+adaptive planning and resource management. Deep Space 1 has onboard intelligent
+agent software and Europa Orbiter will fly an adaptive, prioritized goal achieving ex-
+ecution engine.
+
+Autonomy can enhance mission capabilities but it may not always reduce opera-
+tional costs. Onboard control loops can require extra operations attention to the
+performance of flight software and management of flight computer resources. The cre-
+ation of sequences or activity plans may require many people on the ground to plan,
+model, implement, constraint check, simulate, approve, uplink, and enable. If so,
+they’ ll end up being more expensive than a set of commands a small operations staff
+uplinks in joystick mode in real time. Fault protection rules onboard can require large
+teams to design and to then analyze the causes and results when they trigger. The cost
+of programming, “training”, performance monitoring, and trouble shooting an intelli-
+gent agent can easily be underestimated. For a given mission, we can evaluate the
+cost/benefits of each of the four levels of autonomy in terms of several specific oper-
+ational cost savings by answering the following questions.
+
+Does it reduce the number or complexity of tasks that must be performed by ground
+operators? If the net number or complexity of tasks performed by operations goes
+down (after considering the additional operational tasks required to program, main-
+tain, analyze, and trouble shoot the autonomy), then spacecraft autonomy can be
+justified in terms of ops cost savings.
+
+Does it allow an increase in the time between spacecraft contacts? How long a
+spacecraft can go routinely unattended can depend heavily on the amount of onboard
+autonomy. The longer a spacecraft can go without ground interaction the more signif-
+icant staffing cost savings may be by enabling single-shift rather than around the clock
+operations. The plan for the Pluto Express spacecraft during its nine year cruise to
+Pluto, is to have lights out operations (i.e., no activity) for 12 out of every 14 days.
+
+Does it reduce the number of commands that we must routinely uplink? A space-
+craft that can expand commands on board, use a high-order command language, or
+respond to goal-oriented commands can be cheaper to operate than a spacecraft that
+must be controlled by primitive, device level commands.
+
+Does it reduce the amount of engineering and performance data that we must rou-
+tinely downlink, process, and analyze on the ground? Spacecraft designed to do their
+own onboard monitoring, trending, compressing, summarizing, and archiving of engi-
+neering data can substantially reduce communication costs as well as the quantity of
+data that operations must deal with on the ground. Remember that spacecraft autono-
+my can add its own performance data to the set that must be routinely downlinked to
+
+618 Mission Operations
+
+the ground. The Pluto Express spacecraft is being designed to downlink only about 2%
+of the total engineering data that it will collect during cruise. The 98% that won’t be
+routinely downlinked will be stored on the spacecraft in an onboard engineering data
+archive and will be downlinked only in the event of a spacecraft performance anomaly.
+
+Does it reduce the amount of payload data that we must routinely downlink,
+process, and analyze on the ground? This question suggests that all things being equal,
+payload autonomy can reduce ops costs if it returns fewer telemetry bits while accom-
+plishing the same mission goal. For FireSat, the least autonomous mode is to return all
+the data being captured by the payload sensor. A more autonomous mode would be to
+have the spacecraft decide when it was over the ocean and omit that data. An even
+more autonomous mode would include onboard detection of fires, and the data down-
+linked would be only the fire’s location and extent.
+
+Each mission will have different answers to these autonomy questions. You must
+analyze each mission’s cost vs. benefit in deciding what spacecraft autonomy capabil-
+ities make sense. Autonomy can require additional spacecraft resources such as mass,
+power, memory, MIPS and data bus bandwidth, and the cost of these must be account-
+ed for. Developing, testing, and validating flight software isn’t cheap. You must
+compare cost increases for development and maintenance with operational cost sav-
+ings. This trade may not be favorable for short missions or single spacecraft but may
+have high payoff for long duration missions or constellations. The cost and availability
+of space communication services and for transporting and managing data on the
+ground can also influence autonomy decisions.
+
+References
+
+Bloch, J., et al. 1994, “The ALEXIS Mission Recovery.” Paper No. AAS 94-062, in
+Advances in the Astronautical Sciences: Guidance and Control 1994, R.D. Culp
+and R. D. Rausch, eds., vol. 86, pp. 505-520.
+
+Boden, Dary] G. and Wiley J. Larson. 1995. Cost-Effective Space Mission Operations.
+New York: McGraw-Hill, Inc.
+
+Cameron, G. E., J. A. Landshof, and G. W. Whitworth. 1994. “Cost Efficient
+Operations for Discovery Class Missions.” In Third International Symposium on
+Space Mission Operations and Ground Data Systems, NASA Conference Proceed-
+ings 3281, Greenbelt, MD, November 15-18, pp. 809-816.
+
+Carraway, John. 1994. “Lowering Operations Costs Through Complexity Metrics.”
+Presented at Space Ops ‘94, Greenbelt, MD, November 15.
+
+Carraway, John, and Gael Squibb. 1996. “Spacecraft Autonomy Metrics.” Paper No.
+IAA-L-0302P, presented at the IAA Conference, JHU Applied Physics Lab,
+Laurel, MD, April.
+
+Carraway, John, et al. 1996. “Application of Operations Concepts Methodology to
+Low Cost Planetary Mission Planning, Design, and Operations.” Paper No. IAA-
+L-0504, presented at the IAA Conference, JHU Applied Physics Lab, Laurel, MD,
+April.
+
+References 619
+
+Carraway, John, and Gael Squibb. 1996. “Autonomy Metrics.” Paper No. SO96.6.09,
+presented at Space Ops ‘96. Munich, Germany, September.
+
+Carraway, John. 1995. “Assessing Operations Complexity.” Chapter 5 in Cost-
+Effective Space Mission Operations, Dary] G. Boden and Wiley J. Larson, eds.,
+New York: McGraw-Hill, Inc.
+
+CSP Associates. 1999. GSFC Ground Systems Cost Model Study; Final Results:
+Phases I, IT, and II. February 9. Cambridge, MA.
+
+Davis, G. K. 1990. “NOAA Spacecraft Operations—An Operators Perspective.”
+Paper No. 90-0322 presented at the 28th Aerospace Sciences Meeting, Reno,
+Nevada, 8-11 January.
+
+Hughes, P. M., G. W. Shirah, and E. C. Luczak. 1994. “Using Graphics and Expert
+System Technologies to Support Satellite Monitoring at the NASA Goddard Space
+Flight Center.” In Third International Symposium on Space Mission Operations
+and Data Systems, NASA Conference Proceedings 3281, Greenbelt, MD, Novem-
+ber 15-18, pp. 707-712.
+
+Jeletic, J. F, 1990. “Computer Graphics Aid Mission Operations.” Aerospace America.
+28(4): 28-32.
+
+Landshof, J.A., R. J. Harvey, and M. H. Marshall. 1994. “Concurrent Engineering:
+Spacecraft and Mission Operations System Design.” Third International
+Symposium on Space Mission Operations and Data Systems, NASA Conference
+Proceedings 3281, Greenbelt, MD, Nov. 15-18, 1994, pp. 1391-1397.
+
+Ledbetter, K. W. 1995. “Mission Operations Costs for Scientific Spacecraft: The Rev-
+olution That is Needed.” Acta Astronautica, vol. 35, pp. 465-473.
+
+Mandl, D., J. Koslosky, R. Mahmot, M. Rackley, and J. Lauderdale. 1992. “SAMPEX
+Payload Operations Control Center Implementation.” In Second International
+
+Symposium on Space Mission Operations and Data Systems, Proceedings JPL
+93-5, November 16-20, pp. 63-68.
+
+Marshall, M. H., G. E. Cameron and J. A. Landshof. 1995. “The NEAR Mission
+Operations System.” Acta Astronautica, vol. 35, pp. 501-506.
+
+Marshall, M. H., J. A. Landshof and J.C. van der Ha. 1996. “Reducing Mission Oper-
+ations Cost.” Chapter 6 in Reducing Space Mission Cost, James R. Wertz and
+Wiley J. Larson, eds. Torrance, CA and Dordrecht, The Netherlands: Microcosm
+Press and Kluwer Academic Publishers.
+
+Mazza, C. 1987. “Data Processing Systems at ESOC.” Journal of the British Inter-
+planetary Society. 40 (6).
+
+Roussel-Dupre, D., et al. 1994. “On-Orbit Science in a Small Package: Managing the
+ALEXIS Satellite and Experiments.” In SPIE Proceedings of Conference on Ad-
+vanced Microdevices and Space Science Sensors, San Diego, CA, July 28-29, vol.
+2267, pp.76—89.
+
+620 Mission Operations
+
+Squibb, Gael. 1995. “Developing a Mission Operations Concept.” Chapter 4 in Cost-
+Effective Space Mission Operations, Daryl G. Boden and Wiley J. Larson, eds.
+New York: McGraw-Hill, Inc.
+
+van der Ha, J. C. 1992. “Implementation of the Revised HIPPARCOS Mission at
+ESOC.” ESA Bulletin No. 69, February, pp. 9-15.
+
+Wall, Stephen D. and Kenneth W. Ledbetter. 1991. Design of Mission Operations
+Systems for Scientific Remote Sensing. London: Taylor & Francis.

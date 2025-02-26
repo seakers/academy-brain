@@ -1,0 +1,2528 @@
+
+Chapter 16
+Spacecraft Computer Systems
+
+L. Jane Hansen, HRP Systems
+Robert W. Hosken, The Aerospace Corporation
+Craig H. Pollock, TRW, Inc.
+
+16.1 Computer System Specification
+Requirements Definition; Processing Architecture;
+Computer System Requirements; Baseline Definition
+Expansion, Methods for Tolerating Faults
+
+16.2 Computer Resource Estimation
+Defining Processing Tasks; Estimating Software Size
+and Throughput; Computer Selection Guidelines;
+Integration and Test; Life-Cycle Support
+
+16.3 FireSat Example
+FireSat Attitude Control Processing; FireSat
+Onboard Payload Processing; Spacecraft and
+Payload Processing Consolidation and Effort
+Estimation
+
+Mission-supporting computer systems include the computers onboard the space-
+craft, as well as those on the ground, as illustrated in Fig. 16-1. On board the
+spacecraft, computers have become an integral part of the overall system, as well as
+being part of most spacecraft subsystems. Ground station computer systems are used
+to support daily operations after launch, and may be derived from systems originally
+used for developing and testing space-based elements. Thus, computer systems cross
+traditional subsystem and organizational boundaries.
+
+In previous chapters we have described the various spacecraft subsystems. Through
+spacecraft evolution, most subsystems now contain elements of a computer system as
+shown in Fig. 16-2. This means that the computer system resource estimation process
+takes on a larger scope than in the past. In this chapter we discuss how to generate
+computer system resource estimates, refine the computer system requirements, esti-
+mate the effort in terms of resources, and define the tasks associated with developing
+computer systems onboard the spacecraft. Additionally, we will briefly examine the
+requirements for ground-based computer systems throughout the life-cycle develop-
+ment process.
+
+As outlined in Table 16-1, we discuss the iterative process used to estimate
+computer resources, based on mission requirements. We will accomplish this by first
+discussing the computer system specifications and the task of creating a baseline
+computer system from top level requirements. Figure 16-3 shows that the computer
+
+645
+
+646 Spacecraft Computer Systems
+
+Attitude Sensor Payload Sensor
+Computer
+
+Spacecraft
+Computer
+
+sasaet Space-Based
+Network
+Processing and
+Housekeeping
+
+a
+3
+Interactive
+Interface a
+Ground- B Development
+Station 5 & Testing Target
+Processing | Facility ~~ | Processor
+Post- Center i} Processing
+Processing a Center
+Q oH B
+§
+Operations Development
+
+Fig. 16-1. Mission Computer Systems. Notice that there are many interfaces and managing
+their compatibility is critical to reducing cost and risk. Also, notice that the develop-
+ment tools and environment required to build, integrate, and test the computer
+hardware and software are included as part of the mission computer system.
+
+Spacecraft
+
+Command
+Power Thermal Attitude Navigation and Data
+Control Solutions Handling
+
+Management Control
+Ch. 11.3
+
+[J = Computer System Components
+
+Fig. 16-2. Computer Systems Break Traditional Subsystem Boundaries. Today computer
+systems are an integral part of nearly every subsystem on board the spacecraft. In
+some cases, subsystems do not use computers if they are not required to meet
+mission requirements. However, in most cases, the task of defining computer system
+requirements and associated costs takes on a larger scope than in the past.
+
+647
+
+TABLE 16-1. Computer Systems Development Process. This iterative process defines top-
+level requirements during a program’s concept through development phases.
+
+Process Step Where Discussed
+
+Define Requirements
+~ Evaluate Mission Objectives Chaps. 1, 4, Secs. 16.1.2, 16.1.3
+~ Perform Functional Partitioning Chap. 4, Sec. 16.1.1
+
+Allocate Top-Level Computer Requirements
+— Evaluate Candidate Architectures
+— Perform Functional Flow Analysis
+— Evaluate Fault Protection
+— Establish System Baseline
+
+Define Computer System Requirements
+— Define Processing Tasks
+~ Establish Computer Size and Throughput Estimates
+— Select Software Language
+~ Select Hardware Instruction Set Architecture
+— Select Target Hardware and Supplier
+
+Define Development and Support Environment
+— Establish Development and Control Process Secs. 16.2.2, 16.2.5
+~ Identify Required Support Tools Secs. 16.2.4, 16.2.5
+— Establish Test and Integration Approach Sec. 16.2.4
+~ Estimate Life-Cycle Costs Sec. 16.2.5
+
+Document and Iterate
+
+system baseline includes hardware, software, and documentation. Next, we will eval-
+uate the resources required to achieve the baseline system. This includes hardware and
+software, as well as life-cycle support equipment. Finally, we will use the FireSat
+example to clarify some of the key components and concepts of the estimation process.
+Table 16-2 provides definitions for terms frequently used in estimating computer
+system resource requirements.
+
+In designing computer systems for space applications, we want to optimize the
+availability, capability, flexibility, and reliability of the system while minimizing cost
+and risk. Our objective is to meet the system and mission requirements, whether the
+resulting system is on the ground, in space, or distributed between the two. As mission
+objectives expand, we must blend complex hardware and software to meet them. An
+increase in system complexity leads to an exponential increase in the associated test-
+ing. We strive to keep the computer systems simple at the lowest level, while building
+up the capabilities to meet the top-level mission requirements.
+
+The primary design drivers used to measure our success in optimizing the computer
+system design, are shown in Table 16-3. Mission requirements, shown on the left,
+typically dictate the system-level drivers, shown in the next column. These flow down
+to the subsystems where we establish driving requirements for computation. Finally,
+logistics support personnel set down the additional requirements which we feed back
+against the computer and system-level drivers, helping to manage the overall design
+process. We weight each of the design drivers based on mission objectives and con-
+straints. Again, this iterative process requires multi-discipline participation and often
+crosses traditional subsystem and organizational boundaries.
+
+648 Spacecraft Computer Systems
+
+ee
+0°20
+Computer System
+
+Hardware Documentation
+c, 1 Software
+O-oy a
+
+ie}
+
+° Hardware Configuration
+
+item (HWC))
+* Computer Board e Requirements Specification
+e Computer Chip Set/ « Design Documents
+shat rable Logie . Computer Software * Detailed Design Documents
+omponents/Discrete omgaration hem * Interface Control Documents
+Components (CSCls) (ICDs)
+e Data Bus ¢ Computer Software
+
+Components (CSCs)
+e Computer Software Unit
+
+Fig. 16-3. Hierarchy of Elements in a Computer System. Computer systems consist of hard-
+ware, software, and their interface definitions and documentation. Hardware and Soft-
+ware components are in a hierarchy, building to the final configuration item—either
+hardware or software. Documentation also has a hierarchy, but it starts with top-level
+requirements and leads to increased implementation detail.
+
+TABLE 16-2. Definitions Associated with Computer Systems. Often when discussing
+computer system design and development we use terms which have a specific
+meaning to those involved in the discipline.
+
+Embedded Systems A built-in processor, providing real-time control as a component
+of a larger system, often with no direct user interface.
+
+Real-Time Processing Handling or processing information at the time events occur or
+when the information is first created. Typically, embedded or
+onboard processing is real-time.
+
+Hard Real-Time Requiring precise timing to achieve their results, where missing
+the time boundary has severe consequences. Examples include
+attitude control software and telemetry downlink. (For more
+information see Stankovic and Ramamritham [1988].)
+
+Soft Real-Time Requiring only that the tasks are performed in a timely manner,
+the consequences of missing a time boundary are often
+degraded, but continuous, performance. Examples include orbit
+control software and general status or housekeeping.
+
+Operating System Software | Manages the computer's resources such as input/output
+devices, memory, and scheduling of application software.
+
+Application Software Mission specific software which does work required by the user
+or the mission rather than in support of the computer.
+
+
+16.1 Computer System Specification 649
+
+TABLE 16-3. Design Drivers for Computer Systems. These are factors that we evaluate
+throughout the design process. When flowing down mission requirements, includ-
+ing system level processing requirements, we must be careful to design hardware
+and software with the “ilities” in the fourth column in mind.
+
+System Level
+Mission Processing Computer Level Additional
+Requirements Requirements Requirements Requirements
+
+* Customer Needs ¢ Functional Capabilities | * Throughput ¢ Testability
+— Military * Processing Partitioning | * Memory * Feasibility
+7 scien - Seucceratt * Radiation Hardness |+ Usability
+
+¢ Number of Satellites ~ Onboard vs. * Development Tools ‘| * Reliability
+- Single Ground ° COTS Software ¢ Flexibility
+— Multiple * Physical availability * Maintainability
+— Constellation Characteristics ¢ Emulator / * Interchangeability
+
+* Number and — Size Engineering Model |. Replaceability
+Location of Weight availability
+Ground Stations Power
+
+* Level of Autonomy Temperature
+
+* Security Radiation
+Requirements ¢ Command Protection /
+
+* Programmatic Encryption
+
+Issues
+
+— Cost
+
+- Schedule
+— Risk
+
+16.1 Computer System Specification
+
+Chapter 4 discusses how to determine system requirements and allocate them to
+subsystems. Through that process, we identify operational modes for the spacecraft
+bus and payload, allocate top-level requirements to the computer system (among other
+spacecraft elements), and define the subsystem interfaces. Defining requirements for
+the computer system begins with these results. To arrive at a baseline computer
+system, we:
+
+1. Allocate mission and system requirements to computer systems, detailing the
+computer system requirements
+
+2. Define the computer system’s operational modes and states, based on the com-
+puter system requirements
+
+3. Functionally partition and allocate the computational requirements to space or
+ground, payload or spacecraft, individual subsystems, and to hardware or
+software
+
+4. Evaluate the internal and external interfaces (analyze data flow), while evaluat-
+ing the candidate architectures iteratively
+
+5. Select the baseline architecture
+
+6. Form the baseline system specification from the architecture, modes and states,
+and system level requirements
+
+The first four steps typically occur before the System Requirements Review. We
+usually complete steps 5 and 6 by the Preliminary Design Review.
+
+650 Spacecraft Computer Systems 16.1
+
+Revisiting and iterating between steps occurs frequently because requirements are
+often contradictory, especially in the early design stages. Requirements can also be
+unreasonable or too narrow in scope. For example, if we determine that the star tracker
+must have a specified level of accuracy on its own to meet pointing or mapping
+requirements, without synergy that might come from other ACS sensors such as Earth
+sensor or gyro, we might overspecify the star tracker. By using an iterative process, we
+can correct contradictory computer requirements and question the validity of others.
+An assumption made by one subsystem to reduce their complexity may increase the
+complexity and cost for another subsystem dramatically. Often, a compromise
+solution is needed.
+
+16.1.1 Requirements Definition
+
+As with all subsystems, poor computer system requirements definition results in an
+inferior product; erroneous requirements are very expensive to correct. (See Kaner
+et al. [1993] for more information.) Thus, requirements have high leverage—a small
+improvement early avoids many problems later [Vick and Ramamoorthy, 1984;
+Boehm, 1984]. Defining system requirements is difficult, subjective, and time
+consuming. One approach to doing this is to study a set of questions, such as those
+shown in Table 16-4, which will motivate needed trade studies.
+
+TABLE 16-4. An Approach to System Requirements Definition. General questions which we
+ask in all aspects of life can be directly applied to computer system requirements
+derivation by evaluating the specific parameters listed below. (These questions
+are based on work by R. Holmes, S. Jacobs, and R. Lane of TRW.)
+
+Questions to Ask Parameters to Review
+
+What must the system do? Evaluate and establish basic functional requirements.
+
+Why must it be done? Establish traceability from functions to mission objectives. Be
+
+sure to challenge the requirements and assess their validity.
+
+Evaluate candidate architectures and understand the
+implications of interfaces in the data flow diagrams.
+
+How can we achieve it and
+what are the alternatives?
+
+What functions can we allocate
+to parts of the system?
+
+Perform functional partitioning to development block
+diagrams.
+
+Determine if the value of state-of-the-art technology outweighs
+the risk. Look for data flow bottlenecks and reallocate
+functions to evenly distribute the data flow. Review baseline
+block diagrams for potential holes.
+
+Are all functions technically
+feasible?
+
+Is the system testable? Develop nonintrusive testing which will ensure that the system
+will meet mission objectives. Are test points available outside
+
+the system for easy “black-box” testing?
+
+To define requirements for a computer system, it is convenient to develop a
+computer system state diagram. The state diagram shows valid states of the system
+(such as “off” or “initialized”) and the conditions required to achieve them, often
+based on mission requirements. The computer system states and state transitions must
+be consistent with its allocated requirements and the mission concept of operation.
+(See Chap. 14.) Figure 16-4 is an example of a simple state diagram for a computer
+system, showing the general states and the source of their transitions. On and off are
+the obvious first choices for system states. Even when a system must be on at all times,
+
+16.1 Computer System Specification 651
+
+we should consider having an off state to allow graceful degradation if the system were
+to shut down for some reason. Other states relate to what the system must do and can
+include related transitions. For a specific mission and mission requirements we might
+have several substates in place of one state shown in Fig. 16-4. Or we might not have
+a state shown in the figure if it’s not applicable to our mission. For example, several
+fail-safe conditions will be associated with the error contingency state shown. How-
+ever, it will be implemented differently for each specific spacecraft based on mission
+
+requirements and mission phase.
+Launch
+Standby
+
+Failure
+
+Orbit
+Insertion
+or Travel
+
+Prelaunch
+Initialize
+
+Resolved
+
+Failure
+
+——™~, - “
+Hard rror
+Failure a __
+Resolved
+Checkout
+
+Fig. 16-4. Typical State Transition Diagram for an Onboard Computer System. The state
+diagram shows the valid states of the system and the conditions needed to achieve
+each state.
+
+On-orbit
+On-station
+
+When developing the state diagram for a spacecraft computer system, we must keep
+in mind implications for the ground system. Complex state transitions influence
+ground station software that deals with the spacecraft’s limitations and constraints.
+Other organizations which define the spacecraft and the ground station need to help
+diagram the states for the spacecraft computer system.
+
+Functional Partitioning
+
+Functional partitioning is a structured methodology which begins with decom-
+posing requirements into their lowest functional component and ends in the creation
+of multiple candidate architectures. This method allows us to group similar functions
+in subsystem definitions without unnecessary influence from traditional subsystem or
+organizational boundaries. The processing for a spacecraft system is usually
+partitioned between various processors in space and on the ground. This allocation of
+processing or functional partitioning is performed after the major processes have been
+determined and estimates of the processing time lines, or at least the time dependen-
+cies, are available.
+
+The top-level considerations which determine where the processing will be
+performed to meet the system performance requirements (both technical and program-
+matic) are presented in Table 16-5.
+
+16.1.2 Processing Architecture
+
+An architecture is a framework for developing a computer system. We mold it to
+meet mission requirements and operational needs, creating a baseline system. The
+architecture shows us the system’s parts and how they interact through a block
+diagram. Architecture studies for computer systems must address the top-level
+
+652 Spacecraft Computer Systems 16.1
+
+TABLE 16-5. Functional Partitioning Requirements for Spacecraft Computer Processing.
+We partition functions in a general sense using mission timelines as the starting
+point. We must partition functions to various processors and subsystems so that
+each element of the system maintains an acceptable level of complexity. A large
+increase in the complexity of any element will greatly impact our test requirements.
+
+Perform Processing in Space Perform Processing on Ground
+
+¢ When human interaction with processing is
+necessary
+¢ When the downlink bandwidth is satisfactory
+
+* When processing delays would be
+intolerable
+
+¢ When needed to make downlink bandwidth
+
+feasible (This case is treated for the FireSat
+
+example in Sec. 16.3)
+
+Perform Processing In Hardware Perform Processing in Software
+
+¢ When very high performance is needed ¢ When processing complexity exceeds that
+
+¢ When well-defined, inexpensive hardware available in hardware
+for the process is available ¢ When changes in processing need to be
+made after hardware is acquired
+
+* When expensive, custom hardware can be
+replaced by software
+
+¢ When there is considerable unused computer
+capacity
+
+Allocate Processing Between Do Not Allocate Processing Between
+Spacecraft Bus and Payloads Spacecraft Bus and Payloads
+
+* When payload processing is distinctly * When payload processing is minima!
+
+different from spacecraft bus processing
+Do Not Allocate Processing Along
+Organizational Lines
+
+* When payload performance accountability is
+¢ When the project is small enough that there
+
+Critical
+is a single organization with strong top-down
+authority
+« When subsystems are so complex that
+specific disciplines and experienced
+organization personnel are required.
+
+Allocate Processing Along
+Organizational Lines
+
+¢ When there are geographical or other
+impediments to effective inter-organizational
+communication
+
+¢ When there are standard subsystems and
+
+accurate interface control documents which
+
+are typically managed within a defined
+
+organization
+
+block diagram, the data architecture, the hardware architecture, and the software
+architecture. Data architecture addresses the physical structure of the data network or
+bus, as well as the protocol or logical interaction across the bus. A protocol is a set of
+rules for sending data between computers, or between computers and peripherals. The
+hardware architecture defines the instruction set architecture (ISA) and the functional
+elements that are available in hardware. (For more information on hardware architec-
+tures see Hennessy and Patterson [1995].) Finally, the software architecture defines
+how the processing instructions execute. Software processing can function as a single
+thread, executing from top to bottom, repetitively, or as scheduled modules, where
+processing order is based on major and minor frames. Alternatively, software process-
+ing can be event driven, where interrupt service routines preempt normal execution in
+a deterministic way when hardware interrupts occur.
+
+Tables 16-6 through 16-9 illustrate various system level and data architectures
+which we can use in their entirety or combine into a hybrid to meet the mission
+requirements. Along with a block diagram and brief description of each, a short list of
+
+16.1 Computer System Specification 653
+
+positive and negative attributes have been listed in the tables. By using a hybrid system
+architecture, we can combine the positive attributes of several of the architectures
+while eliminating or reducing the risk associated with the negative attributes.
+
+TABLE 16-6. Centralized Architecture. A Centralized Architecture has point-to-point interfaces
+between processing units and a single management computer, or central node,
+
+or hub.
+
+Star
+Tracker
+
+Thrusters
+
+PROs
+
+¢ Works best with a few, well-defined systems
+which all interface directly, and only, with the
+central computer.
+
+¢ Highly reliable architecture where failures
+along one interface will not affect the other
+interfaces.
+
+CONs
+
+¢ To add a new node requires both hardware
+and software changes in the central node.
+
+¢ Wiring harnesses become large because
+each node has duplicate transmission wires
+if data are sent to multiple receivers.
+
+TABLE 16-7. Ring Architecture (Distributed). The distributed ring architecture establishes a
+way to arbitrate information flow control as the data are passed in a circular pattern.
+
+Star Earth
+Tracker Sensor )
+
+Acceler-
+ometer
+
+Thrusters
+
+Central
+Processor
+PROs
+
+* Wiring harnesses are smaller and can be
+distributed throughout the spacecraft
+structure.
+
+* Limited impact to central processor as we
+add new nodes.
+
+Packets of data containing the same
+information can be passed from a single
+point (server) one time, and received by
+multiple clients nearly simultaneously.
+
+CONs
+
+* Less reliable since each node is in-line and
+thus required to achieve transmission to the
+next node. :
+
+
+654 Spacecraft Computer Systems 16.1
+
+TABLE 16-8. Bus Architecture (Federated). A federated bus architecture uses a common data
+bus with all processors sharing the bus. This encourages the use of standard
+protocols and communication schemes for all nodes.
+
+Central
+Processor
+Acceler-
+
+ometer
+
+The bus architecture can be a “backplane” or
+a coaxial cable. In a way this is a hybrid of
+the centralized and distributed architectures.
+
+Earth
+Sensor
+Star
+Tracker
+co
+
+PROs CONs
+
+* All components must be developed with a
+specific interface—physically as well as
+
+Some bus systems use a command
+response protocol with a single subsystem
+in charge of communications.
+
+(for example, MIL-STD-1553B)
+
+Some bus systems rely on traffic arbitration
+mediated by the protocol itself.
+
+(for example, TCP/IP)
+
+¢ Data transmissions are deterministic which
+reduces test and trouble shooting time while
+increasing reliability.
+
+electrically.
+
+TABLE 16-9. Bus Architecture (Distributed). A distributed architecture uses multiple “like”
+processors to execute all software on an as-needed basis.
+
+Central
+Processor
+#1
+
+Earth Sensor
+Front end
+
+Central
+Processor
+#N
+
+Star Tracker
+Front-end
+
+Accelerometer
+Front-end
+
+Thrusters
+
+PROs
+
+* Highly reliable system because multiple
+processing units can be used to execute
+software as needed.
+
+All software is resident in the nonvolatile
+memory. During various mission phases the
+software components which are executing
+may be different than those executing during
+other mission phases. This system
+architecture provides a high level of
+redundancy.
+
+The central processors may be used to
+perform “data processing” functions for the
+sensor front-ends and/or the actuator back-
+ends, as required.
+
+A Standard bus architecture and protocol
+may be used as illustrated in the distributed
+bus architecture.
+
+CONs
+
+¢ More complex testing is required because the
+
+system can reconfigure itself as software
+modules are allocated to processing
+resources.
+
+
+16.1 Computer System Specification 655
+
+We next analyze the flow of data to determine how to manage interfaces between
+components. We want clean, simple interfaces—a data path is inefficient and slows
+down the flow if it calls for data to pass through a component without being examined
+or used [Yourdon, 1989].
+
+After partitioning functions, performing trades, evaluating the data architectures,
+and analyzing data flow, we can develop a block diagram for the computer system.
+The system block diagram illustrates how we implement an architecture, showing
+types and numbers of processors and networks, including topology and protocol when
+reasonable. It provides a point of departure for developing more detailed software,
+hardware, and interface requirements. We select an architectural baseline from among
+the candidates, shown in Table 16-6, by asking the questions listed in Fig. 16-5.
+
+Select a Candidate
+Architecture
+
+Does this
+architecture meet the
+mission objectives?
+
+Is this architecture
+overly complex?
+Is it efficient?
+
+Does this
+architecture provide for
+clean interfaces?
+
+the system within this
+architectural structure?
+
+Can we
+maintain the system
+within this architectural
+
+No structure?
+
+Yes
+Establish Baseline
+Architecture
+
+Fig. 16-5. Questions Used in Selecting the Architectural Baseline. These questions, when
+applied to the various architectures we are trading for a specific set of mission require-
+ments, will lead us to an optimized architecture which effectively meets our specific
+needs. Once each of these questions has been successfully answered, we have
+selected a baseline architecture.
+
+
+656 Spacecraft Computer Systems 16.1
+
+To clarify the hardware and software architecture issues, consider the example of a
+personal computer. Figure 16-6 shows the general components in the hardware
+architecture diagram. It contains a central processing unit (CPU), memory, and
+input/output (I/O) devices. The memory stores executable program code and data.
+Random access memory (RAM) does not retain information when we turn off the
+computer. Programmable read only memory (PROM) provides nonvolatile storage
+which retains information when not powered. In the simplest form, we input only from
+a keyboard and output only to a monitor. More complex forms may connect many
+input or output devices to the basic system.
+
+Hard Disk
+¢ Executing * Copy of
+
+Program Program
++ |+ Stored
+Programs
+¢ Stored Data
+
+¢ Logic
+« Mathematics
+
+Output
+
+Keyboard
+or Mouse
+
+Fig. 16-6. Personal Computer Architecture. The PC architecture shown here includes the var-
+ious components discussed in the text. The inputs come from the keyboard or mouse
+and can be service either through an interrupt service routine (ISR) or through a poll-
+ing scheme. The processing occurs in the CPU and uses the RAM as a “scratch pad”
+for computation. (This formulation is due to S. Glaseman of The Aerospace Corp.)
+
+A personal computer used as a word processor illustrates the different software
+architectures which we might select, as well as the basic concepts for sizing computer
+systems and estimating throughput. The operator using the word processor will input
+data from the keyboard. The computer system software might recognize that an input
+has been made by receiving an interrupt from the keyboard each time a key is stroked.
+Alternatively, the computer system software might poll the keyboard at a specified
+rate, looking for a keyboard stroke to occur. The first approach illustrates event driven
+software architecture while the second is a scheduled software architecture. When
+using an event driven approach, we must be sure that we prioritize each event properly
+and define carefully the amount of time required to “service” the event or interrupt.
+When using a scheduled approach, we must be sure that the internal clock has enough
+resolution to accommodate the various scheduled rates. If the clock is set or reset by
+an external source, we must ensure that all software will continue to operate even with
+discontinuities in the time (such as, if time moves backwards when the clock resets).
+
+Now, assume an operator types at most 100 words (600 characters) per minute. We
+can define 256 unique states on a typical keyboard, so a byte (8-bits) can represent all
+possible characters. Multiplying 8 bits per character by 600 characters per minute, we
+see that the system must input data serially (single stream) at 4,800 bits per minute to
+keep up with the keyboard operator.
+
+16.1 Computer System Specification 657
+
+Let’s assume the computer system must prepare the input data for display. Also
+assume that each character received will require 10 instructions for processing and that
+each full word received will require 100 more computer instructions. We determine
+the computer’s required processing rate by first multiplying the number of characters
+per minute by the computer instructions required per character. Then, we compute the
+product of the number of computer instructions per word times the number of words
+per minute. This example yields a processing rate of 16,000 instructions per minute,
+or 267 instructions per second, to prepare the input data stream for display. Now
+assume that each instruction requires five clock cycles to bring the data from memory
+and one more clock cycle for execution. Thus, to keep up with the typist, the CPU must
+provide at least 96,000 cycles per minute, or 1,600 cycles per second, requiring a clock
+rate of 1.6 kHz. This example illustrates how we can estimate computer throughput
+(instructions per second) and processor speed (cycles per second) requirements.
+
+To store the input data and transfer the required 8-bit instructions to the CPU for
+processing, the computer must transfer data from memory to the CPU at approxi-
+mately 2,216 bits per second (80 bits per second for input data storage and 2,136 bits
+per second for instruction fetch). We can size the memory by assuming the typist
+works continuously for 24 hours at the top rate. The resulting data would require
+6.9 million bits of storage, plus 880 bits for the 110 instructions. The keyboard
+operator’s typing rate limits the memory size requirements. Understanding such
+system bottlenecks is one key to defining requirements for computer systems.
+
+16.1.3. Computer System Requirements
+
+Once we have identified the top-level requirements, the state diagram with state
+transitions, and a basic system architecture we must evaluate the impact of mission
+requirements on the baseline computer system. This assessment begins the refinement
+process for establishing detailed computer system requirements. Information regard-
+ing the selected orbit, expected period of operation, and any high performance
+requirements such as large field of view with continuous coverage or tight pointing
+and mapping criteria will affect the fidelity of the hardware and software developed
+for the specific mission.
+
+Several mission parameters drive the hardware selection. For example, the orbit we
+select will define the radiation environment. When we increase the required level of
+fidelity or include a requirement for autonomous operations, we often require a more
+capable computer system. Either of these conditions can develop if we have to perform
+rapid transitions between differing orbits, or travel to distant targets. These require-
+ments may impact software development. More complex requirements lead to more
+complex software implementation, which requires a more robust design and more test
+cases to accomplish a desired level of preflight validation. Inadequate requirements
+definition may cause cost and schedule risk for both hardware and software, as
+modifications and last minute changes may be required.
+
+When the mission is not as critical or multiple copies of a satellite will perform the
+same tasks, we can select computer hardware for the mission based on less stringent
+environmental testing. Often we can use commercial rather than space-qualified parts.
+Additionally, as the possibility for achieving unknown states goes down, we may
+reduce the software complexity and the level of preflight testing. As we increase the
+expected mission life or mission criticality, we should specify the use of more robust
+hardware, specifically space-qualified components and systems. We also increase the
+risk that software will operate in a manner that was not predetermined, and thus we
+should do more thorough preflight testing and system validation.
+
+658 Spacecraft Computer Systems 16.1
+
+When we impose high performance requirements on the spacecraft computer
+systems we also increase the performance requirements of both the hardware and the
+software. High-data rate payloads such as imaging devices or communication
+subsystems impose the need for higher bandwidth data busses and often increase the
+CPU performance requirements. When we require tight attitude knowledge and
+control, we not only impose a requirement for increased accuracy on the sensors, we
+also increase the computational complexity of the software, which in turn affects the
+CPU performance requirements.
+
+When we initially establish top-level mission requirements, we create a set of
+baseline computer system requirements, state transition diagrams, data flow charts,
+and system architectures. We can then perform trade-studies between the costs
+associated with our mission requirements and the costs associated with the hardware
+and software we selected to meet the mission requirements. Often when we iterate
+between the two, compromising when we feel we can on either side, we can reduce the
+overall mission costs.
+
+16.1.4 Baseline Definition Expansion
+
+If the initial analyses call for onboard processing, we should further partition
+functions between hardware, software, and firmware. Firmware is the software which
+resides permanently in nonvolatile memory. It reduces the susceptibility to upset, but
+we cannot modify it after launch. Certain elements of the system are clearly hardware:
+space-qualified computers and processors, the data bus, and so on. Software is for
+processing algorithms, which may change throughout the spacecraft’s lifetime. Soft-
+ware typically executes out of random access memory (RAM). However, because
+RAM is susceptible to single-event upsets (Sec. 8.1.4), firmware is often the answer
+for critical processes such as initialization or contingency operations. Firmware often
+executes out of read only memory (ROM) or programmable ROM (PROM) where we
+can write once or some small number of times.
+
+We next evaluate the Instruction Set Architecture, ISA. This is the machine code
+format used by a specific processor, such as the 80x86 family of processors, 68040,
+RH3000, and MIL-STD-1750A. The ISA defines the software developer’s interface to
+the processor at the lowest level. To evaluate hardware architectures, we examine
+instruction sets, recognizing advantages and disadvantages of the two basic types:
+general-purpose and custom ISA. The former supports all kinds of processing but with
+only moderate performance. The latter supports specific algorithms or classes of
+functions very well but often supports varying applications poorly.
+
+We should avoid custom architectures whenever possible because they are risky to
+develop, lack software support, and are hard to reprogram. General-purpose architec-
+tures allow us to modify algorithms more easily, but they slow down processing
+because they are not designed for a specific algorithm. In special cases, the faster
+speed of a custom ISA may drive us to select it despite the drawbacks.
+
+In evaluating candidate software languages, we again have two basic options:
+assembly language and higher-level language. Assembly language contains the basic
+symbols and expressions used to program a specific computer, and the programmer
+must thoroughly know the computer being programmed. Higher-level languages, such
+as C, C++, or Ada, also have symbols and expressions, but they provide more sophis-
+ticated operations and add a level of abstraction. Assembly language software is more
+efficient and compact than software written in a higher-level language, but it often
+takes longer to generate. We prefer higher-level languages for maintenance, test-
+
+16.1 Computer System Specification 659
+
+ability, and life-cycle costs. However, cross-compilers are often not available for
+custom machines, leaving assembly language as the only method of programming. A
+cross-compiler is one which resides on a standard host (such as SUN, DEC, SGI) and
+creates executable code for the target process (68040, 603e, and 1750A).
+
+16.1.5 Methods for Tolerating Faults
+
+Computer systems occasionally fail during operation. Since we know that this can
+happen, we can attempt to mitigate the risk by implementing a means of achieving
+graceful degradation, or fall backs to maintain some functionality. The most common
+are redundancy and distributed processing.
+
+We use redundancy for flight critical components to assure that required data are
+always available to the system. We can implement redundancy in several ways:
+duplicate equipment, back-up capability using a different but comparable approach,
+perform the same tasks on the spacecraft and on the ground, use a bus network which
+allows for data to be sent to various applications or users, independently, or cross-strap
+equipment to various potential users.
+
+Distributed processing allows us to allocate software functions to any one of a
+number of processors, depending on either mission phase, hardware availability, or
+subsystem failure. Each approach has pros and cons as outlined in Table 16-10.
+
+TABLE 16-10. Pros and Cons of Approaches for Providing Software Methods for Tolerat-
+ing Faults. There are many methods for tolerating faults and no one is neces-
+sarily better than the next. However, when we evaluate our specific requirements
+against the pros and cons listed here, one solution may be more appropriate for
+our mission. (For more information on fault tolerance, see Magnus [1992].)
+
+Redundancy Distributed Processing
+
+PROs: Provides backup which is identical to | PROs: Can reduce the system weight and
+the original. power if the number of systems is
+* Does not require additional or optimized.
+special software to process the data. * Provides a means of maintaining
+* Duplicate testing is straightforward system performance until several
+since the back-up is identical. failures have occurred. Then the
+system will operate in a degraded
+mode.
+
+CONs: Requires additional software to
+implement distribution methodology.
+
+Can be tricky to test and requires an
+extensive number of test cases
+
+Additional weight, power and cost.
+
+Requires decision-making process to
+determine which to use.
+
+Hardware or software errors, as well as environmental effects (see Chap. 8)
+sometimes cause the computer to stop executing its intended program altogether or
+perform instructions in an incorrect sequence. We can mitigate this problem by design-
+ing special circuitry so that the computer restarts when it is hung in this condition. We
+can command this circuitry from the ground, or the computer subsystem can activate
+automatically. In this latter case, we call the circuitry a watchdog timer. The timer
+counts down from a given predetermined time and will reset the computer when it
+reaches zero. To prevent the reset during normal operations, the computer’s operating
+system includes a function to reset the timer to its maximum time on a regular basis.
+The anomalous computer operation prevents this timer reset so the watchdog timer
+restarts the computer. The decision to include a watchdog timer usually does not
+
+660 Spacecraft Computer Systems 16.2
+
+depend on a subsystem trade-off because we have inadequate data on the rates of
+occurrence of this failure mechanism. It is often standard equipment on computers
+designed and marketed for space operations.
+
+Spacecraft occasionally have a more serious computer problem in which the fault
+is permanent and resetting does not solve the problem. The designer must determine
+whether the reliability of the planned computer design is adequate, as discussed in
+Sec. 19.2. If not, we will need to provide a redundant computer and the special cir-
+cuitry needed to switch from the primary to the secondary computer on failure.
+
+When we determine that memory may be unusually susceptible to failure, we can
+mitigate risk by partitioning the memory into “blocks.” We design memory to consist
+of independent blocks, where the failure of one block does not cause the failure of
+other blocks. In this case, the hardware designer may provide tolerance of failures of
+a memory block by creating a physical-to-logical map of the blocks at boot-up time.
+If failures are detected during operations, the system can work around bad blocks of
+memory. This is an example of a system architecture solution to a potential hardware
+problem.
+
+Another redundancy approach is to duplicate critical programs stored in nonvolatile
+memory. For instance we often replicate the Start-Up ROM in physically isolated
+sections of nonvolatile memory. If this logic cannot execute, the computer can not run
+the operating system or the application programs. The rationale for providing this
+second version of the start-up ROM is to avoid the effect of such a catastrophic failure
+without including a second computer. Note that in this case, we need a hardware
+mechanism, possibly controlled from the ground, to initiate the execution at the sec-
+ondary location because the computer is not under software control until the start-up
+program executes.
+
+Error Detection and Correction (EDAC) circuitry is an example of hardware that
+provides tolerance of a bit error in a memory word. It is particularly important in the
+mitigation of single event upsets. EDAC corrects a single bit error in a word when it
+reads that word. If an upset has occurred, the EDAC will correct it. If a long time
+elapses before the CPU reads the word, a second bit in the same word may be upset.
+To prevent this from happening, the operating system executes a program known as a
+scrubber to read each word of memory. As it reads each word, it “scrubs” all the single
+bit errors. The design parameter available to the system engineer is the time between
+scrubs. If the time is too long, uncorrectable second upsets in words are likely to occur.
+If the time is too short, the scrubbing process will consume too much of the CPUs
+processing time. We can determine this necessary scrub time based on the anticipated
+rate of upsets and system probability requirement that a second, uncorrectable, upset
+will not occur. Table 16-11 provides an example of this calculation.
+
+16.2 Computer Resource Estimation
+
+The previous sections discussed how we define computer system requirements and
+generate a baseline architecture. In this section, we add detail to the baseline. With
+functional groups and a system architecture in place, we specify the needed processing
+tasks (in a general sense), determine the data requirements, estimate software size and
+throughput requirements, and identify computer hardware on which it will execute.
+
+We use traceability analysis to make sure the requirements are complete. We must
+trace the computer system’s requirements to parent requirements, which come from
+various sources. For example, we may derive them from top-level requirements, oper-
+
+16.2 Computer Resource Estimation 661
+
+TABLE 16-11. Example of Calculating the Time, 7, to Perform EDAC Memory Scrub.
+
+Scrub Memory to Prevent Second Single Event Upset
+Given:
+* Asingle event upset (SEU) has occurred
+¢ The affected memory word has 22 bits (16 data bits plus 6 check bits)
+¢ We know the SEU rate is 10-? upsets per “bit day”
+¢ We have a requirement that the probability of an uncorrectable second update is less than
+10-6 per day
+* We assume a Poisson distribution for the bit errors
+then let
+4 = arrival rate of new bit errors in word = 21 x 10-? upsets/day
+and
+Prey = probability of one or more new upsets in word
+
+= Py + Pors++ Poy
+
+Phew =1-Py =1- eT =4-T
+
+(A:T)?
+]
+
+Therefore:
+
++ T= Phew < 10-6
+
+ational concepts, or launch-vehicle interfaces. We must also trace the flow of
+requirements to the components to reduce “gold-plating.” Whenever a top-level
+requirement changes, good traceability allows us to examine the effect of this change
+on lower-level requirements and how we meet them. Often, we rethink a change when
+we see its effects. In any case, traceability allows us to identify all areas where we must
+evaluate the design to incorporate changes. If we flow the requirements properly dur-
+ing conceptual design, we can accurately run tests at each level during development.
+
+16.2.1 Defining Processing Tasks
+
+We document the requirements for processing tasks and system interfaces in Soft-
+ware Requirements Specifications and Interface Requirements Specifications. While
+establishing requirements for the spacecraft, we define processing tasks by classifying
+what the spacecraft must do. Software for onboard processing falls into four principal
+classes.
+
+Control system software, such as attitude or orbit determination and control,
+requires an input stimulus and responds by changing the state of the system. This
+software is often mathematically intensive—requiring high accuracy and strict
+timeliness.
+
+System management software includes such items as fault detection and
+correction, long duration event schedulers (such as reconfiguring the power
+system during eclipses), and payload system management. Software in this class
+manages control flow and is therefore logic intensive. Simple instruction sets are
+sufficient for this class because it requires few floating-point computations.
+
+Mission-data software manipulates and compacts large quantities of data as they
+are collected. This function often demands special computer architectures, such
+as signal processors, as well as large storage capacity for collected data.
+
+
+662 Spacecraft Computer Systems 16.2
+
+Operating system software directly manages computer resources and controls
+their allocation to spacecraft and mission tasks. This includes basic executive
+functions such as scheduling tasks for execution, time management, interrupt
+handlers, input/output device handlers and managing other peripheral drivers,
+carrying out diagnostics and built-in tests, and memory fault management. All
+computer systems must manage these processes. We often consider software for
+the operating system as overhead to application software.
+
+After examining what the computer system must do, we can assess the nature of its
+processors and decide whether to use off-the-shelf processors or develop new ones.
+The same holds for the algorithms. We want to use established, proven algorithms
+because new ones involve technical risk, added costs, and a longer implementation
+schedule. Early emphasis on risk assessment and reduction is part of defining process-
+ing tasks.
+
+16.2.2 Estimating Software Size and Throughput
+
+We measure software size by words of memory, and processing time by through-
+put, usually expressed in thousands or millions of instructions per second (KIPS or
+MIPS, respectively). We estimate the size and throughput of onboard software for
+several reasons. When we begin defining a computer system, we use the software
+estimates in conjunction with requirements for spare processing to determine how
+much computing power we need to perform the mission. During system development,
+we revise the estimates to make sure hardware capacity is not exceeded. We also use
+software size estimates to estimate cost.
+
+Processor throughput is a function of the instruction set and the clock speed. With
+only one instruction, a computer’s throughput is proportional to clock speed. If it has
+two instructions, one (A) requiring two clock cycles and the other (B) requiring seven
+cycles, the computer’s throughput also depends on the instruction mix. The instruction
+mix is the proportion in which the software uses the instructions. For example, if the
+software is 60% type A instructions and 40% type B, the throughput available with a
+10 MHz clock is (10/[(0.6 * 2) + (0.4 * 7)]) = 2.5 MIPS. If the mix is reversed, the
+throughput available is 2.0 MIPS.
+
+When we evaluate hardware architectures to determine their ability to meet our
+processing needs we use a benchmark program that contains a specified instruction
+mix so that various computers can be compared to a standard measure of performance.
+Typical benchmarks used for evaluating computer resources in space applications are
+shown in Table 16-12.
+
+When we select a benchmark it is important that we use one that has a similar
+instruction mix to the one we expect in our operational flight software. For example,
+if our flight software will be mathematically intensive we could use Khornerstone,
+Linpack, or Whetstone. However, if our flight software focuses on integer math, the
+Dhrystone benchmark is a good match.
+
+System Requirements Review is the milestone when we formally identify computer
+resource requirements. A good rule of thumb is to set the amount of computer memory
+and throughput at the System Requirements Review at four times the estimate of what
+is needed for software size and throughput. Empirically, initial software size and
+throughput estimates double from this review to launch because early requirements are
+uncertain, and changes in software are easier to make than changes in hardware during
+late stages of spacecraft development. We also want spare memory and throughput at
+
+16.2 Computer Resource Estimation 663
+
+TABLE 16-12. Benchmark Programs Used to Evaluate Computer Performance. Listed
+below is a set of benchmarks and their strength in measuring the performance of
+a computer system [Beckert, 1993]. We use these benchmarks to evaluate the
+applicability of a specific computer to meet a specific software or mission objec-
+tive [Santoni, 1997].
+
+Dhrystone A test designed primarily to measure a CPU’s integer performance. An
+outcome of the Dhrystone test is the MIPS rating.
+Khornerstone A suite of 21 tests developed in 1987 by SRS/Workstation Laboratories to
+
+measure the overall performance of a computer's CPU, floating-point
+capabilities, and disk I/O.
+
+Linpack This test measures a CPU’s floating-point performance. Its results are
+
+reported in mflops (millions of floating point operations per second).
+
+Millions of instructions per second. Refers to a CPU’s ability to process integer
+operations. A Digital Equipment Corp. VAX 11/780—with its rating of one
+MIPS—is often used as a standard.
+
+Whetstone This test, written in Fortran and developed in the late 1960s at the National
+Physical Laboratory in Whetstone, England, measures floating-point
+performance. An optimized compiler can improve Whetstone performance,
+
+thus making the test somewhat misleading.
+
+launch to correct anomalies or to increase performance after system calibration. Thus,
+we need to establish reserve capacity when initially defining requirements. A reason-
+able value for post-launch reserve is 100% spare (equivalent to 50% of machine
+capacity).
+
+We should not attempt to use all of the available memory or throughput. Asyn-
+chronous processing, such as interrupt handlers, introduces a level of uncertainty in
+throughput. Costs also rise dramatically as we shoe-horn the software into existing
+memory [Boehm, 1981]. As a rule of thumb, we should use 70% or less of available
+throughput.
+
+After System Requirements Review, we continuously update estimates for soft-
+ware size and throughput as requirements solidify. We plot them as reaction curves to
+ensure we can detect whether the software is growing too much. Figure 16-7 shows a
+typical reaction curve for software development, measured as a percentage of
+maximum use. As long as the estimates fall below the curve, no extraordinary action
+is required. When they exceed it, we must pare down the requirements, relax the
+restriction on reserve capacity, or increase the resources available.
+
+Estimating Resource Needs for Application Software
+
+Table 16-13 lists general categories of application software and estimates for size
+and throughput. It contains typical sizes and throughputs for several types of applica-
+tion software and is useful during conceptual design. Sizes for initial estimates are in
+words of memory, which are less sensitive to language choice. However, costing
+models typically use source lines of code (SLOC). Table 16-14 shows typical expan-
+sion ratios from words of memory to SLOC for various languages. Each of the
+functions in Table 16-13 is discussed below in terms meant to allow sizing by similar-
+ity for satellite applications as discussed shortly in Table 16-16.
+
+Communications software includes processing external commands and collecting
+internal data for transmission to an external source. The information in Table 16-13
+
+664 Spacecraft Computer Systems 16.2
+
+SRR = System
+
+Measurement above Requirements
+reaction curve, action eview
+must be taken to SDR = System Design
+correct situation Required Spare Review
+
+oe \ an an SSR = Software
+oO.
+
+Specification
+Review
+or PDR = Preliminary
+Example of Typical Data Design Review
+CDR = Critical Design
+Review
+TRR = Test Readiness
+Review
+
+Computer Resource 3
+(memory or throughput) z
+
+SRRSDR SSR PDR CDR TRR Launch
+
+Development Timeline
+
+Fig. 16-7. Reaction Curve for Using Computer Resources. Reaction curves mitigate risk.
+They discipline our management of onboard computer resources. Whenever an esti-
+mate exceeds the reaction curve, we correct the situation.
+
+assumes a modest number of ground commands (~100) and collection of data for
+telemetry to the ground. It does not include inter-processor commanding, but we can
+allow for this commanding by similarity of function.
+
+Attitude-sensor software handles data from various sensors, compensates for sensor
+misalignments and biases, and transforms data from sensor to internal coordinates.
+Processing for gyros, accelerometers, Sun and Earth sensors, and magnetometers in-
+volves decoding and calibrating sensed data. Processing for star trackers involves
+identifying stars against a star catalog, which can require extensive data and memory
+resources. Mission-related or payload sensors typically require additional resources,
+which we should calculate separately.
+
+The Attitude Determination and Control category covers various control methods.
+In kinematic integration, we estimate current attitude by integrating sensed body rates
+using gyros. Using error determination, we find how far the spacecraft’s orientation
+is from that desired. For spin-stabilized spacecraft, we maintain attitude control using
+precession control. The precession-control size and throughput numbers reflect those
+of a thruster-based system. The thruster control function listed in the table is for a
+three-axis-stabilized control system using thrusters. Table 16-13 also lists control
+algorithms using reaction wheels, control moment gyros, and magnetic torquers. Also
+in this category are object ephemerides, which we can maintain using crude table
+look-ups and curve fits, or very complex algorithms. The orbit propagator integrates
+the spacecraft’s position and velocity information.
+
+Table 16-13 covers two levels of autonomy. Simple autonomy is for a simple
+system which requires little onboard support when not in contact with the ground
+stations. Systems will require complex processing if they need extensive management
+of onboard autonomy.
+
+Fault detection is closely tied with autonomy. Monitors exist to identify failures or
+adverse conditions in onboard equipment. Size and throughput vary widely depending
+on the system. Processing for corrective actions usually depends on tables of pre-
+stored procedures and, therefore, requires considerable data.
+
+16.2 Computer Resource Estimation 665
+
+TABLE 16-13. Size and Throughput Estimates for Common Onboard Applications. These
+values are based on 16-bit words and a 1750A-class Instruction Set Architecture
+and assume that software is developed in a higher-order language. Because the
+1750A is a general-purpose processor, these numbers represent a good first
+estimate for other general-purpose ISAs. When estimating throughput by similar-
+ity, we should hold constant the ratio of throughput to execution frequency given
+in the table. Increased complexity will increase required size and throughput.
+
+Size (Kwords’) Typical Typical Execution
+Throughput Frequency
+| Code { Data | (Kips) (He)
+Communications
+
+Command Processing 4.0
+Telemetry Processing 2.5
+
+Attitude Sensor Processing
+Rate Gyro
+Sun Sensor
+Earth Sensor
+Magnetometer
+Star Tracker
+
+Attitude Determination & Control
+Kinematic Integration
+Error Determination
+Precession Control
+Magnetic Control
+Thruster Control
+Reaction Whee! Control
+CMG Control
+Ephemeris Propagation
+Complex Ephemeris
+Orbit Propagation
+
+Autonomy
+Simple Autonomy
+Complex Autonomy
+
+Fault Detection
+Monitors
+Fault Correction
+
+Other Functions
+Power Management
+Thermal Control
+Kalman Filter
+
+* Notation here is both standardized and awkward. A lower case “k” is the metric prefix for 1,000; for
+example, a frequency of 5,000 Hz = 5 kHz. An upper case “K” in counting memory is used for 210 =
+1,024. Thus, 2 K words of memory = 2,048 words = 2,048 x 16 bits = 32,768 bits = 32 Kbits.
+
+Power management and thermal control are support functions that often reside in
+onboard computers. Through power management, the computer controls battery
+charge and discharge and monitors the power bus. Active thermal control involves
+monitoring and controlling temperatures throughout the spacecraft.
+
+666 Spacecraft Computer Systems 16.2
+
+TABLE 16-14. Converting from Source Lines of Code (SLOC) to Words of Memory. Soft-
+ware written in a high-order language is converted to assembly-level instructions
+by tools called compilers. The compilers usually offer optimization options: for
+minimum memory use, or for fast operation. The average number of instructions
+per SLOC is a function of this optimization. Single values are provided here for
+several common high-order languages. However, based on compiler optimiza-
+tion and designer style these values may shift as much as 25%. Some informa-
+tion was extracted from Boehm [1981]. Modern computers average about 1.5
+words of memory per assembly instruction.
+
+Assembly Instructions Bytes per SLOC
+Language per SLOC for 32-bit Processor
+
+Fortran 36
+Cc 42
+
+Pascal 36
+
+Jovial 24
+Ada 30
+
+Estimating Resource Needs for Operating-System Functions
+
+When sizing the operating system software, we can use the numbers in Table 16-15
+as baselines or averages. Because systems may require each component to do more or
+less than indicated, we must apply these numbers flexibly. (For more information on
+operating systems, see Lane and Mooney [1988] or Silberschatz and Galvin [1997].)
+For many hardware ISAs commercial operating systems are available and may be used
+in their entirety to reduce risk. However, this may add substantial memory require-
+ments and increase the level of throughput required unnecessarily. The executive is the
+code that manages and schedules the application software and other operating-system
+functions. The executive provides interrupt services, schedules and manages tasks
+based on timers or interrupts, manages resources and memory, corrects single-event
+upsets, and detects memory faults. It also dynamically allocates memory and fault
+detection interfaces to the applications.
+
+TABLE 16-15. Size and Throughput Estimates for Typical Onboard Operating System
+Software. The values below are based on 16-bit words and a 1750A-class ISA.
+Because the 1750A is a general-purpose processor, these numbers represent a
+good first estimate for other general-purpose ISAs. Operating-system overhead
+increases with added task scheduling and increasing message traffic.
+
+Size (Kwords)
+
+Throughput
+(KIPS)
+
+Function Comments
+
+nis the number of tasks scheduled
+per second.
+
+Typical: n = 200
+
+Throughput is included in functions
+which use the features
+
+Executive
+
+Run-Time Kernei see
+
+comments
+0.05 m
+
+V/O Device mis the number of data words
+Handlers handled per second
+
+Built-In Test and Throughput estimated assuming
+Diagnostics 0.1 Hz
+Math Utilities see Throughput is included in estimate
+comments | of application throughput
+
+
+16.2 Computer Resource Estimation 667
+
+Run-time kernel software normally supports higher-order languages. For example,
+it may represent, store, optimize, and pack data; drive input or output; handle
+exceptions or errors; and interact or interface with other programs, other devices, or
+even other mixed-language programs. The //O handler controls data movement to and
+from the processor, as well as packing data for any specific interface. Likewise, the
+device handler or device driver software manages interfaces and data between the
+processor and any peripheral devices.
+
+Utilities are software routines which several functions use. For example, different
+components of application software in a single processor might access a set of math-
+ematical operations called math utilities. Their size and complexity vary directly with
+the application and its mathematical requirements. If the processor provides such
+utilities, they are referred to as built-in functions, as is the case in the MIL-STD-
+1750A ISA. Hardware specifications define these available functions.
+
+Built-in test software provides initial, periodic, or continuous testing for computer
+elements under the control of software or firmware. Diagnostic software not only
+identifies faults or failures but also isolates them. We can make it sophisticated
+enough to recover from some of them. For built-in testing and diagnostics, we can
+write the software as firmware. The computer vendor may even supply them. If not,
+we would have to decide whether we need this added reliability, despite the processing
+and cost overhead.
+
+For preliminary mission design, we recommend the estimation-by-similarity
+approach given in Table 16-16 to estimate the size and throughput for embedded soft-
+ware in an onboard computer, as well as its size. Another approach, bottoms-up
+estimation, is also discussed in Table 16-16. Both methods are demonstrated in
+Sec. 16.3, the FireSat example. For alternative approaches, see Rullo [1980].
+
+16.2.3. Computer Selection Guidelines
+
+Once the initial software size estimation process has been completed, we can begin
+identifying the hardware resources required. We must find a computer system which
+meets all of our basic needs, as well as the spare allocation, and has the required
+support environment. Each computer considered must have suitable system software
+(operating system or kernel and built-in functions such as mathematics).
+
+Representative space computers are shown in Table 16-17. In almost all cases
+space computers should be purchased rather than developed to avoid paying the
+nonrecurring development costs, and incurring schedule risks. The exceptions are on
+opposite extremes. Large aerospace corporations have all the resources required to
+design and test a computer for a special application. Educational institutions, on the
+other hand, may make the same choice, not to save money, but because the process
+meets an educational objective and because reliability requirements are not stringent.
+Such an institution should verify the onsite availability of the hardware development
+environment, particularly a logic analyzer with the required pods.
+
+The first performance criterion we can evaluate is the computation rate in MIPS.
+With Reduced Instruction Set Computer (RISC) this throughput rating is equivalent
+to 1.5 instructions times the clock cycle, typically expressed in MHz. The processor
+selected must meet the resource estimation we calculated based on the software
+functions required to meet the mission objectives. Nearly as important as the
+computational rate is the address space available. Each hardware address line can have
+two values: a one or a zero. Therefore, N address lines provide 2N distinct addresses.
+
+668 Spacecraft Computer Systems 16.2
+
+TABLE 16-16. Software Estimation Process. The estimation-by-similarity technique uses
+existing, well characterized functions and their relationship to functions under
+development to estimate processor memory and throughput needs for the new
+functions. The bottoms-up estimation process forces the estimator to break the
+functions into the smallest components, which are then evaluated based on
+experience.
+
+1. List all application functions allocated to the Document any assumptions.
+given computer.
+
+2. Break down the functions from step 1 into basic | This often requires several iterative steps. We
+elements. should continue to break down the functions until
+we have reached the lowest level we can identify.
+
+3. Define the real-time execution frequency for We only need to perform this step for those
+each of the basic elements. functions which are time critical. Execution
+frequency is not required for utility functions.
+
+4. Estimate the source lines of code (SLOC) and | Similarity—Requires knowledge of both the
+memory needed for each function by: existing functions and the new functions in terms of
+A. Similarity: Find a function from Table 16-13 | specific requirements, complexity, and general
+with similar processing characteristics and _| implementation. Some rules of thumb are:
+known size. Compare the complexity of the | » 4 25% increase in complexity implies a 25%
+known function with the new one and adjust increase in code
+the code size directly. Adjust the code * If the known function is in assembly code,
+
+estimate for differences in development F : A
+language, such as assembly versus higher language code size by 25% for a higher order
+
+order language. Use Table 16-14 to
+
+determine the SLOC from the memory used. | * If the known function is in a higher order
+language, decrease the code size by 20% for
+
+assembly code.
+
+B. Bottoms-Up: identify the SLOC for Bottoms-Up—Requires knowledge of general
+executable elements of the lowest level elements of each function and how to implement
+functions as well as the data structures and | the capability.
+one time only initialization software. Sum the
+SLOC for all executable and nonexecutable
+functions separately. Use Table 16-14 to
+determine the memory requirements, based
+on SLOC.
+
+5. Estimate throughput requirements based on: Throughput should be expressed as instructions
+A. Similarity: Find a function from Table 16-13 | per second.
+with similar processing characteristics and
+known throughput requirements. Compare
+the complexity of the known function with the
+new one and adjust the throughput value for
+differences in complexity directly. Based on
+the frequency of execution from step 3
+above, compute the total throughput
+requirements for the new function.
+
+B. Bottoms-Up: Based on an average number | The internal loop factor for an ACS function
+of computer instructions executed per SLOC | associated with a three axis stabilized spacecraft
+for a specific compiler and processor, will be 3— each function will be repeated for each
+multiply the number of instructions by the axis. In order to estimate throughput from SLOC,
+execution frequency. Define a “loop factor” | the lines of code related to initialization and data
+for executable SLOC to represent internal | must be separated from the executable lines of
+loops within the function. code. The loop factor is applied only to the
+
+executable SLOC
+
+6. Determine the operating system and overhead | You must identify all application code prior to this
+requirements by similarity to other step. Complexity for operating system functions is
+implementations. Compare the complexity of based on number of tasks scheduled per second,
+the known operating system and overhead the number of interrupts to be handled, and the
+functions to the new and adjust accordingly. amount of I/O data.
+
+7. Determine the margins for growth and on-orbit | Growth and spare requirements are important and
+spare based on where you are in the should be strictly calculated.
+development cycle and Fig. 16-7.
+
+
+16.2 Computer Resource Estimation 669
+
+TABLE 16-17. Commercially Available Space Computers. These computers have been
+developed for use in a variety of general purpose space applications.
+
+Supplier Memory | Perfor-
+and (RAM+ | mance | Radiation | Connect-
+Computer SA (bits) EEPROM) (MIPS) | Hardness | _ ivity Heritage
+Honeywell 1750A 16 16 MB" 1to3 1 MRad NEAR, ChinaStar,
+- Clementine
+Honeywell R 3000 ere 10 to 20] 1 MRad GPS Il
+RH32
+
+SBIRS High
+Honeynel | 03E | 4GB | 20 | 100 | 100 KRad RS- 232
+
+vaste | dl 16 MB* 4 to 2 iia MRad [1553B ‘| Cassini, Rapid |
+GVSC RS-232
+{EEE-488
+L-M R 3000 16 MB | 10 | Rad Hard | Hard [1553B_ | LM-900
+FAP 3000
+RS 6000 16GB a to 20 cdi KRad [PCI Mars Pathfinder, Global-
+AAD 6000 star, Space Station,
+SBIRS Low, Mars 98
+Tew RS-3000 = 16 MB | 10 | Rad Hard 15538 SSTI, T200b, Step-E
+S-422
+SWRI 800186 768 KB 10 KRad Seaial MSTI-2
+SC-2A RS-422
+SWRI 80C386 320 KB 10KRad [Parallel [RADARSAT, SNOE
+SC-5 RS-422
+SWRI TI320C30 640 KW 100 KRad |1553B MSTI-3
+SC-7
+SWRI 1750A 16 512 KB 1 10 KRad |RS-422  |MSTI-1,2,3
+SC-1750A 1553B New Millennium DS-1
+SWRI RS 6000 128 MB 2 30 KRad |RS Space Station
+C-9
+
+WH R 6000 30 KRad |RS-422 | Gravity Probe B,
+MOPS International Space
+Station Alpha (ISSA)
+
+50 KRad CRSS
+
+VIIRS
+
+Sanders R 3000 4MB
+
+STAR-RH
+GDAIS ISE 603E 2GB Rad Hard |1553B [HEAO,AFAX | AFAX
+Acer Sertek 80186 512 KB Rad Hard |1553B oe
+RS-422
+
+* Address Space L-M: Lockheed Martin SWRI: Southwest Research Institute
+
+For example, a computer with 16 bit words would generally have a 64K word
+address space and a 32 bit word computer could address a 4 Gigaword address space.
+However, this may require a more in-depth examination. The Generic VHSIC
+Spaceborne Computer (GVSC) was developed by the Air Force from the MIL-STD
+1750A, which defines one word as 16 bits, but it has an 8 Mword address space. This
+was achieved by built-in paging hardware. The GVSC is a special case because the Air
+Force developed it especially for space applications. We may find other exceptions
+as well.
+
+If possible each candidate computer, or its engineering development unit equiva-
+lent, should be bench-marked against the relevant applications. This is rarely done
+because of time and lack of availability of the hardware. In the absence of real equip-
+ment or software benchmarks, the computer analyst should examine the individual
+instructions of each candidate and match them against the qualitative aspects of the
+computational requirements. For example, the processor we select to support the
+attitude determination and control function will perform many floating point and
+transcendental function computations. In this case it would be desirable for floating
+point and trigonometric instructions to be performed in hardware and not in software.
+
+670 Spacecraft Computer Systems 16.2
+
+If the processor is to perform commutation or multiplexing at the bit level, the CPU
+should have instructions that support such processes.
+
+On the other hand, the processor we select for control and data handling will need
+to support bulk moves of data. Thus it would be desirable if it had a Direct Memory
+Access (DMA) command or a block move command. DMA is very valuable for data
+handling processors with extensive I/O so that the range of data to be moved can be
+specified and letting the DMA hardware relieve the CPU of moving each word.
+
+If we determine that several computers can meet the performance needs we outlined
+in the software resource estimation process, a computer's heritage can be a major
+selection criterion. We often select a computer previously used in space by NASA,
+ESA, the DoD, or a major commercial space venture. By starting with computers
+which have prior use in space, the major development, qualification testing, and
+documentation risks and costs will have been borne by the prior programs. However,
+while older space computers are often highly reliable, they are typically more expen-
+sive and less capable.
+
+16.2.4 Integration and Test
+
+As Fig. 16-8 shows, testing usually begins at the lowest level and builds incremen-
+tally. By building our test scenarios from the bottom up, we can reduce the complexity
+and thus the risk. Testing must be rigorous at all stages from the unit level to the system
+level (Kaner et al. [1993]). Software and hardware testing follow the same general
+path, with the subsystem resulting when we integrate the hardware and software. At
+this level, we test the entire computer system. Finally, we test the whole spacecraft,
+with computer systems becoming components of the subsystem as described in
+Chap. 12. Unfortunately, we cannot determine whether we have calibrated the
+computer equipment properly until it is in orbit. Once operational, the system needs
+general testing to ensure it continues to perform as required. Just as acceptance test
+procedures or inspections check systems for damage on delivery, retesting on-orbit
+checks for damage during launch. This testing is often referred to as on-orbit check-
+out and calibration.
+
+In general, integration and test pulls disciplines and subsystems into a configuration
+that meets top-level, system requirements. In this sense, as Chap. 12 suggests, integra-
+tion and test is much the same as systems engineering. Testing includes all activities
+that increase confidence in the system’s performance. It ensures that we have met re-
+quirements and that anything happening beyond these requirements does no harm to
+the system, while preserving specified functions. Testing for these “extras” is the most
+difficult because we do not always know what we are looking for. Testing, especially
+for the software-intensive computer resources associated with space systems, is a com-
+plex undertaking. It can consume up to half of the development cost and a significant
+percentage of support costs over the life-cycle.
+
+16.2.5 Life-Cycle Support
+
+Many issues associated with the development cycle affect conceptual design and
+long-term life-cycle costs. For example, we select hardware and software design
+concepts during requirements definition but we draw on implementation and develop-
+ment experience to do so. Because we often have to cost activities for developing a
+computer system before a complete design is available, we must take into account the
+many aspects of software and hardware development, testing, and integration. Soft-
+ware-based tools and standards such as MIL-STD-498, IEEE and SAE Specification
+Guide, and ANSI standards help us structure our methods and give us more manage-
+
+16.2 Computer Resource Estimation 671
+
+Software Verification Hardware Verification
+
+Unit Test
+Test
+‘Ne Module Acceptance
+[ou a
+
+Stand-Alone Stand-Alone y 4
+
+Functional Functional
+Test
+
+‘Ne Ground-Based and y 4
+
+Space-Based
+Systems
+
+System
+Integration
+
+System
+Testing
+
+On-Orbit
+Calibration
+and Mission
+
+Success
+
+Fig. 16-8. Levels of Testing. Testing builds incrementally as the product develops from compo-
+nent to system. it begins at the lowest level building up into system and mission re-
+quirements verification as the elements are integrated.
+
+ment and technical controls. The Software Engineering Institute (SEI) has established
+arating system for the software development process. Companies can apply to SEI for
+increasing levels of performance ratings [Humphrey, 1995]. Also, the International
+Standards Organization has established a process-based rating known as ISO 9000.
+
+In addition to the development process, long-term issues such as life-cycle costs
+require attention during conceptual design. The complete life-cycle costs include
+conceptual design, detailed design, implementation, system integration, test, and
+on orbit maintenance—plus the tools associated with each phase. There are many soft-
+ware development life-cycle models which we can use. However, these continually
+evolve to reflect the current state of the software development environment. Accord-
+ing to Anderson and Dorfman [1991], “As the software development process evolves,
+so will these models to reflect new types of applications, tools, and design paradigms.”
+Our experience has been that development support software will require 8 to 10 times
+as many lines of code as the flight software. We can use this to estimate the cost of the
+development software as discussed in Sec. 20.3.2. The cost estimate we generate using
+this method can be applied to either the development of support software or to procure
+COTS tools as discussed below. Table 16-18 summarizes the various life-cycle issues
+which we must address during the early phases of program development.
+
+Building an operational system depends on the development philosophy and
+environment we select. Procuring commercial off-the-shelf (COTS) hardware and
+software is the easiest way we can build a capability. However, off-the-shelf items
+often don’t meet our needs exactly. Thus, we must tailor the COTS products or adjust
+the need to match what is available. The break-even point is different for each program
+depending on the number and types of requirements, personal skills, our knowledge of
+the product, and whether the COTS products are maintainable and of high quality. If
+we opt for custom development, we must also consider the development and test tools
+
+672 Spacecraft Computer Systems 16.2
+
+TABLE 16-18. Summary of Life-Cycle Cost Issues. Through the use of development and
+protocol standards, auto-code generation, and re-use of common software and
+hardware modules, as well as increasingly capabie development tools we create
+a means of controlling and streamlining the costs associated with computer
+system development. (For additiqnal information, see Boehm [1984].)
+
+Development Tools
+* Commercial Off-the ¢ Compiler, Assembler, and
+Shelf (COTS) Software Linker
+¢ Computer Aided * Cross Compiler
+Software Engineering | » Loader and Debugger
+(CASE) * Code Analyzers and
+* MIL-Specification ° putomated Code Optimizers
+* Structured Development eneration * Test Case Generator
+* Object Oriented * Code Management
+
+Development Software
+¢ Simulators and Emulators
+
+* Adds structure to * Reduces development |¢ Allows for more generic
+development activities time which implies lower | software to be developed
+e Standardizes costs and then compiled specifi-
+Benefits | documentation between cally for target hardware
+
+and among programs * Aids in configuration
+management
+¢ Simulation and emulation
+increase efficiency and
+effectiveness of testing
+
+* Tailoring is critical * Need documentation * Be sure that a
+¢ Must balance required which accurately reflects | development environment
+amount of documenta- the implementation is available for the
+
+tion with associated * MUST continue totestat | hardware selected for the
+costs the same level for all project
+sources of software
+
+we will need to create the operational unit. We may need special hardware, software,
+or integrated systems. For single-unit or unique systems, developing support tools can
+cost as much as developing the operational units. We must evaluate these support tools
+during conceptual design, and include their cost in the overall development cost. As
+with the cost of other developmental tools, we may be able to amortize these costs over
+multiple products or projects.
+
+When developing embedded flight software we must first determine if we want it
+in assembly language or a higher order language. If we have selected a higher order
+language, we must decide which tools to use. Depending on the target processor ISA
+and the language selected, we must evaluate the availability and quality of cross-
+compilers, linkers, assemblers, and the host processors on which they reside. A host
+machine is the computer where the development activity is to take place. The target
+machine is the embedded microprocessor or ground-based computer where the code
+will perform throughout its lifetime. A cross-compiler executes on the host, compiling
+software for the target processor. For both assembly language and higher order
+languages, the loaders and debuggers allow us to store software in the target processor
+and evaluate its performance based on either symbolic or physical information.
+Sometimes the host computer and the target computer have the same ISA. In this case
+the compiler is not the issue but library and other functions’ availability on the target
+should be explored.
+
+16.3 FireSat Example 673
+
+16.3 FireSat Example
+
+The FireSat example can help us better understand the process of estimating
+computer resources. We show two examples of software estimation: one for the space-
+craft attitude control capability, the other for payload control and data management.
+
+16.3.1 FireSat Attitude Control Processing
+
+To begin the estimation process, we need a list of allocated computer system
+capabilities. For this attitude control example, we assume that the spacecraft is a three-
+axis-stabilized vehicle using an Earth sensor, a Sun sensor, and rate gyros for sensing
+vehicle attitude and attitude rates. Reaction-control thrusters generate the control
+torques. Further, we assume that the highest frequency the system performs any
+function is 4 Hz (every 0.25 sec).
+
+From this information we can decide what the system must do. For example, it must
+process data from the Earth sensors, Sun sensors, and rate gyros. To process the data
+and determine the current attitude, we need to perform kinematic integration, or some-
+thing equally complex. To maintain the desired attitude, we need functions for
+determining attitude error and for thruster control. A function to estimate ephemeris
+allows us to keep track of orbital position. If the ground station regularly updates the
+ephemeris, we need only a simple function to propagate it. Remember to identify all
+assumptions whenever you estimate; this last assumption allocates functionality to a
+supporting ground station.
+
+We can now estimate the memory and throughput requirements for the application
+functions. Assuming a 1750A-class host processor, apply the information in
+Table 16-13 directly to estimate memory for code and data. When using the table, if
+your particular function is estimated to be much larger or smaller than what is typical,
+adjust the numbers accordingly. Estimating throughput requires more effort. To use
+the throughput numbers in Table 16-13, we must first establish the execution
+frequency for the attitude control computations. Table 16-19 lists the assumed
+frequency for each application function. We estimate the throughput for a function
+executed at 4 Hz by using 4 Hz/10 Hz = 40% of the values in Table 16-13, which is
+based on a 10-Hz execution rate. Table 16-19 shows the estimated memory and
+throughput requirements by function.
+
+We need to consider an operating system to complete the estimate for all the
+software in the attitude determination and control computer. We have assumed the
+software is in Ada; thus we will need a run-time kernel. A COTS Ada cross-compiler
+may include a kernel. We must also have a local executive to perform task scheduling
+and management. The number of scheduled tasks per second depends on the number
+of application functions and their execution rate. For this example, we estimate 80
+tasks per second. Because of the four sensors being serviced and the connection with
+the data bus, we will need five data handlers. To estimate how much data the system
+must handle, first determine how much the sensors produce and how often they
+transmit. Then add external commanding and telemetry requests. For this example, the
+handlers will control the flow of 800 data words per second. The last functions to
+estimate are the built-in test and associated diagnostics. We determine memory and
+throughput for each operating-system function from Table 16-13, taking into account
+the assumptions above.
+
+We have estimated memory and throughput requirements for all functions that the
+computer must support for attitude determination and control. But because early
+
+674
+
+Spacecraft Computer Systems 16.3
+
+TABLE 16-19. Estimating Size and Throughput for FireSat Attitude Control Software. We
+can use this general format for estimating the size and throughput requirements
+for any software application, based on the method of similarity. First list the
+anticipated applications functions. Using the mission requirements, we can
+establish a baseline frequency for the execution of each function. Then, based
+on either the estimation by similarity or by bottoms-up estimation, we determine
+the memory requirements for each function. Finally, using the estimation process
+and the estimated frequency of execution, we can determine the required
+throughput for each function. Notes for this table are on the following page.
+
+Component
+
+Required Memory Required
+
+Code Data Throughput
+
+Estimation Source =| (x words) |(K words) | (KIPS)
+
+Frequency
+Application Functions =
+
+Thruster Control
+
+Rate Gyros
+
+Earth Sensor
+
+Sun Sensor
+
+Kinematic Integration
+Error Determination
+Ephemeris Propagation
+(a) Appl. Subtotal
+Operating System
+Local Executive
+Runtime Kernel (COTS)
+1/O Handlers (5)
+
+BIT and Diagnostics
+Utilities
+
+(b) Subtotal: COTS
+
+(c) Subtotal: Non-COTS
+(d) O/S Subtotal
+
+Table 16-13
+Table 16-13
+Table 16-13
+Table 16-13
+Table 16-13
+Table 16-13
+Table 16-13
+
+Table 16-15, with n = 80 (1)
+Table 16-15
+
+Table 16-15, with m= 800 (2)
+Table 16-15
+
+Table 16-15
+
+(b) + (c)
+
+(e) Total Software Size & (a) + (d) 31.8 13.5 89.1
+Throughput Est.
+
+Margin Calculations
+
+(f) Needed to compensate for
+requirements uncertainty
+
+(g) On-orbit spare
+
+100% of non-COTS: 23.8 8.5 89.1
+1.0 x [(a) + (c)]
+100% spare: 1.0 x [(e) + (f)] 55.6 22.0 178.2
+
+Estimate of Computer (e) + (f) + (g) 111.2 356.4
+Requirements
+
+Assumptions:
+
+A. Three-axis stabilized vehicle using Earth sensor, Sun sensor, and rate gyros.
+
+B. Reaction-control thrusters used for attitude control.
+
+C. No function needs to be performed faster than 4 Hz; Sun sensing and ephemeris propagation done at 1 Hz.
+D. Ground station will update ephemeris frequently, allowing for a simple propagation mode.
+
+E. 1750A-class target computer.
+
+F. Software developed in Ada.
+
+G. Target computer must have 50% spare capacity at launch.
+
+
+16.3 FireSat Example 675
+
+Notes:
+1. Computation of n = number of scheduled tasks per second.
+To determine 9, first calculate the number of application functions times their frequency
+5 functions listed at 4 Hz = 20 functions per second
+2 functions listed at 1 Hz= 2 functions per second
+Total = 22 functions per second
+
+If no better information exists, assume 3 to 4 schedulable tasks for each major function. Thus, a conservative
+estimate for the number of schedulable tasks, n, in the FireSat ACS example wouid be 80.
+
+2. Computation of m = words/s
+Rate gyros—12 @ 4 Hz, Earth sensors—20@ 8 Hz, Sun sensors—10 @ 4 Hz
+Telemetry— 4 kbit telemetry stream
+Command—control commands
+
+248 words per second
+
+500 words per second
+it t ni
+
+798 words per second
+
+hou ow
+
+Total
+
+requirements are soft and the system will evolve, we must add substantial margin. The
+target computer in which this software resides must also have spare capacity to accom-
+modate on-orbit growth in the software. Table 16-21 includes the margin we need. In
+this example, the ACS computer’s minimum size and throughput are 155 K words and
+356 KIPS.
+
+To assess cost and develop a schedule, we need to estimate the number of source
+lines of code, or SLOC. This estimate should consider only the software that we must
+develop, so we exclude margins and off-the-shelf software. (The margin added for
+growth between the System Requirements Review and deployment is to reduce risk in
+determining processor requirements. Although not included in the calculation of
+source lines of code, we should consider it when we examine potential cost and sched-
+ule risk.) The amount of software to be developed is 23.8 K words of code and 8.5 K
+words of data memory. For costing, we use a factor of 25% to convert data memory to
+equivalent code words. We have to do so because developing a data word takes about
+one quarter of the effort for developing a word of executable code. Thus, for this
+attitude determination and control example, the total becomes 26.0 K words. Assum-
+ing the development is in a higher-order language such as Ada (using I line of code
+per 5 words of memory from Table 16-14), this translates to 5,200 source lines of code
+for the FireSat attitude control software.
+
+16.3.2 FireSat Onboard Payload Processing
+
+As part of defining the conceptual design for FireSat, we start with the assump-
+tions for payload control & data management given in Fig. 16-9, including fire detec-
+tion and reporting and fire parameter estimation. We show our orbit and sensor
+characteristic information in Table 16-20. We assume all FireSat candidate sensors
+operate in the single scan mode. The primary sensor differences for this example are
+in the scan width and the data sample sizes which, as we will see, are key drivers in
+both the system and the data flow architecture trades. The scan width options can
+imply different size satellite constellations to cover the same area per unit time, or
+imply multiple sensors per satellite, e.g., one satellite witha single A or B sensor can
+cover the same area as either one satellite with four C sensors, or four satellites with
+a single C sensor
+
+In this example, we will focus on processor throughput. We also assume we will
+use a general purpose computer (identified as GP in Table 16-22) and that the best
+computer we can acquire has a throughput of 100 MIPS. (See Table 16-17 for a survey
+of currently available processors.) Assuming we want to launch with 50% spare, the
+
+676 Spacecraft Computer Systems 16.3
+
+Payload Control & Data Management (PCDM) Interfaces & Capabilities
+
+Payload Control & Data Management
+
+Allocated Capabilities Supported/Derived Capabilities
+* Fire Detection & * Coarse Satellite Location
+Reporting * Surface-type Map Management
+FireSat « Fire Parameter ¢ Sun Specular Reflection Filter
+IR Sensor Estimation * Noise Filter
+(Section 9.6)
+
+Fire Detection
+Messages
+
+Health &
+Status Tim
+
+—
+To:
+
+Remote
+Ground-based
+Receivers
+
+Command & Data Handling
+(Section 11.3)
+
+Communications
+(Section 11.2)
+
+Fig. 16-9. Allocations to Onboard Computer System for FireSat Payload Management
+Capability. This figure delineates the various functional components of the FireSat
+payload management onboard capability. We can either host this software in a single
+onboard computer (OBC) or we can partition it between several OBCs. Likewise we
+might perform these functions using hardware if appropriate. How we partition the
+implementation depends on the computer system design and overall mission require-
+ments.
+
+available throughput is only 50 MIPS. As stated in Sec. 16.2, onboard software size
+and throughput historically double from initial conceptual design to launch. To
+account for this future growth, we set a maximum threshold of 25 MIPS per processor
+for this conceptual design phase exercise.
+
+The primary software estimation method we use is Bottom-up Estimation (Table
+16-16). We generate the needed software information from raw data and basic
+assumptions. Once we break the functions into manageable pieces, we expect to find
+elements that we understand and can estimate. Table 16-21 provides an example of the
+software elements and their characteristics that may be generated through the bottom-
+up estimation process. This example is not intended to represent optimum payload
+control and data management algorithms; it is presented as a set of sample algorithms
+that mission processing engineers may consider. Multiple algorithm sets are often
+considered for complex onboard systems, although we evaluate only one set here.
+
+Several candidate architectures for this example are shown in Table 16-22. The first
+assumed architecture is a direct (point-to-point) connection between the IR sensor and
+the processing hardware in which the payload control & data management software
+will reside. The fire detection algorithm must first separate observations into ‘possible
+fires” and “noise”. For first order calculations, we assume a simple thresholding algo-
+rithm to eliminate the noise; throw out samples below an intensity threshold, and
+throw out above-threshold samples for which there are no adjacent above-threshold
+samples. The clusters of continuous sample data are referred to as “events.” Table
+16-23 identifies the processing assumptions for a general purpose processor. For all
+three sensor candidates, the throughput calculations show a prohibitive situation. For
+sensor C with the narrow field of view, there appears to be some promise, but the
+throughput requirement still exceeds our 25 MIPS maximum. Additionally, the infor-
+mation in Table 16-23 doesn’t include other software that we know must operate (such
+as the executive task scheduler or data I/O manager). We now must consider alterna-
+tives to our first architecture.
+
+16.3 FireSat Example 677
+
+TABLE 16-20. Characteristics of Candidate FireSat IR Sensors. Based on the mission
+requirements, outlined in the top of this table, there is a variety of approaches to
+solving the problem. We must map out each alternative with quantifiable
+elements so that we can compare them fairly. No one solution is better than the
+next. However, one may meet our mission goals, requirements, and constraints
+better than the others.
+
+Orbit altitude (A)
+
+Orbital 700 km (Defined in Sec. 7.4)
+
+and Mission Period (P) 98.8 min
+Parameters .
+(From Table 9-15, Ground Track Velocity 6,762 m/s
+p. 287) (Vg)
+Min. Elevation Angle 20 deg
+€)
+Resolution (a) 30 m
+Max scan time (a/V,) 4.437 msec (no overlap at Nadir)
+Min scan freq (V,/0) 225.4 scans/s
+Peak fire density 40 detectable fires in 100 km path
+
+1,600 detectable fires in 100,000 km?
+
+—
+
+Sensor A: B: C:
+
+Characteristics Full FOV Fewer Bits/Sample Quarter FOV
+Scan Width (6,) 57.9 deg 57.9 deg 14.5 deg
+Pixels per Scan 23,563 pixels 23,563 pixels 5,891 pixels
+Samples per Pixel (s) 1.6 samples 1.6 samples 1.6 samples
+Sample Rate: 37,702 /scan 37,702 /scan 9,425 /scan
+
+8,498,013 /sec 8,498,013 /sec 2,124,503 /sec
+
+Bits/Sample (b) 8 bits 4 bits 8 bits
+Frame Efficiency (q) 0.9 0.9 0.9
+Data Rate (DR) 76 Mbps 38 Mbps 19 Mbps
+Bits/Scan 301,612 /scan 150,806 /scan 75,403 /scan
+Bit Rate 67.98 Mbps 33.99 Mbps 17.00 Mbps
+
+Earth Coverage Rate 5,327 km2/s 5,327 km2/s 1,203 km2/s
+
+“Design to” peak fire 85 /sec 85 /sec 19 /sec
+detection rate
+
+One possible architectural change would be to include a separate processor,
+dedicated to the thresholding process. Again, the high throughput estimates in Table
+16-23 indicate this is not a viable option, given the 25 MIPS throughput limit we have
+established.
+
+Clearly now, we need to add a special-purpose sensor interface unit into the
+architecture to hold the scan information, perform the noise filtering function, and
+provide the events from each scan to the general purpose computer. Since a small
+change in a few parameters can lead to substantially different throughput estimates, we
+should perform additional analysis at this point to justify the need for this custom
+equipment. For example: doubling the ground resolution requirement (from 30 m to
+60 m) will reduce the throughput estimate by a factor of four.
+
+678 Spacecraft Computer Systems 16.3
+
+TABLE 16-21. Software Elements for Payload Control and Data Management. We can use
+this general format for estimating the size and throughput requirements for any
+software application, based on the bottoms-up method. The chart identifies all
+the elements of the Payload Control and Data Management function that will be
+implemented in software for the FireSat example. Additionally, it demonstrates
+how to calculate throughput, and what external environmental conditions drive
+the value. Cumulative throughput requirements are calculated in Table 16-25.
+
+Execution Exe. | Inst/ | Utility | Loop
+Functional Frequency SLOC | Exe. | Inst. | Fact | Throughput
+Breakdown f E |A=5E; B L Est"
+
+FIRE DETECTION
+
+Sensor (/O Control (assume DMA)
+- DMA control per Sc 225 Hz 5 0.001 MIPS
+~ Data movement per B 1V/B
+
+Noise Filtering (data intensity)
+~ Check threshold intensities per Smp 25 /Smp
+~ Generate clusterst per Smp 75 ’Smp
+~ Generate cluster “event” perEv Table 16-25 150 VEv
+
+Noise Event Filtering (geographic)
+
+~ Orbit Propagator per Sc 225 Hz < By similarity: 4.5 MIPS
+(Table 16-13) 0.020 MIPS * (225 Hz/1Hz) >
+
+~ Convert to Lat/Long perEv Table 16-25 100 I/Ev
+~ Filter out “ocean fires”
+~ Build Surface map per Sc 225 Hz 2.7 MIPS
+— Filter out non-land events per Ev 100 Ev
+~ Exclude Sun specular reflection
+~ Locate specular region 2Hz 0.002 MIPS
+~ Define exclusion zone per Sc 225 Hz 0.034 MIPS
+~ Filter out pixels in E.Z. perEv Table 16-25 25 Ev
+
+FIRE REPORTING
+
+Determine Fire Lat/Long
+~ Convert scan/pixel to Lat/Long Table 16-25 300 I/Ev
+
+Message Generation
+~ Correlate event to prior scans Table 16-25 150 I/Ev
+~ Generate containment ellipse 3,500 I/F
+~ Generate average intensity 100 I/F
+— Format message 100 I/F
+
+Communications (Table 16-13) < By similarity: 2.3 MIPS
+0.010 MIPS * (225 Hz/1Hz) >
+
+Supporting Math/Utility Functs
+— Square root Utility thruput
+~ Trig Functions factored in
+~ Inv. Trig Functions above
+
+Operating System Assume 10% over-
+head on all functions
+
+Terminology:
+| = Instruction
+B = Byte
+Smp = Sample— Raw digital intensity information from the iR sensor representing one measurement
+Sc = Scan—One sweep across all pixels within the IR sensor
+Ev = Event—A set of contiguous samples (2 or more) that are not removed by the Noise Filter
+F = Fire—A set of events (may be only one) that are geographically connected scan-to-scan
+* =L* (A+B)
+t Eliminate single pixels as noise
+
+
+16.3 FireSat Example 679
+
+TABLE 16-22. Onboard Computer System Architecture Evolution for FireSat Payload
+Control & Data Management Example. See text for discussion. Terminology:
+GP = general purpose computer, S/U = sensor interface unit.
+
+FireSat Architectures Evaluated PROs and CONs of Architecture
+Initial Architecture: Point-to-Point (+) Simplicity—Low cost
+
+(-) Insufficient GP throughput availability for any
+sensor option
+Sensor
+
+Add Standalone Thresholding GP (+) Maintains simplicity
+
+(-) Does not solve GP throughput availability
+IR needed for threshoiding
+Sensor
+Add Special Interface Unit (+) Customized SIU to handle
+(one IR sensor to one GP) thresholding/clustering function
+
+iA (+) Modest complexity
+Sensor SIU (-) Single GP only works for Sensor C, which
+forces many sensors per satellite. Still a
+
+viable option.
+
+Add SIU-to-Multiple GP Capability (+) Architecture scales to support all sensor
+options
+
+(+) Architecture supports use of less capable
+GPs (although it will increase the number)
+
+(+) Supports other subsystem options, such as
+assigning one GP for spacecraft bus
+operations
+
+(-) Higher complexity: SIU generates
+
+One SIU to NGPs information by scan segments rather than
+
+whole scan; interfaces with external
+
+subsystems are more complex
+
+One Sensor to one SIU
+
+Common data bus
+between GPs and
+external subsystems
+
+We need to remain flexible, so we also assume that the sensor interface unit may
+operate as a One-sensor to many-processors interface. With the one-to-many approach,
+we assume that we can segment the fire detection and reporting capability using
+parallel processing. With a single-scan sensor, we can divide each scan into N contig-
+uous segments. Then each processor will perform its fire detection algorithm on a
+swath of ground territory representing 1/N the width of the sensor field of view.
+Although the software functions do not change based on effective swath width, the
+special processor data management function changes with N, and we should size it
+accordingly. Note that we assume we use the same basic software in all the processors.
+
+In order to proceed with our software estimation example, we need to identify the
+peak data rates from the sensor interface unit to each processor. Table 16-24 identifies
+the sensor interface unit assumptions. Using the throughput estimates of Table 16-21
+and the event rate estimates in Table 16-24, we are now able to estimate overall
+throughput requirements for the payload control and data management software across
+the sensor type and number of processor combinations. Table 16-25 presents the
+computation for sensor A; the computations for sensors B and C are performed in the
+same manner. Figure 16-10 shows, for all candidate sensors, the throughput per
+processor as a function of number of processors supporting one IR sensor.
+
+680 Spacecraft Computer Systems 16.3
+
+TABLE 16-23. Noise Reduction Throughput Calculation. For each of the three examples
+shown below, we calculate the resulting throughput requirement if we were to
+implement the noise reduction capability in software. Each solution exceeds our
+original 25MIP limit imposed earlier in this example. Therefore, an alternative
+approach must be found (for example, we can use hardware as shown in the
+candidate architectures in Table 16-22).
+
+Throughput Calculations Using Noise Filtering Instruction Estimates (Table 16-21)
+250 instructions executed per above-threshold sample
+25 instructions executed per above-threshold sample
+
+A: B: C:
+Full FOV Small Sample Size Quarter FOV
+
+Peak % above threshold 1% 2% 1%
+
+Samples above T 377 /scan 754 /scan 94 /scan
+
+Samples below T 37,325 /scan 36,948 /scan 9,331 /scan
+
+GP Instructions 1,027,367/scan 1,112,196 /scan 256,842 inst/scan
+
+GP inst per second 232 MIPS 251 MIPS 58 MIPS
+Implication Won't Fit in GP Won't Fit in GP Exceeds Limit
+
+TABLE 16-24. FireSat IR Sensor-to-Processor Interface Unit Characteristics. This table
+shows how to calculate the throughput requirements for various sensor config-
+urations and differing numbers of general purpose computers.
+
+SIU maintains information from the last 2 scans (allow for GP collection delays).
+One “message” generated per scan (or scan segment).
+Message per Scan: Number of events in scan, Time of scan —_(60 bits)
+per Event: Number of samples, first pixel location (32 bits)
+per Sample Measured Intensity (8 bits)
+
+For Single-Sensor to Multiple-GP Configuration
+Scan is segmented according to number, N, of general purpose CPUs in use.
+Dynamic thresholding performed over each segment of scan.
+
+Maximum number of .P. IR Sensor
+
+events per scan, based B
+
+on Sensor scan width
+
+and number of general 378 events per scan
+purpose processors in 189 events per scan
+use: 76 events per scan
+
+38 events per scan
+
+Peak data transfer rate -P. IR Sensor
+(Mbps), based on B
+
+Sensor scan width and
+number of general = 3.422 Mbps (SIU to GP)
+
+purpose processors 1.718 Mbps (SIU to GP)
+in use: 0.699 Mbps (SIU to GP)
+0.356 Mbps (SIU to GP)
+
+
+16.3 FireSat Example 681
+
+TABLE 16-25. Estimated Throughput Requirement for FireSat Payload Control and Data
+Management Software (Sensor A). Using the individual throughput estimates
+for each basic software component (Table 16-21) and the event rates
+(Table 16-24), the overall throughput can be estimated. Note: For clarity of
+calculation, the event rates in Table 16-24 have been converted from
+events/scan to events/sec using a scan rate of 225 Hz.
+
+Throughput (MIPS)
+
+Functional Breakdown for No. Processors: 5 10
+
+Payload Control &
+Data Management Peak Events/Sec: | 85,050 | 42,525 | 17,100 | 8,550
+
+Onboard Software Peak Fires/Sec: 8,550 | 4,275
+
+Throughput
+Data Transfer from SIU Formula — Sensor A —
+
+DMA Control 0.001 MIPS 0.001 0.001
+
+Data Movement
+(data rate in Table 16-24) 1 Inst/Byte 0.130 0.053
+
+Noise Filtering Geographic
+Orbit Propagator (Table 16-13) 4.5MIPS 4.500 4.500
+Convert Scan/Pixel to LAT/LONG 300 Inst/Event 6.413 2.565
+Filter Out “Ocean Fires”
+Build Surface Map 2.7 MIPS 2.700 2.700
+Filter Out Non-Land Events 100 InsvEvent 2.138 0.855
+Exclude Sun Specular Reflection
+Locate Specular Region 0.002 MIPS 0.002 0.002
+Define Exclusion Zone for Scan 0.034 MIPS 0.034 0.034
+Filter Out Pixels in E. Z. 25 Inst/Event 0.534 0.214
+Fire Reporting
+Determine Fire LAT/LONG
+Convert Scan/Pixel to LAT/LONG | 300 Inst/Event
+Message Generation
+Correlate Event to Prior Scans 500 Inst/Event
+Generate Containment Ellipse 3,500 Inst/Fire
+Generate Average Intensity 100 Inst/Fire
+Format Message 100 Inst/Fire
+Communications (Table 16-13) 2.250 MIPS
+Operating System 10% of above
+
+Total Throughput Estimate per Processor (MIPS) 37.96 24.27 15.97 13.20
+
+Based on the overall throughput requirement curves in Fig. 16-10, it. appears that
+sensor A is viable if there are two processors, each handling half of the field of view.
+Sensor B requires a minimum of four processors. Sensor B has a smaller sample size
+(therefore a lower raw data rate), but the lower fidelity of the data does not allow
+sufficient noise reduction to lower the number of events being passed to the processor.
+This demonstrates the strong sensitivity between the noise reduction capability and the
+required processor throughput to detect fires. This noise reduction element has now
+
+
+682 Spacecraft Computer Systems 16.3
+
+we oe @ A: Full FOV
+
+== aa B: Small Sample Size
+C: Quarter FOV
+25 MIPS Design
+
+Software Throughput per Processor (MIPS)
+
+Number of Processors
+
+Fig. 16-10. Throughput Curves for FireSat Example. These curves illustrate how we can trade
+the number of onboard processors against the throughput and quantity of each
+processor to meet our overall mission requirements. Depending on size, weight and
+power constraints, as well as cost, we can determine which solution best meets our
+mission needs.
+
+been identified to be a driver, given the algorithm suite provided in this example. It
+appears that sensor C can perform the mission with a single processor; however, the
+limited field of view of sensor C may imply the need for additional sensors per
+spacecraft.
+
+Since processors are not 100% reliable, we need to establish a redundancy strategy.
+This strategy will involve the use of distributed vs. federated architectures. For a
+federated architecture, we will likely need 2-for-1 redundancy for each processor. A
+distributed architecture—if the SIU can support it—may allow more cost-effective
+collective redundancy such as 3-for-2. Given this, our preliminary conclusion is that
+sensor A in a distributed processing architecture will result in the fewest number of
+onboard processors for the complete FireSat system. Of course we recognize that this
+is sensitive to our assumptions and will continue to examine the trade space carefully.
+
+16.3.3 Spacecraft and Payload Processing Consolidation and Effort Estimation
+
+Although we have dealt only with selected elements of onboard processing for the
+FireSat space vehicle, areas of commonality have already emerged. As shown in
+Tables 16-19 and 16-21, both spacecraft and payload software requires mathematical
+library functions and some type of operating system. Some, perhaps significant, cost
+containment can be achieved using common elements: processors, software lan-
+guages, utility libraries, and real-time operating systems.
+
+Since the attitude control throughput requirement is small compared to the payload
+software, the spacecraft software may co-exist with the payload processing. Although
+merging the two may reduce the overall number of processors, the system develop-
+ment complexity may increase. Merging them induces tight coupling between the
+spacecraft and payload, and may increase system integration complexity. The hard-
+
+16.3 FireSat Example 683
+
+real-time deadlines associated with spacecraft and payload processing are unrelated,
+yet they will have to be arbitrated. A detailed trade study is needed to address the life
+cycle of the system, from conceptual design through development, integration, test,
+and orbit insertion.
+
+For software cost, the most useful indicator is the number of source lines of code,
+or SLOCs. Various methods exist for determining overall effort and development
+duration from the total number of SLOCs and software productivity rates (See Table
+20-10 in Sec. 20.3 or Boehm [1984]). When determining the total SLOC, consider
+only the software that we must develop. In the payload processing example, we con-
+centrated on the executable SLOC. For overall costing, we must remember to add in
+the SLOCs for startup, system initialization, mode transition, fault responses, and
+other identified functions. In the attitude control example, our estimation method did
+not use SLOCs. For estimates made by similarity, the SLOC counts should be
+developed in the same manner as memory and throughput. If SLOC information is not
+available, then an order-of-magnitude estimate can be generated using the information
+in Table 16-10 to convert a memory estimate to equivalent SLOCS.
+
+References
+
+Anderson, Christine and Merlin Dorfman, eds. 1991. Aerospace Software Engineering
+Washington, DC: American Institute of Aeronautics and Astronautics.
+
+Beckert, Beverly A. 1993. “The Lowdown on Benchmarks.” Computer Aided Engi-
+neering 112(6):16(1), June.
+
+Boehm, B.W. 1981. Software Engineering Economics. New Jersey: Prentice-Hall, Inc.
+
+Boehm, B.W. 1984. “Software Life Cycle Factors,” in Handbook of Software
+Engineering. ed. C.R. Vick and C.V. Ramamoorthy. New York: Van Nostrand
+Reinhold Co.
+
+Hennessy, John L. and David A. Patterson. 1995. Computer Architecture: A Quanti-
+tative Approach (2nd Edition). San Francisco, CA: Morgan Kaufmann Publishers.
+
+Humphrey, Watts S. 1995. A Discipline for Software Engineering (SEI Series in Soft-
+ware Engineering). Reading, MA: Addison-Wesley Publishing Co.
+
+Kaner, Cem, Jack Falk, and Hung Quoc Nguyen. 1993. Testing Computer Software.
+Scottsdale, AZ: The Coriolis Group.
+
+Lane, Malcolm G. and James D. Mooney. 1988. A Practical Approach to Operating
+Systems. Boston: Boyd & Fraser.
+
+Magnus, Chris. 1992. Software for Fault Tolerant Systems: A Development Hand-
+book. Prepared for The National Center for Dependable Systems.
+
+Rullo, T.A., ed. 1980. Advances in Computer Programming Management. Philadel-
+phia: Heyden & Sons, Inc.
+
+Santoni, Andy. 1997. “Standard Tests for Embedded Processors to be Set by Indus-
+try.” InfoWorld 19(31): 34(1).
+
+684 Spacecraft Computer Systems 16.3
+
+Silberschatz, Abraham and Peter Baer Galvin. 1997. Operating System Concepts.
+Reading, MA: Addison Wesley Publishing Co.
+
+Stankovic, John A. and Krithi Ramamritham. 1988. Tutorial: Hard Real-Time
+Systems. IEEE Catalog Number EH0276-6. Washington, DC: Computer Society
+Press of the IEEE.
+
+Vick, C.R. and C.V. Ramamoorthy, eds. 1984. Handbook of Software Engineering.
+New York: Van Nostrand Reinhold Co.
+
+Yourdon, E. 1989. Modern Structured Analysis. New Jersey: Yourdon.

@@ -1,0 +1,1443 @@
+
+Chapter 6
+Introduction to Astrodynamics
+Daryl G. Boden, United States Naval Academy
+
+6.1 Keplerian Orbits
+Satellite Equations of Motion; Constants of
+Motion, Classical Orbital Elements; Satellite
+Ground Tracks; Time of Flight in an Elliptical
+Orbit; Orbit Determination
+
+6.2 Orbit Perturbations
+Third-Body Perturbations;
+Perturbations Because of a Nonspherical
+Earth; Perturbations from Atmospheric Drag;
+Perturbations from Solar Radiation
+
+6.3 Orbit Maneuvering
+Coplanar Orbit Transfers; Orbit Plane
+Changes; Orbit Rendezvous
+
+6.4 Launch Windows
+
+6.5 Orbit Maintenance
+
+Astrodynamics is the study of a satellite’ s trajectory or orbit, that is, its path through
+space. The satellite’s ephemeris is a table listing its position as a function of time. The
+first section below explains the terms used to describe satellite orbits, provides equa-
+tions necessary to calculate orbital elements from position and velocity, and shows
+how to predict the future position and velocity of a satellite. We base this method on
+a simple, but accurate, model treating the Earth and the satellite as spherical masses.
+The next section discusses how forces other than the Newtonian gravitational force
+affect the orbit of a satellite. The third section explains maneuvering strategies used to
+change the satellite’s orbit. The final two sections discuss the available launch times
+and methods for maintaining satellite orbits.
+
+Several textbooks are available in the areas of satellite orbits and celestial mechan-
+ics. Some of the most popular are Bate, Mueller, and White [1971], Battin [1999],
+Danby [1962], Escobal [1965], Kaplan [1976], and Roy [1991]. More recently
+Chobotov [1996], Wiesel [1996], and Vallado [1997] have provided works specifical-
+ly on spacecraft astrodynamics.
+
+131
+
+132 Introduction to Astrodynamics 6.1
+
+6.1 Keplerian Orbits
+
+Explaining the motion of celestial bodies, especially the planets, has challenged
+observers for many centuries. The early Greeks attempted to describe the motion of
+celestial bodies about the Earth in terms of circular motion. In 1543, Nicolaus Coper-
+nicus proposed a heliocentric (Sun-centered) system with the planets following circu-
+lar orbits. Finally, with the help of Tycho Brahe’s observational data, Johannes Kepler
+described elliptical planetary orbits about the Sun. Later, Isaac Newton provided a
+mathematical solution for this system based on an inverse-square gravitational force.
+
+Kepler spent several years reconciling the differences between Tycho Brahe’s care-
+ful observations of the planets and their predicted motion based on previous theories.
+Having found that the data matched a geometric solution of elliptical orbits, he
+published his first two laws of planetary motion in 1609 and his third law in 1619.
+Kepler’s three laws of planetary motion (which also apply to satellites orbiting the
+Earth) are:
+
+¢ First Law: The orbit of each planet is an ellipse, with the Sun at one focus.
+
+* Second Law: The line joining the planet to the Sun sweeps out equal areas in
+equal times.
+
+* Third Law: The square of the period of a planet is proportional to the cube of
+its mean distance from the Sun.
+
+6.1.1 Satellite Equations of Motion
+
+Figure 6-1 depicts the key parameters of an elliptical orbit. The eccentricity, e, of
+the ellipse (not shown in the figure) is equal to c/a and is a measure of the deviation of
+the ellipse from a circle.
+
+Isaac Newton explained mathematically why the planets (and satellites) follow
+elliptical orbits, Newton’s Second Law of Motion, applied to a constant mass system
+and, combined with his Law of Universal Gravitation, provides the mathematical basis
+for analyzing satellite orbits. Newton’s law of gravitation states that any two bodies
+attract each other with a force proportional to the product of their masses and inversely
+proportional to the square of the distance between them. The equation for the magni-
+tude of the force caused by gravity is
+
+F= —GMm/r?
+= —um/r (6-1)
+
+where F is the magnitude of the force caused by gravity, G is the universal constant of
+gravitation, M is the mass of the Earth, m is the mass of the satellite, r is the distance
+from the center of the Earth to the satellite, and 1 = GM is the Earth’s gravitational
+constant (= 398,600.5 km3s~).
+
+Combining Newton’s second law with his law of gravitation, we obtain an equation
+for the acceleration vector of the satellite:
+
+r+ (ue? jr =0 (6-2)
+
+This equation, called the two-body equation of motion, is the relative equation of
+motion of a satellite position vector as the satellite orbits the Earth. In deriving it, we
+assumed that gravity is the only force, the Earth is spherically symmetric, the Earth’s
+mass is much greater than the satellite’s mass, and the Earth and the satellite are the
+only two bodies in the system.
+
+6.1 Keplerian Orbits 133
+
+Perigee
+
+ee es
+
+a
+
++
+
+position vector of the satellite relative to Earth’s center
+V: velocity vector of the satellite relative to Earth’s center
+
+=
+
+flight-path-angle, the angle between the velocity vector and a line
+perpendicular to the position vector
+
+semimajor axis of the ellipse
+semiminor axis of the ellipse
+the distance from the center of the orbit to one of the focii
+
+the polar angle of the ellipse, also called the true anomaly, measured in the
+
+direction of motion from the direction of perigee to the position vector
+
+r,: radius of apogee, the distance from Earth's center to the farthest point on the
+ellipse
+
+'p: radius of perigee, the distance from Earth's center to the point of closest
+
+approach to the Earth
+
+= 2 5 ®
+
+Fig. 6-1. Geometry of an Ellipse and Orbital Parameters.
+
+A solution to the two-body equation of motion for a satellite orbiting Earth is the
+polar equation of a conic section. It gives the magnitude of the position vector in terms
+of the location in the orbit,
+
+r=a(l—-e)/(1+ecos v) (6-3)
+where a is the semimajor axis, e is the eccentricity, and v is the polar angle or true
+anomaly.
+
+A conic section is a curve formed by the intersection of a plane passing through a
+right circular cone. As Fig. 6-2 shows, the angular orientation of the plane relative to
+the cone determines whether the conic section is a circle, ellipse, parabola, or hyper-
+bola. We can define all conic sections in terms of the eccentricity, e, in Eq. (6-3)
+above. The type of conic section is also related to the semimajor axis, a, and the
+specific mechanical energy, & Table 6-1 shows the relationships between energy,
+eccentricity, and semimajor axis and the type of conic section.
+
+134 Introduction to Astrodynamics 6.1
+
+Hyperbola
+
+Parabola
+
+Ellipse
+
+/\ Circle
+
+|
+\ LF Ex. Ellipse
+f+ Sac
+Hyperbolal IS ~ <a <i
+\ \ aN STN \ Parabola
+fi \
+> \ \ re
+i. \ \\ | >
+wal \ x 2
++ 74 Es
+
+Fig. 6-2. Geometric Origin of Conic Sections. Satellite orbits can be any of four conic
+sections: a circle, an ellipse, a parabola, or a hyperbola.
+
+TABLE 6-1. Conic Sections. See text for discussion.
+
+Energy, € Semimajor Axis, a Eccentricity, e
+Circle = radius
+
+Ellipse >0
+Parabola 00
+
+Hyperbola <0
+
+6.1.2 Constants of Motion
+
+Using the two-body equation of motion, we can derive several constants of motion
+of a satellite orbit. The first is
+
+=-y2 _ =
+€=V"/2-pl/r=-p/ (Qa) (6-4)
+
+where & is the total specific mechanical energy, or mechanical energy per unit mass,
+for the system and is the sum of the kinetic energy per unit mass and potential energy
+per unit mass. We refer to Eq. (6-4) as the energy equation. Because the forces in the
+system are conservative, the energy is a constant. The term for potential energy, —y/r,
+defines the potential energy to be zero at infinity and negative at any radius less than
+infinity. Using this definition, the specific mechanical energy of elliptical orbits will
+always be negative. As the energy increases (approaches zero), the ellipse gets larger,
+and the elliptical trajectory approaches a parabolic trajectory. From the energy
+Eq. (6-4), we find that a satellite moves fastest at perigee of the orbit and slowest at
+apogee.
+
+6.1 Keplerian Orbits 135
+
+We also know that for a circle the semimajor axis equals the radius, which is
+constant. Rearranging the energy equation, we find the velocity of a satellite in a
+circular orbit.
+
+V,,, = (w/ ny"? (6-5)
+= 7,905 366 (Rp /r)!2
+= 631.3481 71?
+
+where FV,
+
+’, 18 the circular velocity in km/s, Re is the Earth’s radius in km, and r is the
+orbit’s radius in km.
+
+From Table 6-1, the energy of a parabolic trajectory is zero. A parabolic trajectory
+is one with the minimum energy needed to escape the gravitational attraction of Earth.
+Thus, we can calculate the velocity required to escape from the Earth at any distance,
+r, by setting energy equal to zero in Eq. (6-4) and solving for velocity.
+
+Vie = (Qu /r)!2 (6-6)
+= 11.179 88 (Rp/r)
+= 892.861] r-2
+where V,
+
+Zse 1S the escape velocity in km/s, and r is in km.
+
+Another constant of motion associated with a satellite orbit is the specific angular
+momentum, h, which is the satellite’s total angular momentum divided by its mass. We
+can find it from the cross product of the position and velocity vectors.
+
+h=r xv (6-7)
+
+We find that from Kepler’s second law, the angular momentum is constant in
+magnitude and direction for the two-body problem. Therefore, the orbital plane
+defined by the position and velocity vectors must remain fixed in inertial space.
+
+6.1.3 Classical Orbital Elements
+
+When solving the two-body equations of motion, we need six constants of
+integration (initial conditions) for the solution. Theoretically, we could find the three
+components of position and velocity at any time in terms of the position and velocity
+at any other time. Alternatively, we can completely describe the orbit with five
+constants and one quantity which varies with time. These quantities, called classical
+orbital elements, are defined below and are shown in Fig. 6-3. The coordinate frame
+shown in the figure is the geocentric inertial frame,” or GCI, defined in Chap. 5 (see
+Table 5-1). Its origin is at the center of the Earth, with the X-axis in the equatorial
+plane and pointing to the vernal equinox. Also, the Z-axis is parallel to the Earth’s spin
+axis (the North Pole), and the Y-axis completes the right-hand set in the equatorial
+plane. The classical orbital elements are:
+
+a: semimajor axis: describes the size of the ellipse (see Fig. 6-1).
+e: eccentricity: describes the shape of the ellipse (see Fig. 6-1).
+
+* A sufficiently inertial coordinate frame is a coordinate frame that we can consider to be non-
+accelerating for the particular application. The GCI frame is sufficiently inertial when
+considering Earth-orbiting satellites, but is inadequate for interplanetary travel because of its
+rotational acceleration around the Sun.
+
+136 Introduction to Astrodynamics 6.1
+
+i: inclination: the angle between the angular momentum vector and the unit
+vector in the Z-direction.
+
+2: right ascension of the ascending node: the angle ftom the vernal equinox to
+the ascending node. The ascending node is the point where the satellite passes
+through the equatorial plane moving from south to north. Right ascension is
+measured as a right-handed rotation about the pole, Z.
+
+@: argument of perigee: the angle from the ascending node to the eccentricity
+vector measured in the direction of the satellite’s motion. The eccentricity
+vector points from the center of the Earth to perigee with a magnitude equal
+to the eccentricity of the orbit.
+
+V: true anomaly: the angle from the eccentricity vector to the satellite position
+vector, measured in the direction of satellite motion. Alternately, we could
+use time since perigee passage, T.
+
+(Always Defined)
+
+y ws
+v
+Vv Vernal n|
+Equinox Line of Nodes Line of Nodes lo Periapsis
+Direction
+
+Fig. 6-3. Definition of the Keplerian Orbital Elements of a Satellite in an Elliptic Orbit. We
+define elements relative to the GCI coordinate frame.
+
+Given these definitions, we can solve for the elements if we know the satellite’s
+position and velocity vectors. Equations (6-4) and (6-7) allow us to solve for the
+energy and the angular momentum vector. An equation for the nodal vector, n, in the
+direction of the ascending node is
+
+n=Zxh (6-8)
+We can calculate the eccentricity vector from the following equation:
+e=(1/w{(V2 —- u/ry)r -(r-v)v} (6-9)
+
+Table 6-2 lists equations to derive the classical orbital elements and related param-
+eters for an elliptical orbit.
+
+Equatorial (i = 0) and circular (e = 0) orbits demand alternate orbital elements to
+solve the equations in Table 6-2. These are shown in Fig. 6-3. For equatorial orbits, a
+single angle, IT, can replace the right ascension of the ascending node and argument
+of perigee. Called the longitude of perigee, this angle is the algebraic sum of Q and @.
+As i approaches 0, IZ approaches the angle from the X-axis to perigee. For circular
+
+6.1 Keplerian Orbits 137
+
+TABLE 6-2. Computing the Classic Orbital Elements. For the right ascension of the ascend-
+ing node, argument of perigee, and true anomaly, if the quantities in parentheses
+are positive, use the angle calculated. if the quantities are negative, the correct
+value is 360 deg minus the angle calculated.
+
+Symbol Name Equation Quadrant Check
+a semimajor axis a=—u/(2é) = (tm + tp)/2
+e eccentricity e=le|=1-(rp/a)= ({ /a)—1
+i inclination i= cos-1(h,/h)
+Q right ascension of 2Q=cos-"(ny/n)
+the ascending node
+(2) argument of perigee @ =cos-'{(n-e)/(n-e)]}
+v true anomaly v=cos[(e-r)/(e+r)]
+Ip radius of perigee ip=a(i-e)
+ly radius of apogee r=a(ite)
+P period P= 2n(a3/ yu)
+= 84.489 (a/Re)3?min
+= 0.000 165 87 23min, ain km
+9 orbital frequency 9 = (u/ a8)V2
+
+= 631.348 16 a 3?rad/s, ain km
+
+orbits (e = 0), a single angle, u = m+ v, can replace the argument of perigee and true
+anomaly. This angle is the argument of latitude and, when e = 0, equals the angle from
+the nodal vector to the satellite position vector. Finally, if the orbit is circular and equa-
+torial, then a single angle, /, or true longitude, specifies the angle between the X-axis
+and the satellite position vector.
+
+6.1.4 Satellite Ground Tracks
+
+As defined in Chap. 5, a satellite’s ground track is the trace of the points formed by
+the intersection of the satellite’s position vector with the Earth’s surface. In this section
+we will evaluate ground tracks using a flat map of the Earth. Chapters 5 and 7 give
+another approach of displaying them on a global representation.
+
+Although ground tracks are generated from the orbital elements, we can gain
+insight by determining the orbital elements from a given ground track. Figure 6-4
+shows ground tracks for satellites with different orbital altitudes and, therefore, differ-
+ent orbital periods. The time it takes Earth to rotate through the difference in longitude
+between two successive ascending nodes equals the orbit’s period. For direct orbits, in
+which the satellite moves eastward, we measure the change positive to the east. For
+retrograde orbits, in which the satellite moves westward, positive is measured to the
+west.” With these definitions, the period, P, in minutes is
+
+P=4(360 deg ~-AL) direct orbit (6-10)
+P=4(AL — 360 deg) retrograde orbit
+
++This convenient empirical definition does not apply for near polar orbits. More formally, a
+prograde or direct orbit has i < 90 deg. A retrograde orbit has i > 90 deg. A polar orbit has
+i= 90 deg.
+
+138 Introduction to Astrodynamics 6.1
+
+(For a more precise rotation rate for the Earth, use 3.988 min/deg instead of 4.0 in
+these equations.) where AZ is the change in longitude in degrees that the satellite goes
+through between successive ascending nodes. The difference in longitude between
+two successive ascending nodes for a direct orbit will always be less than 360 deg, and
+in fact will be negative for orbits at altitudes higher than geosynchronous altitude. For
+retrograde orbits, the difference in longitude between two successive ascending nodes
+(positive change is measured to the west) is always greater than 360 deg.
+
+Latitude
+
+160 140 -120 -100 -80 -60 40 -20 0 20 40
+
+Longitude
+
+Fig. 6-4. Orbital Ground Tracks of Circular Orbits of Different Periods. (A) AL = 335°,
+P= 100 min; (B) AL = 260°, P = 398 min; (C) AL = 180°, P= 718 min; (D) AL = 28°,
+P= 1,324 min; and (E) AL = 0°, P= 1,436 min.
+
+Once we know the period, we can determine the semimajor axis by using the
+equation for the period of an elliptical orbit:
+((P/2n)*p]'2 (6-11)
+
+331.249 15 P?3 km
+
+a
+
+We
+
+where the period is in minutes.
+
+Figure 6-4 shows one revolution each for the ground tracks of several orbits with
+an increasing semimajor axis. The period of a geosynchronous orbit, E, is 1,436 min,
+matching the Earth’s rotational motion.
+
+We can determine the orbit’s inclination by the ground track’s maximum latitude.
+For direct orbits the inclination equals the ground track’s maximum latitude, and for
+retrograde orbits the inclination equals 180 deg minus the ground track’s maximum
+latitude.
+
+The orbit is circular if a ground track is symmetrical about both the equator and a
+line of longitude extending downward from the ground track’s maximum latitude. All
+the orbits in Fig. 6-4 are circular.
+
+Figure 6-5 shows examples of ground tracks for the following typical orbits:
+
+A: Shuttle parking orbit, a = 6,700 km, e = 0, i = 28.4 deg;
+B: Low-altitude retrograde orbit, a = 6,700 km, e = 0, i = 98.0 deg;
+
+6.1 Keplerian Orbits 139
+
+C: GPS orbit, a = 26,600 km, e = 0, i = 55.0 deg; and
+D: Molniya orbits, a = 26,600 km, e = 0.75, i = 63.4 deg, w = 270 deg.
+
+Latitude
+
+Longitude
+
+Fig. 6-5. Typical Ground Tracks. (A) Shuttle parking, (B) Low-altitude retrograde, (C) GPS,
+and (D) Molniya orbits. See text for orbital elements.
+
+6.1.5 Time of Flight in an Elliptical Orbit
+
+In analyzing Brahe’s observational data, Kepler was able to solve the problem of
+relating position in the orbit to the elapsed time, ¢— fp, or conversely, how long it takes
+to go from one point to another in an orbit. To solve this, Kepler introduced the quan-
+tity M, called the mean anomaly, which is the fraction of an orbit period which has
+elapsed since perigee, expressed as an angle. The mean anomaly equals the true anom-
+aly for a circular orbit. By definition,
+
+M—Mg=n (t~ ty) (6-12)
+where M, is the mean anomaly at time ¢, and x is the mean motion, or average angular
+velocity, determined from the semimajor axis of the orbit:
+
+n =(p/a3)2 (6-13)
+
+x 36,173.585 a? deg/s
+= 8,681,660.4 a3? rev/day
+23.125 2977 x 10°a-3? deg/day
+
+where a is in km.
+
+This solution will give the average position and velocity, but satellite orbits are
+elliptical, with a radius constantly varying in orbit. Because the satellite’s velocity
+depends on this varying radius, it changes as well. To resolve this problem we define
+an intermediate variable called eccentric anomaly, E, for elliptical orbits. Table 6-3
+lists the equations necessary to relate time of flight to orbital position.
+
+140 Introduction to Astrodynamics 6.1
+
+TABLE 6-3. Time of Flight in an Effiptic Orbit. All angular quantities are in radians.
+
+Variable Name Equation
+
+mean motion n = (u/as ye
+= 631.348 16 a-3? rad/s (ain km)
+
+eccentric anomaly cos E= (e+ cos v)/(1+ ecos v)
+
+mean anomaly M = E-esin(E) (Min rad)
+M = My+Nn(t- to) (M in rad)
+
+time of flight t~i=(M —-M))/n (t - tg in sec)
+
+Vv true anomaly v = M+ 2esinM +1.25e2 sin(2M) (approx.)
+
+As an example, we find the time it takes a satellite to go from perigee to an angle
+90 deg from perigee, for an orbit with a semimajor axis of 7,000 km and an eccentricity
+of 0.1. For this example
+
+Vo =£ = My =0.0 rad fo =0.0s
+
+v = 1.5708 rad E =1.4706 rad
+
+M =1.3711 rad n =0.001 08 rad/s
+t =1,271.88s
+
+Finding the position in an orbit after a specified period is more complex. For this
+problem, we calculate the mean anomaly, M, using time of flight and the mean motion
+using Eq. (6-12). Next, we determine the true anomaly, Vv, using the series expansion
+shown in Table 6-3, a good approximation for small eccentricity (the error is of the
+order e?). If we need greater accuracy, we must solve the equation in Table 6-3 relating
+mean anomaly to eccentric anomaly. Because this is a transcendental function, we
+must use an iterative solution to find the eccentric anomaly, after which we can calcu-
+late the true anomaly directly.
+
+6.1.6 Orbit Determination
+
+Up to this point, we have assumed that we know both the position and velocity of
+the satellite in inertial space or the classical orbital elements. But we often cannot
+directly observe the satellite’s inertial position and velocity. Instead, we commonly
+receive data from radar, telemetry, optics, or GPS. Radar and telemetry data consists
+of range, azimuth, elevation, and possibly the rates of change of one or more of these
+quantities, relative to a site attached to the rotating Earth. GPS receivers give GCI
+latitude, longitude, and altitude. Optical data consists of right ascension and declina-
+tion relative to the celestial sphere. In any case, we must combine and convert this data
+to inertial position and velocity before determining the orbital elements. Bate, Mueller,
+and White [1971] and Escobal [1965] cover methods for combining data, so I will not
+cover them here.
+
+The type of data we use for orbit determination depends on the orbit selected,
+accuracy requirements, and weight restrictions on the spacecraft. Because radar and
+optical systems collect data passively, they require no additional spacecraft weight,
+but they are also the least accurate methods of orbit determination. Conversely, GPS
+
+6.2 Orbit Perturbations 141
+
+data is more accurate but also requires a receiver and processor, which add weight. We
+can also use GPS for semiautonomous orbit determination because it requires no
+ground support. An alternative method for fully autonomous navigation is given by
+Tai and Noerdlinger [1989] (See Sec. 11.2.)
+
+6.2 Orbit Perturbations
+
+The Keplerian orbit discussed above provides an excellent reference, but other
+forces act on the satellite to perturb it away from the nominal orbit. We can classify
+these perturbations, or variations in the orbital elements, based on how they affect the
+Keplerian elements.
+
+Figure 6-6 illustrates a typical variation in one of the orbital elements because of a
+perturbing force. Secular variations represent a linear variation in the element. Short-
+period variations are periodic in the element with a period less than or equal to the
+orbital period. Long-period variations have a period greater than the orbital period.
+Because secular variations have long-term effects on orbit prediction (the orbital ele-
+ments affected continue to increase or decrease), I will discuss them in detail. If the
+satellite mission demands that we precisely determine the orbit, we must include the
+periodic variations as well. Battin [1999], Danby [1962], and Escobal [1965] describe
+methods of determining and predicting orbits for perturbed Keplerian motion.
+
+Element
+
+Secular
+7
+
+7
+7
+
+|. Long Period
+Short Period
+
+Orbit Period Time
+
+Fig. 6-6. Secular and Periodic Variations of an Orbital Element. Secular variations
+represent linear variations in the element, short-period variations have a period less
+than the orbital period, and long-period variations have a period longer than the orbital
+period.
+
+When we consider perturbing forces, the classical orbital elements vary with time.
+To predict the orbit we must determine this time variation using techniques of either
+
+142 Introduction to Astrodynamics 6.2
+
+special or general perturbations. Special perturbations employ direct numerical inte-
+gration of the equations of motion. Most common is Cowell’s method, in which the
+accelerations are integrated directly to obtain velocity and again to obtain position.
+
+General perturbations analytically solve some aspects of the motion of a satellite
+subjected to perturbing forces. For example, the polar equation of a conic applies to
+the two-body equations of motion. Unfortunately, most perturbing forces don’t yield
+to a direct analytic solution but to series expansions and approximations. Because the
+orbital elements are nearly constant, general perturbation techniques usually solve
+directly for the orbital elements rather than the inertial position and velocity. The
+orbital elements are more difficult to describe mathematically and approximate, but
+they allow us to better understand how perturbations affect a large class of orbits. We
+can also obtain solutions much faster than with special perturbations.
+
+The primary forces which perturb a satellite orbit arise from third bodies such as
+the Sun and the Moon, the nonspherical mass distribution of the Earth, atmospheric
+drag, and solar radiation pressure. We describe each of these below.
+
+6.2.1 Third-Body Perturbations
+
+The gravitational forces of the Sun and the Moon cause periodic variations in all of
+the orbital elements, but only the right ascension of the ascending node, argument of
+perigee, and mean anomaly experience secular variations. These secular variations
+arise from a gyroscopic precession of the orbit about the ecliptic pole. The secular vari-
+ation in mean anomaly is much smaller than the mean motion and has little effect on
+the orbit; however, the secular variations in right ascension of the ascending node and
+argument of perigee are important, especially for high-altitude orbits.
+
+For nearly circular orbits, e? is almost zero and the resulting error is of the order e?.
+In this case, the equations for the secular rates of change resulting from the Sun and
+Moon are:
+
+* Right ascension of the ascending node:
+
+Quoon = -0.003 38 (cosi)/n (6-14)
+
+Asuy = —0.001 54 (cosi)/n (6-15)
+¢ Argument of perigee:
+
+yoon = 0.001 69(4 —5 sin? i)/n (6-16)
+
+@syy = 0.000 77(4-5 sin? i)/n (6-17)
+
+where i is the orbital inclination, n is the number of orbit revolutions per day, and Q
+and « are in deg/day. These equations are only approximate; they neglect the varia-
+tion caused by the changing orientation of the orbital plane with respect to both the
+Moon’s orbital plane and the ecliptic plane.
+
+6.2.2, Perturbations Because of a Nonspherical Earth
+
+When developing the two-body equations of motion, we assumed the Earth has a
+spherically symmetric mass distribution. In fact, the Earth has a bulge at the equator,
+
+6.2 Orbit Perturbations 143
+
+a slight pear shape, and flattening at the poles. We can find a satellite’s acceleration
+by taking the gradient of the gravitational potential function, ®. One widely used form
+of the geopotential function is:
+
+® = (p/n) 1- }°5, (Re /n)" A, (sin L) (6-18)
+n=2
+
+where pt =GM is Earth’s gravitational constant, R, is Earth’s equatorial radius, P, are
+Legendre polynomials, L is geocentric latitude, and J, are dimensionless geopotential
+coefficients of which the first three are:
+
+J,= 0.001 082 63
+J, = —0.000 002 54
+J, = —0.000 001 61
+
+This form of the geopotential function depends on latitude, and we call the geo-
+potential coefficients, J,, zonal coefficients. Other, more general expressions for the
+geopotential include sectoral and tesseral terms in the expansion. The sectoral terms
+divide the Earth into slices and depend only on longitude. The tesseral terms in the
+expansion represent sections that depend on longitude and latitude. They divide the
+Earth into a checkerboard pattern of regions that alternately add to and subtract from
+the two-body potential. A geopotential model consists of a matrix of coefficients in the
+spherical harmonic expansion. The widely used Goddard Earth Model 10B, or
+GEM 10B, is called a “21 x21 model” because it consists of a 21 x21 matrix of co-
+efficients. In order to achieve high accuracy mapping of the ocean surface and wave
+properties, the TOPEX mission required creating a 100 x 100 geopotential model.
+
+The potential generated by the nonspherical Earth causes periodic variations in all
+of the orbital elements. The dominant effects, however, are secular variations in right
+ascension of the ascending node and argument of perigee because of the Earth’s
+oblateness, represented by the J, term in the geopotential expansion. The rates of
+change of Q and w due to J, are
+
+= —2.064 74 x 10!4a77/? (cosi) (I~ e7)?
+@y, = 0.75nJ, (Rg /a)*(4—5sin?i)(1~e*)* (6-20)
+= 1.032 37x10!4a~"/?(4—5 sin? i) (1-2)?
+
+where n is mean motion in deg/day, Rx is Earth’s equatorial radius, a is semimajor axis
+in km, e is eccentricity, i is inclination, and Q and q@ are in deg/day. Table 6-4
+compares the rates of change of right ascension of the ascending node and argument
+of perigee resulting from the Earth’s oblateness, the Sun, and the Moon. For satellites
+in GEO and below, the J, perturbations dominate; for satellites above GEO the Sun
+and Moon perturbations dominate.
+
+Molniya orbits are highly eccentric (e = 0.75) with approximately 12 hour periods
+(2 revolutions/day). Orbit designers choose the orbital inclination so the rate of change
+of perigee, Eq. (6-20), is zero. This condition occurs at inclinations of 63.4 deg and
+116.6 deg. For these orbits we typically place perigee in the Southern Hemisphere, so
+
+144 Introduction to Astrodynamics 6.2
+
+TABLE 6-4. Secular Variations in Right Ascension of the Ascending Node and Argument
+of Perigee. Note that these secular variations form the basis for Sun-synchronous
+and Molniya orbits. For Sun-synchronous orbits the nodal precession rate is set to
+0.986 deg/day to match the general motion of the Sun.
+
+Effect of J, Effect of the Moon Effect of the Sun
+(Eqs. 6-19, 6-20) (Eqs. 6-14, 6-16) (Eqs. 6-15, 6-17)
+(deg/day) (deg/day) (deg/day)
+
+a = 6,700 km, e = 0.0, /= 28 deg
+
+-7.35 -0.000 19 -0.000 08
+
+12.05 0.000 31 0.000 14
+
+Sun-Synchronous | a = 6,728 km, e= 0.0, j= 96.85 deg
+Q 0.986 0.000 03 0.000 01 |
+o -4.890 -0.000 10 —0.000 05 |
+a= 26,600 km, e=0.0, /=60.0 deg
+~0.033 -0.000 85 —0.000 38
+0.008 0.000 21 0.000 10
+Molniya a= 26,600 km, e=0.75, i= 63.4 deg
+
+-0.30 -0.000 76 —0.000 34
+
+0.00 0.000 00 0.000 00
+
+Geosynchronous | a= 42,160 km, e=0, i=0 deg
+
+Q ~0.003 38 0.001 54
+
+i) 0.006 76 0.003 07
+
+the satellite remains above the Northern Hemisphere near apogee for approximately
+11 hours/orbit. Mission planners choose perigee altitude to meet the satellite’s mission
+constraints. Typical perigee altitudes vary from 200 to 1,000 km. We can calculate the
+eccentricity and apogee altitude using the semimajor axis, perigee altitude, and equa-
+tions from Table 6-2.
+
+In a Sun-synchronous orbit, the satellite orbital plane remains approximately fixed
+with respect to the Sun. We do this by matching the secular variation in the right
+ascension of the ascending node (Eq. 6-19) to the Earth’s rotation rate around the Sun.
+A nodal precession rate of 0.9856 deg/day will match the Earth’s average rotation rate
+about the Sun. Because this rotation is positive, Sun-synchronous orbits must be
+retrograde. For a given semimajor axis, a, and eccentricity, we can use Eq. (6-19) to
+find the inclination for the orbit to be Sun-synchronous.
+
+6.2.3 Perturbations From Atmospheric Drag
+
+The principal nongravitational force acting on satellites in low-Earth orbit is
+atmospheric drag. Drag acts in the opposite direction of the velocity vector and
+removes energy from the orbit. This energy reduction causes the orbit to get smaller,
+
+6.2 Orbit Perturbations 145
+
+leading to further increases in drag. Eventually, the altitude of the orbit becomes so
+small that the satellite reenters the atmosphere.
+The equation for acceleration due to drag on a satellite is:
+
+ap = —(1/2)p (C, Alm) V2 (6-21)
+
+where p is atmospheric density, A is the satellite’s cross-sectional area, m is the satel-
+lite’s mass, V is the satellite’s velocity with respect to the atmosphere, and Cp is the
+drag coefficient ~ 2.2 (See Table 8-3 in Sec. 8.1.3 for an extended discussion of Cp).
+
+We can approximate the changes in semimajor axis and eccentricity per revolution,
+and the lifetime of a satellite, using the following equations:
+
+Aa,., = 2 (CpA/m)a? p, exp (-c) [Jy + 2el,] (6-22)
+Ae,e, = 20 (Cp A/m)a p, exp (-c) [h + e (ly +hy/2] (6-23)
+
+where p, is atmospheric density at perigee, c = ae / H, H is density scale height (see
+column 25, Inside Rear Cover), and J; are Modified Bessel Functions” of order i and
+argument c. We model the term m / (Cp A), or ballistic coefficient, as a constant for
+most satellites, although it can vary by a factor of 10 depending on the satellite’s
+orientation (see Table 8-3).
+
+For near circular orbits, we can use the above equations to derive the much simpler
+expressions:
+
+Aa, oy = —2% (CpA/m)pa? (6-24)
+AP 9, = 6%? (Cp A/m)pa?/V (6-25)
+AV, = ™ (Cp A/m)pa V (6-26)
+Ae, = 0 (6-27)
+
+where P is orbital period and V is satellite velocity.
+A rough estimate of the satellite’s lifetime, L, due to drag is
+
+L ¥—H/ Ade, (6-28)
+
+where, as above, H is atmospheric density scale height given in column 25 of the Earth
+Satellite Parameter tables in the back of this book. We can obtain a substantially more
+accurate estimate (although still very approximate) by integrating Eq. (6-24), taking
+into account the changes in atmospheric density with both altitude and solar activity
+level. We did this for representative values of the ballistic coefficient in Fig. 8-4 in
+Sec. 8.1.
+
+6.2.4 Perturbations from Solar Radiation
+
+Solar radiation pressure causes periodic variations in all of the orbital elements. Its
+effect is strongest for satellites with low ballistic coefficients, that is, light vehicles
+with large frontal areas such as Echo. The magnitude of the acceleration, ag, in m/s?
+arising from solar radiation pressure is
+
+ap® ~4.5 x 106(1 +r) A/m (6-29)
+
+where A is the satellite cross-sectional area exposed to the Sun in m?, mis the satellite
+mass in kg, and r is a reflection factor. (x = 0 for absorption; r = 1 for specular
+
+* Values for J, can be found in many standard mathematical tables.
+
+146 Introduction to Astrodynamics 6.3
+
+reflection at normal incidence; and r ~ 0.4 for diffuse reflection.) Below 800 km
+altitude, acceleration from drag is greater than that from solar radiation pressure;
+above 800 km, acceleration from solar radiation pressure is greater.
+
+6.3 Orbit Maneuvering
+
+At some point during the lifetime of most satellites, we must change one or more
+of the orbital elements. For example, we may need to transfer it from an initial parking
+orbit to the final mission orbit, rendezvous with or intercept another satellite, or correct
+the orbital elements to adjust for the perturbations discussed in the previous section.
+Most frequently, we must change the orbital altitude, plane, or both. To change the
+orbit of a satellite, we have to change the satellite’s velocity vector in magnitude or
+direction using a thruster. Most propulsion systems operate for only a short time com-
+pared to the orbital period, so we can treat the maneuver as an impulsive change in the
+velocity while the position remains fixed. For this reason, any maneuver changing the
+orbit of a satellite must occur at a point where the old orbit intersects the new orbit. If
+the two orbits do not intersect, we must use an intermediate orbit that intersects both.
+In this case, the total maneuver requires at least two propulsive burns.
+
+In general, the change in the velocity vector to go from one orbit to another is
+given by
+
+AV = Weep ~ Vourrent (6-30)
+
+We can find the current and needed velocity vectors from the orbital elements,
+keeping in mind that the position vector does not change significantly during impul-
+sive burns.
+
+6.3.1 Coplanar Orbit Transfers
+
+The most common type of in-plane maneuver changes the size and energy of the
+orbit, usually from a low-altitude parking orbit to a higher-altitude mission orbit such
+as a geosynchronous orbit. Because the initial and final orbits do not intersect (see.
+Fig. 6-7), the maneuver requires a transfer orbit. Figure 6-7 represents a Hohmann"
+Transfer Orbit. In this case, the transfer orbit’s ellipse is tangent to both the initial and
+final circular orbits at the transfer orbit’s perigee and apogee, respectively. The orbits
+are tangential, so the velocity vectors are collinear at the intersection points, and the
+Hohmann Transfer represents the most fuel-efficient transfer between two circular,
+coplanar orbits. When transferring from a smaller orbit to a larger orbit, the propulsion
+system must apply velocity change in the direction of motion; when transferring from
+a larger orbit to a smaller, the velocity change is opposite to the direction of motion.
+
+The total velocity change required for the transfer is the sum of the velocity changes
+at perigee and apogee of the transfer ellipse. Because the velocity vectors are collinear
+at these points, the velocity changes are just the differences in magnitudes of the
+velocities in each orbit. We can find these differences from the energy equation, if we
+know the size of each orbit. If we know the initial and final orbits (7, and rg), we
+calculate the semimajor axis of the transfer ellipse, a,,, and the total velocity change
+
+*Walter Hohmann, a German engineer and architect, wrote The Attainability of Celestial Bodies
+[1925], consisting of a mathematical discussion of the conditions for leaving and returning
+to Earth,
+
+6.3
+
+Orbit Maneuvering
+
+Final Orbit <2»
+
+Initial Orbit [2
+
+\. Hohmann
+“\— Transfer
+Ellipse
+
+147
+
+Fig. 6-7. Hohmann Transfer. The Hohmann Transfer ellipse provides orbit transfer between
+two circular, co-planar orbits.
+
+(the sum of the velocity changes required at points A and B) using the following
+algorithm. An example transferring from an initial circular orbit of 6,567 km to a final
+circular orbit of 42,160 km illustrates this technique.
+
+STEP
+1.
+
+om ID
+
+EQUATIONS
+ay, = (r4+1g)/2
+Vig =(u /rg)\?
+= 631.3481 (rg) !2
+Via = [u(2/r, ~ 1/a,)]'?
+= 631.3481 [(2/r - 1/a,)]!2
+Ving = = [W(2/rg — 1/a,,)]'?
+= 631.3481 [(2/7m —- 1/a,)]!?
+AY, =a — Vial
+Aly = lhe — Viel
+
+AVrorat = AV, + AVg
+
+Time of transfer = P/2
+
+EXAMPLE
+= 24,364 km
+
+= 7.79 km/s
+
+= 3.08 km/s
+
+= 10.25 km/s
+
+= 1.59 km/s
+= 2.46 km/s
+= 1.49 km/s
+= 3.95 km/s
+=5hr 15 min
+
+148 Introduction to Astrodynamics 6.3
+
+Alternatively, we can write the total AV required for a two-burn transfer between circular
+orbits at radiir, and rg:
+
+AV rota, = AW + A (6-31)
+
+G-2)-GF HG-2}-GI]f
+Vs a "4 Yp ay r, B
+
+where ¥ # = 631.3481 when AV is in km/s and all of the semimajor axes are in km. Asin step |
+above, a, = (ry + tp)/ 2.
+
+The above expression applies to any coplanar Hohmann transfer. In the case of small transfers
+(that is, 7, close to #), we can approximate this conveniently in two forms:
+
+top
+
+AV =Viy —Vip (6-33)
+
+AV ©0.5 (Ar/r) Vig (6-34)
+where
+
+Ar =1p—ry (6-35)
+and
+
+rer ® Tp Vig * Vig * Vip (6-36)
+
+To make the orbit change, we divide the AV into two small burns are of approximately equal
+magnitude.
+
+The result in Eq. (6-33) is more unusual than it might seem at first. Assume that a satellite is
+in a circular orbit with velocity V4. In two burns we increase the velocity by an amount AV’. The
+result is that the satellite is higher and traveling s/ower than originally by the amount AV. We
+can best clarify this result by an example. Consider a satellite initially in a circular orbit at
+400 km such that r, = 6,778 km and V,, = 7,700 m/s. We will apply a total AV of 20 m/s (= 0.26%
+of V,,) in two burns of 10 m/s each. From Eq. (6-34) the total Ar will be 0.52% of 6,778 km or
+35 km. Thus, the final orbit will be circular at an altitude of 6,813 km. Immediately following
+the first burn of 10 m/s the spacecraft will be at perigee of the transfer orbit with a velocity of
+7,710 m/s. When the spacecraft reaches apogee at 6,813 km it will have slowed according to
+Kepler’s second law by 0.52% to 7,670 m/s. We then apply the second burn of 10 m/s to circu-
+larize the orbit at 7,680 m/s which is 20 m/s slower than its original velocity. We have added
+energy to the spacecraft which has raised the orbit and resulted in a lower kinetic energy but
+sufficiently more potential energy to make up for both the reduced speed and the added AV.
+
+Sometimes, we may need to transfer a satellite between orbits in less time than that
+required to complete the Hohmann transfer. Figure 6-8 shows a faster transfer called
+the one-tangent burn. In this instance the transfer orbit is tangential to the initial orbit.
+It intersects the final orbit at an angle equal to the flight-path angle of the transfer orbit
+at the point of intersection. An infinite number of transfer orbits are tangential to the
+initial orbit and intersect the final orbit at some angle. Thus, we may choose the trans-
+fer orbit by specifying the size of the transfer orbit, the angular change of the transfer,
+or the time required to complete the transfer. We can then define the transfer orbit and
+calculate the required velocities.
+
+For example, we may specify the size of the transfer orbit, choosing any semimajor
+axis that is greater than the semimajor axis of the Hohmann transfer ellipse. Once we
+know the semimajor axis of the ellipse (a,,), we can calculate the eccentricity, angular
+distance traveled in the transfer, the velocity change required for the transfer, and the
+time required to complete the transfer using the equations in Table 6-5.
+
+6.3 Orbit Maneuvering 149
+
+Final Orbit—_,-
+
+Initial Orbit—/
+
+Transfer Ellipse
+
+Fig. 6-8. Transfer Orbit Using One-Tangent Burn between Two Circular, Coplanar Orbits.
+
+TABLE 6-5. Computations for One-Tangent Burn Orbit Transfer. See Vallado [1997], for exam-
+ple. Given: r4, fg, and a,
+
+| Quantity Lattin
+Viva = 631.3481 [2 / r, - 1/ a, ]"2
+
+initial velocity change AV, = [Via — Vial
+
+final velocity | Vig = 631.3481 rg?
+
+velocity on transfer orbit at final orbit | V9 = 631.3481 [2/1 - 1/ a,"
+final velocity change AVg = [Vist + Vig? — 2VigVz.Q008 Q]t2
+
+total velocity change AV;= AV,+ AV,
+
+eccentric anomaly at B E= tan '[(1 — e?)'2 sinv/ (e+ cosv)]
+time of flight TOF = 0.001 583 913 a,,22 (E- e sinE), Ein rads
+
+Table 6-6 compares the total velocity change required and time-of-flight for a
+Hohmann transfer and a one-tangent burn transfer from a low altitude parking orbit to
+geosynchronous orbit.
+
+Another option for changing the size of the orbit is to use a constant low-thrust
+burn, which results in a spiral transfer. We can approximate the velocity change for
+this type of orbit transfer by
+
+Av=|V, -V|| (6-37)
+
+where the velocities are the circular velocities of the two orbits. Following the
+
+150 Introduction to Astrodynamics 6.3
+
+TABLE 6-6. Comparison of Coplanar Orbit Transfers from LEO to Geosynchronous Orbit.
+
+Variable Hohmann Transfer One-Tangent-Burn
+lr, 6,570 km 6,570 km
+‘pg 42,200 km 42,200 km
+an 24,385 km 28,633 km
+AVr 3.935 km/s 4.699 km/s
+TOF 5.256 hr 3.457 hr
+
+previous example, the total velocity change required to go from low-Earth orbit to
+geosynchronous is 4.7] km/s using a spiral transfer. We obtain this by subtracting the
+results of step 3 from the results of step 2 in the above example.
+
+6.3.2 Orbit Plane Changes
+
+To change the orientation of the satellite’s orbital plane, typically the inclination,
+we must change the direction of the velocity vector. This maneuver requires a
+component of AV to be perpendicular to the orbital plane and, therefore, perpendicular
+to the initial velocity vector. If the size of the orbit remains constant, we call the
+maneuver a simple plane change (Fig. 6-9A). We can find the required change in
+velocity by using the law of cosines. For the case in which V; is equal to V;, this
+expression reduces to
+
+AV=2¥F, sin (0/2) (6-38)
+
+where V, is the velocity before and after the burn, and @ is angle change required.
+
+A. Simple Plane Change B. Combined Plane Change
+
+Fig. 6-9. Vector Representation of Simple and Combined Changes in Orbital Plane. For
+the simple plane change, the magnitude of initial and final velocities are equal.
+
+For example, the change in velocity required to transfer from a low-altitude
+(A= 185 km) inclined (i = 28 deg) orbit to an equatorial orbit (i = 0) at the same altitude
+is:
+
+r= 6,563 km V,= 7.79 km/s AV = 3.77 km/s
+
+From Eq. (6-38) we see that if the angular change equals 60 deg, the required
+change in velocity equals the current velocity. Plane changes are very expensive in
+terms of the required velocity change and resulting fuel consumption. To minimize
+this, we should change the plane at a point where the velocity of the satellite is a
+minimum: at apogee for an elliptical orbit. In some cases, it may even be cheaper to
+boost the satellite into a higher orbit, change the orbital plane at apogee, and return the
+satellite to its original orbit.
+
+6.3 Orbit Maneuvering 151
+
+Typically, orbital transfers require changes in both the size and the plane of the
+orbit, such as transferring from an inclined parking orbit at low altitude to a zero-
+inclination orbit at geosynchronous altitude. We do this transfer in two steps: a
+Hohmann transfer to change the size of the orbit and a simple plane change to make
+the orbit equatorial. A more efficient method (less total change in velocity) would be
+to combine the plane change with the tangential burn at apogee of the transfer orbit
+(Fig. 6-9B). As we must change both the magnitude and direction of the velocity
+vector, we can find the required change in velocity using the law of cosines:
+
+AV=(V24V,2 — 2V,V,cos0)!? (6-39)
+
+where V, is the initial velocity, V;is the final velocity, and 0 is the angle change
+required.
+
+For example, we find the total change in velocity to transfer from a Shuttle parking
+orbit to a geosynchronous equatorial orbit as follows:
+
+r, = 6,563 km rp = 42,159 km
+i,= 28 deg iy = 0 deg
+V,=7.79 km/s V, = 3.08 km/s
+AV, = 2.46 km/s Ab, = 1.83 km/s
+
+AV oraz = 4.29 km/s
+
+Completing a Hohmann transfer followed by a simple plane change would require
+a velocity change of 5.44 km/s, so the Hohmann transfer with a combined plane
+change at apogee of the transfer orbit represents a savings of 1.15 km/s. As we see
+from Eq. (6-39), a small plane change (@ 2 0) can be combined with an energy change
+for almost no cost in AV or propellant. Consequently, in practice, we do geosyn-
+chronous transfer with a small plane change at perigee and most of the plane change
+at apogee.
+
+Another option is to complete the maneuver using three burns. The first burn is a
+coplanar maneuver placing the satellite into a transfer orbit with an apogee much
+higher than the final orbit. When the satellite reaches apogee of the transfer orbit, it
+does a combined plane change maneuver. This places the satellite in a second transfer
+orbit which is coplanar with the final orbit and has a perigee altitude equal to the
+altitude of the final orbit. Finally, when the satellite reaches perigee of the second
+transfer orbit, another coplanar maneuver places the satellite into the final orbit. This
+three-burn maneuver may save fuel, but the fuel savings comes at the expense of the
+total time required to complete the maneuver.
+
+6.3.3 Orbit Rendezvous
+
+Orbital transfer becomes more complicated when the objective is to rendezvous
+with or intercept another object in space: both the interceptor and target must arrive at
+the rendezvous point at the same time. This precise timing demands a phasing orbit to
+accomplish the maneuver. A phasing orbit is any orbit which results in the interceptor
+achieving the desired geometry relative to the target to initiate a Hohmann transfer. If
+the initial and final orbits are circular, coplanar, and of different sizes, then the phasing
+orbit is simply the initial interceptor orbit (Fig. 6-10). The interceptor remains in the
+initial orbit until the relative motion between the interceptor and target results in the
+
+152 Introduction to Astrodynamics 6.3
+
+desired geometry. At that point, we inject the interceptor into a Hohmann transfer
+orbit. The equation to solve for the wait time in the initial orbit is:
+
+Wait Time = (4; — $y + 2k) Quy, — Og)) (6-40)
+
+where @, 1s the phase angle (angular separation of target and interceptor) needed for
+rendezvous, @; is the initial phase angle, k is the number of rendezvous opportunities,
+(for the first opportunity, k = 0), ;,,is the angular velocity of the interceptor, and @.,
+
+is the angular velocity of the target. We calculate the lead angle, a,, by multiplying
+,, by the time of flight for the Hohmann transfer and ¢, is 180 deg minus a.
+
+Target
+Spacecraft
+
+Hohmann
+Transfer
+Orbit
+
+; =phase angle
+
+[écmro ee
+L = ( e
+
+r)
+_/ \nterceptor
+Spacecraft
+
+Fig. 6-10. Geometry Depicting Rendezvous Between Two Circular, Coplanar Orbits. The
+phase angle is the angular separation between the target and interceptor at the start
+of the rendezvous and the lead angle is the distance the target travels from the start
+until rendezvous occurs.
+
+The total time to rendezvous equals the wait time from Eq. (6-40) plus the time of
+flight of the Hohmann transfer orbit.
+
+The denominator in Eq. (6-40) represents the relative motion between the inter-
+ceptor and target. As the size of the interceptor orbit approaches the size of the target
+orbit, the relative motion approaches zero, and the wait time approaches infinity. If the
+two orbits are exactly the same, then the interceptor must enter a new phasing orbit to
+rendezvous with the target (Fig. 6-11). For this situation, the rendezvous occurs at the
+point where the interceptor enters the phasing orbit. The period of the phasing orbit
+equals the time it takes the target to get to the rendezvous point. Once we know the
+period, we can calculate the semimajor axis. The two orbits are tangential at their point
+of intersection, so the velocity change is the difference in magnitudes of the two
+velocities at the point of intersection of the two orbits. Because we know the size of
+the orbits, and therefore, the energies, we can use the energy Eq. (6-4) to solve for the
+current and needed velocities.
+
+Frequently operators must adjust the relative phasing for satellites in circular orbits.
+They accomplish this by making the satellite drift relative to its initial position. The
+drift rate in deg/orbit is given by
+
+6.4 Launch Windows 153
+
+A.\|nterceptor slightly behind target: B. interceptor slightly ahead of target:
+Interceptor Interceptor
+
+Fig. 6-11. Rendezvous from Same Orbit Showing the Target both Leading and Trailing
+the interceptor.
+
+drift rate = 1,080 AV/V (6-41)
+
+where V is the nominal orbital velocity and AV is the velocity change required to start
+or stop the drift.
+
+The techniques described above move the target vehicle close to the interceptor.
+Once the two vehicles are close to each other they begin proximity operations by solv-
+ing a set of relative motion equations to achieve the final rendezvous. Vallado [1997]
+contains an excellent discussion of the solution to the nearby relative motion problem,
+as addressed by the Clohessy- Wiltshire or Hill’s equations of relative motion.
+
+6.4 Launch Windows
+
+Similar to the rendezvous problem is the launch-window problem, or determining
+the appropriate time to launch from the surface of the Earth into the desired orbital
+plane. Because the orbital plane is fixed in inertial space, the launch window is the
+time when the launch site on the surface of the Earth rotates through the orbital plane.
+As Fig. 6-12 shows, the launch time depends on the launch site’s latitude and longi-
+tude and the satellite orbit’s inclination and right ascension of the ascending node.
+
+For a launch window to exist, the launch site must pass through the orbital plane.
+This requirement places restrictions on the orbital inclinations, i, possible from a
+given launch latitude, L:
+
+* No launch windows exist if L > i for direct orbit or L > 180 deg — i for
+retrograde orbits.
+
+¢ One launch window exists if L = ior L = 180 deg —i.
+¢ Two launch windows exist if L <7 or L < 180 deg ~/.
+
+The launch azimuth, B, is the angle measured clockwise from north to the velocity
+vector. If a launch window exists, then the launch azimuth required to achieve an
+inclination, i, from a given launch latitude, L, is’given by:
+
+154 Introduction to Astrodynamics 6.4
+
+Fig. 6-12. Launch Window Geometry for Launches near the Ascending Node (1) and
+Descending Node (2). The angles shown are the orbital inclination (i), launch site
+latitude (L), and launch azimuth (f).
+
+B= Bty = B (6-42a)
+where
+sin 8, = cos i/cos L (6-42b)
+and
+V_cos B, Vv,
+tany = ———_———__ = | — |cos
+mY Vy — Vig COSi VY cosB (6-42c)
+
+where V, is the inertial velocity of the launch site given by Eq. (6-46) below,
+Veq = 464.5 m/s is the velocity of Earth’s rotation at the equator, and V, = 7.8 km/s is
+the velocity of the satellite immediately after launch. G, is the inertial launch azimuth
+and y is a small correction to account for the velocity contribution caused by Earth’s
+rotation. For launches to low-Earth orbit, y ranges from 0 for a due east launch to 3.0
+deg for launch into a polar orbit. The approximation for y in Eq. (6-42c) is accurate to
+within 0.1 deg for low-Earth orbits. For launches near the ascending node, B is in the
+first or fourth quadrant and the plus sign applies in Eq. (6-42a). For launches near the
+descending node, f is in the second or third quadrant and the minus sign applies in
+Eq. (6-42a).
+
+Let 5, shown in Fig. 6-12, be the angle in the equatorial plane from the nearest node
+to the longitude of the launch site. We can determine 6 from:
+
+cos 6 =cos B/sini (6-43)
+where 6is positive for direct orbits and negative for retrograde orbits. Finally, the local
+
+sidereal time, LST, of launch is the angle from the vernal equinox to the longitude of
+the launch site at the time of launch:
+
+LST = Q+6 (launch at the ascending node)
+= 2+180deg—6 (launch at the descending node) (6-44)
+
+where £2 is the right ascension of the ascending node of the resulting orbit.
+
+6.5 Orbit Maintenance 155
+
+Having calculated the launch azimuth required to achieve the desired orbit, we can
+now calculate the velocity needed to accelerate the payload from rest at the launch site
+to the required burnout velocity. To do so, we use topocentric-horizon coordinates
+with velocity components V5, V;, Vz:
+
+K= -h, cos cos B, (6-45a)
+V, = V,, cos @ sin B, — V, (6-45b)
+V,=V,,sin @ (6-45c)
+
+where V,,, is the velocity at burnout (usually equal to the circular orbital velocity at the
+prescribed altitude), ¢ is the flight path angle at burnout, f, is the launch azimuth at
+bumout, and V, is the velocity of the launch site at a given latitude, L, as given by:
+
+V, = (464.5 m/s) cos L (6-46)
+
+Equations (6-45c) do not include losses in the velocity of the launch vehicle be-
+cause of atmospheric drag and gravity—approximately 1,500 m/s for a typical launch
+vehicle. Also, in Eq. (6-45c) we assume that the azimuth at launch and the azimuth at
+burnout are the same. Changes in the latitude and longitude of the launch vehicle
+during powered flight will introduce small errors into the calculation of the burnout
+conditions. We can calculate the velocity required at burnout from the energy equation
+if we know the semimajor axis and radius of burnout of the orbit [Eq. (6-4)].
+
+6.5 Orbit Maintenance
+
+Once in their mission orbits, many satellites need no additional orbital adjustments.
+On the other hand, mission requirements may demand that we maneuver the satellite
+to correct the orbital elements when perturbing forces have changed them. Two par-
+ticular cases of note are satellites with repeating ground tracks and geosynchronous
+equatorial satellites, placed at an assigned longitude.
+
+Using two-body equations of motion, we can show that a satellite will have a
+repeating ground track if it has exactly an integer number of revolutions per integer
+number of days. Its period, therefore, must be:
+
+P = (m sidereal days) / (k revolutions) (6-47)
+
+where m and k are integers, and | sidereal day = 1,436.068 167 min. For example, a
+satellite orbiting the Earth exactly 16 times per day has a period of 89.75 min and a
+semimajor axis of 6,640 km.
+
+Next we would modify the period of the satellite to account for the drift in the
+orbital plane caused by the Earth’s oblateness (/;). We can calculate the change in the
+right ascension of the ascending node, AQ, because of J, from the two-body orbital
+elements. In this case the new period is:
+
+Pyew = Prworopy + AQ gant (6-48)
+
+Because we base the nodal drift on the two-body orbital elements, we must iterate
+to find the new orbital period and semimajor axis. Continuing with the previous exam-
+ple, assume a perigee altitude of 120 km and an inclination of 45 deg. In this case, we
+find that the compensated period is 88.20 min and the new semimajor axis is 6,563 km.
+
+Several examples of spacecraft placed in orbits with repeating ground tracks are
+shown in Table 6-7.
+
+156 Introduction to Astrodynamics 6.5
+
+TABLE 6-7. Examples of Repeating Ground Tracks.
+
+Satellite Inclination (deg) Semimajor Axis (km) Revs Days |
+SEASAT 108.0 7,169.0 43 3
+LANDSAT 4/5 98.2 7,077.7 233 16
+GEOSAT 108.05 7,162.7 244 17
+
+The Earth’s oblateness also causes the direction of perigee to rotate around the
+orbit. If the orbit is noncircular and the mission places limits on the altitude over
+specific targets, we must control the location of perigee. One possibility is to select the
+inclination of the orbit to be at the critical inclination (63.4 deg for a direct orbit and
+116.4 deg for a retrograde orbit), so the location of perigee is fixed. If other constraints
+make this selection impossible, we must maintain the orbit through orbital maneuvers.
+We can change the location of perigee by changing the flight-path angle by an angle
+9. Only the direction of the velocity vector changes, so we can find the change in ve-
+locity from the equation for a simple plane change:
+
+AV=2V sin 6/2 (6-49)
+
+A final consideration for a low-altitude orbit with repeating ground tracks is the
+change in the semimajor axis and eccentricity due to atmospheric drag. Drag causes
+the orbit to become smaller. As the orbit becomes smaller, the period also decreases,
+causing the ground track to appear to shift eastward. If we specify some tolerance,
+such as a maximum distance between the actual and desired ground tracks, the satellite
+must periodically maneuver to maintain the desired orbit.
+
+We can use Eq. (6-22) to calculate the change in semimajor axis per revolution of
+the orbit. Given the change in the size of the orbit, we can also determine the change
+in the period:
+
+AP = 3x Aa/(na) (6-50)
+
+If constraints exist for either the period or semimajor axis of the orbit, we can use
+Eqs. (6-22) and (6-50) to keep track of the period and semimajor axis until we need to
+correct the orbit. We can apply a tangential velocity change at perigee to adjust the
+semimajor axis when required. Again, we can find the current and needed velocities
+from the energy Eq. (6-4), because we know the size, and therefore the energy, of the
+two orbits.
+
+Geosynchronous equatorial orbits also require orbital maintenance maneuvers. Sat-
+ellites in these orbits drift when perturbations occur from the nonspherical Earth and
+from the third-body gravitational attraction of the Sun and Moon. Matching the period
+of a geostationary orbit with the Earth’s rotational velocity results in a resonance with
+the J,, term in the geopotential. This resonance term results in a transverse accelera-
+tion, that is, an acceleration in the plane of the orbit. This causes the satellite to drift in
+longitude (East-West drift). The Sun and the Moon cause out-of-plane accelerations
+which make the satellite drift in latitude (North-South drift).
+
+North-south stationkeeping is necessary when mission requirements limit inclina-
+tion drift. If not corrected, the inclination of the orbit varies between 0 and 15 deg with
+a period of approximately 55 years. The approximate equations to solve for the worst-
+case change in velocity are:
+
+6.5 Orbit Maintenance 157
+
+AVuoon = 102.67 cos & sin & (m/s/yr) (6-51)
+= 36.93 m/s per year, for i= 0
+AVsuy = 40.17 cos ¥ sin y (m/s/yr) (6-52)
+
+= 14.45 m/s/yr, for i=0
+
+where is the angle between the orbital plane and the Moon’s orbit, and yis the angle
+between the orbital and ecliptic plane.
+
+The transverse acceleration caused by resonance with the J,, term results in peri-
+odic motion about either of two stable longitudes at approximately 75 deg and 255 deg
+East longitude. If we place a satellite at any other longitude, it will tend to orbit the
+closest of these two longitudes, resulting in East-West drift of up to 180 deg with
+periods of up to 900 days. Suppose a mission for a geostationary satellite specifies a
+required longitude, [p. The change in velocity required to compensate for the drift and
+maintain the satellite in the vicinity of the specified longitude is:
+
+AV= 1.715 sin (2 |p - J,) (6-53)
+
+where I, is the desired longitude, J, is the closest stable longitude, and AVis in m/s/yr.
+For example, we find the velocity change required for one year if the desired lon-
+gitude is 60 deg west as
+
+L, =-60deg [, = 255 deg
+AV = 1.715 m/s/yr
+
+After the mission of the satellite is complete, several options exist, depending on
+the orbit. We may allow low-altitude orbits to decay and reenter the atmosphere or use
+a velocity change to speed up the process. We may also boost satellites at all altitudes
+into benign orbits to reduce the probability of collision with active payloads,
+especially at synchronous altitudes or when the satellite is part of a large constellation.
+Because coplanar velocity changes are more efficient than plane changes, we would
+normally apply tangential changes in velocity. Their magnitude would depend on the
+difference in energy of the two orbits. Generally, a change in altitude of a few hundred
+kilometers is sufficient to prevent collisions within a constellation. If we increase the
+altitude of the orbit for disposal, we must make sure atmospheric drag does not cause
+the disposal orbit to decay and return the spacecraft to the original altitude of the con-
+stellation. If we choose to deorbit our satellite, the velocity change required to deorbit
+a satellite in a circular orbit at initial altitude, H;, and velocity, V, is:
+
+AV, = VIR _2(Ret He)
+deorbit 2Ry + Hy + Hi (6-54a)
+e 1
+A,- H.
+= V L é€
+Eee + | (6-54b)
+
+where R; is the radius of the Earth and H, is the perigee altitude at the end of the burn.
+It is not necessary to reduce perigee altitude to 0 km. Choosing a 50 km deorbit
+altitude would reduce the FireSat AVjeorpi, to 183 m/s. Note that we reduce only
+
+158 Introduction to Astrodynamics 6.5
+
+perigee in the deorbit burn. Reducing perigee to 100 to 150 km could result in several
+orbits over which apogee decreases before the spacecraft reenters and might not allow
+adequate control of the deorbit conditions.
+
+References
+
+Bate, Roger R., Donald D. Mueller, and Jerry E. White. 1971. Fundamentals of Astro-
+dynamics. New York: Dover Publications.
+
+Battin, Richard H. 1999. An Introduction to the Mathematics and: Methods of Astrody-
+namics. New York: AIAA Education Series.
+
+Chobotov, Vladimir A. 1996. Orbital Mechanics (2nd Edition). New York: AIAA
+Education Series.
+
+Danby, J.M.A. 1962. Fundamentals of Celestial Mechanics. New York: Macmillan.
+
+Escobal, Pedro R. 1965. Methods of Orbit Determination. Malabar, FL: Robert E.
+Krieger Publishing Company.
+
+Hohmann, Walter. 1925. Die Erreich Barkeit de Himmelskérper. (The Attainability of
+Heavenly Body). NASA Technical Translation TTF44. Nov. 1960. Washington,
+DC: National Aeronautics and Space Administration.
+
+Kaplan, Marshall H. 1976. Modern Spacecraft Dynamics and Control. New York:
+Wiley and Sons.
+
+King-Hele, D. 1964. Theory of Satellite Orbits in an Atmosphere. London: Butter-
+worths Mathematical Texts.
+
+Pocha, J.J. 1987. An Introduction to Mission Design for Geostationary Satellites.
+Boston: D. Reidel Publishing Company.
+
+Roy, A.E. 1991. Orbital Motion (3rd Edition). Bristol and Philadelphia: Adam Hilger.
+
+Tai, Frank and Peter D. Noerdlinger. 1989. A Low Cost Autonomous Navigation
+System, Paper No. AAS 89-001 presented to the 12th Annual AAS Guidance and
+Control Conference. Keystone, Colorado, Feb. 4-8.
+
+Vallado, David A. 1997. Fundamentals of Astrodynamics and Applications. New
+York: McGraw-Hill Book Company.
+
+Wiesel, William E. 1996. Spaceflight Dynamics (2nd Edition). New York: McGraw-
+Hill Book Company.

@@ -1,0 +1,1848 @@
+
+Chapter 5
+Space Mission Geometry
+
+James R. Wertz, Microcosm, Inc.
+
+5.1 Introduction to Geometry on the Celestial Sphere
+
+5.2 Earth Geometry Viewed from Space
+
+5.3. Apparent Motion of Satellites for an Observer on the Earth
+Satellites in Circular Low-Earth Orbit; Satellites in
+Geosynchronous Orbit and Above
+
+5.4 Development of Mapping and Pointing Budgets
+
+Much spaceflight analysis requires knowing the apparent position and motion of
+objects as seen by the spacecraft. This type of analysis deals predominantly, though
+not entirely, with directions-only geometry. We want to know how to point the space-
+craft or instrument, or how to interpret the view of a spacecraft camera or antenna
+pattern. Two formal mechanisms for dealing with directions-only geometry are unit
+vectors and the celestial sphere. Unit vectors are more common in most areas of
+analysis. However, the celestial sphere provides greatly improved physical insight
+which can be critical to the space mission designer. Consequently, we first introduce
+the basic concept of using the celestial sphere for directions-only geometry and then
+apply the concept to space mission geometry as seen from either the Earth or the space-
+craft. Finally, we develop a methodology for drawing up spacecraft mapping and
+pointing budgets.
+
+To begin any formal problem in space mission geometry, we must first select a
+coordinate system. In principle, any coordinate system will do. In practice, selecting
+the right one can increase insight into the problem and substantially reduce the
+prospect for errors. The most common source of error in space geometry analyses is
+incorrectly defining the coordinate systems involved.
+
+To define a coordinate system for space applications, we must first specify two
+characteristics: the location of the center and what the coordinate system is fixed with
+respect to. Typically, we choose the Earth’s center as the coordinate system center for
+problems in orbit analysis or geometry on the Earth’s surface; we choose the
+spacecraft’s position for problems concerning the apparent position and motion of
+objects as seen from the spacecraft. Occasionally, coordinates are centered on a
+specific spacecraft instrument when we are interested not only in viewing the outside
+world but also in obstructions to the field of view by other spacecraft components.
+Typical ways to fix a coordinate system are with respect to inertial space, to the
+direction of the Earth or some other object being viewed, to the spacecraft, or to an
+instrument on the spacecraft. Table 5-1 lists the most common coordinate systems in
+
+95
+
+96 Space Mission Geometry
+
+space mission analysis and their applications. These are illustrated in Fig. 5-1. If you
+are uncertain of the coordinate system to select, I recommend beginning problems with
+the following:
+
+¢ Earth-centered inertial for orbit problems
+¢ Spacecraft-centered local horizontal for missions viewing the Earth
+
+¢ Spacecraft-centered inertial for missions viewing anything other than the
+Earth
+
+TABLE 5-1. Common Coordinate Systems Used in Space Applications. Also see Fig. 5-1.
+
+Coordinate | Fixed with Z-axis or X-axis or
+Respect to Center Pole Ref. Point Applications
+
+Celestial Inertial Eartht or Celestial Vernal equinox | Orbit analysis,
+(inertial) space” spacecraft | pole astronomy, inertial
+motion
+
+Earth-fixed | Earth Earth Earth pole | Greenwich Geolocation,
+= celestial | meridian apparent satellite
+pole motion
+
+Spacecraft- | Spacecraft | Defined by | Spacecraft | Spacecraft axis | Position and
+
+fixed engineering | axistoward | in direction of orientation of
+drawings nadir velocity vector | spacecraft
+instruments
+
+Local Spacecraft | Nadir Perpendicular | Earth observations,
+Horizontal* to nadir toward | attitude maneuvers
+velocity vector
+
+Ecliptic Sun Ecliptic Vernal equinox | Solarsystem orbits,
+pole lunar/solar
+ephemerides
+
+* Actually rotating slowly with respect to inertial space. See text for discussion.
++ Earth-centered inertial coordinates are frequently called GC/ (Geocentric Inertial).
++ Also called LVLH (Local Vertical/Local Horizontal), RPY (Roll, Pitch, Yaw), or Local Tangent Coordinates.
+
+Unfortunately, the inertial coordinate system which everyone uses, called celestial
+coordinates, is not truly fixed with respect to inertial space—that is, the mean position
+of the stars in the vicinity of the Sun. Celestial coordinates are defined by the direction
+in space of the Earth’s pole, called the celestial pole, and the direction from the Earth
+to the Sun on the first day of spring, when the Sun crosses the Earth’s equatorial plane
+going from south to north. This fundamental reference direction in the sky is known
+as the vernal equinox or First Point of Aries.* Unfortunately for mission geometry, the
+Earth’s axis and, therefore, the vernal equinox precesses around the pole of the Earth’s
+orbit about the Sun with a period of 26,000 years. This precession of the equinoxes
+results in a shift of the position of the vernal equinox relative to the fixed stars at a rate
+
+* The position of the vernal equinox in the sky has been known since before the naming of
+constellations. When the zodiacal constellations were given their current names several thou-
+sand years ago, the vernal equinox was in Aries, the Ram. Consequently the zodiacal symbol
+for the Ram, ‘Y’, or sometimes a capital T (which has a similar appearance), is used for the
+vernal equinox. Since that time the vernal equinox has moved through the constellation of
+Pisces and is now slowly entering Aquarius, ushering in the “Age of Aquarius.”
+
+97
+
+Nominal
+Velocity
+
+Z
+
+Nominal
+Nadir
+
+Y
+Nominal Negative Greenwich Meridian
+Orbit Normal
+A. Spacecraft-fixed Coordinates B. Earth-fixed Coordinates
+
+Pitch Axis
+
+Yaw Rotation
+Roll Axis
+
+Roll Rotation
+Pitch Rotation
+
+Pitch Axis
+
+Vernal Equinox
+Direction
+
+C. Roll, Pitch, and Yaw (RPY) Coordinates D. Celestial Coordinates
+
+Fig. 5-1. Coordinate Systems in Common Use. See Table 5-1 for characteristics.
+
+of 0.014 deg/yr. Because of this slow drift, celestial coordinates require a correspond-
+ing date to accurately define the position of the vernal equinox. The most commonly
+used systems are 1950 coordinates, 2000 coordinates, and true of date, or TOD. The
+latter coordinates use the same epoch as the orbit parameters and are traditionally used
+for spacecraft orbit analysis. The small corrections required to maintain TOD coordi-
+nates are conveniently done by standard computer subroutines. They are important for
+precise numerical work, but are not critical for most problems in mission analysis.
+Once we have defined a coordinate system, we can specify a direction in space by
+a unit vector, or vector of unit magnitude, in that direction. While a unit vector will
+have three components, only two will be independent because the magnitude of the
+vector must be one. We can also define a unit vector by defining the two coordinates
+of its position on the surface of a sphere of unit radius, called the celestial sphere,
+centered on the origin of the coordinate system. Clearly, every unit vector corresponds
+to one and only one point on the celestial sphere, and every point on the surface of the
+
+98 Space Mission Geometry 5.1
+
+sphere corresponds to a unique unit vector, as illustrated in Fig. 5-2. Because either
+representation is mathematically correct, we can shift back and forth between them as
+the problem demands. Unit vector analysis is typically the most convenient form for
+computer computations, while the celestial sphere approach provides the geometrical
+and physical insight so important to mission analysis. In Fig. 5-2 it is difficult to
+estimate the X, Y, and-Z components of the unit vector on the left, whereas we can
+easily determine the two coordinates corresponding to a point on the celestial sphere
+from the figure on the right. Perhaps more important, the celestial sphere allows us
+easily to represent a large collection of points or the trace of a moving vector by simply
+drawing a line on the sphere. We will use the celestial sphere throughout most of this
+chapter, because it gives us more physical insight and more ability to convey precise
+information in an illustration.
+
+A. Unit Vector in 3-D Space B. Point on Unit Sphere
+
+Fig. 5-2. Alternative Representations of Unit Vectors. In (B) it is clear that the small circle is
+of 10 deg radius centered at (15°, 30°) and that the single vector is at (60°, 40°). In (A)
+even the quadrant is difficult to estimate. Also note that the body of the unit vectors
+from the center of the sphere can be omitted since any point on the sphere implies a
+corresponding unit vector. Thus, the 3-dimensional pointing geometry is reduced to a
+2-dimensional representation. See Fig. 5-5 for the definition of notation.
+
+5.1 Introduction to Geometry on the Celestial Sphere
+
+The celestial sphere is an imaginary sphere of unit radius centered on the observer,
+used to represent directions in space. It comes from classical observational astronomy
+and is far older than almost any other modern astronomical concept. The compelling
+image of the bow] of the sky at night makes it easy to think of stars and planets moving
+on a fixed, distant sphere. We now know, of course, that their distances from us are
+vastly different. But the concept of watching and computing the position and motion
+of things on the unit celestial sphere remains a very valuable contribution of classical
+astronomy to modern spaceflight analysis. Unfortunately, relatively few modern
+references are available. By far, the most detailed treatment is provided by Wertz
+[2001]. Green [1985], and Smart [1977] provide information on spherical astronomy.
+
+Figure 5-3 illustrates the use of the celestial sphere to represent directions to objects
+in space. These objects may be very close, such as other components of the spacecraft,
+
+5.1 Introduction to Geometry on the Celestial Sphere 99
+
+or very far, such as the surface of the Earth, the Sun, or stars. Although we will drop
+the observer from illustrations after the first few figures, we always assume that the
+observer is at the center of the sphere. Having become familiar with the idea of the
+observer-centered celestial sphere, we can easily work with points and lines on the
+sphere itself, ignoring entirely the unit vectors which they represent
+
+Attitude
+
+B = Sun Angle
+7 = Nadir Angle
+
+Fig. 5-3. Use of Celestial Sphere to Represent Direction of Objects in Space. The sides of
+the triangle are arc lengths. The angles of the triangle are rotation angles.
+
+Points on the celestial sphere represent directions in space, such as the direction to
+the Sun, the Moon, or a spacecraft axis. The direction opposite a given direction is
+called the antipode, or antipoint, and frequently has a “~1” superscript. Thus, S~! is
+the direction opposite the Sun, and is called the antisolar point. Nadir is the direction
+to the center of the Earth. The direction opposite nadir is called the zenith. Points on
+the sphere may represent either directions to real objects or simply directions in space
+with no object associated with them, such as the direction parallel to the axis of the
+Earth (the celestial pole) or parallel to the +Z-axis of a spacecraft coordinate system.
+
+A great circle on the celestial sphere is any circle which divides the sphere into two
+equal hemispheres. Any other circle on the sphere is called a small circle. Any part of
+a great circle is called an arc or arc segment and is equivalent to a straight line segment
+in plane geometry. Thus, the shortest path connecting two stars on the celestial sphere
+is the great circle arc connecting the stars. Two points which are not antipoints of each
+other determine a unique great circle arc on the celestial sphere.
+
+Given 3 points on the sky, we can connect them with great circle arc segments (W
+n, and B on Fig. 5-3) to construct a spherical triangle. The angles A, 2, and ® at the
+vertices of the spherical triangle are called rotation angles or dihedral angles. The
+lengths of arc segments and size of rotation angles are both measured in degrees. How-
+ever, as illustrated in Fig. 5-4, these are distinctly different measurements. The arc
+length represents the side of the spherical triangle, and is equal to the angular separa-
+tion between 2 points seen on the sky. The rotation angle, which is always measured
+about a point on the sphere, represents the angle in a spherical triangle, and is equal to
+the dihedral angle between 2 planes. For example, assume that we see the Earth,
+
+100 Space Mission Geometry 5.1
+
+A. Arc Length Measurement, B. Rotation Angle Measurement,
+L, from Ato B R, from A to B about 6
+
+Fig. 5-4. Distinction between Arc Length and Rotation Angle Measurements.
+
+Moon, and Sun on the spacecraft sky. The arc length between the Sun and the Moon
+is the angular separation between them as measured by the observer. The rotation
+angle about the Earth between the Sun and the Moon is equal to the angle between 2
+planes. The observer, Earth, and Sun form the first plane, and the observer, Earth, and
+Moon form the second. Both types of angles are important in mission geometry
+problems, and we must clearly understand the distinction between them. Table 5-2
+lists the properties of these two basic measurement types.
+
+As shown in Fig. 5-5, the +X-axis is normally toward the reference point on the
+equator, and the +Z-axis is toward the positive or North Pole. The great circles through
+the poles and perpendicular to the equator are called meridians. The meridian through
+any point on the sphere determines the azimuth coordinate of that point. Azimuth is the
+equivalent of longitude on the Earth’s surface, and is measured along the equator. The
+azimuth is also equivalent to the rotation angle measured counterclockwise about the
+pole from the reference point to the point in question. The second coordinate which
+determines the position of any point on the sphere is the elevation or latitude compo-
+nent. It is the arc-length distance above or below the equator. The co-latitude or
+co-elevation is the arc length from the pole to the point in question. Small circles at a
+constant elevation are called parallels. Because a parallel of constant elevation is not
+a great circle (except at the equator), the arc length along a parallel will not be the same
+as the arc-length separation between two points. As Table 5-3 shows, several spherical
+coordinate systems in common use have special names for the azimuth and elevation
+coordinates.
+
+The following equations transform the azimuth, Az, and elevation, E/, to the corre-
+sponding unit vector coordinates (x, y, z):
+
+x = cos (Az) cos (El) (5-1a)
+y = sin (Az) cos (El) (5-1b)
+z=sin (El) (5-1c)
+
+5.1 Introduction to Geometry on the Celestial Sphere 101
+
+TABLE 5-2. Properties of Arc Length and Rotation Angle Measurements.
+
+Arc Length
+Characteristic Measurement Rotation Angle Measurement
+
+Solid Geometry Plane angle Dihedral angle
+Equivalent
+
+How Measured Between 2 lines Between 2 planes
+in 3-D Space
+
+How Measured Between 2 points | About a point or between 2 great circles
+on Sphere
+
+Unit of Measure Degrees or radians | Degrees or radians
+
+Component in Side Angle
+Spherical Triangle
+
+Unit Vector Equivalent
+
+Arccos (A-B) _| Arc tan [(G-(A-B)/((A-B)—(G- A)(6-B))]
+
+Examples Nadir angle Azimuth difference
+Sun angle Rotation about an axis
+
+How Commonly “Angle from A to B” | “Rotation angle from A to B about C’
+Expressed or “Arc length
+between A and B”
+
+. ae
+. Pole (North or Positive)
+
+Fig. 5-5. Definition of a Spherical Coordinate System on the Unit Sphere. The point P is at
+an azimuth of 50 deg and elevation of 35 deg, normally written as (50°, 35°).
+
+Similarly, to transform from unit vectors to the corresponding spherical coordi-
+nates, use
+
+Az = atan2 (y/x) (5-2a)
+El = asin (z) (5-2b)
+
+102 Space Mission Geometry 5.1
+
+TABLE 5-3. Coordinate Names in Common Spherical Systems.
+
+Azimuth Elevation
+Coordinate System Coordinate Coordinate (Z-axis) Applications
+
+Celestial Coordinates | Right ascension Declination Inertial measurements,
+Astronomy
+
+Earth-fixed Longitude Latitude Earth applications
+
+Spacecraft-fixed Azimuth or clock | Elevation Spacecraft measurements,
+angle attitude analysis
+
+Local Horizontal Azimuth Elevation” Directions relative to
+central observer
+
+Ecliptic Coordinates _| Celestial longitude | Celestial latitude Planetary motion
+
+* Also used are zenith angle = angle from point directly overhead to point in question = 90 deg
+minus elevation angle; and nadir angle = angle at the observer from the center of Earth to
+point in question = 90 deg plus elevation angle.
+
+where atan2 is the software function with output defined over 0 deg to 360 deg and the
+asin function is evaluated over —90 deg to +90 deg.
+
+Spherical geometry is distinctly different from plane geometry in several ways.
+Most fundamental is that parallel lines do not exist in spherical geometry. This can be
+seen by thinking of 2 meridians which are both perpendicular to the equator of a
+coordinate system, but which ultimately meet at the pole. All pairs of great circles
+either lie on top of each other or intersect at 2 points 180 deg apart.
+
+Another concept in spherical geometry that is different than plane geometry is
+illustrated in Fig. 5-6, in which we have constructed a spherical triangle using the
+equator and two lines of longitude. The intersection of the longitude lines with the
+equator are both right angles, such that the sum of the angles of the triangle exceed
+180 deg by an amount equal to the angle at the pole. The sum of the angles of any
+spherical triangle is always larger than 180 deg. The amount by which this sum
+exceeds 180 deg is called the spherical excess and is directly proportional to the area
+of the spherical triangle. Thus, small triangles on the sphere have a spherical excess
+near zero, and are very similar to plane triangles. Large spherical triangles, however,
+are very different as in Fig. 5-6 with 2 right angles.
+
+A radian is the angle subtended if I take a string equal in length to the radius of a
+circle, and stretch it along the circumference. Similarly, if I take an area equal to the
+square of the radius, and stretch it out on the surface of a sphere (which requires some
+distortion, since the surface of the sphere cannot fit on a flat sheet), the resulting area
+is called a steradian. Since the area of a sphere is 4x2, there are 47 steradians in a full
+sphere, and 27 steradians in a hemisphere. These units are convenient for area prob-
+lems, because in any spherical triangle, the spherical excess, expressed in radians, is
+equal to the area of the triangle expressed in steradians. In general, the area, A, of any
+spherical polygon (a figure with sides which are great circle arcs) expressed in stera-
+dians is given by:
+
+A= —- (n-2)n (5-3)
+
+where n is the number of sides, and 2 is the sum of the rotation angles expressed in
+radians.
+
+5.1 Introduction to Geometry on the Celestial Sphere 103
+
+Fig. 5-6. The Sum of the Angles in a Spherical Triangle is Always Greater than 180 deg.
+The amount by which the sum exceeds 180 deg is called the spherical excess and is
+proportional to the triangle area.
+
+Figure 5-7 shows a variety of spherical triangles. Note that all of the triangle sides
+are great circle arcs. Figure 5-7A is a nearly plane triangle, for which the sum of the
+angles is approximately 180 deg and plane geometry is a close approximation. Figure
+5-7B is called a right spherical triangle because the angle at B is a right angle. Just as
+plane right triangles have particularly simple relationships among the angles and sides,
+right spherical triangles also have exceptionally simple relationships between the sides
+and angles. These are expressed by Napier’s rules which are written out in Appen-
+dix D. Right spherical triangles are common in mission geometry problems, and
+provide simple, straightforward solutions for many problems associated with angular
+measurements.
+
+There is a second type of special and particularly simple spherical triangle shown
+in Fig. 5-7C. Here, side A-B has an arc length of 90 deg. This is called a quadrantal
+spherical triangle. An equally simple set of rules apply to the relationship among the
+angles and sides in quadrantal spherical triangles. These are also summarized in
+Appendix D. Between them, right and quadrantal spherical triangles provide solutions
+to most problems encountered in mission analysis.
+
+Figure 5-7D shows an obtuse isosceles triangle with two equal rotation angles
+larger than 90 deg. Clearly, this cannot exist in plane geometry. A similar strange tri-
+angle for plane geometry is Fig. 5-7E which shows an equilateral right triangle in
+which all three angles and all three sides are 90 deg. This triangle represents 1/8 of the
+surface of the celestial sphere, and has an area of 0.57 steradians, which can be seen
+either by examination or from the spherical excess rule. Finally, Fig. 5-7F shows a
+very large spherical triangle. Note that this triangle is remarkably similar in appear-
+ance to the small triangle in 5-7A. This is because the triangle can be thought of either
+as a small triangle with three angles of approximately 60 deg, or as a very large one,
+with three angles of approximately 120 deg. That is, the area between A, B, and C can
+be thought of either as the inside of a small triangle or as the outside of a large one
+which covers all of the surface of the sphere except for the small area between A, B,
+and C. In this large spherical triangle, the rules of spherical geometry still apply and
+can be used in very convenient fashions as described further in Wertz [2001].
+
+104 Space Mission Geometry 5.1
+
+C. Quadrantal Spherical Triangle
+
+7] YS NN
+SS)
+LARS
+
+D. Obtuse Isosceles Triangle E. Equilateral Right Triangle F. Very Large Spherical Triangle
+
+Fig. 5-7. Types of Spherical Triangles. See text for discussion.
+
+In plane geometry, we can make triangles larger or smaller and maintain the same
+relative proportions. In spherical geometry, this is not the case. A spherical triangle is
+uniquely specified by either 3 sides or 3 rotation angles. Additional details on ele-
+mentary spherical geometry are in Appendix D, which includes references to several
+standard books.
+
+Because spherical triangles approach plane triangles in the limit of small size and
+because most analysts are much more familiar with plane geometry, they tend to use
+plane geometry approximations even when it is entirely inappropriate. An example
+would be a geometry problem dealing with the surface of the Earth as seen from
+nearby space. Figure 5-8 shows the differences between plane geometry and spherical
+geometry, using the example of a right spherical triangle with one 45-deg rotation
+angle. Here both the length of the hypotenuse and the other rotation angle are a func-
+tion of the size of the triangle. For a spacecraft in geosynchronous orbit, the apparent
+Earth radius is 8.7 deg and, from the figure, the differences between plane and spher-
+ical geometry will be of the order of 0.1 deg. If this amount does not matter for a
+particular problem, then the plane geometry approximation is fine. Otherwise, we
+should use spherical geometry. In low-Earth orbit, the angular radius of the Earth is
+60 deg to 70 deg, so plane geometry techniques give not only incorrect numerical
+answers but results which are conceptually wrong. Thus, we should avoid plane
+geometry approximations for problems involving spacecraft in low-Earth orbits or
+nearly any type of precision pointing.
+
+We will illustrate computations on the celestial sphere with two examples—the
+duration of eclipses in a circular low-Earth orbit, and the angle between any spacecraft
+
+5.1 Introduction to Geometry on the Celestial Sphere 105
+
+Angle A
+SideX Side Y AngleA
+
+Side Y (deg) (deg) (deg)
+1 1.00 45.01
+10 985 45.86
+30 266 52.02
+
+60 A 69
+
+90 45 90
+
+45 deg 120 A 111
+
+150 27 128
+
+45 deg fide f 170 10 134
+
+Fig. 5-8. Succession of Right Spherical Triangles with One 45 deg Rotation Angle. As
+spherical triangles become larger, they become less and less similar to plane triangles.
+In the plane geometry approximation y = x and A = 45 deg. On the sphere tan y =
+sin x tan 45 deg and cos A = cos x sin 45 deg.
+
+face and the Sun. We can use the latter either to calculate Sun interference or for
+thermal analysis. In both cases, once we choose the correct coordinate system, we can
+easily develop exact formulas using spherical techniques.
+
+Example 1. Analyzing Eclipses for a Low-Earth Orbit
+
+The first example is a satellite in a circular low-Earth orbit at altitude H = 1,000 km
+and inclination i = 32 deg. We wish to determine the eclipse fraction for any date and
+also the maximum and minimum eclipses over a year. Figure 5-9 shows four different
+views of the geometry of this problem. In Fig. 5-9A we have drawn the geometry in
+the “normal” fashion, with a Cartesian coordinate system centered on the Earth and
+vectors to the spacecraft and to the direction of the Sun. Although we could apply this
+coordinate representation to our problem, it gives us no particular insight. Also, to use
+this coordinate representation without further analysis, we would have to simulate
+the orbit and do a large number of trials to sample various eclipse durations throughout
+the year.
+
+Figure 5-9B provides more information by plotting the system on the unit celestial
+sphere centered on the spacecraft. It shows the celestial equator, the orbit plane, and
+the ecliptic, which is the path of the Sun over the year. The light dashed circles are the
+outline of the disk of the Earth as seen by the spacecraft as the Earth’s center moves
+along the spacecraft orbit path. An eclipse will occur whenever the disk of the Earth
+crosses in front of the Sun. The circle centered on the orbit pole is tangent to the disk
+of the Earth throughout the orbit. Any object within this circle can be seen at all times
+and will not be eclipsed by the Earth. The ecliptic does not pass through this circle of
+no eclipse. Consequently, for the illustrated orbit, eclipses will occur at all times of the
+year with no eclipse-free season. That is, no time exists when an eclipse does not occur
+during some part of the orbit. (For the time being, we are ignoring the rotation of the
+satellite’s orbit due to various perturbing forces. This orbit rotation may make the
+associated arithmetic more complex; it does not change the basic argument.) Although
+
+106 Space Mission Geometry 5.1
+
+No Eclipse Region
+Celestial Pole
+
+Direction of
+
+Ecliptic Satellite Motion Orbit Pole
+Plane Z
+
+Plane of
+
+Direction Right Ascension of the - Ecliptic
+to the Sun Ascending Node, 2 SS
+Sd
+A. |lsometric View B. Spacecraft-centered Celestial Sphere
+(inertial coordinates)
+
+Orbit Pole
+
+Upper Limit
+Typical Path of the Sun's
+of the Sun Li > ONT
+in One Orbit ra .
+
+C. Spacecraft-centered Celestial Sphere D. Eclipse Geometry Computations
+(Earth-referenced)
+
+Fig. 5-9. Alternative View of Satellite Geometry for a 1,000-km, 32-deg Inclination Orbit.
+
+we have gained some additional insight from this figure, it would still be awkward to
+compute the eclipse duration for any particular geometry.
+
+Figure 5-9C illustrates the same geometry in a celestial coordinate system centered
+on the spacecraft, in which the orbit plane is the equator and we hold the direction to
+the Earth fixed along the +X-axis. In this coordinate frame the Earth’s disk is the fixed
+shaded circle. Because one axis is always facing the Earth, this coordinate frame
+rotates once per orbit in inertial space about the orbit pole. Thus any objects approxi-
+mately fixed in inertial space, such as the stars, Sun, or Moon, will appear to rotate
+once per orbit about the orbit pole. The heavy, solid line shows a typical path of the
+Sun in one orbit. Again, an eclipse will occur whenever the path of the Sun goes behind
+the disk of the Earth. We now have enough insight to understand what is happening
+throughout the year and to develop straightforward formulas for the eclipse fraction
+under any conditions.
+
+In any one orbit, the Sun will move along a small circle path and the duration of the
+eclipse will be the fraction of the small circle behind the disk of the Earth. For the orbit
+illustrated, the eclipse covers 113 deg of azimuth. Thus, the eclipse will last for
+113 deg/360 deg = 32% of the orbit period or about 33 min for the 105 min, 1,000 km
+
+5.1 Introduction to Geometry on the Celestial Sphere 107
+
+orbit [see Eq. (7-7) for the orbit period]. As the Sun moves along the ecliptic through-
+out the year, it will move slowly up and down on the globe plot. The angle of the Sun
+above or below the orbit plane, Bs, goes from a maximum of 55 deg above the orbit
+plane to 55 deg below the plane. (55 deg is the sum of the assumed inclination of
+32 deg and the angle between the ecliptic and the Earth’s equator of 23 deg). By
+inspection, the maximum eclipse occurs when the Sun is in the orbit plane. It covers
+120 deg of azimuth or 35 min for this orbit. Again by inspection, we see that the
+minimum eclipse occurs when the Sun is at the upper or lower limit of its range. It
+covers approximately 60 deg of azimuth. Thus an eclipse will occur on every orbit,
+with a minimum eclipse duration of about half the maximum, or 17 min. However, we
+can also see by inspection that eclipses near minimum duration will occur only when
+the Sun is quite close to its extreme range limit. Most of the time, the eclipse duration
+will be close to the maximum. Consequently, if we wish to assume an average eclipse
+for analysis purposes, we should take a value close to the maximum eclipse rather than
+one midway between the maximum and minimum values.
+
+The geometry of Fig. 5-9C allows us easily to compute the eclipse fraction for any
+given Sun angle conditions. Specifically, Fig. 5-9D shows a quadrantal spherical
+triangle (that is, having one side = 90 deg) between the orbit pole, nadir, and the point
+at which the Sun is on the Earth’s horizon. Let p be the angular radius of the Earth, Bs
+be the angle of the Sun above the orbit plane, and ® /2 be half of the rotation angle
+corresponding to the eclipse duration. From the rules for quadrantal triangles (Appen-
+dix D) we find immediately that
+
+cos (®/ 2) = cos p/sin Bs’= cos p/ cos Bs (5-4a)
+The duration of the eclipse in a circular orbit, Ty, is then
+Tr = P (®/360 deg) (5-4b)
+
+where P is the orbit period from Eq. (7-7).
+
+For our example, 9 = 60 deg, Bs has been chosen to be 25 deg, and, therefore,
+@ = 113 deg and T; = 33 min as expected. Eq. (5-4) provides the eclipse fraction for
+any Sun geometry involving circular orbits and an approximate check for orbits which
+are not precisely circular: By adjusting p appropriately, we can use the same equation
+to determine the time the Sun will be a certain number of degrees above or below the
+Earth’s horizon. This example shows how we develop physical insight and simple
+formulas by using global geometry to analyze mission geometry problems.
+
+Example 2. Sun Angle Geometry
+
+We can extend the straightforward computations of the preceding example to
+determine the angle of the Sun relative to any arbitrary face on the spacecraft as the
+spacecraft goes around in its orbit. This helps us analyze thermal effects and assess
+possible Sun interference in the fields of view of various instruments.
+
+We assume the spacecraft is flying in a traditional orientation for Earth-referenced
+spacecraft with one axis pointed toward nadir and a second axis toward the orbit pole.
+The computational geometry is in Fig. 5-10, which is geometrically identical to
+Fig. 5-9. In this coordinate system, fixed on the spacecraft, the normal to a given
+spacecraft face is represented by a point, N, on the celestial sphere. N remains fixed in
+spacecraft coordinates, as does the orientation of nadir and the orbit pole. The Sun
+moves once per orbit along a small circle of radius 8,“ This radius remains essentially
+fixed for a single orbit. yis the angle from N to the orbit pole. The rotation angle AAz
+
+108 Space Mission Geometry 5.1
+
+is the azimuthal difference between the Sun and N. It varies uniformly once per orbit
+from 0 to 360 deg. If J is the incident energy on the face with area A, K is the solar
+constant in the vicinity of the Earth = 1,367 Wim2, and Bis the angle between the Sun
+and the normal, N, to the face, then at any given moment when the Sun is shining on
+the face:
+
+I=AK cos B (5-5)
+and, from the law of cosines for sides,
+cos B=cos y cos Bs’ + sin y sin Bs’ cos (AAz) (5-6)
+By inspection, the maximum and minimum angles between the Sun and N are:
+Bmax = Bs +¥ and Brin =| Bs’— ¥| (5-7)
+
+Bs’ and y are both constants for a given orbit and spacecraft face, whereas AAz
+changes throughout the orbit.
+
+Direction Normal
+to Face
+
+Fig. 5-10. Geometry for Computation of Sun Angle on an Arbitrary Spacecraft Face. N is
+the unit vector or direction normal to the face. As the spacecraft moves in its orbit, the
+apparent position of the Sun moves along the dashed line and the arc length B
+between the Sun and the normal to the face undergoes a sinusoidal oscillation.
+
+Equations (5-5) to (5-7) apply to either circular or elliptical orbits. If the orbit is
+circular with period P and angular frequency w = 2n/P, then Eqs. (5-5) and (5-6) can
+be integrated directly to determine the total energy, E, incident on the face between
+azimuths Az, and Az»:
+
+Ez, to Az = (AK/o ) ((AAz, - AAz,) cos ¥ cos Bs
++ (sin AAz» — sin AAz,) sin y sin B¢ ] (5-8)
+In Eq. (5-8), the 0 azimuth is in the direction of N, and the angles are in radians. In a
+full orbit the Sun will shine on the face except for two periods: (A) during eclipse and
+
+(B) when B > 90 deg and, therefore, the Sun is on the “‘back side” of the face. From
+Eq. (5-4a) the conditions for eclipse are
+
+A2eclipse = Az * arc cos (cos p/sin By ) (5-9)
+
+5.1 Introduction to Geometry on the Celestial Sphere 109
+
+where Az is the azimuth of nadir relative to N. For condition (B) we use a quadrantal
+triangle with B = 90 deg to determine
+
+AZpack = arc cos [-1/(tan y tan By’ )] (5-10)
+
+The problem now reduces to determining whether conditions (A) or (B) or both will
+occur and the relative order of the azimuth limits.
+
+As an example, consider Figs. 5-9 and 5-10, for which p = 60 deg, @ = 0.0010
+rad/sec, and B, = 25 deg. We assume the spacecraft face has an area of 0.5 m? with its
+normal vector at an azimuth of -75 deg from nadir (Azg= 75 deg) and an elevation of
+35 deg above the orbit plane (y= 55 deg). From Eqs. (5-8) and (5-9), the azimuth limits
+are: AZj eclipse = 18.5 deg, A2rectipse = 131.5 deg, Az;pack = 109.0 deg, and A2ypack =
+251.0 deg. Therefore, the total energy input on the face F over one orbit is between the
+azimuths of Az, = 251.0 deg and Az, = 18.5 deg.
+
+Example 3. Solar Radiation Intensity
+
+We can continue to extend our example to look at the average solar radiation input, [,
+any spacecraft face over an orbit. This is given by
+
+Lqyg=AKF (5-11)
+
+avg: O
+
+where, as before, A is the area of the face and K = 1,367 W/m? is the solar constant in the vicinity
+of the Earth. F is the time average fraction of the surface area projected in the direction of the
+Sun and must lie between 0 and 1, If the attitude of the spacecraft is inertially fixed, then the
+angle, 8, between the unit vector, § , in the direction of the Sun and the unit vector, N, normal
+to the face remains constant over an orbit. If there is no eclipse during a given orbit, then
+
+F =N-+S=cosB  (inertially fixed, no eclipse) (5-12)
+
+which gives the same result as using Eq. (5-5) directly.
+
+For a 3-axis-stabilized, nadir-oriented spacecraft in a circular orbit, the angle 6 will oscillate
+sinusoidally as illustrated previously in Fig. 5-10. The amount of sunlight on the face will de-
+pend on both y, the angle from the orbit normal to N , andon Bg, the angle from the orbit normal
+to the Sun. If (y+ Bs) <90 deg, then the face will always be in sunlight and, assuming no
+eclipse:
+
+F=cos y cos Bs (nadir fixed, full sunlight, no eclipse) (5-13a)
+If |y — Bg | = 90 deg, then the surface will always be shaded and, of course:
+F=0 (nadir fixed, continuous shade) (5-13b)
+
+If neither of the above conditions hold, then the face will be shaded part of the time and in
+sunlight part of the time. In this case, we integrate the instantaneous fraction of the surface area
+projected in the direction of the Sun by the instantaneous AAz, starting and ending when , the
+Sun angle, is 90 deg. Dividing by 27 gives the average F over one orbit:
+
+Poo Go
+
+1 1
+F=— [cos 6 d(AAz) = — [cosy cos Bs +siny sin Bg cos(AAz)| d(AAz)
+27 21
+boo ~ boo
+=(Pgq cos ycos Py + sin Gog sin ysin Bs) /7
+(nadir fixed, partial shade, no eclipse) (5-13c)
+
+where ®oq is expressed in radians and
+
+cos Pog = -1 / (tan y tan Bs) (5-14)
+
+110 Space Mission Geometry 5.2
+
+The quantity @oq is the value of AAz at which B= 90 deg, i-e., when the transition occurs
+between shade and sunlight.
+
+Consider our previous example for which B,’=65 deg and y=55 deg. In this case,
+Eq. (5-13c) is applicable and, from Eq. (5-14), Bog = 109.1 deg. This means that the Sun will
+shine on the face in question whenever the azimuth of the Sun is within 109.1 deg of the azimuth
+of the face. From Eq. (5-13c), F = 0.370. This means that, without eclipses, the average solar
+input on the face is 37.0% of what it would be if the Sun were continuously shining normal to
+the face. If the face in question has a surface area of 0.5 m2, then the average solar input over an
+orbit with full sunlight is (0.5) (1,367) (0.370) = 253 W.
+
+The nadir-oriented satellite above is spinning at one rotation per orbit in inertial space. Thus,
+all of the above formulas can be applied to spinning spacecraft with the interpretation that Igy,
+is the average solar radiation input over one spin period, yis the angle from the spin axis to the
+face in question, and f,” is the angle from the spin axis to the Sun.
+
+In practice there are two principal corrections to the above formulas:
+
+* Fis reduced by eclipses
+* The effective F is increased by reflected or emitted radiation from the Earth
+
+For either an inertially fixed spacecraft or a spinning spacecraft, the effect of eclipses is sim-
+ply to reduce F by the fraction of the orbit over which the spacecraft is in eclipse:
+
+F = Fy (1- @/ 360 deg) (5-15)
+
+where Fy is the noneclipse value of F determined from Eqs. (5-12) or (5-13) and @is the eclipse
+fraction from Eq. (5-4).
+
+For Earth-oriented spacecraft the situation is more complex, because the solar input depends
+on the orientation of the Sun relative to both the Earth and spacecraft face being evaluated. Let
+7 be the angular distance from N to nadir and p be the angular radius of the Earth. If the face in
+question is sufficiently near zenith (opposite the direction to the center of the Earth) that 7 - p
+2 90 deg, then F = fg and F will not be reduced by eclipses. For this condition, any eclipses
+which occur will happen when the face is shaded. Alternatively, consider what happens when
+ly— Bs’| = 90 deg. In this case, there is only a small portion of the orbit when the Sun shines on
+the face. Let ® be the eclipse fraction from Eq. (5-4) and @og the azimuth defined above at
+which the transition from sunlight to shade occurs. If @/2 > the larger of |Azy + Poo, then the
+spacecraft will be in eclipse when the Sun is in a position to shine on the face. In this case F will
+be reduced to 0. For conditions in between these two extremes, F will be between 0 and its non-
+eclipse value. Specific values will need to be evaluated numerically using Eqs. (5-4) and (5-8).
+
+The heat input from both reflected and emitted radiation from the Earth increases the effective
+value of F. It is significantly more complex to compute than the effect of eclipses because of the
+extended size of the disk of the Earth and the variability in the intensity of reflected radiation.
+However, reasonable upper limits for radiation from the Earth are:
+
+* 475 Wim? for reflected solar radiation (albedo)
+* 260 W/m? for emitted IR radiation (thermal radiation)
+Section 11.5 provides additional details on how to compute thermal inputs to the spacecraft.
+
+5.2 Earth Geometry Viewed from Space
+
+The most common problem in space mission geometry is to determine the relative
+geometry of objects on the Earth’s surface as seen from the spacecraft. One example
+is to use the given coordinates of a target on the Earth to determine its coordinates in
+the spacecraft field of view. Another is to determine the intercept point on the surface
+of the Earth corresponding to a given direction in spacecraft coordinates.
+
+5.2 Earth Geometry Viewed from Space 111
+
+To begin, we determine p, the angular radius of the spherical Earth as seen from the
+spacecraft, and Ay, the angular radius measured at the center of the Earth of the region
+seen by the spacecraft (see Fig. 5-11). Because we have assumed a spherical Earth, the
+line from the spacecraft to the Earth’s horizon is perpendicular to the Earth’s radius,
+and therefore
+
+Ry
+Rp +H
+
+sin p=cos Ag = (5-16)
+
+and
+pt+Ag =90 deg (5-17)
+where R, is the radius of the Earth and #7 is the altitude of the satellite.
+
+E
+fe)
+7
+”
+Ay Voke Spacecraft
+4 ”
+fe Subsatellite
+Earth “~?~4. Point
+Center ~
+enter |
+
+Horizon
+
+Fig. 5-11. Relationship Between Geometry as Viewed from the Spacecraft and from the
+Center of the Earth. See also Fig. 5-12.
+
+Thus, the Earth forms a small circle of radius p on the spacecraft sky, and the
+spacecraft sees the area within a small circle of radius Ag on the surface of the Earth.
+The distance, D,,,,, to the horizon is given by (see Fig. 5-13 below):
+
+Dnax= (Re + H)2 - R; 21/2 = R, tan Ao (5-18)
+
+The spherical-Earth approximation is adequate for most mission geometry appli-
+cations. However, for precise work, we must apply a correction for oblateness, as
+explained in detail by Liu [1978] or Collins [1992]. The Earth’s oblateness has two
+distinct effects on the shape of the Earth as seen from space. First, the Earth appears
+somewhat oblate rather than round, and second, the center of the visible oblate Earth
+is displaced from the true geometric center of the Earth. For all remaining computa-
+tions in this section, we will use spherical coordinates both on the Earth and in the
+spacecraft frame. Computationally, we can treat oblateness and surface irregularities
+as simply the target’s altitude above or below a purely spherical Earth. That the Earth’s
+real surface is both irregular and oblate is immaterial to the computation, and, there-
+fore, the results are exact.
+
+112 Space Mission Geometry 5.2
+
+We wish to find the angular relationships between a target, P, on the surface of the
+Earth, and a spacecraft with subsatellite point, SSP, also on the surface of the Earth, as
+shown in Fig. 5-12. We assume that the subsatellite point’s latitude, Latssp and longi-
+tude, Long ssp, are known. Depending on the application, we wish to solve one of two
+problems: (1) given the coordinates of a target on the Earth, find its coordinates viewed
+by the spacecraft, or (2) given the coordinates of a direction relative to the spacecraft,
+find the coordinates of the intercept on the surface of the Earth. In both cases, we de-
+termine the relative angles between SSP and P on the Earth’s surface and then trans-
+form these angles into spacecraft coordinates.
+
+Given the coordinates of the subsatellite point (Longssp, Latssp) and target
+(Long p, Latp), and defining AL =| Longssp— Longp |, we wish to find the azimuth,
+®,,, measured eastward from north, and angular distance, A, from the subsatellite point
+to the target. (See Fig. 5-12.) These are given by
+
+cos A= sin Latssp sin Latp + cos Latsspcos Latp cos AL (A<180deg) (5-19)
+cos ®p = (sin Latp — cos A sin Latssp )/(sin A. cos Latssp ) (5-20)
+where ®- < 180 deg if P is east of SSP and ®, > 180 deg if P is west of SSP.
+
+Fig. 5-12. Relationship Between Target and Subsatellite Point on the Earth’s Surface.
+
+Alternatively, given the position of the subsatellite point (Longscsp, Latssp) and the
+position of the target relative to this point (@, A), we want to determine the geo-
+graphic coordinates of the target (Longp, Latp):
+
+cos Latp =cos Asin Latssp + sin A cos Latssp cos ®g (Latp < 180deg) (5-21)
+cos AL = (cos A—sinLatssp sinLatp)/ (cos Latssp cos Latp ) (5-22)
+
+where Latp =90 deg — Latp and P is east of SSP if®g < 180 deg and west of SSP if
+Pr > 180 deg.
+
+We now wish to transform the coordinates on the Earth’s surface to coordinates as
+seen from the spacecraft. By symmetry, the azimuth of the target relative to north is
+the same as viewed from either the spacecraft or the Earth. That is,
+
+O; spe = O; surface — Pr; (5-23)
+
+5.2 Earth Geometry Viewed from Space 113
+
+True Outer Horizon
+
+Target
+
+Earth’s
+
+Center Satellite
+
+Subsatellite Point, SSP
+
+Fig. 5-13. Definition of Angular Relationships Between Satellite, Target, and Earth Center.
+
+Generally, then, the only problem is to find the relationship between the nadir
+angle, n, measured at the spacecraft from the subsatellite point (= nadir) to the target;
+the Earth central angle, A, measured at the center of the Earth from the subsatellite
+point to the target; and the grazing angle or spacecraft elevation angle, €, measured at
+the target between the spacecraft and the local horizontal. Figure 5-13 defines these
+angles and related distances. First, we find the angular radius of the Earth, p, from
+
+R,
+in p =cos Ay = —4=_ 5-24
+sin Pp =cos Ag R, +H (5-24)
+which is the same as Eq. (5-16). Next, if A is known, we find 7 from
+tan = _ sin psina (5-25)
+1—sinpcosA
+If 7 is known, we find € from
+cos €= sin? (5-26a)
+sin 9
+Or, if €is known, we find 7 from
+sin 7) = cos €sin 9 (5-26b)
+Finally, the remaining angle and side are obtained from
+n+A+e=90 deg (5-27)
+D=R, (sin A/sin n) (5-28)
+
+Figure 5-14 summarizes the process of transforming between spacecraft coordinates
+and Earth coordinates.
+
+As an example, consider a satellite at an altitude of 1,000 km. From Eq. (5-16), the
+angular radius of the Earth p = 59.8 deg. From Eqs. (5-17) and (5-18), the horizon is
+30.2 deg in Earth central angle from the subsatellite point and is at a line-of-sight
+
+114 Space Mission Geometry 5.2
+
+First, compute the angular radius of Earth, 9
+
+sin = CoSdAg = Ae/ (Re + H) (5-24)
+To compute spacecraft viewing angles given the subsatellite point at (Longgsp, Latggp) and
+target at (Longp, Latp), and AL=| Longgsgp— Longp |
+
+cos A= sin Latgspsin Latp + cos Latggp cos Latp cos AL (A < 180 deg) (5-19)
+
+cos ® = (sin Latp — cos A sinLatggp) / (sin A cos Latggp) (5-20)
+
+tan 1 = sin Pp sin A/(1 —sin pcos A) (5-25)
+To compute coordinates on the Earth given the subsatellite point at (Longgsp, Latgsp)
+and target direction (M¢, 7):
+cos €=sin 7/sin p (5-26a)
+A=90 deg-n-€ (5-27)
+cos Latp =cos Asin Latggp + sin A cos Latgspcos Pe (Latp <180deg) (5-21)
+
+cos AL = (cos A -— sin Latggp sin Latp)/(cosLatggp cosLatp) (5-22)
+
+Fig. 5-14. Summary of the Process of Transforming Between Spacecraft Viewing Angles
+and Earth Coordinates. Equation numbers are listed in the figure and variables are
+as defined in Figs. 5-11 and 5-12.
+
+distance of 3,709 km from the satellite. We will assume a ground station at Hawaii
+(Lat p = 22 deg, Long p = 200 deg) and a subsatellite point at Latggp = 10 deg, Long,<p
+= 185 deg. From Eqs. (5-19) and (5-20), the ground station is a distance A = 18.7 deg
+from the subsatellite point, and has an azimuth relative to north = 48.3 deg. Using Eqs.
+(5-25) and (5-28) to transform into spacecraft coordinates, we find that from the space-
+craft the target is 56.8 deg up from nadir (7) at a line of sight distance, D, of 2,444 km.
+From Eq. (5-27), the elevation of the spacecraft as seen from the ground station is 14.5
+deg. The substantial foreshortening at the horizon can be seen in that at €= 14.5 deg
+we are nearly half way from the horizon to the subsatellite point (A = 18.7 deg vs. 30.2
+deg at the horizon).
+
+Using these equations, we can construct Fig. 5-15, which shows the Earth as seen
+from 1,000 km over Mexico’s Yucatan Peninsula in the Gulf of Mexico. The left side
+shows the geometry as seen on the surface of the Earth. The right side shows the
+geometry as seen by the spacecraft projected onto the spacecraft-centered celestial
+sphere. As computed above, the maximum Earth central angle will be approximately
+30 deg from this altitude such that the spacecraft can see from northwestern South
+America to Maine on the East Coast of the U.S. and Los Angeles on the West Coast.
+The angular radius of the Earth as seen from the spacecraft will be 90 — 30 = 60 deg as
+shown in Fig. 5-15B. Because the spacecraft is over 20 North latitude, the direction to
+nadir in spacecraft coordinates will be 20 deg south of the celestial equator. (The
+direction from the spacecraft to the Earth’s center is exactly opposite the direction
+from the Earth’s center to the spacecraft.)
+
+Even after staring at it a bit, the view from the spacecraft in Fig. 5-15B looks
+strange. First, recall that we are looking at the spacecraft-centered celestial sphere
+from the outside. The spacecraft is at the center of the sphere. Therefore, the view for
+us is reversed from right-to-left as seen by the spacecraft so that the Atlantic is on the
+left and the Pacific on the right. Nonetheless, there still appear to be distortions in the
+view. Mexico has an odd shape and South America has almost disappeared. All of this
+
+5.2 Earth Geometry Viewed from Space 115
+
+S\ SD SA ATLANTIC
+RAS S OCEAN x
+BN
+
+LAT PERS
+
+South Celestial Pole
+
+© Microcosm, Inc. 1998
+
+Long Island
+
+¥~ Chesapeake Bay
+
+~*~
+Cape Hatteras
+Bay
+
+ATLANTIC
+
+GULF OF
+MEXICO
+
+MEXICO
+
+A. Geometry on the Earth's Surface
+(SSP=Subsatellite Point)
+
+B. Geometry Seen on the Spacecraft Centered
+
+Celestial Sphere Chesapeake Bay >
+Cape Cod
+A’. Region on the Earth Seen by the 35 mm Z
+
+Camera Frame Shown in (B’)
+
+B’. Field of View of a 35 mm Camera with a
+Normal Lens Looking Along the East Coast
+of the US.
+
+B”. Enlargement of the 35 mm Frame Showing
+the Region from Georgia to Massachusetts.
+
+Fig. 5-15. Viewing Geometry for a Satellite at 1,000 km over the Yucatan Peninsuia at
+90 deg W longitude and 20 deg N latitude. See text for discussion. [Copyright by
+Microcosm; reproduced by permission.]
+
+is due to the very strong foreshortening at the edge of the Earth’s disk. Notice for
+example that Jacksonville, FL, is about halfway from the subsatellite point to the
+horizon. This means that only 1/4th of the area seen by the spacecraft is closer to the
+subsatellite point than Jacksonville. Nonetheless, as seen from the perspective of the
+spacecraft, Jacksonville is 54 deg from nadir, i.e., 90% of the way to the horizon with
+3/4ths of the visible area beyond it.
+
+116 Space Mission Geometry 5.2
+
+The rectangle in the upper left of Fig. 5-15B is the field of view of a 35 mm camera
+with a 50 mm focal length lens (a normal lens that is neither wide angle nor telephoto).
+The cameraperson on our spacecraft has photographed Florida and the eastern sea-
+board of the US to approximately Maine The region seen on the Earth is shown in Fig.
+5-15A and 5-15B’ and an enlargement of a portion of the photo from Georgia to
+Maine is shown in Fig. 5-15B”. Note the dramatic foreshortening as Long Island and
+Cape Cod become little more than horizontal lines, even though they are some distance
+from the horizon. This distortion does not come from the plotting style, but is what the
+spacecraft sees. We see the same effect standing on a hilltop or a mountain. (In a sense,
+the spacecraft is simply a very tall mountain.) Most of our angular field of view is
+taken up by the field or mountain top we are standing on. For our satellite, most of
+what is seen is the Yucatan and Gulf of Mexico directly below. There is lots of real
+estate at the horizon, but it appears very compressed. From the spacecraft, I can point
+an antenna at Long Island, but I can not map it. We must keep this picture in mind
+whenever we assess a spacecraft's fields of view or measurement needs.
+
+Thus far we have considered spacecraft geometry only from the point of view of a
+spacecraft fixed over one point on the Earth. In fact, of course, the spacecraft is travel-
+ing at high velocity. Figure 5-16A shows the path of the subsatellite point over the
+Earth’s surface, called the satellite’s ground trace or ground track. Locally, the ground
+trace is very nearly the arc of a great circle. However, because of the Earth’s rotation,
+the spacecraft moves over the Earth’s surface in a spiral pattern with a displacement
+at successive equator crossings directly proportional to the orbit period. For a satellite
+in a circular orbit at inclination i, the subsatellite latitude, 5,, and longitude, L,, relative
+to the ascending node are
+
+sin ds = sin isin (@ 1) (5-29)
+tan (Ly + Wet) = cos i tan (@ fF) (5-30)
+
+where ¢ is the time since the satellite crossed the equator northbound,
+Wy = 0.004 178 07 deg/s is the rotational velocity of the Earth on its axis, and wis the
+satellite’s angular velocity. For a satellite in a circular orbit, @ in deg/s is related to the
+period, P, in minutes by
+
+@ = 6/P < 0.071 deg/s (5-31)
+
+where 0.071 deg/s is the maximum angular velocity of a spacecraft in a circular orbit.
+Similarly, the ground track velocity, V,, is
+
+Vy = 2m Rg/P < 7.905 km/s (5-32)
+
+where Ry = 6,378 km is the equatorial radius of the Earth. For additional information
+on the satellite ground trace and coverage, taking into account the rotation of the Earth,
+see Chap. 8 of Wertz [2001].
+
+Fig. 5-16B shows the swath coverage for a satellite in low-Earth orbit. The swath
+is the area on the surface of the Earth around the ground trace that the satellite can
+observe as it passes overhead. From the formulas for stationary geometry in
+Egs. (5-24) to (5-27), we can compute the width of the swath in terms of the Earth
+central angle, A. Neglecting the Earth’s rotation, the area coverage rate, ACR, of a
+spacecraft will be
+
+ACR = 20 (Sin Aguter + SiN Ainner)! P (5-33)
+
+5.3 Apparent Motion of Satellites for an Observer on the Earth 117
+
+Ground Track
+{€=90 deg)
+
+(€= 45 deg)
+
+| Outer Horizon
+f (€= 0 deg)
+
+A. Satellite Ground Track. B. Swath Coverage for Satellite Ground Track
+in (A), for Several Grazing Angles, €.
+
+Fig. 5-16. Path of a Satellite Over the Earth’s Surface. A swath which goes from horizon to
+horizon will cover a very large area, although we will see most of this area at very
+shallow elevation angles near the horizon.
+
+where A,,,;¢, is the effective outer horizon, A,,,,2,18 the inner horizon, the area on the
+Earth’s surface is in steradians, and P is the orbital period of the satellite. The plus sign
+applies to horizons on opposite sides of the ground trace and the minus sign to both
+horizons on one side, that is, when the spacecraft looks exclusively left or right. For a
+
+swath of width 2A symmetric about the ground trace, this reduces to
+ACR = (4n/P) sin aA (5-34)
+
+Alternatively, this can be expressed in terms of the limiting grazing angle (or elevation
+angle), €, and angular radius of the Earth, p, as
+
+ACR = (4n/P) cos (€ + arc sin (cos € sin 9)) (5-35)
+
+Because the curvature of the Earth’s surface strongly affects the ACR, Eqs. (5-33)
+to (5-35) are not equal to the length of the arc between the effective horizons times
+either the velocity of the spacecraft or the velocity of the subsatellite point.
+
+5.3 Apparent Motion of Satellites for an Observer on the Earth
+
+Even for satellites in perfectly circular orbits, the apparent motion of a satellite
+across the sky for an observer on the Earth’s surface is not a simple geometrical figure.
+If the observer is in the orbit plane, then the apparent path of the satellite will be a great
+circle going directly overhead. If the observer is somewhat outside of the orbit plane,’
+then the instantaneous orbit will be a large circle in three-dimensional space viewed
+from somewhat outside the plane of the circle and projected onto the observer’s celes-
+tial sphere.
+
+Because the apparent satellite path is not a simple geometrical figure, it is best
+computed using a simulation program. Available commercial programs include
+Satellite Tool Kit (1990), Orbit View and Orbit Workbench (1991), Orbit IT Plus
+(1991), and MicroGLOBE (1990), which generated the figures in this chapter. These
+programs also work with elliptical orbits, so they are convenient—along with the
+
+118 Space Mission Geometry 5.3
+
+appropriate formulas from this chapter—for evaluating specific orbit geometry.
+Unfortunately, a simulation does not provide the desired physical insight into the
+apparent motion of satellites. Neither does it provide a rapid method of evaluating
+geometry in a general case, as is most appropriate when first designing a mission. For
+these problems, we are interested in either bounding or approximating the apparent
+motion of satellites rather than in computing it precisely. After all, the details of a
+particular pass will depend greatly on the individual geometrical conditions. Approx-
+imate analytic formulas are provided by Wertz [1981, 2001]. For mission design, the
+circular orbit formulas provided below for satellites in low-Earth orbit and geo-
+synchronous orbit work well.
+
+5.3.1 Satellites in Circular Low-Earth Orbit
+
+We assume a Satellite is in a circular low-Earth orbit passing near a target or ground
+station. We also assume that the orbit is low enough that we can ignore the Earth’s
+rotation in the relatively brief period for which the satellite passes overhead.* We wish
+to determine the characteristics of the apparent satellite motion as seen from the
+ground station. Throughout this section we use the notation adopted in Sec. 5.2.
+Figure 5-17 shows the geometry. The small circle centered on the ground station
+represents the subsatellite points at which the spacecraft elevation, €, seen by the
+ground station is greater than some minimum €,,;,,. The nature of the communication
+or observation will determine the value of €,,;,. For communications, the satellite
+typically must be more than 5 deg above the horizon, so Ej, = 5 deg. The size of this
+circle of accessibility strongly depends on the value of €,,,;,,, as emphasized in the dis-
+cussion of Fig. 5-15. In Fig. 5-17 we have assumed a satellite altitude of 1,000 km. The
+dashed circle surrounding the ground station is at 6,,;, = 0 deg (that is, the satellite’s
+true outer horizon), and the solid circle represents €,,;,, = 5 deg. In practice we typically
+select a specific value of €,,;,, and use that number. However, you should remain aware
+that many of the computed parameters are extremely sensitive to this value.
+
+Fig. 5-17. Geometry of Satellite Ground Track Relative to an Observer on the Earth’s
+Surface.
+
+* See Chap. 9 of Wertz [2001] for a more accurate approximation which takes the Earth’s rota-
+tion into account.
+
+5.3 Apparent Motion of Satellites for an Observer on the Earth 119
+
+Given a value of &,;,, we can define the maximum Earth central angle, Ajay, the
+maximum nadir angle, Na, measured at the satellite from nadir to the ground station,
+and the maximum range, Dingy, at which the satellite will still be in view. These
+parameters as determined by applying Eqs. (5-26a) to (5-28) are given by:
+
+SIN Tmax = SIN P COS Emin (5-36)
+A max = 90 deg — Emin — Vmax (5-37)
+Drnay = Re tama (5-38)
+
+SIN Minax
+
+where p is the angular radius of the Earth as seen from the satellite, that is, sin p=
+Re/(Re+ H). We call the small circle of radius A,,,, centered on the target the effective
+horizon, corresponding in our example to €,,;, = 5 deg, to distinguish it from the true
+or geometrical horizon for which €,,;, = 0 deg. Whenever the subsatellite point lies
+within the effective horizon around the target or ground station, then communications
+or observations are possible. The duration, T, of this contact and the maximum eleva-
+tion angle, &,¢,, of the satellite depends on how close the ground station is to the
+satellite’s ground track on any given orbit pass.
+
+As described in Chap. 6, the plane of a spacecraft’s orbit and, therefore, the ground
+track, is normally defined by the inclination, i, and either the right ascension, 2, or
+longitude, Lyodes of the ascending node. Except for orbit perturbations, Q, which is
+defined relative to the stars, remains fixed in inertial space while the Earth rotates
+under the orbit. On the other hand, Lye is defined relative to the Earth’s surface and,
+therefore, increases by 360 deg in 1,436 min, which is the rotation period of the Earth
+relative to the stars. (Again, orbit perturbations affect the exact rotation rate.) Because
+of this orbit rotation relative to the Earth, it is convenient to speak of the instantaneous
+ascending node which is Lyoge evaluated at the time of an observation or passage over
+a ground station. For purposes of geometry it is also often appropriate to work in terms
+of the instantaneous orbit pole, or the pole of the orbit plane at the time of the obser-
+vation. The coordinates of this pole are
+
+latpoje= 90 deg—i (5-39)
+lon8pole = Lnode— 90 deg (5-40)
+
+A satellite passes directly over a target or ground station (identified by the subscript
+gs) on the Earth’s surface if and only if
+
+sin (longy,—Lnode) = tan lat,,/ tan i (5-41)
+
+There are two valid solutions to the above equation corresponding to the satellite pass-
+ing over the ground station on the northbound leg of the orbit or on the southbound
+leg. To determine when after crossing the equator the satellite passes over the ground
+station for a circular orbit, we can determine y, the arc length along the instantaneous
+ground track from the ascending node to the ground station, from
+
+sin u = sin /at,,/ sini (5-42)
+
+Again, the two valid solutions correspond to the northbound and southbound passes.
+Figure 5-17 defines the parameters of the satellite’s pass overhead in terms of A. ,;,
+
+the minimum Earth central angle between the satellite’s ground track and the ground
+
+station. This is 90 deg minus the angular distance measured at the center of the Earth
+
+120 Space Mission Geometry 5.3
+
+from the ground station to the instantaneous orbit pole at the time of contact. If we
+know the latitude and longitude of the orbit pole and ground station, gs, then the value
+of Amin is
+
+SIN Amin = SiN Latyoje SiN lat gs + COS latyyje COS latgs cos (Along) (5-43)
+
+where Along is the longitude difference between gs and the orbit pole. At the point of
+closest approach, we can compute the minimum nadir angle, 7,,;,, maximum elevation
+angle, Emax, and minimum range, Dyin aS
+
+tan Mpg = ——SPsin 4? _ (5-44)
+1-sin pcosAynin
+Emax = 90 deg ~ Amin — min (5-45)
+Dmin = RE [srs | (5-46)
+sin Dain
+
+At the point of closest approach, the satellite is moving perpendicular to the line of
+sight to the ground station. Thus, the maximum angular rate of the satellite as seen
+from the ground station, 6,,,,,., will be
+
+. Vout 2n(R, +H)
+
+Omar =D = — pp (5-47)
+
+min min
+
+where V,gr is the orbital velocity of the satellite, and P is the orbit period.
+
+Finally, it is convenient to compute the total azimuth range, Ad, which the satellite
+covers as seen by the ground station, the total time in view, T, and the azimuth, @, ene)
+at the center of the viewing arc at which the elevation angle is a maximum:
+
+Ag _ tan Amin
+6S tan Amar (5-48)
+_ P COSA max
+T= 180 ‘a are COS cosd.,.., (5-49)
+
+where the arc cos is in degrees. $, enter iS related to dpy/e, the azimuth to the direction
+to the projection of the orbit pole onto the ground by
+
+bcenter = 180 deg — pole (5-50)
+COS Ppyoje = (SiN Latyyje— sin Amin 8iN latgs) / (COS Amin COS latgs) (5-51)
+
+where dpoie < 180 deg if the orbit pole is east of the ground station and @pyie > 180 deg
+if the orbit pole is west of the ground station. The maximum time in view, Tj, OCCUrs
+when the satellite passes overhead and A,,,;,, = 0. Eq. (5-49) then reduces to:
+
+Tax = P (Aimar / 180 deg) (5-52)
+
+max
+
+If satellite passes are approximately evenly distributed in off-ground track angle, then
+the average pass duration is about 80% of Tj,, and 86% or more of the passes will be
+longer than half 7,
+
+HaX*
+
+5.3 Apparent Motion of Satellites for an Observer on the Earth 121
+
+Table 5-4 summarizes the computations for ground station coverage and provides
+a worked example. Note that as indicated above, T is particularly sensitive to €,,;). If,
+for example, we assume a mountain-top ground station with €,,;, = 2 deg, then the time
+in view increases by 15% to 14.27 min. Figure 5-18 shows samples of several ground
+tracks for satellites in a 1,000 km orbit.
+
+TABLE 5-4. Summary of Computations for Ground Station Pass Parameters. We assume
+the following parameters: orbit pole at lafpoje = 61.5 deg, longpoie = 100 deg; Hawaii
+ground station at /atgs = 22 deg, longgs = = 200 deg; minimum allowable elevation
+angle E,;, = 5 deg. The result is a typical pass time-in-view of about 12 min.
+
+Earth Angular Radius, p | sino = Ae/ (Re +H) = 59.8 deg
+Period, P P =1,658 669 x 10-4 x (6,378.14 + H)8/2) 7-7 | P= 105 min
+Max Nadir Angle, Amax | SiN Mmax =SiN PCOS Emin - Tmax = 59.4 deg
+
+Max Earth Amax = 90 deg - Emin — Nmax | Amax = 25.6 deg
+Central Angle, Amax
+
+Max Distance, Day Dmax = Re (SIN Amax / SIN Nmax) - Dmax = 3,202 km
+
+wn Earth le. 2 SIN Amin = SiN latyoig Sin latgs 743 | Amin = 14.7 deg
+ntral Angle; Amin + C08 [Atpo/e COS [atg, cos (Along)
+
+Min Nadir Angle, nmin tan Amin = (SIN P-SIN Amin)/ (1 - Sin p cos Nmin = 53.2 deg
+Amin)
+
+Max Elevation Emax = 90 deg - Amin — Mmin Emax = 22.1 deg
+Angle, Emax
+
+Min Distance, Dyin Dain = Re (Sin Amin / SIN Nin) - Din = 2,021 km
+
+Max Angular Rate, @max | Omax = [(2u (Re + A) / (P Din) . Omax = 12.6
+deg/min
+
+Azimuth Range, A@ cos (A@/2) = (tan Amin/ tan Amy) -48 | Ad = 113.6 deg
+Time in View, T T= (P/ 180 deg) cos-! (COS Amay/ COS Amin) | 5-49 | T= 12.36 min
+
+5.3.2 Satellites in Geosynchronous Orbit and Above
+
+An important special case of the satellite motion as seen from the Earth’s surface
+occurs for geostationary satellites, which hover approximately over one location on
+the Earth’s equator. This will occur at an altitude of 35,786 km, for which the satellite
+period is 1,436 min, equaling the Earth’s sidereal rotation period relative to the fixed
+stars. Chapter 6 describes the long-term drift of geostationary satellites. We describe
+here the apparent daily motion of these satellites as seen by an observer on the Earth.
+
+For convenience, we assume the observer is at the center of the Earth and compute
+the apparent motion from there. The detailed motion seen from a location on the
+Earth’s surface will be much more complex because the observer is displaced relative
+to the Earth’s center. (See Wertz [2001].) But the general results will be the same, and
+the variations can be computed for any particular location.
+
+122 Space Mission Geometry 53
+
+Zenith
+
+Horizon
+
+A. Geometry on the Globe B. Geometry on the
+Ground-Station-Centered Celestial Sphere
+
+Fig. 5-18. Motion of a Satellite at 1,000 km as Seen on the Earth and by an Observer on
+the Surface of the Earth. See text for formulas.
+
+Orbit inclination and eccentricity are the principal causes of the apparent daily
+motion of a geosynchronous satellite. These two effects yield different-shaped appar-
+ent orbits, which can cause confusion if the source of the apparent motion is not clearly
+identified. As Fig. 5-19A shows, the inclination of the orbit produces a figure eight
+centered on the equator, as seen by an observer at the Earth’s center. The half-height,
+hin, and half-width, w;,,, of the figure eight due to an inclination, i, are given by
+
+Nine = ti (5-53)
+
+inc ~
+
+tan Wing = > (vseei - Vcosi] = tan?(i/2) (5-54)
+
+where the approximation in the second formula applies to small i. The source of this
+figure eight or analemma is the motion of the satellite along its inclined orbit, which
+will alternately fall behind and then catch up to the uniform rotation of the Earth on
+its axis.
+
+The second factor which causes a nonuniform apparent motion is a nonzero eccen-
+tricity of the satellite orbit. An eccentricity, e, causes an East-West oscillation, w,,,, of
+magnitude
+
+360 de
+Weee = {20 8), = +(1 15 deg)e (5-55)
+
+In general, the inclination and eccentricity motions are superimposed, resulting in
+two possible shapes for the motion of the geosynchronous satellite as seen from the
+Earth. If the nonzero inclination effect dominates, then the satellite appears to move in
+a figure eight. If the eccentricity effect is larger than the inclination effect, then the
+apparent motion is a single open oval, as shown in Fig. 5-19B.
+
+For satellites above geosynchronous orbit, the rotation of the Earth on its axis
+dominates the apparent motion of the satellite. Consequently, it is most convenient in
+this case to plot the motion of the satellite relative to the background of the fixed stars.
+
+5.4 Development of Mapping and Pointing Budgets 123
+
+2h=4deg 2h=4deg
+2w->| }+ 0.03 deg Kia aes!
+A. i=2deg B. i=2deg
+e=0 e = 0.001
+
+Fig. 5-19. Apparent Daily Motion of a Satellite in Geosynchronous Orbit.
+
+In this coordinate frame, we can handle the motion relative to the fixed inertial back-
+ground just the same as we do the apparent motion of the Moon or planets. Many
+introductory texts on celestial mechanics treat this issue. See, for example, Roy
+[1991], Green [1985], or Smart [1977], or Wertz [2001].
+
+5.4 Development of Mapping and Pointing Budgets
+
+Nearly all spacecraft missions involve sensing or interaction with the world around
+them, so a spacecraft needs to know or control its orientation. We may conveniently
+divide this problem of orientation into two areas of pointing and mapping. Pointing
+means orienting the spacecraft, camera, sensor, or antenna to a target having a specific
+geographic position or inertial direction. Mapping is determining the geographic
+position of the look point of a camera, sensor, or antenna. Satellites used only for
+communications will generally require only pointing. Satellites having some type of
+viewing instrument, such as weather, ground surveillance, or Earth resources satel-
+lites, will ordinarily require both pointing (“point the instrument at New York”) and
+mapping (“determine the geographic location of the tall building in pixel 2073”).
+
+The goal of this section is to develop budgets for pointing and mapping. A budget
+lists all the sources of pointing and mapping errors and how much they contribute to
+the overall pointing and mapping accuracy. This accuracy budget frequently drives
+both the cost and performance of a space mission. If components in the budget are left
+out or incorrectly assessed, the satellite may not be able to meet its performance
+objectives. More commonly, people who define the system requirements make the
+budgets for pointing and mapping too stringent and, therefore, unnecessarily drive
+up the cost of the mission. As a result, we must understand from the start the compo-
+nents of mapping and pointing budgets and how they affect overall accuracy. In this
+section we will emphasize Earth-oriented missions, but the same basic rules apply to
+inertially-oriented missions.
+
+The components of the pointing and mapping budgets are shown in Fig. 5-20 and
+defined in Table 5-5. Basic pointing and mapping errors are associated with spacecraft
+navigation—that is, knowledge of its position and attitude in space. But even if the
+
+124 Space Mission Geometry 5.4
+
+position and attitude are known precisely, a number of other errors will be present. For
+example, an error in the observation time will result in an error in the computed loca-
+tion of the target, because the target frame of reference moves relative to the
+spacecraft. A target fixed on the Earth’s equator will rotate with the Earth at 464 m/s.
+A 10-sec error in the observation time would produce an error of 5 km in the computed
+geographic location of the target. Errors in the target altitude, discussed below, can be
+a key component of pointing and mapping budgets. The instrument-mounting error
+represents the misalignment between the pointed antenna or instrument and the sensor
+or sensors used to determine the attitude. This error is extremely difficult to remove.
+Because we cannot determine it from the attitude data alone, we must view it as a crit-
+ical parameter and keep it small while integrating the spacecraft.
+
+In-track
+
+Radial
+
+Cross-track
+Earth Center
+
+Spacecraft
+
+A, Field of View
+Orbit Ground Track
+: Le
+
+Fig. 5-20. Definition of Pointing and Mapping Error Components.
+
+Pointing errors differ from mapping errors in the way they include inaccuracies in
+attitude control and angular motion. Specifically, the pointing error must include the
+entire control error for the spacecraft. On the other hand, the only control-related
+component of the mapping error is the angular motion during the exposure or
+observation time. This short-term jitter results in a blurring of the look point of the
+instrument or antenna.
+
+As discussed earlier in Sec. 4.2.2, we may achieve an accuracy goal for either point-
+ing or mapping in many ways. We may, in one instance, know the position of the
+spacecraft precisely and the attitude only poorly. Or we may choose to allow a larger
+error in position and make the requirements for determining the attitude more strin-
+gent. In an ideal world we would look at all components of the pointing and mapping
+budgets and adjust them until a small increment of accuracy costs the same for each
+component. For example, assume that a given mission requires a pointing accuracy of
+20 milliradians, and that we tentatively assign 10 milliradians to attitude determination
+and 5 milliradians to position determination. We also find more accurate attitude
+would cost $100,000 per milliradian, whereas more accurate position would cost only
+$50,000 per milliradian. In this case we should allow the attitude accuracy to degrade
+and improve the position-accuracy requirement until the cost per milliradian is the
+same for both. We will then have the lowest cost solution.
+
+5.4 Development of Mapping and Pointing Budgets 125
+
+TABLE 5-5. Sources of Pointing and Mapping Errors.
+
+SPACECRAFT POSITION ERRORS:
+
+Al In- or along-track Displacement along the spacecraft’s velocity vector
+AC Cross-track Displacement normal to the spacecraft’s orbit plane
+ARs Radial Displacement toward the center of the Earth (nadir)
+
+SENSING AXIS ORIENTATION ERRORS (In potar coordinates about nadir):
+An Elevation Error in angle from nadir to sensing axis
+Ad Azimuth Error in rotation of the sensing axis about nadir
+
+Sensing axis orientation errors include errors in (1) attitude determination, (2) instrument
+mounting, and (3) stability for mapping or control for pointing.
+
+OTHER ERRORS:
+ARy Target altitude Uncertainty in the altitude of the observed object
+
+AT Clock error Uncertainty in the real observation time (results in
+uncertainty in the rotational position of the Earth)
+
+In practice we can seldom follow the above process. For example, we cannot
+improve accuracy continuously. Rather, we must often accept large steps in both
+performance and cost as we change methods or techniques. Similarly, we seldom
+know precisely how much money or what level of performance to budget. In practice
+the mission designer strives to balance the components, often by relying on experience
+and intuition as much as analysis. But the overall goal remains correct. We should try
+to balance the error budget so that incrementally improving any of the components
+results in approximately comparable cost.
+
+A practical method of creating an error budget is as follows. We begin by writing
+down all of the components of the pointing and mapping budgets from Table 5-5. We
+assume that these components are unrelated to each other, being prepared to combine
+them later by taking the root sum square of the individual elements. (We will have to
+examine this assumption in light of the eventual mission design and adjust it to take
+into account how the error components truly combine.) The next step is to spread the
+budget equally among all components. Thus, if all seven error sources listed in
+Table 5-5 are relevant to the problem, we will initially assign an accuracy requirement
+for each equal to the total accuracy divided by /7. This provides a starting point for
+allocating errors. Our next step is to look at normal spacecraft operations and divide
+the error sources into three categories:
+
+(A) Those allowing very little adjustment
+(B) Those easily meeting the error allocation established for them, and
+(C) Those allowing increased accuracy at increased cost
+
+Determining the spacecraft position using ground radar is a normal operation, and
+the ground station provides a fixed level of accuracy. We cannot adjust this error
+source without much higher cost, so we assign it to category (A) and accept its corre-
+sponding level of accuracy. A typical example of category (B) is the observation time
+for which an accuracy of tens of milliseconds is reasonable with modern spacecraft
+clocks. Therefore, we will assign an appropriately small number (say 10 ms) to the
+accuracy associated with the timing error. Attitude determination ordinarily falls into
+
+126 Space Mission Geometry 5.4
+
+TABLE 5-6. Mapping and Pointing Error Formulas. zis the grazing angle and /atis the latitude
+of the target, dis the target azimuth relative to the ground track, Ais the Earth central
+angle from the target to the satellite, Dis the distance from the satellite to the target,
+Rris the distance from the Earth’s center to the target (typically ~ Ag, the Earth’s
+radius), and Agis the distance from the Earth’s center to the satellite. See Fig. 5-20.
+
+Error Magnitude of Magnitude of
+Magnitude Mapping Error Pointing Error Direction of
+Error Source (units) (km) (rad) Error
+Attitude
+Errors:(!)
+Azimuth A¢Dsin n Azimuthal
+Nadir Angle An Disine An Toward nadir
+Position Errors:
+In-Track Al (Ry/Rg) cos H(2) | (A1/D} sin Y;) Parallel to
+ground track
+Cross-Track AC (Rr/Rg) cos G3) | (AC/D) sin Yo(8) | Perpendicular
+to ground track
+Radial ARs sinn/sin « (ARg/D) sin n Toward nadir
+Other Errors:
+Target Altitude ARy/tane _ Toward nadir
+S/C Clock AT Vy cos (lat ) (4) AT (V_/ D)cos(lat) | Parallel to
+«sin J (7) Earth’s equator
+
+Notes:
+
+(1) Includes attitude determination error, instrument mounting error, stability over exposure time (mapping
+only), and contral error (pointing only). The formulas given assume that the attitude is measured with
+respect to the Earth.
+
+) sin H= sin Asin ¢.
+
+) sin G=sin Acos ¢.
+
+) Ya 464 m/s (Earth rotation velocity at the equator).
+
+)
+
+)
+
+)
+
+cos Y;= cos ¢ sin n.
+
+cos Yo = sin ¢ sin 7.
+cos J= cos ¢¢ COs ¢, where ¢¢ = azimuth relative to East.
+
+category (C). Here we might have a gravity gradient-stabilized system accurate to a
+few degrees with no attitude determination cost at all, an horizon sensor system accu-
+rate to 0.05-0.10 deg, or a much more expensive star sensor system accurate to better
+than 0.01 deg (see Sec. 11.1).
+
+This process allows us to balance cost between the appropriate components and to
+go back to the mission definition and adjust the real requirements. For example,
+achieving a mapping accuracy of 100 m on the ground might triple the cost of the space
+mission by requiring highly accurate attitude determination, a new system for
+determining the orbit, and a detailed list of target altitudes. Reducing the accuracy
+requirement to 500 m might lower the cost enough to make the mission possible within
+the established budget constraints. This is an example of trading on mission require-
+ments, described in Chaps. 2 to 4. Requirements trading is extremely important to a
+cost-effective mission, but we often omit this in the normal process of defining
+mission requirements.
+
+To carry out this trade process, we need to know how an error in each of the com-
+ponents described in Table 5-5 relates to the overall mapping and pointing errors.
+
+5.4 Development of Mapping and Pointing Budgets 127
+
+Table 5-6 gives formulas relating the errors in each of the seven basic components to
+the overall error. Here the notation used is the same as in Fig. 5-20. For any given
+mission conditions, these formulas relate the errors in the fundamental components to
+the resulting pointing and mapping accuracies. Table 5-6 provides basic algebraic
+information which we must transform into specific mapping and pointing require-
+ments for a given mission. The general process of deriving these requirements is given
+below. Representative mapping and pointing budgets based on these formulas are
+given in Table 5-7
+
+TABLE 5-7. Representative Mapping and Pointing Error Budgets. See Figs. 5-21 and 5-22
+for corresponding plots.
+
+Error Budgets
+
+Er ror Mapping Error (km) Pointing Error (deg)
+in
+
+Source Source
+Attitude Errors:
+
+Azimuth 0.06 deg
+
+Nadir Angle 0.03 deg
+Position Errors:
+
+In-Track 0.2 km
+
+Cross-Track 0.2 km
+
+Radial 0.1 km
+Other Errors:
+
+Target Altitude 1km
+
+S/C Clock 0.5 sec
+Root Sum Square
+
+Defining Mapping Requirements
+
+The errors associated with mapping depend strongly on how close to the horizon
+we choose to work. Working in a very small] region directly under the spacecraft
+provides very poor coverage but excellent mapping accuracy and resolution (see
+Fig. 5-21). On the other hand, working near the horizon provides very broad coverage
+but poor mapping accuracy. Thus, we must trade resolution and mapping accuracy for
+coverage. The mapping accuracy for a particular mission depends on the spacecraft’s
+elevation angle at the edge of the coverage region. In almost all cases the mapping
+accuracy will be much better looking straight down, and the limiting accuracy will be
+closest to the horizon. To assess satellite coverage, we look at the satellite’s swath
+width. That is, we assume the spacecraft can work directly below itself and at all
+angles out to a limiting spacecraft elevation angle as seen from a target on the ground.
+
+Accuracy characteristics as a function of elevation angle are more complex because
+they involve combining several terms. A sample plot of mapping error as a function of
+the spacecraft’s elevation angle for a satellite at 1,000 km is in Fig. 5-22. This figure
+is based on the equations in Table 5-6.
+
+The total mapping error is the root sum square of the individual components.
+Generally, uncertainty in target altitude and in attitude determination contribute most
+to errors in mapping accuracy. In most cases improving other factors will have only a
+
+128 Space Mission Geometry 5.4
+
+7,000 +
+GEO
+6,000
+1 10,000 km
+
+E 5,000 1,600 km
+= 5,000 km
+3 J
+= 4,000
+£
+a
+é 3,000 + 2,000 km
+
+2,000 4
+
+4,000 4
+
+0 T T T T F T
+
+7
+
+10 20 30 40 50 60 70 80 90
+Spacecraft Elevation Seen from Ground (deg)
+
+Fig. 5-21. Swath Width vs. Spacecraft Elevation Angle for a Spacecraft at Various
+Altitudes. Note that the swath width increases dramatically at small elevation angles.
+
+second-order effect. Consequently, determining target altitude and spacecraft attitude
+are high priorities in assessing a mission’s mapping performance and cost.
+
+The uncertainty in target altitude typically contributes most to determining a
+geographic location on the Earth. The oblateness of the Earth has the largest effect on
+target altitude. It causes a variation in distance from the center of the Earth of
+approximately 25 km between the poles and the equator. But we can account for this
+factor analytically at very low cost, so it does not usually add to the error. The next
+plateau is for airplanes, clouds, or other atmospheric features. The uncertainty in target
+altitude at this level will typically be 10 km or larger unless we have some a priori
+estimate of the altitude. For features on the Earth’s surface, the uncertainty in target
+altitude reduces to approximately | km, unless data analysis includes a detailed map
+of target altitudes. Figure 5-22 incorporates this | km error in target altitude as the
+dominant source of error. Thus, for example, for FireSat to have a mapping error of
+less than | km would require one of two arrangements. The spacecraft could work only
+very near nadir and therefore have very poor coverage. Alternatively, it could include
+the elevation of the target region as a part of data reduction, therefore requiring the use
+of a very large data base and making the data processing more complex.
+
+The second principal contributor to mapping error is the uncertainty in attitude
+determination, which varies widely over the following cost plateaus:
+
+Accuracy Level (deg) Method
+~10 Gravity gradient spacecraft, no attitude
+determination
+~2 Magnetometer only
+0.5 Earth sensing, no oblateness corrections
+0.1 General Earth sensing
+0.03 High-accuracy Earth sensing
+
+<0.01 Star sensing
+
+5.4 Development of Mapping and Pointing Budgets 129
+
+4
+0.06° 1 km Target Altitude Error |
+Azimuth
+Error
+s3t\d |
+£ RSS Mapping Error
+=
+-
+°
+Ps
+ui
+a 25
+&
+[<5
+g
+= 0.03° Nadir
+14 0.2 km In-Track, Angle Error
+Cross-Track Error
+0.5 sec
+Clock Error
+O7 7 .
+
+T
+0 15 30 45 60 75 90
+Spacecraft Elevation Seen from Ground (deg)
+
+Fig. 5-22. Mapping Error as a Function of Elevation Angle for a Spacecraft at 1,000 km
+Altitude. Magnitudes of assumed error sources are marked.
+
+0.08
+0.07 0.06° Azimuth Error
+B 0.06 RSS Pointing Error
+Zz 0.2 km In-Track
+.2km In-Track,
+8 0.05 Cross-Track Error
+uw 0.03° Nadir Error
+2 0.04
+£
+© 0.03
+
+0.02 0.5 sec Clock Error
+0.1 km Radial Error
+
+0 15 30 45 60 75 90
+Spacecraft Elevation Seen from Ground (deg)
+
+Fig. 5-23. Pointing Error as a Function of Elevation Angle for a Spacecraft at 1,000 km
+Altitude. Magnitude of assumed error sources are marked.
+
+Using these general limits in a model such as that of Fig. 5-22 allows us to assess
+accuracies as a function of cost and coverage.
+
+Defining Pointing Requirements
+
+Unlike mapping, pointing depends only weakly on the spacecraft’s elevation angle.
+(See Fig. 5-23.) Thus, for missions which require only pointing, working in a region
+
+130 Space Mission Geometry
+
+near the horizon is almost as easy as pointing to a target or ground antenna at nadir. In
+this case the working limit on the spacecraft’s elevation angle depends on other
+factors, such as the transmission of the atmosphere for a selected wavelength or pos-
+sible obstruction by local geography. For example, ground stations ordinarily limit
+their elevation to approximately 5 deg above the horizon because of the reduced atmo-
+spheric transmission at lower elevation angles.
+
+Pointing requirements normally arise from the spacecraft’s housekeeping functions
+or from the need to point a particular instrument or antenna toward a ground target.
+Housekeeping requirements such as solar array pointing and orbit maneuvers ordi-
+narily demand pointing accuracies of 0.25 to 1 deg. Consequently, for most missions,
+the need to point the mission sensor or antenna is more important. Here again two
+cases exist. If we wish to point the sensor at a single target, then we will generally try
+to point the center of the sensor at the target. By doing so, we establish a pointing
+requirement to place the target within the field of view. Specifically, if the payload
+sensor’s field of view is four times the 30 pointing error, then the target will lie within
+the field of view with a 60 probability, or virtual certainty. For example, if the FireSat
+sensor has a | deg square field of view, an overall pointing requirement of 0.25 deg
+will assure that the target will be within the field of view.
+
+In pointing we may also want to eliminate overlapping coverage. For example, if
+we wish to take a series of pictures, we must overlap the pictures by more than the
+pointing error to ensure continuous coverage of the ground. This requirement, in turn,
+implies that the spacing between pictures must equal the field-of-view size less the
+pointing error. Thus, with a large pointing error, we must accept having fewer pictures
+at a given time and increased resource costs in terms of time, power, and data rate for
+a given level of coverage. It is common to have a pointing accuracy of 10% to 20% of
+the field-of-view diameter. Driving the pointing under 10% of the field-of-view diam-
+eter will only slightly improve overall coverage. On the other hand, a pointing error
+worse than 20% of the field-of-view size can require substantial overlap, thus greatly
+diminishing the overall system’s coverage and resource utilization.
+
+References
+
+Collins, Steve. 1992. ““Geocentric Nadir and Range from Horizon Sensor Observations
+of the Oblate Earth.” AIAA Paper No. 92-176 presented at the AAS/AISS Space-
+flight Mechanics Meeting. Colorado Springs, CO, Feb. 24—26.
+
+Green, R.M. 1985. Spherical Astronomy. Cambridge: Cambridge University Press.
+
+Liu, K. 1978. “Earth Oblateness Modeling,” in Spacecraft Attitude Determination and
+Control, ed. James R. Wertz. 98-106. Holland: D. Reidel Publishing Company.
+
+Roy, A-E. 1991. Orbital Motion (3rd Edition). New York: John Wiley and Sons.
+Smart, W.M. 1977. Textbook on Spherical Astronomy (6th Edition). Cambridge: Cam-
+bridge University Press.
+
+Wertz, James R. 1981. “Global Geometry Techniques for Mission Analysis,” in Proc.
+Int. Symp. Spacecraft Flight Dynamics, Darmstadt, FRG, May 18-22 (ESA SP-
+160, Aug. 1981).
+
+. 2001. Mission Geometry; Orbit and Constellation Design and Management.
+Torrance, CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer
+Academic Publishers.

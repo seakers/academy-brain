@@ -1,0 +1,2317 @@
+
+Chapter 20
+
+Cost Modeling
+
+Henry Apgar, MCR International, Inc.
+David Bearden, The Aerospace Corporation
+Robert Wong, TRW, Inc.
+
+20.1 Introduction to Cost Analysis
+Elements of Analysis, Cost Estimating Methods;
+Cost Model Development Process; Types of Dollars
+20.2 The Parametric Cost Estimation Process
+FireSat Cost Element
+20.3 Cost Estimating Relationships
+Space Segment Costs; Software Costs; Ground
+Segment and Operations Costs; Launch Costs
+20.4 Other Topics
+Cost Modeling Errors and Cost-Risk Analysis; Time
+Spreading of Costs; Rough Order-of-Magnitude Cost
+Estimates; Learning Curve
+20.5 FireSat Example
+
+Cost is an engineering parameter that varies with physical parameters,
+technology, and management methods. A system’s cost depends on its size, com-
+plexity, technological innovation, design life, schedule, and other characteristics. It’s
+also a function of risk tolerance, methods for reducing risk, management style, docu-
+mentation requirements, and project-management controls, as well as the size of the
+performing organizations. Analyzing and predicting program cost is becoming
+increasingly important, often critical, to determining whether a program proceeds. At
+the same time, sponsors, responding to budget reductions, and contractors, realizing
+that allowing technical performance alone to drive the design usually leads to a more
+expensive system, are systematically redefining the business of space, making it more
+difficult to accurately predict cost.
+
+These trends dictate a changing role for cost estimation. In traditional, perfor-
+mance-only driven programs, cost modeling was primarily used to validate contractor
+cost estimates or give funding organizations an independent estimate of probable cost.
+Cost estimation was, to some extent, a self-fulfilling prophecy. Often, a space system
+would actually cost as much or more than what the budget allowed. However, this role
+is giving way to the more complex tasks of design-to-cost and cost as an independent
+variable, where performance is maximized subject to cost constraints. This entails a
+more proactive and interactive role for the cost estimator with involvement from the
+
+783
+
+784 Cost Modeling 20.1
+
+beginning of the process so that we may identify cost-effective solutions that meet a
+program’s requirements. We can no longer just apply a general-purpose cost model to
+decide which programs to fund. Instead, we must develop a deeper understanding of
+cost-modeling methods, programmatic factors, and technological risks. As fiscal pres-
+sures continue to drive space budgets lower, cost estimates are being used at virtually
+all stages of space system procurement. Early in conceptual design, cost estimates help
+us assess whether development will succeed and identify key design decisions that will
+influence future costs. Project costs are monitored throughout the development cycle,
+and if they move much above budgeted amounts, we often must rescope or even cancel
+the program. Cost models must be flexible enough to evolve, from preliminary design
+to much later in the integration and test process, when we’ re deciding how to reallocate
+limited or diminishing resources.
+In this chapter, we will
+
+* Describe how to obtain cost estimates for space system elements
+
+* Provide cost-estimating relationships useful for advanced system planning
+* Describe how to assess the uncertainty (risk) in the cost estimates
+
+¢ Show how cost and design may be integrated.
+
+20.1 Introduction to Cost Analysis
+
+20.1.1 Elements of Analysis
+
+Figure 20-1 shows the relationships among key elements of cost analysis. The first
+step is to develop preliminary cost analysis requirements descriptions which identify
+the technical and operational parameters (cost drivers). These become “inputs” to cost
+models. We will develop just such a description in this chapter for FireSat. Each alter-
+native concept specifies the configuration, number of units, orbits, equipment lists,
+hardware and software, and operational staffing needed for costing the system. The
+next step in the process is definition of a Work Breakdown Structure (WBS), an orga-
+nizational table used to categorize and normalize costs. The WBS should cover all
+phases of the program. For example, the operations period follows Initial Operating
+Capability (IOC) and includes software maintenance costs and spare satellites.
+
+Ground rules and assumptions should be laid out at the outset. These assumptions
+establish the foundation for understanding the costs and comparing them with those of
+other programs. Example assumptions include:
+
+* Costs listed in constant-year dollars (fiscal funding information records costs
+in then-year dollars)
+
+¢ Inflation rate forecasts (see Sec. 20.1.4)
+
+¢ Exclusion of contractor fee and costs of the government project office
+¢ Inclusion of government-furnished equipment
+
+¢ Learning curve percentage (See Sec. 20.4.4)
+
+Once input parameters have been specified and assumptions delineated, cost
+models support the preparation of estimates for each design alternative. The models
+combine cost data and cost-estimating relationships as described in Sec. 20.3. The cost
+estimates are organized by each segment’s work breakdown structure, life-cycle
+phase, and schedule. Estimates prepared with cost models are not “end products”
+
+20.1 Introduction to Cost Analysis 785
+
+Input Parameters
+Physical / Functional Characteristics
+
+Mission Events
+iM
+
+Baseline Concept "A" ---- Concept "N"
+Assumptions Analysis
+Modules Cost / Schedule
+Risk Assessment
+(it Required)
+
+Schedule Risk
+Cost Risk
+
+* Integration
+
+Paramaete:
+& | Soac8 Sooment J probability
+=I Cost Will Be
+~pprerment Less Than
+
+Ground Rules and
+Assumptions
+
+¢ Base Year Dollars
+
+¢ Inflation Rates
+
+* Excludes Fees
+
+* Mission Life-Years
+
++ Protoflight/Prototype
+
+* Government-Furnished
+
+Equipment/ltems
+
+* Availability of Infrastructure
+
+* Technology Level
+
+* Learning Rate
+
+Annual Costs
+
+Operations
+and Support
+
+Cumulative Cost ($M)
+
+Stat 10C 10C +10
+Time (Years) a . ;
+Total Lite-Cycle Cost Activity Phase IOC = Initial Operating Capacity
+Outputs
+
+[Variable | | [Elastitties|
+
+__
+A B Cc
+System Concepts
+
+Fig. 20-1. Life-Cycle Cost Analysis Approach. This analysis approach is comprehensive and
+provides cost information necessary to properly evaluate system candidates.
+
+Sensitivity Analysis
+
+themselves but, rather, means to an end. That end, typically, is a recommendation for
+the most cost effective design or the most affordable approach that meets mission
+requirements. Cost and schedule risk analysis is performed to capture uncertainties
+inherent in the analysis process and include effects of unusual requirements and
+beyond state-of-the-art technology. We distribute costs over the operational period
+according to a schedule of events and milestones. This schedule may not be necessary
+for early quick-look cost assessments and trade studies, but it is desirable for funding
+profile planning. Cost model outputs include:
+
+* The major cost drivers—elements contributing most to total cost or mission
+requirements most affecting life-cycle costs
+
+* A cost comparison of alternative systems or subsystems for trade studies
+
+¢ The sensitivity of life-cycle costs to key assumptions and requirements
+
+786 Cost Modeling 20.1
+
+Figure 20-2 presents a more detailed WBS for a space mission which corresponds
+to the mission architecture elements of Chaps. 1 and 2, focusing on cost-related
+elements. It is very important because it helps us organize data, identify significant
+costs, and consistently compare one system to another.
+
+Production
+RDT&E
+Space
+
+Mission
+Architecture
+
+Ground
+Segment
+
+Launch
+Segment
+
+Program
+Level Costs
+
+Space
+Segment
+
+Operations and
+Maintenance
+
+* Management ¢ Launch Vehicle * Facilities * Personnel
+« SE&l * Launch Operations * Equipment Training
+* Software * Maintenance
+* Logistics * Spares
+* Management * Mission Operations
+Option B * SE&I « Command, Communications,
+and Control
+
+Option A
+Space
+System
+
+RDT&E = Research, Development, Test, and Evaluation
+O&M = Operations and Maintenance
+SE&l = Systems Engineering and Integration
+
+* Systems Level
+* Payload
+« Spacecraft Bus
+
+Fig. 20-2. Representative Work Breakdown Structure, WBS. The Work Breakdown Structure
+is an important tool for organizing cost information and ensuring consistency in com-
+paring alternatives.
+
+Life-Cycle Costs of a space mission architecture (i.e., the total mission cost from
+planning through end-of-life) are broken down into three main phases. The Research,
+Development, Test, and Evaluation (RDT&E) phase includes design, analysis, and test
+of breadboards, brassboards, prototypes and qualification units. Commonly referred to
+as the nonrecurring phase, RDT&E conventionally includes protoflight units and one-
+time ground station costs. This phase does not include technology development for
+system components. The Production phase incorporates the cost of producing flight
+units and launching them. A definition used to model costs is the Theoretical First
+Unit (TFU), which represents the first flight-qualified satellite off the line (for single-
+satellite missions the TFU is the flight article). For multiple units, production cost is
+estimated using a learning curve factor applied to the TFU cost as discussed in
+Sec. 20.4.4. Replacement satellites and launches after the space system final
+operating capability (FOC = full complement of on-orbit satellites) has been estab-
+lished are not considered as production units. The Operations and Maintenance
+(O&M) phase consists of ongoing operations and maintenance costs, including space-
+craft unit replacements and software maintenance. Although the space, launch, and
+ground segments are usually the most important elements, O&M can sometimes be the
+system’s most costly one (especially for constellations and reusable systems). For
+Most space programs the primary ongoing operations and support costs are ground
+station operations and satellite spares; for reusable systems such as the Shuttle, this
+category consists of the ground crew and operations to support them.
+
+20.1 Introduction to Cost Analysis 787
+
+20.1.2 Cost Estimating Methods
+
+The work breakdown structure and system concept provide guidance for determin-
+ing which cost methods apply. Three basic methods are used to develop cost estimates:
+
+1. In detailed bottom-up estimating we identify and specify at a low level elements
+that make up the system. We then estimate the cost of materials and labor to
+develop and produce each element. This method has the advantage of being
+explicitly tailored to a specific program and contractor, but its basis of validity is
+the credibility of the experts called upon to estimate inputs, such as hours, labor
+rates, material costs, and indirect costs. Because this method is time consuming
+and because detailed design data is usually not available, this method is least
+appropriate for preliminary system studies. Bottom-up estimates are most
+commonly used during the production phase of a program, after design details
+are well known and a majority of technical uncertainties have been resolved
+during development.
+
+2. In analogy-based estimating we use the cost of a similar item and adjust it for
+differences in size or complexity. We can apply this method at any level of
+detail in the system, but it is lower fidelity than a bottom-up estimate. This
+method also presumes that a sufficiently similar item exists and that we have
+detailed cost and technical data on which to base our estimate.
+
+3. In parametric estimating we use a series of mathematical relationships that
+relate cost to physical, technical, and performance parameters that are known
+to strongly influence costs. An equation called the Cost Estimating Relation-
+ship, or CER, expresses the cost as a function of parameters. Cost drivers and
+function forms are selected based on a combination of engineering judgment
+and the statistical quality of the regression results. We may also apply complex-
+ity factors to the parameters to account for technology changes.
+
+All three methods have advantages and disadvantages, depending on scope of the
+estimating effort and the amount of design and performance information (e.g. relevant
+historical data for analogy) available to estimators. Until recently, parametric models
+were avoided as the primary tool for developing a proposal bid and used only as back-
+up to validate another estimate. That situation is beginning to change, mainly due to
+the progress of the Parametrics Estimating Initiative led by several cost-estimating
+professional societies and endorsed by the DoD.*
+
+The primary advantage of parametric models lies in their top-down approach.
+System requirements and top-level design specifications are all that are required to
+complete a cost estimate with a parametric model. Detailed hardware designs and
+development schedules do not have to be drafted to estimate costs of candidate system
+architectures. Incorporation of CERs within a system design/cost-engineering tool
+allows concept evaluation and technology studies to be conducted. Parametric cost
+models are therefore well suited for use in cost/performance trade studies that estimate
+how cost varies as a function of system requirements, in developmental planning and
+architecture studies, and in specific program assessments of cost vs. capability and
+
+* Due to recent downsizing of estimating staffs in government and industry and general matur-
+ing of the parametric estimating process, the DoD has publicly advocated application of
+parametric estimating models as the preferred method of proposal estimating. See the DoD
+[1998] for guidance and examples.
+
+788 ; Cost Modeling 20.1
+
+individual parameter sensitivity. Since parameteric cost models are the most appropri-
+ate for trade studies, they are the focus of the remainder of this chapter.
+
+Use of a parametric model implies several assumptions. First, because parametric
+models characterize historical cost trends as mathematical relationships, it is assumed
+that future costs will reflect these historical trends to some degree. Parametric models
+are applicable only to the range of historical data. In cases when major technology
+advancements are expected, or when fundamental paradigms in system architecture
+are shifted, parametric cost models based on old systems may very well not apply. One
+example of this problem is encountered when large-satellite-based cost models are
+used to estimate costs of today’s smallsats. Such a paradigm shift, and perhaps a tech-
+nology shift, requires a specialized model. Lacking new technology factors, CERs
+must be adjusted when applied to systems using beyond state-of-the-art technology.
+We derive the CERs from historical data, so their technologies may not reflect the
+advances usually considered in futuristic studies.
+
+A second implicit assumption made when using parametric cost models is that
+program costs are random variables that cannot be predicted with 100% accuracy.
+Many more parameters influence costs than can be incorporated into a set of CERs,
+such as skill level of contractor engineers and technicians, occurrence of unforeseen
+technical problems, business base of all contractors involved, requirements changes,
+and test failures. Parametric cost models use a combination of parameters that explain
+historical cost trends while maintaining statistical integrity. Influence of all other vari-
+ables manifests itself in estimating error, which is often quantified by using underlying
+data to calculate the standard error, SE.
+
+There are three general sources for parametric cost estimating models:
+
+¢ Publicly available special purpose models, such as the Unmanned Space
+Vehicle Cost Model (USCM), the Small Satellite Cost Model (SSCM), and the
+Communications Payload and Spaceborne Electronics Cost Model (CPCM).
+Such models are typically developed by the Federal Government and are
+usually available to the general public*. See the references at the end of this
+chapter for source information.
+
+* Publicly available general purpose models, offered privately by commercial
+organizations such as PRICE Systems and SEER Systems. These general
+purpose models typically must be calibrated to the user’s specific products and
+processes before they can be used for estimating space hardware and software
+components.
+
+¢ Private specific purpose models, usually developed by a single organization
+from proprietary information, to estimate company-specific systems and com-
+ponents only.
+
+In Sec. 20.3 we present CERs for computing the cost of space systems based on
+publicly available models. If these models do not apply to a specific concept, we may
+need to derive new relationships. The following section summarizes this process.
+Fisher [1970] provides a comprehensive discussion.
+
+* Although we refer primarily to government programs and data, the models may be applied to
+commercial programs. The recommended cost models are appropriate for both large and small
+missions. (See Sec. 20.3.)
+
+20.1 Introduction to Cost Analysis 789
+
+20.1.3. Cost Model Development
+
+Figure 20-3 shows the procedure for developing a CER that represents how the cost
+properties of a system or subsystem vary with characteristic parameters. The first
+ingredient in defining a set of CERs is a historical database. Extensive research and
+data collection based on actual cost and technical data is needed. It’s important to find
+out as much as possible about the origin of the data and the reference for measuring
+the characteristic physical parameters. We must also separate the cost elements into
+comparable physical subsystems or components, which become the costing elements
+we use to establish the entire system cost. Programs either already completed or await-
+ing launch within a year should be targeted as opposed to programs that are still in
+early stages of development. Most costs in the database should be actual program costs
+at completion. In cases where satellites are nearly complete but have not yet been
+launched, contractor estimates-at-completion costs may be used.
+
+Subsystem B Cc een n Subsystem B
+Subsystem A Subsystem A
+Cost/parametric Data ; a
+Regression -
+Analysis Weight — kg
+Constant Year Costs Key Statistics
+Preferred Form * Coefficient of Determination, R?
+$= Aw? * Standard Error, SE
+Develop ——pe- Perform Regression —pe- CER and Statistics
+
+Database Analysis
+
+Fig. 20-3. Deriving CERs from Actuals. The key to a credible CER is an accurate database of
+relevant historical information from actual programs.
+
+It is also important to normalize the historical data so it is consistent—correctly
+categorized between nonrecurring and recurring costs and in the same constant-year
+dollars. Then, we would compensate for economic differences in production quanti-
+ties. The design or performance parameters to which costs will be related must be in
+the same units. These include programmatic, weight-based, and performance parame-
+ters for the satellite in general and each of the major subsystems. We typically exclude
+the prime contractor’ s fee but include all other direct, indirect, and general and admin-
+istrative costs. Award fees and incentives are usually not included, nor are government
+costs (i.e., costs associated with the government procurement agency if one exists).*
+
+After cost data are properly categorized and normalized, the task of CER develop-
+ment begins. To allow credible subsystem-level cost analysis of potential missions
+without requiring a detailed design we need to relate cost to technical characteristics.
+Other factors, named wraps, model nonphysical factors not included in the CER, such
+as system engineering, management, and product assurance, as well as the cost of in-
+tegrating and testing the space system. Wraps typically account for about 30% of the
+development cost for space systems. Choosing cost drivers involves a combination of
+
+* A fee should be added if we want to determine the purchase price. This fee is normally a
+negotiated value, but 10% is typical for a cost analysis. In addition, be aware of the need to
+include subcontractor fees according to the planned contractor tier arrangements.
+
+790 Cost Modeling 20.1
+
+statistics, engineering judgment, and often, common sense. We would hypothesize a
+relationship between costs and the explanatory parameters. For conceptual stud-
+ies—the primary focus of this book—we would limit the parameters to one or two per
+subsystem.
+
+For space systems, cost drivers would be primarily weight, power, and performance
+requirements, the parameters most likely to be available during an advanced system
+study. For example, in the derivation of the CER for the electrical power subsystem,
+we might consider the following: mass, beginning-of-life power, solar array area, on-
+orbit average power, design life, battery capacity, solar cell type, battery type, and
+payload power. As another example, if the attitude control subsystem is of interest, we
+would examine parameters such as pointing accuracy, knowledge, and required slew
+rate. We prefer to use a power law for relationships (see Fig. 20-3) because it allows
+for expected nonlinearities, and can be easily accommodated by standard regression
+packages. Also, since weight is often a key parameter for cost-estimating relation-
+ships, the power function with an exponent of less than one models the expected
+diminishing effects of increasing weight on costs. This highlights a danger not to
+forget: that all CERs are simplifications of the relationship they are emulating.
+Weight-driven CERs, for example, imply that lighter structures cost less. In fact, the
+opposite may be true. We need to recognize that when designers deliberately reduce
+weight, they may increase complexity, trade away ease of manufacturing an integra-
+tion, or use inherently more expensive materials.
+
+When deriving CERs we take note of statistical outliers and follow up to ascertain
+whether or not apparent discrepancies are attributable to numerical errors or nontradi-
+tional ways of accounting for certain costs. We evaluate the “goodness” of the
+relationship by evaluating the costs against their corresponding parameters using
+regression software. For further information on statistics and regression techniques,
+see, for example, Book and Young [1995]. The regression results in an equation be-
+tween cost and the parameter or parameters, as well as statistics that indicate how well
+the relationship fits the data. Measures of the goodness of fit include the coefficient of
+determination, R2, and the standard error, SE. R2, is dimensionless between 0 and 1.
+SE is in units of cost or a percentage of the estimated cost depending on whether an
+additive or multiplicative error regression approach is used. A strong correlation is
+represented by R2 near | and SE near 0. SE is important in evaluating the uncertainty
+in estimates as discussed in Sec. 20.4.
+
+For additional information on space cost model development and space costing,
+see, for example, Apgar [1990], DISA [1997], Greenberg and Hertzfeld [1994], and
+Hamaker [1989]. For a discussion of cost modeling for low-cost missions see Wertz
+and Larson [1996] and Sarsfield [1998].
+
+20.1.4 Types of Dollars
+
+For consistency in referring to costs and to avoid confusion in the review of cost
+analysis results, constant-year dollars should be used. For examples in this chapter,
+Fiscal Year 2000 dollars (FY00$) are assumed. This simplifies the computations and
+interpretation of results, especially in making comparisons of alternatives. If project
+funding by year is required, then the costs should be spread first by year in constant
+dollars and converted to real or then-year dollars by multiplying each year’s funding
+by an appropriate inflation factor. Table 20-1 provides a table of inflation factors for
+1980-2020 relative to FY2000 as provided by the Office of the Secretary of Defense.
+
+20.2 The Parametric Cost Estimation Process 791
+
+TABLE 20-1. Inflation Factors Relative to the Year 2000 Based on Projections by the
+Office of the Secretary of Defense (January 1998). See text for discussion.
+
+(FY) to Base Year 2000 (FY) to Base Year 2000
+1991 0.837 2012
+
+2014 1.336
+2015
+2016
+2017
+2018
+2019
+2020
+
+To convert costs from any year to fiscal year 2000 dollars (FY00$), divide by the
+inflation factor in the table. To convert from FY00$ to other year dollars multiply by
+the factor for that year. For conversion to years other than 2000, we calculate a new
+inflation factor as the ratio of the factors for the years of interest.
+
+20.2 The Parametric Cost Estimation Process
+
+Table 20-2 summarizes the procedure to compute parametric cost estimates using
+the cost models of this chapter. The information needed about the system design is
+shown in Table 20-3 along with values developed previously for the FireSat example.
+The steps shown follow the general process of Fig. 20-1. The procedure begins with
+developing the WBS and collecting the relevant space system characteristics. The next
+four steps develop the primary elements of life-cycle costs, computing the costs for the
+space, launch and ground segments, followed by the operations and costs. The CERs
+for estimating each cost item are given in Sec. 20.3. CERs are provided at the sub-
+system level for RDT&E and TFU costs. They have been adjusted to estimate fiscal
+year 2000 (FY00) costs. The TFU is the basis for computing the cost of multiple units
+in production as described in Sec. 20.4.4. Factors for program level costs and heritage
+are shown in Tables 20-7 and 20-8.
+
+792 Cost Modeling 20.2
+
+TABLE 20-2. Parametric Cost Estimation Process. This process provides an estimate of the
+total life-cycle cost.
+
+Reference
+Fig. 20-2
+
+Step
+
+1. Develop Work Breakdown Structure
+— Identify all cost elements
+
+2. List Space System Characteristics Table 20-3
+~ Identify advanced technology parameters Table 20-8
+3. Compute Space Segment Cost
+— RDT&E cost Tables 20-4, 20-6, 20-9
+— Software cost Table 20-10
+— Theoretical first unit cost Tables 20-5, 20-6, 20-9
+— Subsequent unit costs Sec. 20.4
+
+4. Compute Launch Segment Cost Table 20-14
+
+5. Compute Ground Segment Cost
+— First ground station Table 20-11
+— Software cost Table 20-10
+— Additional ground stations Table 20-11
+— Earth terminals Table 20-13
+
+6. Compute Operations and Maintenance Cost
+
+— Space segment spares Sec. 20.5
+— Launch costs for spares Table 20-14
+— Ground system operations and support Table 20-12
+
+7. LIFE-CYCLE COST Sum of items 3-6 above
+
+20.2.1 FireSat Cost Element Definitions
+We include these items in each of the subsystems to be estimated:
+
+¢ Payload: this includes communication systems and sensors (visible and IR).
+Some assumptions were made regarding electronic weights as these parame-
+ters were not available from the conceptual design.
+
+* Spacecraft Bus: this is the spacecraft less the payload. Primary cost driver is
+mass.
+
+¢ Structure: spacecraft structure items including enclosures, deployable compo-
+nents, supporting structure and launch vehicle interface. The spacecraft
+structure carries and protects the spacecraft and payload equipment through
+launch and deployment. Mass is the key metric that determines cost.
+
+¢ Thermal: structure and devices for the purpose of maintaining all elements of
+a satellite system within required temperature limits. Thermal control systems
+may be classified as passive or active. An example of a passive system is
+paints, coatings and blankets, and a space radiator coupled to heat sources by
+conductive paths such as base plates. Active thermal-control subsystems
+include pumped-loop systems, heaters controlled by thermostats, mechanical
+devices (e.g. louvers) and refrigerators. In general, passive systems cost less
+than active systems.
+
+¢ Electrical Power Subsystem (EPS): solar arrays, batteries, harness, and power
+management electronics. EPS mass, used in the cost model, is largely
+influenced by space radiation, which degrades performance of solar cells over
+time (FireSat has a 5-year design life). Choices for off-the-shelf solar-array
+cells include silicon or gallium arsenide. Battery choices include NiCd and
+NiHb».
+
+20.2 The Parametric Cost Estimation Process 793
+
+TABLE 20-3. Space Mission Characteristics Required for Parametric Cost Modeling.
+
+FireSat Example
+
+Characteristic Reference
+
+1. Constellation
+Secs. 7.1, 7.6
+Secs. 3.3, 7.4
+
+No. of spacecraft in constellation
+Orbit altitude
+. External Communications Resources
+TDRS
+DomSat
+. Space Segment
+
+Secs. 13.1, 13.2
+Secs. 13.1, 13.2
+
+Payload
+Type
+Weight (Communications)
+Aperture (IR, Visible)
+Spacecraft bus
+
+Sec. 9.1
+Sec. 13.4
+Sec. 9.3
+
+IR
+N/A
+0.26m
+
+Dry weight by subsystem Secs. 10.2, 10.3 Table 10-30
+Volume Sec. 10.5.1 1.7m9
+Pointing accuracy Sec. 11.1 0.1 deg
+Pointing knowledge Sec. 11.1 < 0.1 deg
+Stabilization type Sec. 10.4.2 3-axis
+Flight software lines of code Sec. 16.2 26K
+Average power Sec. 10.6 110 W
+BOL power Sec. 10.6 NA
+EOL Power Sec. 10.4.2 NA
+Solar array area Sec. 10.6 8.5 m2
+Battery capacity Sec. 11.4.2 17.5 A-hr
+Data storage capacity Sec. 11.3
+
+Number of thrusters Sec. 11.1.4 4
+
+Space segment design life Sec. 10.4 5 yrs.
+
+. Launch Segment
+
+Launch vehicle Secs. 18.1, 18.2
+Secs. 18.1, 18.2
+Secs. 18.1, 18.2
+
+Secs. 18.1, 18.2
+
+Pegasus
+
+None
+N/A
+1
+
+Upper stage
+
+Launch site
+
+No. of spacecraft per launch
+
+5. Ground Segment
+
+No. of fixed and mobile sites Secs. 13.1, 15.6
+Sec. 16.3
+Sec. 16.3
+Sec. 15.2
+
+Sec. 13.3.5
+
+Software language
+
+Lines of code
+
+New or existing equipment and facilities
+
+Communications operating frequency
+
+. Mission Operations and Support
+Mission duration from |OC* Sec. 1.4
+No. of personnel Sec. 14.3
+No. of spare spacecraft Sec. 19.1
+No. of Shuttle support flights Sec. 19.1
+
+*{OC = Initial Operating Capability = time of launch of first satellite to provide operational data.
+
+794
+
+Cost Modeling 20.2
+
+Tracking, Telemetry, and Command and Data Handling (TT&C/DH): com-
+mand/telemetry electronics, onboard computers, transponders, transmitters,
+receivers, data storage, antennas, and associated avionics. Primary cost drivers
+of the TT&C/DH subsystem are subsystem mass, frequency of the uplink and
+downlink, and data rate. In some cases, this is further divided into TT&C (the
+communications system) and C&DH (the spacecraft computer plus other data
+storage and handling equipment).
+
+Attitude Determination and Control Subsystem (ADCS): stabilizes and orients
+FireSat during its mission using sensors and actuators. ADCS is tightly
+coupled to other subsystems, especially the propulsion subsystem. The prima-
+ry drivers are requirements for pointing knowledge, control stability, and
+maneuvering (such as slewing or payload repointing). The FireSat mission
+requires a 3-axis control system to point in a specific direction to within 0.25
+deg; knowledge of spacecraft attitude is 0.10 deg.
+
+Propulsion: Provides thrust for attitude control and orbit correction. FireSat
+uses a liquid system for on-orbit attitude correction and maneuvering (Table
+7-3). The relevant cost drivers are the propulsion subsystem bus dry mass of
+8.4 kg (Table 10-31) and the spacecraft dry mass of 112 kg (Sec. 10.6). If orbit
+insertion requires an apogee kick motor, additional costs should be assessed.
+
+Integration, Assembly, and Test (IA&T): labor and material costs (primarily
+testing) for integrating spacecraft and payload subsystems into an operational
+space vehicle. Does not include costs for integrating components into a
+subsystem (these costs are included in the subsystem CERs) or for integrating
+the space vehicle with the launch vehicle. The total cost of [A&T for a satellite
+includes research/requirements specification, design and scheduling analysis
+of IA&T procedures, systems test and evaluation, and test data analysis.
+
+Program Level: contractor costs for systems engineering, program manage-
+ment, reliability, planning, requirements flowdown, quality assurance, project
+control, data preparation, and other costs which cannot be assigned to individ-
+ual hardware or software components. Program management includes efforts
+associated with planning and directing prime and subcontractor efforts and
+interactions. System engineering includes activities required to ensure that all
+satellite subsystems and payloads function properly to achieve system goals
+and requirements. Data and report generation is a program-level function that
+includes efforts required to produce internal and deliverable documentation.
+
+Ground Support Equipment (GSE): test and support equipment needed for
+assembly, development and acceptance testing and integration of satellite
+subsystems and satellite to the launch vehicle. This equipment is required to
+support the satellite and provide physical, electrical, and data interfaces with
+the satellite during IA&T. It is therefore classified as a nonrecurring cost.
+
+Launch and Orbital Operations Support (LOOS): planning and operations
+related to launch and orbital checkout of the space system. These costs are
+those costs typically incurred by the spacecraft prime contractor involving
+prelaunch planning, trajectory analysis, launch site support, launch-vehicle
+integration (spacecraft portion), and initial on-orbit operations before owner-
+ship of the satellite is turned over to the operational user (typically 30 days).
+They are generally categorized as recurring costs.
+
+20.3 Cost Estimating Relationships 795
+
+20.3 Cost Estimating Relationships
+
+This section presents the specific CERs recommended for preliminary mission
+analysis and design.
+
+20.3.1 Space Segment Costs
+
+The CERs of Tables 20-4, 20-5, and 20-6 may be used to estimate costs in thou-
+sands of fiscal year 2000 constant dollars as a function of the specified parameters.
+(See Sec. 20.1.4 for conversion to other years.) These CERs are derived from historical
+data and, therefore, their validity is limited to a range of parameter values. The tables
+present the range of application; to preserve their validity, the equations should not be
+used further than 25% beyond the parameter ranges given. The CERs were derived
+using different satellite data, statistical frameworks, and error models as noted. Some
+CERs provide total subsystem cost while others estimate RDT&E and TFU separately.
+Differences between the RDT&E and TFU CER ranges are due to availability of data.
+For some subsystems, an alternate CER is presented to accommodate a different cost
+driver. Generally, TFU CERs show higher variability.
+
+TABLE 20-4. CERs for Estimating Subsystem RDT&E Cost (FY00$K). Applicable range for
+a good estimate is 25% above and below this data range. CER represents contrac-
+
+tor cost without fee.
+RDT&E CER* SE
+(FY00$K) (%)
+
+nee
+356,851 X0.562
+
+Cost
+Component
+
+Parameter,
+X (Unit)
+
+Input Data
+Range
+
+1. Payload
+
+1.2 Visible Light Sensor aperture dia. (m)
+spacecraft dry wt. (kg) 235-1,153 | 33 |
+2.1 Structure structure wt. (kg) | 54-392 157 X0-83 | 38 |
+2.2 Thermal X, = thermal wt. (kg) 3-48 394 X,0-635 45
+Xo = spacecraft wt. + 210-404 1.1 X,0:610 X,0.943
+payload wt. (kg)
+2.3 Electrical Power System X= EPS wt. (kg) 62.7 X, 57
+
+(EPS) X> = BOL power (W) 100-2,400 | 2.63 (Xj Xp)0.712
+2.4 Telemetry, Tracking & TT&C/DH wt. (kg) 12-65 545 x0.761
+Command (TT&C)/DHF
+2.5 Attitude Determination & ADCS wt. (kg) 20-160 464 Xx 0.867
+Control Sys. (ADCS)
+2.6 Apogee Kick Motor (AKM) AKM 81-966 17.8 X0.75
+wt. (kg)
+3. Integration, Assembly & Test | spacecraft bus + payload 2,703 — 989 + 0.215 X
+(1A&T) total RDT&E cost (FYO0$K)| 395,529
+
+4. Program Level spacecraft bus + payload 4,607 —
+
+total RDT&E cost (FYOO$K)| 523,757
+
+spacecraft bus + payload 24,465 —
+total RDT&E cost (FYOO$K) 581,637
+
+N/A
+
+1.963 X0.841
+
+5. Ground Support Equipment
+(GSE)
+
+6. Launch & Orbital Operations
+Support (LOOS)
+
+9.262 X0.642
+
+* Taken from USCM, 7th edition (1994) using minimum, unbiased percentage error CERs.
+t Absolute error (in FYOO$K), not percentage error.
+} Includes spacecraft computer. If separate CERs for TT&C and C&DH are desired, use a 0.45/0.55 split.
+
+796 Cost Modeling 20.3
+
+TABLE 20-5. CERs for Estimating Subsystem Theoretical First Unit (TFU) Cost.
+
+Cost Parameter, Input Data TFU CER’ SE
+Component X (Unit) Range (FYQ0$K) (%)
+1. Payload
+1.1 IR Sensor
+
+1.2 Visible Light Sensor
+
+1.3 Communications
+
+L
+
+2. Spacecraft
+
+aperture dia. (m) 142,742 x0.562 21,424t
+aperture dia. (m) 51,469 X0.562 7,734¢
+comm. subsystem 65-395 140 X 43
+wt. (kg)
+spacecraft dry wt. (kg) 154~—1,389 43X 36
+
+structure wt. (kg) 54-560 13.1X 39
+
+thermal wt. (kg) ser | 50.6 X0.707 + 61
+
+EPS wt. (kg) 31-573 112 X0.763 44
+| ___t —_{
+
+TT&C/DH wt. (kg) 13-79 635 X 0.568 a
+
+2.1 Structure
+
+2.2 Thermal
+
+2.3 Electrical Power System
+(EPS)
+
+2.4 Telemetry, Tracking &
+Command (TT&C)/DHt
+
+2.5 Attitude Determination &
+Control Sys. (ADCS)
+
+2.6 Apogee Kick Motor (AKM)
+
+ADCS wt. (kg) 20-192 293 X0.777 34
+
+81-966
+
+AKM wt. (kg)
+
+4.97 X0.823
+
+spacecraft bus wt. 10.4 X
+
+payload wt. (kg)
+
+3. Integration, Assembly & Test 155-1,390
+
+((A&T)
+
+4. Program Level spacecraft + payload total 15,929 — 0.341 X 39
+recurring cost (FYOO$K) 1,148,084
+5. Ground Support Equipment N/A 1
+(GSE)
+6. Launch & Orbital Operations | spacecraft bus + payload 348-1 ,537 42 |
+
+Support (LOOS) wt. (kg)
+
+* Taken from USCM, 7th edition (1994) using minimum, unbiased percentage error CERs.
+t+ Absolute error (FYOO$K), not percentage error.
+t Includes spacecraft computer. If separate CERs for TT&C and C&DH are desired, use a 0.45/0.55 split.
+
+The CERs for the payload and spacecraft bus subsystems are primarily based on
+parameters available during the concept and mission design phase. The models cover
+both the subsystem and system levels with the user choosing the appropriate level. The
+models used here are publicly-available, special-purpose models, developed by the
+U.S. Air Force and NASA. These CERs were obtained from the Unmanned Space
+Vehicle Cost Model, Seventh Edition [SMC, 1994], the Communications Payload and
+Spaceborne Electronics Cost Model [MCR Federal, 1997], and a derivative of the
+Small Satellite Cost Model [Bearden et al., 1996]. Other models that could be used in
+lieu of those given in the tables are given by Burgess, Lao, and Bearden [1995], and
+Management Consulting and Research, Inc. [1986].
+
+The primary categories of costs are hardware, software and program level (or wrap-
+arounds) used to indicate that the estimates for these functions are based upon percent-
+ages of hardware cost. Wraps are costs associated with labor-intensive activities where
+a level of manpower is allocated over some period of performance. The functions in
+this category are management, systems engineering, product assurance, and system
+tests. The CERs of Tables 20-4, 20-5, and 20-6 provide the overall program level costs
+and Table 20-7 provides an allocation of program level costs to the wrap components.
+
+20.3 Cost Estimating Relationships 797
+
+TABLE 20-6. Cost-Estimating Relationships for Earth-orbiting Small Satellites Including
+RDT&E and Theoretical First Unit. Total subsystem cost in FYOO$M as a func-
+tion of the independent variable, X.
+
+Parameter, Input Data
+X (Unit) Range
+Spacecraft Total Cost | 1,922-50,651
+(FYO0$K)
+Satellite bus dry wt. (kg) 20-400 781 + 26.1 X1.261
+Structures wt. (kg) 5-100 299 + 14.2 X In(X)
+Thermal control wt. (kg) 5-12 246 + 4.2 X2
+Average power (W) 5-410 —183 + 181 X0.22
+Solar array area (m?) 0. -210,631 + 1,647
+213,527X0.0066
+
+.o-11
+Battery capacity (A-hr) 5-32 375 + 494 X0.754 1,554
+
+BOL Power (W) 20-480 5,850 + 4,629 1,585
+X0.15
+
+131 + 401 X0.452 1,603
+
+357 + 40.6 X1.35 629
+
+Cost
+Component
+
+SE
+(FYOO$K)
+
+Subsystem Cost
+CER’ (FYOO$K)
+
+1. Payload
+
+2. Spacecraft
+
+2.1 Structuret
+2.2 Thermalt
+
+2.3 Electrical Power
+System (EPS)
+
+EOL Power (W)
+
+TT&C/DH wt. (kg)
+
+Downlink data rate
+(Kbps)
+
+TT&C + DH wt. (kg)
+
+2.4a Telemetry Tracking
+& Command (TT&C)”
+
+3,636 — 3,057
+X-0.23
+
+484 + 55 X1.35
+
+Data Storage Capacity 0.02-100 —27,235 + 1,606
+(MB) 29,388X0.0079
+2.5 Attitude Determination | ADCS dry wt. (kg) 1-25 1,358 + 8.58 X2 1,113
+& Control Sys. (ADCS)
+0.25-12
+
+Pointing accuracy (deg) 341 + 2651 X-05 1,505
+0.1-3 2,643 — 1,364 In(X)
+(deg)
+Satellite Bus dry wt. (kg) 20-400 65.6 + 2.19 X1.261
+Satellite volume (m3) 1539 + 434 In(X) | 308
+3. Integration, Assembly Spacecraft total cost 0.139 X 0.139 xSEpus
+& Test (IA&T) (FY00$k) 50,65144
+
+4. Program Level Spacecraft total cost 1,922 - 0.229 X
+
+(FY00$K) 50,6514+
+5. Ground Support
+
+Spacecraft total cost 1,922 — 0.066 X
+Equipment (GSE) (FYO0$K) 50,6514+
+6. Launch & Orbital Spacecraft total cost 1,922 - 0.061 X 0.061 xSEnus
+(FYOO$K) 50,6514+
+
+Operations Support
+(LOOS)
+
+* CERs based on the Smal! Satellite Cost Model [Bearden, Boudreault, and Wertz, 1996], adjusted for
+inflation as shown in Table 20-1, and broken into subsystem cost using the percentages from Table 20-9.
+
+tT Aluminum materials primarily with selected use of advanced materials (e.g. composites, magnesium).
+
++ Thermal CER appropriate for passive systems only.
+
+** CER applies to UHF/VHF and S-band LEO systems
+
+tt Hydrazine monopropellant and cold-gas stationkeeping systems only. CER not appropriate for bipropellant
+or dual-mode systems. Costs of AKM are not included. °
+
+$4 Input data range for items 3-6 calculated using min and max values of input data range for spacecraft bus
+cost CER in item 2.
+
+1,246
+
+2.4b Command & Data
+Handling (C&DH)
+
+3-30
+
+2.6 Propulsiontt
+
+0.229 xSEpy
+
+0.066xSEp,,5
+
+
+798 Cost Modeling 20.3
+
+TABLE 20-7, Allocation of Program-Level Cost. We allocate the program level or wrap costs
+in Tables 20-4, 20-5, and 20-6 to their components as shown.
+
+Theoretical
+RDT&E First Unit
+
+Program Level
+Component
+
+Program Management
+
+Systems Engineering
+Product Assurance
+System Evaluation
+
+TABLE 20-8. Heritage Cost Factors. We apply these factors to the CERs and their standard
+errors from Tables 20-4, 20-5, and 20-6 as described in the text. Data from
+
+Hamaker [1987].
+(Apply to ROT&E Costs Only)
+New design with advanced development >14
+Nominal new design—some heritage 1.0
+Major modification to existing design 0.7 —0.9
+Moderate modifications 0.4 -0.6
+
+Basically existing design 0.1 -0.3
+
+Recurring and Nonrecurring Factors
+
+Nonrecurring costs include all efforts associated with design, drafting, engineering
+unit IA&T, ground support equipment, and a portion of program management and sys-
+tem engineering costs. This includes all costs associated with design verification and
+interface requirements (e.g. drawings, schematics, mockups, boilerplates, breadboards
+and brassboards). Recurring costs cover all efforts associated with flight hardware
+manufacture, IA&T, and a portion of program management and system engineering
+costs. The CERs in Tables 20-4 and 20-5 are already separated between RDT&E (non-
+recurring) and TFU (recurring) costs. Since the CERs in Table 20-6 provide estimates
+of total subsystem cost, factors for the split between RDT&E and TFU are needed. To
+meet this need, we present a list of recurring and nonrecurring factors in Table 20-9.
+These factors can be applied to estimated total subsystem costs from CERs to obtain
+estimates of the recurring and nonrecurring portions. Total production costs for all
+flight units are computed by multiplying the TFU cost by the learning curve factor L
+described in Sec. 20.4.4.
+
+Prototype vs. Protoflight Approach
+
+A protoflight approach is one in which the qualification test unit is refurbished for
+flight. The CERs in Table 20-4 assume a prototype approach, i.e., include the cost of
+one qualification unit. The small-satellite CERs in Table 20-6 assume a protoflight
+approach. The protoflight approach saves on costs since no “dead end” hardware will
+result. For refurbishment of the qualification unit to become the protoflight unit, 30%
+of the TFU should be added to the RDT&E cost. The RDT&E estimate will then
+include the first flight article.
+
+Heritage Factors
+
+Table 20-8 presents factors for development heritage. These are multiplicative fac-
+tors to be applied to the RDT&E CER for design maturity of a given subsystem. The
+difficulty in incorporating heritage information in cost estimation has been, and con-
+tinues to be, the quantification of heritage; part of this problem stems from a lack of a
+
+20.3 Cost Estimating Relationships 799
+
+TABLE 20-9. Breakdown of Small Satellite Costs. These factors can be applied to overall
+smail spacecraft costs to estimate the cost of constituent subsystems and the
+RDT&E vs. TFU costs. In the first column, 100%;Total spacecraft hardware cost,
+excluding payload and wraps. Data on cost breakdown by subsystem courtesy
+Microcosm; derived from Wertz and Larson [1996] and Sarsfield [1998]. Compa-
+rable factors can be found in Bearden [1999] and Sadin and Davis [1993]. Recur-
+ring vs. Nonrecurring estimates are from Bearden, Burgess, and Lao [1995]. The
+final row represents the total system cost exclusive of launch cost and operations.
+
+Fraction of Non-Recurring Recurring
+Spacecraft Bus Percentage Percentage
+Subsystem/Activity Cost (%) (%) (%)
+
+1.0 Payload 60%
+Bus Total
+
+2.1 Structure
+2.2 Thermal
+23.3%
+
+Wraps
+
+4.0 Program Level 22.9% : 50%
+5.0 GSE 0%
+6.0 LOOS ; 100%
+
+Total 189.5% 92.0% 97.5%
+
+* Propulsion costs may be excluded if, as is the case with many small satellites, the spacecraft doesn’t have a
+propulsion system.
+
+standard definition for heritage. We define heritage as the percentage of a subsystem
+that is identical to one or more previous spacecraft, by mass. This has the appeal of
+being a measurable quantity, but has some obvious drawbacks. For instance, while
+mass may be a reasonable measure of design heritage for structures, it may not be
+appropriate for the TT&C subsystem. With this in mind, heritage is a value, from 0%
+(no heritage) to 100% (all heritage), which varies by subsystem and is best evaluated
+by subsystem design experts. For example, if the subsystem represents an existing
+design with 70% heritage, the developments costs will primarily be engineering inter-
+face and drawing modifications so that only 30% of the RDT&E cost is needed.
+
+Commercial Missions
+
+The CERs presented here were derived primarily from government procurements.
+We should apply a RDT&E factor of 0.8 when the CERs are used to estimate commer-
+cial satellite costs. This is an average factor based upon comparison of commercial
+communication satellites with government-procured communication satellites. Smith,
+Stucker and Simmons [1985] have performed a comprehensive study that indicates a
+19% cost growth for military satellite contracts compared to 2% for commercial. The
+rationale for the difference is the higher level of uncertainty in mission requirements
+as more changes typically occur on the military programs. However, their findings
+indicate little difference in unit recurring costs.
+
+800 Cost Modeling 20.3
+
+20.3.2 Software Costs
+
+Table 20-10 presents software costing relationships for flight and ground software.
+It also provides factors for various programming languages. Section 16.3.3 discusses
+software development costs further. Flight software is assumed to cost more (per
+KLOC) because there is more testing required to meet mission criticality. If software
+reuse is employed, the heritage factors in Table 20-8 apply.
+
+TABLE 20-10. Software Development Costs. RDT&E costs only (in FYOO$K). See
+Sec. 16.2.2 for estimates of the lines of code.
+
+Flight Software 435 X KLOC
+Ground Software 220 X KLOC
+
+| KLoc = Thousand of Lines of Code; cost without fee
+
+FACTORS FOR OTHER LANGUAGES
+
+Language Factor
+Ada 1.00
+UNIX-C 1.67
+PASCAL 1.25
+
+FORTRAN 0.91
+
+20.3.3 Ground Segment and Operations Costs
+
+Ground segment costs vary significantly depending upon the purposes of the
+ground stations. For most ground station cost estimates, we must state requirements
+for square footage of facilities, and an equipment list of specific items (computers, RF
+equipment, and so forth) which are typically not determined during the concept devel-
+opment stage of a program.
+
+For this model, the costs for various elements of a ground station will be based
+upon typical distribution of costs between software, equipment, facilities and wraps,
+as Table 20-11 indicates. The distribution is fairly representative of a number of
+space projects. For preliminary mission design, this may be translated into estimated
+costs as follows. First, compute the software costs from Table 20-10. Then estimate
+other ground segment costs as a percent of software costs using the representative
+distributions of Table 20-11. A column to simplify this calculation has been added
+to the table.
+
+The operations and support costs during the operational phase of the ground
+segment consist primarily of contractor and government personnel costs as well as
+maintenance costs of the equipment, software, and facilities. Table 20-12 presents
+expressions for these costs. The labor rates include overhead costs and other typical
+expenses associated with personnel. For smaller Earth terminals, Table 20-13 provides
+some typical costs of communications equipment for commonly used frequency
+bands.
+
+20.3 Cost Estimating Relationships 801
+
+TABLE 20-11. Ground Segment Development Cost Model. For preliminary mission design
+this should be used in conjunction with the software cost estimate from
+Table 20-10.
+
+Development Cost Development Cost as
+Ground Station Element Cost Distribution (%) | Percent of Software Cost (%)
+Facilities (FAC) 6
+
+Equipment (EQ) 27
+Software (SW)
+
+Logistics
+
+Systems Level
+Management
+Systems Engineering
+Product Assurance
+Integration and Test
+
+TABLE 20-12. Operations and Support Cost in FY00$. See text for details.
+
+Maintenance 0.1 x (SW + EQ + FAC)/year
+Contractor Labor $160K/Staff Year
+Government Labor $110K/Staff Year
+
+TABLE 20-13. Earth Terminals, Antennas, and Communication Electronics. Costs are for
+hardware only, and assume attachment to existing facilities [DCA, 1996].
+
+ee
+
+SHF (50 X D) + (400 x P) + 1,800
+K, C Band 640
+Ku Band 750
+
+D = antenna diameter in m P = RF power in kW
+
+20.3.4 Launch Costs
+
+The launch cost model includes vehicle costs and operations costs at the launch
+location (Table 20-14). For most missions, the launch represents a significant
+portion of the costs and thus the mission designer must consider concepts that are
+constrained by launch mass. For reusable vehicles such as the Space Shuttle,
+operations represent the predominant costs. The costs are presented in terms of a unit
+launch cost with the exception of the Shuttle, where usage cost is based upon a
+formula using either weight or length in the Shuttle bay, whichever results in larger
+costs. The chart also indicates the costs/kg of payload to LEO. This indicates the
+range of cost and payload size and provides guidance in extrapolating to costs for
+new launch vehicles to be competitive.
+
+802 Cost Modeling 20.3
+
+TABLE 20-14. Launch Vehicle Costs in FYO0$M. The data assumes launch from the
+country's main site. Except where noted, LEO altitude is 185 km and inclination
+is 28.5 deg (5.2 deg for Ariane). Data from Isakowitz [1995].
+
+Maximum Payload-to-Orbit (kg) Cost per kg
+Unit Cost to LEO
+Launch Vehicles | ceo | (FYO0$M) | (FY00$K/kg)
+
+Atlas II 6,580 80-90 12.2—13.7
+Atias IA 7,280 85-95 11.7-13.0
+Atlas I! AS 8,640 100-110 11.6-12.7
+Athena 1 800 18 22.5
+Athena 2 1,950 26 13.3
+Athena 3 3,650 31 8.5
+Delta Ii (7920, 7925) 5,089 9.8-10.8
+Pegasus XL 460 13 28.3
+Saturn V 127,000 6.5
+Shuttle” (IUS or TOS) 24,400 2,360 16.4
+Titan Il 1,905 19.4
+
+Titan IV 21,640 5,760 9.9
+(Centaur)
+
+Taurus 1,400 14.3-15.7
+
+Ariane 4 (AR40) 10.2-13.3
+
+Ariane 4 (AR42P) 10.7-13.1
+
+Ariane 4 (AR44L) 9.9-12.5
+
+Ariane 5 (550 km) 7.2
+CHINA
+
+Proton SL-13 20,900
+Kosmos C-1 1,400
+Soyuz 7,000
+Tsykion 3,600
+Zenit 2 13,740
+
+H-2 10,500 4,000 160-205 15.2-19.5
+J-1 900 55-60 61.1-66.7
+
+GTO = Geosynchronous Transfer Orbit; GEO = Geostationary Orbit; LEO = Low-Earth Orbit
+
+* There is no official price for a Space Shuttle launch. Foliowing the Challenger loss, only government payloads
+have been allowed. The GAO has assigned a price of $400 million per flight, but the actual cost depends
+strongly on the flight rate.
+
+20.4 Other Topics 803
+
+20.4 Other Topics
+
+20.4.1 Cost Modeling Errors and Cost-Risk Analysis
+
+Parametric cost modeling relies on a statistical analysis of past data to project future
+costs. Evaluating the statistical uncertainty associated with this projection is called
+cost-risk analysis because it represents the probabilistic risk that the program cannot
+be completed within a specified cost limit. This limit is usually set as the projected cost
+plus a cost margin or management reserve, typically on the order of 20% for major
+programs.
+
+The basic tenet of parametric cost modeling is to base estimates of what satellites
+will cost next time on what they cost last time. If you’re developing a space system
+under exactly the same circumstances as before (the same design, organizations, peo-
+ple, technology, requirements, and procedures) you’d expect it to cost the same. But
+this scenario never exists. The RDT&E cost models of Sec. 20.3 assume a relatively
+new design but proven technology. The more new technology is considered, the more
+the risk that added time and effort will be required to complete the development.
+Program cost is a nebulous quantity, heavily impacted by technological maturity, pro-
+grammatic considerations, “normal” schedule slips, and other unforeseen events. Cost
+estimates derived from the CERs should therefore be accompanied by a cost-risk
+assessment to estimate potential effects of a level of complexity below or beyond
+average.
+
+Cost-Risk Analysis provides an assessment of the ability of projected funding
+profile to assure that a program can be completed and meet its stated objectives.
+Although technical risks are often one of the biggest cost drivers for space systems,
+many cost-engineering processes and models ignore effects of cost risk in the interest
+of quick-turnaround estimates. Cost-risk analysis is important because single-point
+cost estimates, while meeting the top-level needs of budgetary planners, often do not
+meet the needs of those who want to perform more detailed trade-offs between cost
+and performance (see Book [1993]). The purpose of cost-risk analysis is threefold:
+
+1. Translate qualitative risk assessments into quantitative cost impacts
+2. Assist program managers in managing risk
+3. Establish an empirical basis for estimating future programs with confidence
+
+This section describes a method of assessing the uncertainty in cost estimates. This
+includes identifying the sources of uncertainty, combining them to arrive at a program
+level cost uncertainty, and interpreting the results. Cost-risk analysis views each cost
+element as an uncertain quantity that has a probability distribution and attempts to
+evaluate technical, programmatic, and schedule risks in quantitative terms. Qualitative
+measures of risks are then translated into cost-estimate adjustments. A key to making
+quick, consistent, and defensible assessments is reducing subjectivity by making
+assumptions about sources and magnitude of cost risk. The major sources of cost
+uncertainty we consider here are:
+
+¢ Cost-estimating uncertainty as quantified by the standard error, SE
+
+¢ Cost growth due to unforeseen technical difficulties
+
+Examples of risk drivers include beyond state-of-the-art technology (e.g. cooling,
+processing, survivability, power, laser communications), unusual production require-
+
+804 Cost Modeling 20.4
+
+ments (e.g. large quantities, toxic materials), tight schedules (e.g. undeveloped
+technology, software development, supplier viability), system integration (e.g. multi-
+contractor teams, system testing), and unforeseen events (e.g. launch slip, need for
+redesign)
+
+The objective is to quantify the sum of the contribution of these uncertainties to the
+overall system or program costs. We will use the most likely estimates (MLE), the sum
+obtained from the cost models and derive probability distributions that contain the
+impact of technology uncertainty and the uncertainty of the cost estimates. Cost-
+estimating uncertainty is quantified by computing the standard error (SE). For
+development of space-system hardware, CERs usually have SE between 30% and
+50%. Cost-estimating uncertainty is therefore quantified by a distribution that has a
+mean (the estimate, C), and a variance (square of the SE). *
+
+Cost risk due to technical difficulties is estimated using the technology readiness
+level (TRL), shown in Table 20-15, a NASA classification scheme for the level of
+technology development (the inherent development risk). A TRL of 1 or 2 represents
+a situation of relatively high risk. TRLs of 3, 4 and 5 represent moderate risks, and 6
+through 8 are low-risk categories. Based upon related experience, the suggested cost
+uncertainties are also presented in Table 20-15. Thus, a low developmental risk sub-
+system would have a one standard deviation uncertainty of less than 10%, about the
+most likely estimate.
+
+TABLE 20-15. Technology Classification and Relative Cost Risk. Definitions are from
+NASA.
+
+Standard
+Technology Deviation
+Readiness Relative about MLE
+Level Definition Risk Level (%)
+
+Basic principles observed High > 25
+Conceptual design formulated High > 25
+
+Conceptual design tested analytically or Moderate 20-25
+experimentally
+
+Critical function/characteristic demonstrated Moderate 15-20
+
+Component or breadboard tested in relevant Moderate 10-15
+environment
+
+Prototype/engineering model tested in relevant Low <10
+environment
+
+Engineering model tested in space Low
+
+Full operational capability Low
+
+* The terminology here can cause confusion. Cost models use the terms most likely estimate,
+MLE, and standard error, SE, because the statistical data in the CERs is not truly Gaussian.
+However, using a Gaussian probability distribution is often convenient for analyzing errors.
+Consequently, throughout this section we will use MLE from the CERs interchangeably with
+the mean or estimated cost, C, and SE interchangeably with the standard deviation, 6, even
+though means and standard deviations are applicable only if the statistical data has a Gaussian
+distribution.
+
+20.4 Other Topics 805
+
+Other adjustment factors correct for uncertainty in the development status of a
+specific technology. The technological risk related to developing a space system
+depends on how we use the technology and on its degree of “flight qualification.” If
+an item has already flown in space, it’s more likely to work again, so it represents less
+risk to the user.
+
+To the technology-based risk, we need to add the contribution of cost estimating
+uncertainty in a probabilistic fashion. Since the technology uncertainty and the cost
+estimating uncertainties are independent (uncorrelated), these may be combined using
+the standard square root of the sum of the squares. (See standard probability texts.) For
+example, suppose a subsystem TFU MLE is $5 million. The risk level is moderate with
+a 20% standard deviation in uncertainty and the cost estimating standard error is as-
+sumed to be 15%. The standard error for the sum of the two sources of uncertainty is
+the root sum square
+
+(6,2 + 6,2)! = (0.22 + 0.152)1/2 = 0.25 (20-1)
+
+where o; is the cost standard deviation in technology and o;, is the cost estimating
+uncertainty. Thus the uncertainty standard deviation is 25% of the MLE for the sub-
+system. The input to the above equation will be obtained from Table 20-15 for the o,
+and from Tables 20-4, 20-5, and 20-6 for the o,. This provides the uncertainty measure
+for a subsystem.
+
+For an entire system, the probability sum is more complex. We cannot simply use
+the root sum square since there are correlations between subsystems. That is, interre-
+lationships exist between the development of subsystems. To capture these interrela-
+tionships requires more advanced methods than will be treated here. An approximation
+to computing the system uncertainty measure is:
+
+1. Sum the uncertainty standard deviations for each subsystem. This provides a
+system uncertainty assuming perfect correlation among subsystems.
+
+2. Take the root sum square of the subsystem uncertainty standard deviations.
+This provides a completely uncorrelated solution.
+
+3. Take the average of the two values in steps (1) and (2). This provides an inter-
+mediate solution which is a reasonable approximation for most conceptual
+analyses.
+
+An example of this process for FireSat is shown in Table 20-22 in Sec. 20.5.
+Fig. 20-4 in that section shows the actual shape of the probability distribution, based
+on the assumption of Gaussian statistics. The integrated area under the curve up to a
+given cost estimate value X; on the horizontal axis yields the probability, P, that the
+actual system cost will lie at or below the Xz estimated value. The curve is given by
+the Gaussian distribution:
+
+Xp
+P(Xp)= | Feoax, 0<P(Xp)<1
+-4 20" +o0
+e Co
+Fx)= +, | Fenax =1
+
+oo (20-2)
+Here, C is the estimated cost and cis the standard deviation of the estimate.
+
+806 Cost Modeling 20.4
+
+The above analysis assumes normal distributions for the uncertainties. This is not
+usually the case, but does provide simple analytical solutions. A comprehensive
+method using Monte Carlo simulation is treated by Wong and Sheldon [1986] and
+Dienemann [1966]. The treatment of cost/reliability relationships (that is, the risk
+associated with the failure of flight units) is discussed in Sec. 19.2 and by Gupta and
+Altshuler [1989]. A more comprehensive treatment of analytical methods and the
+method of moments to address cost risk, as well as Monte Carlo simulation methods
+mentioned earlier, are given by Wilder [1978], Abramson and Young [1990], Book
+[1993], Burgess and Gobrieal [1996], and Young [1992]. The end product of cost-
+risk assessment in this framework is a total spacecraft cost-probability distribution,
+from which the mean, standard deviation, percentiles, and other descriptive statistics
+can be determined. (See Fig. 20-4 for an example cost estimate probability density
+evaluation.)
+
+20.4.2 Time Spreading of Costs
+
+Prior sections have focused upon developing total cost estimates. We now address
+how costs will be spread over time. The following analytical cost spreading method
+was developed by Wynholds and Skratt [1977] and approximates the experience of
+actual programs.
+
+The spreading of the costs to determine funding profiles can be approximated by a
+function of the form:
+
+F(S)=A [10 + § (15 — 4S)S - 20)]S? + B[10 +S (6S — 15)]S?
++[1-(A+B)](5 - 45)s4 (20-3)
+
+where F(S) is the fraction of cost consumed in time S, S is the fraction of the total time
+elapsed, and A and B are empirical coefficients.
+
+The values for the coefficients A and B depend on the expected loading of costs
+over time. For instance, a typical period for RDT&E and two production units is
+5 years. The costs are usually heavier during the first 2 years when design, develop-
+ment and testing occur. Typically, 60% of the costs will be incurred by the midpoint
+of the schedule. The coefficients for various spending splits are:
+
+% Expenditure Coefficients in Eq. (20-3)
+at schedule midpoint A B
+80 0.96 0.04
+60 0.32 0.68
+50 0 1.00
+40 0 0.68
+20 0 0.04
+
+A 60% distribution is suggested for the RDT&E and production of the first several
+satellites. If more than two satellites are included, the 60% decreases toward a limit of
+50%. A specific example is provided in Sec. 20.5.
+
+Another schedule-related issue that we may address is present value, which is based
+upon the consideration of the time value of money. One dollar in 2000 is worth more
+than a dollar in 2005, since the 2000 dollar could be invested and earn a return so that
+its value in 2005 is more than one dollar (in constant 2000 dollars). This value increase
+would occur even without inflation.
+
+20.4 Other Topics 807
+
+To illustrate the present value concept, consider a cost comparison of two projects.
+Both projects have satisfied all technical requirements. Project A has a three year
+development consisting of funding requirements of $10 million, $5 million, and
+$1 million in constant 2000 dollars. Project B has a funding profile of $1 million,
+$5 million, and $10 million in 2000 dollars. Thus, the totals are the same for both.
+However, the buyer of this project, government or otherwise, will prefer the second
+project on an economic basis since it will expend most of the funds in the future rather
+than the near term. The buyer of Project B could invest the $9 million excess funds in
+the first year and have additional funds at the end of the project. The conventional way
+of handling a comparison is to compute the present value for both projects using a
+discount rate. The discount rate is the time value of money. The appropriate discount
+rate is controversial. If possible, treat the discount rate as a parameter and determine
+at what point, if any, there is a crossover in the discount rate where one project would
+be preferred over another. A 10% rate is a standard value for study purposes.
+
+The present value, PV, is obtained by multiplying the funding for each year by the
+factor:
+
+=> oe
+(+a)!
+
+where n is the year of project (relative to the constant dollar year), and dis the discount
+rate.
+For project A, the present value at a 10% discount rate is
+
+PV, = 10 (1 +0.1)0 + 5/1 +0.1)! + 11 + 0.1)? = 15.4 in $ Millions
+
+(20-4)
+
+For project B, the present value is
+PVp= 11 +0.1)9 + 5/1 + 0.1)! + 10/(1 + 0.1) = 13.8 in $ Millions
+
+Thus, project B is less expensive than project A by $1.6 million or roughly 10% in
+present value terms.
+
+20.4.3 Rough Order-of-Magnitude Cost Estimates
+
+As concepts are developed, it is helpful to have an estimate of the anticipated costs.
+By making “sanity” estimates, we can develop some idea of cost bounds for various
+concepts. Table 20-16 gives estimated costs in constant 2000 dollars. These should be
+used to give rough order of magnitude costs for missions under consideration.
+
+For example, we can estimate the cost of four communication satellites (TDRS-
+class), two in each of two orbit planes with launches from both the Eastern and
+Western Test Ranges using two Titan IV/Centaurs. Table 20-16 provides an order-of-
+magnitude cost of:
+
+Satellites: 4 x $126M $504 million
+and Table 20-14 provides an order of magnitude cost of:
+Launches: 2 x $333M $666 million
+
+Total $1,170 million
+
+808 Cost Modeling 20.4
+
+TABLE 20-16. Space Systems Costs. This table can be used to obtain quick order-of-
+magnitude estimates. All values are in FYOO$M.
+
+Manned Space Programs Total Program Costs($M)
+
+Apolio 152,000
+
+Orbiter 45,000
+
+Gemini 4,400
+
+SkyLab 3,100
+
+Mercury 1,100
+
+Space Observatories Total Program Costs
+
+Space Telescope 2,270
+
+GRO 640
+
+HETE 31
+
+Sampex 75
+
+Dry Weight Average
+
+Communication Satellites (kg) Unit Costs ($M) $K/kg
+Intelsat VII| (commercial) 1,200 133 111
+TDRSS (NASA) 1,550 126 81
+DSCS HIB (DoD) 806 114 141
+Westar (commercial) 500 78 156
+ORBCOMM 33 11 333
+
+Surveillance/Navigation Satellites
+
+DSP 2,200 314 143
+GPS-2 839 57 68
+
+Meteorological Satellites
+
+GOES 500 84 168
+DMSP 514 88 171
+
+Interplanetary Spacecraft
+
+Pioneer (S/C bus only) 231 38 165
+Mars Observer 1,018 77 76
+Clementine 232 57 246
+
+Experimental Small Satellites
+
+RADCAL 92 5 54
+PoSAT-1 49 1.2 24
+AMSAT AO-13 84 1 12
+Freja 214 19 89
+
+Orsted 60 15 243
+
+
+20.4 Other Topics 809
+
+A rule-of-thumb for satellite development costs is that RDT&E (nonrecurring)
+costs are 2 to 3 times the unit costs (for high-tech programs, factors of 5 to 6 are used).
+Adding development costs of 2.5 times unit satellite costs brings the total costs to
+around $1.5 billion. Such quick computations can also be used as a cross check for
+estimates obtained from the cost models of Sec. 20.3.
+
+20.4.4 Learning Curve
+
+Historically, the majority of satellites built and flown have been one-of-a-kind sys-
+tems. However with the proliferation of constellations where recurring costs and learn-
+ing rates dominate the cost equation, a breakout of developmental and theoretical first
+unit costs is necessary.
+
+We can adjust the single-spacecraft CERs to correct for cost reduction from
+learning how to do the job better or the effects of changing technological status. CERs
+effectively predict costs for developing a prototype or first production unit, often
+called the theoretical first unit, but they poorly estimate the cost for even the most
+modest production line. The staff who manufactures a second or third similar
+spacecraft will learn to do the job better and use economies of scale, which quantifi-
+ably improve performance. The learning rate for the space and the aerospace industry
+is such that, on average, the Nth unit will cost between 87% and 96% of the previous
+unit.
+
+The learning curve is a mathematical technique to account for productivity
+improvements as a larger number of units are produced. It includes all cost reductions
+between the first production unit and subsequent units. This includes cost reductions
+due to economies of scale, set up time, and human learning as the number of units
+increase. The total production cost for N units is modeled as:
+
+Production cost = TFU x L (20-5)
+where
+L =N®
+B=1- In((100%) / S)
+In2
+
+TFU is the theoretical first unit cost, L is the learning curve factor, and S is the learn-
+ing curve slope in percent. This form of the learning curve was chosen because of its
+fit to empirical data, based on the theory of T.P. Wright [1936].
+
+The learning curve slope S represents the percentage reduction in cumulative
+average cost when the number of production units is doubled. The learning curve slope
+S sets the value of B. For example: if S = 95% and the first unit costs $1 million, then
+doubling the number to 2 units reduces the average cost of both to 95% of the first unit.
+Thus, the two units cost $1.9 million. The second unit cost is $0.9 million. The learn-
+ing curve exponent B is 0.926 for S = 95%.
+
+For less than 10 units, we recommend a 95% learning curve slope be applied.
+Between 10 and 50 units, a 90% learning curve and 85% for over 50 units is appropri-
+ate. These will vary with the application and how the manufacturing and assembly
+activities are set up. The cost models presented earlier provide first unit costs so that
+total production costs are determined by multiplying TFU costs by the learning curve
+factor.
+
+810 Cost Modeling 20.5
+
+The following example table illustrates the impact of a 95% learning curve on unit
+costs. The unit or marginal cost is the difference in production cost between N units
+and N — 1 units. For example, the cost of the fifth unit is the difference in production
+cost between the fourth and fifth units, that is, 4.44 - 3.61 =0.83.
+
+Effect of a 95% Learning Curve
+
+Unit Production Average Unit
+Number Cost (TFU x L) Cost Cost
+1 1.00 1.00 1.00
+
+2 1.90 0.95 0.90
+
+3 2.77 0.92 0.87
+
+4 3.61 0.90 0.84
+
+5 4.44 0.89 0.83
+
+20.5 FireSat Example
+John T. Collins, Microcosm, Inc.
+
+We will apply the above cost models to the FireSat example to compute life-cycle
+cost estimates for the entire mission. We assume that two satellites are needed initially
+and that both are launched into a 150-km orbit by a Pegasus XL launch vehicle. The
+WBS consists of the space, launch, and ground segments. The space element consists
+of two satellites with infrared sensor payloads. The launch segment is two vehicles.
+The ground segment will consist of a single ground control station. All of the neces-
+sary data is given in Table 20-3.
+
+To illustrate the use of the CERs in Tables 20-4, 20-5, and 20-6, the cost estimates
+will be developed to the spacecraft subsystem level. The weight, beginning of life
+power, sensor aperture diameter, and other technical characteristics are the key pa-
+rameters for the estimate. The specific values are in Tables 20-17 and 20-18. The
+hardware RDT&E cost is based upon the CERs of Table 20-4 and 20-6 (nonrecur-
+ring portion) modified by the design status factors listed at the bottom of Table 20-8.
+The production costs are the result of the TFU CERs of Table 20-5 and 20-6 (recur-
+ring portion) multiplied by a learning curve factor L = 1.9 for two units. The com-
+putation of L is described in Sec. 20.4.4. The subsequent or second unit cost is then
+the difference between the production cost of two units and the TFU. The results for
+the large satellite cost model (based largely on USCM 7.0) indicate the IR payload
+contributes most to overall system cost. Thus, the payload sensor should dominate
+attempts to reduce cost.
+
+Program-level costs are added based on the CERs in Tables 20-4, 20-5, and 20-6.
+Ground support equipment costs are then computed from Tables 20-4 and 20-6 based
+on RDT&E and first unit hardware costs. The launch operations and orbital support
+costs are obtained from Table 20-5 and 20-6. Finally, the satellite software costs are
+based upon Table 20-10 using Ada. This yields a total space segment cost of $549M
+using the USCM 7.0 model and $44M using the smallsat model. The large discrepancy
+in total space segment cost is due largely to the vast difference in cost between the pay-
+load cost estimates for each model. The large satellite cost model yields an estimate of
+
+20.5 FireSat Example 811
+
+TABLE 20-17. FireSat Space and Launch Segment Costs in FYO0SK. Cost estimates based
+on data in Table 20-3 Tables 20-4 and 20-5 for traditional satellite designs. Input
+data from Tables 10-31 and 20-3.
+
+1st Unit | 2nd Unit
+Cost Parameter, Value, Data Cost Cost
+Component Source (FY00$K) | (FYOOS$K) | (FYOO$K) | (FYOOSK)
+
+a
+Psveceoatous fi
+
+2.1 Structure” wt. = 32. ' 419
+2.2 Thermal* . = 6. ' 197
+
+2.3 Electrical Power wt. = 45.7 kg z 2,067 1,860
+System (EPS)*
+
+2.4 Telemetry Tracking . = 6. 1,894 1,705 2,819
+& Command and Data
+Handling (TT&C/DH)*
+
+2.5 Attitude Determination wt. = 18.3 kg 5, - 2,799 2,519 11,071 4,570
+& Control Sys.
+(ADCS)*
+Spacecraft Bus Total Cost . 7,376 | 6,639 | 29,107 | 9,739
+3. integration, Assembly Spacecraft bus +
+& Test (IA&T) payload RDT&E cost =
+$183,554
+4. Program Level Same as previous '
+5. Ground Support Same as previous 22,184
+Equipment (GSE)
+6. Launch & Orbital Spacecraft + payload
+Ops Support (LOOS) = 140kg
+7. Flight Software 26 KLOC 5,655t |
+Total Space Segment 304,297 | 102,398 | 92,158 | 498,853
+Cost to Contractor
+
+Total Space Segment 334, 727 712,638 101,374 548,738 | |
+
+Cost to Govemment
+
+8. Launch Segment 2 Pegasus XL . : 26,000
+Launchers
+
+* Spacecraft bus subsystem masses shown include a fraction of the spacecraft mass margin of 11.2 kg.
++ FireSat propulsion system is taken into account in ADCS CER (2.5). The 18.3 kg value for ADCS mass
+includes propulsion system hardware mass.
+$Assumes a heritage cost factor of 0.5 (i.e., moderate modifications to existing flight software). Calculated
+using flight software CER in Table 20-10.
+
+$296M for RDT&E, first unit, and second unit costs for the infrared sensor, while the
+small satellite model yields a total cost of $6.9M. This dramatic difference in payload
+cost estimates illustrates the difficulty in finding an appropriate cost-estimating rela-
+tionship for some classes of spacecraft payloads. For this reason, payload cost estima-
+tion is in many cases best achieved by using bottoms-up or analogy-based methods
+rather than parametrics. The difference in these numbers is attributable to paramount
+differences in the database of programs on which the CERs are based including:
+prototype vs. protoflight approach, risk acceptance, operational vs. demonstration
+
+812 Cost Modeling 20.5
+
+TABLE 20-18. FireSat Space and Launch Segment Costs in FYO00$K. Based on data in
+Table 20-3, Small Satellite CERs in Table 20-6 and ratios for other cost compo-
+nents in Table 20-9.
+
+Cost Parameter, Value, Data
+
+Component Source
+1. Payload Spacecraft total cost
+(RDT&E + TFU)
+
+2.1 Structure’ wt. = 32.0 kg
+
+2.2 Thermal* wt. = 6.8 kg } 221 |
+
+2.3 Electrical Power wt. = 45.7 kg 3,271
+System (EPS)*
+2.4a Telemetry Tracking | TT&C + DH wt. = 6.8 kg
+& Command (TT&C)*
+2.4b Command & Data TT&C + DH wt. = 6.8 kg 868
+Handling (C&DH)*
+2.5 Attitude Determination = 767
+& Control Sys.
+(ADCS)*
+
+|
+| 2.390 _|
+
+173
+793
+
+1,175 3,247 1,744
+fe [1st |
+
+2.6 Propulsion Satellite bus dry mass =
+112 kg
+
+Spacecraft Bus Total Cost PF 7,538
+
+3. Integration, Assembly Spacecraft total cost
+& Test (IA&T) (RDT&E + TFU)
+
+4. Program Level Same as previous
+
+Same as previous
+Equipment (GSE)
+6. Launch & Orbital Same as previous 775 697 1,472
+Ops Support (LOOS)
+
+7. Flight Software 26 KLOC 5,655t | 0 |
+10,074 | 39,803
+
+Total Space Segment
+Cost to Contractor
+10% Contractor Fee | 1119 | 1,007 3,980
+
+—_
+_
+oa
+fe)
+
+a
+©
+3
+Cc
+J
+a
+i?)
+Cc
+3
+3
+°
+5
+
+oo
+g
+
+Total Space Segment
+Cost to Government
+
+8. Launch Segment 2 Pegasus XL
+
+Launchers
+
+69,783 | 7,552
+
+* Spacecraft bus subsystem masses shown include a fraction of the spacecraft mass margin of 11.2 kg.
++t Assumes a heritage cost factor of 0.5 (i.e., moderate modifications to existing flight software). Calculated
+using flight software CER in Table 20-10.
+
+Total Cost of Deployment
+
+/validation, and programmatic oversight and required documentation. From Table
+20-14 the launch vehicle cost for 2 Pegasus systems is $26M, giving a total cost to de-
+ployment of $575M and $70M for large and smallsat models, respectively.
+
+Table 20-20 gives the ground segment development and operations costs for
+FireSat. We begin with the ground software cost for 100 KI,OC of Ada code and use
+Tables 20-10 and 20-11 to compute the development cost. Our initial assumptions of
+a 7-year life after IOC (5-year spacecraft life) and 10 contractor personnel are used
+
+20.5 FireSat Example 813
+
+with Table 20-12 to estimate a total operations and maintenance cost of $6M/year in
+Table 20-19. Finally, all costs, including a 10% fee, are summed in Table 20-21 to
+yield a total cost plus fee of $671M in FY00 dollars.
+
+TABLE 20-19. FireSat Annual Operations and Maintenance Cost in FYO0$M.
+
+Operations and Maintenance
+
+10 Contractor Personnel ($160K/Yr) including fee
+
+Maintenance
+
+Total Annual Cost
+
+TABLE 20-20. FireSat Ground Segment and Operations Costs in FYOO$M.
+
+Development
+
+Software 100 KLOC (Ada) @ $220/LOC
+Equipment
+Facilities
+
+Subtotal
+Management
+Systems Engineering
+Product Assurance
+Integration and Test
+Logistics
+
+Total
+
+TABLE 20-21. FireSat Life-Cycle Cost Estimate. All costs in FYOO$M, including fee. Launch
+segment estimate is based on two Pegasus launches.
+
+Initial Deployment
+Space Segment - Table 20-17
+Launch Segment - Table 20-17
+Ground Segment - Table 20-20
+Subtotal
+
+Operations and Maintenance - (Table 20-19)
+
+Annual Ops. and Maint.
+Total Ops. and Maint. for 5 years
+
+Total Life-Cycle Cost for 5 years
+
+Let us now assess the cost uncertainty in our estimate for the hardware using the
+technique of Sec.20.4.1. For the FireSat example, the satellite hardware consists of the
+
+814 Cost Modeling 20.5
+
+spacecraft bus and an IR payload with CERs for the TFU from Table 20-5 and
+Table 20-6. The spacecraft bus is assumed to consist of proven technology with a TRL
+of 6. Some new component designs are necessary, but the technologies have had
+applications where engineering models were successfully tested. The IR payload
+requires infusion of new technology and is assigned a TRL of 5. The spacecraft dry
+weight (including payload) is 140 kg and the IR payload aperture diameter is 0.26 m.
+Using the corresponding CERs from Table 20-5 to compute costs and the risk meth-
+odology we arrive at the results in Table 20-22.
+
+TABLE 20-22. FireSat Cost Uncertainty
+
+System Cost
+TFU System Technology Estimate Combined
+Cost Technology Std. Dev. Std. Dev. Std. Dev.
+($M) Level ($M) ($M) ($M)
+
+S/C bus 7.4 6 (= 10%) 0.74
+
+IR payload 67.4 5 (= 15%) 10.1
+
+Total 74.8 Step 1: Sum
+Step 2: RSS
+Step 3: Average
+
+The standard deviation for the system technology is obtained by using Table 20-15.
+For example, the $0.74M standard deviation for the spacecraft system technology is
+10% of the $7.4M cost. The cost estimate standard deviation is assumed to be 15% and
+the combined standard deviation is the root sum square (RSS) of the two components.
+Thus, the standard deviation of the total satellite hardware cost ($74.8M) is
+$15 million or 20%.
+
+The cost to build two FireSat satellites is $194.5 million (see Table 20-17). Assum-
+ing this is spread over 5 years with 60% of the costs to be incurred in 2-1/2 years, then
+the coefficients would be A = 0.32 and B = 0.68. Inserting these into the equation for
+F (S) (Eq. 20-30], we obtain the distribution in Table 20-23 for satellite recurring
+costs.
+
+TABLE 20-23. Time Distribution of FireSat Costs. Based on a total recurring cost for the first
+two units of $194.5M (Table 20-17) and assuming 60% of costs spent in the first
+2.5 years.
+
+Cumulative Cost Annual Cost
+
+(%) ($m) (%) ($M)
+
+Totals
+
+
+20.5 FireSat Example 815
+
+Figure 20-4 displays cost estimate probability density for spacecraft bus RDT&E,
+first unit, second unit, wrap costs (TA&T, program level, GSE, and LOOS), launch
+cost, flight software cost, and contractor fee for the two cost models presented in this
+chapter. All costs are represented for the space and launch segment, except payload
+cost (due to the large discrepancy in payload cost estimate between the two models).
+The results illustrate the difference between these two models and also, where
+estimates derived from these two models are most likely to fall. The small satellite cost
+model yields a best estimate of $62,181K and a standard deviation of $6,401K. The
+large satellite cost model result, depicted by the wider curve at the right, yields a best
+estimate of $90,595K and a standard deviation of $15,159K.
+
+(Payload not accounted for in either estimate)
+
+Smail Satellite Cost Model Estimate
+Space Segment Cost for 2 Spacecraft
+(Including Launch) = $62,181 +/- 6,401 K
+
+Large Satellite Cost Model Estimate
+Space Segment Cost for 2 Spacecraft
+(Including Launch) = $90,595 +/— 15,159 K
+
+Probability Density
+
+. + + +
+0 10,000 20,000 30,000 40,000 50,000 60,000 70,000 80,000 90,000 100,000 110,000 120,000 130,000 140,000 150,000
+Estimated Cost (FY00$K)
+
+Fig. 20-4. Probability Density of Estimated Cost Resulting from Cost Risk Analysis. The
+taller, narrower curve to the left is the result for the small satellite CERs from Table
+20-6 and the wider, lower curve is the result for the large satellite CERs from Tables
+20-4 and 20-5. Most missions of similar scope to FireSat will lie somewhere between
+these two extremes. The results of such statistical evaluations can be used to dictate
+reserves policy (e.g., “risk” dollars) or to guide technology investment.
+
+20.5.1 FireSat Design Life Study
+Using an integrated design-to-cost tool that uses design relationships previously
+presented and the small-satellite CERs found in Table 20-6, a trade analysis of design
+life was performed. The primary drivers for mass increase as a function of increasing
+design life are:
+1. The requirement for additional propellant for on-orbit station keeping;
+2. Aneed for more capable subsystems, for example the power subsystem where
+solar cell and battery degradation requires oversizing the system to meet a
+new higher beginning-of-life power requirement; and
+
+3. Full redundancy assumed for 7-year lifetime.
+
+816 Cost Modeling 20.5
+
+We chose mass-based CERs and assume that payload requirements and perfor-
+mance parameters such as pointing accuracy, downlink data rate, data storage, and
+size remain fixed. The results are shown in tabular form in Table 20-24. Mass-based
+CERs are favored over the performance-based CERs.
+
+TABLE 20-24. FireSat Mass, Power and Cost as a Function of Design Life. Data assumes
+fixed performance requirements. Redundancy and associated impacts to sub-
+system masses, and increased power and propellant requirements drive the
+results.
+
+0
+
+Propulsion (kg) 7 8 9 18
+ADCS (kg) 7 9 9 22
+TT&C/C&DH (kg) 5 6 7 20
+Thermal (kg) 5 6 7 9
+Power (kg) 33 40 46 70
+Structures (kg)
+
+Spacecraft Dry Mass (kg) 120 140
+Propellant (kg)
+Launch Mass [Launch Mass (kg) 1
+
+| 130 1 | 153 | 175 75
+Performance Pegasus (kg) | Pegasus (kg)
+EOL Power (W) 140 140 140
+Heres
+
+Space Segment Cost (FYOO$M)
+
+Launch Cost (FYOO$M)
+
+Operations Cost (FYOO$M) 18
+
+Total Cost (FYOO$M) 100
+Cost per Year (FYOO$M)
+
+* FireSat baseline design.
+
++25% margin required at conceptual design stage
+
+tLaunch mass plus 25% margin exceeds payload capability of Pegasus XL. Two
+Athena 1 launches assumed at $18M per launch.
+
+We include launch mass margin relative to estimated Pegasus performance to orbit,
+which is about 290 kg to a 700 km circular orbit at 55 deg inclination. Spacecraft pow-
+er estimates, used only as intermediate results, demonstrate required growth in the
+power subsystem as a function of lifetime. Our required propellant mass increases as
+well. When the margin goes negative we are forced to launch Firesat on the more
+capable Athena 1 (costs $18M compared with the $13M Pegasus XL). Operations
+costs are not changed from our previous analysis of $6M per year.
+
+20.5 FireSat Example 817
+
+Aggregate cost information along with cost per year is shown in Fig. 20-5. This can
+be compared with the notional representation in Fig. 1-5 and we have completed the
+requirements to design to cost cycle. Information like that shown in Fig. 20-5 is
+extremely useful for demonstrating how cost “pushes back” on requirements. When
+we specified a mission life of 5 years, we did not have enough information to know
+whether this was the proper choice from a cost-effectiveness standpoint. Now that we
+have completed the picture, we can see that (all factors considered) the optimal life-
+time for FireSat is between 4 and 6 years where the curve is relatively insensitive to
+further changes in design life. This is also about the time when we would expect that
+the cost-effectiveness of the IR sensor payload and other components may become an
+issue. Even though amortized mission costs are lower, i.e., less dollars per year, there
+iS proportionally less value.
+
+FireSat Design Life Trade
+
+180 80
+160 4 ° “ + 70
+140 —~— Cost Per Year , =
+/ 60 5S
+/ —
+_ 120 y 50 =
+Ss o nd
+S 100 -~ ~+— Total Cost [ FI
+= 40 ©@
+i) >
+fo) Fy
+cs) 30 2
+20 8
+wee ree 3)
+
+——— 1 7 7 + 0
+
+0 1 2 3 4 5 6 7 8
+
+Spacecraft Design Life (years)
+
+Fig. 20-5. FireSat Design Life Trade. Compare with Fig. 1-5 in Sec. 1.4. Total cost, the sum of
+individual spacecraft cost, launch vehicle cost, and operations cost, is shown as a func-
+tion of spacecraft design life. On the right axis we plot cost per year which asymptoti-
+cally approaches the yearly operations cost as design life goes to infinity. Optimal
+design life is chosen at a point on the cost-per-year curve that is relatively insensitive
+to changes in design life and while mission data still remains useful.
+
+This analysis highlights an important role for shorter-lived small satellites over
+traditional large satellites. Since more rapid technology infusion may provide
+increases in cost-performance, we should be able to take advantage of state-of-the-
+art technology available 5-6 years from now, instead of continuing to operate an ob-
+solescent system. Therefore, we choose to utilize two FireSat payloads, each with a
+5-year lifetime, but expect that the second version of the satellite will have higher
+performance per pound than what we designed with today’s technology. We can
+launch a satellite every 5 years to assure that we don’t experience an outage or de-
+sign in extra mission life (with the mass and cost consequences shown in Fig. 20-5)
+if the second satellite is delayed.
+
+818 Cost Modeling
+
+References
+
+Abramson, Robert L. and Philip H. Young. 1990, “FRISKEM—Formal Risk Evalua-
+tion Methodology,” ORSA/TIMS Joint National Meeting, Philadelphia, PA,
+October 29-31, 1990.
+
+Apgar, H. 1990. “Developing the Space Hardware Cost Model.” Paper IAA-CESO-04
+(90), AIAA Symposium on Space Systems Cost Methodologies and Applications,
+May.
+
+Bearden, David A. 1999. “A Methodology for Technology-Insertion Analysis Balanc-
+ing Benefit, Cost and Risk.” Dissertation Paper, Department of Aerospace
+Engineering, University of Southern California, August 1999.
+
+Bearden, David A., Richard Boudreault, and James Wertz. 1996. “Cost Modeling.” In
+Reducing Space Mission Cost. Torrance, CA, and Dordrecht, the Netherlands:
+Microcosm Press and Kluwer Academic Publishers.
+
+Book, S.A. 1993. “Recent Developments in Cost Risk.” Space Systems Cost Analysis
+Group Meeting, Palo Alto, CA, June 7-8.
+
+Book, S.A. and P.H. Young. 1995. ‘“General-Error Regression for USCM-7 CER
+Development.” Presented at the Society of Cost Estimating and Analysis National
+Conference, Tysons Corner, VA, 19-21 July.
+
+Burgess, E.L. and H.S. Gobrieal. 1996. “Integrating Spacecraft Design and Cost-Risk
+Analysis Using NASA Technology Readiness Levels,” The Aerospace Corpora-
+tion. Presented at the 29th Annual DoD Cost Analysis Symposium, Leesburg, VA.
+February 21-23.
+
+Burgess, E.L., N. Y. Lao, and D.A. Bearden. 1995. ““Small-Satellite Cost-Estimating
+Relationships.” Presented at the 9th Annual AIAA/Utah State University Confer-
+ence on Small Satellites, Logan, Utah, September 18-21.
+
+Defense Communications Agency (DCA). 1996. Cast and Planning Factors
+Manual. DCA Circular 600-60-1. Washington, DC: Defense Communications
+Agency.
+
+Defense Information Services Agency (DISA). 1997. DISA Circular 600-60-1,
+
+Cost and Planning Factors Manual, version 1.2, 7 May. Washington, DC:
+Defense Information Services Agency.
+
+Department of Defense. 1998. Parametrics Estimating Initiative Handbook.
+
+Dienemann, Paul. 1966. Estimating Cost Uncertainties Using Monte Carlo Tech-
+niques. Report RM-4854-PR. Santa Monica, CA: The RAND Corporation.
+
+Fisher, Gene H. 1970. Cost Considerations in Systems Analysis. RAND Report
+R-490-ASD. Santa Monica, CA: The RAND Corporation.
+
+Greenberg, J.S. and H. Hertzfeld. 1994. Space Economics. Washington, DC:
+AIAA.
+
+References 819
+
+Gupta, A. K., and D. Altshuler. 1989. “Cost Effective Reliability Determination for
+Spacecraft Design.” in Institute for Cost Analysis/National Estimating Society
+Conference.
+
+Hamaker, J. 1987. “A Review of Parametric Cost Modeling Activities at NASA Mar-
+shall Space Flight Center.” Paper presented to the AIAA Economics Technical
+Committee, Buffalo, New York.
+
+Hamaker, J. 1989. “NASA MSFC’s Engineering Cost Model (ECM).” Proc. Intl. Soc.
+Parametric Analysts, 10th Annual Conference, Brighton.
+
+Isakowitz, Steven J. 1995. AIAA International Reference Guide to Space Launch
+Systems (2nd Edition). Washington, DC: American Institute of Aeronautics and
+Astronautics.
+
+Management Consulting and Research, Inc. 1986. Space and Strategic Defense Cost
+Analysis: Cost Analysis Techniques Report. TR-8618-2. Washington, DC: Office
+of the U.S. Secretary of Defense.
+
+MCR Federal, Inc. 1997. Communications Payload and Spaceborne Electronics Cost
+Model. TR-9535/10. Arlington, VA: Air Force Cost Analysis Agency.
+
+National Aeronautics and Space Administration. n.d. [ca. 1981] Space Transportation
+System Reimbursement Guide. Washington, DC: National Aeronautics and Space
+Administration.
+
+Sadin, S.R. and R.W. Davis. 1993. “The Smallsat Revolution—Back to the Future?”
+Paper presented at IAF, Graz, Austria. IAF-93-U.5.570
+
+Sarsfield, Liam. 1998. The Cosmos on a Shoestring: Small Spacecraft for Space and
+Earth Sciences. Santa Monica, CA: Rand Corp.
+
+Smith, G. K., J. P. Stucker, and E. J. Simmons. 1985. Commercial and Military
+Communication Satellite Acquisition Practices. RAND Report R-3121-AF. Santa
+Monica, CA: The RAND Corporation.
+
+Space and Missile System Center, Directorate of Cost, Los Angeles AFB, CA.1994.
+Unmanned Space Vehicle Cost Model, 7th ed. Los Angeles AFB, CA: Space and
+Missile System Center.
+
+USAF. 1998. Raw Inflation Indices (Based on OSD Raw Inflation Rates), published
+by Secretary of the Air Force (SAF/FMCEE) and available on web site
+www.saffm.hq.af.mil; issued 14 January 1998. Washington, DC: U.S. Air Force.
+
+Wertz, James R. and Wiley J. Larson. 1996. Reducing Space Mission Cost. Torrance,
+CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer Academic Pub-
+lishers.
+
+Wilder, J. J. 1978. An Analytical Method for Cost Risk Analysis (Method of Moments),
+German Aerospace Corporation PDR-OP-B78-2. Bethpage, NY: Grumman Aero-
+space Corporation.
+
+Wong, R. E. and D. Sheldon. 1986. “Cost/Schedule Risk Assessment of an Advanced
+Communications Satellite.” Paper presented at 1986 ISPA Conference, Kansas
+City, Missouri.
+
+820 Cost Modeling
+
+Wright, T. P. 1936. “Factors Affecting the Cost of Airplanes.” Journal of the Aeronau-
+tical Sciences. 3: 122-128.
+
+Wynholds, H. W. and J. P. Skratt. 1977. “Weapon System Parametric Life Cycle Cost
+Analysis” in Proceedings of the 1977 Annual Reliability Symposium.
+
+Young, P. H. 1992. “FRISK—Formal Risk Assessment of System Cost Estimates.”
+The Aerospace Corporation. Presented at the AIAA 1992 Aerospace Design Con-
+ference, February 3-6, 1992, Irvine, CA.

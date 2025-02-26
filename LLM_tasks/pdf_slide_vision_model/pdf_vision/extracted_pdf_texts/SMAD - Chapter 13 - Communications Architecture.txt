@@ -1,0 +1,3295 @@
+
+Chapter 13
+Communications Architecture
+
+Fred J. Dietrich, Globalstar L.P.
+Richard S. Davies, Stanford Telecommunications, Inc.
+
+13.1 Communications Architecture
+Communications Architecture Defined by Satellite-
+Ground Station Geometry; Communications
+Architecture Defined by Function, Criteria for
+Selecting Communications Architecture
+
+13.2 Data Rates
+TT&C; Data Collection; Data Relay
+
+13.3 Link Design
+Derivation of Link Equation; Link Design
+Equations; Modulation and Coding; Atmospheric
+and Rain Attenuation; Frequency Selection;
+Link Budgets
+
+13.4 Sizing the Communications Payload
+
+13.5. Special Topics
+Multiple Access: Sharing Communication Links;
+Payloads with Onboard Processing; Antijam
+Techniques; Security; Diversity Techniques;
+Optical Links
+
+A communications architecture is the arrangement, or configuration, of satellites
+and ground stations in a space system, and the network of communication links that
+transfers information between them. This chapter discusses this arrangement of links,
+their operation, and their effect on system design. More detailed information on
+satellite communications is available in Morgan and Gordon [1989] and Sklar [1988].
+
+Table 13-1 lists the steps required to specify the communications architecture. The
+first step is to define the mission objectives and requirements in enough detail to
+evaluate and compare alternative architectures. Section 13.1 describes alternative
+configurations and the criteria used in their selection.
+
+The second step is to determine the data rates for each of the links identified in
+step 1. To do this it is necessary that the required data throughput accuracy of data
+transmission be specified, and whether or not there will be data processing on board
+the satellite. This process is described in Sec. 13.2.
+
+The third step is to design each link in the network, as explained in Sec. 13.3.
+Principal factors are the availability of a radio frequency spectrum, coverage area of
+the satellite antenna beam, and path length between satellite and ground station. These
+
+533
+
+534 Communications Architecture 13.1
+
+TABLE 13-1. Specifying a Communications Architecture. Evaluating alternative architec-
+tures may require designing the tinks and sizing the communication payload as
+described in Table 13-9.
+
+Reference
+
+Process (= Detailed Step)
+
+1. [dentify Communication
+Requirements
+
+¢ Develop mission data flow diagram based on | Sec. 2.1
+mission requirements Chap. 4
+
+¢ Specify:
+
+~ Data sources, data end users, & locations
+— Quantity of data per unit time
+
+~ Access time
+
+- Transmission delay
+
+— Availability, reliability
+
+¢ Identify links and ground station locations
+
+¢ Consider use of relay satellites and relay
+ground stations
+
+¢ Determine data processing location
+
+2. Specify Alternate
+Communications
+Architectures
+
+Fig. 13-2
+Fig. 13-2
+
+Sec. 2.1
+
+Sec. 9.5.1
+Sec. 13.2
+Table 13-4
+
+Tables 13-2,13-9
+
+3. Determine Data Rates
+for Each Link
+
+¢ Determine sampling rates, quantization
+levels
+
+¢ Specify bits per sample
+
+4. Design & Size Each Link | * Evaluate alternatives and compare
+5. Document Reasons
+
+for Selection
+
+factors in turn determine antenna size and transmitter power—the major cost drivers
+in sizing the space system. The fourth step, described in Sec.13.4, provides informa-
+tion to aid the reader in estimating the size and mass of the satellite antennas, and
+primary power and mass of the satellite transmitters. These parameters are inputs to
+
+the spacecraft design process described in Chap. 10, and the ground system design
+process described in Chap. 15.
+
+13.1 Communications Architecture
+
+A communications architecture is a network of satellites and ground stations
+interconnected by communication links. The term ground station is equivalent to
+Earth station, ground terminal, and Earth terminal, including land mobile, airborne,
+and shipborne terminals. All of these names refer to the same thing: the antenna, trans-
+mitter, receiver, and control equipment required to communicate with the satellite.
+
+Communication links allow a satellite system to function by carrying tracking,
+telemetry, and command data or mission data between its elements. Figure 13-1
+illustrates the ground station-to-satellite uplinks, satellite-to-ground station downlinks,
+and satellite-to-satellite crosslinks, or intersatellite links, that support a space system.
+Not shown are additional communication links which may be necessary to transfer
+data between the ground stations and a mission control center or users. For example,
+the Air Force’s Satellite Control Network uses the DSCS-III communications satellite
+to relay data between remote tracking stations and the satellite control facility in
+California.
+
+In space systems, the transmitter and receiver must be in view of each other, using
+frequencies high enough (above 100 MHz) to easily penetrate the Earth’s ionosphere.
+
+13.1 Communications Architecture 535
+
+A satellite in a nongeostationary orbit is often out of view of its user’s ground station.
+In this case a second satellite, usually in a geostationary orbit, may be used to relay
+data between the satellite and its ground station. The ground station-to-satellite link is
+the forward link, and the satellite-to-ground station link is the return link. As shown in
+the figure, both the forward and return links contain uplinks, downlinks, and
+crosslinks.
+
+Crosslinks or
+
+intersatellite
+Sensor Relay Links Relay
+Satelite Satellite ReturnLink @/ Satellite
+Forward Link
+Return
+Link
+Forward Relay Forward\\ —
+ua. Mission ya, Link Satellite Link
+Satellite
+in Orbit Intersatellite
+Uplink Links
+Launch Uplink \\ TT&c Downlink
+
+Phase a DOWN--t—
+
+4 We link
+
+a | O
+
+TT&C = Tracking, Telemetry & Control
+
+Stations
+
+Fig. 13-1. The Communications Architecture Consists of Satellites and Ground Stations
+Interconnected with Communications Links.
+
+Since 1990, several new classes of satellites in the orbital category of low-Earth
+orbit (LEO) and medium-Earth orbit (MEO) have been developed for various com-
+mercial uses. They will be used for both satellite-based cellular telephone service as
+well as for wideband data trunking (fiber optic type service where there is no fiber)
+and data distribution for Internet-type services.
+
+In these new systems, the terms forward link and return link sometimes take on new
+definitions. As in terrestrial cellular, the forward link for a satellite-based cellular
+system is from the ground station (gateway) to the user terminal (UT) or radio-
+telephone, and the return link is from the radiotelephone to the ground station. In this
+terminology, both the forward and return links contain uplinks and downlinks to and
+from the satellite.
+
+A constellation at an altitude of 1,000-1,500 km typically requires from 48 to 64
+satellites to provide complete Earth coverage. A constellation at 10,000 km typically
+requires 12 satellites.
+
+13.1.1 Communications Architecture Defined by Satellite-Ground
+Station Geometry
+
+The geometry formed by satellite orbits and ground stations determines the basic
+communications architectures illustrated in Fig. 13-2. Table 13-2 lists the principal
+advantages and disadvantages of each.
+
+536 Communications Architecture 13.1
+
+Receive & = ai
+
+Transmit
+
+A. Store and Forward
+B. Geostationary Orbit
+
+C. Molniya Orbit D. Crosslink in Communication
+Satellite System
+
+E. Low-altitude. Crosslinked Comsat Network
+
+Fig. 13-2. Typical Communications Architectures Used to Satisfy Different Mission
+Requirements. Table 13-2 summarizes the characteristics of each architecture.
+
+Store and Forward (Fig. 13-2A): The architecture for relaying communications by
+satellite appeared in 1960, when the U.S. Army launched the Courier satellite [Mott-
+ley, 1960]. In this configuration, the satellite orbits at low altitude (under 1,000 km),
+receives data, and stores it in memory. When it moves in view of a receiver ground
+station, the satellite transmits the stored data. This architecture permits the use of a
+low-cost launch vehicle due to the low-altitude orbit. The satellite cost is also lower
+
+13.1 Communications Architecture §37
+
+TABLE 13-2. Comparison of Five Example Communications Architecture.
+
+. Low-Altitude, * Low-cost launch * Long message access time
+Single Satellite, |» Low-cost satellite and transmission delay
+Store & Forward (up to several hours)
+
+* Polar coverage with inclined orbit
+
+. Geostationary |* No switching between satellites * High-cost launch
+Orbit ¢ Ground station antenna tracking ¢ High-cost satellite
+often not required * Need for stationkeeping
+¢ Propagation delay
+* No coverage of polar regions
+
+. Molniya * Provides coverage of ¢ Requires several satellites for
+Orbit polar region continuous coverage of one
+
+* Low-cost launch per satellite hemisphere
+¢ Need for ground station antenna
+pointing and satellite handover
+
+¢ Network control more complex
+¢ Need for stationkeeping
+
+. Geostationary |¢« Communication over greater distance |* Higher satellite complexity
+Orbit with without intermediate ground-station and cost
+
+Crosslink relay * Need for stationkeeping
+* Reduced propagation delay * Relay satellite and launch costs
+* No ground stations in foreign territory:|+ No coverage of polar regions
+~ Increased security
+— Reduced cost
+
+. Low-Altitude ¢ Highly survivable—multiple paths * Complex link acquisition ground
+Multiple * Reduced jamming susceptibility Station (antenna pointing,
+Satellites _ due to limited Earth view area frequency, time)
+with Crosslinks |, Reduced transmitter power * Complex dynamic network
+
+due to low altitude control
+* Low-cost launch per satellite * Many satellites required for
+
+¢ Polar coverage with inclined orbit high link availability
+
+due to the wider antenna beamwidth required to illuminate the Earth, which reduces
+the satellite antenna size and stabilization requirement. Usually satellite stationkeep-
+ing is not required. The principal disadvantage of this architecture is its long access
+time and transmission delay, perhaps hours, waiting for the satellite to pass into view
+of the user ground station.
+
+There are several commercial systems planning to use store-and-forward commu-
+nication for very low-cost service. They include ORBCOMM, Starsys, Vita, LEO-1,
+FAI, and ESat. They typically operate in the VHF portion of the radio spectrum at very
+low bandwidths. These are sometimes referred to as “little LEOs.”
+
+Geostationary Orbit (Fig. 13-2B): Virtually all communication relay satellite
+systems and many meteorological satellites use this architecture, in which the satellite
+is placed in a near-zero deg inclination orbit at 35,786 km altitude. The period of the
+orbit is exactly equal to the period of the Earth’s rotation, making the satellite appear
+stationary when viewed from the ground (see Sec. 6.1). The cost of ground stations is
+usually less for this architecture because little or no antenna pointing control is
+
+538 Communications Architecture 13.1
+
+required. A stationary network is far easier to set up, monitor, and control compared
+to a dynamic network containing nonstationary (relative to Earth) satellites. There is
+no need to switch from one satellite to another, for the satellite is always in view of the
+ground station. Principal disadvantages are lack of coverage above 70-deg latitude and
+the high launch cost. Furthermore, the delay time for propagation to and from the
+synchronous orbit is about 0.25 sec, which sometimes causes problems (echoes,
+acknowledgment protocols) in communications satellite systems.
+
+Molniya Orbit (Fig. 13-2C): The Russian space program uses this architecture to
+cover the northern polar regions. The satellites are in highly elliptical orbits with an
+apogee of 40,000 km, a perigee of 500 km, and an inclination angle of 63.4 deg (see
+Sec. 6.1). The apogee is over the North Pole to cover northern latitudes. The period of
+the orbit is 12 hr, but because it is highly elliptical, the satellite spends about 8 hr of
+each period over the northern hemisphere. Two or more satellites orbit in different
+planes, phased so that at least one is always in view from all northern latitudes.
+Unfortunately, the Molniya orbit requires continuous changing of antenna pointing
+angles at the ground station and switching links between satellites as they move in and
+out of view.
+
+Geostationary Orbit with Crosslink (Fig. 13-2D): When a geostationary satellite is
+beyond line-of-sight of a ground station, a second geostationary satellite relays data
+between it and the station. A relay satellite is better than a double-hop link using two
+adjacent ground stations as a relay (shown in Fig. 13-2B), because the relay ground
+stations must often be on foreign territory, which is more costly, less secure, and less
+survivable. The obvious disadvantage of this architecture is the added relay satellite
+and its crosslink, which increase the system’s complexity, risk, and cost.
+
+Low Altitude (Fig. 13-2E): This architecture places 20 or more satellites in low-
+altitude (500 to 3,000 km) orbits and sometimes connects them with crosslinks. The
+system divides digital messages into packets of a few hundred or thousand bits, labels
+each packet with time-of-day and its destination, and then transmits it in a short burst.
+Packets may arrive by different paths with different propagation times, depending on
+the satellite-ground station geometry at the time of transmission. The receiving station
+must sort and reassemble the packets in the correct order to obtain the original mes-
+sage. Because so many alternate paths are available, the system is highly survivable.
+The low-altitude orbit also improves immunity to jamming from the ground since the
+satellite sees a smaller Earth area. Finally, the uplink transmitter power is lower due to
+the shorter distance between ground station and satellite, making unauthorized recep-
+tion less probable. On the other hand, this architecture needs complex network
+synchronizing and control functions because of relative motion between satellites and
+ground stations. Without stationkeeping, the satellites may drift together in bunches,
+leaving gaps in the coverage which lead to significant link outages.
+
+Note: The satellite-based cellular telephone service mentioned in paragraph 13.1
+and Table 13-2 and below do not use packet transmission as described above, but typ-
+ically CDMA or TDMA waveforms.
+
+There are several classes of nongeostationary, low- and medium-altitude satellites
+which have begun to appear since about 1990. These are:
+
+¢ Low-Earth Orbit (LEO) Cellular Satellites. These are the systems such as
+Iridium, Globalstar, and Ellipso which provide cellular telephone-type service
+to hand-held and mobile phones from the low-Earth orbits.
+
+13.1 Communications Architecture 539
+
+* Little Low-Earth Orbit (Little LEO) Satellites. These satellites, including
+Starsys, Vita, LEO-1, FAI, and ESat, are commercial, low-powered, low-orbit
+satellites intended for store-and-forward communication at a very low price at
+VHF frequencies.
+
+* Medium-Orbit (MEO) Satellites. These include ICO, Star Lynx, Pentriad,
+Ellipsat, and TRW Global EHF Satellite Network. They provide cellular as
+well as high-speed data transfer service.
+
+¢ Low-Earth Orbit (LEO) Data Satellites (also called “Big LEOs”). These
+include Teledesic, Boeing’s Aeronautical Radio Navigation, Globalstar GS-
+40, and Iridium Macrocell. These satellites will provide digital data trunking
+as well as Internet access to many users.
+
+Other architectures may meet particular mission requirements. For example,
+Chapell [1987] suggests a hybrid system which contains satellites at both low and high
+altitudes, thus combining their advantages. Lee [1988] compares three architectures
+for providing regional communications satellite service to the continental United
+States. These architectures contain four geostationary satellites, which are either
+isolated, interconnected by double-hop ground stations, or interconnected by
+crosslinks.
+
+Some systems combine geostationary and low-Earth orbit satellites. Alcatel’s Sky-
+bridge combined with Loral’s Cyberstar and Globalstar’s GS-2 systems both combine
+low-Earth orbit satellites for primary customer connection and geostationary satellites
+to act as relays between LEOs, as well as connecting to some customers. The service
+is typically data services such as Internet connectivity. Intersatellite links are widely
+used both between low-Earth orbit satellites and between low-Earth orbit and geosta-
+tionary satellites in order to perform the required communication functions.
+
+13.1.2 Communications Architecture Defined by Function
+
+Three types of communications architectures, shown in Fig. 13-3, are tracking,
+telemetry, and command; data collection; and data relay. A point-to-point network is
+used to provide a link to a single ground station. The broadcast architecture transmits
+data to multiple ground stations located in different areas. This architecture requires
+either a broad-beam satellite antenna, a narrow-beam antenna rapidly switching
+between ground stations, or a multibeam antenna (see Sec. 13.4). In communications-
+satellite applications, the satellite network control is often part of a larger
+telecommunications network containing thousands or millions of users. Thus the
+satellites may be shared among many nonsimultaneous users, using multiple-access
+techniques described in Sec. 13.5 (see Chap. 2 of Morgan and Gordon [1989]).
+
+The satellite communications architecture may be affected by data processing on
+board the satellite. Usually data collected by a satellite is transmitted directly to the
+user via the downlink. However, the data often requires processing to make it useful.
+If the system contains many ground stations, processing the data in the satellite and
+then transmitting it may be more economical than having each user process it separ-
+ately. This processing often reduces the data rate, leading to further cost savings (see
+Sec.13.2). A satellite system using onboard processing is Europe’s Meteosat, which
+stores and formats cloud-scanner data before transmitting it to several ground stations
+at a reduced data rate.
+
+540 Communications Architecture 13.1
+
+Data Dissemination Architecture
+
+Satellite
+Function
+
+Tracking
+Telemetry
+& Command
+
+TT&C data is transmitted
+between the satellite and
+ground station, either directly
+or by a relay satellite.
+
+Data
+Collection
+
+Satellite sensors collect data
+and transmit it to single ground
+Station directly or by relay station.
+
+Data-relay satellites relay
+data originating on ground
+or in another satellite to
+
+A relay satellite
+can provide broadcast
+TT&C service to
+multiple satellites.
+
+Satellite sensors collect
+data and broadcast it to
+multiple ground stations.
+
+Data-relay satellite broadcasts
+data originating on ground
+or in another satellite to
+
+single ground station. multiple ground stations.
+
+Fig. 13-3. Communications Architectures may be Defined by the Function Performed.
+Open circles represent a relay satellite.
+
+Operators at ground (air, ship) stations usually control the mission in (near) real
+time by transmitting commands to the satellite. When the satellite is not in view of the
+ground-control station during part of its orbit, commands previously received and
+stored in the satellite are executed by an onboard timer. The advantages of this
+approach are flexibility to changing requirements, greater reliability, and a less
+complex, lower-cost satellite. The disadvantages are vulnerability to human error or
+failure of the ground control facility. Costs for the ground control segment, especially
+operations, can be high.
+
+On the other hand, the satellite itself can control a mission by using onboard data-
+sensing and programmed decision-making processes. This arrangement replaces
+ground control, is highly survivable, has fast response time (communication link
+delays eliminated), excludes errors introduced by human operators, and reduces
+ground equipment and operations cost. But it is less responsive to changing or unan-
+
+13.1 Communications Architecture 541
+
+ticipated requirements, and the satellite itself is more complex, more costly, and
+potentially less reliable. Even when using an autonomous control architecture, a
+ground station is generally required to collect data from the spacecraft and to serve as
+a backup to the onboard control system.
+
+Usually, ground stations control unmanned satellites to simplify the satellite
+design. In the future we expect more functions, such as stationkeeping, to be
+performed in the satellite to reduce the dependence on the ground station control (see
+Sec. 16.1).
+
+During the operation of a satellite system, the communication links may need to be
+reconfigured, or its parameters, such as power or bandwidth, adjusted to accommodate
+a change in requirements. The process for doing this is called network control.
+Communications architectures may require a number of control functions
+(Table 13-3). Early satellites, such as Sputnik, did not need these functions because
+their systems used only one satellite, a single satellite-to- ground link, and a broadbeam
+antenna. On the other hand, a communications satellite system such as the NASA
+ACTS [Naderi and Kelly, 1988] contains many narrowbeam satellite antennas with
+demodulators and switching circuits. This architecture requires a sophisticated system
+for network control. Network control can be centralized using a single ground station
+or satellite, or distributed with multiple ground stations or satellites. Distributed con-
+figurations use a control hierarchy, or set of priorities, to avoid conflicts. Distributed
+control makes the network less vulnerable to failure of a single control element (see
+Chap. 14 for further details).
+
+TABLE 13-3. Network Control Functions.
+
+Resource Allocation Frequency channel, bandwidth assignment
+Time slot assignment
+
+Date rate assignment
+
+Modulation/coding assignment
+
+Antenna beam assignment
+
+Transmitter power control
+
+Crosslink assignment
+
+Link Acquisition Antenna pointing
+Frequency acquisition
+Time acquisition
+Acknowledgment protocols
+Crypto synchronization
+
+Performance Monitoring and
+Redundancy Switching
+
+Spectrum analysis
+Signal-to-noise ratio reduction (due to rain, etc.)
+Interference identification
+
+Fault identification
+
+Redundancy switching
+
+Reallocation of resources
+
+Time/Frequency Standard Provide universal time
+
+Tracking, Telemetry, Range, range-rate measurement
+and Command (TT&C) Command signal formatting, verification, execution
+Telemetry signal demultiplexing, processing, display
+
+Stationkeeping Ephemeris prediction
+Thrust control
+
+
+542 Communications Architecture 13.1
+
+13.1.3 Criteria for Selecting Communications Architecture
+
+Individual users will assign different priorities to the criteria for selecting a
+communications architecture. For example, a commercial company will try to reduce
+cost and risk, but the military may make survivability the top priority. The factors
+which affect the criteria are explained below:
+
+Orbit: The satellite orbit determines how much time the satellite is in view by the
+ground station and the potential need for intersatellite links. The satellite altitude
+determines the Earth coverage, and the satellite orbit determines the delay between
+passes over a specified ground station. Together, orbit and altitude set the number of
+satellites needed for a specified continuity of coverage (see Sec. 7.2). Transmitter
+power and antenna size depend on the distance between the satellites and the ground
+stations (see Sec. 13.3). Satellite view time determines the signal-acquisition and
+mission-control complexity (see Chap. 14).
+
+In the satellite-cellular systems described above, intersatellite links are not neces-
+sarily used. Instead, the constellation is designed so that at least one satellite is in view
+by the gateway and every user at all times, so that there are no “outages.” Coverage is
+determined by the number of satellites, the inclination of their orbits, the latitude of the
+gateway and user, and the number of gateways located around the world, if intersatel-
+lite links are not used.
+
+If intersatellite links are used, then the number of gateways and their location
+becomes much less critical, as many satellites can connect to a single gateway through
+intersatellite links. Various systems proceeding now have used different philosophies
+with respect to intersatellite links, which can have great effect on the capital cost of the
+system. Intersatellite links make the satellites more expensive, but eliminate the need
+for many fairly expensive ground stations (gateways), for example.
+
+There are many systems proposed in various frequency bands which use not only
+the geostationary orbit, the low-Earth orbit discussed above, and also what is called a
+medium-Earth orbit (MEO), which ranges in altitude from about 10,000 to 20,000 km.
+These are typically inclined with respect to the equator as the LEOs are, and can
+address users with small, hand-held UTs, but can see a much larger portion of the Earth
+at one time, so that only 10 or 12 of them are required to give nearly complete Earth
+coverage.
+
+RF Spectrum: The RF carrier frequency affects the satellite and ground station
+transmitter power, antenna size and beamwidth, and requirements for satellite stabili-
+zation. In turn, these factors affect satellite size, mass, and complexity. The carrier
+frequency also determines the transmitter power needed to overcome rain attenuation
+(see Sec. 13.3). Finally, it is necessary to apply for and receive permission to use an
+assigned frequency from a regulatory agency such as the International Telecommuni-
+cation Union, the Federal Communications Commission, or the Department of
+Defense’s Interdepartmental Radio Advisory Committee, and every nation’s regulatory
+agency. These agencies also allocate orbit slots for geostationary satellites (Chap. 21).
+
+Data Rate: The data rate is proportional to the quantity of information per unit time
+transferred between the satellite and ground station (see Sec. 13.2). The higher the data
+rate, the larger the transmitter power and antenna size required (Sec. 13.3). Processing
+the spacecraft-generated data on board the satellite reduces the data rate without losing
+essential information, but makes the satellite more complex (see Sec. 13.2).
+
+Duty Factor: The fraction of time needed for operation of a satellite link is the duty
+factor, which is a function of the mission and the satellite orbit. A low duty factor
+
+13.2 Data Rates 543
+
+enables a single ground station to support more than one satellite (usually the case for
+telemetry and command). Alternatively, several users may share a single satellite link
+(see Sec. 13.5).
+
+In the case of LEOs used for cellular service, one gateway will typically have
+several antennas communicating simultaneously with several satellites, each of which
+may be carrying 1,000 or more individual circuits. In this case, the ground station duty
+factor will be nearly 100% as antennas switch from satellite to satellite; the UT use
+factor will be quite small, however, as is the use of a telephone.
+
+Link Availability: Link availability is the time the link is available to the user
+divided by the total time that it theoretically could be available. It depends on equip-
+ment reliability, use of redundant equipment, time required to repair equipment, out-
+ages caused by rain, and use of alternate links. Typical goals for link availability range
+from 0.99 to 0.9999, the latter value applying to commercial telephone networks. (See
+Chap. 19 for a discussion of reliability.)
+
+Link Access Time: The maximum allowable link access time, or time users have to
+wait before they get their link, depends on the mission. For example, we usually
+demand access to a voice circuit in seconds. Meteorological data is needed in less than
+an hour to be useful in weather forecasting. On the other hand, X-ray data from a
+scientific satellite can be stored and transmitted later. Tracking, telemetry, and
+command links are often required in near real-time (a few seconds), especially if a
+problem requires an immediate response from the satellite-control operator. Link
+access time depends strongly on orbit selection, which determines when a satellite is
+in view of the ground station. Note that a real-time response is impossible for deep
+space missions, because the radio propagation time is minutes or hours long.
+
+Threat: Various kinds of threats may influence system design. For military
+applications, choices of frequency, antenna, modulation, and link margin need to be
+evaluated for susceptibility to jamming. At the same time, a high-altitude nuclear
+detonation can disturb the propagation of radio signals. A physical threat to the
+satellite might dictate multiple satellites or a hardened design (see Chap. 8). A physical
+threat to a ground station might demand a data-relay satellite with crosslinks to allow
+the ground station to be relocated in safe territory.
+
+The FireSat sample mission uses low-altitude satellites with limited coverage. If a
+ground station is near the forest area under surveillance, a store-and-forward or
+crosslink architecture is not required. The communications architecture is then simply
+a single satellite operating when in view of its ground station. A separate ground
+station is required for each major area under surveillance.
+
+13.2 Data Rates
+
+In designing a communications architecture for space missions, we must ask: what
+is the information to be transferred over our communication links? How fast must the
+transfer rate be? Keeping in mind that higher rates of data transmission mean higher
+system costs, we need to decide how we will transfer information to the user.
+
+Satellite links originally used analog modulation techniques to apply the data onto
+the RF carrier for transmission over the link. Since 1980, however, most space-ground
+communication links use digital modulation. To implement a digital system, we must
+first sample the amplitude of the analog signal at a rate equal to at least twice the high-
+est frequency in the signal spectrum, f,,,. In 1928 Nyquist” showed that if we meet this
+
+544 Communications Architecture 13.2
+
+condition we can theoretically reconstruct the original analog signal from the samples
+(see Sklar [1988], Sec. 2.4). For example, the normal human voice has a frequency
+spectrum range of about 3.5 kHz. Thus, to reproduce it digitally, the sampling rate
+must be at least 7,000 samples/sec. However, practical considerations, such as realiz-
+able filter limitations, suggest that the sampling frequency should be at least 2.2 times
+the maximum input frequency [Sklar, 1988]:
+
+Se2 2.2 fin (13-1)
+
+Using Eq. (13-1), our 3.5-kHz voice signal must be sampled at a rate of
+7.7 ksamples/s. In fact, the sampling rate of commercial digitized voice systems is
+8 ksamples/s. Another example is the sampling rate of the audio compact disc player
+which is 44.1 ksamples/s—about 2.2 times 20 kHz, the maximum source frequency of
+interest for high-quality music.
+
+The analog amplitude sample is next converted to a digitized word composed of a
+series of bits. Consider the analog-to-digital converter process illustrated in Fig. 13-4,
+where three bits designate one of eight amplitude levels. For example, a 6.3 V ampli-
+tude converts to a 3-bit word—110. At the receiver, a digital-to-analog converter
+converts this word according to the algorithm 22 + 21 + 0° + 0.5 = 6.5 V, leaving a
+quantization error of 0.2 V. This quantization error can be reduced by increasing the
+number of bits in the word.
+
+110 Quantization
+Error for Input
+fa 6 “tT | fF | 4. ne | Voltage of 6.3
+Zo 101 } | i
+32? ©
+23 25
+So =
+®> 100 .
+£ s >
+o 2 34
+« 6 (0 =
+53 2
+a 010
+
+001
+
+000
+
+Input Voltage
+
+Fig. 13-4. Example of Analog-to-Digital Conversion for 8 Quantization Levels (3 bits).
+
+The analog-to-digital converter divides the total amplitude range of the input
+sample into M quantizing levels, where M = 2”, and n is the number of bits per sample.
+Assuming a uniform spacing of quantization levels, the maximum quantization error
+is 0.5 AV where AV is the quantization step size, equal to Vyp / M = Vpp / 2", where
+Vpp is the full-scale input signal voltage.
+
+* Harry Nyquist set the stage for modern digital communications with his classic paper, “Cer-
+tain Topics on Telegraph Transmission Theory,” published in the Transactions of American
+Institute of Electrical Engineers in 1928 (vol. 47, pp. 617-644).
+
+13.2 Data Rates 545
+
+It can be shown [Panter, 1965] that the mean-squared noise power due to quan-
+tization is (AV)2/12. The signal-to-quantization noise power ratio is (M2 — 1), which
+is approximately equal to M2 or 22”, assuming a uniform distribution of the input
+signal amplitudes over Vpp. See Table 13-4."
+
+TABLE 13-4. Required Bits Per Sample. The number of bits per sample is determined by the
+maximum quantization error and quantization noise allowed.
+
+Maximum Signal Power to Quantization
+Number of Quantization Error Noise Power Ratio”
+Bits Per Sample (%) (dB)
+
+* Assumes signal amplitudes and quantization errors are uniformly distributed.
+
+The effect of quantization noise may be reduced by varying the size of the
+quantization steps, without adding to their number, so as to provide smaller steps for
+weaker signals. For a given number of quantization levels, coarser quantization is
+applied near the peak of large signals, where the larger absolute errors are tolerable
+because they are small compared to the larger signal amplitudes. These techniques are
+commonly applied to voice transmission, where the speech waveform is compressed
+at the transmitter end prior to digitization, and expanded at the receiver. Taken
+together, the compressor and expander are called a compandor.
+
+The number of bits per sample is determined by the mission requirements. The Jet
+Propulsion Laboratory typically uses 256 shades of gray (i.e., n = 8) in differentiating
+voltages from its imaging sensors, and 32 (n = 5) is normally used for low-definition,
+black-and-white TV transmission. The length of the digital word selected depends on
+the precision one requires for the application. For example, we do not need this preci-
+sion for satellite equipment temperatures, whereas scientific measurement may require
+a highly precise data link, if justified by the sensor accuracy.
+
+The data rate is the number of samples per second times the bits per sample, or the
+number of bits per second, abbreviated bps. Thus a digitized voice circuit in a com-
+mercial telephone network requires 8 ksamples/s times 8 bits/sample for a data rate of
+64 kbps. Table 13-5 lists other examples.
+
+The cellular-satellite systems are using methods for modulation, demodulation, and
+forward error correction that greatly reduce the data rates needed for transmission. For
+example, the Globalstar system uses code division multiple access with Reed-
+Solomon coding for forward error correction and Viterbi decoding. It sends voice
+through a variable-rate encoder/decoder at an average rate of 9.6 kb/s, and can reduce
+toa 4.8, 2.4 or 1.2 kb/s rate under stress. These rates are much less than those discussed
+above, and in Table 13-5, and represent new methods of coding digital data. With these
+
+* In dB, the signal-to-quantization noise ratio is 6n. See Sec. 13.3 for the definition of dB.
+
+546 Communications Architecture 13.2
+
+TABLE 13-5. Bit Rate Required to Transmit Analog Information Over a Digital Communi-
+cation Link. The bit rate of digitized, or pulse code modulated (PCM), voice can
+be reduced by transmitting only the changes in amplitude between consecutive
+samples. This technique is known as Delta PCM.
+
+Max Input Sampling Number
+Analog Freq., fm Frequency Bits Per Data Rate R
+Information (Samples/s) Sample n (bps)
+
+Voice (PCM) 3,600 8,000 7
+Voice (Delta PCM) 3,600 8,000
+Cellular Voice 4,800 4,800
+
+Original Picturephone®
+
+DS1 Multiplexer
+24 Voice Channels
+
+Color Television
+(broadcast quality)
+
+* After 1 bit per sample added for signalling and supervision.
+
+new codes it is possible to achieve a bit error rate (BER) of about 10-!° at a bit energy
+to incremental noise (E},/N, ) ratio of only 5 dB.
+
+Digital communication techniques are used instead of analog for a number of
+reasons. First, digital signals can more precisely transmit the data because they are less
+susceptible to distortion and interference. Second, digital signals can be easily
+regenerated so that noise and disturbances do not accumulate in transmission through
+communication relays. Third, digital links can have extremely low error rates and high
+fidelity through error detection and correction. Also, multiple streams of digital
+signals can be easily multiplexed as a single serial-bit stream onto a single RF carrier.
+Other advantages are easier communication-link security and implementation by drift-
+free miniature, low-power hardware, including microprocessors, digital switching,
+and large scale integrated circuit chips. In this chapter we will consider only digital
+communications.
+
+Using the formulas developed in Chap. 5, we can easily determine the relationship
+between the quantity of data, D, the data rate, R, and the parameters for a single ground
+station pass from Sec. 5.3.1. Specifically,
+
+D= RFT pax ~ Tinitiate ) iM (13-2)
+
+FH=(L/Angy) @C0S(COSA ng, | COSAmin ) (13-3)
+
+where T,,,,, is the maximum time in view (i.e., the pass duration when the satellite
+passes directly overhead) from Eq. (5-52), F is the fractional reduction in viewing time
+due to passing at an Earth central angle A,,,;, away from the ground station, A,,,, is the
+maximum Earth central angle from Eq. (5-36), Tjnisiare is the time required to initiate
+a communications pass, and M is the margin needed to account for missed passes due
+to ground station down time, sharing of ground resources, transmission of other data,
+or conflicts on board the satellite or within the communications process. A reasonable
+value for Tynitiare is about 2 minutes. M is conservatively estimated at a value of 2 to 3
+unless it is a dedicated ground station with a specified value for the percentage of pass
+
+13.2 Data Rates 547
+
+time that will be used for collecting data. For the fraction of time in view, we may wish
+to use mean values rather than one for a specific ground station pass in Eq. (13-3). As
+discussed in Sec. 5.3.1, the average value of F is about 80% for satellites in a circular
+low-Earth orbit, and 86% or more of all passes will have F greater than 0.5.
+
+With this background on digital techniques, we now consider the data rate require-
+ments for the three types of architectures discussed in the previous section: telemetry,
+tracking, and command (TT&C); data collection; and data relay.
+
+13.2.1 TT&C
+
+The number and accuracy of functions being monitored in the satellite determines
+the telemetry data rate. Several hundred functions such as voltages, temperatures, and
+accelerations may require monitoring to determine if all satellite subsystems are
+operating correctly, and, if not, to determine where a failure occurred. Sampling each
+telemetry sensor in sequence with a multiplexer combines all telemetry data into a
+single bit stream. The sampling rate is usually low, perhaps once every second or once
+every 10 sec, because the monitored parameters vary slowly. For example, suppose we
+want to monitor 50 temperature sensors and 50 voltages once every 10 sec with an
+accuracy of 1.5%. The data rate required is 100 samples per 10 sec times 5 bits per
+sample, or 50 bps. Some applications require precise time or amplitude resolution of
+the data. In these cases, the data may be transmitted in analog form by frequency mod-
+ulation of one or more subcarriers [Morgan and Gordon, 1989].
+
+The rate needed to transmit commands to a satellite is usually quite low—perhaps
+only one per second. A command message may be 48 to 64 bits long, consisting of a
+synchronizing preamble (a set series of bits), an address word that routes the command
+to its satellite destination, the command itself (often a single on-off digit), and some
+error detection bits to make sure the command was correctly received. Some com-
+mands can cause irreversible functions or damage the satellite if performed at the
+wrong time. These commands are usually first transmitted and stored in the satellite.
+Correct reception by the satellite is verified by telemetry, after which a second com-
+mand is transmitted to execute the function. If the command is to be executed later
+when the satellite is out of the ground station’s view, a time of execution is added to
+the command word and stored in the satellite. The command is executed later when
+the time contained in the command word coincides with the satellite’s clock time.
+
+To track a satellite, the ground station measures range or range rate for computing
+and updating the orbit ephemeris. For example, the Air Force adds a one Mbps
+pseudorandom (PN) code to the command link. The satellite command receiver
+extracts this code. It is then retransmitted as part of the telemetry downlink signal. The
+ground station measures the arrival time of the code relative to its uplink transmission
+time to determine the round-trip delay, from which the range is computed. NASA’s
+Goddard Range and Range Rate system operates the same way except it uses several
+harmonically related sinusoidal tones plus a pseudorandom code. Intelsat uses only
+four ranging tones.
+
+In most cases we would want to use an existing TT&C ground station network.
+Table 13-6 summarizes the key parameters of four networks (see Chaps. 11 and 15 for
+additional details). The ratio of downlink-to-uplink frequencies listed in the table
+applies when the satellite transmitter is phased-locked to the received uplink carrier.
+This mode allows the Doppler frequency shift of the RF carrier to be accurately
+measured at the ground station to determine the range rate. The United States has
+NASA’s Deep Space Network and the Air Force’s Satellite Control Network. Intelsat
+
+548 Communications Architecture 13.2
+
+and other communications satellite operators use their own TT&C system, which
+eliminates the need to pay for the services of a larger network. The TT&C require-
+ments for FireSat are quite modest and can easily be handled by its own system, except
+during the launch phase.
+
+TABLE 13-6. Parameters of Existing Satellite TT&C Systems.
+
+Command (Uplink) Telemetry (Downlink)
+
+DL/UL
+Freq. Data Rate Data Rate | Carrier Freq. Range
+Network (GHz) (bps) (bps) Ratio Measurement
+Air Force SCN! 1.76-1.84 125- 256/205 1 Mbps PN Code
+(SGLS)
+NASA DSN | 2.025-2.120] 1.0-2,000| 2.2-2.3 240/221 PN Code at 1 Mbps + 8
+7.145-7.190 8.4-8.5 749/880 Ranging Tones,
+8 Hz to 500 kHz
+nist 5.92-6.42 | 100-250 | 3.9-4.2 | 1,000-4,800 Not 4 Ranging Tones:
+COMSAT 14.0-14.5 | 100-250 | 12.2 or17.7 | 1,000-4,800 applicable =| 27.777 kHz, 3,968.25
+
+Hz, 283.477 Hz, 35.431
+
+TDRS*** *MA S-Band| 10 kbps |MAS-Band| ikto1.5M | (S) 240/221
+(user satellite 2.1064 max 2.2875
+altitude below |**SA S-Band| 300k max | SA S-Band| 1k to 12M (S) 240/221
+
+12,000 km) | 2.025-2.120 2.2-2.3
+**SA K-Band| 25M max | SA K-Band | 1k to 300M
+
+13.775 15.0034
+
+(K)1,600/1 469
+
+*MA—Multiple Access, up to 20 users simultaneously
+**SA—Single Access ***Frequencies to and from user satellite
+
+Also shown in Table 13-6 is NASA’s Tracking & Data Relay Satellite (TDRS),
+which provides an alternative to ground stations for supporting the TT&C link [Yuen,
+1983]. The orbit of the user satellite must be below synchronous altitude to be in view
+of the TDRS antennas.
+
+13.2.2 Data Collection
+
+In the second type of network, a satellite sensor, such as an optical or radar scanner,
+collects data. This data is transmitted to the ground station for processing and viewing
+by the user. The pictures of global cloud cover on the evening television news come
+from a satellite sensor. Although we could include the sensor data as part of the telem-
+etry data discussed above, we usually consider the sensor data separately when the
+sensor data rate is greater than 100 kbps or so. Data rate requirements for payload
+sensors are discussed in Sec. 9.5.5.
+
+Table 13-7 lists the data rates for two satellite-sensor configurations. One example
+is a geostationary satellite with a radiometer which scans the entire Earth in 20 min
+with 1 km resolution. Here the data rate is 1.42 Mbps, similar to a meteorological sat-
+ellite such as GOES.
+
+On the other hand, using Eq. (9-23), we calculate the FireSat data rate to be
+85 Mbps—too high for any practical, cost-effective system. Let us review the Fire-
+Sat mission requirements. First, we need to scan 150,000 acres (about 25 km by 25
+km) in 4 min with 30 m resolution. By limiting the sensor coverage to the 150,000-acre
+area under surveillance as the satellite passes overhead, the sensor output rate would
+be only 2,900 pixels per second,” for a data rate of 39 kbps (for 1.6 samples per
+
+13.2 Data Rates 549
+
+pixel, 8 bits per sample and g = 0.95). This rate is far more attractive for practical
+designs. We could also use some form of data processing on board the satellite, as
+discussed below.
+
+TABLE 13-7. Data Requirement for Two Example Sensor-Satellite Systems. For FireSat the
+satellite ground track velocity provides scanning of the ground.
+
+Parameter FireSat Geostationary
+h_ = Orbit altitude (km) 700 35,786
+= Ground track velocity (m/s) 6,800 0
+= Ground resolution (m) 30 1,000
+w = Scan width (km) 2,700 Earth coverage
+w = Scan width (deg) 57.9 18
+Z = In-track scan (deg) Continuous 18
+T =Scan time 145 us/scan width 20 min/Earth image
+s = Number samples/pixel 1.6 1.6
+n =Number bits/sample 8 8
+q =Frame efficiency 0.95 0.95
+R = Date rate - bps 85 x 106 1.42 x 106
+
+In many cases we do not need all data collected by the satellite’s sensor. For
+example, our FireSat data is of no interest unless the sensor observes heat from a forest
+fire. Onboard data processing can be used to dramatically reduce the required data
+rates. For FireSat, onboard processing would consist of selecting and transmitting only
+those pixels receiving thermal energy above a specified temperature. The amount of
+data-rate reduction depends on the portion of the observed area that is burning. We
+must also insert extra bits to identify the position of the pixels or groups of pixels in
+the scan. Such data processing can reduce the data rate by a factor of 3 to 10 or more,
+depending on the nature of the data.
+
+Another technique for reducing the data rate is to transmit only the changes in the
+amplitude of the data samples. For example, the amplitude of the first pixel in a frame
+of data could be transmitted by an 8-bit word. Changes in amplitude of subsequent
+pixels, relative to the previous pixel amplitude, are then transmitted as 3-bit words,
+thus reducing the data rate by 3/8.
+
+Considerable effort has gone into reducing, or compressing, the data rate of a digi-
+tized voice channel [O’Shaughnessy, 1987]. One technique is Adaptive Differential
+Pulse Code Modulation, which transmits the difference between the actual voice
+sample and a predicted value based on several previous samples. Data rates have been
+reduced from 64 to 32 or 16 kbps using these techniques while maintaining commer-
+cial toll-quality voice. Even greater reduction in data rates have been achieved with
+Vocoders and Linear Predictive Coders. With this method, receivers use transmitted
+spectral or excitation parameters to control a voice synthesizer. It requires a data rate
+of only 600 bps to 2,400 bps, but the voice often sounds unnatural. Voice-excited
+vocoders combine the best features of the approaches described above, producing a
+reasonably natural-sounding voice channel with a data rate of 4,800 or 9,600 bps
+{Gerson, 1990}.
+
+2 2
+103m )\‘f I pixel 1 Y Imin
+* ion is {(25*25)km?}} —— ( I }
+The calculation is (( ) I a ) ( 30m ) amin )|\ 60sec) *
+
+550 Communications Architecture 13.3
+
+Reducing the data rate by processing or compression on board the satellite
+decreases the required transmitter power, significantly reducing satellite mass. (Data
+processing or compression uses VLSI circuits, which add little to satellite mass.)
+Instead of reducing the satellite mass, the ground stations can be made smaller with
+increased mobility and lower cost. A lower rate link can also better survive jamming.
+However, a compressed signal is less tolerant to bit errors, thus negating some of the
+advantages listed above. We expect increased use of data compression in the future as
+performance improves and cost decreases.
+
+13.2.3 Data Relay
+
+Most communications satellites and data-relay satellites simply retransmit the data
+received through a receiver-transmitter combination called a transponder. The total
+bandwidth capacities of three communication satellites are in Table 13-8. (See
+Table 13-6 for the TDRS capacities.) Transponder bandwidths of commercial geosta-
+tionary communication satellites are usually 36 MHz or 72 MHz. (These transponders
+are repeaters. See Sec. 13.5 for a description of the processing transponder.
+
+TABLE 13-8. Relay Bandwidth Capabilities of Representative Communication Satellites.
+The maximum data rate can be several times the bandwidth, depending on the
+modulation and ground station size. The first entry for Intelsat-V is read as 4
+transponders at 36 MHz and 1 transponder at 41 MHz. The tota/ relay bandwidth
+is calculated by multiplying the number of transponders by their bandwidth and
+adding them together.
+
+Transponder ” Total Relay
+Bandwidth Number Bandwidth
+Satellite Band (MHz) Transponders (MHz)
+Intelsat-V Cc 36/41 4h 2,137
+72/77 12/4
+72/77 2/2
+Ku 241 2
+DSCS-Iil X 50 1 375
+60 4
+85 1
+| Globalstar L,S,C 16.5 16 264
+Generic Internet Ka 100-1,000 20 4,000 |
+
+The cellular satellites have much different bandwidths. For example, Globalstar has
+16.5 MHz transponder channels to accommodate 13 of the CDMA 1.23 MHz chan-
+nels. The wideband Internet relay satellites proposed at Ka-band may have
+transponders with 1 GHz bandwidths, to accommodate multiple 155 Mbps channels
+for trunking Internet data between computers. The satellite communication world is
+becoming much more complex.
+
+13.3 Link Design
+
+The overall process of link design and, subsequently, payload sizing, is summa-
+rized in Table 13-9 and described in detail in this and the next section. The process for
+developing the communications architecture and determining the link requirements
+was detailed in Table 13-1.
+
+To understand link design, we need to define the relationship between data rate,
+antenna size, propagation path length, and transmitter power. This relationship is
+
+13.3 Link Design 551
+
+TABLE 13-9. Link Design and Payload Sizing Process.
+
+Process (= Detailed Step) Reference
+
+1. Define Requirements Table 13-1
+for Each Link
+
+2. Design Each Link (Input link geometry, data rate from
+Table 13-1.)
+
+A. Select frequency band Sec. 13.3.5
+B. Select modulation, coding Sec. 13.3.3
+
+C. Apply antenna size, beamwidth Eq. 13-19
+constraints (if any)
+
+D. Estimate atmospheric, rain absorption | Sec. 13.3.4
+
+E. Estimate received noise, interference {Table 13-10
+powers
+
+F. Calculate required antenna gains and | Secs. 13.3.2, 13.3.6
+transmitter power
+
+3. Size the Communication {| A. Select payload antenna configuration | Tables 13-14, 13-15
+Payload Subsystem B. Calculate antenna size Table 13-14
+C. Estimate antenna mass Table 13-16
+
+D. Estimate transmitter mass and power | Fig. 13-15
+
+E. Estimate payload mass and power Secs. 11.2, 11.3,
++ 3C and 3D above
+
+4, lterate Back to Table 13-1 Table 13-1
+
+defined by a link equation or link budget which relates all of the parameters needed to
+compute the signal-to-noise ratio of the communications system. The basic equation
+used in sizing a digital data link is
+
+E, _ PL,G,L,L,G,
+NV KER (13-4)
+
+o
+
+where E,/N, is the ratio of received energy-per-bit to noise-density, P is the transmitter
+power, L; is the transmitter-to-antenna line loss, G, is the transmit antenna gain, L, is
+the space loss, L, is transmission path loss, G, is the receive antenna gain, k is Boltz-
+mann’s constant, 7; is the system noise temperature, and R is the data rate. The
+propagation path length between transmitter and receiver determines L,, whereas L, is
+a function of factors such as rainfall density. In most cases, an E;,/N, ratio between 5
+and 10 is adequate for receiving binary data with low probability of error with some
+forward error correction. Once we select the orbit and determine the transmitter-to-re-
+ceiver distance, the major link variables which affect system cost are P, G;, G,, and R.
+Rain absorption also becomés a significant factor at radio frequencies above 10 GHz.
+
+Figure 13-5 illustrates the key relationships between power of the satellite’s
+transmitter, diameter of the ground-station antenna, and data rate for the downlink.
+These parameters are nearly independent of frequencies between 200 MHz and
+20 GHz under clear weather conditions. The required transmitter power is relatively
+independent of satellite altitude when the antenna beamwidth is set to just illuminate
+the coverage area indicated. At low altitudes the required transmitter power is reduced
+in the Earth coverage case because the area in view of the satellite is smaller.
+
+552 Communications Architecture 13.3
+
+10,000 | 1
+
+Noise Figure = 3 dB Ground Station
+Ep / No = 12.6 dB Antenna Diameter,
+
+No Atmospheric Loss
+
+1,000 1m
+
+0 dB Satellite Antenna
+
+100 Gain Synchronous Altitude
+
+Earth Coverage Beam
+Synchronous Altitude —
+
+Satellite Transmitter Power (W)
+
+Spot Beam
+from any
+Altitude with
+0.1 380 km
+Coverage—
+Diameter
+
+0.01
+10 100 1K 10K 100 K 1M 10M 100 M 1G 10G
+
+Data Rate (bps)
+
+Fig. 13-5. Satellite Downlink Characteristics. The required transmitter power is relatively
+independent of satellite altitude for constant coverage. At low altitude the required
+transmitter power is reduced in the Earth coverage case because the area in view of
+the satellite is smaller. The power is relatively independent of carrier frequency
+between 200 MHz and 20 GHz in the absence of rain and antenna-pointing error at
+the ground station.
+
+13.3.1 Derivation of Link Equation
+
+Consider a transmitter located at the center of a sphere of radius S, radiating power
+PL, isotropically, and thus uniformly illuminating the surface of the sphere. The power
+flux density, Wy, received on the sphere’s surface is the radiated power divided by the
+area of the sphere, that is, PL,/4mS2.The radiated power is the transmitter power,
+P, reduced by the line loss, L;, between the transmitter and the antenna.
+
+If the transmitting antenna has a narrow beamwidth, the power flux density is
+increased by the transmitting antenna gain, G,, defined as the ratio of power radiated
+to the center of the coverage area to the power radiated by an isotropic (omni-
+directional) antenna. The received flux density is reduced by the transmission path
+loss, Lg, which includes atmospheric and rain absorption. The power flux density then
+becomes:
+
+PL,G,L EIRP)L,
+p =e (13-5)
+4ns 4ns
+
+where Wr is typically expressed in W/m2. PL,G, is called the effective isotropic
+radiated power, or EIRP, in watts. In Fig. 13-6, the same E/RP and received power
+flux density is produced two ways, one using a high-power transmitter, the other a
+low-power transmitter. The difference between them is that the approach using a
+low-power, high-gain antenna illuminates only a limited coverage area, which may or
+may not meet the mission requirements.
+
+13.3 Link Design 553
+
+Receiver
+
+Coverage
+
+ink
+_ \ Area
+
+5 —Link_
+Transmitter
+
+EIRP = 25 x0.8x5=100
+
+P=25W Ve =e C=W,A
+
+Receive
+Antenna
+Area, A
+EIRP = 1x 0.8 x 125 = 100
+G, = 125
+wos ae
+= I = A
+——— Saas Exyuint ee a yt] hd ess
+—EE—L—E eS er ae
+L, =0.8 : Coverage
+s Area
+
+Fig. 13-6. Trade-off between Antenna Gain and Transmitter Power. These two communica-
+tion links have the same E/RP, received power density, and received signal power.
+However, the 1-W transmitter with the high-gain antenna has only 1/25 the coverage
+area provided by the 25-W transmitter with low-gain antenna.
+
+The received power, C, is W; times the effective receive antenna aperture area, A,.
+Here A,is equal to the physical aperture area, mD2/4, times the antenna efficiency, Nn.
+The efficiency, 7, is a Figure of Merit between 0 and 1, and is a function of various
+imperfections in the antenna, including deviations of the reflector surface from theo-
+retical, feed losses, and aperture blockage. A typical value for parabolic antennas is
+0.55, though 0.6 to 0.7 often occur in high quality, ground antennas. Substituting for
+W,, from Eq. (13-5), and A,, we obtain
+
+c= PaGibabin
+
+16S?
+
+where D, is the diameter of the receive antenna.
+
+The antenna gain may also be defined as the ratio of its effective aperture area, A,,
+to the effective area of a hypothetical isotropic antenna, A2/4m, where Ais the wave-
+length of the transmitted signal. For the receive antenna
+
+2 272
+o,-[ Ry S)- (13-7)
+
+(13-6)
+
+4 az 2
+
+554 Communications Architecture 13.3
+
+Substituting Eq. (13-5) into Eq. (13-4) we obtain
+
+A
+
+2
+45 = PL,G,L,L,G, = (EIRP)L,L,G, (13-8)
+
+C= PLG,LG,
+
+where C is the received power and (A/41S)? is defined as the space loss, L,.
+In digital communications, the received energy per bit, E,,is equal to the received
+power times the bit duration, or
+
+Ey =C/R (13-9)
+
+where C is in W, R is the data rate in bps, and E, is in W's or J.
+
+The noise power at the receiver input usually has a uniform noise spectral density,
+N,, in the frequency band containing the signal. The total received noise power, N, is
+then NB, where B is the receiver noise bandwidth. (B is determined by the data rate
+and the choice of modulation and coding, as discussed later in this chapter.) N, and NV
+are related to the system noise temperature, T,, by:
+
+N, =kT, (13-10)
+and (13-11)
+N =kT,B=N,B (13-12)
+
+where N, is in W/Hz, N is in W, k is Boltzmann’s constant = 1.380 x 10-23 J/K, T; is
+in K, and B is in Hz. By combining Eqs. (13-9) and (13-10) with Eq. (13-8), we obtain
+our original link equation, Eq. (13-4).
+
+13.3.2 Link Design Equations
+
+The link equation is a product of successive terms and, therefore, can be conve-
+niently expressed in terms of decibels or dB. A number expressed in GB is just 10 logy
+of the number. Thus, a factor of 1,000 is 30 dB and a factor of 0.5 is —3 db. If the
+number has units, they are attached to the dB notation. For example, 100 W is 20 dBW.
+Antenna gain is the ratio of radiated intensity in a specific direction to that of an
+isotropic antenna radiating uniformly in all directions and, therefore, is a pure number
+which should, in principle, be expressed in dB. However, we use dBi (dB relative to
+isotropic) as the units for antenna gain to be consistent with standard practice in the
+industry.*
+
+Eq. (13-4) can be rewritten in decibels as
+
+Ep/No= P + Ly + G, + Lyp + Ly + Ly + G, + 228.6 — 10 logT, - 10 logR (13-13)
+
+where E,/N,, L;, G,, L,, Lg,Ly,, and G, are in dB, P is in dBW, T, is in K, R is in bps,
+and 10 log k = —228.60 dBW/(Hz-K). This can also be written as
+
+E,/No= EIRP + Ly, + Ly + Lg + G, + 228.6 — 10 logT, — 10 logR (13-14)
+
+* Editor’s Note: Of course, modern computers are fully capable of multiplying real numbers
+instead of adding logarithms. Like much of astronautics, this peculiar nomenclature remains
+intact primarily to ensure the full employment of communications systems engineers.
+
+13.3 Link Design 555
+
+where the EJRP is in dBW and sensitivity of the receiving station, G,/T, = G,-
+10 log T,, is expressed in dB/K. Eq. (13-14) is preferred when specifying the trans-
+mitter EIRP and receiver G,/T;, separately.Note that in these equations, G, and T, must
+be specified at the same point, usually the junction between the receive antenna termi-
+nal and the Low Noise Amplifier.
+
+We can find the carrier-to-noise-density-ratio, C/N, by multiplying E,/N, by
+the data rate, R [see Eq. (13-9)]. Carrier power in W is the energy per bit in J times the
+number of bits per second.
+
+C/N, = E;/Ny + 10 log R (13-15a)
+= (EIRP) + L, +L, + G,/T, + 228.6 (13-15b)
+
+From Eq. (13-12), the carrier-to-noise-ratio, C/N is C/N, B or, in dB, is C/N, -
+10 log B. Combining this with Eq. (13-15b):
+
+C/N = EIRP + L, + L, + G, + 228.6 — 10 logT, —10 log B (13-16)
+
+where B is the noise bandwidth of the receiver in Hz. C/N also equals E,/N,+ 10
+log(R/B).
+
+The Received Isotropic Power, or RIP, is the power received if the receive antenna
+gain is 0 dB. If we substitute G,= 1 (0 dB) into Eq. (13-8), then C = RIP. Combining
+this expression with Eq. (13-4), and converting to dB yields:
+
+RIP = E,,/N, — G,/T,— 228.60 + 10 log R (13-17)
+
+where RIP is in dBW. A good way to specify the receiving system performance is to
+specify the bit error rate (the probability a data bit is incorrectly received) required for
+a given RIP. The designer then has the freedom to trade off his demodulator design
+(which determines the E/N, required to meet the specified bit error rate) against the
+antenna gain and noise temperature (G,/T,) to meet the RIP specification at minimum
+cost.
+
+We can similarly convert Eq. (13-7) to dB. Using the relationship f = c/A, where c
+is the velocity of light in free space ~ 3 x 108 m/s, we obtain the following equation
+for the antenna gain, G, in dB:
+
+G = 20 log 7 + 20 log D+ 20 log f+ 10 log 7 - 20 log c (13-18a)
+
+or
+G =~159.59 + 20 log D + 20 log f+ 10 log 7 (13-18b)
+
+where G is in dB, fis in Hz, and D is in m.
+
+For a circular antenna beam the half-power beamwidth, 9, is the angle across which
+the gain is within 3 dB (50%) of the peak gain. We may estimate @ from the following
+empirical relationship:
+
+21
+
+SGHzP
+where fGy, is the carrier frequency in GHz, and D is the antenna diameter in m.*
+
+@ in degrees (13-19)
+
+* Equation (13-19) yields a beamwidth about 20% greater than A/D (Chap. 9). This accounts for
+the nonuniform illumination of the parabola by the feed.
+
+556 Communications Architecture 13.3
+
+The antenna gain is approximately 27,000/@2, obtained by combining Eqs. (13-7)
+and (13-19), and assuming 7) = 0.55. A noncircular antenna has an elliptical beam with
+the half-power beamwidth along the major axis equal to 6, and the half-power beam-
+width along the minor axis equal to @, The gain of the noncircular beam antenna can
+be estimated:
+
+G = 44.3 — 10 log(,4,) (13-20)
+
+where @, and @, are in deg, and G is in dBi. For example, an antenna with a 1 deg by
+2 deg elliptical beam has the same gain as a circular antenna with a beamwidth of
+1.4 deg. Gain calculated in this manner is generally accurate to within 25% (1.2 dB)
+for beamwidths less than 150 deg. The beamwidths @, or @, can be estimated from
+Eq. (13-19) with D equal to the major axis or minor axis diameters.
+
+The above gain equations are for peak gain. However, a receive antenna might not
+be located at the center of the transmitter antenna beam, or vice versa. With narrow
+beamwidths, small errors in pointing the antenna (introduced by wind gusts on the
+ground or satellite stabilization errors, for example) can lead to significantly reduced
+gain. The following equation estimates the reduction from peak gain, Lg,in dB caused
+by a pointing offset from beam center:
+
+Lg=-12(e/0)2 (13-21)
+
+where @is the antenna half-power beamwidth, and e is the pointing error. For example,
+for e equal to 6/2, the pointing loss is 3 dB. In calculating a link budget, we would
+subtract this pointing loss from the antenna gain.
+
+From Eq. (13-6) the space loss, L,, is
+
+L,= (A /4nS)2 = (c /4nSf )2 (13-22)
+
+Converting into dB, this gives:
+L, = 20 log (3 x 108) — 20 log (41) — 20 log S — 20 log f (13-23a)
+= 147.55 — 20 log S — 20 log f (13-23b)
+
+where S is the path length in m, and fis the frequency in Hz.
+
+The system noise temperature, T,, is the sum of a number of individual contribu-
+tions from various sources. We have divided the noise sources into two groups. Those
+originating ahead of the antenna aperture (e.g., in the atmosphere) we call the antenna
+noise temperature, Tan,. These noise sources are external to the ground station, except
+for the antenna itself, and include:
+
+¢ Galactic noise
+
+¢ Noise radiated by clouds and rain in the propagation path
+
+¢ Solar noise (either in the antenna main beam or sidelobe)
+
+¢ Presence of the Earth (typically 290 K) in a sidelobe
+
+¢ Man-made noise (either in the antenna main beam or sidelobe)
+
+¢ Contribution of nearby objects, buildings, radomes, etc.
+
+¢ Temperature of blockage items in antenna subsystem such as booms or feeds
+
+Figure 13-7 shows the estimated noise temperature from various external sources
+as a function of frequency. Note the necessity of keeping the receive antenna from
+pointing toward the Sun when the beamwidth is narrow (<5 deg). Otherwise the Sun
+will significantly increase the antenna noise temperature.
+
+13.3 Link Design 557
+
+ta K(K)
+100,000°
+10,000°
+1,000°
+100°
+10°
+4°
+0.1°
+0.01 0.1 1.0 10 100
+Frequency (GHz)
+A: Estimated median business area man-made noise
+B: Galactic noise
+C: Atmospheric noise, value exceeded 0.5% of time
+D: Quiet Sun (1/2 deg beamwidth directed at Sun)
+E: Sky noise due to oxygen and water vapor (very narrow beam antenna);
+upper Curve, 0-deg elevation angle; lower curve, 90-deg elevation angle
+F: Black body (cosmic background), 2.7 K
+G: Heavy rain (50 mrvhr over 5 km)
+
+Fig. 13-7. Minimum Expected External Noise From Natural and Man-made Sources,
+10 MHz to 100 GHz [Ippolito, 1986).
+
+All noise sources between the antenna terminal and the receiver output are lumped
+together and called receiver noise temperature, T,.. Receiver noise originates from
+
+* Transmission Lines and Filters—equal to (1 — L)T, where L = P,,/ P;is the ratio
+of output power (P,) to input power (P;) and T is the component temperature
+in K.
+
+* Low Noise Amplifier—equal to (F — 1) 290 K, where F is the noise figure from
+Eq. (13-24).
+
+An additional contribution from subsequent amplifier stage noise exists, but is a
+small contributor because it is divided by the low noise amplifier gain.
+
+The noise figure, F, of the receiver is defined as:
+
+F=1+ Fr (13-24)
+1
+
+where T,.is the noise temperature of the receiver itself, and 7 is a reference tempera-
+ture, usually 290 K. The noise figure is often expressed in dB (that is, 10 log F). For
+example, a cryogenically cooled receiver for reception of telemetry signals from a
+space probe may have a noise figure of 1.1 (0.4 dB) for a noise temperature of 29 K.
+
+558 Communications Architecture 13.3
+
+Adding the antenna noise and receiver noise gives us the system noise temperature,
+T,. To find T, we add the noise contribution of the transmission line and bandpass filter
+which connect the antenna to the receiver’s low-noise amplifier. Thus:
+
+Th(1-L Ty(F-1
+Ts = Tant +[Btet) {BE-D) (13-25)
+
+where L, is the line loss between the antenna and receiver, expressed as a power ratio.
+The second term in Eq. (13-25) is the noise contribution from the transmission line,
+and the third term is the contribution from the receiver. The receiver noise temperature
+is the sum of these two terms. These noise temperatures are referred to the antenna
+terminal by dividing by L,. Continuing with our cooled receiver example, assume the
+line loss is 0.5 dB, making L, = 0.89. Then the noise contribution from the line loss is
+36 K and the receiver noise is 33 K, both referred to the antenna terminal. Then T, is
+Tanz + 69 K.
+
+Table 13-10 shows typical noise temperatures for satellite systems using uncooled
+receivers. When a narrow Satellite-antenna beam locks at Earth, the uplink antenna
+noise temperature is the temperature of the Earth, about 290 K. In the future, im-
+provements in design of low-noise amplifiers will reduce the receiver noise figures,
+especially at higher frequencies.
+
+TABLE 13-10. Typical System Noise Temperatures in Satellite Communication Links in
+Clear Weather. The temperatures are referred to the antenna terminal. [See
+Eq. (13-25)].
+
+Frequency (GHz)
+
+Noise bowatink Uplink
+Temperature [oz | 212 [20 | 02-20 [a
+100 20
+
+Antenna Noise (K) 25
+Line Loss (dB) . 0.5
+
+Line Loss Noise (K) 35
+Receiver Noise Figure (dB) . 1.0
+Receiver Noise (K) 75
+System Noise (K)
+
+System Noise (dB-K)
+
+13.3.3 Modulation and Coding
+
+Before we can complete our link design, we need to select a modulation and coding
+technique. Modulation is the process by which an input signal varies the characteristics
+of a radio frequency carrier (usually a sine wave). These characteristics are amplitude,
+phase, frequency, and polarization. Demodulation of the signal at the receiver consists
+of measuring the variations in the characteristics of the received carrier and deducing
+what the original signal was. Amplitude modulation, though common in terrestrial
+services, seldom appears in satellite systems because it requires larger (and more
+costly) transmitters. Phase or frequency modulation techniques are preferred, because
+the transmitter can operate at saturation for maximum power efficiency.
+
+Figure 13-8 shows the most common modulation techniques used in satellite
+systems. Binary phase shift keying (BPSK) consists of setting the carrier phase at 0 deg
+to transmit a binary 0, and setting the phase at 180 deg to transmit a binary 1. Quad-
+riphased phase shift keying (QPSK), takes two bits at a time to define one of four
+
+13.3 Link Design 559
+
+symbols. Each symbol corresponds to one of four carrier phases: 0 deg, 90 deg,
+180 deg, or 270 deg. Note that the symbol rate is one half the bit rate, thus reducing
+the spectrum width by one half.
+
+Time Function
+
+Frequency Spectrum
+
+BPSK
+
+o° | 180 0° O°} 180°} 180°
+
+QPSK
+
+FSK
+Fi F2
+
+2R
+Fl
+
+Le F2
+12345678
+
+= 333A
+|+— Fs —e}+— Fs —o
+(010) (011)
+
+Fig. 13-8. Modulation Types Commonly Used for Digital Signal Transmission in Satellite
+Communications. F is the data rate. The shaded region is the required bandwidth.
+
+Frequency shift keying (FSK) sets the carrier frequency at Fl to transmit a binary
+O, and at F2 to transmit a binary 1. The separation between F1 and F2 must be at least
+equal to the data rate to avoid performance loss from mutual interference. Thus, the
+transmitted spectrum width is at least twice the width of the spectrum generated by
+BPSK. Multiple frequency shift keying (MFSK) sets the carrier frequency to one of M
+frequencies. For example, for M = 8, the first three binary bits, 010, determine that the
+transmitted frequency will be F5. The next three bits, 011, set the frequency at F6. The
+symbol rate is one-third the bit rate, and the transmitted spectrum width is about 8/3
+the bit rate, where the separation between frequencies is the symbol rate. Less common
+spaceflight modulation schemes include minimum-shift-keying (MSK), offset-QPSK
+(OQPSK), 8PSK [Sklar, 1988], and BPSK/PM [Yuen, 1983].
+
+560 Communications Architecture 13.3
+
+These modulation techniques have different spectrum widths, and thus require
+different RF channel bandwidths, as illustrated in Fig. 13-8. An actual system may
+require wider bandwidths as a result of a tradeoff between performance and filter com-
+plexity. For example, the FLTSATCOM Experimental Package uses 8FSK as its mod-
+ulation technique, with the tone frequency separation and total spectrum width twice
+as large as that shown in the figure to make the filters less complex [McElroy, 1988].
+
+To demodulate a digital bit reliably, the amount of energy received for that bit, Ey,
+must exceed the noise spectral density, N,, by a specified amount. Communication
+theory derives the E,/N, needed to achieve a required bit error rate, BER, at the
+receiver output (see Sklar [1988], Chap. 3). The BER gives the probability of receiving
+an erroneous bit. For example, a BER of 10-5 means that, on the average, only one bit
+will be in error for every 105 bits received.
+
+FSK- and MFSK-modulated signals are usually demodulated by measuring the
+received power at each of the possible frequencies, and selecting the frequency with
+the largest power as the one transmitted. An advantage of this technique is that any
+variations in carrier phase introduced by the transmission channel (such as multipath)
+will not greatly degrade the link performance. For this reason, these modulation types
+are often used in military communications satellites (MFSK) and command links
+(FSK modulation of a subcarrier).
+
+On the other hand, demodulation of either BPSK and QPSK requires us to measure
+the phase of the received carrier. Thus phase distortion caused by the transmission
+channel will significantly degrade performance. The effect of this distortion can be
+reduced using Differential PSK (DPSK). This technique requires no change in carrier
+phase when transmitting a binary 0, and a 180-deg phase reversal when transmitting a
+binary 1. At the receiver the phase of the carrier received during each bit period is
+compared with the phase received during the previous bit period to determine whether
+a phase change took place. This modulation technique overcomes distortion effects
+provided the phase changes between successive bit periods are small (< 20 deg for
+< 0.5 dB degradation).
+
+Unfortunately, both BPSK and QPSK modulation experience sudden phase transi-
+tions at the bit boundaries. These transitions generate sidebands outside the main
+signal spectrum which may interfere with an adjacent frequency channel. But if the
+carrier phase is gradually moved from one phase position to the next during the bit
+period (from 0 deg to 180 deg, for example), then the sideband power is greatly
+reduced. One version of this technique is Minimum Shift Keying (MSK) [Sklar, 1988,
+Sec. 7.9.2]. These bandwidth efficient modulation techniques are particularly useful in
+communications satellite systems with multiple channels closely spaced to fit the
+available frequency spectrum.
+
+A modulation method that combines binary phase shift keying of a subcarrier with
+phase modulation of the carrier is BPSK/PM * modulation. Many TT&C links use this
+modulation because the carrier and data are transmitted at frequencies separated by the
+subcarrier frequency, which is made much larger than the data rate. This separation
+allows easy acquisition and tracking of the carrier, thus providing an accurate range-
+rate measurement. The disadvantages of this technique are additional power required
+for the carrier and increased bandwidth (to approximately twice the subcarrier fre-
+quency). For example, the SGLS TT&C downlink uses a 1.024 MHz subcarrier BPSK
+modulated by data rates up to 128 kbps. The subcarrier then phase modulates the
+
+* FireSat will use this technique for the uplink.
+
+13.3 Link Design 561
+
+carrier. For a phase modulation of +1.0 radian, the transmitter power is divided
+between the carrier (60%) and subcarrier (40%). Figure 13-9 shows how the BER
+varies with E,/N,.Table 13-11 lists the types of digital modulation commonly used in
+space communication systems.
+
+1072
+
+10-3
+Reed-
+Solomon
+8
+ui 10-4
+= Viterbi
+i)
+£ Shannon
+a imit
+10-5
+:
+a
+
+10-6
+
+10°7 5" 9 2 4 6 8 10 12 14
+*Noncoherent detection -p/N, (dB)
+
+Fig. 13-9. Bit Error Probability as a Function of E,/N,.The theoretical performance limit
+can be approached by use of error correction coding.
+
+For the digital systems discussed in this chapter, the BER is used to evaluate the
+performance of the link. On the other hand, analog communication links are generally
+evaluated in terms of the output signal-to-noise ratio, S/N. The S/N is a function of the
+C/N, the modulation type, and how the S/N is expressed. For example, the S/N of a
+frequency modulated (FM) television signal depends on the modulation index and the
+pre-emphasis plus weighting factors in addition to the C/N (see Morgan and Gordon
+[1989], Sec. 3.4.5).
+
+Forward error correction coding significantly reduces the E,/N, requirement,
+which in turn reduces the required transmitter power and antenna size, or increases
+link margin. Extra bits, called parity bits, are inserted into the data stream at the
+transmitter. These bits enable the receiver to detect and correct for a limited number
+of bit errors which might occur in transmission because of noise or interference. While
+complex, these techniques can be implemented at relatively low cost, using large scale
+integrated circuits with small size and low power consumption. This type of coding
+does have some disadvantages. The extra error correction bits increase the bit rate, and
+hence the transmission bandwidth, often a scarce resource. Also, a low E,,/N, makes
+initial signal acquisition more difficult.
+
+A common type of error correction technique is convolutional coding with Viterbi
+decoding (Viterbi, 1967; Sklar, 1988]. A rate-1/2 convolutional code is implemented
+by generating and transmitting two bits for each data bit. The data rate is therefore one-
+half the transmitted bit rate (hence “rate-1/2’’). The receiver demodulates and stores in
+
+562 Communications Architecture 13,3
+
+TABLE 13-11. A Comparison of Several Modulation and Coding Schemes Used in Sat-
+ellite Communication Systems. The theoretical values of E,/N, shown must
+be increased by 1—3 dB to account for filtering, timing, and frequency errors. See
+text for definition of modulation schemes. In the bottom row A = data rate and fgc
+
+= subcarrier frequency.
+
+BER = 10-5| Spectrum
+
+Modulation
+
+Utilization
+
+Advantages
+
+Disadvantages
+
+Good BER performance.
+Good use of spectrum.
+
+Not susceptible to phase
+disturbances.
+
+Excellent use of spectrum.
+
+BPSK and
+QPSK Plus
+R-1/2 Viterbi
+Decoding
+
+BPSK and Plus
+RS Viterbi
+Decoding
+
+8FSK Plus
+R-1/2 Viterbi
+Decoding
+
+0.5 and 1.0
+
+Not susceptible to phase
+disturbances.
+
+Good BER performance.
+Not susceptible to phase
+disturbances.
+
+Excellent BER
+performance.
+
+Susceptible to phase
+disturbances.
+
+Higher E,/N, required.
+
+More susceptible to phase
+disturbances.
+
+Higher E,/N, required.
+Poor use of spectrum.
+
+Poor use of spectrum.
+
+Higher complexity.
+Reduced use of spectrum.
+
+Best BER performance.
+
+BPSK/PM
+(A@ = 1.0 rad
+sinewave)
+
+Excellent BER
+performance.
+
+Not susceptible to phase
+disturbances.
+
+Most complex.
+Reduced use of spectrum.
+
+Poor use of spectrum.
+High complexity.
+
+Low adjacent channel
+interference.
+
+Carrier transmitted for
+Doppler measurement.
+
+Higher complexity,
+
+Requires extra power
+and bandwidth.
+
+memory a sequence (typically 62 bits long). As time goes on, additional bits are
+received and stored. These sequences are compared with coded sequences which could
+have been transmitted. The possible sequence which most closely resembles the
+received sequence is chosen as the most likely sequence transmitted. This process is
+repeated a number of times to reduce the probability of error. As shown in Fig. 13-9,
+Viterbi decoding greatly reduces the E,/N, required to obtain a specified BER. For
+example, a BER of 10-5 is achieved with an E,/No Of 4.4 dB. This represents an
+improvement, or coding gain, of 5.2 dB below the 9.6 dB required for uncoded BPSK.
+
+There is a value of E,/N, equal to —-1.6 dB, known as the Shannon limit, below
+which no error-free communication at any information rate can take place. This is
+derived from the Shannon-Hartley theorem, which states that the maximum theoreti-
+cal data rate, Rjg,, Which can be transmitted over a transmission channel with band-
+width, B, is
+
+13.3 Link Design 563
+
+Cc
+
+where C/N is the average carrier-to-noise power ratio in the channel (see Panter
+[1965], Sec. 19.2; or Sklar [1988], Sec. 7.4).
+
+We cannot reach the Shannon limit in practice because the transmission bandwidth
+and coding complexity increases without bound. But we can approach this limit by
+using a double, or concatenated, coding scheme. The Pioneer deep-space communica-
+tion link uses this technique to obtain the performance required to overcome the large
+space loss [Yuen, 1983, Sec. 5.4.4]. The binary signal is first block encoded using a
+255-bit Reed-Solomon code with 32 parity bits. The block-encoded signal is then
+encoded using the rate-1/2 convolutional code. The data is recovered at the receiver
+with a Viterbi decoder followed by a Reed-Solomon decoder. As shown in Fig. 13-9,
+the BER performance for the concatenated code is only 4.2 dB above the Shannon
+limit at a BER of 10-5. Longer and more complex codes can be used to push perfor-
+mance even closer to the Shannon limit. This technique is not presently used for data
+rates much above 100 bps due to the complexity and cost of the decoding process.
+However, we expect this limitation to disappear in the future with the development of
+high-speed, low-cost digital processing circuits.
+
+Figure 13-9 demonstrates that the BER is sensitive to the E;/N, level. At error rates
+below 10-4, a decrease of 1 dB in E»/N, Will increase the BER about one order of
+magnitude. Thus, providing adequate link margin in our design (discussed later) is
+very important. Note. that the E,/N, values given are theoretical, based on infinite
+bandwidth transmission channels and ideal receivers. In practice, we must account for
+band-limiting effects, deviations from ideal filter responses, phase noise and fre-
+quency drift in local oscillators, noise in carrier tracking loops, and bit synchronizing
+errors. Thus, we must add 1 or 2 dB to the theoretical E/N, to allow for these losses.
+
+Choosing which modulation and coding technique to use depends on cost,
+complexity, difficulty of acquiring the signal, limits on transmission bandwidth, and
+susceptibility to interference or fading. In the case of power-limited systems, where
+power is scarce but bandwidth is available, coding makes sense. Most systems today
+use some forward error correction coding to save transmitter power unless the data rate
+is greater than several hundred Mbps, in which case limits on both bandwidth and
+hardware speed become significant.
+
+Table 13-11 showed that to obtain a low value of E;,/N, for a BER of 10-5, we must
+be less efficient in using the spectrum, which means the transmission bandwidth must
+increase. This is the result of adding forward error correction check bits to the signal
+before modulation, thus increasing the transmission rate through the channel. How-
+ever, recent techniques can achieve significant coding gains without increasing the
+bandwidth [Ungerboeck, 1982; Sklar, 1988, Sec. 7.10.6]. The basic idea is to combine
+the coding and modulation process to generate a set of possible coded signal patterns
+at RF, each pattern corresponding to an n-bit word. The receiver knows the set of pos-
+sible patterns and chooses the pattern that most closely resembles what it receives. For
+example, a four-state, rate-2/3, encoder combined with 8PSK modulation achieves a
+3 dB coding gain over uncoded QPSK modulation with the same bandwidth. (8PSK is
+like QPSK except the carrier phase is set at one of 8 possible phases separated by
+45-deg intervals.) Such schemes have been proposed for high-speed data communica-
+tion on satellite channels and are likely to be used in future space systems [Deng and
+Costello, 1989].
+
+564 Communications Architecture 13.3
+
+13.3.4 Atmospheric and Rain Attenuation
+
+The transmission path loss caused by the Earth’s atmosphere, L,, is a function of
+frequency as shown in Fig. 13-10. This figure gives the attenuation at 90-deg eleva-
+tion, that is, zenith. To determine the loss at elevation angles, 6, above 5 deg, divide
+the zenith attenuation by sin 6. At frequencies below 1,000 MHz, ionospheric scintil-
+lation can cause significant fluctuations in received amplitude and phase. These effects
+are most severe at frequencies below 200 MHz during periods of high sunspot activity,
+when they can disrupt communications (see Ippolito [1986], Chap. 8). Above 50 GHz,
+high attenuation occurs at frequencies corresponding to the oxygen absorption band.
+Virtually all Earth-space communications use frequencies between these two
+extremes, though some projects have considered the 90-GHz band. Of special note is
+the high absorption band of oxygen at 60 GHz. Intersatellite links often operate at
+60 GHz, using the atmosphere to shield from interference or jamming originating on
+the Earth’s surface.
+
+102
+
+101
+
+10-2
+
+Theoretical One Way Zenith Attenuation (dB)
+
+2 5 10 20 50 100 200 400
+Frequency (GHz)
+
+Fig. 13-10. Theoretical Vertical One-way Attenuation from Specified Height to the Top of
+the Atmosphere. Plot assumes 7.5 g/m? of water vapor at the surface, and does
+not include effect of rain or cloud attenuation [NASA, 1983].
+
+Figure 13-11 shows that clouds and rain attenuation also add to losses, increasing
+with frequency, in the transmission path. This figure comes from the Crane model—a
+set of tables and equations based on observed climatic data used to estimate the rain
+attenuation (see Crane [1980], or Ippolito [1986]). This attenuation becomes an
+important consideration when designing systems employing satellite-Earth link
+frequencies above 10 GHz. Figure 13-11 also shows that the attenuation increases
+rapidly as the antenna elevation angle decreases below 20 deg. When operating at
+frequencies above 20 GHz, the minimum elevation angle to the satellite should be
+specified at 20 deg, especially in high rainfall areas. Note, however, that increasing the
+minimum elevation angle dramatically reduces the size of the satellite’s coverage area
+(see Secs. 5.3 and 5.4),
+
+13.3 Link Design 565
+
+50
+
+T TF T TTT
+
+Elevation
+Angle 10°
+
+40 Availability
+
+99.5%
+== == 98.0%
+ay
+aS)
+~ 30 r
+€
+$s
+3
+s
+5
+220+
+i=}
+3
+a
+10
+toe L414
+2 4
+
+8 10 20 40
+Frequency (GHz)
+
+Fig. 13-11. Rain Attenuation Predicted by Crane Mode! for Rain Climate Typical of the
+Northern United States. Ground station altitude = 0 km, latitude = 40°. For other
+cases, see Ippolito [1986].
+
+The percentage of time the link is available depends on the margin which the link
+has in clear weather. A higher link availability demands a greater margin. The avail-
+ability numbers shown in Fig. 13-11 correspond to the climate of northeastern United
+States. The availability for a specified link margin will be higher in the Midwest and
+lower in the Southeast, compared to those shown in the figure. (Bear in mind that these
+availability numbers come from average weather conditions over many years; they do
+not account for the possibility that this year the rainfall may be higher or lower than a
+normal year.)
+
+A by-product of rain attenuation is an increase in antenna temperature, 7, given by
+
+T =(1-L)% (13-27)
+
+where L, is the rain attenuation given as a power ratio, and 7, is the temperature of the
+rain, usually assumed to be 290 K. The significance of this noise increase depends on
+the system noise in clear weather. For example, if a receiving system with a normal
+system temperature of 727 K experienced 10 dB rain attenuation, its noise temperature
+would increase to 988 K, increasing N, by 1.3 dB. The decrease in C/N, would then
+be the sum of the rain attenuation (-10 dB) and the increased noise (—1.3 dB) totaling
+11.3 dB.
+
+13.3.5 Frequency Selection
+
+Regulatory constraints exist on the selection of frequency band, transmission band-
+width, and power flux density. For example, international agreements have allocated
+frequency bands for space communications, as listed in Table 13-12. These agree-
+ments originated with the International Telecommunications Union (ITU) and the
+
+566 Communications Architecture 13.3
+
+World Administrative Radio Conference (WARC). They are administered in the United
+States by the Federal Communications Commission (FCC) for commercial users, and
+by the Interdepartmental Radio Advisory Committee for military users. The system
+designer must apply for and receive permission from the appropriate agency to operate
+at a specified frequency with the specified orbit and ground locations. This is often a
+time-consuming procedure (see Chap. 21.1). For an excellent summary of this com-
+
+plex subject, see Morgan and Gordon [1989].
+TABLE 13-12. Limitations on the Frequency Bands and Flux Densities Established by the
+ITU. Power density limits are for elevation angle >25 deg. They are about 10 dB
+less for lower angles. :
+
+Frequency Range Downlink Power
+
+(GHz) Flux Density
+Frequency Limit
+Band Downlink Service (dBW/m2)
+
+UHF 0.2 — 0.45 Military _ .
+L 1.635 — 1.66 1.535 — 1.56 Maritime/Nav ~1.44/4 KHz
+Telephone
+[Ss 2.65 — 2.69 2.5-2.54 | Broadcast, Telephone —137/4 kHz
+C 5.9-6.4 3.7 — 4.2 Domestic, Comsat [ —142/4 kHz
+x 79-8.4 7.25 —7.75 Military, Comsat —142/4 kHz*
+
+Ku 14.0-14.5 12.5-— 12.75 Domestic, Comsat -138/4 kHz
+Ka 27.5-31.0 17.7-—19.7 Domestic, Comsat ~105/1 MHz
+SHF/EHF 43.5-— 45.5 19.7 — 20.7 Military, Comsat —
+SHF/EHF 49 38 Internet Data, -135/1 MHz
+Telephone, Trunking
+V | ~60 Satellite Crosslinks —
+
+*No limit in exclusively military band of 7.70-7.75 GHz.
+
+A criterion for frequency band allocation is the potential for one link to interfere
+with another. Extensive analysis is required when applying for a frequency band and
+orbit to avoid interference with, or by, existing services such as terrestrial microwave
+links and ground-based radar operations. Especially significant are the antenna side-
+lobe levels and the dynamic range of powers over which the system must operate. For
+ground-station antennas operating in the 4-6 GHz and 12-14 GHz bands, the FCC
+specifies the maximum sidelobe gain as (32 — 25 log @) dBi for | deg < @< 48 deg;
+otherwise —10 dBi for 48 deg < @ < 180 deg, where dBi is dB relative to an isotropic
+radiator (0 dB gain) and @ is the angle in deg off the axis of the main antenna beam.
+Also shown in Table 13-12 are the maximum allowed power flux densities radiated by
+the satellite onto the Earth. These limitations, set by the ITU, are necessary to avoid
+interference to existing terrestrial services, such as microwave relay links. __
+
+Two geostationary satellites in approximately the same orbit location servicing the
+same ground area may share the same frequency band by: (1) separating adjacent
+satellites by an angle (typically 2 deg), which is larger than the ground station’s beam-
+width, and (2) polarizing transmitting and receiving carriers orthogonally, which
+allows two carriers to be received at the same frequency without significant mutual
+interference. Right-hand and left-hand circular polarization are orthogonal, as are
+horizontal and vertical linear polarization. Commercial systems use these frequency-
+sharing techniques extensively [Morgan and Gordon, 1989].
+
+13.3 Link Design 567
+
+13.3.6 Link Budgets
+
+The link budget provides the designer with values of transmitter power and antenna
+gains for the various links in the system. It is therefore one of the key items in a space
+system design, revealing many characteristics of the overall system performance.
+
+Table 13-13 presents link budgets for FireSat command and telemetry using the equa-
+
+tions and figures given in this chapter.
+Transmitter Power | P| Watts | Input parameter
+
+TABLE 13-13. Link Budgets for FireSat.
+
+20
+
+Transmitter Power P dBW | 10 log(P) | 0.0 | 13.0 |
+Transmitter Line Loss | ot, |B Input parameter
+Transmit Antenna Beamwidth | = | deg | Input parameter | 20 | 320 |
+Peak Transmit Antenna Gain | Gy | Bi Eq. (13-20)
+Transmit Antenna Diameter Eq. (13-19)
+
+Transmit Antenna Pointing Offset
+
+3
+Transmit Antenna Pointing Loss Lot | dB f Eq. (13-21) | -0.1
+Transmit Antenna Gain (net) G dBi 38.2
+Equiv. isotropic Radiated Power EIRP 37.2
+Propagation Path Length Input parameter} 2,831
+Input parameter| 0.07
+| deg | Input parameter 70 0.2
+8 [ease
+| dBi Grp + Lor -1.9 39.0
+
+System Noise Temperature Ts K | Tabl
+Data Rate R
+
+e 13-10 614
+
+bps |Input parameter) 100
+
+Rewied eM) [Raney] @@ [Fate | 13 [98
+implementation Loss (3) | — | 4B [Estimate [| -2 | -2 |
+eon a | | ee | 88
+
+Space Loss
+
+Fle
+
+Propagation & Polarization Loss
+
+~
+Esty
+
+Receive Antenna Diameter
+
+G)
+
+Peak Receive Antenna Gain (net)
+
+Receive Antenna Beamwidth
+
+Receive Antenna Pointing Error
+
+Receive Antenna Pointing Loss
+
+e
+Lor
+ir
+
+Receive Antenna Gain G
+
+135
+85 x 106
+
+alas
+
+
+568
+
+Communications Architecture 13.3
+
+A detailed procedure for a downlink design is as follows:
+
+1.
+
+10.
+
+11.
+12.
+
+13.
+
+14.
+
+15.
+
+16.
+17.
+
+Select carrier frequency, based on spectrum availability and FCC allocations.
+(Refer to Table 13-6 for TT&C, Table 13-12 for communication satellites.)
+
+. Select the satellite transmitter power, based on satellite size and power limits.
+
+. Estimate RF losses between transmitter and satellite antennas. (Usually
+
+between —1 and —3 dB.)
+
+. Determine the required beamwidth for the satellite antenna, depending on the
+
+satellite orbit, satellite stabilization, and ground coverage area (see Chap. 7).
+
+. Estimate the maximum antenna pointing offset angle, based on coverage
+
+angle, satellite stabilization error, and stationkeeping accuracy.
+
+. Calculate transmit antenna gain toward the ground station, using Eqs. (13-20)
+
+and (13-21). You might also want to check the antenna diameter, using
+Eq. (13-19), to see if it will fit on the satellite.
+
+. Calculate space loss, using Eq. (13-23a). This is determined by satellite orbit
+
+and ground-station location.
+
+. Estimate propagation absorption loss due to the atmosphere using Fig. 13-10,
+
+dividing the zenith attenuation by the sine of the minimum elevation angle
+(e.g. 10 deg) from the ground station to the satellite. (Consider rain attenua-
+tion later.) I would also add a loss of 0.3 dB to account for polarization
+mismatch for large ground antennas. Using a radome adds another 1 dB loss.
+
+. Select the ground station antenna diameter and estimate pointing error. If
+
+autotracking is used, let the pointing error be 10% of the beamwidth. Use
+Eq. (13-21) to calculate the antenna beamwidth.
+
+Calculate the receive antenna gain toward the satellite. For FireSat we used
+antenna efficiency, 7, of 0.55.
+
+Estimate the system noise temperature (in clear weather), using Table 13-10.
+
+Calculate E,/N, for the required data rate, using Eq. (13-14).
+
+Using Fig. 13-9, look up E,/N, required to achieve desired BER for the
+selected modulation and coding technique. The downlink for FireSat is modu-
+lated with BPSK and the uplink is BPSK/PM. See Table 13-11.
+
+Add 1 to 2 dB to the theoretical value given in Fig. 13-9 for implementation
+losses.
+
+Calculate the link margin—the difference between the expected value of
+E,/N, calculated and the required E,,/N, (including implementation loss).
+
+Estimate the degradation due to rain, using Fig. 13-11 and Eq. (13-27).
+
+Adjust input parameters until the margin is at least 3 dB greater than the esti-
+mated value for rain degradation, depending on confidence in the parameter
+estimates.
+
+For communications satellites to evaluate a complete communication link (ground-
+to-ground), you must do the downlink shown above, and also calculate the uplink, and
+combine their E,/N,s in order to evaluate the communication link.
+
+13.3 Link Design 569
+
+The downlink calculation described above provides the signal-to-noise at the
+ground station based on the assumed parameters for the downlink. In order to establish
+the performance of a communication link Earth-to-Earth, it is necessary to do the same
+calculation on the uplink from the ground station to the satellite. The overall link per-
+formance can then be predicted based on the design of the satellite communication
+payload. In a bent-pipe satellite, the signal-to-noise ratio established on the uplink is
+used as the “signal” input for the downlink, and a final signal-to-noise is calculated
+based on the noise already on the signal plus the noise gained on the downlink. For a
+signal processing payload (see Sec. 13.5.2), where signals are demodulated and re-
+modulated on board the satellite, then the overall signal-to-noise performance is only
+that of the downlink, because this is a “pure” signal generated on the satellite. Many
+of the new data satellites, and some of the cellular telephone satellites, use onboard
+processing.
+
+When digital links are evaluated in terms of their bit error rate, the system for signal
+processing satellites gets more complicated, because there will be a certain bit error
+rate on the uplink which becomes the starting point for the downlink. The bit error rate
+will never be better than the weakest link. For these systems, it is desirable to make the
+uplink very robust so that bit error rates of 10-9 or 10-10 are achieved on the uplink,
+in order that, again, the downlink determines the overall performance. This is typical
+for most satellite links, as the satellite is limited in the amount of transmit power,
+whereas ground stations are relatively independent of that limitation, at least until
+frequencies of 30 GHz and above are used, in which case the cost of the transmitters
+becomes a limiting factor. Transmit power, transmit antenna gain, receiver noise
+figure, and receive antenna gain establish the maximum signal- -to-noise that can be
+established on any link.
+
+Many of the data handling satellites discussed elsewhere in this chapter expect to
+deliver 10-10 bit error rates on the entire Earth-Earth link. This is being achieved by
+using very powerful forward-error-correcting codes (see Sec. 13.3.3). Convolutional
+coding and Viterbi decoding (rate 1/3, K = 7) allow 10-!° bit error rates with E/N,
+of only 5 dB for many newer, commercial data satellites.
+
+The question often asked is, “How much margin is enough?” Clearly, too much
+margin is wasteful and costly, but not enough margin could occasionally lead to
+excessive bit error rates. Intelsat carries a 4 to 5 dB margin for their C-Band links. At
+frequencies above 10 GHz the margin should be 6 to 20 dB to accommodate atmo-
+spheric and rain losses, the exact amount depending on the required link availability
+and the amount of rainfall expected.
+
+The order of the steps outlined above will depend on which parameters are
+specified. For example, one might start with link margin and solve for transmitter
+power. The uplink design is performed in the same way, except the receive antenna
+beamwidth may depend on the Earth-coverage requirement rather than size or pointing
+limitations.
+
+Figure 13-12 illustrates how the downlink design, using a geostationary satellite,
+can vary with choice of carrier frequency. In this example, the satellite antenna’s
+beamwidth is fixed at 6 deg to illuminate a specified Earth coverage area, and the
+ground-station size is fixed at 0.5 m for ease of transport. As the frequency decreases,
+the satellite antenna’s diameter increases to maintain the specified beamwidth (and
+gain) until it reaches a maximum size (or mass) limit, which, in this example, is 2 m
+at 1.75 GHz. Reducing the frequency further requires more transmitter power to
+compensate for the loss in antenna gain [see Eq. (13-18a)]. On the other hand, going
+
+570 Communications Architecture 13.4
+
+to higher frequencies requires more transmitter power to compensate for increasing
+receive antenna pointing loss and to provide a margin to operate through rain. The
+figure shows the preferred frequency is between 1 and 18 GHz.
+
+Satellite Antenna Satellite Antenna
+
+Beamwitth > 6° |~q—_—______— Beamwidth = 6°
+Diameter = 2 m (MAX) Diameter < 2m
+
+G= Constant x f? G,= Constant
+
+Ground Station
+Antenna
+
+100 Pointing Loss
+
+Increase
+Galactic
+Noise Satellite Satellite
+Antenna Antenna
+Diameter Beamwidth
+Limited Limited
+
+Rain Absorption
+and Noise for
+98% Availability
+
+Required Transmitter Power (W)
+3
+
+Required
+Transmitter
+Power in
+| Free Space
+
+0.1 1 10 20 =©30 40 50 100
+Frequency, f (GHz)
+
+Fig. 13-12. Example Downlink Design Showing Effect of Frequency Selection on Required
+Satellite Transmitter Power. A “window” exists between 1—20 GHz. The satellite is
+in a geostationary orbit and the ground terminal diameter is fixed at 0.5 m.
+
+Table 13-13 shows we can satisfy the FireSat mission with a 20-W transmitter
+operating at S-Band (2.2 GHz) with a broad-beam antenna covering the entire Earth.
+A higher-gain antenna requires continuous steering to point toward the ground station,
+making the satellite far more complex. The diameter of the ground station antenna is
+5.3 m.
+
+13.4 Sizing the Communications Payload
+
+We now have determined the satellite transmitter power and antenna aperture size
+required to support our links. These parameters have the greatest impact on satellite
+mass, and thus on the cost of the system. In this section we will describe these
+components and estimate their mass. This process is summarized in Table 13-9 in
+Sec. 13.3.
+
+Up to now we have considered only the parabolic reflector antenna, which is best
+suited for applications where the peak gain is above 20 dB and beamwidth is less than
+15 deg. For lower-gain, wider-beam applications, we may prefer other types of
+antennas with lighter mass and simpler design, especially at frequencies below 1 GHz
+(see Table 13-14). For example, an Earth-coverage satellite antenna has a beamwidth
+just big enough to illuminate the Earth. At geosynchronous altitude, this beamwidth is
+
+13.4 Sizing the Communications Payload 571
+
+TABLE 13-14. Antenna Types for Satellite Systems. (Formulas from Jasik [1961]) In these
+equations, C, D, L, and A are in m and f is in GHz.
+
+a
+
+Parabolic Helix Horn Biconical Horn
+Antenna h Al
+Type Reflector ey i +
+
+caf amin =~ D> > "4
+
+C=nD = o } ‘ ;
+3A C=nD Coaxial Line
+TS 4
+Beam Shape} Conical Conical Conical Toroidal
+
+Typical Max 5-20
+
+Gain (aBi)
+
+Peak Gain
+(dBi)
+
+17.8 + 20 log D| 10.3 + 10 log (C2L/43) | 20 log (C/A) | Slog (h/A)+3.5
+0.8<C/A<1.2 -2.8 R>2a
+
++ 20 log f
+(n = 0.55) (n = 0.70) (n = 0.52) a =PQ2nA)
+
+Half-Power Typically
+Beamwiath 40° x360°
+
+(deg) — an for gain 2-1 GBi
+70° x 360°
+
+for gain > -3 dBi
+
+Peak Gain &| G= 19.1 dBi G=19.5 dBi G=19.1 dBi
+
+Dimensions | p= 2.9 m D:0.19m 0.24m D=3m
+of 18 Beam or h=4m
+at 400 MHz L:9.8m 62m 7
+
+Telemetry
+Coverage Regions
+
+Command
+Coverage Regions
+
+\\
+
+125°
+
+\S
+
+Fig. 13-13. Typical Satellite-Antenna Requirements for Telemetry and Command Cov-
+erage. The satellite is spin-stabilized during transfer orbit, and 3-axis stabilized in
+geostationary orbit [Lo and Lee, 1988}.
+
+18 deg. A simple horn antenna is often used at frequencies of 4 GHz or above (such as
+the Intelsat V C-Band TT&C antenna). When the frequency is below about 2 GHz, the
+helix often has lighter mass and is easier to mount on a satellite structure. Either a
+
+572 Communications Architecture 13.4
+
+single helix (FLTSATCOM UHF transmit), or quad-helix (Intelsat V L-Band) may be
+used. Table 13-14 compares these choices for an Earth-coverage antenna at
+400 MHz. Wider satellite antenna beamwidths are required during launch and insertion
+into orbit because satellite maneuvers cause large variations in angle toward the
+ground station. During transfer orbit the satellite is often spin-stabilized, thus requiring
+a toroidal beam (omnidirectional in the plane perpendicular to the satellite spin axis)
+to provide continuous coverage. Figure 13-13 shows a typical antenna pattern. A
+biconical horn can generate this beam if it is mounted on a mast to avoid reflections
+from the satellite’s body. The antenna gain is typically at least -3 dB +35 deg from the
+spin axis. Once in orbit the satellite is stabilized toward Earth. A directional antenna,
+usually a simple conical horn, provides a gain of 9 dB or more over +20 deg from the
+Earth vertical. As an example, the Intelsat V satellite combines the toroidal and
+directional (Earth-coverage) beams at a single port connected to the command re-
+ceiver. The telemetry transmitters switch to either beam, depending on the mission
+phase.
+
+High-gain antennas are required to support high data rates with low transmitter
+power. The basic antenna types used for this application, summarized in Table 13-15,
+are the reflector, lens, and phased array. The reflector is most desirable for satellites
+because of its low mass, low complexity and cost, and design maturity. The weight
+advantage of a reflector over a lens or phased array is especially significant for larger
+antenna diameters (> 0.5 m). Offset feeds can also simplify the satellite structure. The
+satellite structure contains the feed which is pointed at the reflector (Intelsat V, for
+example). Furthermore, an offset feed minimizes aperture blockage and therefore
+reduces the sidelobe levels.
+
+In some missions it is necessary to change the direction the antenna beam is
+pointing. Steering the beam electronically is often preferred to mechanical methods,
+especially if the beam direction must be changed rapidly. The beam of a reflector
+antenna can be steered by switching to an off-axis feed. However, conventional reflec-
+tor antennas have high losses when scanned off axis. A shaped secondary reflector can
+compensate for these losses, but scan angles greater than about 10 deg are difficult to
+achieve. We can design lens antennas for good scanning performance, but their mass
+is generally larger than the reflector plus feed when the diameter exceeds about 0.5 m.
+The lens or reflector antenna can perform beam scanning by switching between
+multiple feed elements or by using a phased array as the feed. Switching between feed
+elements or varying the amplitude or phase of each element electronically controls the
+feed. However, losses caused by the feed control (beam forming) network [Z, in
+Eq. (13-4)] can degrade the scanning antenna’s performance.
+
+A phased-array antenna may generate one or more beams simultaneously, forming
+these beams by varying the phase or amplitude of each radiating element of the array.
+This technique used for microwave radiometry is described in Chap. 9. We may also
+use an adaptive array to automatically point a null toward a jamming signal source to
+reduce the jamming-to-signal ratio.
+
+To support high data rates with low satellite power, the antenna beamwidth should
+be narrow. However, as illustrated in Fig. 13-14, a narrow beam may not give us
+enough coverage to establish links between several widely separated ground stations.
+The DSCS III solved this problem by using waveguide lens antennas with variable
+beam-forming networks to generate a single beam with multiple lobes, each directed
+toward a ground station. An alternate approach is to generate multiple beams. Milstar
+uses a lens with a switched-feed array, and ACTS uses a reflector with an offset
+
+13.4 Sizing the Communications Payload 573
+
+TABLE 13-15. Six Antenna Configurations Used in Satellite Systems. These antennas are
+suitable for beamwidths less than 20 deg, producing gains above 15 dB.
+
+Parabolic Reflector
+Center-Feed
+
+=
+
+Parabolic Reflector
+Cassegrain
+
+=
+
+Parabolic Reflector
+Off-set Feed
+
+Aperture blockage raises sidelobe level.
+
+Simple, lightweight structure.
+
+Feed-mounted equipment exposed to environment.
+Long transmission line from feed reduces efficiency.
+
+Aperture blockage raises sidelobe level.
+
+Lightweight structure.
+
+Short, low-loss transmission line.
+
+Feed-mounted equipment accessible behind reflector.
+Shaped subreflector increases efficiency
+
+(Increases gain by ~1.5 dB).
+
+Same as Center-fed Parabolic Reflector except low
+aperture blockage reduces sidelobe level and increases
+efficiency.
+
+Convenient for satellite mounting with feed embedded
+
+Ss inside satellite.
+~~
+
+Parabolic Reflector
+Off-set Shaped Subreflector with
+Feed Array for Scanning
+
+—_
+
+Light weight.
+Low aperture blockage reduces sidelobe.
+=~ Limited scan angle = 10°.
+
+gh
+Ayr
+
+Lens with Switched-Feed Array
+
+~<
+pee
+
+Phased Array
+
+Good aperture efficiency (no blockage)
+Mismatch at lens surface causes losses.
+
+Heavy, especially low-frequency applications (used at
+frequencies above 15 GHz with diameters below 0.5m).
+
+High aperture efficiency.
+
+Multiple independently steerable beams.
+
+High reliability (distributed active components).
+High cost, weight.
+
+Higher losses in feed distribution system.
+
+High EIRP obtained from many small transmitters
+
+Phase Shifters (space combining).
+
+switched-feed array. These antennas generate either simultaneous multiple beams or a
+single beam which is scanned or hopped over the Earth’s surface using time multiplex-
+ing between channels (see Sec. 13.5). Thus high antenna gain and broad area coverage
+are achieved at the same time. Another advantage of the beamhopping technique is
+that the satellite coverage can be readily matched to the geographic traffic distribution
+by making the beam dwell time proportional to the traffic level.
+
+LEO satellites such as Iridium and Globalstar form multiple beams using phased
+arrays covering the visible Earth. The multiple beams provide for spectrum conserva-
+tion by frequency reuse. Iridium forms 64 beams which scan to continuously point to
+a point on the Earth as the satellite passes over that point. Globalstar has fixed beams
+which “sweep” over a point on the ground as the satellite passes over.
+
+574 Communications Architecture 13.4
+
+Beamwidth
+WA of Low-Gain
+Antenna
+
+Beamwidth
+of High-Gain
+Antenna
+
+Fig. 13-14. Multibeam Coverage. To transmit simultaneously to A, B, and C, a multibeam
+antenna or a beamhopping antenna, with time-division multiplexing, will support
+higher data rates with lower transmitter power compared to a single, lower gain,
+broad-beam antenna system.
+
+TABLE 13-16. Size and Mass of Typica! Spacecraft Antennas. Antennas with shaped or
+multiple beams include the mass of complex feed systems. Lower gain values
+are at edge of coverage.
+
+Frequency Beam-
+Band Gain width | Mass
+Type (GHz) (dBi) | (deg) | (kg) Satellite
+Quad Helix L (1.5) 16-19 18 1.8 Intelsat-V 0.4 x 0.4 x 0.47
+Conical Log Spiral S (2.2) 0-3 220 1.2 FLTSATCOM
+Parabola (fixed) S (1.7) 16-19 18 3.9 GOES I, J, K 0.7 dia
+Horn Cc (4) 16-19 18 3.1 Intelsat-V 0.3 dia, 0.65L
+Parabola w/ Feed Array C (4) 21-25 * 29.4 Intelsat-V 2.44 dia
+Parabola w/ Feed Array C (6) 21-25 * 15.2 Intelsat-V 1.56 dia
+Parabola—Steerable Ku (11) 36 1.6 5.8 Intelsat-V 1.1 dia
+Parabola w/ Feed Array | Ka (20/30) | 45-52 * 47.1 SUPERBIRD 1.7 dia
+
+*Beams shaped to illuminate specific land masses
+
+The mass of a satellite antenna, including feed, depends largely on its size and the
+materials used in its construction. These factors are in turn a function of the frequency
+and beamwidth or gain. Table 13-16 lists some examples of satellite antenna weights,
+showing that the more complex shaped-beam antennas have relatively high mass
+because of their complex feed networks. Multiple and scanning beam antennas have
+comparable masses.
+
+The power efficiency and mass of a satellite transmitter are often key factors in
+sizing a satellite. Figure 13-15 shows how the transmitter input power and mass varies
+with output RF power, based on actual satellite equipment. We can see that the solid-
+
+13.5 Special Topics 575
+
+state transmitter has lower mass but requires more input power compared to the
+traveling wave tube amplifier. In general, solid-state transmitters are preferred for
+power outputs up to 5 or 10 W, except at frequencies below 2 GHz, where power
+outputs up to 80 W are achievable. Solid-state amplifiers are more reliable than the
+traveling wave tube amplifier, mostly because they require lower voltages. We expect
+improved solid-state amplifiers with higher powers and frequencies will become
+available during the next 10 years.
+
+1,000
+
+Input
+Power
+
+Power
+Efficiency,
+
+Solid State
+y™
+
+DC Input Power (W)
+i
+
+Mass (kg)
+
+—_—__—_— Solid State
+
+0.1 1.0 “00
+RF Power a. en
+
+Fig. 13-15. Satellite Transmitter Power and Mass vs RF Power Output. The curves derive
+from actual flight hardware. The data is relatively independent of output frequency.
+
+Table 13-17 lists the payload parameters for FireSat, based on the link budgets in
+Table 13-13 and the payload characteristics found in Table 13-16 and Fig. 13-15.
+These parameters also enter into the total satellite power and mass budget discussed in
+Chap. 10.
+
+13.5 Special Topics
+
+This section discusses several special topics in selecting communications archi-
+tectures.
+
+13.5.1 Multiple Access: Sharing Communication Links
+
+Some missions may require more than one uplink or downlink, especially where
+relay satellites have a number of satellites and ground stations interconnected in a sin-
+
+576 Communications Architecture 13.5
+
+TABLE 13-17. Communication Payload Parameters for FireSat. Parameters apply to both
+uplink and downlink.
+
+FireSat
+Parameter Up and Downlink
+Frequency (GHz)
+Transmitter Output Power (W)
+Number Beams and Transmitters
+
+Antenna Beamwidth (deg)
+Antenna Diameter (m)
+Antenna Mass (kg)
+Transmitter Mass (kg)
+Transmitter Input Power (W)
+
+gle network. In such situations, it is cost effective to provide a means of sharing a lim-
+ited amount of satellite link capacity between users.
+
+Figure 13-16 shows three basic techniques for sharing link capacity. Frequency
+division multiple access (FDMA) assigns a single carrier frequency for each input sig-
+nal. Bandpass filters at the receiver separate the individual carriers from each other.
+Most communications satellite systems use this technique with a repeater transponder
+operating in a linear (back-off) mode. The ground station is less expensive because the
+transmitter peak power is lower than the TDMA ground station described below.
+
+Time division multiple access (TDMA) assigns a single time slot in each time frame
+to a single input channel. A digitized input signal is sampled and stored in buffer mem-
+ory. These samples are then transmitted as short bursts within the assigned time slots.
+The bit rate during the burst is high, therefore requiring a high peak transmitter power.
+At the receiver the samples are sorted and stored, and then read out at the original rate.
+These samples are then converted to an analog signal and smoothed to obtain a replica
+of the original input signal. Some systems, including Intelsat and DSCS-III, use this
+method for some of their users.
+
+If the satellite uses a multiple-beam antenna, a switching matrix on the satellite may
+be used with TDMA to route each time slot burst to the desired downlink antenna
+beam. The NASA ACTS [Naderi and Kelly, 1988] uses this technique, known as Sat-
+ellite Switched-TDMA (SS-TDMA). In some applications, the uplink uses the FODMA
+technique, and the downlink uses the TDMA [McElroy, 1988]. This method requires
+onboard processing (demodulation and remodulation) of the signal in the satellite, as
+discussed below.
+
+A third technique, code division multiple access (CDMA), consists of phase-
+modulating (BPSK or QPSK) a carrier with data, and then biphase-modulating the
+carrier with a pseudorandom noise (PN) code. (See Fig. 13-17.) The data rate is much
+lower than the PN code, or chip rate. Thus there are many code bits (or chips) per data
+bit. The receiver has a code generator which replicates the PN code of the desired
+signal on a carrier with frequency equal to the received carrier plus or minus an inter-
+mediate frequency (IF).
+
+The PN codes are designed to have low cross-correlation properties (shown in
+Fig. 13-17B) so that two or more signals can be transmitted simultaneously at the same
+frequency with little mutual interference. Thus the received signals are essentially
+uncorrelated with the locally generated PN code and appear as noise to the receiver,
+except when identical received and locally-generated codes are aligned, or synchro-
+nized, in time. When this happens, the output of the mixer is a carrier containing only
+the narrow-band data modulation, which passes through the IF bandpass filter (BPF)
+
+13.5 Special Topics 577
+
+* Continuous * Multiple users
+
+Frequency
+Division
+Multiple
+Access
+(FDMA)
+
+Time
+
+Division
+Multiple
+Access
+(TDMA)
+
+Frequency carrier
+
+Frequency
+
+Frequency
+
+transmission.
+Peak and
+average power
+equal.
+
+No complex
+timing.
+Modulation
+rates
+comparable to
+user data rates.
+Inexpensive
+ground
+stations.
+
+Muitiple users
+can share
+single
+transmitters
+with high
+efficiency.
+Simple timing
+logic easily
+separates large
+numbers of
+individual
+users.
+Compatible
+with beam-
+hopped satellite
+antenna.
+
+Can handle
+large power
+variations
+between users.
+
+Relatively
+immune to
+transmitter
+distortion,
+multipath and
+interference.
+Inherent
+Privacy.
+
+cannot share
+single transmitter
+without mutual
+interference or
+low power
+efficiency.
+Requires
+complex filter
+banks to
+separate
+channels.
+
+* Difficult filtering
+
+to separate large
+power users
+from adjacent
+users.
+
+May require
+power control.
+
+Pulsed carrier
+transmission
+makes peak
+power greater
+than average.
+Requires precise
+time
+synchronization.
+Modulation burst
+rates high
+compared to
+user data rates.
+Requires
+memory buffers.
+
+Limited to low
+data rates
+relative to
+transmission
+boundaries.
+Limited number
+of users due
+
+to mutual
+interference.
+Limited variation
+in power
+differences
+between users.
+Needs
+
+Precise time
+synchronization.
+
+Fig. 13-16. Multiple Access Techniques Allow Different Users to Share the Same
+Transmission Channel.
+
+(Fig. 13-17D). The PN code modulation is completely removed, leaving the desired
+user signal “despread.” At the same time, the signals from the undesired users appear
+at the output of the mixer as PN-coded signals with a spectrum width roughly twice
+the PN-code rate. Therefore, only a small portion of the undesired signal will pass
+through the narrow-band output BPF.
+
+578 Communications Architecture 13.5
+
+Carrier
+Oscillator
+
+Pseudo
+Noise
+Generator
+
+Autocorrelation Function
+
+1 RF Carrier
+
+SPSSIY
+
+2 PN Code H
+
+3 Modulated
+Carrier
+
+Unwanted
+Signals Wanted
+Signals
+
+fo
+Received Signal Plus
+Wideband Interference and Noise
+
+Data Transmitted
+by PSK Modulation
+
+~4n -2x 0 4x 2x
+fo to to to
+
+1\ 1S \ISY\a/™ Reseived
+
+‘ Signal 4
+'
+
+[LT coe
+
+Reference 5
+
+SSSI scr
+RF Carrier 6
+1 Data Bit Many Code Bits Long
+
+IF BPF ge
+Bandwidth
+
+“Despread"
+
+ipioylorense Wanted Signal
+
+Level
+
+Fig. 13-17. Direct-Sequence Spread-Spectrum Technique Used in CDMA System. The
+numbers in C and D above refer to the block diagram in A.
+
+13.5 Special Topics 579
+
+As shown in Fig. 13-17B, the power density of the PN-coded signal at center
+frequency is proportional to 1/R, (R, = I/t)), where R, is the chip rate. The spectrum
+of the desired signal after despreading is proportional to 1/R, where R is the data rate.
+Thus the power density of the desired signal is increased, relative to the power density
+of an unspread interfering signal, by the ratio R, /R. This ratio is commonly referred
+to as the coding gain of the spread-spectrum system.
+
+Note that in order to receive the desired signal, the locally generated code must be
+identical to the desired signal’s code, and the two codes must be synchronized. We
+may accomplish this synchronization by scanning the locally generated code in time
+until synchronization takes place. To reduce the time to synchronize, a short code may
+be used for acquisition, such as the C/A signal in GPS.
+
+The number of simultaneous users which the CDMA system can handle is limited
+by the noise generated by the undesired user signals. Suppose all CDMA user code
+rates and data rates are the same, and their carrier powers at the receiver input are
+equal. How many users can the system support? Eq. (13-28) estimates the maximum
+number of users, M, that the system can accommodate before the received energy-per-
+bit, E,/N,, drops below threshold.
+
+1 1
+M =1+R,| ——_—_ - ——_ 13-2
+oan. aN 09-78)
+
+where C/N, is the received carrier-to-noise-density ratio from one user (Eq. 13-15a),
+R, is the PN-code chip rate, R is the data rate, and R, is much greater than R. Note that
+in Eq. (13-28) C/N, and E;,/N, are power ratios, not dB.
+
+An example of a CDMA system is the GPS navigation message on the C/A signal.
+Each satellite transmits a PN code with a different time phase. R, = 1.023 Mbps,
+R= 50 bps, E,/N,= 10 dB = 10, and C/N, = 38.6 dB-Hz = 7,244 Hz. Substituting into
+Eq. (13-28), we obtain M = 1,906 channels. This, of course, is much greater than the
+actual number of channels required for GPS (less than 28).
+
+Remember that M is the number of equal-power users. Suppose one user is received
+with power 10 times greater than the other M-1 users. If this is an undesired user, it
+will generate interference equivalent to 10 undesired equal-powered users, thus reduc-
+ing M by 9. For this reason an efficient CDMA system often requires some automatic
+means of controlling the transmitter power of each user.
+
+The CDMA system is generally less bandwidth-efficient than FODMA or TDMA.
+On the other hand, the CDMA system is less susceptible to interference, including
+multipath caused by reflections from buildings or other objects. This makes CDMA of
+special interest to satellite communication systems with mobile terminals. For more
+information on multiple access techniques, see Morgan and Gordon [1989], Chap. 4.
+
+Code division multiple access, CDMA, is used by the Globalstar cellular telephone
+satellite system in order to preserve spectrum. Each signal is 1.23 MHz wide, corre-
+sponding to the Cellular Telephone Industries Association Standard IS-95 for terres-
+trial cellular telephones. Up to 128 different signals can be “stacked” on the same
+frequency channel by virtue of being biphase modulated by different pseudorandom
+noise codes, or Walsh codes, as discussed above. The receiver recovers the signal by
+applying the same code to the incoming signal, demodulating it. If you divided this
+band by 64 kHz, the bandwidth of a typical digital telephone signal, you get only 19
+signals in the same bandwidth. In practice, the number of signals on a given channel
+is limited to 30 to 50 because of satellite transmit power limitations.
+
+580 Communications Architecture 13.5
+
+13.5.2 Payloads with Onboard Processing
+
+As discussed previously, communication relay satellites usually employ a repeater
+transponder (also called a non-regenerative repeater or “bent pipe”), which receives
+the uplink signals from all of the user transmitters operating in the assigned uplink
+frequency band, shifts the frequency to the downlink band, amplifies, and retransmits.
+This transponder is reliable and simple to use. But this technique has several disadvan-
+tages when more than one signal is received at the same time. First, the transponder’s
+transmitter must operate as a linear amplifier to reduce mutual interference caused by
+intermodulation distortion. We must back off the input signals about 3 to 6 dB from
+maximum, thus reducing the transmitter’s power output to roughly one-half to one-
+fourth of the maximum saturated power. We do so by controlling the transponder gain
+in the satellite (either automatically or by ground command), or by regulating each
+ground station’s transmitter power. Second, the strongest uplink signal will tend to
+capture the satellite transmitter power, thus suppressing the weaker signals. This
+makes the transponder particularly vulnerable to uplink jamming.
+
+An alternative to the repeater transponder is the onboard processing transponder
+or regenerative transponder. This transponder demodulates the received signal on
+board the satellite, and then routes the signal to the appropriate downlink modula-
+tor/transmitter and antenna beam (see Fig. 13-18). An example of this architecture is
+the Fleetsat Experimental Package developed for the Air Force by Lincoln Laboratory
+(McElroy, 1988]. The FDMA technique is selected for the uplink to allow use of low-
+power, ground-station transmitters as discussed above. The FDMA signals are
+demodulated by the satellite transponder, and the messages are reformatted into a
+single downlink TDMA data stream. TDMA is selected over FDMA for the downlink
+to allow the satellite transmitter to operate at saturation for high power efficiency.
+While more complex, the processing transponder overcomes the disadvantages of the
+repeater transponder.
+
+Increased
+Repeater Capacity
+Transponder and Antijam Onboard Processing Transponder
+
+. Beam
+Frequency Shift c> ‘ Despread Remod Beam
+and Amplify and Nullag Demod Route Spread Hop
+
+EN,
+KKK
+
+Fig. 13-18. Two Payloads Commonly Used in Communication-Satellite Architectures. The
+despread/spreading capability is used in military satellites to counter the effects of
+jamming.
+
+A large number of 20/30 GHz synchronous (except for Teledesic) satellites were
+proposed to the FCC in August 1995. None has been licensed yet. They are listed in
+Table 13-18. Most of these satellites plan to use advanced onboard signal processing
+transponders. This allows onboard rerouting of the data, and improvement of the over-
+
+13.5 Special Topics 581
+
+all link performance because the noise of the uplink is not carried over to the downlink.
+Many of these proposals promised digital data transmission of the order of 10-19 bit
+error rate with E,/N,s on each link of the order of 5 dB. They used coding scheme such
+as those discussed in Table 13-11 and the accompanying text in Sec. 13.3.3.
+
+TABLE 13-18. 20/30 GHz FCC Proposals for Commercial Data Relay Satellites (Internet,
+Telephone Trunking).
+
+Satellite Name Owner SatelliteName {| = = Owner
+Norsat Norwegian companies |GE Americom General Electric
+
+Teledesic Teledesic KaStar
+Cyberstar Space Systems/Lora! Pan Am Sat Pan Am Sat/Hughes
+
+Lockheed Martin | Lockheed Martin Morning Star PSY
+Echostar Cellular Vision Po
+
+Note: A total of 55 proposals have been filed with the International Telecommunications Union (ITU).
+
+13.5.3 Antijam Techniques
+
+Because the satellite is usually in view of a large segment of Earth, RF interference
+from Earth-based transmitters, either unintentional or deliberate, may occur. The
+frequency allocation procedures discussed previously minimize unintentional inter-
+ference. Intentional interference, or jamming, is of particular concern in military
+applications. Jamming consists of transmitting a large modulated carrier to the receive
+terminal at approximately the same frequency, overwhelming the desired signal and
+thus disabling the link.
+
+We can reduce the effects of jamming by using spread-spectrum modulation
+techniques [Dixon, 1984] to spread the transmitted signal in a pseudorandom manner
+over a bandwidth much larger than the data rate. The receiver takes advantage of the
+fact that he knows the code used to modulate the transmission while the jammer does
+not. A replica of the pseudorandom waveform is generated at the receiver and corre-
+lated with the received signal to extract the data modulation. Using this method, we
+can reduce the received jamming power relative to the desired signal by the ratio of
+the spread-spectrum bandwidth to the unspread signal bandwidth. For example, by
+hopping a BPSK-modulated signal of 100 bps over 1 MHz, the jamming power, on the
+average, is reduced by a factor of approximately 10,000, or 40 dB.
+
+In a communication relay satellite, onboard processing is highly desirable to
+despread the received signal before retransmitting it on the downlink. Otherwise the
+uplink jamming signal will capture most of the satellite transmitter’s power, leaving
+little for the signal. Another technique for countering uplink jamming, employed by
+the DSCS-III, is to generate a null in the antenna beam pointed toward the jamming
+source. This technique can lower the jamming power by 20 to 40 dB relative to the
+power of the received signal.
+
+The satellite crosslink may also be jammed. The satellite can reject jammers located
+on Earth by using narrow antenna beams pointed away from the Earth. Operating at
+60 GHz takes advantage of the oxygen absorption band, thus shielding the satellite
+from the Earth. Crosslinks may also use spread-spectrum and antenna-nulling
+techniques.
+
+582 Communications Architecture 13.5
+
+13.5.4 Security
+
+A characteristic of space-ground communication is the ease with which the link can
+be intercepted by an unauthorized user, who may receive the data for his own use, or,
+even worse, take control of the satellite by transmitting commands to it. Data encryp-
+tion techniques help us avoid these problems by denying access to the data and the
+satellite command channel unless the user has the correct encryption key. Recent
+developments have led to complete encryption and decryption devices being placed on
+single VLSI chips, thus adding little to satellite mass. The main issues are distributing
+the key and synchronizing time. To make sure a link remains secure over the life of
+the satellite, the encryption key must change at regular intervals, because others will
+monitor and eventually uncover it.
+
+The receiver decryption device must be accurately synchronized with the transmit-
+ter encryption device to recover the original data. With some systems, both the satellite
+and ground station may need a very accurate atomic clock, especially if the data rate
+is high and one must acquire the signal within seconds. For command links to station-
+ary satellites, the data rate is low and the acquisition time can be long. For this
+application, crystal oscillators are accurate enough. An alternative to atomic clocks is
+a GPS receiver, which automatically synchronizes itself to the GPS time standard.
+
+13.5.5 Diversity Techniques
+
+Diversity techniques consist of transmitting or receiving the same signal more than
+once to increase the probability of receiving the signal correctly. For example, a satel-
+lite may transmit a signal simultaneously to two ground stations. If the distance
+between these ground stations is greater than about 5 km, the probability of high rain-
+fall attenuation existing at both locations at the same time is small. This technique is
+called spatial diversity and is an effective way to increase the availability of a satellite-
+ground station link operating at frequencies above 20 GHz, where rain attenuation can
+be large [Ippolito, 1986].
+
+A second example of diversity is to transmit the same signal two or more times at
+different frequencies or time intervals. For example, multipath fading may be caused
+by reflections of the signal from parts of the aircraft structure in a satellite-to-aircraft
+link. The multiple reflected signals will interfere with the main signal, causing the
+amplitude of the received signal to vary with frequency and time as the aircraft moves.
+Use of frequency or time diversity will increase the probability that the message will
+be received correctly in at least one frequency or time interval. In military applications,
+frequency hopping over one data symbol provides frequency diversity protection
+against partial band jamming. Forward error correction coding followed by inter-
+leaving (e.g., scrambling the order in which the bits are transmitted) provides a form
+of time diversity protection against a pulse jammer. Time interleaving improves the
+decoding performance by randomizing a burst of errors caused by pulse jamming.
+
+’ A third example of diversity is a technique used by Globalstar, “satellite diversity.”
+In this case a ground station talks to a UT with circuits through two separate satellites.
+This is not to avoid rain outages as discussed above, but rather outages caused by
+blockage from buildings or trees for mobile UTs. If the path to one satellite is tempo-
+rarily interrupted, the power is increased on the other link to maintain the contact.
+Also, when one satellite is “setting,” this technique maintains the conversation through
+the “other” satellite while a new “rising” satellite can begin to carry a circuit. In this
+way, handover between satellites is transparent. This is accomplished by using a
+RAKE receiver. A RAKE receiver has the property of having several parallel digital
+
+13.5 Special Topics 583
+
+processing channels which can correct for Doppler frequency offset and time delay so
+as to combine several digital signals in time alignment for the maximum signal-to-
+noise ratio. The technique requires two ground antennas, which are putting many
+circuits through each satellite simultaneously.
+
+13.5.6 Optical Links
+
+In recent years lasers generating narrow band energy at optical frequencies provide
+an attractive alternative to the microwave frequencies discussed above. Unfortunately,
+clouds and rain seriously attenuate optical links. Therefore, optical links have limited
+application in satellite-Earth communications. However, an optical link is well suited
+for communication between two satellites. Intersatellite links have been designed
+using optical links with capacities above 300 Mbps.
+
+Optical crosslinks are superior to microwave crosslinks for high data rates because
+they can obtain extremely narrow beamwidths and high gains with reasonable size (see
+Fig. 13-19). Also, frequency allocation problems do not exist in the infrared or visual
+bands. On the other hand, the narrow optical beams are difficult to acquire and point
+accurately, requiring complex and sometimes heavy pointing mechanisms.
+
+Figure 13-20 compares RF and laser crosslinks, demonstrating that RF links are
+generally better for data rates less than about 100 Mbps because of their lower mass
+and power. However, development of more efficient lasers and lighter steerable optics
+may soon make lower rate optical links attractive.
+
+Antenna Diameter (ft)
+
+0.1
+104 105 108 107 108 108
+Data Rate (bps)
+
+Fig. 13-19. Optical Systems (that is, Direct Detection and Heterodyne) Require Smaller
+Antenna Diameters Compared to RF Crosslinks. [Chan, 1988].
+
+One application of optical links between satellites and Earth is the blue-green laser
+link being developed by DARPA and the U.S. Navy for submarine communications
+(Weiner, 1980]. The laser frequency of 6 x 10!4 Hz was chosen for its ability to pen-
+etrate sea water. Even so, the water loss can range from 5 to 50 dB or more, depending
+upon the actual depth of the submarine. In addition, loss due to cloud scattering is
+
+584 Communications Architecture 13.5
+
+400
+5 W @ 60 GHz
+
+300
+
+Laser (30 mW)
+
+200
+Heterodyne
+
+Laser (1 W) ad
+
+Weight (Ib)
+
+100
+
+e
+LES 8/9
+(0.5 W @ 38 GHz)
+
+Data Rate (bps)
+
+Fig. 13-20. A Comparison of Crosslink Package Weights. At data rates greater than about
+100 Mbps, an optical system provides the lightest package [Chan, 1988].
+
+between 4 to 14 dB. These losses are overcome by using low data rates of 10 to 100
+bps, advanced coding techniques, and high-gain, narrow-beam optics.
+
+Commercial satellites for both 2 GHz mobile satellite service and 38/49 GHz
+trunking service have proposed use of optical intersatellite links between satellites for
+efficient data transmission. They promise the advantages cited above in Figs. 13-19
+and 13-20. A listing of these proposals is in Table 13-19.
+
+TABLE 13-19. Communications Satellite Systems.
+
+No.
+System Antenna Frequency
+Name Beams (GHz) Function
+
+Star Lynx GEO Wideband data relay
+
+Wideband data relay
+
+Expressway Wideband data relay
+
+SpaceCast Wideband data relay
+
+Orblink Wideband data relay
+
+CAI Satellite Wideband data relay
+
+Teledesic V-band LEO Wideband data to the
+Supplementary home/office
+
+Celestri LEO Wideband data relay
+
+GEO
+
+Pentriad Molniya Wideband data to home/office
+
+LEO-1 Wideband data relay
+
+Cyberpath Wideband data relay
+
+
+13.5 Special Topics 585
+
+TABLE 13-19. Communications Satellite Systems. (Continued)
+
+jame Satellites Beams (GHz)
+a
+25
+
+Aster Systems GEO 48 38/49 Wideband data relay
+
+ICO Services | meo | 10 | 163 | 2.0/2.2 Data relay
+
+Boeing Aero Nav
+
+Intelsat connection to
+home/business
+
+Store-and-forward comm relay
+
+Starsys Store-and-forward comm relay
+
+References
+
+Chan, V.W.S. 1988. “Intersatellite Optical Heterodyne Communications Systems.”
+The Lincoln Laboratory Journal, 1(2):169-183.
+
+Chapell, Paul M. 1987. “Implementation of SDI Resources for MILSATCOM User
+Support.” In Conference Record, MILCOM 87: 20.6.1-20.6.5.
+
+Crane, Robert K. 1980. “Prediction of Attenuation by Rain.” JEEE Trans. on Commu-
+nications. Com-28(9): 1717-1733.
+
+Deng, Robert H., and Daniel J. Costello. 1989. “High Rate Concatenated Coding
+Systems Using Bandwidth Efficient Trellis Inner Codes.” IEEE Trans. Comm.
+Theory. 37(5): 420-427.
+
+Dixon, Robert C. 1984. Spread Spectrum Systems (2nd edition). New York: John
+Wiley & Sons, Inc.
+
+Gerson, Ira A., and Mark A. Jasiuk. 1990. “Vector Sum Excited Linear Prediction
+(VSELP) Speech Coding at 4.8 Kbps.” In International Mobile Satellite Confer-
+ence. 678-683.
+
+586 Communications Architecture 13.5
+
+Ippolito, Louis J., Jr. 1986. Radiowave Propagation in Satellite Communications.
+New York: Van Nostrand Reinhold.
+
+Jasik, Henry, ed. 1961. Antenna Engineering Handbook. New York: McGraw-Hill.
+
+Lee, Y.S. 1988. “Cost-Effective Intersatellite Link Applications to the Fixed Satellite
+Services.” In AIAA 12th International Communications Systems Conference.
+
+Lo, Y.T. and $.W. Lee, eds. 1988. Antenna Handbook, Theory, Applications, and De-
+sign. New York: Van Nostrand Reinhold.
+
+McElroy, D. 1988. “The FEP Communications System.” In AJAA 12th International
+Communication Satellite Systems Conference Proceedings, pp. 395-402.
+
+Morgan, Walter L. and Gary D. Gordon. 1989. Communications Satellite Handbook.
+New York: John Wiley & Sons, Inc.
+
+Mottley, T.P., D-H. Marx, and W.P. Teetsel. 1960. “A Delayed-Repeater Satellite
+Communications System of Advanced Design.” JRE Trans. on Military Electron-
+ics April-July: 195-207.
+
+Naderi, M., and P. Kelly. 1988. “NASA’s Advanced Communications Technology
+Satellite (ACTS).” In AIAA 12th International Communication Satellite Systems
+Conference Proceedings, pp. 204~—224.
+
+National Aeronautics and Space Administration. 1983. Propagation Effects Hand-
+book for Satellite Systems Design. Washington, D.C.: U.S. Government Printing
+Office.
+
+O’Shaughnessy, Douglas. 1987. Speech Communication, Human and Machine. Read-
+ing, MA: Addison-Wesley Publishing Co.
+
+Panter, Philip F. 1965. Modulation, Noise, and Spectral Analysis. New York:
+McGraw-Hill.
+
+Sklar, Bernard. 1988. Digital Communications Fundamentals and Application.
+Englewood Cliffs, NJ: Prentice Hall.
+
+Ungerboeck, G. 1982. “Channel Coding with Multilevel/Phase Signals.” JEEE Trans.
+Information Theory, vol. IT28, Jan., pp. 55-67.
+
+Viterbi, A.J. 1967. “Error Bounds for Convolutional Codes and an Asymptotically
+Optimum Decoding Algorithm.” ZEEE Trans. Information Theory. YT13:260-269.
+
+Weiner, Thomas F., and Sherman Karp. 1980. “The Role of Blue/Green Laser Systems
+in Strategic Submarine Communications.” IEEE Transactions on Communica-
+tions. Com-28(9): 1602-1607.
+
+Yuen, Joseph H. ed. 1983. Deep Space Telecommunications Systems Engineering.
+New York: Plenum Press.

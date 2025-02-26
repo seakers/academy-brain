@@ -1,0 +1,567 @@
+
+Chapter 23
+
+Applying the Space Mission Analysis
+and Design Process
+
+James R. Wertz, Microcosm, Inc.
+Wiley J. Larson, United States Air Force Academy
+
+23.1 Applying SMAD to Later Mission Phases
+23.2 Lessons Learned from Existing Space Programs
+23.3 Future Trends
+
+Since the first edition of Space Mission Analysis and Design (SMAD) appeared in
+1989, substantial progress has been made in applying this process more broadly to
+space missions, in part because of the continuing pressure to reduce mission costs.
+With the exception of launch, costs in all segments of space missions have been
+reduced. Launch costs, while not having succumbed as yet, are under attack from a
+wide variety of directions. A large number of communications constellations are being
+created that are bringing a more manufacturing-oriented methodology to bear, with an
+emphasis on both lower cost and high quality. Even interplanetary missions are
+becoming quicker and less expensive. The purpose of this chapter is to summarize how
+best to make the SMAD process work within the real environment of acquisition
+regulations, programs long past preliminary study phases, and the “new space” mis-
+sions which we hope will be forthcoming in future years.
+
+Much of this book ignores two of the major challenges to doing SMAD: organiza-
+tional structure and the acquisition process. Both tend to introduce political and
+bureaucratic obstacles to our goal of developing cost-effective designs. As described
+briefly in Sec. 21.1, any space program exists within a broad and important context of
+law, policy, politics, and economics which we must not ignore. We are, after all, pro-
+posing to spend large amounts of someone’s money designing and developing space
+missions. Even the best program has little chance of success if it does not fit into the
+political, economic, and policy context that must support it. Politics can include, for
+example, the need to have manufacturing distributed around the country for publicly
+funded programs or use of technology from specific companies for privately funded
+ones. In any case, we need to work within these boundaries.
+
+Our goal is to learn from past space programs and apply that experience, along with
+our judgment of how to do it better, to new and ongoing programs. In practice, we
+often end up doing things the way we have always done them, perhaps because it’s
+worked or is simply easier to do than trying to change the mindset of individuals and
+organizations. Introducing change is difficult in any venue, but we must change and,
+indeed, may need to take more calculated risks if we are to drive down the cost of space
+missions.
+
+883
+
+884 Applying the Space Mission Analysis and Design Process 23.1
+
+This book develops space mission analysis and design through a series of process
+tables indexed on the inside front cover. This process flow divides into three main
+areas: high-level processes, definition of the elements, and detailed design. The high-
+level processes develop concepts for the mission design. With these concepts in hand,
+we can begin defining the characteristic elements of the space mission architecture.
+Then we can design those elements in more detail. Table 1-1 in Sec. 1.1 gives you
+simplified steps to begin designing your particular mission. Remember that success
+depends on iterating and continuously improving the design.
+
+We must caution you that SMAD does not work well whenever you need much
+more than typical estimation accuracy. Our high-level algorithms and sanity checks
+provide estimates for conceptual design. These estimates are enough in most cases, but
+whenever performance is critical, or if you are approaching a technology threshold,
+you should refer to more detailed information. Areas frequently needing more than
+typical estimation accuracy are satellite lifetimes in low-Earth orbit, computer systems
+sizing, and system cost modeling. Table 23-1 outlines ways to deal with these and
+similar problems.
+
+TABLE 23-1. Dealing with Areas Needing Much More Than Typical Estimation Accuracy.
+
+1. Estimate as realistically as possible by working through succeeding levels of
+the process tables outlined in these chapters.
+
+2. Estimate both upper and lower bounds.
+3. Use conservative values and substantial design margin.
+
+4. If control of a parameter is critical:
+A. Identify drivers during design.
+B. Reestimate regularly as the design matures.
+C. Develop and maintain options.
+
+5. Be prepared to trade with overall system performance.
+
+23.1 Applying SMAD to Later Mission Phases
+
+Nearly all space missions must respond appropriately to the economic and political
+forces acting on them throughout their design and operational life. At all stages of a
+program, we need to achieve two critical goals:
+
+* Meet bonafide mission objectives and requirements while minimizing
+program cost and risk
+
+¢ “Sell” the program and keep it sold, if it remains worth doing
+
+The evolving political and economic environment may alter program objectives or
+make the program not worth doing. Even though a program continues to be worth-
+while, it may still require a significant effort to demonstrate the mission utility within
+the ever-changing environment.
+
+Minimizing Program Cost and Risk
+
+Early conceptual design has a great impact on both cost and risk. However, costs
+fluctuate (usually upward) throughout a program. Increased cost is frequently justifi-
+able, but can also be due to unnecessary engineering changes, schedule slips, and
+
+23.1 Applying SMAD to Later Mission Phases 885
+
+changes in the funding profile. Thus, we would like to apply the SMAD process
+throughout the mission life cycle to reduce, or at least contain, program cost and risk.
+This process is summarized below and described in more detail in Wertz and Larson
+[1996], Chap. 10.
+
+Table 23-2 summarizes how to keep down cost and risk, but these steps can conflict
+with how space programs are typically run. Good mission engineering demands that
+we regularly review and consider revising mission objectives, requirements, and
+approaches. However, this review may make the program seem unstable. We might
+ask, “Why are we looking at our mission objectives and requirements again? We have
+already done that and now must build the system.” We must do so because programs
+and mission designs must mature and adapt to new conditions. Thus our concept of
+operations, approach, and goals must also evolve.
+
+TABLE 23-2. Mission Engineering Activities Needed Throughout the Mission Life. These
+are key to containing or reducing cost.
+
+Action Comment
+
+. Maintain well-defined objective Ensure all engineering personnel know the broad
+mission objectives
+
+. Revisit system-level trades regularly Best done at beginning of each mission phase
+
+3. Document reasons for choices Does not occur in standard formal documentation,
+but is critical to maintaining options
+
+. Maintain a strong systems engineering | Needed to continue developing lower-risk, lower-
+group cost solutions and to keep program sold
+
+. Control system-level trades and Allows trade between elements and applying
+budgets within the systems margin to different elements as needed
+engineering group
+
+6. Update analysis of mission utility Necessary to keep program sold in a strongly
+competitive, cost-conscious environment
+
+A major part of doing our job better is to identify the right issues and look for key
+alternatives to investigate. Working the wrong issues can be costly. For example, early
+in the U.S. space program, scientists and engineers were trying to figure out how to
+handle the enormous heat generated during reentry into the atmosphere. At first the
+problem statement was, “Find a material that will withstand a temperature of
+14,000 °F for 5 minutes.”” Much time and money were spent trying to solve this
+problem even though no known material could withstand the required temperature.
+Finally, someone recognized that the problem would be restated as, “Find a way to
+protect a capsule and the person inside during reentry.”Ablative materials quickly
+solved this problem. The moral of this story is to make certain you are working the
+right problems and asking the right questions throughout the program.
+
+Returning to see whether we are meeting basic mission objectives does not mean
+we will change the concept of operations 2 months before launch. The further a pro-
+gram has evolved, the more it takes to justify fundamental changes. Still, if a new tech-
+nology or concept of operations can reduce mission cost, risk, and schedule, we should
+evaluate and use it if it is worthwhile. As the program evolves, the cost of imple-
+menting change becomes greater and the benefit decreases because other parts of the
+mission have been designed to work as originally intended. Nonetheless, changes late
+in the program may provide equal or better performance at less cost and risk.
+
+886 Applying the Space Mission Analysis and Design Process 23.1
+
+Although reevaluating mission objectives may appear to jeopardize a program, the
+result becomes stronger and sounder. We could keep the same mission concept
+throughout, but a far better approach is to formally review mission requirements at the
+beginning of each mission phase. This review tells us where the program is going and
+why. At the same time, it allows us to resolve these issues by the end of each mission
+phase to maintain program stability within a highly competitive environment.
+
+Secondly, we must keep the program flexible by assigning economic value to
+system flexibility. All too often, a program quickly becomes rigid by trying to
+optimize the meeting of narrow requirements for the current mission design. Thus,
+changing mission objectives or technology is difficult. Hewing to fixed requirements
+may reduce cost for a small, short-turnaround, unique mission, but is unlikely to
+succeed for larger-scale activities. For example, geosynchronous satellites should be,
+and usually are, designed to work in multiple slots so we can move them from one
+position to another. Expressed differently, the mission design as well as the design of
+the elements should be robust, i.e., stable in the presence of unknown perturbations.
+We need robust or flexible designs to help minimize the cost and risk of unforeseen
+yet inevitable changes in mission objectives and requirements.
+
+One way to make a system more flexible is to carry out as many onboard tasks as
+possible in software and ensure we can reprogram the software from the ground. Now
+that we have more sophisticated processors and greater onboard memory, we-can cre-
+ate very flexible satellites without driving up cost and weight. This allows us to both
+correct design flaws on orbit and respond to changing mission needs and conditions.
+
+Too often, programs attempt to reduce risk by flying only components which have
+flown before. Many subcontractors change their design only when manufacturers stop
+making particular parts and components. A far better approach is be to allow some per-
+formance margin and then use modern technology to achieve the needed performance
+at lower weight, cost, and risk. As Chap. 20 outlines, we also make an informed
+assessment of the Technology Readiness Level of a particular approach, assign it a
+documented risk factor, and feed that information into the decision-making process.
+
+An excellent approach to minimizing the risk of new technology has been used
+successfully by Surrey Space Technology Laboratory, Ltd. on a sequence of missions.
+As shown in Fig. 23-1, Surrey continually flies both an older, space-proven computer
+and a newer, more powerful one. This approach allows Surrey to have both a conser-
+vative flight-proven design to ensure mission success, while at the same time flying
+some of the newest, most capable processors in space.
+
+Keeping the Program Sold
+
+History has shown that space programs can be cancelled in virtually any
+phase—during conceptual design, during development and construction, after the first
+one or two launches, or in mid-life while the spacecraft is still operating on orbit. The
+message is clear: if the program is worth doing, we must keep the program sold
+throughout its mission life. Doing so is straightforward.We must analyze mission
+utility and trade cost against performance over the entire mission. We must also
+maintain a clear, easy-to-understand and consistent rationale for mission objectives,
+requirements and design decisions. At any time, we should be able to present a cost vs.
+performance analysis and demonstrate to those who are funding it the benefits of
+having the program proceed.
+
+Maintaining an ongoing mission utility analysis capability means that we should
+always be aware of the fundamental mission objectives and how well they are being
+
+23.1 Applying SMAD to Later Mission Phases 887
+
+General-Purpose Processors
+1802 Z80 80C 186 80C386
+
+UoSAT-1
+UoSAT-2
+UoSAT-3
+UoSAT-5
+KITSAT-1
+S80/T
+PoSAT-1
+Healthsat-1
+CERISE
+FASat-Alpha
+
+Fig. 23-1. Type of Onboard Computer for a Sequence of Surrey Space Technology
+Laboratory missions. Each generation of spacecraft typically flies the old standard,
+plus a new design which in turn becomes the next standard. (From Ward and Price,
+Sec. 13.4 in Wertz and Larson [1996].)
+
+met. Thus, the mission objectives become important not only in the continuing design
+of the program, but also in keeping it alive.
+
+System Engineering Over the Life Cycle
+
+_ Strong system and mission engineering should be maintained throughout the life of
+the program: trading on requirements, reevaluating the basic mission concept, and
+evaluating alternatives and mission utility. Otherwise the program may not continue.
+
+Overall, mission engineering later in the program should proceed as outlined in
+earlier chapters. At all levels, requirements should reflect what to do rather than how
+to do it. We want to let technology flow up and into the program where it can do the
+most good for cost, risk utility, or operations. We are unlikely to achieve the mission
+performance at minimum cost and risk by limiting ourselves to the technologies and
+approaches from the concept-design team.
+
+A key element in mission engineering is to document the main system trades and,
+especially, the reasons for choices. Unfortunately, specifications demand only that
+you state what the system must do, how well it must be done, and how to verify that it
+meets the requirement. They do not ask you to say why you have chosen the require-
+ments. However, requirements are intended to quantify the trade between what we
+would like to achieve and what is possible within the established budget. Thus, we
+should document as fully as possible the reasons for these trades and requirements so
+we can effectively revisit them during mission utility assessments and regular require-
+ment reviews.
+
+One way to initially reduce cost and schedule is to minimize the upfront engi-
+neering on the program. “Shoot the engineers and get on with the program,” can get
+programs moving and contain growing engineering costs. This approach has some
+good features. We do not want to spend excessive time optimizing a strawman design
+that will change drastically at a later date. We also do not want to develop too much
+detail in the conceptual design. These activities divert resources from the more
+important, top-level mission trades. At the same time, we must have enough upfront
+system engineering as well as initial and continuing trades on objectives and mission
+
+888 Applying the Space Mission Analysis and Design Process 23.2
+
+utility. There is no substitute for these activities—ignorance does not improve system
+performance.
+
+23.2 Lessons Learned from Existing Space Programs
+
+For the most part, the existing space mission analysis and design process works
+well: trade-offs among technical alternatives in essentially all areas bring positive
+results. But in our experience there are four common pitfalls in the front-end planning
+of space missions:
+
+¢ Disregarding or failing to understand the needs of operators, users, and devel-
+opers during the early phase of design
+
+* Failing to trade on requirements
+¢ Constraining trades to too low a level too early
+¢ Postponing or avoiding assessment of alternatives
+
+Inappropriate results such as higher cost or reduced performance usually result from
+the acquisition process and organizational structure rather than from incorrect trade-
+off decisions. Occasionally, parochial views and politics keep the players from
+interacting in a way that fosters good upfront design and development of the space
+mission. Designing the mission operations concept, generating requirements, and
+performing early trades without taking into account the needs of the users, operators
+and developers can doom a program to failure from the beginning. A key to success is
+to foster continuous and open communications between the players. This can be an up-
+hill battle involving multiple organizations and possibly multiple nations, but it must
+be done.
+
+The space mission concept and requirements drive any program, so users, operators
+and developers of the system must work together to identify credible, cost-effective
+mission approaches. Once requirements are defined, organizations often go to great
+lengths and expense to meet them because they do not want to be unresponsive or to
+say a given requirement is difficult. This can unnecessarily drive up cost. Table 23-3
+shows steps that can help solve this problem.
+
+TABLE 23-3. Steps to Help Alleviate the Problem of Failing to Trade on Requirements.
+
+. Specify functional requirements only—not how they should be accomplished
+. Identify and challenge difficult and costly requirements
+. Begin concept exploration with system requirements trades
+
+. Revisit top-level system requirement trades at each major milestone throughout the
+program
+
+. Maintain open communications among all groups involved
+
+We often constrain trades to low levels too early. Early in a program we commonly
+do trades like altitude vs. resolution and coverage but ignore trades between system
+elements (see Fig. 1-3). We should look for cost-effective trade-offs among the
+elements such as shifting capability from the launch vehicle to the spacecraft or from
+the spacecraft to the ground segment. For example, we can move more computing and
+
+23.3 Future Trends 889
+
+data processing from the ground station to the spacecraft for autonomous navigation.
+The question is, should we provide a spacecraft which can determine its position and
+velocity on board and remove the interface to the ground? This could increase the cost
+of spacecraft development but save a great deal in operations cost by reducing the
+ground system’s need to track the spacecraft, process data, and provide spacecraft
+ephemeris. This is a politically sensitive trade because it takes money and responsi-
+bility away from the ground element and gives them to the space element. This can
+result in a turf battle where decisions are made on the basis of who controls the budget,
+rather than on what provides the best results at the lowest cost.
+Two positive steps can help reduce these problems:
+
+* Look explicitly for trades between system elements
+
+¢ Do these trades as early as possible, before organizational structure and poli-
+tics rule out major options
+
+Look at the result of these trades carefully. For example, when someone presents an
+extremely low-cost spacecraft concept with minimal capability, look for higher costs
+in other mission elements.
+
+We often postpone or avoid assessing major alternatives for space programs. We
+do so to meet tight budget constraints, to keep the program appearing stable, and to
+avoid reducing the momentum to proceed. As we know, change costs much more as a
+program proceeds. Change during concept exploration may do little or nothing to
+engineering cost, whereas changes during the definition phase involve more people
+and a reassessment of a more detailed design. Design changes involve formal
+paperwork and change controls. Changing anything once the hardware is in production
+can dramatically increase cost. It is more cost-effective to make changes as early as
+possible.
+
+23.3 Future Trends
+
+In several respects, we expect more changes in the way that space programs are
+conducted over the coming decade than have occurred since the start of the space
+program.” In the near term, three distinct trends are apparent:
+
+* Increased political and economic constraints driving the industry toward
+lower-cost space missions and increased inter-organizational and international
+cooperation
+
+* More reliance on advanced spacecraft processing
+
+¢ The introduction of large constellations and, consequently, a more manufac-
+turing approach to spacecraft design
+
+Because of budget constraints on the space program as a whole, we expect a
+continuing strong emphasis on lower costs for spacecraft and space missions. Small
+spacecraft are a natural outcome, including single-purpose small satellites for data
+relay or materials processing and large constellations of small satellites for communi-
+
+* The changing direction of future space programs has been discussed by a number of authors,
+including Butler [1990], Fogg [1995], Handberg [1995], Harvey [1996], Heiken, et al. [1991],
+Hoban [1997], Johnson-Freese [1997], Kay [1995], Launius [1998], Richard Lewis [1990],
+John Lewis [1997], Noor and Venneri [1997], Spudis [1996], Stine [1996], and Zubrin [1996].
+
+890 Applying the Space Mission Analysis and Design Process 23.3
+
+cations, space surveillance, or tactical applications. Because of the accelerating use of
+onboard processors and miniaturization of many components, small, low-cost satel-
+lites will be as capable as older, larger satellites. (See, for example, Sarsfield [1998].)
+More people are building and working with LightSats—small, inexpensive spacecraft,
+traditionally in low-Earth orbit but moving rapidly outward. As described in Chap. 22,
+the technologies used here tend to be nontraditional and far less expensive. LightSats
+represent a new way of doing business in space that, if correctly exploited, can drive
+down costs by a factor of 2 to 10 with respect to more traditional programs [Wertz and
+Larson, 1996].
+
+The biggest technical change in space missions will be the increased use of onboard
+processing. Space computers are emerging from infancy, with full-fledged, general-
+purpose processors now becoming available. We will use them much more as they
+become more economical and begin to duplicate some of the ground processing capa-
+bility. As onboard processing increases, spacecraft will take on more complex tasks
+and become more autonomous.
+
+Increases in spacecraft autonomy could drive costs either up or down, depending
+on the community’s approach to autonomy and software development. We strongly
+recommend using software to help lower costs. As shown in Table 23-4, we believe
+autonomy in moderation can reduce cost and risk by automating repetitive functions
+on the spacecraft while leaving the higher-level functions to ground operations. Every-
+day tasks such as telemetry processing, attitude control, and orbit control should be
+done autonomously on board, with all of the relevant information attached to the
+payload data for downlink to the ground. On the other hand, trying to fully automate
+problem solving can be dramatically expensive. So long as the spacecraft is capable of
+putting itself in a fail-safe mode, this work is best performed on the ground where
+operators can do what they do best—use their intelligence to understand, resolve, and
+repair spacecraft problems and respond to changing circumstances.
+
+TABLE 23-4. Development of Low-Cost, Autonomous Systems. The objective of “autonomy
+in moderation’ is to automate repetitive tasks and spacecraft safing while allowing
+people to identify and fix problems and create long-term plans [Wertz and Larson,
+1996].
+
+Functions That Should Be Automated Functions That Should Not Be Automated
+
+* Attitude determination and control ¢ Problem resolution
+¢ Orbit determination and control * Identification and implementation of fixes
+¢ Payload data processing ¢ One-time activities (e.g., deployment and
+
+* Repetitive housekeeping, e.g., battery check-out)
+charging, active thermal control * Long term operations planning
+
+¢ Anomaly recognition ¢ Emergency handling beyond safing
+¢ Spacecraft safing
+
+We do not know if proposals to drive down launch costs will succeed in the coming
+decade. If launch costs drop significantly, low-cost satellite systems will be possible.
+Reducing launch costs will itself drive down spacecraft cost because it will no longer
+be worth as much to optimize the spacecraft design or minimize weight [Wertz and
+Larson, 1996]. Costs for space exploration would become more consistent with avia-
+tion and other commercial activities.
+
+We also expect to see significant changes in space payloads, due both to the
+increased level of processing and other factors. In observations and communications,
+
+23.3 Future Trends 891
+
+the use of increased processing capability and array sensors for observations will
+greatly increase the capacity of small spacecraft. In addition, a number of new types
+of space missions will begin, most notably materials processing in space and other
+applications of a microgravity environment. This area is just now beginning and has
+enormous growth potential as low-gravity manufacturing processes become better
+understood. Much of this will require low-cost access to space and the return of
+payloads from space as well.
+
+The commercial communications constellations have also had a major impact on
+the process of designing and manufacturing spacecraft [Logsdon, 1995]. Commercial
+geosynchronous spacecraft have been manufactured in an assembly line process for
+some time. Nonetheless, low-Earth orbit constellations require that the entire constel-
+lation be built and launched in a short time in order to allow the system to begin
+servicing customers. For example, the Iridium constellation of 66 satellites was
+launched in slightly over a year which required satellites to be coming off the assembly
+line at an average rate of approximately one per week. This significantly changes the
+focus of spacecraft design from performance optimization to high-reliability manufac-
+turing. The two contrasting approaches are presented in Chaps. 12 and 19 above. To
+the extent that these manufacturing techniques can be applied to other space missions
+as well, this should continue to reduce the cost, risk, and schedule of spacecraft devel-
+opment. The application of this to spacecraft components is discussed by Zafanella
+[1998].
+
+In addition, new constellations like Iridium, Celestri, Globalstar and even the exist-
+ing GPS, provide an unprecedented infrastructure that can be used to create new and
+more cost-effective space mission architectures. For example having an abundance of
+bandwidth available in space can facilitate the movement of data around the world,
+thus alleviating the current problems we have with over-subscribed networks, and
+changing the way we do missions.
+
+Since the first satellites, space has moved from a very novel activity to a routine
+commercial enterprise. Today, on the average, Americans use some form of space as-
+set many times per day—weather, television, telephones, navigation, Internet, and
+more. Companies are looking for ways to use space and space-related assets to develop
+and provide highly marketable products and services. More than ever, companies are
+focusing on the end-to-end perspective—providing customers what they need in a
+more cost-effective way. For example, recent deregulation of electric utilities in North
+America has resulted in regional utilities trying to sell their electricity all over the con-
+tinent. One severe problem they face is how to keep track of the customers’ use of elec-
+tricity, which has prompted the need for a method of automatically reading utility
+meters continentally—from space. The commercial space systems we propose must be
+relevant and financially viable, while government space systems must be relevant and
+cost-effective.
+
+Today, space exploration depends more on policy, politics, and economics, than on
+technological limits. Virtually any mission is now technically possible. We can build
+a lunar base, send humans to Mars, develop space colonies and huge solar-powered
+satellites, or send manned or unmanned probes to the outer planets. Our limitations are
+set by what we choose to do or what we can afford. As environmental problems
+become more serious on the Earth’s surface, intelligently using space will become
+More important. Yet the use of space resources cannot grow unless we can demon-
+strate that we are becoming more efficient and cost effective in our use of space. This
+is the challenge for space in the early 21st century.
+
+892 Applying the Space Mission Analysis and Design Process 23.3
+
+References
+
+Butler, George V., ed. 1990. The 21st Century in Space. San Diego, CA: American
+Astronautical Society.
+
+Fogg, Martyn J. 1995. Terraforming: Engineering Planetary Environment. Warren-
+dale, PA: Society of Automotive Engineers, Inc.
+
+Handberg, Roger. 1995. The Future of the Space Industry: Private Enterprise and
+Public Policy. New York: Quorum Books.
+
+Harvey, Brian. 1996. The New Russian Space Programme: From Competition to
+Collaboration. New York: John Wiley & Sons.
+
+Heiken, Grant, David Vaniman, and Beven M. French. 1991. Lunar Sourcebook: A
+User’s Guide to the Moon. Cambridge, MA: Cambridge University Press.
+
+Hoban, Francis T. 1997. Where do You Go After You’ve Been to the Moon? Malabar,
+FL: Krieger Publishing Co.
+
+Johnson-Freese, J. and Roger Handberg. 1997. Space, the Dormant Frontier:
+Changing the Paradigm for the 21st Century. New York: Praeger Publishers.
+
+Kay, W.D. 1995. Can Democracies Fly in Space? The Challenge of Revitalizing the
+U.S. Space Program. New York: Praeger Publishers.
+
+Launius, Roger D. 1998. Frontiers of Space Exploration. Westport, CT: Greenwood
+Publishing Group.
+
+Lewis, John S. 1997. Mining the Sky: Untold Riches from the Asteroids, Comets, and
+Planets. Reading, MA: Addison-Wesley.
+
+Lewis, Richard S. 1990. Space in the 21st Century. New York: Columbia University
+Press.
+
+Logsdon, Tom. 1995. Mobile Communication Satellites: Theory and Application.
+New York: McGraw Hill.
+
+Noor, Ahmed K. and Samuel L. Venneri, eds. 1997. Future Aeronautical and Space
+Systems. Reston, VA: AIAA.
+
+Sarsfield, Liam. 1998. The Cosmos on a Shoestring: Small Spacecraft for Space and
+Earth Sciences. Santa Monica, CA: Rand Corp.
+
+Spudis, Paul D. 1996. The Once and Future Moon. Herndon, VA: Smithsonian Insti-
+tution Press.
+
+Stine, Harry G. 1996. Halfway to Anywhere: Achieving America’s Destiny in Space.
+M. Evans and Company, Inc.
+
+Wertz, James R. and Wiley J. Larson, eds. 1996. Reducing Space Mission Cost.
+Torrance, CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer Aca-
+demic Publishers.
+
+Zafanella, Carlo. 1999. “Reducing Cost and Increasing Volume by a Factor of 10 in
+the Space Component Business.” Journal of Reducing Space Mission Cost, vol. 1
+no. 2.
+
+Zubrin, Robert. 1996. Islands in the Sky: Bold New Ideas for Colonizing Space. New
+York: John Wiley & Sons.

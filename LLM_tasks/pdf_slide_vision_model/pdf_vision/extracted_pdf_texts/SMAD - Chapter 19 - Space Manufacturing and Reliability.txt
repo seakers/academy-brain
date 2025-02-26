@@ -1,0 +1,2234 @@
+
+Chapter 19
+
+Space Manufacturing and Reliability
+
+19.1 Designing Space Systems for Manufacturability
+Challenges for Manufacturing, Material, Test, and
+Launch Processing; Creating the Manufacturing
+Vision; Influencing the Design; Process
+Development and Verification; Production
+
+19.2 Reliability for Space Mission Planning
+Design for Reliability, Design for Fault Avoidance,
+Fault Tolerance, Test Techniques
+
+19.1 Designing Space Systems for Manufacturability
+
+Wade Molnau, Motorola Systems Solutions Group
+Jean Olivieri, Motorola Advanced Systems Division
+Chad Spalt, Motorola Satellite Communications Group
+
+Historically, satellite manufacturing, integration, and test has been a crafted and
+arduous process. Each spacecraft is essentially unique, and is manufactured and tested
+appropriately. Commercial satellites, while alleviating some of the major impedances
+to fast and efficient satellite manufacture, have fared only slightly better. The advent
+of commercial constellations of satellites forces us to seek and develop completely
+new strategies. We need to incorporate ideas and methods from other industries into
+satellite supply-chains to meet the cost and cycle-time requirements needed to make
+space systems compete effectively with their terrestrial counterparts.
+
+This chapter describes a few of the vital changes that need to be addressed to man-
+ufacture and test multiple satellites efficiently. These methods and strategies apply to
+the whole satellite supply chain, and to piece-part, assembly, subsystem, and space-
+craft levels. Chapter 12 detailed methods used to manufacture and test single satellites.
+This chapter augments Chap. 12 for multiple satellite systems.
+
+Small satellite systems (< 10 spacecraft) may not fully benefit from the methods
+presented here, but some points will be applicable. Designing manufacturable satel-
+lites and associated production systems requires up-front investments in time, money,
+and capital. Each program needs to trade the benefits of these methods with anticipated
+investment costs. As the number of satellites grows, the benefits and the usefulness of
+these methods increases.
+
+745
+
+746 Space Manufacturing and Reliability 19.1
+
+We begin with a short description of the goals and challenges of manufacturing,
+material, test, and launch processing organizations. The majority of the chapter then
+concentrates on four phases of the manufacturing and test of the spacecraft constella-
+tion: (1) creating the manufacturing vision, (2) influencing the design, (3) developing
+and verifying the process, and (4) producing the spacecraft.
+
+19.1.1 Challenges for Manufacturing, Material, Test,
+and Launch Processing Teams
+
+The challenges presented to the manufacture of satellite constellations are
+extremely different from those traditionally conceived for spacecraft. These chal-
+lenges, however, are not much different from those for other commercial products.
+Spacecraft are designed and built to cost and schedule goals—just like video recorders
+or cars. Figure 19-1 compares a few of the challenges facing the manufacture of a
+constellation of satellites, while Fig. 19-2 shows manufacturing issues as they pertain
+to key metrics—quality, time, and cost.
+
+Quality Build, Test, Rebuild, Retest... | Build, Verify, Ship, Shoot
+
+Spacecraft Cost 66,000 $/kg 19,800$/kg
+
+Cycle Time (Integration) 225 days 24 days
+Cycle Time (Build to launch) | 18 months 2 months
+
+Fig. 19-1. Typical Constellation Manufacturing Challenges. Note the significant difference
+between traditional space vehicle manufacture and the newer manufacture process.
+
+@ Six-Sigma Quality
+— Satellites are not field serviceable!
+
+@ First to Market — Commercial
+Leverage the Market > Government/Military
+
+— Reduce benchmarked cycle time from 225 days to 24 days
+per Satellite
+
+@ Fixed Budget, Commercial Pricing
+~ Continuous profit improvement
+
+Fig. 19-2. Constellation Manufacturing Issues. The quality, cycle time, and cost issue relating
+to the production of a constellation of satellites are different than those encountered
+while producing single satellites. While quality requirements are different—but still
+stringent—cycle time and cost issues are now paramount.
+
+For instance, time to market often is not only a goal, but a competitive requirement
+for viability. Time becomes an overriding factor. This drives not only the overall time
+to market, but the time to complete each system element. For manufacturing, this
+translates to drastically reducing the cycle time required to produce a satellite.
+
+Quality, as with all spacecraft, is still imperative. Satellites are not field serviceable,
+and simple defects can render a satellite unusable. The traditional approach places
+emphasis on high-cost and time-consuming quality assurance methods that check and
+recheck, test and retest, and verify and reverify the hardware. Instead, we employ six-
+
+19.1 Designing Space Systems for Manufacturability 747
+
+sigma methods to verify that the processes are performing with high-quality results.
+Robust designs using in-control processes will produce high-quality products—with-
+out associated high costs and long cycle times. Six-sigma methods are a cornerstone
+for lean and agile manufacturing methods (see sidebar).
+
+To meet the additional cycle-time and quality requirements, manufacturing person-
+ne] must participate concurrently during the creation of the design. They are responsi-
+ble for influencing the design and tailoring the design into a final, producible product.
+Finally, manufacturing must effectively integrate the product during production.
+
+In summary, the challenges presented to manufacturing are to recreate the value-
+added or useful elements of space hardware design and manufacture. We must elimi-
+nate non-value-added activities. We must add elements for quick, efficient, and high
+quality execution. We must drive out non-value-added or superfluous activities and
+requirements.
+
+The Six Sigma program began in Motorola in 1985 as a means to measure and. improve
+performance in all phases of its business. The ultimate target is virtually perfect execution.
+
+Sigma (6) is used to designate the distribution or spread about the mean or average of any
+process or procedure. A simple definition of six sigma is 3.4 defects per million opportunities,
+or 99.9997% perfect. Sigma level improvement is not linear. In fact, improvement rates
+escalate rapidly as the base sigma level slowly increases.
+
+Six Sigma methodologies are a set of tools and procedures to improve processes. Funda-
+mental methods include problem solving, process control and process characterization. They
+can be applied to any process from engineering to business. For more information, reference
+Harry [1997] or Harry and Lawson [1997].
+
+Material Challenges
+
+Traditional manufacturing drove spacecraft parts to the costliest and slowest-
+delivery grade—S-level. Unfortunately, these parts are not inherently better than com-
+mercial parts—they have just been screened for various properties to improve their
+overall expected performance or failure rates. The parts are mostly produced on
+commercial part lines and even from commercial part batches.
+
+Our challenge is to use the right parts for the mission—not the highest level parts
+available. We need to target commercial parts, replacing them only when required. We
+need to discourage military grade or S-level parts, but allow them in situations where
+they must be used. A simple comparison of part costs, as shown in Fig.19-3, depicts
+the drastic difference for S-level, Mil-spec, and commercial parts. Significant cost
+savings can result from selecting lower-cost parts when applicable. As discussed in
+Sec. 12.2, significant time savings also can result from selecting lower grade parts.
+This yields a significant advantage of using Mil-spec parts over S-level parts. Further-
+ing this comparison, we can receive commercial parts typically even quicker—often
+in less than a week.
+
+Parts selection needs to consider producibility, radiation, out-gassing, and other
+requirements. We need to consider strongly parts that support efficient manufacturing
+methods. We should target parts that use the standard process flows—-for instance,
+automated placement and mass reflow for electronic assemblies.
+
+Finally, parts selection needs to be a value-added concurrent engineering activity.
+Success in the material area heavily influences overall program cost and schedule
+performance.
+
+748 Space Manufacturing and Reliability 19.1
+
+Hi S-levei
+Sil
+
+0) Commercial
+
+% of S-level Cost
+
+Chip Cap Chip Resistor Mixer (SMA86) I.C. (LM139)
+(CDR33BX104) (M5534206B)
+
+Fig. 19-3. Representative Parts Price Comparison. Commercial parts represent a significant
+cost savings over Mil-spec and S-level parts.
+
+Test Challenges
+
+The test function drives the overall cycle time of spacecraft delivery. This holds
+true not only for traditional satellites, but for constellations as well. The key is to
+design test as a process—this includes minimizing cycle time, maximizing throughput,
+and achieving high-quality results.
+
+The purpose of the overall test program is to verify the adequacy of the design and
+assembly processes. The requirements to verify these two elements—design and pro-
+cesses—are inherently different.
+
+Design verification, more commonly called qualification testing, requires detailed
+and thorough analysis of performance capabilities. This still is a time-consuming
+process that includes functional test, vibration and shock, thermal vacuum, electro-
+magnetic compatibility, and other tests. This may include multiple iterations, and
+essentially involves testing the satellite to greater than expected levels. We should cut
+back and ultimately eliminate these qualification tests after we understand and proof
+the design. We can achieve significant savings in time and money by relinquishing the
+need for full-up testing on every unit.
+
+Conversely, process verification continues throughout the production of the
+spacecraft. These tests only verify the performance of the production system and
+include only simple performance checks. The control of the individual processes
+throughout the production cycle ensures the high-quality results. Complete testing of
+the spacecraft would be redundant and non-value added—and not consistent with the
+principles of lean production. Figure 19-4 shows some key differences between tradi-
+tional spacecraft production and lean production.
+
+In regards to components, subassemblies, and subsystems, it is critical that they
+achieve their qualification testing and product testing as early as possible. We need to
+detect quickly issues with design or process. We can integrate high quality and well-
+understood components, subassemblies, and subsystems with no additional integra-
+tion level testing—-with high confidence. At integration, we need to verify only
+incremental processing—usually only shipping and connection.
+
+19.1 Designing Space Systems for Manufacturability 749
+
+TRADITIONAL MULTI-SATELLITE
+Craft Industry Lean Satellite Production
+
+e Optimize Locally e Optimize Supply Chain
+
+e Contracts Based e Partnership Based
+
+e Aerospace Practices e Commercial Ingenuity
+
+@ Performance Only e Process Driven Design
+
+e Distributed Factory e Assembly Line
+
+@ Unique Product e Same Product
+
+Fig. 19-4. Lean Satellite Production Principles Compared to Traditional Craft Production.
+Lean production methods originated in the automobile industry. These methods can
+be applied to the production of satellites as well. See Womack et al. [1990] for in depth
+discussion of lean manufacturing.
+
+In summary, test provides possibly the greatest opportunity for significant cost and
+cycle-time improvements. Intelligent selection of reduced testing, clear distinction
+between design and process verification, and performance of lowest-level testing
+greatly enhances the cost-effective, high quality, low cycle-time production of space-
+craft without significantly increasing risk.
+
+Launch Processing Challenges
+
+After finishing integration and test, we package and ship the satellites to the launch
+site for processing and preparation for launch. Traditionally, this has been a complex
+and time-consuming segment of the satellite delivery process. The requirements for
+building a multi-satellite constellation include quick and efficient processing of satel-
+lites for launch. These requirements may also force the use of multiple launch sites and
+launch-preparation areas, further driving the need for standardized and simplified
+launch processing.
+
+We need to consider launch-site processing from the start of the program. We
+should target decisions and trades that support simplified processing. Changes and
+processing are much easier to handle while at the integration factory. This is where the
+facilities and skill levels are the most available. Launch-site processing typically takes
+place at a remote location—often not owned or operated by the satellite manu-
+facturer—that makes processing more difficult.
+
+The spacecraft are transported to the launch-site processing area via protected
+environment or container. The container environment must provide for temperature,
+humidity, vibration, and shock protection during the shipping process. In order to
+support the streamlined processing of the satellites upon their arrival, the shipping
+process is subject to basic process control. We deem the process to be successful as
+long as the required parameters—temperature limits, humidity limits, vibration levels,
+and shock levels—are not exceeded. If these parameters exceed their limits, we need
+to perform in-depth analysis or additional testing at the launch-site. But, if none of the
+parameters are exceeded, the satellite can continue with the streamlined process flow
+that contains little, or preferably no, testing.
+
+750 Space Manufacturing and Reliability 19.1
+
+Figure 19-5 depicts a streamlined launch-site process flow. The processing includes
+all the steps needed to prepare the spacecraft from shipping condition to flight. condi-
+tion. Launch team members receive, inspect, load onto the launch dispensers, fuel,
+package, and transport the space vehicles to the launch vehicle. They charge and
+monitor the flight batteries, which may be installed at the launch site, when the space-
+craft are mounted on the launch vehicle.
+
+Receiving Load SV(s) Fuel and
+
+Inspection and on Dispenser Pressurize
+Process Control SV(s)
+
+Transport to
+Launch-site
+
+Install Transfer Can
+Dispenser to Pad/Launch
+into Can Vehicle
+
+Countdown
+and Launch
+
+Charge Battery
+and Monitor
+
+Fig. 19-5. Streamlined Launch-Site Process Flow. Traditional launch-site processing can
+take several weeks. Streamlined processing can reduce the overall cycle time (trans-
+port to launch) to less than two weeks.
+
+We remove all difficult tasks that can be driven to earlier processing. We minimize
+hazardous operations. For instance, we can replace deployment ordnance can be
+replaced with other mechanisms. We should minimize or eliminate test operations. If
+the shipping process was in control (e.g. no limits exceeded on shipping sensors), we
+need no test verification of the process. Well-designed tooling and process develop-
+ment can make the remaining processes quick and efficient with little threat of damage
+to the spacecraft.
+
+19.1.2 Creating the Manufacturing Vision
+
+One of the most important factors relating to a successful production program is the
+creation of a manufacturing vision. More and more customers today want the “better,
+cheaper, faster” solutions to their product needs. We should create the manufacturing
+vision based on the customer’s and the market’s expectations for the product. The
+entire project team must embrace this vision. All parties involved with manufacturing
+must share the manufacturing vision and we must also include everyone else involved
+with the program from the early design phases through production and test. We must
+create manufacturing goals to support the vision. Creating manufacturing goals for
+quality, cycle time and cost must directly relate to the manufacturing vision. For
+example, if there is a manufacturing vision to produce enough satellites to populate a
+constellation in a single year then the manufacturing goals must reflect this vision.
+These goals must be in the form of quantified short cycle times, quantified quality lev-
+els and quantified costs. Once the manufacturing goals are in place, the next step is to
+execute these goals and pursue the manufacturing vision. We must constantly measure
+the progress towards meeting these goals and share them with the team. We must eval-
+uate progress and make necessary changes to achieve the stated goals. Changes may
+occur in the design or in the production and test processes. Changing the design and
+processes to meet the manufacturing goals is an iterative process. It is a give and take
+scenario where the sum of the changes equals achieving the manufacturing goals.
+
+19.1 Designing Space Systems for Manufacturability 751
+
+Establish Goals
+
+We must establish goals in the areas of cycle time, quality and cost. In today’s
+competitive environment, these areas are everything. Many times multiple companies
+have similar ideas and the only differentiating characteristic between their products is
+which one makes it to the consumer market first and captures the majority of the
+market share. Missing the time to market goals will cost a company market share,
+revenue and brand equity. Therefore we need to know up front when our product must
+be ready for our customer and then determine our cycle time goals to support this
+overall schedule.
+
+As stated previously, one of the unfortunate aspects of building satellites is that they
+are usually not field serviceable. If there is a quality problem after we launch the prod-
+uct into space, we have to live with the degraded performance or, in an extreme case,
+accept that the product does not meet our mission requirements. We must establish
+quality goals so that we can design our product accordingly. When we choose compo-
+nents for our product and select processes to build and test our product, we determine
+our resulting quality levels. As we choose components and processes we need to
+calculate our cumulative quality predictions and track them to our goals. We will then
+have the visibility to see what components and processes have a positive or negative
+impact on the overall product quality. With this data we now make informed trade-off
+decisions. We can determine which components or processes to change to increase the
+product quality. Often quality drives cycle time. If a product is designed with low qual-
+ity levels then we should expect to perform more rework and additional testing. This
+in turn adds cycle time. Hardware designed around robust processes which exhibit low
+defect rates result in products with fewer defects which leads to less test time, less
+rework and lower costs.
+
+Most customers desire low-cost solutions. More and more of the traditional “cost
+plus” projects are being proposed as fixed price contracts. The days of cost-plus
+contracts and cost overruns being absorbed by the customer are quickly disappearing.
+Today the contractor carries the burden of performing to an agreed-upon fixed price.
+Because of this, the contractor must know the cost goals and understand how they are
+going to perform to these cost goals. Performance to cost goals directly relates to
+performance to cycle time goals and quality goals. The addition of unplanned cycle
+time and of effort required to correct quality problems result in increased cost. In
+general any unplanned work results in additional cycle time and in additional costs.
+
+Involve Manufacturing Early
+
+Manufacturing early involvement may not always be the accepted way of doing
+business. Early manufacturing involvement allows the design team to be informed
+regarding the effects of their choices on downstream manufacturing and test opera-
+tions. It empowers the design team to make informed decisions and predetermine the
+expected cycle time, quality and cost performance of the assembly and test operations.
+It allows management to be aware of what to expect when the product reaches assem-
+bly and test.
+
+Getting the design team to accept concurrent engineering can be a difficult task.
+Many times a company needs a culture change for everyone to embrace the early
+participation of manufacturing. Management must support concurrent engineering and
+must pay attention to the analysis results created by the manufacturing representatives.
+The manufacturing and test participants on the concurrent-engineering team must
+embrace the manufacturing vision and possess the tools to influence the design to meet
+
+752 Space Manufacturing and Reliability 19,1
+
+this vision. They must show the other members of the design team that their participa-
+tion is value-added and that early team involvement will save the program time and
+money in the long run. Everyone on the project team must share the manufacturing
+vision in order for it to become reality.
+
+Select Parts and Processes Effectively
+
+As was discussed earlier the sum of the project’s individual process cycle times
+(both design and manufacturing/test) must support the overall cycle time goals and the
+manufacturing vision. Cycle time is inherent in the design. We predetermine the cycle
+time to assemble and test a product when we choose parts and processes for a
+particular product. Therefore, during the product design phase we must give appro-
+priate detail to the proper selection of parts and processes. Overall the design team
+must realize that a design consists of parts and processes. Often the choice of a
+particular part will dictate the use of a particular process. This relationship is what
+gave rise to the phrase “pick a part, pick a process”. Often design engineers choose
+parts that meet a limited set of criteria from which the design engineer is searching.
+They often do this without knowing the downstream impacts that these part choices
+have in assembly and test.
+
+Therefore it’s important to have manufacturing and test representatives involved in
+the part selection process. They can perform analyses to show how certain parts may
+require additional process steps which have lower process yields leading to more
+defects, higher cycle times and ultimately higher costs.
+
+An electronic assembly example of this type of analysis is shown in Table 19-1. We
+can extend this analysis to satellite design and manufacture. Part X and part Y are
+equivalent in the areas of form, fit and function; therefore we would assume that the
+parts are interchangeable. However the parts vary greatly when we address associated
+processes, process yields and overall cost. Part X is an 84-lead ceramic quad flat pack
+that must have the leads formed, trimmed, and tinned. The part must then be loaded
+into a tray for presentation to the part placement (pick and place) equipment. Form,
+trim, tin and tray placement are non-preferred processes. We must perform these
+processes in-house, which contributes to increased process time for that part type. The
+low process yields associated with these non-preferred processes drive this part to con-
+tribute 0.273 defects per unit (DPU) which leads to increased cycle time and costs
+associated with rework and potential test failures. Part Y is an 84-lead plastic quad flat
+pack that comes to us formed, trimmed, tinned and loaded on tape and reel to be
+presented to the pick and place machine. This part uses only preferred processes which
+leads to lower process cycle times, lower defects per unit and lower rework costs. All
+of these factors are reflected in the lower total cost of Part Y. Therefore when selecting
+a part the design team must look at the downstream impact of their part selection and
+include the total cost impact of the part in their design tradeoffs.
+
+By relating parts to processes we can determine the expected time to manufacture
+and test a product, the associated quality level and the overall cost. Once we make
+these estimates we can perform “what if’ analyses to see if other part/process combi-
+nations will make attaining the cycle time, quality and cost goals more realistic. We
+perform this iterative process early in the design phase, so we can include many design
+tradeoffs between all of the disciplines.
+
+Parts have many attributes that influence the effectiveness of manufacturing
+processes. Some of these attributes fall into the categories of cost, interchangeability,
+availability, reliability and simplicity. Early part-supplier involvement is critical to
+
+19.1 Designing Space Systems for Manufacturability 753
+
+TABLE 19-1. Part/Process Cost Relationship
+
+Processes
+Package Used
+
+Fart 84CQFP | $25.00 | 1. Lead form/trim | 0.273
+2. Lead tin
+3.Pick & place
+—tray
+4. Oven reflow
+
+a 84QFP | $17.50] 1.Pick & place
+—tape
+2. Oven reflow
+
+Process
+Time | Assembly | Rework Ee.
+(Hr) Cost Cost Ee.
+
+aa —|-
+
+0.002 $0.128 | $0.459 | $18.00
+
+ensure acceptable levels in all of these categories. The suppliers need to know what
+our cost goals are for the parts being supplied. The supplier also needs to understand
+our product design and how the supplier part interacts with our design. The supplier
+can work with us to determine the appropriate variables to control] to ensure that the
+part is interchangeable and reliable. The supplier also needs to understand our pro-
+duction schedule and our material management philosophy in order to make sure that
+their parts are available to us when we need them.
+
+Part cost directly impacts product cost. It also has an impact on process develop-
+ment and process execution. Processes used to assemble high-cost parts are usually
+designed with additional controls and verifications. Typically this leads to higher
+stress levels for the people doing the assembly work and more engineering involve-
+ment for process verification. Use of higher cost parts drives the desire to perform
+more rework rather than scrap hardware in the event of unwanted process variations.
+
+Part interchangeability is critical in a product design regardless of the production
+quantity. The ability to remove and replace a component quickly translates into less
+non-value-added time. Interchangeable parts have the same form, fit and function for
+all parts. The supplier of interchangeable parts must use process control to insure that
+the parts coming into the assembly area are truly interchangeable. ff a part is not truly
+interchangeable, assemblers will have to spend additional time to alter mechanical
+characteristics of the part to make it fit or perform additional tests to adjust for the
+varying performance of the part.
+
+Part simplicity directly relates to part cost, interchangeability, availability and
+reliability. Typically the more simple the part design the lower the cost. A simple part
+will have less variables associated with its design, therefore it will positively impact
+the component reliability and interchangeability. A simple part will require less pro-
+duction set up time and have fewer variables to cause scrap. Therefore a simple part
+should be more available for use.
+
+Part availability is critical to maintaining product flow in the assembly area. We
+never want to stop the assembly process due to parts unavailability. Many times the
+risk of part unavailability is controlled by creating material inventories. However,
+there can be a great.deal of cost associated with carrying part inventories. Typically
+we must allocate valuable factory floor space to material storage near its point of use.
+An alternative to storing material on the factory floor is to store it in a stock room and
+move the material to the assembly line when we need it. Both of these scenarios result
+in material being stocked at the assembly location and increase the risk of having large
+quantities of parts that may become obsolete or require rework/retrofit if there is a
+design change. The best alternative to either of these scenarios is to have “just in time”
+
+754 Space Manufacturing and Reliability 19.1
+
+suppliers. Working with Just In Time suppliers requires less stocking activities and
+hence less chance of having vast amounts of product that has to be reworked or retro-
+fitted when there is a design change, but can add risk. The supply chain information—
+especially deliveries, cycle times, and quality—must be well understood to make Just
+In Time plausible. If not well understood and reliable, Just In Time is very risky.
+
+Once material is ready for production it is time to use our manufacturing processes.
+In the typical aerospace manufacturing environment, processes were developed after
+the design, so the product could be manufactured and tested to meet the customer’s
+needs. Before the implementation of concurrent engineering this meant that the design
+was “thrown over the wall” to manufacturing and manufacturing did “what ever it
+takes” to build, test and deliver the hardware to the customer. Typically this meant that
+the processes were highly flexible, required specially skilled workers, lacked good
+control and were seldom characterized. Today with the advent of concurrent engineer-
+ing, we design in the controlled and repeatable manufacturing processes from the
+beginning and the manufacturing output is highly predictable.
+
+Concurrent engineering has brought about a change of attitude regarding manu-
+facturing processes in the aerospace industry. No longer do we perform processes just
+because “‘that is the way we’ve always done them.” High-quality processes are char-
+acterized, controlled and repeatable. Many of these processes have been borrowed
+from the commercial manufacturing world. The mass reflow of electronic assemblies
+is an example of this exchange. Mass reflow—the mass soldering of parts on printed
+circuit boards using a single, controlled thermal cycle—was developed to efficiently
+produce electronic products for delivery to consumers. Although slow in gaining
+acceptance, we now use it for spaceflight hardware and other high reliability
+applications.
+
+The concurrent manufacturing engineer should never be afraid to ask “why” we
+design or process something the way we do. An example of this is to look at the
+integration of deployables on a satellite. In the past certain deployables have always
+been integrated with the satellite in the vertical position. This was done to minimize
+the amount of stress that could be preloaded into the deployable mechanisms. Chang-
+ing the satellite from the horizontal position to the vertical position and back to the
+horizontal position requires time, space, additional tooling and creates a lot of risk
+associated with handling the satellite. With today’s modern analysis tools much of the
+stresses associated with preloading the deployable mechanisms in the horizontal posi-
+tion can be modeled and the risks analyzed. If the risks are determined to be low
+enough then the satellite plane change from horizontal to vertical can be eliminated.
+This will save time, space, and tooling and also reduce handling risk.
+
+Typically satellite manufacturing has been a low-volume process. Currently many
+companies are proposing multi-satellite constellations. These multi-satellite projects
+drive manufacturing to create production lines for assembling and testing satellites.
+The “assembly line” concept of these satellite production lines has roots in the
+automotive industry. Many of the new satellite production lines take mass production
+assembly line technology one-step further and implement many of the “lean” manu-
+facturing principles currently used in the automotive industry. Some of these “lean”
+manufacturing principles include Just In Time suppliers, supplier partnering, concur-
+rent engineering, pull production,” and statistically controlled processes.
+
+Other satellite manufacturers have taken the “lean” manufacturing philosophy to
+the next step— “agile” manufacturing. “Agile” manufacturing incorporates all of the
+principles used in “lean” manufacturing with the addition of flexibility. An “agile”
+
+19,1 Designing Space Systems for Manufacturability 755
+
+manufacturing line can support multiple product lines on the same assembly line. It
+also can adapt and respond to product changes which may be directed by changing
+customer wants and needs.
+
+One of the guiding principles behind “lean” and “agile” manufacturing is waste
+elimination. We must evaluate all of the processes associated with assembly and test
+in terms of value-added activities and non-value-added activities. During process
+development and implementation, we should maximize the value-added processes and
+the non-value-added activities should be minimized. Reduction of the non-value-
+added process steps will drive waste elimination.
+
+Reduction in the number of inspection points is a good example of waste elim-
+ination. Typically satellite production programs have had a high content of quality
+inspection points. Inspection points are examples of non-value-added operations. In
+the past multiple inspection points were required because the assembly processes were
+highly variable and uncontrolled. By institutionalizing concurrent engineering,
+processes are now designed into the assembly flow that are controlled and repeatable.
+Because the output of these processes are predictable, we no longer need multiple
+inspection points. Therefore we eliminate waste by removing the non-value-added
+inspection steps.
+
+Another non-value-added recurring process is test. Because test is non-value-
+added, we need to be minimize it to eliminate waste. Although some testing is
+required, we should minimize redundant testing. One of the benefits of using con-
+trolled and repeatable processes is that the output from these processes is predictable.
+Therefore we don’t have to test something that has been tested earlier if we know that
+the processes used after the initial test have not injected variability into the product. A
+good example of this principle is the previously-mentioned minimization of launch-
+site processing. We test the spacecraft prior to shipping it to the launch site, and don’t
+test it at the launch site unless shipping indicators or sensors show that it exceeded a
+shipping process limit.
+
+Test is just another process. During the early phases of design, we should view the
+assembly and test efforts as processes that must be controlled and repeatable. Similar
+to satellite manufacturing processes, we should be establish goals for all test processes.
+These goals should relate to cycle time, quality (predicted test yields), and cost. We
+should question any non-value-added steps and, if possible, eliminate them. If a test
+continually exhibits a 100% yield rate then we need to determine if the test is
+necessary.
+
+Reality is that test yields are not always 100% and finding defects at higher levels
+of integration can negatively impact cycle time and cost. The goal of performing a test
+is to find the defect at the lowest possible level of integration. This reduces the amount
+
+* Pull Production Systems
+
+Traditional satellite manufacture and mass production in general is based on a push system.
+In other words, the material and work-in-process is generally pushed or processed through the
+system. The emphasis is on processing the hardware through the production line as quickly as
+possible. Unfortunately, this can create pockets of inefficiency and bottlenecks (throughput
+limiters). These problems require excess factory space for inventory of material and product,
+and can create excessive defects and cycle times.
+
+Lean production utilizes a pull production methodology. Material and work-in-process is
+not processed until upstream stations are ready. Downstream processes do not create excess
+inventory, because the production system will not allow production to continue unnecessarily.
+The system is tuned for a continuous process flow, with necessary materials being delivered
+Just In Time in small quantities.
+
+756 Space Manufacturing and Reliability 19.1
+
+of time and effort required to get to the problem area and fix it. Even after tests have
+been performed there are instances when the quality of the lower level hardware may
+still be suspect at the higher levels of integration. Therefore it is important to design in
+accessibility at the higher levels of integration. We may need this accessibility to
+repair a defect that has passed undetected through a lower level test operation or to
+incorporate late design modifications prior to sealing the satellite. Design for acces-
+sibility needs to be a goal of the program vision because it doesn’t happen without
+conscious effort. For a detailed discussion of process design and production trends, see
+Shunk [1992].
+
+19.1.3 Influencing the Design
+
+Success of production depends on the manufacturing/production disciplines being
+involved throughout the product design. Through concurrent engineering, we develop
+the product involving various disciplines of the trade. For satellite design, this includes
+such expertise as electrical, mechanical, software, test, industrial, and reliability
+engineering; it also includes other less-technical but equally important functions such
+as contracts, finance, procurement and scheduling. The manufacturing role, in partic-
+ular, acts as the main interface between many product teams due to their direct respon-
+sibility of ensuring a producible product. All experts must get involved with the design
+early and continually to the extent they can influence the product to meet their respec-
+tive goals or to compromise with others. At the very least, if the experts can’t reach an
+acceptable term, they can highlight the issue very early in the program so that they can
+continually work it into an acceptable term.
+
+To influence the design, the program team must first establish a common vision for
+the enterprise. This common vision serves to create a working platform that allows the
+supply chain to collectively communicate. It provides the central theme to which the
+program will focus regardless of where anyone’s portion of the business is located.
+The common vision creates the need for goals and guidelines in each concurrent
+design area within the program. Overarching goals must be established to provide
+incentive for the program; they should be difficult to attain, yet attainable within the
+program life.
+
+To supplement the goals, the team must establish specifically defined rules and
+guidelines to bring the goals to fruition. The vision, goals, and guidelines provide the
+program with a standard, central direction that, in turn, provides the program with the
+opportunity to be efficient and united. The intention of a common vision is not to strip
+individual company identity, rather to converge on certain business ideas that alleviate
+challenges due to diverse mindsets, backgrounds, and corporate cultures.
+
+Designing to goals and guidelines sounds simple but may be difficult in practice;
+few programs have these clearly outlined at the inception of the program. Implement-
+ing goals at the beginning of the program is where they are most effective. Studies
+have shown that approximately 70% of the cost of the system is fixed by the end of the
+conceptual design phase [Wade and Welch, 1996].
+
+A concept becomes feasible through refinement and, in turn, producible through
+other iterations of refinement. If we initiate the guidelines of design at the conceptual
+level, it is less costly and less painful to iterate to a feasible design. The cost to correct
+problems occurring from a previous program phase increases by an order of magni-
+tude, approximately (Fig. 19-7). A simple design change during the conceptual design
+phase will cost 10x during broadband phase and 100x during engineering model
+phase.
+
+19.1 Designing Space Systems for Manufacturability 757
+
+100
+
+Life-Cycle Cost
+
+80 Determination
+
+60
+
+40
+
+CUMULATIVE % OF COST
+
+20 Cost Reduction
+
+Opportunities
+
+Concept Demonstration | Full-Scale \ Production \ Operation
+& Validation Developme & Support
+DEVELOPMENT PHASE
+
+Fig. 19-6. Project Phase/Cost Assignment. Adapted from Wade and Welch [1996]. The ulti-
+mate costs of a system are greatly influenced by decisions made early in the product
+life cycle. Based on model fit to empirical data.
+
+>1,000
+
+>100
+
+>10
+
+RELATIVE COST
+
+Concept Breadboard Engineering Flight
+Model
+DEVELOPMENT PHASE
+
+Fig. 19-7. The Relative Cost of Modification / Corrective Action. Adapted from Wade and
+Welch [1996]. The relative cost of fixing a design problem escalates rapidly as the
+design matures.
+
+The feasible design should already be largely configured to the goals and, therefore,
+iterating to the production level should be relatively smooth. The iteration process is
+smoother because the team knows what is expected through the long-term goals.
+
+758 Space Manufacturing and Reliability 19.1
+
+Production goals and guidelines should include all production-related information
+for the product. This information encompasses the expectations for both parts and
+processes as these two ingredients form a product. It also provides structure for the
+product to grow properly since it addresses quality, capabilities, production rates,
+facility requirements, procurement, cost, warranty, manufacturability, testability, etc.
+For example, The design dictates product quality. If the product has a 2-sigma design,
+the best we can expect is a 2-sigma product.
+
+Knowing the expectations initially not only assists the product to mature into pro-
+duction, and assists the product team to develop. Having these goals gives the team a
+purpose to commonly focus their attention. Successful teamwork resolves issues
+seemingly otherwise unresolvable. Communication becomes clearer and less conflict-
+ing because the team uses common terms to explain the common goals. A good prod-
+uct team forms to produce a working product without relying upon functional titles and
+positions. Additionally, trust forms within the team. Yet, trust and competition are not
+mutually exclusive. Team members may and will form partnerships with competitors
+for different projects or products, but this practice must not hinder the primary busi-
+ness relationships. Lack of trust causes program inefficiencies.
+
+Initially, the prime contractor must derive the goals and guidelines; however, the
+suppliers must then work closely with the prime contractor to further develop,
+understand and modify the expectations as necessary. In any event, if team members
+don’t understand or believe the goals, the team’s ability to influence the design is
+diluted, and the prime contractor must begin to educate them about the goals.
+Furthermore, it is especially important to derive the goals so they are meaningful. For
+example, assembly time of a high volume, high complexity product (indicative of the
+constellation satellite industry) typically comprises less than 35% of the overall cycle
+time while production test comprises the remaining 65% (Olivieri [1997]). Using the
+Pareto approach we find that the greatest opportunity to influence the design is in
+production test*.
+
+Design influence is most effective through mathematical analysis. Personal bias
+and tradition are not the basis for influence. When we select a part for a product, we
+inherently select the process as well. This means that predicting behaviors (quality,
+reliability, cycle time, assembly process, etc.) of the product is possible. We do this by
+collecting data from suppliers but where data is not available we either run an experi-
+ment or locate like-product data. Key predictions include, but are not limited to: defect
+per unit, defects per million opportunities, statistical tolerance and variability assess-
+ments, design to unit production cost, solids modeling, cycle time, process modeling
+and mapping, design of experiments, and simulations.
+
+Having the data equates to having the knowledge to influence design. The only way
+we achieve key goals in areas such as quality, manufacturability, and profit is if they
+are designed in.
+
+Influencing the design is an enterprise challenge. Awareness of our up and down
+stream product map helps us make smart decisions for the overall program. Locally
+
+* The Pareto Principle
+If we rank order contributors to a problem from greatest influence to least influence, the
+Pareto Principle states that only a few of the contributors will comprise the bulk of the influ-
+ence. In general, 80% of the contribution comes from 20% of the factors. Pareto analysis is a
+technique for ranking items according to their contribution and analyzing the top contributors,
+or the “‘vital few.” The other 80% of the factors that only influence 20% of the contribution
+
+are the “trivial many.”
+
+19.1 Designing Space Systems for Manufacturability 759
+
+maximizing cycle time, quality, assembly ease and other areas of importance, does not
+always provide the same benefit to the overall program. Standardization of analysis
+tools, metrics, goals, and guidelines help to relate design impacts to the supply chain.
+
+19.1.4 Process Development and Verification
+
+Quality, and the resulting efficiency of manufacturing, is never an accident. It is the
+result of good design practices and sound process development methods—with the
+addition of management and execution diligence. Significant process development
+and verification activities must take place to manufacture high quality products. For
+satellite manufacturing, we need to apply these methods at all levels—suppliers, sub-
+tier suppliers, payload assembly and test, space vehicle integration, and launch
+operations.
+
+In the manufacturing context, we define a process as any activity that changes or
+touches the product or requires resources. The objective is to use simple, uncom-
+plicated processes that yield high quality results with short cycle times. Very few
+processes meet these general criteria without development. Therefore, sound develop-
+ment methods are key. The end goal is to have controlled and repeatable high-quality
+processes during the production phase of the program.
+
+Development Methods
+
+We can apply structured development methods to process and product develop-
+ment. Many methods exist, and most have merit. Here, we use a four-phase process
+development, a.k.a. process characterization, model. We should first apply this model
+to critical processes and then extend it to other processes as necessary.
+
+The process characterization model consists of four phases.
+
+Phase 1: Process Definition—Map the process to understand the variables
+and characteristics involved.
+
+Phase 2: Process Capability—Establish current level of performance of the
+process. Does the process perform as needed?
+
+Phase 3: Process Optimization—Investigate the variables to determine
+which variables drive the process output. Determine the best levels
+for these variables to provide optimal process output.
+
+Phase 4: Process Control—Monitor the process and its important variables
+to determine when its performance has changed or is out of control.
+
+We iterate the cycle to further improve the process as necessary. (See Fig. 19-8.)
+
+We characterize the process to identify and remove sources of variation.
+Ultimately, variation is the cause for product quality problems. We use statistical tools,
+such as Design of Experiments and Statistical Process Control, to reduce the variation,
+which improves quality—and subsequently reduces cost and cycle time. See Mont-
+gomery [1996] for detailed discussions about statistical tools.
+
+Cycles of Learning
+
+In addition to the iterations caused by characterizing the production process, we
+may need additional cycles of learning when developing satellite constellation produc-
+tion systems. Varying techniques are available, depending on the subject matter.
+
+For instance, we use simulation techniques to model and predict performance.
+Discrete event simulation packages can model processes, factories, and whole supply
+
+760 Space Manufacturing and Reliability 19.1
+
+1
+
+Process
+/- Definition \
+4 2
+
+Process Process
+Control Capability
+3
+Process
+Optimization
+
+Fig. 19-8. Process Characterization Four Phase Model. We iterate this cycle to continually
+improve the product or process.
+
+chains. We can use these models to determine resource requirements, facility size,
+inventory schemes, and delivery schedules. We can explore proposed changes to pre-
+established baselines without risk.
+
+A second source of cycles of learning is the use of prototyping. Prototyping allows
+for physical evaluation—appearance and dimensional—while changes are easier and
+less expensive to make. Production changes are extremely costly, and potentially
+devastating. We can potentially avoid them through early prototyping. The use of
+Dynamic Test Models and Engineering Development Models are advanced functional
+examples of prototypes.
+
+A third source is the use of pathfinding activities. The more complex a system and
+its logistics, the more beneficial pathfinding activities become. They revolve around
+building a scale representation, usually 1:1, of a product and using it to simulate all
+handling, manufacturing, and logistical activities. For satellites, this includes practic-
+ing and iterating every process, from subsystem receipt to integration processing to
+launch processing. The resulting benefits of pathfinding include handling streamlin-
+ing, mechanical checkfit verification, documentation improvement, process develop-
+ment, tooling improvement, facility development, and logistical simplification.
+
+In short, any activity that we can simulate or realize before we create an actual
+product can have significant payback, if enacted. These activities are important tools
+to gain significant process and product knowledge.
+
+19.1.5 Production
+
+All of the previous phases—creating the manufacturing vision, influencing the
+design, and process development—lead to the final phase—production. All previous
+goals are to make this phase easy to execute. Failure or lack of attention in the previous
+phases becomes readily apparent here. They surface as schedule slips, exceeded bud-
+gets, and poor quality.
+
+Executing the overall plans and goals established in the earlier phases is paramount.
+While many production issues are similar for building one satellite or one hundred,
+
+19.1 Designing Space Systems for Manufacturability 761
+
+some areas are significantly different. These areas include supply-chain management
+and production floor management.
+
+Supply-chain Management
+
+A supply-chain focus is key to the successfully executing the production phase of
+a multiple satellite program. The supply-chain is defined as all of the suppliers and
+activities involved with producing a satellite. This involves the major suppliers—bus,
+payload, and antennas—and the minor suppliers.
+
+Communicating and coordinating across the supply-chain is critical. Fundament-
+ally, all the suppliers need to have a common vision and sense of direction. In effect,
+the major suppliers become partners. Openly communicating goals, expectations, and
+problem solving is essential. To facilitate communication, we need to seek a common
+language and culture through common training and team building. The resulting pro-
+gram culture program can be built on the strengths of each partner.
+
+Concurrent engineering across company lines must occur. All company sections
+must share the key design rules or characteristics early in the process and maintain
+them throughout the program. We must carefully define and fully understand the
+_interfaces and handoffs. We should develop and use common tooling and processes.
+For instance, shipping containers carrying subassemblies to final integration should
+support integration activities without a tooling transfer. They should seamlessly
+integrate into the factory. Finally, common metrics across the supply-chain allow for
+meaningful summation of data, so managers can judge the overall system health.
+These metrics should center around quality, cycle time, and critical parameter
+performance.
+
+Production Floor Management
+
+Performance and executing the production phase uses principles similar to any
+production environment. In addition to supply-chain management, consistent perfor-
+mance takes lean manufacturing principles of production floor management, including
+good processes, qualified workers, and timely information.
+
+Short-cycle, well understood processes and overall processing is fundamental to
+lean manufacturing. Simulation or other flow design tools help to determine optimum
+production flows that reduce the risks of production delays. The flows and processing
+should include Just In Time concepts to minimize Work In Process inventory and
+improve quality and cycle time. Just In Time hinges on delivering material items when
+the flow needs them in a pull fashion. We don’t move items until they are ready for
+processing. Less hardware is in process, thereby reducing the potential for damage and
+reducing overall floor space requirements.
+
+Qualified workers that understand the processing of space hardware are still
+required for satellite production. While still required, their roles and specific skills are
+very different than traditional programs. Highly specialized and narrowly skilled
+positions now become broader and more generalized. The design attributes resulting
+from a successful multi-satellite design team will require less intensive processing.
+While less difficult, the processing needs to be more repeatable. We can train or certify
+workers for each repeatable operation, so the can typically monitor their own work.
+We minimize quality inspections. Instead, the individual or the team is responsible for
+performing each operation correctly and safely.
+
+The capture and use of timely production data is a third production floor manage-
+ment challenge. Producing multiple satellites with short cycle times requires us to
+
+762 Space Manufacturing and Reliability 19.1
+
+collect, use, and archive data differently from traditional methods. Paper, the tradi-
+tional documentation medium, is too cumbersome, untimely, and not available to
+multiple disciplines. Constellations based on a large number of satellites require
+volumes of data be available to multiple users. We need factory systems for work
+instruction and process planning; transmittal of product data between suppliers, inte-
+grators, and users; and for factory data collection. Factory data collection includes
+calibration, as-built, work-in-progress tracking, and quality data and/or information.
+An added advantage is using common tools for these functions across the supply-
+chain.
+
+19.1.6 Summary
+
+These methods apply exactly to multiple satellite constellations with communica-
+tions payloads. These methods were applied to the Iridium® program, with outstanding
+cost and schedule results. Constellation reliability and performance data is starting to
+be collected at time of this publication.
+
+Smaller constellations, non-communication payloads, and high-value missions
+may use subsets of these practices. In all cases, thoughtful selection of parts and
+processes and skillful application of concurrent engineering practices are paramount
+
+More detailed information regarding the application of these methods and subse-
+quent tradeoffs will become available as more constellations complete deployment.
+Currently, competitive issues restrict information flow as much data is viewed as
+proprietary.
+
+The Iridium® Satellite Assembly Process
+
+The Iridium®* Satellite Assembly Factory comprises 15 process stations. These stations
+complete specific functions. The satellites flow from station to station throughout the factory
+until Station 15, At Station 15, workers pack and send the satellites to the launch-site. During
+steady-state production, the total time to proceed from Station 1 to Station 15 is 24 days.
+
+Station 0: Material Receipt
+
+All material and subsystems are received into the satellite factory. Major systems received
+into the factory include:
+
+¢ Gateway antennas (4)
+
+* Crosslink antennas, fixed (2) and moving (2)
+
+¢ Panels (communications and gateway)
+
+* Main mission antennas (3)
+
+Solar arrays (2)
+
+* Satellite bus assembly
+
+The satellite bus assembly, complete with propulsion and guidance systems, is received
+already mounted on a wheel-mounted dolly. This dolly, collaboratively developed for use
+throughout the satellite delivery process, is used for satellite assembly, shipment, and launch-
+
+Site processing. The dolly also allows for access to all sides of the satellite via rotation, and can
+be easily maneuvered through the factory.
+
+* Tridium® is a registered trademark and service mark of Iridium IP LLC.
+
+19.1 Designing Space Systems for Manufacturability 763
+
+STATION NUMBERS
+oo 01 02 03 04 05 06 O7 O08 09 10 11 #12 #=13 «414 «15
+
+Commincations
+Electronics
+Communications
+Panel
+
+Gateway
+Antennas
+
+Gateway Panel
+
+Space Vehicle
+Bus
+
+Cross Link
+Antennas
+
+EMI Tent
+
+Shear Panels
+
+Main Mission
+Antennas
+
+Solar Arrays
+
+Station 1: Heat-pipe Bonding
+
+The heat-pipe is thermally bonded to the communication panel. This is the only process that
+does not occur within the integration factory.
+
+Note: Stations 2-4 operate in parallel
+
+Station 2; NADIR Panel Assembly
+
+The four crosslink antennas--two moving and two fixed--and the radiator plate are installed to
+the nadir bulkhead end of the bus.
+
+Station 3: Gateway Panel Assembly
+
+Gateway antennas (4), waveguides, antenna positioning equipment, cable harnesses, and other
+components are installed to the gateway panel. During this process, a trunion dolly holds and
+rotates the panel.
+
+Station 4: Communications Panel Assembly
+
+Motorola supplied units are installed on the communications panel. A rotating trunion dolly
+designed for the communications panel holds it.
+
+Station 5: Communications Panel Test
+The completed communications panel is tested.
+
+Station 6: Communications Equipment Subsystem (CES) Test
+
+The CES consists of equipment on the communications panel and the gateway panel. Cables
+are installed to temporarily link the two panels. This station initially verifies the functionality
+and performance of the CES hardware over temperature cycles, prior to being integrated in the
+spacecraft.
+
+764 Space Manufacturing and Reliability 19.1
+
+Station 7: Gateway Panel Assembly Integration
+
+The completed gateway panel is installed onto the bus assembly. First, the panel is rotated to
+the vertical position, aligned to the spacecraft bus, and then mated to the bus. Cables and
+harnesses are then attached.
+
+Station 8: Communications Panel Assembly Integration
+
+The completed communications panel is installed onto the bus assembly. The panel is first
+rotated 180 degrees while in the trunion dolly. A strongback fixture is then attached to the panel
+for support and alignment. The panel is lifted over the spacecraft, aligned, and finally installed.
+The panel is securely fastened in place and all cables and harnesses are attached.
+
+Station 9: Space Vehicle Test
+
+(Or Integrated Communication Equipment Subsystem (CES) Test)
+Testing is performed on the newly integrated communication panel, gateway panel, and
+spacecraft bus. This test verifies the CES functionality and performance.
+
+Station 10: EMI Tent and Shear Panel Installation
+
+An EMI tent is installed over the communications panel. Shear panels are then installed on the
+remaining two open sides of the bus structure.
+
+Station 11: Main Mission Antenna Integration
+
+The satellite is rotated horizontally on the dolly to attach the main mission antennas (MMA),
+one at a time. First, an attachment fixture is mounted on to the MMA. This fixture contains the
+lift points for using the lifting crane. The MMA is held vertically over the spacecraft and low-
+ered to connect one end. RF, power, and signal cables are attached. The free end of the MMA
+is then lowered until flat against the spacecraft. The MMA deployment mechanisms are adjusted
+and set. Finally, this process is repeated for each of the three MMAs required.
+
+Station 12: Space Vehicle (Integration) Test
+
+Full-functional testing of the MMAs, communications payload, and bus is conducted. The
+testing includes seven complete hot-cold thermal cycle tests.
+
+Station 13: Solar Array Integration
+
+Two solar array wing assemblies are integrated onto the spacecraft in a manner similar to
+MMaA installation. First, an attachment fixture is mounted onto the solar array. This fixture
+contains the lift points for using the lifting crane. The solar array is held vertically over the
+spacecraft and lowered to connect one end. The cables are attached. The free end of the solar
+array is then lowered until flat against the spacecraft. The deployment mechanisms are adjusted
+and set. Finally, this process is repeated for the second solar array.
+
+Station 14: Launch Confidence Test
+
+Flight software is loaded and verified and solar array operation is tested. Finally, the vehicle
+is powered down and prepared to flight-ready condition.
+
+Station 15: Space Vehicle Pack and Ship
+
+The completed satellite is prepared for shipment to one of three launch-sites. Consent-to-ship
+authorizations and checkout procedures are completed. The satellite, still mounted on the dolly,
+is loaded into the shipping container. The shipping container provides for an environmentally
+controlled and shock protected delivery to the launch-site.
+
+
+19.2 Reliability for Space Mission Planning 765
+19.2 Reliability for Space Mission Planning
+
+Herbert Hecht,* SoHaR Incorporated
+
+When a bulb in our desk lamp burns out, it is easily replaced. When the switch that
+controls the bulb fails, the replacement is not quite as simple but stil] within the capa-
+bilities of most mechanically inclined teenagers and even some adults. We expect a
+higher reliability of the switch than of the lamp because it requires more effort to repair
+a failure. When a spacecraft command receiver fails on orbit, it takes an extra-
+ordinarily long screwdriver to fix it. You get the general idea: the command receiver
+has to be much more reliable than the light bulb or the switch on the desk lamp. This
+need for very high reliability in all parts and subsystems of a spacecraft is the basis for
+including a reliability program in most space projects.
+
+Before describing the details of the reliability program, let us briefly discuss the
+meaning and metrics of reliability in the context of space missions. A common defi-
+nition of reliability is “The probability that a device will function without failure over
+a specified time period or amount of usage.” [IEEE, 1984] If the phrase “without fail-
+ure” is taken to mean “without failure of any kind” it defines basic reliability; if it is
+interpreted as “without failure that impairs the mission” it defines mission reliability.
+In spacecraft that employ extensive redundancy there can be a significant difference
+between these two reliability metrics. Mission reliability is the more important
+concept, and when we use “reliability” without a qualifier, it always means mission
+reliability.
+
+The elementary expression for the reliability of a single item, not subject to wearout
+failures, is
+
+R=e4 (19-1)
+
+where A is the failure rate and t is the time. Here, R, is the probability that the item will
+operate without failure for time ¢ (success probability). At this point we recognize only
+two outcomes: success and failure, and therefore the probability of failure, F, is given
+by:
+F=1-R (19-2)
+More refined and practical methods of assessing mission success will be described
+later.
+For a spacecraft made up of n nonredundant elements, all equally essential for
+
+spacecraft operation, the system (or series) reliability, Rs, or success probability, is
+computed as
+
+n
+-yA,
+R=] [R= (19-3)
+1
+
+where R; (i = 1...n) is the reliability and ; the failure rate of the individual elements.
+For failure probabilities (A) less than 0.1 or reliability greater than 0.9, the following
+
+* Much valuable help in the formatting of this chapter was received from Emery I. Reeves of
+the U.S. Air Force Academy who also contributed the material for Table 19-6.
+
+766 Space Manufacturing and Reliability 19.2
+
+approximation is frequently used
+
+eAtz 1 —Ar (19-4)
+Most reliability computations, particularly prior to detailed design, use failure prob-
+abilities (which can be summed) rather than reliability values (that must be multiplied)
+
+Where a system consists of n elements in parallel, and each of these elements can
+by itself satisfy the requirements, the parallel (or redundant) reliability, R,, is given by
+
+n
+R, =1-] [q-R) (19-5)
+
+1
+where the reliability of the parallel elements is equal, say R,, the above simplifies to
+R,=1-(-R,y (19-6)
+
+Examples of series and parallel structures are shown in Fig. 19-9 .
+
+Rg= Raighc
+Rg = 1-(1- Ra)(1— Ag)(1- Rg)
+CASE 1 CASE 2
+Series Reliability Parallel Reliability = Full Redundancy
+
+Rg= Ae [1-(1- Ra)(1- Ag) Rg = 1-(1- R4Rg)(1- Re)
+CASE 3 CASE 4
+Partial Redundancy Non-identical, Full Redundancy
+
+Fig. 19-9. Series and Parallel Reliability Models. A, is the system reliability. R4, Ag, and Rc
+denote the reliability of the A, B, and C components, respectively.
+
+In terrestrial applications it is customary to distinguish between active and quies-
+cent (dormant) failure rates, the latter being about one-tenth of the active rates. This
+reduction accounts for the absence of electrical stress when a component is not
+energized. However the high reliability requirements of the space environment cause
+components to be derated so that the failure probability due to electrical stresses even
+
+19.2 Reliability for Space Mission Planning 767
+
+in the active mode is quite small. The distinction between active and quiescent failure
+rates is therefore much less important for spacecraft applications.
+
+When the spacecraft does not have any redundant elements, a plot of reliability vs.
+mission time will be concave toward the origin, but when redundancy is provided the
+initial part of the reliability plot tends to be convex to the origin. This accounts for the
+shape of the mission reliability curve in Fig. 19-10.
+
+Effectiveness
+
+Reliablility
+
+O Mission Reliability
++ Effectiveness
+
+Reliability of Effectiveness
+oO
+on
+Design Life
+
+Mean Mission Duration
+
+0.0
+
+Fig. 19-10. Frequently Used Reliability Concepts. Design life is governed by wear-out and
+expendable stores. Mean mission duration is less than design life because failures
+can terminate a mission before end-of-life conditions are reached.
+
+Design life, the intended operational time on orbit (see Section 19.2.1), is an
+important parameter for the reliability program. It determines the amount of con-
+sumables (control gas, etc.) that must be provided and establishes quality and test
+requirements for items subject to wearout, such as bearings and batteries. The mission
+reliability calculated at the design life is the mission success probability. Since this
+quantity is less than 1.0, the expected life is less than the design life. The customary
+measure of the expected life is the mean mission duration or MMD, given by:
+
+MMD =ITdR (19-7)
+
+where T represents a horizontal (time) line in the shaded area of Fig. 19-10 and dR is
+the associated (vertical) increment in reliability. MMD is a frequently used figure of
+merit for spacecraft reliability improvement programs.
+
+Most satellites perform multiple functions (e.g., weather observation and tracking
+ocean traffic), and performance of any of these functions may still be useful even
+when it is degraded. Under such circumstances the success criteria are no longer ob-
+vious. Should failure be defined as the event when the spacecraft fails to furnish any
+useful data, or should it be the point at which its performance deviates from any part
+of the specification? This problem can be addressed by establishing multiple reliabil-
+ity requirements. Assume that the specified weather observations are intended to use
+three frequency bands but that observations on even a single band are still useful. The
+success probability (SP) requirement may be formulated as shown in Table 19-2.
+
+768 Space Manufacturing and Reliability 19,2
+
+TABLE 19-2. Hypothetical Reliability Requirement for a Weather Satellite.
+
+At least 1 band operational
+
+At least 2 bands operational
+All 3 bands operational
+
+*Success Probability
+
+During the development of the satellite it may be found that it will be difficult to
+obtain a success probability for all three bands operational greater than 0.80 but that
+the single band mission reliability can be raised to 0.99. If the requirements shown in
+Table 19-2 are part of a contractual document it may take lengthy negotiations to agree
+on the change, even though it may be technically quite acceptable. To avoid such
+situations, mission effectiveness rather than reliability may be specified. There are
+several definitions of mission effectiveness [MIL-HDBK-338B], but all aim at a single
+metric that represents reliability weighted by the operational capability level to which
+the reliability is applicable. In the above example assume that the 1, 2, and 3 band
+capabilities are assigned weights of 0.25, 0.35, and 0.4, respectively (it is desirable that
+the weights add up to 1.0). A simple mission effectiveness requirement may then be
+stated as 0.25 x 0.96 + 0.35 x 0.92 + 0.4 x 0.85 = 0.902. A similar calculation shows
+that raising the single band reliability to 0.99 will not compensate for reducing the
+3 band reliability to 0.80, but that this reduction could be tolerated if the 2 band reli-
+ability is raised to 0.95 at the same time. Where there is a sound technical basis for
+specifying mission effectiveness it will generally reduce both cost and development
+time compared to specifying multiple reliability values. As indicated in Fig. 19-10, the
+effectiveness curve will lie above the reliability curve when the latter is constructed
+for an “all up” satellite.
+
+19.2.1 Design for Reliability
+
+The process for designing a reliable system is shown in Table 19-3. Evidence that
+simplicity makes for reliability can be seen in Table 19-4, which is excerpted from an
+earlier publication by the author of this section [Hecht and Hecht, 1985]. Complex
+functions had higher failure rates. In each case shown in the last columns of the table,
+there were probably compelling reasons for using the more complex implementation,
+but the reliability consequences of these decisions must also be recognized.
+
+To make sure that the process leading to a reliable system is being carried out as
+intended, there must be an explicit assignment of responsibility for its implementation.
+Several alternatives for the assignment are listed in Table 19-5 in order of increasing
+direct cost. For very small satellites the low cost advantage of (A) or (B) will usually
+outweigh the benefits of the last two alternatives. When subsystems get more numer-
+ous and larger, alternatives (C) and (D) may result in overall savings, in spite of their
+higher immediate cost.
+
+The activities listed below are suitable for alternatives (B) or (C). Where alternative
+(A) is adopted, at least a Reliability Program Plan should be prepared and a Failure
+Reporting System should be established. Alternative (D) implies that the program will
+be managed by reliability specialists who will generate their own process require-
+ments.
+
+19.2
+
+Reliability for Space Mission Planning
+
+769
+
+TABLE 19-3. Typical Steps for Achieving a Reliable System.
+
+Process Steps
+
+Keep it simple (every additional function increases the failure
+probability)
+
+Details Found
+
+See Table 19-4
+
+Assure adequate strength (mechanical and electrical) of all parts,
+
+Sec. 19.2.2
+
+including allowance for unusual loads that may be imposed due
+to environmental extremes or failures in related components
+
+Provide alternative means of accomplishing the most essential
+
+Sec. 19.2.3
+
+functions where design for excess strength is not suitable (this
+
+includes most electronics)
+
+Plan a test program to assure that the above objectives have
+
+been achieved
+
+Collect and analyze of test and on-orbit failure data to guide
+
+future designs and mission plans
+
+Sec. 19.2.4
+
+Sec. 19.2.1
+
+TABLE 19-4. Relationship Between Failure Rate and Complexity.
+
+Telemetry
+
+Hardwired
+
+Stabilization
+
+Gravity
+Spin
+
+0
+0.038
+0.216
+
+Complex
+Fail Rate’
+0.190
+
+Programmable
+
+3-axis active
+
+Thermal
+
+*per orbit-year
+
+Passive
+
+0.084
+
+Active
+
+TABLE 19-5. Alternative Assignments of Responsibility
+
+Alternative
+
+Benefits
+
+(A) Designers responsible for
+reliability
+
+(B) Designers responsible
+with policy guidance from
+management
+
+(C) Designers responsible
+with guidance from
+reliability organization
+
+(D) Responsibility in reliability
+organization
+
+No additional staff
+Familiarity with items
+Clear responsibility
+
+All of the above plus
+some uniformity
+
+Disadvantages
+
+Difficult to achieve uniformity; also
+limitations in (B)
+
+No responsibility for subsystem
+interactions, opportunity for analytic
+redundancy may be overlooked, little
+awareness of reliability tools
+
+Uniform procedures,
+above disadvantages
+largely overcome
+
+Requires dedicated reliability function,
+possible confusion over responsibility
+
+Responsibility clearly
+defined, interactions
+likely to be identified
+
+Lower motivation for designers,
+expense of reliability organization.
+
+Reliability Program Plan
+
+A reliability program plan adds \ittle to the cost and is recommended even for the
+smallest spacecraft program. It specifies reliability objectives, assigns responsibility
+for achieving them, and establishes milestones for evaluating the achievements. It also
+
+770 Space Manufacturing and Reliability 19.2
+
+serves as an agreement with other spacecraft functions regarding their responsibilities
+in support of reliability. The most significant interfaces usually are with quality assur-
+ance, test, configuration management, and thermal control.
+
+Failure Modes Analysis
+
+Failure Modes, Effects, and Criticality Analysis (FMECA) can provide valuable
+insights into how design decisions affect reliability. Typical benefits are
+
+* Exposing single point failure modes in a subsystem assumed to be redundant
+* Identifying opportunities for functional redundancy (see Sec. 19.2.3)
+
+* Permitting components to assume a safe mode in the absence of required sig-
+nals or power
+
+Failure modes are usually recorded at the part level, e.g., for a capacitor the failure
+modes are open and short (sometimes a change in capacitance may also be recorded).
+Failure effects are assessed at the part level and also at higher levels such as assembly
+and major component or subsystem. The failure effect of a shorted capacitor may be a
+bias shift on a transistor (part level) which in turn cuts off the output of a demodulator
+(assembly level) and causes loss of voice communications (subsystem level). In addi-
+tion, the FMECA forms usually contain fields for the method of detection and the
+means of failure alleviation. In our example, the detection may be by an output moni-
+tor included in the demodulator, and the failure alleviation may be use of an alternate
+voice channel.
+
+A probability is associated with each failure mode, and the probabilities of all fail-
+ure modes that cause a given effect are added in a summary section of the FMECA.
+Loss of modulator output cited in the example may be caused by several failure modes
+of the demodulator components, and loss of the voice channel may be caused by fail-
+ure modes other than those in the demodulator. Although there may be considerable
+error in the estimate of a given failure mode, these tend to be evened out when arriving
+at estimates of failure effects at the subsystem and higher levels.
+
+In digital microcircuits it is usually not possible to conduct FMECA at the level of
+primitive elements (gates or transistors) because there are too many of them and
+because causes of failure may affect multiple elements (e.g., voids in the oxide layer).
+The FMECA may then be conducted at the function level, where functions are timers,
+counters, and shift registers. Failure modes at the function level are generally not as
+well known as those at the part level, and a single cause of failure may affect multiple
+functions. In assessing the effects of failure at the higher level it may therefore be
+advisable to be conservative.
+
+Sneak circuit analysis is usually considered a part of FMECA. This analysis
+establishes that explosive or other one-shot devices will not be accidentally actuated,
+and that they will always be actuated when intended. A good guide to FMECA is
+MIL-STD-1629.
+
+Failure Reporting
+Failure Reporting and Corrective Action (FRACAS) is a key element in any reli-
+ability program because:
+
+a. It informs concerned parties that a failure has been observed
+
+b. It furnishes a record through which trends and correlations can be evaluated
+at a future time (an example of a trend is that the probability of failure in-
+
+19.2 Reliability for Space Mission Planning 771
+
+creases after x hours of use; an example of a correlation is that part y fails
+during a particular step in the test sequence).
+
+c. It permits reassessment of the predicted failure rates and is the basis for
+consequent modifications of the fault avoidance or fault tolerance provisions.
+
+Uses b and c require recording the operating time of all units in service; usually by
+means of an operating log maintained for each part number, with separate records for
+each serial number. Corrective action is typically also recorded on the failure reporting
+form. This facilitates configuration management in that it establishes at what point a
+failed component or subsystem has been returned to operational status. Reporting on
+the same form also facilitates future investigation of the effectiveness of the repair
+action. Corrective action frequently involves two steps: in the first, a failed part is
+replaced by a good one of the same design; the second step addresses the root cause,
+e.g., by tightening limits for the incoming test of this part. The results of retest are
+included in the corrective action report.
+To establish a FRACAS the following must be identified:
+
+* Scope of the activities (e.g., system test, field test, normal usage)
+* Responsibility for cost and for report initiation
+
+* Method and frequency of reporting (e.g., paper or electronic, each incident or
+by time interval)
+
+The format used for reporting of failures and corrective actions is not standardized.
+The following are the most essential data:
+1. Incident identification (e. g., report serial number)
+. Date, time and locale of the incident
+. Part no., name of the failed component, and its serial number.
+. Higher level part or system identifiers (subsystem or major component)
+. Lower level part or system identifiers (usually available only after diagnosis)
+
+NR nf WwW DY
+
+. Operation in progress and environmental conditions when failure was
+detected
+
+7. Immediate and higher level effects of failure
+8. Names of individuals responsible for detection, verification and analysis
+9. Diagnosis of immediate, contributory and root causes of the failure
+
+10. Dates and nature of repair and results of retest.
+
+Low Cost Methods of Reliability Assessment
+
+Reliability prediction (usually by using a failure rate handbook) or estimation
+(based on experience with the component population) are routinely required for major
+satellite programs. Representative failure rates for reliability estimation are shown in
+Table 19-6.
+
+These failure rates are abstracted from MIL-HDBK-217F and can be used for
+reliability predictions based on parts type and count. Lower reliability parts such as
+commercial parts have failure rates that are much higher (between 12 and 333 times).
+Values shown in the table are expected failures in 109 hours, they correspond to A
+in Eq. (19-1).
+
+772 Space Manufacturing and Reliability 19,2
+
+TABLE 19-6. Representative Piece Part Failure Rates for High Reliability Parts. These
+failure rates are abstracted from MIL-HDBK-217F and can be used for reliability
+predictions based on parts type and count. Lower reliability parts such as commer-
+cial parts have failure rates between 12 and 333 times these failure rates. Values
+are failures in 109 hours, they correspond to A in Eq. (19-1).
+
+Part Type Launch Applicability
+
+Bipolar Gate/Logic Array Dig 7-300 | Min 1-100 gates; Max 60,000 gates
+Bipolar Microprocessor 60-215 | Min 8 bits; Max 32 bits
+
+1
+MOS Microprocessor 12-47 70-250 | Min 8 bits; Max 32 bits
+MOS Memory SRAM 2-11 24~75 | Min 16K; Max 1M
+
+Bipolar SRAM 30-75 |Min 16 K; Max 1M
+1.3
+
+Diodes General 170
+
+Transistors General 0.05
+Transistors RF Power 165 | 900 |
+
+Resistors 0.01 Composition/film
+
+Capacitors 0.1
+
+Relays
+
+Parts count reliability estimation may be used for comparison of design alterna-
+tives, when test or on-orbit incidents indicate insufficient reliability, or when a more
+expensive payload is to be incorporated (which increases the cost of failure).
+
+Software Considerations
+
+Spacecraft operations are becoming increasingly dependent on software, in the
+spacecraft and in the ground segment. There have been spectacular launch and on orbit
+failures due to software faults, but many more missions have been saved by software
+(used for work-around) than have been lost due to it. Thus the way to more effective
+space missions may not so much lie in minimizing software as in making appropriate
+use of it. It should also be mentioned that most software used in spacecraft is actually
+firmware (programs furnished as read-only-memory chips).
+
+Reliability assessment of software is not a precise science. The most widely ac-
+cepted techniques depend on test (very expensive if high levels of reliability are
+required) or on independent verification and validation (even more expensive and less
+likely to yield a quantitative assessment). When software is simple and well structured
+its reliability is usually high and the cost of evaluation is low.
+
+Cost effective software reliability assessment starts with an examination of the
+ways in which software can impact the mission. A convenient format for this is a fault
+tree, as shown in Fig. 19-11.
+
+In this example, the software failures that are most likely to lead to mission failure
+are:
+
+1. Complete halting of execution, e. g., due to being in an infinite loop or being
+directed to an incorrect memory location.
+
+2. Faulty antenna orientation due to an antenna drive failure or faulty attitude
+determination
+
+3. Failure to deploy the solar array.
+
+19.2 Reliability for Space Mission Planning 773
+
+MISSION FAILURE
+
+FAULTY ANTENNA
+ORIENTATION
+
+EXECUTION
+STOPPED
+
+SOLAR PANEL
+NOT DEPLOYED
+
+Attitude
+Controi
+Fault
+
+Software Antenna
+
+Drive Fault
+
+Fig. 19-11. Fault Tree. Fault trees show which functions may be disabled due to a single failure.
+
+Double failures are required to halt execution of programs and deployment of the
+solar array, because both of these have backup mechanisms. Faulty antenna orienta-
+tion can be caused in two ways, and there is currently no backup provision for this
+hazard. Once this deficiency is recognized, alternatives for mitigation will be investi-
+gated. Re-orienting the spacecraft by ground command may be a worst case backup,
+provided that ground commands will be received regardless of initial antenna position.
+
+Redundancy management is also frequently a very critical software function han-
+dled by the spacecraft computer.
+
+A study of the space shuttle avionics software showed that causes of high severity
+failures were overwhelmingly associated with rare events, such as handling of
+exception conditions, management of hardware failures, and response to unusual or
+incorrect crew commands [Hecht and Crane, 1994]. These data, as well as others cited
+in the reference, indicate that testing of spacecraft software should demonstrate that
+unusual events in the environment (including hardware and software failures) are cor-
+rectly handled.
+
+19.2.2 Design for Fault Avoidance
+
+Fault avoidance is most effective when there are only a very small number of
+significant failure modes. Common fault avoidance techniques are shown in
+Table 19-7, and application guidance is provided below.
+
+Process Control
+
+Control of the manufacturing process can only be exercised where parts are specif-
+ically manufactured for the spacecraft. In most cases this includes the structure,
+propulsion components, and segments of the environmental conditioning system.
+Control over the assembly process can usually be exercised for the entire spacecraft,
+
+774 Space Manufacturing and Reliability 19,2
+
+TABLE 19-7. Representative Methods for Fault Avoidance.
+
+Limitations
+
+Process Control Current deficiencies exist | User must be able to influence process
+Design Margins, etc. | Known failure risk Adds weight and cost
+Coding Techniques | Memory upset Digital components only
+
+Part Selection Modest improvement
+and Screening required
+
+Technique Most Suitable for
+
+Critical measurements must be known |
+
+and this is where major emphasis for fault avoidance through tighter process control
+should be placed.
+
+A good starting point for investigating the feasibility and effectiveness of tighter
+process controls for fault avoidance is to investigate past failures in test and operation,
+and, particularly for new components or processes, difficulties that have been experi-
+enced during engineering evaluations. These constitute the “current deficiencies”
+listed in Table 19-7, and for each the underlying cause of failure must be identified.
+Where dispersions in material or process characteristics are implicated, tighter process
+control can be expected to make a significant contribution to fault avoidance.
+
+Design Margins, Derating and Environmental Protection
+
+Design margins and derating accomplish the same goal: prevention of component
+failure due to higher than expected external stresses or other deviations from the
+nominal conditions. The term design margin is mostly used in structure and thermal
+subsystems and means that a component is designed to carry more than the expected
+load. Propellant margins in propulsion systems are an equivalent concept. The term
+derating is primarily applied to electrical and electronic components and involves the
+specification of a component that carries a higher rating than is needed for the
+application.
+
+The reliability improvement by these practices is most significant if a part is
+initially used near its design strength or electrical rating. As an example (from
+MIL-HDBK-217F), the predicted base failure rate for a fixed film resistor at 40° C and
+used at 0.9 of rated power is 0.0022 x 10-®/hour. Selecting a higher rated resistor, for
+which the dissipated power constitutes only 0.3 of rated power reduces this to 0.0011
+x 10-6/hour. But further reductions are hard to achieve. A resistor for which the dissi-
+pated power is 0.1 of the rating still has a failure rate 0.0009 x 10-®/hour. Derated parts
+not only cost more, but are frequently larger and heavier than the ones that they
+replace. Derating only reduces the failure probability with respect to the stress that is
+being derated. In the example of the fixed film resistor, derating reduces the probabil-
+ity of failure due to power surges but it does not offer any protection against failures
+due to lead breakage or corroded connections.
+
+Environmental protection can take the form of shock mounting, cooling or heating
+provisions, and shielding against radiation effects, Where derating reduces the failure
+probability by increasing the strength of the components, environmental protection
+reduces the failure probability by reducing the stress levels. In many cases, environ-
+mental protection adds considerable weight, and this, rather than cost, limits the
+amount of protection that can be provided.
+
+19.2 Reliability for Space Mission Planning 775
+
+Coding Techniques
+
+Coding provides robustness by permitting continued operation in the presence of a
+defined spectrum of errors, primarily in memory and data transmission. Coding tech-
+niques are also available for detection or toleration of errors in arithmetic processors
+but are seldom used in this capacity in spacecraft computers.
+
+The important coding techniques are error detecting code and error correcting
+code. The former is intended primarily for fault isolation (i. e., preventing an incorrect
+result from being used in subsequent operations). The latter is a fault tolerance mech-
+anism that corrects a class of errors and permits operations to continue normally. All
+codes require the addition of check bits to the bit pattern that represents the basic
+information. If there is agreement between the check and information bits, the data is
+accepted. If there is no agreement, the data is rejected (for error detecting code) or
+corrected (for error correcting code).
+
+The cost effectiveness of error correcting codes is shown in the following hypothet-
+ical example for a commercial earth observation satellite. The payload computer’s 4
+megabit dynamic random access memory has a mass of 400 gr. This memory (which
+does not incorporate error correction or detection) is expected to sustain two “upsets”
+per orbit-year. Upon detection of an upset by ground monitoring, the memory is
+reloaded, an operation that typically loses data from two orbits. The expected mission
+income is $1,000 per orbit. In the absence of error correction, the cost of memory
+upsets will therefore be $4,000 per year. The extra memory and coding/decoding chips
+will add 100 gr. to the mass of the memory and will cost $1,000. The cost/mass ratio
+for this satellite is $5,000 per kg, and thus the extra 100 gr will be equivalent to $500.
+In this example the cost of the error correction will be paid for in less than one-half
+orbit-year. As discussed in Sec. 8.1, the number of upsets to be expected depends on
+the size and type of memory, the orbit, and the amount of shielding provided by the
+spacecraft structure and the memory enclosure. In most cases coding is found to be
+very cost effective.
+
+Part Selection and Screening
+
+Screening (selection of parts by test) is a process that eliminates units that have a
+higher likelihood of failing in service than the other units in the lot [Chan,1994].
+Whereas derating reduces the probability of failure by moving the average strength of
+the components higher, screening reduces the probability of failure by rejecting the
+lower tail of the distribution as shown in Fig. 19-12. A typical screening procedure for
+semiconductors is to measure the leakage current at elevated temperature.
+
+The cost of screening is made up of two elements: the cost of the rejected product,
+and the cost of test. The cost effectiveness is high (1) for parts with an initially high
+failure rate, (2) for modest reliability improvements (generally those in which not
+more than 20% of the product is rejected), and (3) where the cost of test is small
+compared to the unit cost of the product under test (not over 10%)
+
+Screening does not involve an increase in the size of the components and it is there-
+fore preferred to derating for bulky or heavy parts. Screening is not very effective for
+reducing the failure probability in a mode for which components have been derated
+because the failure probability due to external stresses in that mode is already very
+low. Screening can be applied to assemblies, e.g., by subjecting them to combined
+temperature and vibration environments and is thus more versatile than derating.
+Screening at the assembly level is also likely to result in a lower ratio of test cost to
+product cost and thus produces a higher figure of merit.
+
+716 Space Manufacturing and Reliability 19.2
+
+Rejected
+by
+Screening
+
+Part Strength
+(Any Desirable Attribute)
+
+Fig. 19-12. Attribute Control by Screening. Screening rejects parts likely to fail in service.
+
+Screening is really a crutch that permits the use of products that do not, as delivered,
+meet all of the requirements of an given application. A more desirable reliability mea-
+sure is to tighten the control of the process so that it can be relied on not to produce the
+outliers that must be screened out. This is not only a philosophical argument, but one
+with significant practical consequences as shown by the attribute distribution curves
+in Fig. 19-13.
+
+Controlled
+Population
+
+Screened
+
+_ Population
+
+L
+
+Part Strength
+(Any Desirable Attribute)
+
+Fig. 19-13. Attribute Control by Process Control. In a controlled population fewer parts are
+near the acceptance limit than in a screened population.
+
+Both the screened population and the controlled population meet the acceptance
+criteria in that no parts fall below the lower limit, denoted as L in the figure. However,
+in the screened population a much larger fraction of the total population is near the
+lower limit than in the controlled population. Environmental effects and aging cause a
+dispersion of the attributes, and therefore will cause a larger fraction of the screened
+population to fall below the lower limit than in the controlled population. This effect
+can be compensated for by selecting an initial acceptance limit that is higher than the
+lowest value that can be tolerated in service. Where articles are procured specifically
+
+19.2 Reliability for Space Mission Planning 777
+
+for space applications, costs will be reduced if the process can be improved so that
+only a small portion of the product will be rejected in screening.
+
+19.2.3 Fault Tolerance
+
+Fault tolerance protects against a wider spectrum of failure modes than fault avoid-
+ance. In most cases it also requires much more resources. A summary of the suitability
+and limitations of representative fault tolerance techniques is shown in Table 19-8.
+
+TABLE 19-8. Representative Fault Tolerance Techniques.
+
+Protection Against Limitations
+Same Design Redundancy | Random failures High production cost, weight
+Diverse Design Redundancy | Random and design failures | Same, plus design and logistic cost
+
+k-out-of-n Redundancy Random failures Applicable only where multiple
+copies of an article are present
+Functional Redundancy Random and design failures | Diverse methods to accomplish a
+function must be available
+Temporal Redundancy Transient, intermittent Time required for recovery
+failures
+
+By scope of redundancy, we mean the size and importance of the entity that is being
+made redundant. Paralleling two relay contacts is a redundancy provision of very small
+scope, and dual telemetry systems represent redundancy of large scope. In Fig. 19-14
+the single system line shows the reliability of a single element with MTBF of one time
+unit. The system redundancy curve shows the resulting reliability if two of these ele-
+ments are operated in parallel. The partitioned redundancy curve refers to the original
+(single) system being divided into quarters, and then each quarter made redundant.
+The redundant and the quarter-partitioned curve involve (at least superficially) the
+same resources (in each case twice those of the single system), and yet the quarter
+configuration has a pronounced reliability advantage, particularly at the longer time
+intervals. It would therefore seem that redundancy of small scope is to be preferred
+over that of large scope.
+
+In practice, the switching or voting provisions that are required for each partition
+can add considerably to the cost of the implementation, and since they are not likely
+to be 100% reliable they may also reduce the reliability benefits. System test can also
+be adversely impacted by redundancy of small scope. The system redundancy (middle
+curve in the figure) requires only two tests. The quarter redundancy requires 16 tests
+if all combinations are to be covered. Selecting the scope of redundancy must consider
+the means of failure detection, the ease of output switching or combining, the reliabil-
+ity gains that can be achieved, and the cost of implementation and test.
+
+Same Design Redundancy
+
+Same design redundancy involves installation of two or more identical components
+together with switching to make one of them active. In a few instances, particularly for
+power supplies, the outputs can be combined so that switching is not necessary. Voting
+can also be used for combining outputs of redundant units but this carries a high cost
+because at least three identical units have to be installed to make it practicable. Same
+design redundancy offers very high protection against random failures, and the
+
+778 Space Manufacturing and Reliability 19.2
+
+<M | T
+
+— |
+
+Partitioned Redundancy
+SAE A = (1 -[1- exp (-A1))?)%
+
+wae E
+
+0.8
+
+System
+act Redundancy
+
+Ra
+
+0 Single System
+™ | R= exp (-NA
+| |
+
+4 }
+|
+
+0.4 }—
+
+Reliability
+
+0.2 -—- —
+System Partitioned
+b. Redundancy Redundancy |
+
+/ a a
+| | | |
+0 | ee ee ee
+0 02 04 O68 O8 10 12
+Time (Multiples of MTBF)
+
+Fig. 19-14. Effect of Partitioning on Reliability. tis the time from the start of the mission, Fis
+the mission reliability or the probability that at least essential mission elements will
+survive (see Sec. 19.2.1), Nis the number of individual blocks (4 in the figure), and
+Ais the failure rate of an individual block. For the elementary distributions considered
+here, A =1/MTBF, where MTBF is the mean time between failure for each block. For
+the system as a whole, A, = exp (-A,)), where A, is 1/MTBF for the whole system.
+
+benefits do not depend on knowledge of failure modes. It is not very effective against
+failures due to design deficiencies: if one component fails due to insufficient radiation
+hardness, the redundant one is very likely to fail soon thereafter. Because of the high
+cost, same design redundancy is used only sparingly in low cost satellites.
+
+The cost of same design redundancy can sometimes be reduced by employing
+k-out-of-n replacement, in which a pool of spares can be assigned to replace any one
+of the pool of active units. An example is bulk memory (for data storage) which usu-
+ally consists of multiple physically identical modules. Providing one or more spare
+modules on the same data bus permits replacement of any one failed module. The same
+scheme can be used for multi-cell batteries, solar panels, and other elements of the
+electric power supply.
+
+Diverse Design Redundancy
+
+Installation of two or more components of different design (called diverse design
+redundancy) to furnish the same service has two advantages: it offers high protection
+against failures due to design deficiencies, and it can offer lower cost if the back-up
+unit is a “lifeboat,” with lower accuracy and functionality, but still adequate for the
+minimum mission needs. The installation of diverse units usually adds to logistic cost
+because of additional test specifications, fixtures, and spare parts. This form of redun-
+
+19.2 Reliability for Space Mission Planning 7719
+
+dancy is economical primarily where the back-up unit comes from a previous satellite
+design, or where there is experience with it from another source. Where there is con-
+cern about the design integrity of a primary component, diverse design redundancy
+may have to be employed regardless of cost.
+
+Functional and Temporal Redundancy
+
+Functional redundancy (sometimes called analytic redundancy) involves furnish-
+ing a service by diverse means. An example is the determination of attitude rate from
+a rate gyro assembly (direct), and from observation of celestial bodies (indirect). It is
+particularly advantageous when the alternate is already installed for another service,
+e.g., if a star sensor is provided for navigation. In these cases the only cost incurred is
+for the switching provisions and for data conversion. Both of these can frequently be
+achieved in an existing onboard computer, thus further minimizing the cost.
+
+Functional redundancy can also take the form of a ground back-up for functions
+preferably performed autonomously, e.g., navigation, thermal control, or furnishing
+commands for sensor operation. In the communication subsystem there are frequently
+omni-directional and directional antenna systems. For some satellite missions these
+may also be considered a form of functional redundancy.
+
+The chief benefits of analytic redundancy are: (1) it avoids the cost and weight
+penalties of physical redundancy, and (2) it is inherently diverse, thus providing
+protection against design faults. The major limitation is that the back-up provisions
+usually entail lower performance.
+
+Temporal redundancy involves repetition of an unsuccessful operation. A common
+example is a retry after a failure within the computing process. The same technique is
+applicable to acquisition of a star, firing of a pyrotechnic device, or communication
+with the ground. This is obviously a low cost technique. It is most effective when the
+design incorporates an analysis of the optimum retry interval and of changes that may
+improve the success of later operations, e.g., switching a power supply, reducing loads
+on the power supply, or re-orientation of the satellite. The most important step is to
+plan ahead for retry of operations and to incorporate “hooks” that permit automatic or
+ground-initiated retry.
+
+19.2.4 Test Techniques
+
+The least expensive reliability test is one that is not run at all as a reliability test, but
+rather as a part of a qualification test, lot acceptance test for purchased parts, or as an
+acceptance test on the spacecraft as a whole or on a major subsystem. To use these
+activities for reliability assessment may require some additional instrumentation and
+sometimes an extension of the test time, but these are very small resource expenditures
+compared to those required for even a modest separately run reliability test.
+
+Other alternatives to obtaining reliability data by test are:
+
+* Using test data obtained by others (including vendors) on the same component
+* Using test or experience data on similar components
+¢ Stress-strength analysis (particularly for mechanical components)
+* Reliability prediction by MIL-HDBK-217 or similar sources
+One of the greatest problems with reliability tests is that the results are usually
+
+obtained after many months or even years of test. Once it has been decided that a
+reliability test is necessary, a suitable scope and test environment must be selected.
+
+780 Space Manufacturing and Reliability 19.2
+
+The scope designates the assembly level; parts and circuit boards usually being desig-
+nated as small scope, while subsystem and system level tests represent a large scope.
+Advantages of small scope tests are:
+
+« Low cost and small size of individual test articles permit testing of multiple
+items
+
+* Inputs and outputs are easily accessible
+¢ The test environment can be tailored to the requirements of the unit under test
+¢ The test can be conducted early because it does not require integration.
+
+Advantages of large scope tests are:
+¢ Interactions between components can be observed
+¢ Test results are easily translated to effects on the mission.
+
+The test environment can be quiescent (room ambient) or stressed. Advantages of
+testing in a quiescent environment are:
+
+¢ Low cost (no or only simple environmental chambers required)
+* Articles under test are easily accessible
+* No induction of failures due to unusually high stress
+
+Advantages of a stressed environment are:
+* Increased probability of failure (less test time required)
+¢ Can identify environmental vulnerability of the unit under test.
+
+The attributes of the approaches lead to the test recommendations shown in
+Table 19-9.
+
+TABLE 19-9. Typical Uses of Reliability Testing.
+
+Small Scope Large Scope
+
+Quiescent Suitability test High risk
+
+Environment Critical components—failure inducing stress unknown subsystems
+
+Stressed Critical components—failure inducing stress known
+
+Reliability testing at large scope and in a stressed environment is very expensive
+and is rarely warranted.
+
+The time required for any reliability test can be significantly reduced if testing by
+variables is employed. This means that the value of significant attributes is numer-
+ically recorded (as contrasted with the commonly used pass/fail procedure). From
+these data, the distribution of parameters can be plotted, and the probability of drop-
+ping below an acceptance criterion can be assessed. The general technique is similar
+to the one described in the Screening Techniques section. For reliability assessment
+the parameter distributions are of interest, whereas in screening the attributes of
+individual units are the chief criterion.
+
+The small component populations that are typical of space procurements preclude
+the use of conventional reliability demonstration methods. Even a modest subsystem
+requirement, such as reliability of 0.95 for 17,000 hours (approximately 2 years),
+
+19,2 Reliability for Space Mission Planning 781
+
+corresponds to an MTBF of over 330,000 hours and will require over 1 million
+component-hours of test to arrive at a statistically meaningful assessment by con-
+ventional methods. Yet, experimental verification of the claimed reliability of a
+component or subsystem is frequently desirable and sometimes required. The follow-
+ing paragraphs explore low cost methods of accomplishing this.
+
+The major causes of failures are workmanship and design. The first of these can be
+controlled by quality assurance. Design failures occur primarily because the strength
+of a component is not adequate for the environment in which it is used, or because the
+manufacturing process permits too much variability in component characteristics. This
+is most easily seen in mechanical spacecraft components where reliability depends on
+(a) the margin between the nominal (mean) strength of the component and the
+maximum service load and (b) the variability of strength about the mean in the
+delivered product. Since test can characterize the strength of mechanical components
+fairly easily, strength-load margins (design margins) have always played a major role
+in their reliability assessment. For electrical and electronic components the same rela-
+tionship holds in principle, but it is usually much harder to define a single failure
+inducing stress or load. Nevertheless, test data can give valuable insights into potential
+reliability problems. Important requirements are (a) recording of test results in numer-
+ical form (not pass/fail), and (b) statistical evaluation of the probability of failure
+derived from the numerical test results, e.g. by applying the 60 criterion (the mean
+value of a parameter is at least six standard deviations above the specified minimum
+or below the specified maximum) [Harry, 1997]. The tests from which the required
+data are obtained need not be specific reliability tests. Typically they are the qualifica-
+tion test and acceptance tests.
+
+References
+
+Chan, H. Anthony. 1994. “A Formulation of Product Reliability Through Environ-
+mental Stress Testing and Screening.” Journal of the Institute of Environmental
+Science, March/April 1994, pp. 50-56.
+
+Defense Systems Management College. 1986. Integrated Logistics Support Guide (Ist
+Edition). Fort Belvoir, VA: Department of Defense.
+
+. 1986. Systems Engineering Management Guide (2nd Edition). Fort Belvoir,
+VA: Department of Defense.
+
+General Accounting Office (GAO). March 1989. “Space Operations—NASA Efforts
+to Develop and Deploy Advanced Spacecraft Computers.” GAO/IMTEC-89-17.
+
+Harry, M. 1997. The Nature of Six Sigma Quality. Schaumburg, Illinois: Motorola
+University Press.
+
+Harry, M. and L. Lawson. 1997. Six Sigma Producibility Analysis and Process Char-
+acterization. Schaumburg, Illinois: Motorola University Press.
+
+Hecht, H. 1967. “Economics of Reliability Improvement for Space Launch Vehicles,”
+Air Force Report No. SAMSO-TR-68-340.
+
+. 1970. “Interpretation of Test Data by Design Margin Techniques,” in Annals
+of the Assurance Sciences, 9th Reliability and Maintainability Conference.
+
+. 1973. “Figure of Merit for Fault-Tolerant Space Computers.” IEEE Transac-
+tions on Computers, C-22, No. 3: 246-251.
+
+782 Space Manufacturing and Reliability 19.2
+
+Hecht, H. and P. Crane. 1994. “Rare Conditions and Their Effect on Software
+Failures.” Proceedings of the 1994 Reliability and Maintainability Symposium,
+January, pp. 334-337.
+
+Hecht, H. and M. Hecht. 1985. “Reliability Prediction for Spacecraft,’ RADC Report
+RADC-TR-85-229. Rome Air Development Center, NY: Department of Defense.
+
+IEEE. 1984. IEEE Standard Dictionary of Electrical and Electronics Terms. New
+York: Wiley Interscience.
+
+Kececioglu, D. and D. Cormier. 1964. “Designing a Specified Reliability Directly into
+a Component,” in Proceedings of the Third Annual Aerospace Reliability and
+Maintainability Conference, Society of Aerospace Engineers.
+
+Lloyd, D.K. and M. Lipow. 1977. Reliability: Management Methods and Mathematics
+(2nd edition). Published by the authors.
+
+MIL-HDBK-338B. 1998. Electronic Reliability Design, Section 10, Systems Reliabil-
+ity Engineering. Department of Defense.
+
+MIL-STD-1629.1980. Military Standard, Procedures for Performing a Failure Mode
+Effects and Criticality Analysis (FMECA) (rev. A). November. Department of
+Defense.
+
+MIL-HDBK-217F. 1991. Military Handbook. Reliability Prediction of Electronic
+Equipment (rev. F). (withdrawn as a DoD document)
+
+Montgomery, D.C. 1996. Introduction to Statistical Quality Control (3rd edition).
+New York: John Wiley & Sons.
+
+NASA and the Department of Defense. 1986. National Space Transportation and
+Support Study.
+
+NASA Johnson Spaceflight Center (JSC). 1989. Proceedings of the Satellite Services
+Workshop Number Four.
+
+Olivieri, J.M. 1997. “Commercial Satellite Manufacturing: Prerequisites for Success.”
+Unpublished Master’s degree thesis, Arizona State University, Tempe, Arizona.
+
+Shunk, D.L. 1992. Integrated Process Design and Development. Homewood, Illinois:
+Business One Irwin.
+
+Stoney, W.E. 1989. The Polar Platform and the SSS. Paper presented at the 20th
+Satellite Services System Working Group Meeting, 30-31 March.
+
+Trivedi, Kishor S. 1982. Probability & Statistics with Reliability Queuing and
+Computer Science Applications. Englewood Cliffs, NJ: Prentice-Hall, Inc.
+
+. 1984. “Reliability Evaluation for Fault-Tolerant Systems,” in Mathematical
+Computer Performance and Reliability, G. lazeolla, P.J. Courtos and A. Hordijk,
+eds. The Netherlands: Elsevier Science Publishers V.V.
+
+Wade, D.I. and C.S. Welch. 1996. “Spacecraft Manufacturing Implications for
+Volume Production Satellites.” Paper No. IAF-96-U.4.08, presented at the 47th
+International Astronautical Congress, Beijing, China.
+
+Womack, J.P., D.T. Jones, and D. Roos. 1990. The Machine That Changed the World.
+New York: Macmillan Publishing Company.
+

@@ -1,0 +1,1785 @@
+
+Chapter 22
+Design of Low-Cost Spacecraft
+
+Rick Fleeter, AeroAstro
+
+22.1 Designing Low-Cost Space Systems
+
+22.2 Small Space Systems Capabilities and Applications
+Abilities of Small Space Systems; Emerging Miniature
+and Low-Cost Technologies; Potential Applications
+
+22.3 Applying Miniature Satellite Technology to FireSat
+
+22.4 Scaling from Large to Smal] Systems
+
+22.5 Economics of Low-Cost Space Systems
+
+22.6 Annotated Bibliography on Low-Cost Space Systems
+
+Until about 1990, conventional satellite technology focused on relatively small
+numbers of highly capable, complex spacecraft. Recently, spacecraft have become
+more diverse, with the largest spacecraft now complimented by new systems using a
+larger number of smaller spacecraft in low-Earth orbit. While these are lower cost than
+their predecessors, this chapter focuses on the lowest tier of spacecraft cost to examine
+the particular methods and attributes characteristic of minimum-cost spacecraft. In
+certain applications these lower cost, smaller, simpler spacecraft are more effective.
+We will examine the tradeoffs between conventional technology and what is now
+referred to as miniature satellite technology or microspace. We will also consider the
+most successful applications for minimum cost spacecraft technology, as well as how
+engineering of low-cost and miniature spacecraft differs from that of conventional
+devices, Because modern, low-cost spacecraft design is a rapidly evolving technology,
+there are few references. We have included an annotated bibliography as a guide to
+further reading.
+
+Ever since Sputnik in 1957 and Explorer in 1958, spacecraft developers have built
+small, simple systems alongside large, conventional satellites. Miniature satellites fill
+specific niches, especially for short-term missions with few users. A miniature satel-
+lite typically weighs less than 200 kg, has a shorter mission lifetime requirement, and
+is put together quickly by a small team. With less money invested, and because a
+minimum cost spacecraft has far fewer components and lower complexity, a user can
+sanction more liberal engineering designs and be more willing to use newer, less
+expensive technology, such as more contemporary electronic components or fabrica-
+tion techniques.
+
+The main advantages of miniature satellites are decreased costs and production
+times. Military, university, commercial, and institutional space programs sometimes
+cannot afford large, conventional spacecraft or take the time needed to build and
+Jaunch them.
+
+853
+
+854 Design of Low-Cost Spacecraft
+
+Since they provide fewer, more modest on-orbit abilities, miniature products have
+much simpler system architectures. They achieve reliability through simplicity rather
+than through expensive, redundant components. They can be much smaller and lighter
+than conventional products, thus reducing launch costs, which typically constitute half
+the cost of a satellite system on orbit. Very small devices can often fill small spaces
+available on large launchers. For ground transportation, one person can often carry a
+small satellite in a car or on an airline seat.
+
+Military applications of larger spacecraft are vulnerable to failure during launch or
+on orbit, as well as to aggressive acts. We currently address these weaknesses mainly
+with redundant subsystems, highly reliable components, and defensive counter-
+measures, all of which add cost and size. A miniature technology approach would be
+to create many small, relatively vulnerable spacecraft, providing the same ability but
+a more difficult target.
+
+Small size is not in itself a new feature. The earliest satellites were very small out
+of necessity, weighing 5 to 50 kg. In retrospect, it is remarkable how large satellites
+have grown, not how small a few satellites are. Table 22-1 surveys a sample of the
+small satellites launched from 1991 to 1995. Since 1957, larger systems, made possi-
+ble by advances in the technology of satellites and launch vehicles, have absorbed the
+most engineering attention and resources. However, the continuity in their launch
+dates shows that small satellites have played a role throughout satellite history, and are
+still useful in specific applications.
+
+TABLE 22-1. Selected Small Satellites from 1991-1995. These satellites are all under
+425 kg. They performed their missions beyond their expected lifetimes, on the
+average.
+
+Company/ Mass Launch
+Sponsor Satellite Mission (kg) Vehicle
+1991
+
+USSR Kosmos 2125-2132 Military Comm. Sats 40 ea.
+Mar | SDIO/DSI Research (3 sats) Space shuttle
+Jul | DSI ASTP/Lightsat Pegasus #2
+Jul | ESIEESPACE SARA Radio Astronomy
+OSC/CIT ORBCOMM-X (VaSTAR) | Communications 17
+DARPA/ONR/DSI | ASTP/Lightsat 1-7 LEO Comms.
+
+Japan/U.S. Solar A (Yoko) Research
+DSI Research (3 sats)
+
+USAF/DSI ISES/REX Comm. Research
+Czechosiovakia Scientific
+
+1992
+
+Pe SARA Planetary Geophysics
+
+SROSS C | Gamma Ray Detector
+
+Matra/Surey Communications
+
+Korean inst. of Kitsat-A ; Comm. Research
+Tech.
+
+
+855
+
+TABLE 22-1. Selected Small Satellites from 1991-1995. (Continued)These satellites are all
+under 425 kg. They performed their missions beyond their expected lifetimes, on
+the average.
+
+Company/ Mass Launch
+Sponsor Satellite Mission (kg) Vehicle
+
+Feb | Brazil SCD-1 Environmental Data Pegasus #3
+NASA/AF SEDS 1 Tether Experiment
+
+a =a
+Apr | DoE/LANL/ ISES/ALEXIS Research 1 Pegasus #4
+AeroAstro
+Aug | Talspazio/Kayser | Temisat Ocean andTraffic Cyclone
+Threde Monitoring
+
+Sep | South Korea Kitsat-B Comm. Research
+
+Ariane 4
+Ariane 4
+
+Sep | Portugal Posat-1 Remote Sensing
+
+Sep | Italian AMSAT
+group
+7  (
+
+Dec | DARA/OHB System
+
+Ariane 4
+Ariane 4
+
+Ariane 4
+Zenith
+
+Communications
+
+=
+| 80 |
+| 50 |
+| [Pakistan BADR-B Remote Sensing | 50 |
+| | Italy BARRESAT Technology/Industrial | 50 | Ariane
+ENSAESAT 2 Research | 50 | Ariane
+Energetics Sattrack Local Positioning | 64 |
+Tech. U. Beriin | 40 |
+DARA/OHB System | 55 |
+| 113 |
+UK DRA | 50 |
+UK DRA | 52 |
+UK DRA | 53 |
+
+Aug | OSC
+Dec
+
+Ariane
+
+Soviet Proton
+TUBSAT-B
+Bremsat
+
+Research 4 Cyclone
+
+Research Space Shuttle
+Zenit
+ASLV
+
+Ariane
+
+Communications
+SROSS-C2
+
+Space Tech Res Vehicle
+STRV-1a, 1994-034c,
+STRV-1b, 1994-034b
+APEX, 1994-046a
+RS-15A, 1994-085A
+
+1
+Test New Tech. (2 sats)
+Component Testing Ariane
+
+Component Testing Ariane
+
+Research | 262 | Pegasus
+Communications SS-19 missle
+
+Science and Tech. | 28 |COsMos-3M |
+Forward Communications COSMOS-3M
+Research
+
+OFFEQ-3,
+1995-018A
+
+Rocket
+
+SICH-1
+
+57
+09
+
+64
+0
+13
+0
+
+Q
+o
+3
+»
+3
+<
+
+ASTRID, 1995-0028
+FAISAT-1, 1995-002C
+UNAMSAT
+
+Mar | Russia Techsat-1
+
+Israel OFFEQ-3, 1995-018A
+
+aq
+iv)
+a
+
+Test Momentum Wheels
+Astronomical Experiments
+
+Global communications
+
+osc ORBCOMM FM1, 1995-01
+& 1995-02
+
+12
+47
+Apr | NASA MICROLAB-1, 1995-017 | Weather 76
+
+Apr GFZ-1, 1995-020A Passive Reflector
+
+Jul Cerise, 1995-0338
+Aug | Chile FASat-Alfa
+
+
+856 Design of Low-Cost Spacecraft
+
+Early Space Systems
+
+The earliest satellites were small because the first launch vehicles’ payloads were
+limited. The satellites often had lifetimes limited by on-board battery power because
+they had no solar panels. They carried either simple analog transponders or simple
+beacons for researching signal propagation. The Echo series were passive reflectors
+formed of metallized polymer balloons.
+
+Virtually all of today’s satellite applications appeared in the first 10 years of
+satellite development. For example, the Telstar series first demonstrated television and
+telephone relay. In size, mass, power, and orbit these satellites resembled today’s
+typical small satellites. They proved that satellite-linked TV was effective and
+desirable, thus blazing the trail for the large geosynchronous communications
+satellites in commercial and government service today. Several small Earth-
+surveillance systems had flown by 1967. The first weather satellite, Tiros 1, flew in
+1960. VELA was one of the most successful small, Earth-observing satellites. Built by
+TRW for the Air Force and Department of Energy and weighing 152 kg, VELA sat-
+ellites were the first to provide data from space concerning nuclear weapons testing on
+Earth. Though initially flown as an experimental satellite and developed by a small
+group in 18 months, VELA provided years of valuable reconnaissance service on
+orbit.
+
+Radio amateurs were quick to see how they could apply satellites to communication
+and education. In 1961 the 5-kg OSCAR I (Orbiting Satellite Carrying Amateur
+Radio) was the first of a series of satellites radio amateurs built and operated world-
+wide. Now numbering about 30 and spanning over 35 years, almost all of these
+satellites have exceeded their operational design for on-orbit lifetime. The first com-
+mercial comsat, Early Bird, which weighed just 39 kg, was flown in 1965.
+
+Continuing Applications of Miniature Satellite Technology
+
+Between 1965 and 1985, space-faring nations deemphasized small satellites in
+favor of getting the most sophisticated performance from on-orbit resources. Because
+the United States was committed to crewed flight, including the lunar landing, we
+developed large boosters. Larger boosters also became available for placing large
+payloads into geosynchronous orbit, revolutionizing global communications and
+creating the infrastructure in place today.
+
+As space systems rapidly grew in size, vigorous small satellite programs continued
+but without much attention from either the public or mainstream aerospace engineer-
+ing. For example, several amateur radio satellites were developed using technologies
+and design approaches previously untried in spacecraft. They also continued to apply
+simpler, less expensive devices which were rapidly vanishing as satellites became
+larger and more complex. These small satellites employed photovoltaics to charge
+NiCd batteries for on-orbit lifetimes of several years. They carried VHF, UHF, and
+microwave transponders and had a range of operating modes controlled by ground
+command.
+
+Small satellites often played a role behind the scenes in developing military sys-
+tems. Very small devices were routinely flown to provide on-orbit targets and signal
+sources for tracking systems. These satellites usually carried active sensors which
+sensed their RF and optical environment and relayed the data back to ground stations.
+
+Many nations have entered the space community through launches of small satel-
+lites, including Canada, France, Italy, England, Korea, Portugal, Sweden, Denmark,
+UK, Israel, Spain, Argentina, Chile, Mexico, Malaysia, Denmark, Japan, Germany,
+Czechoslovakia, India, and The Netherlands.
+
+857
+
+Modern Low-Cost Systems
+
+By 1985, amateur satellites such as OSCAR 10 and UoSat 2/OSCAR 11 had
+demonstrated the value of reliable digital communications to smal] satellites. As Tel-
+star clearly showed, we can use a single small satellite in low-Earth orbit only when
+the ground station can see it; its ability to communicate was limited. To overcome this
+problem, OSCAR 10 employed digital store and forward communications, using the
+small satellite platform as a mailbox or bulletin board. Users anywhere on Earth could
+transmit prepared messages to the satellite during its brief overhead pass. The satellite
+could then deliver these messages throughout the world. Consequently, a single, small,
+inexpensive satellite in low-Earth orbit provided global mail service—something not
+even a large geosynchronous satellite can do.
+
+This new operating mode began at the same time that NASA extended its Get Away
+Special program to release small payloads into orbit. NASA’s program had provided
+inexpensive transportation into space for small (< 68 kg), self-contained payloads.
+Replacing ballast used to balance the Space Shuttle’s major payloads, the program had
+carried payloads fixed to the payload bay wall on roundtrips to orbit. Goddard Space
+Flight Center developed a Get Away Special container with an opening lid and a
+spring ejection system. This allowed orbital insertion of a 68-kg satellite for less than
+$50K. The European Ariane rocket had independently developed the ASAP (Ariane
+Structure for Attached Payloads). Up to 6 small satellites could be carried aboard the
+ASAP ring, each with mass up to 50 kg. Several Amsat and university satellites, as
+well as spacecraft developed under national R&D programs for a range of applications
+have since flown on ASAP. Due to the popularity and success of the ASAP program,
+it has been expanded for Ariane V, accommodating physically larger payloads with a
+mass of up to 100 kg. (For further details see London [1996]).
+
+Thus, small, inexpensive satellites reentered the aerospace mainstream through the
+confluence of three developments:
+
+* Low-cost access to space
+
+* Highly capable digital communications systems whose weight, power, and
+volume were compatible with the Get Away Special
+
+* Digital store and forward communications
+
+Radio amateurs exploited the concept of a digital mailbox in a small, low-cost
+satellite to communicate with relief workers in remote parts of the world. The same
+technology was a fundamental feature of the University of Northern Utah’s NuSat,
+which was designed to calibrate FAA air traffic control radars and to be an educational
+tool] at the University. A similar application drove the Global Low Orbiting Message
+Relay (GLOMR) satellite’s ability to carry data from remotely located sensors to a
+central command post.
+
+The success of these low-cost satellites caused designers to reassess the roles of
+large and small space systems. Some payload organizations quickly recognized that
+the ability to fly a simple, small payload with low cost and fast turnaround was ideally
+suited to their needs. These first-generation users included scientific programs and
+smaller national programs that could not justify the resources required to fly a con-
+ventional technology project. Israel’s Offeq satellite, launched in October, 1988,
+represents this facet of miniature technology. Today the small-satellite industry fo-
+cuses on special niches, to satisfy missions that conventional satellite technology
+cannot cover with large spacecraft and multiple payloads, developed in programs
+spanning 5 to 15 years.
+
+858 Design of Low-Cost Spacecraft 22.1
+
+The ALEXIS (Array of Low-Energy X-Ray Imaging Sensors) 120 kg satellite, built
+in 1989 and launched in 1993, was representative of the increasing utility afforded by
+small, low-cost satellites. The payload required anti-Sun orientation with a slow 2-rpm
+roll about the Sun axis. This special stabilization requirement, plus the need for obser-
+vation times of one month to one year, made this payload incompatible with larger
+spacecraft catering to multiple payloads. The ALEXIS spacecraft bus, developed for
+Los Alamos National Laboratory, weighs only 45 kg without its payload of scientific
+instruments and costs about $3M. Yet it supplies 55 W of continuous power to the
+payload, buffers 1 Gbit of science data between downlinks to a single ground station,
+provides all spacecraft guidance and position data, and offers telemetry down and
+uplinks at 750 and 9.6 kbit/s respectively. Built for a 6-month on-orbit mission
+ALEXIS has provided over 6 years of on-orbit science operations and remains in con-
+tinuous operation as of mid-1999.
+
+Chemical Release Observation canister (CRO), another advanced miniature satel-
+lite program, is a group of three small satellites, each carrying 25 kg of hydrazinic
+chemicals. Designed to eject the liquid chemical for optical observation from the
+ground and from the Shuttle, the satellites provide simple telemetry of the payload
+state (temperature and pressure) and respond to various ground commands. The satel-
+lites are aerodynamically stabilized to weathercock and fly oriented along their veloc-
+ity vector. Built and flown for under $1M each, CRO was a highly successful
+application of a minimum cost spacecraft.
+
+Since the success of the OSCAR 10 satellite in 1983, miniature technology has
+become an increasingly important element of hardware programs and systems archi-
+tecture studies. OSCAR 10 provided analog and digital communications from a
+Molniya orbit to amateur radio operators for about 14 years. Since 1965, OSCAR-
+series satellites built by volunteer developers with limited budgets have demonstrated
+part of the potential of miniature satellite technology.
+
+Figure 22-1 addresses one reason these small systems have become so important.
+The dramatic miniaturization of the electronic components composing most satellite
+payloads implies that the spacecraft could do as much or more while becoming
+smaller. But conventional satellites have increased their mass by three orders of mag-
+nitude despite the mass of some components shrinking by as much as four orders of
+magnitude. Miniature satellite devices built with advanced technology can do much
+more than the very large, costly devices of only a decade ago.
+
+Computers are another instance where miniaturizing has provided highly capable,
+affordable machines. Miniaturizing has also changed the way we use these machines
+and greatly expanded their applications. The computer revolution came about because
+we thought of how to apply new technology in new ways. The technology is in place
+to create a new class of small, inexpensive, and highly capable space systems. Our
+challenge is to identify how to apply these new methods and products.
+
+22.1 Designing Low-Cost Space Systems
+
+Although we can design for low cost in different ways, some general rules apply
+based on space-system development, launch, and operations costs. Launch costs are
+often quoted simply as a linear function of mass on orbit for various orbit classes. This
+simple model implies that achieving very low mass automatically minimizes launch
+costs. But achieving low mass at low cost requires minimizing payload requirements,
+redundancy, and size. By including the mission performance requirements as part of
+
+22.1 Designing Low-Cost Space Systems 859
+
+106
+
+4104
+
+e
+HEAO 3 e TDRS-A
+e@ with upper
+108 co O@ Pegasus FLTSATCOM stage
+=
+D
+<= 10?
+a
+g 101 ‘@ Vanguard
+400 @ Vanguard
+1071
+
+T nn — TT
+4955 1965 1975 4985
+
+QO 1 Mword digital memory
+® Conventional satellite launch
+
+Fig. 22-1. Electronics and Satellite Mass Have Evolved in Different Directions Since
+Sputnik.
+
+the design process, miniature technology tries to lower launch costs not by cost-saving
+measures applied to complex satellites, but rather by minimizing the requirements
+imposed on the spacecraft.
+
+The single most significant factor driving ultimate mission costs will be the system
+performance requirements. Unfortunately, these requirements are often determined
+independently by the user organization before the design process begins. This practice
+is encouraged by engineers who complain that they can’t design without specs to
+design to! The small satellite system attempts to provide a valuable capability within
+a severe set of volume, mass, power and complexity constraints. Only by tailoring
+requirements to that which can be realistically fit into this limited resource envelope
+can the small satellite design exercise come to a successful result. Typical tradeoffs
+which should occur in the early phases of the design process include reduced data
+storage and downlinking in favor of more onboard processing, reduced pointing and
+stability requirements vs. more adaptive sensors and actuators, and reduced power by
+careful design of payload instruments or reduction in duty cycle, leaving open the
+possibility of a multiple satellite system which in combination can provide a higher
+duty cycle and more frequent ground coverage.
+
+Because launch resource is not a standard commodity, pricing in cost per unit mass
+is misleading. Very small launch resources, including the Ariane ASAP, Space Shuttle
+Hitchhiker and small payload space on most other major launch systems, often have a
+single price per payload up to a maximum mass. Hitchhiker and ASAP payloads are
+in general not mass but rather volume constrained. Thus, we need not spend payload
+development resources on very lightweight structures, as well as the detailed analysis
+and testing needed to design and verify them. The standard Hitchhiker carries 68 kg
+for as little as $150,000. The resulting cost of $2,200 per kg is about 10% of standard
+launch costs on a per unit mass basis. Maybe more significantly, the total cost is 0.1%
+to 1% that of larger spacecraft.
+
+We must keep in mind that these systems are secondary payloads—flown “‘stand-
+by” and without a guaranteed launch date. If we build the payload to allow minimum
+
+860 Design of Low-Cost Spacecraft 22.1
+
+support at the launch site, integration into a range of launch vehicles, and maximum
+flexibility in orbit requirements, we can minimize costs and program delays.
+
+Dedicated small launch facilities, such as Pegasus or Shavit, price launch space per
+flight rather than per unit mass. Thus, we cannot save money by reducing mass below
+our allocation. In fact, because Pegasus and Shavit use solid propellant, they must
+carry ballast if the payload mass is too low. As a result, we should avoid radical design
+changes to shave mass, for these changes would require us to spend a lot of money
+unnecessarily on materials, fabrication and analysis.
+
+Reducing costs is often erroneously associated with increasing mission risk. Con-
+ventional systems offer verifiable savings in expected cost of failure by lowering
+failure probability for an expensive mission. But if the program budget exceeds our
+available resources, we may have to abandon the program. This programmatic risk is
+mitigated by choosing missions achievable with a minimum cost approach.
+
+One way to save money in designs using miniature technology is to dispense with
+full redundancy, thus risking a single-point failure. But net risk may in fact be lower
+for a small nonredundant system. This is because redundancy requires selection and
+switching mechanisms to arbitrate between elements. In miniature technology, we
+choose to back up only critical systems with known low reliability. In a system of n
+components each having a success (lack of failure) probability, R,, the overall reliabil-
+ity of the system is
+
+_ ph
+R=R, (22-1)
+
+Since the number of components, 7, nominally scales with mass, a minimum cost
+small spacecraft may have n 1% as large as a larger spacecraft. Thus, the small system
+can use parts with 99.99% reliability and achieve the same reliability as a large system
+spending much more money to buy parts with 99.9999% reliability. Or, using the same
+part quality the little spacecraft will be more reliable. Thus the reliability gained in a
+larger system via redundancy is achieved in the smaller system through reduction in
+the number of parts. In fact, parts failure is no longer the major cause of spacecraft fail-
+ure. Rather it is human errors in design and operation, which are in part the result of
+increased system complexity. Here too, a smaller, simpler system has a significant
+reliability advantage.
+
+In practice, miniature satellite systems have an excellent record of success. The
+world production leader is AMSAT, the satellite organization for radio amateurs. Every
+one of their over 30 satellites has been successful over 35 years of development
+programs spanning many different development teams and missions. Their record
+stems directly from miniature technology’s simplicity, its development process, and
+its organizational elements, as discussed below. Single-string design is riskier as it
+becomes more complex. The relatively simple design and subsystems in small satel-
+lites make them more reliable.
+
+Low-cost space vehicles must be smal] enough to be assembled by a unified group
+with common goals. In a small design team, every member of the group has a direct
+link to every other member. They negotiate interactively and communicate efficiently.
+The team members take the minimum risk path to achieve the savings they mutually
+seek. Large, segmented development organizations have trouble working in this close,
+cooperative way.
+
+The team designing a miniature satellite must consist of engineers with breadth and
+depth. Each specialist needs to understand the requirements driving the overall design.
+
+22.1 Designing Low-Cost Space Systems 861
+
+A small team can produce unexpected innovations because each member can appreci-
+ate the problems of other members. Teams suffer if they lose a key person. This vul-
+nerability can be even higher in small teams because every team member is essential.
+Managers of small programs need to ensure that each member works with a “buddy”
+who, though the buddy may be focused on another aspect of the program, understands
+to some extent what the engineer is doing. In the event of loss of that engineer from
+the program, the buddy can take on his or her tasks and responsibilities while the team
+redistributes work.
+
+A small organization trades resources freely across disciplinary boundaries. No
+team member takes any resource for granted or “owns” an allocation. The program
+manager communicates concerns about cost throughout the group. The efficiency
+possible in a small group is so valuable that the individuals often work much harder
+rather than bring more communications and management burdens to the program. The
+spacecraft team can carefully explore and negotiate every systems-level requirement
+with the users in order to show them how to save money. Flexibility on both sides can
+cut costs dramatically. A small program should plan to invest in automated design and
+analysis tools. These tools reduce team labor hours, but more importantly they help to
+get the job done without team size inflating beyond the size (about 20 people) which
+allows close team interactions. Similarly the project should plan to subcontract
+specialized functions to keep the team as small, focused and interactive as possible.
+
+A Satellite program expends much of its resources on the ground station which may
+operate two or three times longer than the satellite development program and require
+expensive full-time staffing. To avoid the capital and maintenance costs for a large
+ground station, it is best located at the user’s site—preferably in the user’s office.
+Smal] satellites can be simple enough to be built around the user’s personal computer
+and operated as a computer-controlled, laboratory apparatus.
+
+Technologies employed in the ground station include computing systems from the
+consumer market, such as a PC-based station controller, read-write optical disc
+archiving, and commercial input-output cards. Because antenna costs increase rapidly
+with gain, we engineer the link based on the best antenna gain achievable at low cost.
+Sophisticated ground-station software eliminates most of the need for operator inter-
+action and provides a simple, user-friendly interface requiring little special training.
+The computer is the only interface to the ground-station equipment, so the user need
+not understand any other equipment interfaces.
+
+The program review used to develop conventional satellites is inappropriate for
+miniature satellites. For conventional program reviews, one person represents each
+department while other members keep working. But for the small satellite team, a
+department” may be one person. Thus, for best efficiency, teleconferences and
+smaller, less frequent Technical Interchange Meetings replace conventional reviews.
+Usually, the members directly involved in a given issue meet; rarely does the whole
+group need to attend.
+
+Program costs depend on schedule about equally in large or small efforts. But
+because miniature satellite programs are short, delaying a few months can increase
+cost significantly with respect to the total development budget. Therefore program
+managers must take the schedule seriously, always looking for means to finish and
+launch the spacecraft as quickly as possible.
+
+Like program management, quality assurance is a subfunction carried out within
+the team developing a miniature satellite. No single individual or discrete organization
+handles it. The team works case-by-case in deciding on fabrication standards, compo-
+
+862 Design of Low-Cost Spacecraft 22.1
+
+nent qualification, or requirements for derating and previous flight experience. The
+same is true for applying specific fabrication standards or for inspections. This method
+allows the system engineer to reduce or eliminate quality requirements if their cost
+outweighs their contribution to the probability of success.
+
+An example of selectively applying quality assurance standards is in the design of
+a spacecraft mass memory, which contains single controller and input-output (I/O)
+devices managing a large number of mass storage devices. Failure of one of the control
+or I/O devices is catastrophic. Because there are few of these devices, we can justify
+specifying highly reliable, highest-grade (and hence high cost) components. On the
+other hand, failure of one or even several of the many memory components is not par-
+ticularly serious. Further, procuring many of these devices at very high standards is
+expensive. Thus, we procure memory for much less money at lower standards of qual-
+ity and reliability.
+
+Occasionally, a key component not previously used in spacecraft may improve per-
+formance or save money. With lower reliability requirements and the flexibility to
+consider parts individually, we can decide whether to apply the component, based on
+the following:
+
+¢ Whether its failure brings catastrophe or merely degrades operation
+¢ How well we can simulate its space operation
+¢ How much not using the component would cost in performance and resources
+
+¢ Whether we can meet system reliability goals with it
+
+Saving money in testing does not necessarily imply higher risk of on-orbit failure.
+Here again the simplicity of miniature technology allows a different, more individual
+approach. The program manager may opt to eliminate subsystem and component tests
+in favor of a full system-level qualification. This decision does not reduce probability
+of mission success. In fact, simulating the space environment achieved in testing may
+be more accurate for the integrated system test approach because each part will be
+qualified while operating with actual flight interfaces. The tradeoff is in program risk
+vs. program cost. If many component or subsystem flaws exist, they are more easily
+corrected at the subsystem test level. On the other hand, if few failures occur, we
+should rely on the integrated system test, which eliminates long testing of subsystems
+and components.
+
+Miniature satellite testing should take advantage of the system’s simplicity. Wher-
+ever possible, we should use the actual flight and ground hardware for all tests, thus
+raising confidence that all system elements will actually work together in flight while
+lowering investment in simulations, test fixtures, and facilities.
+
+Every mission develops with overt or subtle political pressure to satisfy the widest
+possible constituency. Conventional products typically carry a number of discrete,
+often unrelated payloads supporting many users. But programs using miniature tech-
+nology cannot bear the complex payloads or engineering and management interfaces
+arising from this constituency building. To maintain the tight program staffing and
+focus needed for close communication, we must control complexity. Further, unless
+we limit spacecraft mass and volume, we may lose a launch niche. Increasing launch
+costs pressure us to provide higher reliability through redundancy, formal program
+controls, discrete quality assurance, and increased paperwork and subsystem testing.
+Instead, we should usually split demanding payloads into separate programs rather
+than lose the advantage of miniature satellite technology.
+
+22.2 Small Space Systems Capabilities and Applications 863
+
+Earlier, we pointed out that trying to lighten structures beyond a practical minimum
+mass made designs more complex without reducing launch costs. A conservative, sim-
+ple design helps us avoid complexity in the miniature satellite program. The program
+cannot support independent specialists analyzing various thermal, mechanical, stabil-
+ity, and other properties. Designing conservatively eliminates detailed analysis, thus
+maintaining the small development team and keeping the program within cost and
+schedule.
+
+We can also justify less analysis because the small spacecraft’s physical dimen-
+sions support smaller thermal gradients. Simultaneously, their vibration-resonant
+frequencies tend to be high whereas applied moments are low, owing to short unsup-
+ported structure lengths. Wall thicknesses typically depend more on screw thread
+depth requirements and machining tolerances. Thus, designs often include substantial
+structural and heat transfer margins. Finite element modeling can then be eliminated
+in favor of analyzing the overall system and a few critical parts. Therefore, we can save
+time and resources and need not hire more people to develop, run and maintain com-
+plex models and simulations.
+
+22.2 Small Space Systems Capabilities and Applications
+
+22.2.1 Abilities of Small Space Systems
+
+Smaller space vehicles can support only one or two features of the most capable
+systems; larger systems dominate when we need many features. Thus, we will survey
+what small spacecraft can do with the caveat that we must normally customize them
+to each user’s requirements. Although we can probably increase a parameter’s perfor-
+mance if an application depended on it, we usually gauge what is possible against what
+has already been done or, at least, is in development.
+
+Table 22-2 lists some of the common guidance and control techniques that have
+special merit for small-satellite programs. Chapter 11 discusses satellite stabilization
+in more detail. One option—no stabilization hardware at alli—is a simple and therefore
+attractive alternative for small-satellite applications. To achieve downlink margin and
+adequate power in any attitude, satellite antennas need to have spherical coverage and
+solar cells must be distributed over the entire satellite surface. Many conventional sat-
+ellites require gain antennas for two reasons. First, the satellite is in a high orbit and
+hence distant from the ground station. Second, the telemetry rates required by multiple
+on-orbit operations increase the load on the radio link. We do not need antenna gain
+or stabilization to operate small satellites only a few hundred kilometers above the
+Earth’s surface with a single, low-data-rate mission.
+
+Passive stabilization, either aerodynamic, magnetic or gravity gradient, is often
+used to minimize cost and complexity. Aerodynamically stabilized satellites are
+simple but must be in very low orbit to be effective. Because orbital decay shortens the
+mission life to less than one year, we should use it only in low-cost systems. Gravity
+gradient torques can passively stabilize a satellite in an Earth-pointed orientation.
+Small satellites have used this configuration for increased radio-link gain and imaging
+of the Earth’s surface. Permanent magnets may also stabilize a small satellite by align-
+ing it with the Earth’s magnetic field. This technique often combines with spin
+maintenance schemes using solar radiation pressure. Completely passive and highly
+reliable, the technique can also allow about 3 dB of link gain.
+
+864 Design of Low-Cost Spacecraft 22.2
+
+TABLE 22-2. Guidance and Control for Smail Satellites.
+
+Typical
+Technique Performance Advantages Disadvantages
+Unstabilized NA Simple No gain in antenna or GLOMR
+solar array
+Aerodynamic Aligned to Very low orbits only CRO
++10 deg :
+velocity vector
+Gravity Gradient Earth-oriented Damping and upset UoSat1
++10 deg
+problems
+Passive #30 de No active Limited to magnetic field | OSCAR 4
+Magnetic g components alignment
+Earth-oriented Earth-oriented for | Requires active control | OSCAR 13
+. +5 deg :
+Spinner part of orbit
+
+Sun Spinner | #2deg ‘| Bestuse of Sun _| Requires active control | ALEXIS
+
+Because most small (and conventional) space vehicles are not oriented to the Sun,
+and because articulating solar panels are costly and complex, little electrical power is
+typically available in small satellites. But power has not typically constrained the
+design of small, low-cost spacecraft because they:
+
+¢ Incorporate power management as described below
+
+¢ Experience only intermittent contact with the ground station during typical
+LEO orbits
+
+¢ Depend on the small satellite’s large ratio of surface area to volume—i.e.,
+since power consumption scales with volume (mass) but solar power by sur-
+face area, power requirements drop more quickly than the power available as
+size scales downward.
+
+Typical power management measures include:
+
+¢ Using low-power devices such as complementary metal-oxide semiconductors
+(CMOS) wherever possible
+
+¢ Operating digital components at slow clock speeds to minimize power con-
+sumption
+
+¢ Duty cycling all components not requiring continuous power
+
+* Considering directional ground station antennas to reduce transmitter power
+requirements
+
+Most power systems employ standard spacecraft solar panels and either NiCd or
+lead-acid batteries. (UoSat E was the first small satellite to incorporate GaAs solar
+panels as a means to increase available power in a miniature satellite.) Often, to control
+cost, we fly commercial-grade commercial batteries in several parallel stacks. To reg-
+ulate charge, we can use simple current control or more advanced, digitally controlled,
+highly efficient circuits, depending on how much performance we must squeeze out of
+a system. Much of the risk of employing new, innovative solutions is unexpected
+effects elsewhere in a complex system. The simplicity of low-cost spacecraft lowers
+the risk associated with innovation. Thus, they often are first to employ new technol-
+ogies such as was the case with full-time digital charge control.
+
+22.2 Small Space Systems Capabilities and Applications 865
+
+Power available in contemporary low-cost satellites ranges from a few watts in
+unstabilized, Hitchhiker-sized spheres such as NuSat to over 60 W in Sun-stabilized
+vehicles like ALEXIS. While scaling arguments favor small vehicles, the absolute
+value of the steady-state power produced in LEO is typically small. Duty cycling
+usually satisfies a payload’s need for more power. Where this is not possible, the
+power requirements can drive up costs, because the satellite must provide more solar
+panel area, and may need articulating solar panels when the spacecraft surface is not
+large enough.
+
+Small satellites have provided superior information processing at a very low price.
+Small satellites with prices under $5 million are equipped with DSP and Pentium and
+Power PC microprocessors. Using static RAM or very low drain DRAM, the satellite
+can supply several Gbits of solid-state memory to buffer data between ground station
+passes while consuming less than 5 W of power for all systems combined. Satellites
+weighing under 20 kg have given us a full range of onboard signal processing: data
+compression, error encoding, as well as data checking and decoding or encrypting and
+deciphering algorithms.
+
+Small, low-cost systems have flown with various telemetry and communications
+systems, including VHF, UHF, and microwave links using FM and digital transmis-
+sion ranging from 300 baud to 1 Mbaud. To obtain digital rates up to about 9,600 baud
+duplex, we typically use nondirectional antennas on the ground and on the orbiting
+platform as well as NBFM (Narrow Band FM). The short slant range to a satellite in
+LEO has allowed us to develop ground units as small as a pocket calculator, which can
+uplink and downlink digital messages. At the same time, directional dishes operating
+at the S or X band can satisfy missions with requirements for very high data rates.
+Maintaining low program cost depends in part on the designer’s ability to minimize
+data rate and bandwidth, which drive costs on the ground and on the satellite. As the
+data rate increases, we need more expensive components and new systems elements,
+such as a steerable dish capable of the high angular rates of LEO satellites observed
+from Earth.
+
+As discussed in Sec. 22.1, launch costs do not change linearly with payload mass.
+In smaller vehicles, the actual cost will depend on negotiations with other payloads
+comprising the full launch payload, because even a very small payload is a significant
+fraction of the total. On larger vehicles, flying as a secondary, space-available payload
+may allow lower-than-standard pricing. Special launch services, such as the Shuttle,
+Hitchhiker and Ariane ASAP programs, fix prices up to a maximum allowable carrier
+capacity. To spend less money overall, we need to survey existing launch resources
+and build to match the largest number of candidate vehicles. In this way, we can geta
+quick, cost-efficient ride on the first launcher with available space.
+
+Higher prices per kg are associated with small vehicles such as Pegasus and Shavit
+because economies of scale favor larger launch vehicles. However, because a small
+payload may occupy all or at least a major part of a small vehicle, the small payload
+operator has more control over launch schedule and final orbit than when purchasing
+secondary space on a larger rocket. Secondary payload accommodations being offered
+by the Hitchhiker and ASAP programs are priced mainly to cover basic administrative
+costs. The Space Shuttle programs offer an unusual value if we can live with the safety,
+mass, and orbit limitations of that program. Ariane and Delta offer adapters to carry
+many small payloads, and Ariane has launched several AMSAT satellites. These
+vehicles have well-established launch records and pricing structures well below small,
+dedicated launch vehicles. Both Ariane and Delta offer launches for commercial
+payloads.
+
+866 Design of Low-Cost Spacecraft 22.2
+
+22.2.2 Emerging Miniature and Low-Cost Technologies
+
+Small satellites depend heavily on increased ability to compute and store data using
+low power. An 8.5-kg microsat’s capability today was unavailable in the 1/2-ton sat-
+ellites of 15 years ago. Digital communications and large data buffers ushered in the
+store and forward operating mode, which dovetailed with the communications archi-
+tecture natural to LEO satellites. Advances in these same areas may further benefit
+small satellites, but our fear of risk slows applications of new technology to space.
+Particularly, concerns over the effects of radiation on integrated circuits in the space
+environment have retarded the transfer of digital technologies to miniature satellite
+devices. This partly explains why, as terrestrial machines transitioned to Pentium and
+Power PC microprocessors, the first 8086 derivative was not used in orbit until the
+1990s. Thus, we have plenty of room to apply advances in integrated-circuit technol-
+ogy to miniature devices.
+
+Whatever progress is made in data manipulation and storage devices, many payload
+devices will still have intrinsic power requirements which are hard to reduce. These
+include radio transmitters, optical beacons, active coolers, and guidance and control
+hardware such as magnetic torque coils and momentum wheels. Better conversion of
+solar to electrical power will enable advances in miniature technology devices now
+relying mainly on silicon-based photovoltaics and NiCd batteries. GaAs photovoltaics
+are becoming common on small spacecraft with even more efficient cells now appear-
+ing on the horizon. The major effect of improvements in technologies for photovoltaic
+and energy storage will be to increase the scope of orbital functions which miniature
+satellite devices can perform.
+
+Often up to 20% of spacecraft mass is batteries. Lithium ion secondary batteries are
+now transitioning into microsatellites to reduce mass and improve performance.
+Momentum wheels are now scaling down in size, mass, power and cost to accommo-
+date smaller satellites.
+
+Advances in focal plane technology already allow very small satellites to carry
+digital imaging over a range of detector wavelengths. Sensitive, dense focal planes can
+enable high-resolution imaging with reduced objective lens diameter and poorer
+pointing stability. Advanced techniques for compressing image data, as well as
+increasing density of digital memory, will ease the burden of acquiring and storing
+image data for later transmission to Earth. Commercial organizations and countries
+now recognize that a low-cost satellite can perform meaningful imaging. This has
+spawned the startup of new commercial imaging companies serving specific market
+niches, as well as numerous new government-sponsored remote sensing satellite
+projects.
+
+As we continue to reduce electronics size, the aperture requirements will increas-
+ingly determine satellite size, mass, and, ultimately, cost. Particularly, high gain
+antennas, very fast, high resolution optics, and solar power collection, require large
+apertures. Thus, a key technology will be development of low mass/low cost deploy-
+able optics, solar arrays and antennas.
+
+A satellite on orbit is a type of robot. It is a device which carries out various phys-
+ical activities under control of an autonomous, synthetic controller. As terrestrial
+robotic devices become more capable, it is logical that satellites will become more
+capable and more autonomous. This would enable new applications involving
+extended periods of autonomy (perhaps for missions outside of the Earth-Moon sys-
+tem), intelligent interactions with other space and terrestrial objects, and coordination
+of the behavior of large numbers of small satellites.
+
+22.2 Small Space Systems Capabilities and Applications 867
+
+While the Defense Advanced Research Projects Agency, the Air Force, and NASA
+try to develop a new generation of launch vehicles for small payloads, no launch tech-
+nology breakthroughs appear to be on the horizon. Organizations are working very
+hard to create marginal savings in launch costs, and conventional, large vehicles
+remain the most cost-efficient way to inject a satellite into orbit. We expect no major
+advances in launch technology in the next decade.
+
+Until a few years ago, advanced designs for spacecraft architecture focused almost
+completely on conventional technology devices. The recent attention paid to systems
+composed of smaller, less costly components on-orbit is likely to produce new
+applications better suited to them, such as missions requiring a network of detectors
+distributed in orbit around the Earth or Sun. Previously, such concepts were dismissed
+because building and launching many conventional satellites into different, highly
+energetic orbits are expensive. Reducing launch mass by an order of magnitude or
+more may make these missions economically feasible.
+
+In general, anticipated technological advances in information processing, solid
+State detectors, autonomous intelligence and power conversion will all increase appli-
+cations of miniature technology. As we discover new systems architectures and
+develop new applications for satellite systems, miniature technology will take on
+heightened importance in future space programs.
+
+22.2.3 Potential Applications
+
+An array of satellites in random, low-Earth orbits can provide fully connected,
+continuous communications, as Fig. 22-2 shows. This fact has spawned numerous
+satellite programs which divide into the Big and Little LEOs. Big LEOs offer real-time
+connectivity, mainly for telephone but ultimately for very high bandwidth
+applications. Little LEOs are one- and two-way digital message carriers, used for asset
+tracking, monitoring and paging. All of the systems currently contemplated are con-
+stellations, meaning the spacecraft maintain constant position relative to each other.
+The number of satellites in the constellation ranges from 5 or 6 in the case of some
+Little LEOs servicing limited areas or with long latency—the time between passes
+over a user location. Big LEOs with constellations of 24 to over 240 satellites are in
+development. In general, larger numbers of satellites can provide higher bandwidth.
+Some of the systems use inter-satellite links to forward signals beyond their own foot-
+print. Others immediately relay communication from the user to a ground station
+which feeds the data via the terrestrial network.
+
+Unlike the constellations, satellite clusters consist of large numbers of satellite
+randomly distributed in their orbit planes without propulsion to maintain fixed relative
+to positions. These satellites are smaller and simpler than those in the constellations.
+They can be fit into available space on virtually any LEO launch. In time, such a net-
+work would become fully populated. Computer modeling of clusters shows that 400
+satellites in random orbits provide 95% global coverage and 100% coverage from
+other orbiting platforms. Thus, the satellite cluster could support both point-to-point
+ground communications and satellite-to-ground links. One significant feature of satel-
+lite arrays, either constellation or clusters, to worldwide communications from the mil-
+itary viewpoint is its intrinsic survivability. Destruction of 1 or even 20 of the cluster’s
+members barely affects the network’s overall effectiveness. Presumably the small,
+simple, mass-produced satellites of the cluster would be less expensive than the weap-
+on required to destroy them. Their small size would make them intrinsically difficult
+
+868 Design of Low-Cost Spacecraft 22.2
+
+Fig. 22-2. Satellite Cluster. Many small satellites in randomly distributed low-Earth orbits can
+provide point-to-point global communication.
+
+to track and would also permit fabrication from materials transparent to radar. Their
+intrinsic redundancy and graceful degradation justify applying inexpensive, single-
+string design and fabrication techniques which will further reduce cost.
+
+Another application of small satellites is for low-cost imaging. These systems use
+advanced focal-plane technologies to obtain fine optical resolution with relatively sim-
+ple guidance systems. By using multiple satellites in clusters or constellations,
+frequent image updates can be combined with good ground resolution. Smaller, low-
+cost satellite can be optimized to specific applications such as agriculture, coastal zone
+management or land use and taxation. Several businesses and countries are developing
+systems that will eventually eliminate the monopoly of a few large government-owned
+systems on optical space surveillance of Earth-bound activities.
+
+AMSAT and several commercial and government organizations are developing or
+using small satellites in geosynchronous orbits. AMSAT plans to supplement existing
+global digital communications from LEO satellites with real-time digital and analog
+communications. Indostar is the first of a new generation of geosynchronous satellites
+supporting only a few transponders. These small geosynchronous comsats could serve
+as on-orbit spares. Moreover, they appeal to smaller corporate and national users
+which cannot themselves support a conventional GEO comsat. These users must now
+either lease individual channels of a large satellite or become a member of a conglom-
+erate such as Intelsat. Using miniature satellite devices with lower capability and price,
+smaller users can own and hence control the entire space asset, increasing their auton-
+omy and security. Though GEO launch costs traditionally are high, small satellites can
+hold down those costs by piggy-backing on a GEO neighbor’s launch, if available.
+However, few small satellites can take advantage of the GEO orbit.
+
+Measurements of rapidly varying fields over astronomically significant baselines is
+impossible with a single satellite. By the time the satellite flies across the region of
+interest, temporal variations in the field distort the map. By flying tens to hundreds of
+very small satellites in varying trajectories, we can observe such phenomena as the
+charged-particle environments and magnetic-field variations of the Earth and Sun.
+
+22.3 Applying Miniature Satellite Technology to FireSat 869
+
+Particularly for solar observations, the desired trajectory energy is quite high, so we
+need low satellite mass. Small satellites are ideally suited for this class of
+mission—requiring many spacecraft inserted into energetic trajectories. Due to the
+scientific nature and high launch costs of such missions, they are best suited for NASA
+and other national science and research organizations.
+
+22.3 Applying Miniature Satellite Technology to FireSat
+
+To show how the small satellite conceptual process works, we will look at the
+application of miniature technology to the FireSat problem of detecting and monitor-
+ing forest fires either nationally or worldwide. This system is challenged to provide
+rapidly updated data on a firefront’s genesis, topology and local progress to the Forest
+Service’s central office. A network of low-flying reconnaissance spacecraft could
+resolve the firefront to a few meters through multispectral imagers. Then the satellite
+could find the spread rate by staring at the front during a pass and applying image
+processing techniques to the downlinked data. Direct broadcast to the field through a
+geosynchronous comsat would forward the derived data to the firefighting teams. Such
+a system would be highly complex and costly. We believe that this system does not
+exist because conventional satellite technology cannot meet the user’s recognized
+requirements at an affordable price.
+
+Serious forest and brush fires often begin with a simple match or a spark that is hard
+to see from an orbiting platform. One potential solution is to fly very low-resolution
+imagers filtered to the near IR. Data on nascent fires would be downlinked to a simple
+ground station which could reconstruct the low-resolution images and compare them
+with ground truth, such as the locations of large cities and other bright areas. The low
+resolution and subsequent low bandwidth will allow use of PC-based ground stations
+like those already built for earlier small imaging satellites. This solution parallels the
+conventional technology approach, but with minimum capability.
+
+A more innovative solution would deploy simple thermocouple sensors from air-
+craft, with small nets to catch them in treetops, where forest fires spread. Fitted with a
+lithium primary battery and a 1-W uplink transmitter, the sensor could simply turn on
+(much like an Emergency Locator Transmitter) when its temperature reaches, say,
+80 °C, broadcasting its digitally encoded serial number to a simple small satellite for
+digital messaging.
+
+After discovering a forest fire, monitors would dispatch an aircraft to the firefront
+to drop a denser network of more sophisticated sensors. These sensors could transmit
+the local temperature and their own ID number to the aircraft, which would maintain
+a map of the sensor locations by recording them as each sensor is dropped. As the sat-
+ellite overflew, it would receive the signals of the upgraded sensors, causing it to
+rebroadcast a map of sensor ID numbers and temperatures to the local firefighting
+crew. Their ground station would receive a map of sensor ID numbers and locations,
+so they could immediately derive a temperature contour map. Figure 22-3 shows the
+complete system.
+
+A simple treetop sensor would be inexpensive because it consists of only a beacon,
+a battery and a thermocouple. Dispersing the sensors could occur during routine
+transportation and patrol flights because the sensors are merely scattered. The satel-
+lites serving this application would be very small, simple devices, which any sort of
+launch vehicle could launch. All firefighting crews would need small, portable ground
+stations, and the aircraft deploying sensors would use GPS to record location when
+
+870 Design of Low-Cost Spacecraft 22.3
+
+FireSat & Widely dispersed monitor sensors
+
+g Densely dispersed active fire sensors
+
+fires using both existing monitors (S )
+and event-deployed ( a ) sensors
+
+a &
+
+Forested Region
+
+F5 Portable ground stations monitor active
+
+Base ground stations monitor forests globally for Monitor sensors re} ) are deployed globally at wide grid
+nascent fires using network of sensors ( Ay ) spacing. Event specific sensors ( § ) are deployed at
+active fire sites on much finer grid spacing.
+
+Fig. 22-3. FireSat System Concept. The miniature satellite concept for a FireSat system
+minimizes on-orbit cost by using an array of sensors for monitoring and for relaying
+information about particular fires to firefighters.
+
+dropping each high-resolution sensor. A laptop computer would allow an operator to
+
+enter data as the sensors drop. The ground control stations consist of little more than
+
+the field units, a small computer, transmitter, receiver and ornnidirectional antenna.
+The system described above would provide the following:
+
+* Global monitoring of new forest fires from a few ground stations located any-
+where on Earth
+
+* Ability to locate firefronts to treetop resolution after identifying a fightable
+blaze
+
+¢« Communication of the fire progress directly to the field commander
+
+With this approach, we benefit from minimal on-orbit requirements, cheap replace-
+ment, and built-in redundancy. With several satellites on orbit, if one fails, the system
+degrades only slightly. Any launch to LEO can potentially rebuild the system. Suppli-
+ers of miniature satellites can put needed spacecraft on orbit in under a year, and the
+system could be operating 18 months after contract go-ahead.
+
+Note that in this example miniature satellite technology is considered a systems
+architecture discipline. This designation is accurate and intentional. Miniature tech-
+nology is not a special set of technologies used for building conventional capabilities
+into small, cheap boxes. It is a new way of looking at an application to develop a
+solution which doesn’t require conventional technology and which a closely-knit team
+of under 20 satellite engineers can handle. Using miniature technology architecture, a
+
+22.4 Scaling from Large to Small Systems 871
+
+spacecraft needs only modest capabilities to detect and monitor forest fires. The satel-
+lites need only listen for beacons and crudely locate them to within a few kilometers
+or tens of kilometers. In the second mode of operation, at the firefront, the uplinked
+data from even a few thousand beacons is much less than 1 Mbit.
+
+The 13-cm Microsat cube developed and flown successfully by AMSAT North
+America and shown in Fig. 22-4 is an example of the type of miniature technology
+device which can meet all of the satellite requirements for the FireSat mission. The
+microsats weigh only 8.5 kg and are fitted typically with 8 Mbits of RAM. The unsta-
+bilized satellites carry omnidirectional antennas providing sufficient link to recognize
+a low-bandwidth, 0.5-W beacon at the Earth’s horizon from 800-km orbit.
+
+Fig. 22-4. MicroSat Cube Developed by AMSAT North America. This 13-cm, 8.5-kg satellite
+first flown in 1990 could meet the space segment requirements for the FireSat concept
+shown in Fig. 22-3.
+
+Even in small quantities these satellites can be produced for less than $400,000,
+because they are so simple. By using several satellites, the system itself is redundant,
+so each satellite can be simpler, less reliable, and of a single-string design. Lower
+reliability requirements allow us to procure commercial-grade components without
+special ordering, testing or quality assurance. With this method, we can buy parts
+cheaper and design more efficiently by using more modern, capable components. We
+can also cut engineering time spent finding qualified parts and working with vendors
+to meet program specifications.
+
+Simple mission requirements allow the satellites to be quite small, thus greatly
+reducing launch and ground-support costs. In fact, we can transport them to a test or
+launch site by commercial airliner as carry-on luggage.
+
+22.4 Scaling from Large to Small Systems
+
+The fact that miniature technology devices tend to be physically small means that
+physical scaling laws will account for some fundamental differences between minia-
+ture and conventional satellite devices. A conventional device can also be physically
+
+872 Design of Low-Cost Spacecraft 22.4
+
+small; this section addresses only the engineering differences which become signifi-
+cant when we develop a very small spacecraft.
+
+As illustrated in Fig. 22-5, scaling up a simple cylindrical satellite by factor 5 in
+linear dimension increases its projected area by 25 and its volume by 125. If we
+assume that mass and power consumption are roughly proportional to the volume of
+electronics, this simple geometric scaling has implications for the systems designer.
+As satellite size decreases, its power requirement decreases faster than its projected
+area. So smaller satellites typically do not need deployable solar panels.
+
+Projected Projected
+| Area Ss Area = 25
+
+Total Total
+c=" =1 Area = 25
+1
+
+v0
+
+|= 3125
+
+Fig. 22-5. Effect of Scaling Up a Simple Cylindrical Satellite. D is the linear dimension, Mis
+the mass, and /is the moment of inertia.
+
+As we have mentioned, physically short thermal and load paths characteristic of
+smaller satellites usually allow less critical thermal and structural design. The small
+satellite of linear dimension 1 has to conduct 1 unit of heat flux over a maximum
+distance 0.5. The larger satellite must conduct 125 units of heat flux over a maximum
+distance of 2.5, requiring roughly 125 times more temperature difference between the
+satellite surface and interior. Presumably, thicker structural members in the larger
+satellite partly offset this difference, but satellite thermal considerations rarely affect
+structural design very much. Similarly, supporting the satellite from its edges (for
+example) results in much thicker structure relative to size for a large satellite than for
+a small one. This advantage to small size diminishes somewhat because wall thick-
+nesses in very small devices often depend on machining and handling limits. Thus, we
+cannot build the small satellite to theoretical structural limits, so it tends to be heavier
+and a better heat conductor than it would be if designed optimally for strength.
+
+The thermal and structural oversizing typical of small satellites tends to affect
+programs positively and negatively. Miniature technology devices tend to be built to
+exceed specifications, so they require very little analytical effort to ensure their struc-
+tural and thermal integrity compared with conventional technology devices. Also they
+rarely require special, costly thermal and structural materials and devices such as high
+strength alloys, composites, or heat pipes.
+
+On the other hand, miniature technology devices support the operational payload
+on orbit less efficiently because of design expediency and difficulty in manufacturing
+very thin, light, small structures. As Fig. 22-6 illustrates, OSCAR 13, a miniature tech-
+nology comsat, has much more of its mass devoted to support functions such as
+
+22.5 Economics of Low-Cost Space Systems 873
+
+structure, guidance, and propulsion than the geosynchronous comsat, Palapa B, which
+uses conventional technology. Only 21.5% of OSCAR 13’s weight carries payload
+electronics compared with 34.5% of Palapa B’s. We cannot precisely compare large
+and small satellites because their missions and operating conditions are so different.
+But Fig. 22-6 shows that the key to miniature systems is not a new technology or trick
+which allows its practitioners a special advantage over conventional systems. It is a
+systems discipline which allows its engineers to meet a user requirement cheaply and
+quickly despite its inherent disabilities.
+
+21.5%
+41%
+
+OSCAR 13, at 85 kg
+dry mass, is 16% as
+large as Palapa B
+
+(530 kg dry). =| Payload
+
+18.9% EB trac
+OSCAR's relatively Structure
+simple, +1° spin ra /
+stabilized G&C Propulsion
+system is none- (L] Power
+theless almost twice Guidance
+as large, relative to (Cd Thermai
+overail mass, as
+Palapa B's full three
+axis system. 35.8%
+
+34.5%
+f: 5.3%
+26% J Palapa B W/O Propellant
+
+Fig. 22-6. Comparison of Satellite Mass Efficiency. Comparison of OSCAR 13 with Palapa B
+illustrates the difficulty in scaling spacecraft G&C systems for small satellites.
+
+22.5 Economics of Low-Cost Space Systems
+
+To survive as an industry, low-cost space systems must be more cost effective than
+space- and ground-based alternatives. To confirm savings, we must verify that we can
+complete and fly hardware successfully at low cost. The value to the user must be at
+least as large in proportion to cost (including accounting for risk) as competing alter-
+natives, such as conventional technology.
+
+Experience in some of the more recent smal] satellites illustrates the range of costs
+which can be expected in a smal] satellite program. Table 22-3 lists approximate pro-
+gram costs for-some small satellites (in 1990 dollars).
+
+874 Design of Low-Cost Spacecraft 22.5
+
+TABLE 22-3. Cost Experience for Selected Small Space Systems.
+
+Mass Approx.
+
+Satellite (kg) | Stabilization] Developer Cost Comments Year
+OSCAR 10 & | 100 |Spin AMSAT $250,000 | All volunteer 1981
+13 engineering staff
+CRO 70 |Aerodynamic | DoE/USAF $1M 1980
+
+[GLoMA 68 |None DARPA $1M_  |Cost includes ground | 1986
+station
+ALEXIS 45 |Spin DoE $3.5M_|Cost includes ground |1993
+station
+UoSat E (typ)| 61 |Gravity- U. of Surrey $1M_  |Commercial/University
+gradient Cooperative
+Microsat 8.5 |None AMSAT/Weber j $200,000 | Student and faculty
+support
+Indostar 600 /3 axis Orbital $150M |Preliminary Cost
+Estimate
+| SAMPEX 158 |Momentum |GSFC/NASA $35M_ |1st Small Explorer \1992
+Bias Small Explorer Mission
+Clementine 424 |3 Axis NRL/LLNL/ $70M_ |Lunar imager & first 1994
+BMDO/NASA detection of lunar ice
+ASTRID1&2| 27 /Spin SwedishSpace|] $1.4M* [Earth & Space Physics | 1995&
+Corp./SNSB 1998
+HETE 120 |3 Axis MIT/AeroAstro | $12M** |Gamma ray burst 1996
+detection. Launch
+vehicle failure.
+Awaiting reflight.
+
+JHU/APL $150M |Asteroid Rendezvous |1996
+
+NEAR 805 [3 Axis
+
+NASA
+SAPHIR-2 55 | Gravity- OHB System Communications: 1998
+gradient (Germany) messaging
+
+“Includes launch
+**Includes Science Instruments, BUS and Multiple Ground Stations
+
+We can easily survey small-satellite programs and demonstrate their low cost
+compared with conventional satellites. Understanding the basis for this cost difference
+is more complex. The cost pyramid in Fig. 22-7 is one way of explaining the dramatic
+difference between miniature and conventional costs for a small, astronomical satellite
+proposed as a university research program to NASA. The pyramid tracks cost growth
+in translating a hypothetical miniature satellite program to a conventional program
+with similar operational specifications. The pyramid topology is apt because each
+extra cost adds to the previous cost. Thus the cost growth is more geometric than arith-
+metic.
+
+Starting with an initial satellite cost of $2M, we would establish a dialogue with the
+scientific user group to try to reduce program cost while maintaining the scientific
+value of the mission. This vertically integrated process leads us to modify operations
+by relaxing the pointing accuracy, thus saving considerable money at the second stra-
+tum of the pyramid.
+
+22.5 Economics of Low-Cost Space Systems 875
+
+—<———————— Minimum Cost Program:
+
+Price: $2.0 M
+
+[FASS ~<+— Hii-Reliability Specification: $7.5 M
+Po is.cu] ~<— Full Traceability: $12.1 M
+
+~t— Formal Periodic Reviews: $14.5 M
+~q— Large Business Overhead:
+Conventional Program Price: $17.8 M
+
+Fig. 22-7. Conventional Satellites Impose Significant Costs over a Low-Cost, Small Satel-
+lite Program. In this example based on design studies of a small astronomical
+satellite, the development cost is $2M compared with ~$18M for a conventional
+satellite for the same mission. Additional costs for test, ground station, and on-orbit
+operations will further widen the cost gap between the two approaches.
+
+In this case, the user group had a fixed budget ceiling. Thus, as is often true in
+miniature satellites, the reliability trade off reduces to a choice between controlling
+cost (at increased risk) and cancelling the program. The choice to accept industrial-
+grade components saved ~$1.5M compared to space grade. Because small satellites
+have 10% to 1% as many parts as larger spacecraft, part failure is less significant to
+achieving mission reliability. Thus, small satellites routinely employ less expensive,
+more modern and more readily available commercial parts saving money via parts
+cost, shortened schedule and simplified design. In some cases, contractors cannot eas-
+ily purchase individual space-grade parts, so they must buy parts in lots and test them,
+or use a more poorly suited component. Both of these options—in-house qualification
+or redesign around poorly suited components—cost much more money.
+
+Component traceability strongly drives up costs, because it requires a program
+infrastructure, thus driving up direct and overhead costs. Direct costs increase partly
+because subcontractors must attend to traceability, thus increasing the cost of supplied
+components and assemblies. Traceability, like space-class specification, eliminates
+many potential components, because mass-produced devices not already made to
+space-class are not traceable. Industrial grade NiCd batteries are typical of this
+dilemma. Only MIL grade and above—ten times more expensive—are traceable.
+
+Extensive periodic program reviews are of questionable value at all project scales.
+But a small team working on a miniature satellite project can save a lot of money by
+substituting regular communications for formal reviews. Of course, we can keep the
+team size down if we can avoid those earlier requirements, such as higher pointing
+accuracy, S-class parts, and traceability. A program review for any sized program has
+direct and hidden costs such as travel, time spent in meetings, preparation time, and
+misdirection of the hardware team towards generating paper rather than making hard-
+ware. But the penalty is more significant for a small program. Budget is often severely
+constrained such that airline tickets and hotel costs are significant. But more impor-
+tantly, efficiency of small spacecraft development is in part rooted in the small size of
+the team. Additional burdens including numerous reviews and part tracking can
+inflate team size beyond that allowing very rapid, informal interactions or that
+encourage optimal resource allocations.
+
+876 Design of Low-Cost Spacecraft 22.5
+
+Although the exact numbers in the cost pyramid are all estimates derived from a
+study of system architecture, present experience with miniature and conventional pro-
+grams and contractors supports them. The interest in missions using miniature
+satellites directly relates to this cost difference.
+
+The above arguments notwithstanding, we still must show that particular missions
+can be performed more cost effectively with miniature technology than with conven-
+tional technology. Clearly, to achieve cost and schedule benefits, users of miniature
+technology must sacrifice some performance but also realize important gains in sched-
+ule. We cannot compare conventional and miniature products purely with numbers,
+because they differ qualitatively. But the following example illustrates how miniature
+technology can save money and increase reliability of an overall system.
+
+A 50-kg satellite can be launched piggyback for between $50,000 and $1M,
+depending on the launcher. The Pegasus launcher has enough payload to launch about
+10 satellites of 50 kg each for $1.5M each. When we have invested little in the launch,
+we can tolerate a less reliable satellite. A 90%-reliable satellite built for $1M plus a
+$1M launch investment (on-orbit cost of $2M) has an expected cost to 100% reliability
+of
+
+$2M + 0.90 = $2.22M
+
+That is, to get 9 satellites working on orbit, we will need to build and launch 10, so
+the effective cost per satellite increases incrementally. As mentioned earlier, engi-
+neering to increase reliability in a single satellite costs a lot of money. Numerous
+subsystem assemblies and more complex control systems drive up these costs. The
+most reliable components can cost many times more than their commercial counter-
+parts. A 28V stack of space-qualified NiCd batteries with 40 W-hr total charge costs
+about $40,000 and weighs 10 kg. The best commercial technology available from the
+same supplier costs $180 and weighs 4 kg. At $20,000/kg launch cost, the total savings
+is $159,820. Thus, the cost ratio between high and moderate reliability systems is 3:1.
+
+Of course, we should not use small satellites when we cannot reduce the payload’s
+size, mass, or support; the satellite will require a large fixed investment and a costly
+launch. For example, if the FireSat needs an imaging system with an optical objective
+of 1-m diameter, fitted to a steerable platform with arc-minute accuracy and stability,
+present technology would make the system’s mass well over a ton. Launch costs will
+be near $40M, and payload costs could be equally large. With $100M invested in the
+system, the value of increasing reliability from 90% to 95% is $5.9M. Thus, adding
+redundant systems to roughly double reliability can be quantitatively justified if they
+increase costs less than this amount. Miniature technology is not appropriate for such
+a large mission, regardless of reliability. For one thing, a group of people each charged
+with understanding most of the total system could not fabricate such a large system.
+The more bureaucratic approaches of conventional technology will work better in this
+case.
+
+We also cannot accurately measure the cost of failure simply by quoting orbit-
+system cost (satellite plus launch vehicle). Some payloads are worth more than their
+dollar price, the prime example being crewed vehicles. The value to society of preserv-
+ing life is very high, particularly in a public government activity during peace time.
+Also, even if we accurately measure the space component’s cost, we can still under-
+estimate the real cost of a failure. Many missions require coordination with other
+valuable assets. Deploying and reconfiguring of space and ground assets for a space
+test can require more financial commitment than the space vehicle itself. Lost oppor-
+
+22.5 Economics of Low-Cost Space Systems 877
+
+tunities are also quite costly. If a single, large surveillance satellite fails on orbit, we
+may not secure continuous observation, thus losing politically vital data that is more
+valuable than the on-orbit asset.
+
+Ultimately, we must associate a cost with on-orbit failure, assessing several levels
+of reliability in terms of program cost, complexity, and schedule. We can then decide
+whether to build to reliability requirements. In comparing a spectrum of candidates,
+we must remember that cost and reliability may not relate directly. A much smaller,
+simpler spacecraft, built by a very small group whose members are familiar with the
+whole system can be more reliable than a much more complex solution despite the
+latter’s more reliable parts and redundancies.
+
+Other non-economic factors also play a role in selecting conventional over minia-
+ture technology. Risks in program management often deter designers from applying
+miniature technology. The person who must deploy a one-of-a-kind space vehicle may
+know that the final price will be unimportant so long as the mission is a success. Or
+conversely, he or she understands that a failure, no matter how cheaply executed, is
+still a failure. Wise program managers use miniature satellite methods for small, rela-
+tively simple applications, not for highly complex missions relying upon large teams.
+Launch of many satellites also better follows probability distributions.
+
+We should not, however, overestimate the importance of single string design to the
+cost advantages of small satellites. In fact, many small satellites have incorporated
+highly redundant architectures. ALEXIS includes a highly redundant digital system, a
+power system which is quadruply redundant and 3 parallel payload systems. DSI’s
+MacSats were virtually fully redundant.
+
+Also important is the application of low-cost approaches to subsystems. The exam-
+ple mentioned above of substituting commercial NiCd batteries for space-qualified
+ones can save up to $1M in the cost of a 200-kg small satellite. ALEXIS carries two
+custom Sun sensors built by AeroAstro, each for about 10% of the cost of existing
+space qualified units. Because they use less power, and are smaller and lighter than
+Sun sensors designed for larger satellites with more demanding performance and qual-
+ity specifications, their cost savings ripple through the entire spacecraft bus design.
+The net savings in using simpler Sun sensors is estimated in the case of ALEXIS to
+have been several hundred thousand dollars.
+
+Because the torques required to stabilize a small satellite are small, use of costly
+iron core torque coils is often not necessary. Instead, much simpler and lower cost air
+core coils can be used. Typically this can result in $50,000 in savings for a small
+satellite. When the design is correctly accomplished, a small satellite is not structure-
+limited. In fact, Martin Sweeting of Surrey Satellites has said that the difference
+between large and small satellites is whether a distinct structure is required. This is
+because small satellite characteristic lengths are short, and structure is usually over-
+built due to manufacturing constraints (metal needs to be thick enough to support
+fasteners and thereby becomes thicker than necessary for purely structural consider-
+ations) or because the mass savings of a weight reduction program aren’t significant.
+In any case, there is a savings both in that higher cost materials, including composites,
+are generally not used, and little structural analysis is required.
+
+Very significant cost savings are realized by specification of commercial, instead
+of military or space, grade components. Savings result from several benefits. Of course
+Mil-B and S-class parts are quite costly—sometimes 10 to 100 times more than the
+equivalent commercial part lacking the qualification inspections and paperwork. They
+are rarely available in small numbers, since they are built and tested in separate
+
+878 Design of Low-Cost Spacecraft 22.5
+
+production runs. One integrated circuit, available for $50 commercially, may cost
+$500 in S-class, but may only be available in lots of 20—increasing the purchase cost
+to $10,000. Perhaps more importantly, the most modern technologies are seldom
+available in higher grade components, forcing a compromise to inelegant design solu-
+tions. The HETE spacecraft, built to commercial specifications, takes advantage of
+several modern, radiation-hard, semi-custom, integrated circuit components which
+eliminate hundreds of S-class integrated circuits from the parts count. Besides reduc-
+ing parts costs by tens of thousands of dollars, the modern technology reduces the
+number of circuit boards, greatly reduces design, development and test labor, and
+requires much less power. The savings in spacecraft resources of power, space and
+mass, combined with the parts and labor cost savings, make the implementation of this
+commercial technology worth hundreds of thousands of dollars in savings to the $4M
+spacecraft budget.
+
+Some components cannot be significantly altered for use on small satellites, com-
+pared with conventional designs. As an example, spacecraft photovoltaics (solar
+panels) have no market except spacecraft. In these cases, we try to work with tradition-
+al vendors to find ways to decrease costs. Paralleling the spacecraft design approach,
+these may include using flight spares developed for other programs, reducing non-
+hardware deliverables (meetings and paper) and interactive design to produce a design
+specification which is intrinsically inexpensive to build and test. Israeli Aircraft Indus-
+tries’ MLM division has succeeded in producing spacecraft photovoltaics at less than
+half the cost per installed watt of conventional spacecraft photovoltaic systems, with-
+out any decrease in product quality or performance through application of these steps.
+
+Formal engineering guidelines institutionalize conventional satellite technology.
+The manager of a hardware development program that fails will not have to account
+for the failure if he or she documents the program thoroughly and builds the system to
+military specifications and Department of Defense guidelines. But program managers
+using miniature technology employ untried components when it is cost-effective and
+they perceive little risk. Yet, if their programs fail, they are accountable.
+
+Thus far we have concentrated on two important motivators for application of small
+satellites—cost and unique capabilities. But small satellites, owing to their simpler
+architecture, the smaller team required for their development, and the smaller amounts
+of money required, can be built on very rapid schedules. AMSAT, motivated by the
+availability of a near-term launch slot, produced and flew a small satellite in 9 months.
+With typical development time as short as 18 months, the spacecraft development
+schedule is usually dominated more by the bureaucratic delays in getting a program
+started, than by the time to engineer, build, test, modify, retest and deploy a small
+satellite.
+
+Figure 22-8 shows that besides the quantitative shortening of the development
+schedule, small satellite development is a highly interactive process. Activity begins
+when a particular mission is identified—in the case of Firesat this could be the mission
+to detect forest fires. In discussions between the user community and the development
+group in the ensuing 30 days, several very low resolution sketches of possible satellite
+configurations can be developed, each tailored to different launch vehicles, different
+size, mass, cost constraints, and different performance levels. This helps users to
+understand the impact of their budget on the ultimate capabilities they can achieve. If
+there is no way to get something of value for the user within the user budget, the pro-
+gram needs to be reconsidered and certainly there shouldn’t be additional resource
+expended on detailed design until at least a tangency between the cost and utility
+curves is achieved.
+
+22.5 Economics of Low-Cost Space Systems 879
+
+Survey architectural options (budget, launch vehicle and spacecraft)
+
+&
+
+@
+
+3
+
+5
+
+fo)
+
+2
+
+c a
+
+< i=
+
+& g
+
+2 @
+
+ie) a
+
+< Fy f=
+
+. 5 a £
+
+G 2 5 2
+
+2 Ss o
+
+Q i] no a ~
+
+: 5 § E g A
+
+s, g & ss 2g 3
+
+7 ao] 2 2 o
+
+ao 2 2 ¢
+3 Fs 2 a g a = o £ c £
+= @ z 2 8 .3) i= c oO [3] [3]
+P=} i] i= is} o
+
+s S aD Ee 2 S < a
+Cc s o c a 3 o 3 s ge 5 ~
+8g c r Ss o § fe Se
+3 > 3 — 5 & 2 2 > 6 8
+< a § o 2F § 8 5 © € y =
+Ss g & 5 € g@ §& 0 = 5 2 ~~
+q a « & a é 28 @ gs
+2 2e £ 2 2 2 ££ <«© S$ @
+E a = @ ¢ g@ 28 x} @ @ —€ §&
+iG as a a a o a E
+g —E @ E @® E£ € E e s &
+£ S S$ @© ¢ 8 S S 3 Ww
+a 6 8 6 &@ 6 OG s) o dG FF +
+
+Oo
+wo
+oa
+o
+
+12 15 18 a1 24
+
+Time (months)
+Fig. 22-8. Small Satellite Development Program Timeline.
+
+With a rough-order-of-magnitude budget in mind, planners can create a strategy of
+spacecraft size, launch vehicle and capability range. This loose set of guidelines then
+forms the basis for a conceptual-level, engineering trade study. This activity is gener-
+ally carried out over a month or so with a team of 1, or at maximum 2, systems
+engineers with help from various subsystems specialists on an as-needed basis. The
+systems engineer should communicate frequently, no less often than weekly, with the
+user organization representative to review progress—particularly to discuss ways in
+which relaxations of requirements can reduce cost and to explore newly uncovered
+opportunities to provide additional capability without seriously impacting system
+complexity.
+
+Only after the systems engineer and the user representative have explored this
+envelope of architectural options and the capabilities envelopes, do we draft a final
+requirements document drafted. This is important. We do not achieve the lowest pos-
+sible satellite size and mission cost by a priori assignment of requirements to the
+satellite design. Just one especially difficult requirement, possibly not vital to the over-
+all mission, can result in a costly and unwieldy design. Requirements and capabilities
+should be freely traded to reach a more global optimization of cost and complexity
+minimization coupled with achieving the best systems performance.
+
+Equipped with an interactively defined set of specifications and detailed sketches
+of the spacecraft layout, along with weight and power budget estimates, the pre-
+liminary design process gets underway. Even at this very early stage, there will be
+components which everyone knows will be needed. These might include an oversup-
+ply of NiCd batteries for later selection or the photovoltaic cells necessary to build up
+solar panels. Also, bids can be solicited for guidance sensors and actuators based on
+estimated requirements. Also put on order any parts needed for building test fixtures
+
+880 Design of Low-Cost Spacecraft 22.5
+
+or circuits. Even in a small, inexpensive satellite program, the value of beginning the
+hardware flow is high and the cost of parts ordered which end up unused is
+small—usually it is nearly zero. By ordering that which can be ordered as soon as it is
+identified, we spread the parts procurement process more evenly over the program
+lifetime. If certain components are unavailable or won’t work in the proposed appli-
+cation, it’s important to discover the problem as soon in the design and development
+process as possible.
+
+We allocate the entire preliminary and detailed design process about 7 months.
+Fabrication formally begins, though by the Critical Design Review there should be a
+lot of working hardware already in house. This will give substance to the CDR and
+also allows the remaining fabrication of subsystems to be completed in an additional
+4 months.
+
+Six full months are allocated for integration and test. To have confidence in a
+system built with commercial components and possibly lacking full redundancy, test
+is extremely important and there is no substitute for uninterrupted time using the hard-
+ware in various modes—thermal vacuum, as well as desktop routine operation.
+
+Launch readiness is the last opportunity to resolve issues which have come up in
+the development process. There will always be things which the team wishes would
+have happened or not happened. The flight readiness review team must be made aware
+of these concerns and must be ready to delay the launch if it determines some deficien-
+cies are not acceptable. Ideally the launch will take place immediately after the review
+to minimize the temptation to “improve” the spacecraft.
+
+A note on program delays may help. Interruptions in any program are always much
+more destructive of cost and schedule than managers appreciate. In a small program
+even more than a large one, the documentation is at a minimum and the focus of the
+small team creates efficiency. To withstand frequent delays and the start-stop-restart
+mode of many government-funded programs, a bureaucratic system is needed to doc-
+ument work and communicate progress as new individuals are assigned to roles. This
+will ultimately result in the small program taking on some characteristics of conven-
+tional, large programs with associated lengthening of the schedule, cost growth and
+increased difficulty in meeting requirements, particularly staying within the launch
+vehicle constraints.
+
+In summary, how do we know when to procure a miniature technology system? The
+following questions will guide our decision:
+
+1. Will miniature satellite technology enable flying a mission which will other-
+wise be shelved?
+
+2. Can some give and take be allowed between requirements and capabilities?
+3. Is reliability achieved through simplicity?
+4. Can the flight hardware fly on a space-available basis?
+
+a: Is the flight hardware buildable at < 400 kg?
+
+b: Is there no special window required for orbit insertion?
+
+5. Can the program management organization deviate from Mil-Specs and other
+norms of conventional satellite development?
+
+6. Can hardware and software be built by < 20 people?
+
+7. Is there a significant benefit in a rapid schedule?
+
+22.6 Annotated Bibliography on Low-Cost Space Systems 881
+
+8. Are many small systems preferred over a few large ones?
+9. Do you want the user group to operate the ground facility?
+
+10. Is the mission lifetime goal less than 5 years?
+
+We mentioned earlier that ground operations can significantly affect overall
+program cost. Often, the satellite’s orbital lifetime is longer than its development
+period, and staffing of a major ground station can be larger than that of a development
+program for a miniature spacecraft. Miniature technology reduces ground-station costs
+through its systems architecture and the ground station’s design.
+
+A low-cost satellite program cannot afford the luxury of ground stations staffed by
+a separate operations group. Also, we may not be able to operate costly remote ground
+stations. Thus, we need to build large spacecraft memories to buffer satellite data, so
+the satellite can store data over long periods (typically 12 to 18 hours) until it passes
+over a single ground station at the user’s location. We also need to compress data on
+the satellite, because ground stations with limited antennas and RF links may not sup-
+port high data rates.
+
+We cannot simply design the satellite to rely upon highly expert ground controllers.
+The user organization typically does not know the special techniques of managing a
+spacecraft. Thus, we need to use a single small computer to control the ground station,
+so the user interface is a single machine. The ground station software should be simple
+and well structured, containing on-line and written support. Where possible, we should
+graphically represent the system status and the satellite orbit.
+
+Whenever possible, the ground station should channel the user’s activity toward the
+right solutions. Further, the ground station should be able to screen operator com-
+mands and activities that may adversely affect the satellite operations. When deciding
+how much effort to expend on the ground station, we must trade the real costs of the
+user group learning, input errors, and more people to manage the satellite against the
+cost of creating more capable software for the ground station.
+
+Autonomy is another important factor in the cost of ground operations. Satellites in
+LEO pass the ground station a few times per day, every day of the year. While novel
+in the first few days and weeks, years of tending the satellite at roughly 6-hour inter-
+vals can be a tremendous drain on the user organization. The ground station should at
+least be able to buffer activities for a series of satellite passes. Thus, we should consid-
+er features allowing longer autonomous periods in the system design. An alternative
+to extended autonomy is remote operation. A dial-in system permitting limited control
+of the ground station from a remote terminal can be valuable. Security is an issue in a
+remote architecture, but we can devise various password and call-back schemes to
+protect the system.
+
+22.6 Annotated Bibliography on Low-Cost Space Systems
+
+The Logic of Microspace, by R. Fleeter, combines an overview of the technologies
+underlying small, low-cost spacecraft with the management and philosophy behind
+their development. It also provides a discussion of potential applications of small,
+low-cost space systems. Published by Kluwer Academic Publishers, Dordrecht,
+The Netherlands and Microcosm Press, Torrance, California.
+
+882 Design of Low-Cost Spacecraft 22.6
+
+AMSAT, the radio amateur satellite organization, publishes The Amsat Journal quar-
+terly and the AMSAT-NA Technical Journal approximately once per year. These
+publications report program status and technical developments from AMSAT vol-
+unteers in North America. Write to: AMSAT-NA, P.O. Box 27, Washington, DC
+20044.
+
+The only textbook on small satellites, The Radios Amateur’s Satellite Handbook, by
+M. Davidoff, is published by the American Radio Relay League (1998). Emphasiz-
+ing amateur radio satellites, the book provides a useful foundation in the technical
+basis of small spacecraft. ARRL, 225 Main Street, Newington, CT 06111.
+
+Also in the amateur satellite area, OST, the ARRL’s monthly, occasionally highlights
+particular small-satellite technologies for amateur radio. Examples are June, 1988
+(Vol. LXXII, No. 6); “Introducing Phase 3C: A New, More Versatile OSCAR” by
+Vern Riportella. Also see May, 1989 (Vol. LXXIII, No. 5) and June, 1989
+(Vol LXXIIL, No. 6); “Microsat: The Next Generation of OSCAR Satellites” parts
+1 and 2.
+
+A special supplement to Vol. 57, No. 5 of The Journal of the Institution of Electronic
+and Radio Engineers was devoted to University of Surrey’s UoSat-2. It is a series
+of papers on the satellite’s design which provide an excellent view into the engi-
+neering of a successful MST device. Write to IERE, Savoy Hill House, Savoy Hill,
+London, WC2R OJD.
+
+Proceedings of the Annual AIAA/USU Conference on Small Satellites contains almost
+all papers presented at the annual USU meeting. It is available from: Center for
+Space Engineering, Utah State University, UMC 4140, Logan, Utah 84322.
+
+TRW Space Log is a comprehensive compilation of satellites launched to date. Write
+to: Editor, Space Log, Public Relations Department, TRW Defense and Space Sys-
+tems Group, One Space Park, Redondo Beach, CA 90278.
+
+Satellites of the World (Koredewa kara Sekai no Eisei) (in Japanese) by S. Shimoseko
+and T. lida contains an excellent survey of both existing small satellite programs
+and several detailed concept studies. Available from the publisher, Nihon ITU
+Association, Nihon Kemigaru Building, 7th Floor, Nishi Shinbashi, 3 Chome,
+15-12, Minato-Ku, Tokyo, 105, Japan. Phone (03) 3435-1931, FAX (03)
+3435-1935.
+
+The SPIE now includes, as part of its annual program on Planetary Exploration, a
+series of sessions on Small-Satellite Technology and Applications. Proceedings of
+the 1991 meeting, edited by B. Horais, include papers on remote sensing and sup-
+porting technologies. Volume 1495 available from SPIE, P.O. Box 10, Bellingham,
+Washington 98227-0010. Phone (206) 676-3290, FAX (206) 647-1445.
+
+Space Almanac contains historical data on small satellites mixed with other general
+space system information: Arcsoft Publishers, P.O. Box 132, Woodsboro, MD
+21798.
+
+The best sources of information on small satellite launch vehicles are the manufactur-
+ers themselves. These include Orbital Sciences (Pegasus), Lockheed-Martin
+(Athena), NASA GSFC (Hitchhiker onboard Shuttle) and Arianespace (ASAP
+Secondary Payload Accommodation).

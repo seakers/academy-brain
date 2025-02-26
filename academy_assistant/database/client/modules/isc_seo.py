@@ -1,7 +1,9 @@
 from academy_assistant.database.client.modules.AbstractBuilder import AbstractBuilder
 slide_text = ['']
 import os
-slide_text_dir = os.path.join('/home/ec2-user/academy-brain/academy_assistant/database/client/modules/slide_text', 'seo')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+slide_text_dir = os.path.join(base_dir, 'slide_text', 'seo')
+# slide_text_dir = os.path.join('/Users/mahima/Documents/daphne-academy/academy-brain/academy_assistant/database/client/modules/slide_text', 'seo')
 
 # Iterate over all txt files in slide_text_dir
 for file in os.listdir(slide_text_dir):

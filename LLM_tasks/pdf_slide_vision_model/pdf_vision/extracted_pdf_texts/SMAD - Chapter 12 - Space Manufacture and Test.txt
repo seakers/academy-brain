@@ -1,0 +1,774 @@
+
+Chapter 12
+
+Spacecraft Manufacture and Test
+Emery I. Reeves, United States Air Force Academy
+
+12.1 Engineering Data
+
+12.2 Manufacture of High-Reliability Hardware
+12.3 Inspection and Quality Assurance
+
+12.4 The Qualification Program
+
+12.5 Spacecraft Qualification Test Flow
+
+12.6 Launch Site Operations
+
+This chapter presents an overview of the spacecraft manufacturing, assembly, and
+test process and the underlying test theory. A system designer must understand this
+process because hardware manufacture and test heavily influence the program’s cost
+and schedule. In addition, testing technology and special facility requirements may
+affect program feasibility. This chapter is oriented principally toward the construction
+of a single satellite or the first satellite of a production run. See Sec. 19.1 for a dis-
+cussion of the “production line” approach applicable to building satellites in large
+numbers such as those which are a part of a large constellation.
+
+Table 12-1 lists the names we use in this chapter to describe the parts of a space-
+craft. For example, piece parts are individual parts, including transistors, integrated
+circuits, or mechanical parts such as housings, panels, bearings, and gears. A com-
+ponent is a complete unit or black box such as a transmitter, receiver, computer, or
+electromechanical actuator. Sometimes a functional group of parts, or assembly, is
+manufactured or tested together. An assembly as used here may be part of a component
+or may be integrated directly into the spacecraft. Subsystems consist of groups of
+components. They may be assembled and tested as subsystems or integrated into the
+spacecraft as components.
+
+TABLE 12-1. Hardware Nomenclature. Spacecraft are built up from subsystems, which are
+composed of components.
+
+Piece Part Individual part such as resistor, integrated circuit, bearing, circuit board, or
+housing
+
+Component Complete functional unit such as a control electronics assembly, an antenna,
+a battery, or a power control unit
+
+Assembly Functional group of parts such as a hinge assembly, an antenna feed, or
+a deployment boom
+
+Subsystem All of the components and assemblies that comprise a spacecraft subsystem
+Spacecraft Complete vehicle
+
+519
+
+520 Spacecraft Manufacture and Test
+
+Methods for the manufacture and test of spacecraft and spacecraft components
+derive from the aircraft and electronics industries. But spacecraft hardware is less
+plentiful and less accessible for maintenance. In spacecraft production, a run of 10 is
+high volume and spacecraft recalls are extremely rare. Furthermore, environmental
+forces severely stress the hardware during launch.
+
+The theory of type test (see Table 12-2) is a basic principle affecting the manu-
+facture and test of spacecraft hardware. Type test theory depends on preparing and
+controlling complete and exact engineering data (drawings, specifications, and proce-
+dures). If the engineering data controls the hardware construction completely, all items
+built to the same data are equivalent and the results of any single-item test are valid for
+all like items. In particular, if a representative article (type test article) passes a
+sequence of qualification tests, all other articles built to the same engineering data
+should also pass. In other words, the design is qualified. We simply have to make sure
+articles are identical by controlling the engineering data and manufacturing processes.
+Less severe acceptance tests then certify proper workmanship.
+
+TABLE 12-2. Theory of Type Testing. The type test theory is the basis for qualification testing.
+
+Engineering data is complete and exact.
+Engineering data completely controls manufacture.
+All items manufactured to the same engineering data are identical.
+
+Therefore Results of qualification test for one article are valid for all articles.
+
+Table 12-3 lists the steps in manufacturing, integrating, and testing a spacecraft. As
+system designers, we must determine how long each step will take and identify any
+test or facility requirement that is risky or peculiar to the program. Above all, we
+should schedule qualification tests to qualify the spacecraft completely before launch.
+The following sections address these steps and describe important aspects of system
+design.
+
+TABLE 12-3. Steps in Manufacturing, Integrating, and Testing.
+
+[sep | Beseipton [Comments
+
+Prepare Complete drawings and all | Engineering data will consist of several hundred
+Engineering supporting information drawings for each component, specifications for
+Data such as material and part | each piece-part type and process, assembly
+
+specifications and drawings, and test equipment data
+processing methods
+
+Stages:
+1. Manufacture planning
+
+2. Parts procurement and
+test
+
+3. Component assembly
+4, Component acceptance
+test
+
+Qualify Functional test and
+Component environmental exposure
+
+Typical timing:
+1. In parallel with engineering-data preparation
+
+2. Mechanical parts and materials 1~6 mos
+Electronic parts 3-18 mos
+
+3. 1-3 mos
+
+4. 1-3 mos; acceptance test includes functional
+test and environmental exposure
+
+Manufacture
+Component
+
+Takes 1~6 mos, depending on complexity and
+fragility of component, severity of environment,
+and number of failures
+
+Takes 6-18 mos
+
+Integrate
+and Test
+Spacecraft
+
+Mechanical assembly,
+functional test, and
+environmental exposure
+
+12.1 Engineering Data 521
+
+12.1 Engineering Data
+
+Engineering data (see Table 12-4) is drawings, specifications, and procedures.
+Standard formats and contents for military contracts are in MIL-STD 100 (drawings)*
+and MIL-STD 490 (specifications). Most aerospace companies use similar standards.
+Various documents combine to control the hardware manufacture. Each piece part,
+assembly, or component is described by its own individual drawing, and drawing call
+outs describe materials and processes. Drawing numbers identify parts. In the same
+way, drawings control assembly of parts into higher-level assemblies and identify
+integration hardware. Drawings also control interfaces, size, shape, and mounting
+provisions.
+
+TABLE 12-4. Defining and Controlling Engineering Data.
+
+Engineering Data Drawings, specifications, and procedures
+Role of Engineering Produce engineering data
+
+Role of Manufacturing Build hardware to meet engineering data
+
+Role of Quality Control Ensure that the hardware is built and tested to meet
+engineering data
+
+Configuration Management Systems and procedures that identify, account for, and
+control engineering data
+
+Configuration management is the process of controlling engineering data. It
+includes identifying the engineering data required for manufacture (configuration
+identification), controlling changes, maintaining the engineering database (configura-
+tion control), reviewing and auditing the engineering data (configuration audit), and
+verifying that the hardware is built as designed (configuration verification). Changes
+to the engineering data (engineering change orders and procedure change orders) are
+also tracked. For military contracts, MIL-STD 483, MIL-STD 1521, and DOD-STD
+480 itemize configuration-management requirements. Most aerospace contractors
+have systems that conform to these standards.
+
+12.2 Manufacture of High-Reliability Hardware
+
+The first step in manufacturing spacecraft hardware is to translate the engineering
+data into manufacturing plans, flows, instructions, manufacturing aids, and tooling.
+This occurs as the design matures and manufacturing personnel may influence the
+design for ease of manufacture. Engineering data is formally released at a Critical
+Design Review. Typically, we review manufacturing plans at this time or in a
+Manufacturing Readiness Review shortly afterward.
+
+The manufacturing planning starts with subassemblies by generating parts kits,
+preparing detailed procedures for assembly, and identifying inspection and test
+requirements. We must also identify special facilities (such as clean rooms); manufac-
+turing methods, precautions, and controls; and training and certification levels of
+personnel. Based on these plans, we then call out the manufacturing steps in detailed
+procedures. A copy of the procedures travels with the hardware and is checked off as
+
+* Military specifications and standards are no longer being maintained and are due to be super-
+seded by industry standards which are not yet in place.
+
+522 Spacecraft Manufacture and Test 12.2
+
+the steps are completed. This paper becomes part of the permanent record of the
+assembly. Inspection and test results are also part of the record, and some installations
+include photographs of each assembly.
+
+Manufacturers buy most raw materials from certified vendors, who certify the
+material quality. They buy electronic piece parts to meet individual specifications
+which call out performance and quality requirements. Under current practices, high-
+reliability electronic parts are constructed for a particular program. Such procurement
+takes a long time, and most parts undergo extensive testing before combining into
+components. Flight hardware usually requires the highest level of reliability, which in
+the past has been called S-level. Lower reliability parts may work for prototype and
+qualification units not intended for flight. In addition to vendor lead times, each part
+order must be bid and negotiated, which adds weeks to the procurement time. The cur-
+rent practice is to have the part supplier test each part for performance (group A tests)
+and a sample from each lot to extremes (group B and C tests). The manufacturer burns
+the parts in while monitoring their performance and does a destructive physical anal-
+ysis (DPA test) on a sample.
+
+The industry is currently undergoing a major revision in the way that parts are spec-
+ified and procured. In the Department of Defense this is called “Acquisition Reform”
+and is characterized by elimination of government specifications and standards for
+parts and processes. Industry is expected to replace these specifications and standards
+with their own controls or use Professional Society Standards. A consistent set of such
+standards is not yet in place although efforts are under way to produce them (see for
+instance AIAA Recommended Practice for Parts Management AIAA R-100-1996).
+Extensive parts information is also available on the Internet at Air Force and NASA
+sites.
+
+To contend with the lead times for parts and materials, manufacturers must order
+them before they see component engineering data. Thus, we establish a Project
+Approved Parts List (PAPL) and Project Approved Materials List (PAML) early in
+the program. Because designers must use the preferred part or identify and justify
+new parts, these approved lists reduce the number of part types and allow early
+procurement.
+
+Manufacturing facilities cover mechanical manufacturing, electronic manufactur-
+ing, spacecraft assembly and test, and special functions. Mechanical manufacturing
+includes standard machine shops, plus locations for mechanical assembly, plating and
+chemical treatment, composite manufacture, adhesive bonding, and elevated temper-
+ature treatment. Although most aerospace facilities are quite clean, mechanical
+manufacturing does not normally need controlled cleanliness. But electromechanical
+and optical manufacturing, as well as the tailoring of thermal blankets, do need
+controlled clean rooms—normally separate from conventional mechanical manufac-
+turing. Table 12-5 shows cleanliness requirements for various operations.
+
+Electronic manufacturing facilities include areas for building printed circuits and
+clean rooms for building and testing electronic assemblies. Test facilities may include
+anechoic chambers and screen rooms containing various types of general-purpose test
+equipment as well as special purpose testers for circuit boards and components.
+Component tests may also require environmental test facilities.
+
+Spacecraft assembly and test operations are normally conducted in controlled-
+cleanliness facilities, which are often high-bay hangars. Spacecraft functional tests are
+conducted with special purpose test sets. Spacecraft environmental testing requires
+large vibration and thermal-vacuum equipment. ©
+
+12.3 Inspection and Quality Assurance 523
+
+TABLE 12-5. Facility Cleanliness Requirements (FED STD 209). Class 10,000 means less
+than 10,000 particles per cubic foot.
+
+Mechanical Manufacturing Not controlled
+Electronic Assembly Class 10,000
+Electromechanical Assembly Class 100
+Inertial Instruments Class 100
+
+Optical Assembly Class 100
+
+Spacecraft Assembly and Test Class 100,000
+
+Many times a spacecraft will need a special facility to protect sensitive equipment
+or prevent outside interference. Because optical equipment is especially sensitive to
+contamination, it must be ultra-clean. Payload instruments that require cryogenic
+temperatures, absence of magnetic fields, or RF isolation call for special facilities
+which may increase program cost and schedule.
+
+12.3 Inspection and Quality Assurance
+
+Quality assurance verifies that the manufacture and testing of the spacecraft and its
+components conform to engineering data. MIL Q 9858A describes quality assurance
+for military programs. Table 12-6 lists its elements: quality program management,
+facilities and standards, control of purchases, and manufacturing control.
+
+A key element in the quality program is establishing points in the production flow
+where we can make sure the hardware construction complies with its engineering data
+before the next step keeps us from inspecting it. In some cases, controlling the process
+on the production line will ensure the hardware quality. Process inspection and control
+thus substitutes for direct test.
+
+We must also verify that vendors supplying spacecraft hardware have satisfactory
+quality assurance programs by certifying their programs and periodically auditing
+their performance.
+
+Test surveillance involves certifying test equipment and procedures, witnessing
+tests, approving test records, and reviewing results. Test equipment normally con-
+forms to a reduced set of controlled engineering data such as mechanical assembly
+drawings, parts lists, wire lists, panel photographs, and calibration test procedures.
+Test surveillance personnel certify the construction and calibration of the test set. They
+approve hardware tests, and they prepare and control the test data package. They also
+formally review test results before the next operation proceeds. Generally, the test
+conductor chairs the test review board, but test surveillance provides the records and
+documents the results for the archives.
+
+Quality assurance must maintain data records for formal tests and failures. Often
+quality-assurance people keep all failed parts and record failure and anomaly results,
+so they can identify repetitive failures and correct the design weaknesses. Although
+formal procedures govern tests, troubleshooting may deviate from them. For such
+operations, quality assurance approves and maintains records of the exact steps
+involved.
+
+524 Spacecraft Manufacture and Test 12.4
+
+TABLE 12-6. Elements of Quality Assurance (MIL Q 9858A).
+
+¢ Management
+— Organization
+~ Initia! quality planning
+— Skill requirements, training, personnel certification, records
+~ Work instructions
+Manufacturing inspection and test program
+Workmanship
+Visual aids
+— Records
+~ Corrective action
+— Costs
+¢ Facilities and Standards
+- Drawings, documentation, and changes
+~ Measuring and test equipment
+— Production tooling and inspection media
+~ Inspection equipment
+— Special metrology
+* Control of Purchases
+* Manufacturing Control
+- Materials and material control
+— Production processing and fabrication
+~— Completed item inspection and test
+~— Handling storage and delivery
+— Nonconforming material
+
+— Inspection status
+
+12.4 The Qualification Program
+
+Qualification tests of all flight-type hardware and software show that a spacecraft
+design is suitable. These tests certify that the hardware and software work properly and
+that the hardware can survive and operate in the prescribed environment. The qualifi-
+cation program must test each component and the complete spacecraft. It may also
+include functional or environmental testing of selected assemblies or subsystems.
+Table 12-7 lists ways to qualify a spacecraft design.
+
+We qualification test a component by checking how it performs (functional test)
+and testing its ability to survive the anticipated environment. Each component is
+powered and exercised by its own special-purpose test set during test. Component
+environmental tests include vibration, shock and thermal vacuum. If the component
+must survive nuclear weapons effects, it may also undergo a flash X-ray test, which
+simulates the prompt radiation dose. Sometimes, it may need a test of electromagnetic
+compatibility (EMC). Figure 12-1 shows a typical qualification sequence.
+
+12.4 The Qualification Program 525
+
+TABLE 12-7. Qualification Methods.
+
+Characteristics
+
+Dedicated A separate set of qualification components is constructed and tested at
+
+Qualification qualification levels. This set of components or a second set of
+
+Hardware qualification components is assembled into the qualification spacecraft
+and tested as a spacecraft at qualification levels.
+
+Qualify the First Set | The first set of flight components is tested at qualification levels, then
+of Flight Hardware assembled into a spacecraft which is tested at qualification levels. This
+spacecraft is then launched. This is the proto-flight concept.
+
+Qualify by Similarity | Demonstrate that the component and the environment are identical to
+previously qualified hardware.
+Functional
+Test
+
+Functional
+Test
+
+Functional
+Test
+
+Thermal Vacuum Flash X-ray*
+Functional Test Functional Test
+During Exposure During Exposure
+
+*May not be required
+
+Fig. 12-1. Flow of Qualification Testing for Components. A component is qualified by a
+series of functional tests and exposure to environmental conditions.
+
+A component must withstand vibration caused when launch vehicle acoustics and
+engine rumble couple to it through its structural mount. Vibration is a random-signal
+spectrum of frequencies from 20 Hz to 2,000 Hz. Chapter 18 gives vibration data for
+current launch vehicles. Figure 12-2 shows the vibration level for the Atlas-Centaur,
+as well as acceptance and qualification spectra [General Dynamics Space Systems
+Division, 1988]. The acceptance spectrum envelops the expected environment and is
+higher than the conducted level specified by the launch-vehicle contractor to account
+for structural resonances and acoustic input. The qualification spectrum is uniformly
+6 dB higher than the acceptance spectrum. To vibrate a component, an electromechan-
+ical shaker drives its base at a specified level of acceleration.
+
+Components experience shocks from explosive release devices such as aero-
+dynamic fairing separation or spacecraft separation bolts. The shock pulse is a
+complex wave which induces mechanical response over a wide band of frequencies.
+The pulse is specified by the peak acceleration response it excites in a mechanical sys-
+tem with 5% damping—as a function of the mechanical system’s resonant frequency.
+Chapter 18 shows shock-response spectra for various launch phenomena. Figure 12-3
+shows the response spectra for acceptance and qualification of an Atlas-Centaur
+device. We can use an electromechanical shaker to produce a shock pulse for compo-
+nent testing, or we can mount the component on a test structure and hit the structure
+with a calibrated hammer blow.
+
+526 Spacecraft Manufacture and Test 12.4
+
+Component Qualification | Ye
+
+20.74 g rms Overall
+
+z nent Acceptance -\——
+
+on
+
+2
+
+2
+
+a
+
+5 0.01
+
+a
+
+he
+
+o i a
+B __. Booster Interface
+
+a 2.7 g rms Overall -
+0.001 = —
+0.0001
+
+Frequency (Hz)
+
+Fig. 12-2. Vibration Levels for Components on the Atlas-Centaur.Component qualification
+vibration levels are specified by a power density spectrum which is higher than the
+expected spectrum.
+
+10,000
+
+Lo i
+
+Peak Density (g2/Hz)
+
+100
+
+10
+
+Frequency (Hz)
+
+Fig. 12-3. Shock Levels for an Atlas-Centaur Device. Qualification levels are designed to be
+greater than the expected design levels.
+
+Component temperature requirements derive from the spacecraft’s thermal design.
+To test a component under thermal vacuum, we mount it to a temperature-controlled
+base plate inside a vacuum chamber. The vacuum chamber’s walls have thermal
+shrouds for cooling or heating. Using conductive coupling to the base plate and radia-
+
+12.4 The Qualification Program 527
+
+tive coupling to the chamber walls, we can cycle the component through its specified
+temperature range. The component must work at temperature extremes and during
+transitions. The temperature extremes equal or slightly exceed expected temperatures
+for the acceptance test and exceed expected temperatures by a margin (typically 11°C)
+for the qualification test. Sometimes, the thermal-vacuum qualification test may
+include a cold soak to demonstrate survival at low temperatures. Figure 12-4 shows a
+typical temperature cycle.
+
+80
+| Tt mmo
+wo f\ PNP
+oe ee
+
+Functional test at hot and cold
+Turn on Transition at 8 deg/hr
+
+Temperature (°C)
+
+Time (hrs)
+
+Fig. 12-4. Typical Temperature Cycle for Thermal-Vacuum Test of Components. The key
+issues on the thermal-vacuum test are temperature extremes, pressure level and
+number of cycles necessary.
+
+We do not always know what a spacecraft “component” is. For example, we may
+define the solar array and individual antennas as components and qualify them sepa-
+rately, or we may test them environmentally as a part of the complete spacecraft. The
+structure is tested by static loading but receives its environmental exposure as a part
+of the spacecraft. Mechanical assemblies, such as deployment joints or hinges, may be
+tested at qualification environmental levels separately as components or as part of the
+spacecraft.
+
+The qualification program should evaluate each spacecraft function and all
+environmental effects the spacecraft may encounter. Table 12-8 lists the steps for
+designing a qualification program. First, we must prepare a list of all spacecraft and
+payload functions, as well as equipment (including redundancy), all modes of op-
+eration (including failure modes and backups), and software code. The system and
+subsystem specifications should provide this information. Second, we identify envi-
+ronmental effects, including those on the launch vehicle (acoustics, vibration, and
+shock) and in orbit (temperature, vacuum, and radiation). Third, we check to see which
+spacecraft functions must be tested with each environment. Fourth, we identify the
+major spacecraft configurations that require qualification, typically including a boost
+
+528 Spacecraft Manufacture and Test 12.4
+
+configuration and one or more on-orbit configurations. Fifth, we devise functional
+tests for each of these major configurations which completely evaluate the spacecraft.
+Sixth, we lay out the sequence of tests and environmental exposures. Finally, we must
+identify program span time and test equipment requirements.
+
+TABLE 12-8. Steps in the Design of a Spacecraft Qualification Program. This is a typical
+approach for a high reliability program.
+
+1. Identify Spacecraft Test each spacecraft and paylcad function for proper
+and Payload Functions operation. Identify the top functional requirements of the
+spacecraft in the top system specification, and glean
+subsystem functions from the subsystem specifications.
+
+2. Identify Environments Environments for transportation and storage, launch, and
+orbit include vibration, shock, temperature, vacuum, and
+radiation.
+
+3. Correlate Functions During transportation the spacecraft is off, although
+and Environments sensitive components may be powered. During launch,
+some equipment will be in standby and some will be
+operating. Test the operating equipment during spacecraft
+vibration and check all modes of on-orbit operation.
+
+4. Identify Main Include boost configuration and one or more orbital
+Configurations configurations.
+
+5. Devise Functional Tests for Test each function appropriate to a particular configuration,
+each Major Configuration including ali equipment and software.
+
+6. Lay Out the Sequence of See Fig. 12-5 for a typical sequence.
+Functional Tests and
+Environmental Exposures
+
+7. Identify Span Times and
+Special Facility Requirements
+
+Some spacecraft functions are best demonstrated by testing a group of components
+or assemblies under special conditions or with special test equipment or facilities.
+These design verification tests (see Table 12-9) can even be run on nonflight (bread-
+board or engineering model) equipment. They demonstrate proper equipment function
+and allow simplified functional testing at the spacecraft level. For instance, a closed-
+loop tracking test helps us evaluate performance of an antenna pointing control sys-
+tem. During spacecraft test, the antenna feed can be stimulated by RF signals simulat-
+ing those encountered during the closed-loop test, thus simplifying the test setup and
+conduct.
+
+TABLE 12-9. Typical Design Verification Tests. These tests demonstrate functionality of
+components, subsystems, and systems.
+
+¢ Structural Tests ¢ Separation Tests
+
+— Static loads test
+— Modal survey * Antenna Tests
+
+— Pattern tests
+
+* Deployment Tests — Closed-loop tracking tests
+— Solar array
+
+~ Antennas * Attitude Control Tests
+— Experiment booms and appendages — Closed-loop functional tests
+
+
+12.5 Spacecraft Qualification Test Flow 529
+
+12.5 Spacecraft Qualification Test Flow
+
+The qualification test of a spacecraft is a lengthy and demanding process. Besides
+proving the design, it may also be the first chance to evaluate the entire spacecraft in
+operation. Some parts of the qualification test may provide data to validate the engi-
+neering design and verify proper interaction of the equipment. Assembling the first
+unit is particularly difficult because components are seldom available in the best se-
+quence and unexpected interference and test peculiarities always occur. All operations
+must be planned and executed under control and quality surveillance. Records must be
+maintained and the results of each integration and test step reviewed before proceeding
+to the next operation. Typically, tests to qualify a spacecraft last more than a year.
+
+Spacecraft integration normally starts with delivery of an assembled structure or
+structural frame. Liquid propulsion parts are assembled to the structure first because
+the fields used to braze them together are not compatible with electronic components.
+The spacecraft wiring harness can go on before or after the propulsion components.
+
+Electronic assembly of the spacecraft commonly starts with electric power and
+command and data handling subsystem components. Integration of the remaining sub-
+systems depends more on the particular design. Although the subsystems may have
+been preassembled and functionally tested, it is more common to integrate compo-
+nents one at a time and test the subsystems after they are integrated on the spacecraft.
+
+To test a spacecraft, a crew normally uses central control and display equipment,
+with a computer for command generation, telemetry decoding, logging, display, and
+automated test sequences. They operate the equipment by keyboard and monitor status
+by video displays. These displays typically consist of an event screen that shows all
+signal activity and page displays devoted to particular subsystem parameters. The test
+set also provides stimuli and data-measurement equipment for end-to-end testing of
+the spacecraft and payload subsystems. A complete spacecraft test may take several
+days to run and involve subroutines for each subsystem or functional group. Such a
+test is called an integrated system test (IST) or a comprehensive system test (CST). It
+uses subroutines that test each subsystem, so we need to rerun only the subroutine for
+a subsystem anomaly. We may also use a short version of this functional‘test at se-
+lected points in the integration flow.
+
+The qualification test sequence normally matches the expected flight sequence:
+vibration, shock, and thermal vacuum. We also configure the spacecraft to match the
+operational sequence by folding the solar array and deployables during vibration test
+and deploying or removing them during thermal vacuum. Often the test facilities will
+limit the test article’s size or the ability to perform particular tests. Figure 12-5 shows
+a typical sequence along with the special test facilities used [Reeves, 1979]. First, the
+mechanically integrated spacecraft goes through temperature cycling to verify proper
+assembly. A comprehensive system test and performance testing of the payload then
+take place in a special test facility. (For a communications satellite, this might be an
+anechoic chamber or screen room.) Separate performance testing of the solar arrays
+precedes their integration with the spacecraft. Vibration tests consist of acoustic
+testing and vibration by low-frequency sine waves. The system must also pass a pyro-
+shock test—firing of the deployment ordnance—and a check of the mechanical
+deployments, Once the deployables are restowed, a thermal vacuum test of the folded
+configuration follows. After demonstrating the deployments again, the test crew then
+removes the deployables so the spacecraft will fit into the thermal vacuum (TV)
+chamber. The spacecraft is then thermal vacuum tested in its orbital configuration. The
+
+530 Spacecraft Manufacture and Test 12.6
+
+deployable units are tested in parallel with the spacecraft. An ambient comprehensive
+system test and mechanical verification series complete the qualification. Integrated
+system tests (shorter functional tests) supplement this sequence between each environ-
+mental exposure and during TV test.
+
+¢ Mechanically Integrate ¢ Comprehensive System Install Solar Array * Vibration Test
+the Spacecraft Test ; and Deployables « Low Frequency Sine
+
+¢ Assemble Structure ¢ Test of all Systems While Waves Sweep
+
+¢ Integrate Propulsion Thermally Cycling * Acoustic Test at
+
+¢ Install Electronics ¢ Temperature Chamber Qualification Level
+* Acoustic Chamber
+
+¢ Thermal Vacuum Test
+in Launch Configuration
+¢ TV Chamber
+
+Comprehensive
+System Test
+
+¢ Deployable Release Test
+* Fire Release Devices
+and Verify First Motion
+
+Comprehensive
+System Test
+
+Comprehensive
+System Test
+
+Remove Solar Array
+and Deployables
+
+Restow
+Deployables
+
+¢ Thermal Vacuum Test
+in Orbital Configuration
+* TV Chamber
+
+¢ Solar Array Test
+¢ Flash Chamber
+
+Fig. 12-5. Typical Flow of Qualification Test. Note that system tests are performed after each
+major activity.
+
+During the qualification sequence, the test crew records all anomalies or out-of-
+tolerance measurements and formally resolves each discrepancy. Anomalies which
+result from operator error or malfunctioning test equipment and which do not damage
+the spacecraft are easy to resolve. But spacecraft malfunctions demand thorough
+investigation. If design errors have caused the problems, the design must be corrected
+and retested. Test rules normally require rerun of an integrated system test (or all
+affected subroutines) if any electrical, pneumatic, or hydraulic lines are disconnected.
+
+12.6 Launch Site Operations
+
+Spacecraft travel either by air or on air-cushioned trailers. Crews record vibration
+during transport, and spacecraft packaging conforms to the specified environment.
+Launch-site operations include installing and validating the test equipment (EAGE),
+testing the spacecraft’s performance, installing propulsion (AKM), loading propellant,
+mating the spacecraft to its launch vehicle, installing ordnance, and monitoring. Crews
+may also install flight batteries at the launch site. Figure 12-6 shows a typical flow of
+launch-site activities.
+
+12.6 Launch Site Operations 531
+
+¢ Receiving Inspection Test System Install Solar-Array
+
+¢ Test Propulsion
+
+Ordnance
+¢ Check for Leaks
+
+EAGE Validation AKM Readiness Test
+Install AKM * Load Propellant ¢ Encapsulate Shroud
+¢ Install Separation © Transport to Launch Pad
+Ordnance
+
+Check Mating * Charge Battery Countdown and Launch
+and Interfaces
+
+* Test Spacecraft Functions
+
+on Stand
+¢ Top off Battery
+
+Fig. 12-6. Typical Launch-Site Activities. The time required for launch site activity may vary
+from several months to several days.
+
+Normally, one of the launch-site test hangars houses the spacecraft test set for
+performance testing nearby. Crews install propulsion in an explosive ordnance area.
+They mate the launch vehicle and spacecraft, load propellant, and install ordnance on
+stand. Trained people conduct these hazardous tasks, using appropriate equipment and
+safeguards. Some spacecraft components can be replaced at the launch site and even
+on stand, but restricted access. to the spacecraft usually makes replacement difficult.
+Much time at the launch site goes simply to monitoring the spacecraft’s state of health
+through hard-line connections or, during some integrated tests, through RF links.
+Spacecraft commanding is strictly controlled. Launch procedures include configuring
+the spacecraft for launch and removing hard lines.
+
+References
+
+General Dynamics Space Systems Division. 1988. Atlas II DoD User’s Mission Plan-
+ning Guide. San Diego, CA: General Dynamics Space Systems Division.
+
+Reeves, Emery I. 1979. FLTSATCOM Case Study in Spacecraft Design. AIAA
+Professional Study Series. TRW Report 26700-100-054-01.
+
+USS. Air Force Rome Air Development Center. 1986. MIL Handbook 217E. Reliabil-
+ity Prediction of Electronic Equipment. Griffiss AFB, NY: U.S. Air Force Rome
+Air Development Center.
+
+U.S. Air Force Standardization Office. 1985. MIL Std 1521B. Technical Reviews and
+Audits for Systems, Equipments, and Computer Software. Hanscomb AFB, MA:
+U.S. Air Force Standardization Office.
+
+§32 Spacecraft Manufacture and Test 12.6
+
+U.S. Army Armament Research Development and Engineering Center. 1978. MIL Std
+480A. Configuration Control—Engineering Changes, Deviations, and Waivers.
+
+. 1983. DOD Std 100C. Engineering Drawing Practices. Picatinny Arsenal,
+NJ: U.S. Army Armament Research Development and Engineering Center.
+
+1985. MIL Q 9858A. Quality Program Requirements.
+
+. 1985. MIL Std 483A. Configuration Management Practices for Systems,
+Equipment, Munitions, and Computer Programs.
+. 1985. MIL Std 490. Specification Practices.
+
+U.S. Army Missile Command. 1987. FED Std 209C. Federal Standard Clean Room
+and Workstation Requirements, Controlled Environment. Redstone Arsenal, AL:
+
+U.S. Army Missile Command.
+

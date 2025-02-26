@@ -5,20 +5,24 @@ from sqlalchemy import create_engine, MetaData, Table
 from sqlalchemy.orm import sessionmaker, mapper
 from sqlalchemy.dialects import postgresql
 from sqlalchemy.sql import func
-from sqlalchemy import create_engine, Column, Integer, Float, String, DateTime, Time, Enum, ForeignKey, Table, \
+from sqlalchemy import create_engine, Text, UniqueConstraint, Column, Integer, Float, String, DateTime, LargeBinary, Time, Enum, ForeignKey, Table, \
     CheckConstraint, Boolean, ARRAY, and_
 import pandas as pd
 from datetime import datetime
-
 from academy_assistant.database.client.base import DeclarativeBase
 
 
 class Client:
-    user = 'academy'  # os.environ['USER']
-    password = 'academy'  # os.environ['PASSWORD']
-    postgres_host = '127.0.0.1'  # os.environ['POSTGRES_HOST']
-    postgres_port = '5432'  # os.environ['POSTGRES_PORT']
-    db_name = 'academy'
+    # user = 'academy'  # os.environ['USER']
+    # password = 'academy'  # os.environ['PASSWORD']
+    # postgres_host = '127.0.0.1'  # os.environ['POSTGRES_HOST']
+    # postgres_port = '5433'  # os.environ['POSTGRES_PORT']
+    # db_name = 'academy'
+    user = os.environ['POSTGRES_USER']
+    password = os.environ['POSTGRES_PASSWORD']
+    postgres_host = os.environ['POSTGRES_HOST']
+    postgres_port = os.environ['POSTGRES_PORT']
+    db_name = os.environ['POSTGRES_DB']
     db_string = f'postgresql+psycopg2://{user}:{password}@{postgres_host}:{postgres_port}/{db_name}'
 
     def __init__(self):
@@ -35,6 +39,7 @@ class Client:
 
     def create_tables(self):
         DeclarativeBase.metadata.create_all(self.engine)
+        print("All tables created successfully")
 
     # DELETE ALL TABLES BUT: auth_user
     def drop_tables(self):
@@ -116,9 +121,39 @@ class Client:
         self.session.add(entry)
         self.session.commit()
         return entry.id
+    
+    def get_slide_explanation(self, module_id, slide_number):
+        explanation = self.session.query(SlideExplanation).filter_by(
+            module_id=module_id,
+            slide_number=slide_number
+        ).first()
+        if explanation:
+            return explanation.explanation
+        return None
+    
+    def store_slide_explanation(self, module_id, slide_number, explanation_text):
+        # try:
+        new_explanation = SlideExplanation(
+            module_id=module_id,
+            slide_number=slide_number,
+            explanation=explanation_text
+        )
+        self.session.add(new_explanation)
+        self.session.commit()
+        return new_explanation.id
+        # except Exception as e:
+        #     self.session.rollback()
+        #     print(f"Error storing slide explanation: {e}")
+        #     return None
 
     def index_info_slide(self, module_id, type, src, user_id, idx, context='', image_url=None):
         entry = Slide(module_id=module_id, type=type, src=src, user_id=user_id, idx=idx, context=context, image_url=image_url)
+        self.session.add(entry)
+        self.session.commit()
+        return entry.id
+    
+    def index_textbook(self, title, user_id, textbook_url=None):
+        entry = TextBook(title=title, user_id=user_id, textbook_url=textbook_url)
         self.session.add(entry)
         self.session.commit()
         return entry.id
@@ -364,6 +399,20 @@ class Join__User_LearningModule(DeclarativeBase):
     module_id = Column('module_id', Integer, ForeignKey('LearningModule.id'))
     slide_idx = Column('slide_idx', Integer, default=0)
 
+class SlideExplanation(DeclarativeBase):
+    __tablename__ = 'SlideExplanation'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    module_id = Column('module_id', Integer, ForeignKey('LearningModule.id'))
+    slide_number = Column('slide_number',Integer, nullable=False)
+    explanation = Column('explanation',Text, nullable=False)
+    created_at = Column('created_at',DateTime, default=func.now())
+
+class TextBook(DeclarativeBase):
+    __tablename__ = 'TextBook'
+    id = Column(Integer, primary_key=True)
+    title = Column('title',String, nullable=False)
+    textbook_url = Column('textbook_url', String, default=None)
+    user_id = Column('user_id', Integer, ForeignKey('auth_user.id'))
 
 class Slide(DeclarativeBase):
     """Sqlalchemy broad measurement categories model"""
@@ -382,4 +431,19 @@ class Slide(DeclarativeBase):
     graded = Column('graded', Boolean, default=False)
     context = Column('context', String, default='')
     image_url = Column('image_url', String, default=None)
+    
+    # __table_args__ = (
+    #     UniqueConstraint('module_id', 'slide_number', name='_module_slide_uc'),
+    # )
+    
+    # def __repr__(self):
+    #     return f"<SlideExplanation(module_id='{self.module_id}', slide_number='{self.slide_number}')>"
 
+
+def main():
+    client = Client()
+    print("Creating Tables")
+    client.create_tables()
+
+if __name__ == "__main__":
+    main()

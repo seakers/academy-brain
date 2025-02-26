@@ -1,21 +1,15 @@
 import os
 import importlib.util
 import sys
+from openai import OpenAI
 import openai
-openai.api_key = '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'
+openai.api_key = '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'
 
 from retrying import retry
 import concurrent.futures
 import time
 
 from LLM_tasks.embeddings.search import similarity
-
-
-
-
-
-
-
 
 class LLM_Task:
 
@@ -39,6 +33,8 @@ class LLM_Task:
 
         # Num Examples
         self.num_examples = 5
+        self.client = OpenAI(api_key='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')
+
 
 
     ################
@@ -173,7 +169,8 @@ class LLM_Task:
     #########################
 
     def stream_chat_completion(self, messages, prefix='Task: '):
-        streamed_completion = openai.ChatCompletion.create(
+        print("--------------Streaming completion", messages)
+        streamed_completion = self.client.chat.completions.create(
             # model=self.model,
             model="gpt-4o",  # was gpt4-vision-preview
             messages=messages,
@@ -184,10 +181,9 @@ class LLM_Task:
         sys.stdout.write(prefix)
         sys.stdout.flush()
         aggregated_completion = ''
-        for completion in streamed_completion:
-            completion_segment = completion.choices[0]['delta']
-            if 'content' in completion_segment:
-                content = completion_segment['content']
+        for chunk in streamed_completion:
+            if chunk.choices[0].delta.content:
+                content = chunk.choices[0].delta.content
                 aggregated_completion += content
                 sys.stdout.write(content)
                 sys.stdout.flush()

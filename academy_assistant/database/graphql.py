@@ -49,6 +49,23 @@ class GraphqlClient:
         '''
         self.execute_query(mutation)
 
+    def get_textbooks(self):
+        query = '''
+        query TextBookQuery($user_id: Int!) {
+            textbooks: TextBook(where: {user_id: {_eq: $user_id}}) {
+                id
+                title
+                textbook_url
+            }
+        }'''
+        variables = {
+            "user_id": self.user_id
+        }
+        query_result = self.execute_query(query, variables)
+        print("query result",query_result, self.user_id)
+        return query_result["data"]["textbooks"]
+
+
 
 
     def get_learning_modules(self):
@@ -202,9 +219,69 @@ class GraphqlClient:
         }
         query_result = self.execute_query(query, variables)
         return query_result["data"]["slide_info"]  
+    
+    def get_slide_explanation(self, module_id, slide_number):
+        query = '''
+            query GetSlideExplanation($module_id: Int!, $slide_number: Int!) {
+                SlideExplanation(where: {module_id: {_eq: $module_id}, slide_number: {_eq: $slide_number}}) {
+                    explanation
+                }
+            }
+        '''
+        variables = {
+            "module_id": module_id,
+            "slide_number": slide_number
+        }
+        result = self.execute_query(query, variables)
+        print(result)
+        explanations = result['data'].get('SlideExplanation', [])
+        if explanations:
+            print(explanations)
+            return explanations[0]['explanation']
+        return None
+
+    def store_slide_explanation(self, module_id, slide_number, explanation):
+        mutation = '''
+            mutation InsertSlideExplanation($module_id: Int!, $slide_number: Int!, $explanation: String!) {
+                insert_SlideExplanation_one(object: {module_id: $module_id, slide_number: $slide_number, explanation: $explanation}) {
+                    id
+                }
+            }
+        '''
+        variables = {
+            "module_id": module_id,
+            "slide_number": slide_number,
+            "explanation": explanation
+        }
+        result = self.execute_query(mutation, variables)
+        return result['data'].get('insert_SlideExplanation_one', {}).get('id', None)
 
 
+def test_graphql_client():
+    user_info = {"id": 1, "username": "duser5"}
+    graphql_client = GraphqlClient(user_info)
 
+    module_id = 1
+    slide_number = 1
+    explanation_text = "This is a test explanation."
+
+    # Store explanation
+    stored_id = graphql_client.store_slide_explanation(module_id, slide_number, explanation_text)
+    print(stored_id)
+    if stored_id:
+        print(f"Stored ID: {stored_id}")
+    else:
+        print("Failed to store explanation.")
+
+    # Retrieve explanation
+    retrieved = graphql_client.get_slide_explanation(module_id, slide_number)
+    if retrieved:
+        print(f"Retrieved Explanation: {retrieved}")
+    else:
+        print("No explanation found.")
+
+if __name__ == "__main__":
+    test_graphql_client()
 
 
 

@@ -1,0 +1,3786 @@
+
+Chapter 9
+
+Space Payload Design and Sizing
+
+Bruce Chesley, U.S. Air Force Academy
+Reinhold Lutz, Daimler Chrysler Aerospace
+Robert F. Brodsky, Microcosm, Inc.
+
+9.1 Payload Design and Sizing Process
+
+9.2 Mission Requirements and Subject Trades
+Subject Trades
+
+9.3. Background
+The Electromagnetic Spectrum; Basic Telescope Optics;
+Diffraction Limited Resolution
+
+9.4 Observation Payload Design
+Candidate Sensors and Payloads; Payload Operations
+Concept; Required Payload Capability
+
+9.5 Observation Payload Sizing
+Signal Processing and Data Rates; Estimating
+Radiometric Performance; Estimating Size, Weight, and
+Power; Evaluate Candidate Payloads; Observation
+Payload Design Process; Assess Life-cycle Cost and
+Operability of the Payload and Mission
+
+9.6 Examples
+The FireSat Payload; MODIS—A Real FireSat Payload
+
+As illustrated in Fig. 1-3 in Chap. 1, the payload is the combination of hardware
+and software on the spacecraft that interacts with the subject (the portion of the outside
+world that the spacecraft is looking at or interacting with) to accomplish the mission
+objectives. Payloads are typically unique to each mission and are the fundamental
+reason that the spacecraft is flown. The purpose of the rest of the spacecraft is to keep
+the payload healthy, happy, and pointed in the right direction. From a mission perspec-
+tive it is worth keeping in mind that fulfilling these demands is what largely drives the
+mission size, cost, and risk. Consequently, a critical part of mission analysis and
+design is to understand what drives a particular set of space payloads so that these
+elements can become part of the overall system trade process designed to meet mission
+objectives at minimum cost and risk.
+
+This chapter summarizes the overall process of payload design and sizing, with an
+emphasis on the background and process for designing observation payloads such as
+FireSat. (Communications payloads are discussed in Chap. 13.) We begin with the
+flow of mission requirements (from Chap. 1) to payload requirements and the mission
+operations concept (from Chap. 2) to a payload operations concept which defines how
+
+241
+
+242 Space Payload Design and Sizing
+
+the specific set of space instruments (and possibly ground equipment or processing)
+will be used to meet the end goals. We then summarize key characteristics of electro-
+magnetic radiation, particularly those which define the performance and limitations of
+space instruments. Finally, we provide additional details on the design of observation
+payloads and develop a preliminary payload design for FireSat, which we compare
+with the MODIS instrument, a real FireSat payload for the Terra spacecraft in NASA
+Earth Observing System.
+
+Several authors have discussed space observation payload design in detail, such as
+Chen [1985], Elachi [1987], and Hovanessian [1988]. More recently Cruise, et al.
+[1998] provides a discussion of a full range of payload design issues including optics,
+electronics, thermal, structures and mechanisms, and program management. In
+addition, a number of authors provide extended discussions of specific types of obser-
+vations missions. Schnapf [1985], Buiten and Clevers [1993], and Kramer [1996]
+provide surveys of Earth observing missions and sensors. Huffman [1992] discusses
+UV sensing of the atmosphere. Meneghini and Kozu [1990] and Kidder and Vonder
+Haar [1995] discuss meteorology from space. Kondo [1990] and Davies [1997]
+discuss astronomical observatories in space. Finally, Chap. 13 provides numerous
+references on space communications payloads and systems.
+
+Spacecraft missions have been flown to serve many purposes, and while virtually
+every mission has unique elements and fulfills some special requirement, it is none-
+theless possible to classify most space missions and payloads into the following broad
+categories: communications, remote sensing, navigation, weapons, in situ science, and
+other. Table 9-1 provides a sample of missions that fall within these categories along
+with a primary payload and spacecraft that fits that particular mission. Many other
+types of space missions have been proposed or demonstrated. We include these in
+Table 9-1. We will introduce each of these spacecraft mission types, then focus on
+first-order system engineering analysis of remote sensing payloads.
+
+Communications. The purpose of the majority of spacecraft is to simply transfer
+information. Communications missions range from wideband full-duplex telecommu-
+nications connectivity to one-way broadcast of television signals or navigation
+messages. Communications has traditionally been dominated by large geosynchro-
+nous spacecraft, but constellations of smaller spacecraft in lower orbits are emerging
+with alternative architectures for global coverage. New technologies are developing
+rapidly, including research into using lasers for spacecraft communication. A detailed
+discussion of communications payloads and subsystems is included in Sec. 11.2,
+Chap. 13, and Morgan and Gordon [1989].
+
+Remote Sensing. Spacecraft remote sensing represents a diverse range of missions
+and applications. Any observation that a spacecraft makes without directly contacting
+the object in question is considered remote sensing. Imaging the Earth’s surface,
+sounding the Earth’s atmosphere, providing early warning of a ballistic missile launch,
+or observing the characteristic chemical spectra of distant galaxies are all remote sens-
+ing missions. Fundamentally we focus on measurements in the electromagnetic spec-
+trum to determine the nature, state, or features of some physical object or phenomenon.
+
+Depending on the particular mission, we can evaluate different aspects of elec-
+tromagnetic radiation to exploit different characteristics of the target with respect to
+spatial, spectral, and intensity information content. We also evaluate this information
+in a temporal context that supports comparisons and cause-and-effect relationships.
+The types of information and sensors used to provide this information are illustrated
+in Fig. 9-1.
+
+243
+
+TABLE 9-1. Types of Spacecraft Missions and Payloads.
+
+Spacecraft Mission Payload | ss Example
+
+Communications
+Full-duplex broadband | Transceiver Milstar, Intelsat
+Message broadcast Transmitter DirecTV, GPS
+Personal comm Transceiver Iridium
+
+Remote Sensing
+Imaging imagers and cameras LandSat, Space Telescope
+Intensity measurement | Radiometers SBIRS early warning,
+
+Topographic mapping __ | Altimeters Chandra X-Ray Observatory,
+TOPEX/Poseidon
+
+Navigation
+Ranging Transceiver TDRS
+Nav signal Clock and transmitter GPS, GLONASS
+
+Weapons
+Kinetic energy Warhead Brilliant Pebbies concept
+Directed energy High-energy weapon Space-Based Laser concept
+
+In Situ Science
+Crewed Physica! and life sciences Space Shuttle, Mir
+Robotic Sample collection/return Mars Sojourner, LDEF
+
+Other
+
+Microgravity Physical plant and raw materials Space Shuttle
+Manufacturing
+
+Space power Solar collector, converter, and SPS
+transmitter
+
+Resource utilization Lunar soil collector and processor | Lunar Base
+Tourism Orbital hotel Various ©
+Space burial Remains container Pegasus XL
+
+We make an additional distinction depending on the source of the electromagnetic
+radiation being sensed. If the instrument measures direct or reflected solar radiation in
+the environment, then we call it a passive sensor. Active sensors, on the other hand,
+emit radiation that generates a reflected return which the instrument measures. The
+principal active remote sensing instruments are radar and lidar.
+
+Although our focus is on remote sensing of Earth, many scientific missions observe
+electromagnetic phenomena elsewhere in the universe. The physical principles of
+remote sensing and the categories of sensors are the same, regardless of whether the
+payload is looking at deep space or the planet it is circling.
+
+Navigation. GPS, GLONASS, and other international navigation systems have
+demonstrated a wealth of applications for military, civilian, academic, and recreational
+users. As discussed in Sec. 11.7.2, GPS provides information for real-time position,
+velocity, and time determination. It is available worldwide on a broad range of plat-
+forms, including cars, ships, commercial and military aircraft, and spacecraft. The
+heart of GPS is a spread-spectrum broadcast communication message that can be
+exploited using relatively low-cost receivers.
+
+Weapons. While remote sensing, communication, and navigation applications are
+quite mature and dominate the use of space, space-based weapons remain conceptual,
+occupying a small niche in the realm of space mission design. In particular, concepts
+
+244 Space Payload Design and Sizing
+
+Spatial
+Information
+
+Polarimeters
+Scatterometer:
+Spectrometers Spectro-Radiometers Radiometers
+Spectral Intensity
+Information Information
+
+Fig. 9-1. Electromagnetic Information Content and Sensor Types. Sensor types inside the
+triangle can observe the features shown outside the triangle. For example, each pixel
+collected by an imaging radiometer reflects both spatial and intensity information.
+Active instruments (Such as radar) are printed in bold italic text. (Modified from Elachi
+[1987].)
+
+for weapons in space became a topic of intense study and debate as part of the Strategic
+Defense Initiative and space-based strategic missile defense. Development of certain
+operational space weapons has been prohibited under the Anti-Ballistic Missile Treaty
+of 1972. Although some experts view widespread weaponization of space as
+inevitable, it has not become a stated objective of U.S. national policy [DeBlois, 1997].
+Of course, space has been used to support military objectives since the dawn of artifi-
+cial spacecraft [Hall, 1995; McDougall, 1985], but the vast majority of military space
+applications fall into the categories of remote sensing and communications.
+
+In Situ Science. Sample collection and evaluation serves an important role in
+planetary and space science. Perhaps the most elaborate instance of sample collection
+took place in the Apollo missions when approximately 300 kg of samples from the
+Moon were returned to Earth for analysis. Other examples of sample collection and
+analysis include planetary landers (such as Viking and Mars Sojourner) and collection
+of solar wind particles.
+
+Other. Exploitation of physical resources in space—either from the Moon or
+asteroids—has sparked innovative and imaginative concepts for augmenting Earth’s
+limited resources or enabling human exploration of the solar system. In the nearer
+term, however, space-based materials processing and manufacturing are more likely
+to mature and exploit the characteristics of the microgravity environment (Sec. 8.1.6).
+Glaser et al. [1993] has done extensive studies of satellite solar power, i.e., generating
+solar power in space for use on Earth. Many authors have created designs for lunar
+colonies and space tourism facilities, but all require a dramatic reduction in launch
+cost. (See, for example, the CSTS Alliance’s Commercial Space Transportation Study
+[1994].)
+
+9.1 Payload Design and Sizing Process 245
+
+9.1 Payload Design and Sizing Process
+
+Payload definition and sizing determines many of the capabilities and limitations
+of the mission. The payload determines what the mission can achieve, while the size
+of the payload, along with any special structural, thermal, control, communications, or
+pointing restrictions, will influence the design of the remainder of the spacecraft
+support systems.
+
+We begin with the assumption that mission objectives are defined and the critical
+mission requirements are understood. This section concentrates on a top-down meth-
+odology for bounding the trade space of possible payloads and making an informed
+selection among them. This process is a useful guide for moving from a blank slate to
+a preliminary set of payloads. Iterating on the process produces a more detailed
+definition and more useful set of payloads that can meet the mission objectives at
+minimum cost and risk.
+
+As shown in Table 9-2, the process begins with an understanding of mission
+requirements described in Chaps. 3 and 4. The mission requirements have a major
+effect on all aspects of space vehicle design, but it is frequently necessary to treat the
+components and subsystems separately for preliminary design and sizing. We begin
+with the payload because it is the critical mission element bounding spacecraft perfor-
+mance. Chapters 10 and 11 treat the remainder of the spacecraft systems and trade-offs
+involved in the overall spacecraft design.
+
+Once the mission requirements are understood, we must determine the level of
+detail required to satisfy different aspects of the mission. For FireSat, varying levels of
+detail are required if the task is to identify the existence of a fire, assess the damage
+caused by fires, or characterize the combustibles in a fire. Additionally, the temporal
+(timeliness) demands placed on- the mission could be vastly different depending on
+whether the data is to support long-term scientific analysis or real-time ground activity.
+
+We summarize the basic steps in this process below and discuss them in more detail
+in the remainder of this chapter for remote sensing payloads and in Chap. 13 for com-
+munications payloads.
+
+1. Select Payload Objectives. These objectives will, of course, be strongly related
+to the mission objectives defined in Chap. 1 and will also depend on the overall mis-
+sion concept, requirements, and constraints from Chaps. 2, 3, and 4. However, unlike
+the mission objectives which are a broad statement of what the mission must do to be
+useful, the payload objectives are more specific statements of what the payload must
+do (i.e., what is its output or fundamental function). For FireSat, this is specific perfor-
+mance objectives in terms of identifying fires. For the space manufacturing example
+in the table, called WaferSat, the payload objective is a definition of the end product
+to be manufactured.
+
+2. Conduct Subject Trades. The subject is what the payload interacts with or looks
+at. As discussed in detail in Sec. 9.2, a key part of the subject trade is determining what
+the subject is or should be. For a mobile communications system, it is the user’s hand-
+held receiver. Here the subject trade is to determine how much capability to put in the
+user unit and how much to put on the satellite. For FireSat, we may get very different
+results if we define the subject as the IR radiation produced by the fire or as the smoke
+or visible flickering which the fire produces. In addition to defining the subject, we
+need to determine the performance thresholds to which the system must operate. For
+FireSat, what temperature differences must we detect? For WaferSat, how pure must
+the resulting material be? For mobile communications, how much rain attenuation
+
+246 Space Payload Design and Sizing 9.1
+
+TABLE 9-2. Process for Defining Space Payloads. See text for discussion. See Chap. 13 for
+a discussion of communications payloads.
+
+FireSat (Remote Space Manufacturing Where
+Process Step Sensing) Example Example Discussed
+
+1. Use mission Payload Identify smoldering and | Manufacture ultra-pure {| Chaps.1, 2
+objectives, concept, | performance flaming fires silicon wafers
+requirements, and | objectives
+
+constraints to select
+payload objectives
+
+2. Conduct subject Subject definition | Distinguish smoldering | Less than 1 ppb
+trades and performance | fires that are 3K warmer | impurities over 50 cm
+thresholds than the background square wafers
+from flaming fires that
+are 10 K warmer than
+the background
+
+3. Develop the End-to-end Determine how end Define user method to
+payload operations | concept for all users will receive and specify product needs,
+concept mission phases act on fire detection data | recover and use
+
+and operating materials
+modes
+
+4, Determine required | Required payload | 12-bit quantization of Throughput of 5,000
+payload capability radiometric intensity in | wafers/day on orbit
+to meet mission the 3-5 um wavelength
+objectives [identify
+key characteristics
+of interest]
+
+5. Identify candidate _| Initial list of Specifications for Specifications for
+payloads potential payloads | Sensors #1 and #2 Factories #1 and #2
+
+6. Estimate candidate | Assessment of Sensor #1 meets the Factory #1 produces
+payload capabilities | each candidate sensitivity requirement | 6,000 wafers/day,
+and characteristics | payload but requires a data rate | weighs 80 kg, and
+[mission output, of 10 Mbps. uses 2 kW
+
+performance, size, Sensor #2 can only Factory #2 produces
+
+mass, and power] identify flaming fires that | 4,000 wafers/day (some
+are 10 K warmer than of which will have >1 ppb
+the background but impurities), weighs
+requires a data rate of | 100 kg, and uses 500 W
+only 1.5 Mbps
+
+7. Evaluate candidate | Preliminary Spacecraft and ground | Select #1 with 1,000
+payloads and select | payload definition | architecture based on wafers/day margin to be
+a baseline 1.5 Mbps data rate. sold to reduce cost
+
+Adjust mission
+requirement to identify
+flaming fires only
+
+(not smoldering)
+
+8. Assess life-cycle Revised payload _| FireSat spacecraft with | Payload repackaging to
+cost and operability | performance acceptable mission accommodate launch as
+of the payload and | requirements performance and cost | an Ariane secondary
+mission constrained by cost payload on ASAP ring
+
+or architecture
+limitations
+
+9. Identify and Derived Data handling ACS system to provide
+negotiate requirements for subsystem requirement | 140 continuous min of
+payload-derived related subsystems | to accommodate jitter less than + 1 nm
+requirements payload data rate
+
+of 1.5 Mbps
+
+10. Document and Baseline payload | Baseline FireSat Baseline WaferSat
+iterate design payload payload
+
+must we be able to accommodate? These will be iterative trades as we begin to define
+the payload instruments and can intelligently evaluate cost vs. performance.
+
+3. Develop the Payload Operations Concept. Ultimately, the data or product
+produced by the payload must get to the user in an appropriate form or format. How
+will the end user of FireSat data receive and act on the satellite data? How will the
+
+
+9.1 Payload Design and Sizing Process 247
+
+manufacturer recover the WaferSat materials and define what is to be done on the next
+flight? Payload operations will have a major impact on the cost of both the spacecraft
+and mission operations. As discussed in Chap. 15, payload operations may be done by
+the same facility and personnel that handle the spacecraft or, similar to the Space
+Telescope, may be an entirely different operations activity.
+
+4. Determine the Required Payload Capability. What is the throughput and
+performance required of the payload equipment to meet the performance thresholds
+defined in Step 2? For FireSat what is the specification on the equipment needed to
+meet the temperature, resolution, or geolocation requirements? For WaferSat, how
+many wafers of what size will it produce? For mobile communications, now many
+phone calls or television channels must it handle simultaneously?
+
+5. Identify Candidate Payloads. Here we identify the possible payloads and their
+specifications. For simple missions there will be a single payload instrument. For most
+missions, there will be multiple instruments or units which frequently must work
+together to meet mission requirements. Different complements of equipment may
+break the tasks down in different ways and may even work with different aspects of
+the subject. Thus, a system designed to identify the source of solar storms may have
+an imager and a spectrometer or a magnetometer and an instrument to map small
+temperature fluctuations on the photosphere or in the solar wind.
+
+6. Estimate Candidate Payload Characteristics. Here we need to determine the
+performance characteristics, the cost, and the impact on the spacecraft bus and ground
+system so that we can understand the cost vs. performance for each of the viable
+candidate systems. Payloads will differ in their performance and cost, but also in
+weight, power, pointing, data rate, thermal, structural support, orbit, commanding, and
+processing requirements. We must know all of these impacts to conduct meaningful
+trades.
+
+7. Evaluate Candidates and Select a Baseline. Here we examine the alternatives
+and make a preliminary selection of the payload combination that will best meet our
+cost and performance objectives. In selecting a baseline, we must decide which
+elements of performance are worth how much money. The payload baseline is strongly
+related to the mission baseline and can not be defined in isolation of the rest of the parts
+of the mission and what it will be able do for the end user.
+
+8. Assess Life-cycle Cost and Operability. Ultimately, we want to determine
+mission utility as a function of cost. This process was described in detail in Chap. 3.
+Typically it will not be a simple cost vs. level of performance characterization. Rather
+it is a complex trade that requires substantial interaction with potential users and with
+whatever organization is funding the activity. It may become necessary at this point to
+relax or prioritize some of the mission requirements in order to meet cost and schedule
+objectives. For FireSat we may decide that only one type of fire or one geographic
+region will be addressed. For WaferSat we may reduce the purity, the size of the
+wafers, or the throughput.
+
+9. Define Payload-derived Requirements. In this step we provide a detailed
+definition of the impact of the selected payloads on the requirements for the rest of the
+system (i.e., the spacecraft bus, the ground segment, and mission operations). FireSat
+will have power, pointing, geolocation, and data rate requirements. WaferSat may care
+very little about pointing and geolocation, but will have requirements on the spacecraft
+cleanliness levels and jitter control. These, in turn, may levy secondary requirements
+such as storage for onboard commands or thermal stability for pointing and jitter
+control.
+
+248 Space Payload Design and Sizing 9.1
+
+10. Document and Iterate. Although this point is emphasized throughout the
+book, we stress again the need to document what we have decided and why. The
+“why” is critical to allowing the system trades to proceed at a future time. We can
+make preliminary decisions for a wide variety of reasons, but we must understand
+these reasons in order to intelligently continue to do payload and system trades. Like
+all of the space mission analysis and design process, payload definition is iterative. We
+will come back to the process many times as we learn more about the consequences of
+preliminary choices.
+
+Figure 9-2 illustrates the conceptual process of payload sizing. At the bottom end
+of the curve, we need to spend a minimum amount of money to achieve any perfor-
+mance at all. Near minimum performance, a small amount of additional expense will
+substantially increase performance. At the top end of the curve, we can spend a lot of
+money for very small improvement. The overall payload performance per unit cost
+follows a straight line through the origin and whatever point on the performance vs.
+cost curve we are working at. Therefore, the maximum performance per unit cost
+occurs where a straight line through the origin is tangent to the curve.
+
+Best
+Performance
+Solutions
+
+Best Performance
+per Unit Cost
+
+Performance
+
+™ Lowest Cost Solutions
+Cost
+
+Fig. 9-2. Performance vs. Cost. The tangent point is the highest performance per unit cost.
+
+There are good reasons for operating at any region along the curve in Fig. 9-2. To
+design a good payload, we must decide where along the curve our particular mission
+should be. At the high end we obtain the best available performance. This would be
+appropriate for some military or science missions, such as the Space Telescope or
+Chandra X-Ray Observatory. LightSats are at the bottom end of the curve. They
+perform modestly at very low cost. They may also be appropriate for multi-satellite,
+distributed systems. Large commercial activities, such as communications satellites,
+need the best performance per unit cost.
+
+The key to deciding how to size our payload is to look carefully at the mission
+objectives, particularly the tacit rules which often imply how well we want to do. Do
+we need the best performance regardless of cost? Can the mission proceed only on a
+minimum budget? Is this a long-term, continuing, and potentially competitive activity
+in which performance per unit cost is critical? The answers to these questions will let
+us correctly size the payload and the mission to meet our mission objectives.
+
+9.2 Mission Requirements and Subject Trades 249
+
+9.2 Mission Requirements and Subject Trades
+
+Defining requirements and constraints for space missions occurs as described in
+Chaps. 1 and 2. The overall mission requirements dictate the technical performance of
+the payload, while the mission concepts and constraints determine the operational
+implementation for the mission. Frequently the technical specification and operations
+concept for payloads are interrelated. For example, increasing temporal resolution
+(revisit) may reduce the requirement for spatial resolution in an optical sensor system.
+We must ensure that the mission requirements capture the fundamental needs of the
+users without constraining the designer’s ability to satisfy these requirements through
+alternate technical means.
+
+For FireSat we begin with the overall mission requirement to detect, identify, and
+locate forest fires, then consider the level of detail needed to satisfy the mission. Often
+it is useful to articulate the questions that need to be answered or the decisions that
+need to be made based on sensor data. Possible questions for the FireSat mission plan-
+ners include:
+
+* Can a new fire be detected within 2 hours? Twenty minutes?
+¢ What is the geographic extent of the fire?
+¢ Can smoldering fires be distinguished from flaming fires?
+
+¢ What are the primary combustibles (can fires burning organic material be
+distinguished from petroleum and chemical fires)?
+
+¢ What direction is the fire spreading and how quickly?
+¢ How much smoke and ash is the fire generating?
+* Where is the fire burning hottest?
+
+¢ At which locations would additional firefighting efforts to contain and
+suppress the fire be most effective?
+
+* What other sources of information exist from air-, ground-, or space-based
+sources?
+
+* If available, how might other sources of information be used?
+
+Specific mission objectives and priorities addressed by these questions will deter-
+mine the specific observables linking payload performance with mission performance.
+To choose a remote sensing payload, the key steps to a disciplined and repeatable
+design begin with determining the elements of information that we need to address the
+problem. We must specify the physically observable quantities that contribute to
+elements of information about the problem in sufficient detail to er.sure they can be
+detected by a spacecraft payload with sufficient resolution to provide meaningful
+insight into the subject.
+
+Establishing performance thresholds provides a framework for trading off per-.
+formance across a number of different design features. For all missions, payload
+performance evaluation categories include physical performance constraints and oper-
+ational constraints. Examples of physical performance constraints include limits on
+spatial, spectral, radiometric, and temporal resolution. Operational constraints include
+sensor duty cycle limits, tasking and scheduling limits on sensor time, and resource
+contention (inability of the sensor to view two targets of interest simultaneously).
+
+250 Space Payload Design and Sizing 9.2
+
+Within each of the categories of sensor constraints, we should establish an absolute
+minimum threshold such that any performance that does not meet this capability is
+unacceptable. The minimum threshold values generally will not satisfy mission objec-
+tives, but establishing the minimum level of usefulness for the mission allows
+flexibility for trade-offs. At the other extreme, we should specify the desired perfor-
+mance to establish the performance that will fully satisfy the requirement. We can also
+define an intermediate value—an acceptable level of performance—to articulate a
+desired level of performance that will meet the bulk of mission objectives. Table 9-3
+illustrates a sample of performance thresholds for the FireSat mission payload across
+the functional areas of resolution, quantity, timeliness, periodicity, geolocation
+accuracy, and completeness. These distinctions can be critical in determining the via-
+bility of a mission concept. In commercial remote sensing, for example, the range of
+performance requirements from minimum to desired is typically determined through
+extensive market analysis and business development case studies. These studies
+frequently identify a minimum resolution (or other performance parameter) below
+which a remote sensing spacecraft concept will not be profitable.
+
+TABLE 9-3. Sample Threshold Performance Requirements for the FireSat Payload.
+Desired performance represents the maximum reasonable levei of performance
+across all design features.
+
+Acceptable Desired
+
+Subject Detect presence or | Identify, locate, and track | Determine thermal
+Characteristics | absence of large fires | progress of fires conditions within fires and
+products of combustion
+
+Quantity Measure existence | Simultaneously measure } Simultaneously measure
+of 1 fire and track 7 fires and track 20 fires
+
+Timeliness Report detection of | Report detection of fire Report detection of fire
+fire within 6 hours within 2 hours within 20 min
+
+Revisit Update status of Update status of fire Update status of fire
+Interval fire every 2 hours every 90 min every 45 min
+
+Geolocation Determine location of | Determine location and Determine location and
+Accuracy fire within +100 km extent of fire within +1 km | extent of fire within +100 m
+
+Completeness | Map fires in Map fires in North America | Map fires globally
+continental U.S. and one other selectable
+region (e.g., Persian Gulf)
+
+We need to parameterize the mission, such as identifying and locating forest fires,
+in such a way that we can evaluate, size, and design candidate sensors. This
+parameterization involves a process of requirements analysis that focuses on matching
+the tasks involved in the mission with categories of discipline capabilities. If we match
+mission requirements with existing or probable capabilities the result is a set of poten-
+tial information requirements. We then try to identify the characteristics of the subject
+(signatures) that correspond to the information requirements through a set of rules. For
+the FireSat example, these rules consist of the spectral wavelengths and thresholds
+needed to detect fires. The rules yield a set of mission observables, such as specific
+wavelength bands and spectral sensitivities that we need in our sensor. These
+observables provide the basis for the payload characteristics that comprise the baseline
+design to satisfy the mission. In the case of FireSat, the basic mission categories that
+might satisfy this mission and the corresponding information type are shown in
+Table 9-4.
+
+9.2 Mission Requirements and Subject Trades 251
+
+TABLE 9-4. Simplified Subject Trades for FireSat Mission. The information type allows for
+subject trades to be made among the different signatures that can be exploited to
+satisfy FireSat mission requirements.
+
+Sensor Type Information Type
+
+Electro-optical Imager Visible return from light or smoke cloud produced by the fire
+
+Spectrometer Spectral signatures from products of combustion
+Radiometer Thermal intensity
+
+A unique signature exhibited by fires is the flickering light in a fire. This flicker has
+a characteristic frequency of about 12 Hz and can be exploited by processing the data
+stream from an electro-optical sensor to search for this frequency [Miller and
+Friedman, 1996]. Light flickering at this frequency produces an irritating effect on the
+human vision system, possibly as a survival adaptation for the species against the
+threat of wildfires.
+
+There are many choices and types of sensors, more than one of which might be a
+candidate to perform a given mission. In the case of FireSat, it may be possible to sat-
+isfy basic mission requirements by observing a number of different phenomenologies:
+visible signatures associated with flame and smoke, thermal infrared signatures from
+the fire, spectral analysis of the products of combustion, or an algorithm combining all
+of these. The selection of a spacecraft payload represents the fundamental leap in
+determining how to satisfy mission requirements with a space sensor. In the previous
+section we introduced a top-down framework for considering the general problem of
+spacecraft design. Here we turn our attention to the payload; in particular, a method-
+ology for determining the type of payload to employ and the physical quantities to
+measure.
+
+Figure 9-3 illustrates the framework for the heart of the payload design process. The
+process begins with a task or mission requirement and ends with a spacecraft payload
+design. We have divided this process into intermediate steps to focus the effort along
+the way to a final design. In this section we focus on describing the process illustrated
+in Fig. 9-3; Sec. 9.4 provides some of the specific techniques that are employed in this
+process for visible and IR systems.
+
+For the FireSat mission design, we need to identify specific signatures that would
+allow candidate sensors to provide viable solutions to the mission requirement. We
+observe physical phenomena through signatures, and we must choose which signature
+will provide the desired information. The specific signatures that a payload senses
+must be evaluated in light of the particular focus of the mission. For example, a
+spectrometer that is sensitive enough to detect all fires, but which cannot be used to
+differentiate campfires from forest fires could generate a large false alarm rate and
+render it operationally useless. Defining the key signatures and observables that
+support the information content needed to satisfy the mission determine the perfor-
+mance limits for the payload design.
+
+9.2.1 Subject Trades
+
+The objective of a space mission is typically to detect, communicate, or interact.
+The subject, as an element of the space mission, is the specific thing that the spacecraft
+will detect, communicate, or interact with. For GPS, the subject is the GPS receiver,
+For FireSat, we would assume that the subject is the heat generated by the forest fire.
+But other subjects are possible: light, smoke, or changes in atmospheric composition.
+
+252 Space Payload Design and Sizing 9.2
+
+Mission Physical
+Requirements Capabilities
+
+Analysis
+
+[7
+2
+c
+o
+E
+3
+=
+3
+>
+®
+c
+
+Mission
+
+Payload
+Observables
+
+Characteristics
+
+Payload
+Analysis
+
+Baseline
+Design
+
+Fig. 9-3. Process for Linking Mission Requirements to Payload Design. The process
+moves from mission requirements to a payload design in three steps: requirements
+analysis, subject trades, and payload analysis.
+
+What we choose as the subject will dramatically affect performance, cost, and the
+mission concept. Thus, we must do this trade carefully and review it from time to time
+to ensure it is consistent with mission objectives and our goal of minimizing cost and
+risk.
+
+Table 9-5 summarizes the subject-trade process. We begin by looking at the basic
+mission objectives and then ask what subjects could meet these objectives. To do this,
+we should look at what we are trying to achieve, the properties of space we intend to
+exploit, and the characteristics of what we are looking at or interacting with. Table 9-6
+shows examples of subject trades for four representative missions. As the missions
+change, the nature of the subject trades will also change. For FireSat, we are looking
+for a well-defined subject (the forest fire), and we want to do this at minimum cost and
+risk. With the Space Telescope, we must ask, “What am I looking for? What am I try-
+ing to detect and how can I detect it?” For any of the science missions, we would ask,
+“Ts the subject some distant and unknown object, or is it part of the electromagnetic
+spectrum I am trying to explore?”
+
+For a space system intended to detect airplanes, the main subject trades would
+concem mission goals. Are the targets cooperative or noncooperative? Do we need to
+track over the poles? Should we track in high-density areas around airports or over the
+open oceans? The answers to these questions will determine the nature of the subject
+trades.
+
+Perhaps the easiest subject trades are those in which the system will be interacting
+with a ground element that is a part of the system, such as direct broadcast television
+or a truck communication system. In this case, the subject trade becomes simply an
+issue of how much capacity should go on the spacecraft vs. how much should go in the
+unit on the ground.
+
+9.2 Mission Requirements and Subject Trades 253
+
+TABLE 9-5. Subject Trade Process. Note that the subject trades lead directly to the payload
+trade process as discussed in Sec. 9.2
+
+Where
+FireSat Example Discussed
+
+. Determine fundamental mission
+objectives
+
+Determine what possible subjects could
+be used to meet these objectives (i.e.,
+what could the system detect or interact
+with to meet the objectives)
+
+. Determine broad class of ways that the
+spacecraft can detect or interact with
+the possible subjects
+
+Determine if subject is passive or
+controllable
+
+. For controllable subjects, do trade of
+putting functionality at the subject, in the
+space system, or in the ground system
+
+. For passive subjects, determine general
+characteristics that can be detected
+
+. Determine whether multiple subjects
+and payloads should be used
+
+Define and document initial subject
+selection
+
+Review selection frequently for
+alternative methods and possible
+
+Detect and monitor forest fires
+
+Heat, fire, smoke,
+atmospheric composition
+
+Heat —> IR
+flame, smoke —> visual
+atmospheric composition —> lidar
+
+Initially assume passive fire
+detection
+
+N/A
+
+Forest fire temperature range
+and total heat output
+
+Not initially
+
+IR detection of heat
+
+See Sec, 22.3,
+alternative low cost for FireSat
+
+use of ancillary subjects _
+
+The next step for subject trades is to determine whether the subject is controllable
+or passive. The system designer knows and can control characteristics of controllable
+or active subjects. This includes ground stations, antennas, receivers, and transmitters
+such as those used for ground communications, direct broadcast television, or data
+relay systems. Because we can control the subject, we can put more or less capability
+within it. Thus we might choose to have a simple receiver on the ground with a high-
+power, accurately pointed, narrow-beam transmitter on the spacecraft. Or we could
+place a sophisticated, sensitive receiver on the ground with a small, lower-cost system
+in space. Usually, the solution will depend on the number of ground stations we wish
+to interact with. If there are many ground stations, as in direct-broadcast television, we
+will put as much capability as possible into the satellite to drive down the cost and
+complexity of the ground stations. On the other hand, if there are only a few ground
+stations, we can save money by giving these stations substantial processing and point-
+ing capability and using a simpler, lighter-weight, and lower-cost satellite.
+
+Passive subjects are those in which the characteristics may be known but cannot be
+altered. This includes phenomena such as weather, quasars, or forest fires. Even
+though we cannot control the object under examination, we can choose the subject
+from various characteristics. We could detect forest fires by observing either the fire
+itself or the smoke in the visible or infrared spectrum. We could detect atmospheric
+composition changes or, in principle, reductions in vegetation. Thus, even for passive
+subjects, the subject is part of the system trades.
+
+254 Space Payload Design and Sizing 9.2
+
+TABLE 9-6. Representative Subject Trades. Subject trades for the Space Telescope are
+particularly interesting in that a significant goal of the system is to discover previ-
+ously unknown phenomena or objects.
+
+Truck
+Airplane Communications
+Mission FireSat Detection System Space Telescope
+
+Property of Global Global perspective | Global perspective | Above the
+
+space used __| perspective atmosphere
+General Forest fires Airplanes Portable Distant galaxies +
+object of study telecommunication | unknown
+
+or interaction centers phenomena
+
+Alternative Fire Skin (radar, visible) | Current radio Quasars
+mission (visible or IR) Plume (IR) Current CB Galaxies
+subjects Smoke
+
+Standard TV Planets
+
+New Visible spectrum
+telecommunication
+center
+
+Radio emissions
+
+(visible or IR) (RF)
+
+Increased
+CO,
+
+Decreased
+vegetation
+
+Unknown objects
+Cellular relay
+
+Radar vs. IR vs.
+active RF
+
+Complexity of truck | Is the subject known
+
+trades detection element vs. com-_ | or unknown? Is it
+probably best plexity of space & | objects or spectral
+choice ground station regions?
+
+Key subject |None—IR
+
+Commenis
+
+See low-cost
+alternative in
+Chap. 22
+
+Need to examine
+goals; cooperative
+vs. noncooperative
+
+targets; high density
+vs. ocean tracking
+
+We do not always know whether a given mission has passive or active subjects; in
+some cases, we can choose either type. For example, we could detect airplanes
+passively with an IR sensor or radar, or actively by listening for or interrogating a
+transponder on the airplane. Chapter 22 summarizes an alternative for sensing forest
+fires by using equipment on the ground and then relaying it to space—a technique
+possible for various mission types. Satellites that monitor the weather or environment
+could do complex observations or simply collect and relay data from sensors on the
+ground.
+
+The next step is to determine whether we need multiple subjects (and, probably,
+multiple payloads) to meet our mission objectives. Using multiple subjects at the same
+time has several advantages. This approach can provide much more information than
+is available from a single subject and can eliminate ambiguities which occur when
+observing only one aspect. On the other hand, multiple subjects typically require mul-
+tiple payloads, which dramatically drive up the space mission’s cost and complexity.
+Thus, a principal trade is between a low-cost mission with a single subject and single
+payload vs. a more expensive mission that achieves higher performance by using
+several payloads to sense several different subjects related to the same objective.
+
+For FireSat, we tentatively select the heat of the forest fire as the subject of the
+mission, keeping in mind that this may change as the design evolves. Of course, we
+should make these trades as rapidly as possible because they strongly affect how the
+mission is done.
+
+9.3 Background 255
+
+Finally, as always, we should document the subject selection and review it
+frequently during the program’s early stages, looking for other possible methods and
+subjects. Looking for alternative subjects is perhaps the single most important way to
+drive down the cost of space missions. We need to continually ask ourselves, “What
+are we trying to achieve, including the tacit rules of the program, and how can we
+achieve it?”
+
+9.3 Background
+
+9.3.1 The Electromagnetic Spectrum
+
+As Fig. 9-4 illustrates, the electromagnetic spectrum is a broad class of radiation. It
+includes gamma rays and X-rays, with extremely short wavelengths measured in
+angstroms (A=10-!0 m), as well as visible and infrared (IR) wavelengths of 10-7 to
+10-3 m and the microwave region from 0.1 to 30 cm. Finally, it ranges into the radio
+spectrum, with wavelengths as long as kilometers. As the figure shows, satellite
+systems operate over the entire spectral range. Normal wavelengths for comsats,
+radars, and microwave radiometers range from approximately 1 meter to | millimeter,
+whereas visual and IR systems operate from around 0.35 to 100 microns (1 micron =
+10-6 m= 1 pm).
+
+Gammaet GRANAT = DXS Nimbus
+COS-B ALEXIS OA0-2 SeaSat
+7 2 ROSATIUE IntelSat
+SAS-2 HEAO-2
+GRO CHANDRA EUVE (VISIBLE) 1 DomSats Muses-B RAE Voyager
+GAMMA Ty eayg | ULTRA |] INFRARED | a P10 (RF ———
+RAYS VIOLET aR) (EHF SHF UHF VHF HF MF LF VLF
+
+o1A 1A 10A 100K 0.4 am tum 10um 100pm Oem 1om 10cm 1m 10m 100m 1km 10km 100 km WAVELENGTH
+3x10" 3 x10 3 x103 x10°3x10° 3x10" 3.x1d°3 x1d? 3 x10 3x10 9x1 ax10® axt07 3x10® 9x10° 9x10" axto? FREQUENCY, Hz
+
+¢ ~
+¢ ~ NK
+/ ~
+/ __ ~
+~
+7 ST COBE RAS Earth USA
+0 OMSP. Attitude ~
+7” DMSP SOFIA SIRTF IRO Attitude ~
+/ ~ w
+VISIBLE NEAR INERARED wipote | FARiNeRARED | EXTREME
+veavon| V iweranep | (THERMALIR) | INFRARED
+04 06 08 1 15 2 3 4 6 8 10 15 20° 30 WAVELENGTH, um
+
+Fig. 9-4. The Electromagnetic Spectrum. The expanded view highlights visible and infrared
+wavelengths frequently exploited by satellites. Sample space missions across the
+entire spectrum are listed above the band region.
+
+For all electromagnetic radiation in a vacuum, the relation between the wavelength,
+A, and the frequency, v,* is
+
+c=Av=2.997 924 58 x 108 m/s (9-1)
+
+where c is the speed of light. Thus, in terms of frequency, the usable electromagnetic
+spectrum ranges from radio waves measured in kilohertz (kHz) to gamma rays with
+
+* Both v and f are commonly used to represent frequency. We use V throughout this chapter to
+avoid confusion with focal length, which is also represented by f-
+
+256 Space Payload Design and Sizing 9.3
+
+frequencies in the tens of exahertz (EHz). (1 kilohertz = 1,000 cycles/s = 300-km
+wavelength; 1 exahertz = 109 GHz = 10}8 cycles/s = wavelength of 3 angstroms or
+3.x 10-10 m.)*
+
+At any temperature above absolute zero (0 K), all matter continuously emits elec-
+tromagnetic radiation. This is called thermal radiation or blackbody radiation. For a
+perfect blackbody, the rate of total energy emission and the energy distribution by
+wavelength or frequency is a function only of the temperature, T. The actual spectrum
+of emitted radiation from a real object will depend on the surface characteristics for
+small objects, such as a spacecraft, or on the atmosphere for large objects, such as the
+Earth or Sun. Nonetheless, in practice the blackbody energy distribution is a good
+starting point for analysis. The spectral energy distribution of a blackbody is given by
+Planck’s Law:.
+
+— 2mhe? 1
+A qo echlkTA _y (9-2)
+
+where E, is the energy per unit wavelength (also called the spectral irradiance and
+typically measured in W:m-2+umr!), A is the wavelength, A is Planck’s constant
+(6.626 075 5 x 10-34 W:s2), T is the absolute temperature, c is the speed of light, and
+kis Boltzmann’s constant (1.380 658 x 10-23 W's/K). Figure 9-5 shows typical energy
+distribution curves for various blackbody temperatures. When E£, is divided by the
+solid angle (in steradians) leaving an extended source in a given direction, it becomes
+L, the spectral radiance (typical units, Wem-2*um~!+sr-!),
+
+Frequency (Hz)
+1018 1014 1910 106
+1
+
+=
+20 —4 =
+E 10 Wien’s law,Am  , 10 |
+Ne \ NE
+= 18 5
+g 1010 2
+< Planck’s law, Ey ®
+& -12 £
+3 10 =
+£ 1 Stefan- 49-16 ro
+2 Boltzmann's ‘ =
+f7,) equation, E a
+— a
+
+197-20
+
+49-10 UV VIS Infrared Microwave
+b- 19-24
+
+4o-12 (1A) 1078) (tym) 10-4 (10m) 1 ~=©102 104
+
+Wavelength (m)
+
+Fig. 9-5. Planck’s Blackbody Radiation Curves as a Function of Wavelength and Fre-
+quency [Chen, 1985]. Planck's law defines the shape of the curve over all frequencies,
+the Stefan-Boltzmann’s law defines the area under the curve (the total energy emitted
+over ail wavelengths), and Wien’s displacement law defines the wavelength of
+maximum radiance.
+
+* A list of all metric prefixes is at the front of Appendix F.
+
+9.3 Background 257
+
+From Planck’s Law we can derive two other important relations. First, we obtain
+the Stefan-Boltzmann’s Law by integrating Eq. (9-2) over the complete spectrum,
+yielding the total radiant emittance, W,:
+
+W, =0T4 (9-3)
+
+where o is the Stefan-Boltzmann constant, 5.670 51 x 10-8 W-m~2+K-, and W, is
+typically in W/m2. Second, we derive Wien’s Displacement Law by differentiating
+Eq. (9-2) and setting the result equal to zero. The straight-line result defines the locus
+of peak spectral radiance vs. temperature, as shown on Fig. 9-5 and defined by
+
+Amax = 2,898 /T (9-4)
+
+where Aja, is in wm when T is in K.
+
+Remote-sensing instruments are aimed at a target on the Earth’s surface or in space.
+Radars measure the characteristics of reflected, self-generated signals. For other
+sensors, an object’s spectral radiance, or brightness, depends on its equivalent black-
+body temperature. This is the temperature of a perfect radiating body which has the
+same total radiance. Visual systems, which use film or solid-state detectors to form the
+images, can take advantage of the Sun’s reflected energy, based on its blackbody
+temperature of about 6,000 K. Of course, without sunlight, visual images are much less
+distinct. On the other hand, systems using infrared and microwave radiometry measure
+scenes against the Earth’s intrinsic thermal radiation background (corresponding to
+about 300 K). Thus, they can operate day or night, as well as through clouds and other
+atmospheric disturbances. Note, though, how much weaker the signals are in the RF
+bands compared to the IR ranges.
+
+As Fig. 9-6 shows, the electromagnetic spectrum has many frequency bands for
+which the Earth’s atmosphere is nearly opaque. We must avoid these bands if we wish
+to observe ground scenes. This phenomenon also allows us to sound the atmosphere
+and measure such interesting data as the thickness and location of cloud layers, water
+vapor contained in clouds, and other upper-atmospheric phenomena using the opaque
+bands. Clouds, rain, and snow tend to produce noise and thus attenuate signals for both
+communication and remote-sensing, even in the window bands.
+
+When a sensor views an area in space, the radiation that reaches the sensor could
+come from a number of sources. The energy reflected directly from the target is
+usually the dominant feature of interest for optical remote sensing, but other emitted,
+reflected and scattered energy can complicate the picture. The primary (direct) and
+secondary (single scatter) sources of electromagnetic radiation are shown in Fig. 9-7.
+
+The sources of radiation in Fig. 9-7 give rise to a number of different strategies for
+distinguishing different phenomena within the atmosphere or on the surface. For a given
+application, any of the sources of radiation will either be the subject being analyzed or
+noise to be minimized. Radiative measurements include the full complexity of all the
+effects on that radiation such as reflection, refraction, absorption, transmission, and
+scattering by material substances in solid, liquid, and gaseous phases. Distinguishing
+and identifying features using remote sensing techniques must take all of these vari-
+ables into account. As Miller and Friedman [1996] advise, ““when modeling the real
+world, allow for some slack to represent reality.”
+
+9.3.2 Basic Telescope Optics
+
+A brief review of physical optics and antenna theories will show that systems for
+gathering or transmitting optical and RF signals are exactly the same in theory—only
+
+258 Space Payload Design and Sizing 9.3
+
+Near Infrared Mid Infrared Far Infrared
+
+0.3 0.5 1.0 15 20 3.0 5.0 10.0 15.0 20.0 30.0
+Wavelength (um)
+
+Far Infrared <|-> Microwave
+
+Transmission (%)
+
+100
+
+80
+
+60
+
+40
+
+20
+
+0 ES ee eee es
+
+300 500 1000 05 1.0 5.0 10
+
+-——___—___ Wavelength (cm)
+Wavelength (um) 60 30 10 6 3
+
+Frequency (GHz)
+
+Fig. 9-6. Transmission Characteristics of the Earth’s Atmosphere. Transparent regions are
+referred to as windows in the atmosphere.
+
+the physical hardware is different. Thus, a mirror (in visual and IR systems) and the
+reflector of a dish antenna (in microwave radiometry and radar) are equivalent. This
+section only summarizes remote-sensing instrument analysis. The Manual of Remote
+Sensing [Colwell, 1983] provides an extensive discussion, including image analysis.
+Seyrafi’s [1985] treatment is also comprehensive, and ends with a design example of
+a thermal imaging system for a spacecraft.
+
+In this discussion, we treat reflective systems (optical systems using mirrors) and
+refractive systems (optical lens systems) together and refer to them both as optical
+systems. Reflective and refractive systems have advantages and disadvantages, which
+we will discuss later.
+
+There are several ways to describe an optical system. Parallel rays of light falling
+on a perfect lens will all converge at the focal point, whose distance from the lens is
+called the focal length, f. The focal length largely determines the length of the optical
+collection system and for a single lens, it is related to the lens surface’s radius of
+curvature. The focal length of a spherical reflecting surface is one-half its radius. For
+a parabolic reflector whose surface is defined by the equation z2 = 4fy, the quantity f
+is the focal length; it equals the distance from the focus to the nearest point on the
+reflecting surface.
+
+In design practice, we normally determine the required focal length based on field
+of view and the size of the image plane. The plate scale, s, or length per field-of-view
+
+9.3 Background 259
+
+PFA Sensor
+
+Atmosphere
+
+Earth Surface
+
+Fig. 9-7. Sources of Radiation. Radiation that reaches the sensor can come from a number of
+different sources. The diagram illustrates all direct and single-scatter radiation that
+reaches a space sensor. The sources of radiation are: (1) sunlight scattered by the
+atmosphere into the sensor; (2) sunlight reflected off the Earth and then scattered by
+the atmosphere into the sensor; (3) sunlight reflected off the Earth’s surface; (4) sun-
+light scattered by the atmosphere then reflected off the Earth’s surface into the sensor;
+(5) ground emission; (6) ground emission scattered by the atmosphere into the sensor;
+(7) atmospheric emission; (8) atmospheric emission reflected by the Earth’s surface
+into the sensor; and (9) atmospheric emission scattered by the atmosphere into the
+sensor. [Adapted from Kramer, 1996.]
+
+angle is given by
+
+s=f unit length/rad
+= 0.01745 f unit length/deg (9-5)
+
+where s and fare in the same units. The image size is a function of s and the size of the
+detector—-ranging from a single element to a large array—employed at the focal plane.
+As Fig. 9-8 shows, the focal length needed to record an object or scene of radius R is
+given by
+
+f ld . :
+no OR magnification (9-6)
+where h is the distance from the spacecraft to the object, 77 is the radius of the detector
+array in the image plane, and R is the radius of the object, with the image and object
+measured perpendicular to the line of sight. The magnification or scale = rj /R is the
+ratio of the image size to the object size. It is ordinarily a very small number for satel-
+lites. We express the scale on the image plane as “1 cm equals x km on the ground.”
+We can also describe an optical element or system by its so-called infinity F-num-
+ber or F-stop, often written as f /(read “F-stop”), F, F No., or F#. It is defined as f/D,
+where D is the aperture or diameter of the lens. Image brightness is proportional to
+1/F-2, so an F-4 lens gives an image four times brighter than an F-8 lens.
+
+260 Space Payload Design and Sizing 9.3
+
+Pixel of Ground-resolution Element in image Plane
+
+— — — — Image Plane (Radius = ry)
+
+Detector Field Area Ag = nry?
+
+Field Stop for Aperture with Diameter = D
+
+y= A/h2, (Normal to Boresight)
+= Solid Angle Field of View
+
+6 = 2tan~1(r4/f) = Angular Diameter
+of Field of View
+
+Target
+
+1
+!
+1)
+t
+!
+i
+‘
+1)
+'
+‘
+t
+5 1
+Ray from t
+Edge of !
+‘
+t
+i)
+} Scale = Magnification = ry/R = f/h
+1
+;
+!
+1)
+1)
+1)
+
+@,= Solid Angle Defining
+Upwelling Flux
+= Agcos8;/(h/icos8;)? 7(0,/2)o
+
+— — —> Object Plane (Radius = A)
+
+Ground Object (Field of View)
+A=nR2 =n (htan(6/2))2
+Contains One or More Ground
+
+Ground Pixel
+i
+
+1
+
+' Resolution Elements
+
+or Projection
+of Detector Pixel
+
+Boresight
+
+Fig. 9-8. Optical Characteristics of a Refractive System. Note one-to-one correspondence of
+the ground-resolution element's size to the pixel size at the image plane. The operating
+wavelength is 4. As resolution elements move away from nadir, flat-Earth approxima-
+
+tions become less precise. See Chap. 5 for additional details.
+
+9.3 Background 261
+
+The numerical aperture, NA, gives the same information in another way:
+
+Aci _P.
+ 2FH 2f (9-7)
+or ree tf (9-8)
+2NA D
+
+The largest numerical aperture for optics used in air is 1. Thus, the smallest F# is 0.5.
+
+All optical systems suffer from aberrations, or imperfections in the image quality,
+in addition to diffraction which limits the system resolution as discussed in Sec. 9.3.3.
+The principal optical aberrations are listed in Table 9-7. Chromatic aberration, or
+imperfections which are color or wavelength dependent, arises from various wave-
+lengths being bent by different amounts when they pass through a lens. Consequently,
+only systems with at least one refractive element suffer chromatic aberration because
+reflective surfaces treat all wavelengths the same. (This is not absolutely true since
+some surfaces will reflect visible light, for example, but not X-rays. However, when
+reflection does occur it is independent of wavelength to first order.)
+
+TABLE 9-7. Principal Aberrations in Optical Systems. See Table 9-8 for which of these are
+mitigated in various optical systems.
+
+Chromatic Aberration = dispersion of the light due to the refractive index of a lens being a
+function of the wavelength. Causes different colors to focus at different distances.
+
+Spherical Aberration = dispersion in which light from the periphery of a spherical lens or
+mirror is focused nearer the element than light from the center. Can be eliminated by making
+the optical surface parabolic, rather than spherical.
+
+Coma = dispersion of off-axis portions of the image. (So named because in a telescope off-
+axis star images look like tear drops or the coma of a comet pointing toward the center of the
+image.)
+
+Astigmatism = aberration in which the distorted image is asymmetric such as when light in
+a horizontal plane comes to a slightly different focus than light in a vertical plane. A common
+problem in human vision.
+
+Distortion = when an otherwise sharp image is distorted in shape, such as when straight
+lines on the surface being viewed appear curved on the focal plane. A uncorrectable distortion
+occurs when trying to image the celestial sphere onto a flat focal plane. (See Sec. 5.1.)
+
+Curvature of Field = when a sharp image is formed on a focal surface which isn't flat. Can
+be corrected in film systems by using a slightly curved focal plane.
+
+Figure 9-9 shows the three basic types of telescopes. In each of the three, there is a
+corresponding refractive and reflective instrument. The aberrations which can be cor-
+rected in each type are shown in Table 9-8. The lens doublet is the classic refractive
+telescope lens. The doublet can be designed to eliminate spherical aberrations, coma,
+distortion and chromatic aberrations (see Table 9-8). In tele-optic lens systems the dis-
+tance between the optical element and the focal plane is shorter than the focal length.
+Tele-optic lenses can-eliminate spherical aberrations, coma, astigmatism, and curva-
+ture of field effects. They can also overcome chromatic aberrations. The lens triplet is
+the simplest refractive (spherical) optical system that theoretically allows for correc-
+tion of all distortions. The price we pay for this advantage is the very high sensitivity
+of each of the optical elements with respect to displacement or tilt. The ray traces in
+
+262 Space Payload Design and Sizing 9.3
+
+——
+eS
+
+(A) Lens Doublet (D) Schmidt
+
+(C) Lens Triplet (F) TMA
+
+Fig. 9-9. Basic Configurations for Refractive and Reflective Optica! Systems. Each of the
+reflective systems on the right is analogous to the corresponding refractive system on
+the left. TMA = Three-mirror anastigmatic.
+
+TABLE 9-8. Aberrations that can be Corrected by the Three Basic Optical Systems.
+Checks indicate errors that are fully correctable and parenthetical checks indicate
+that corrections are possible only for dedicated design parameters. (See Table 9-7
+for definitions).
+
+Image Error Doublet/Schmidt | TeleOptic/Cassegrain | Triple/TMA
+Lateral Chromatic Aberration Vv Vv Vv
+
+Vv
+
+Coma
+
+Astigmatism (v)
+Distortion (vw)
+Curvature of Field (v)
+
+Fig. 9-9 indicate different locations of the image in the focal plane corresponding to
+various viewing angles. The Jens triplet compensates for all five of the third-order
+aberrations: spherical aberrations, coma, astigmatism, curvature of field, and distor-
+tion. It too is free from chromatic aberrations. The same behaviors are present in the
+corresponding reflective systems. The Schmidt Mirror System is an all-reflective
+
+9,3 Background 263
+
+doublet, and the Cassegrain telescope is a reflective implementation of a tele-optic
+lens. The Three-Mirror Anastigmatic system is comparable to the lens triplet with
+respect to all the aberration corrections, but with an all-reflective design. Reflective
+optical systems generally are free from chromatic aberrations. However, reflective
+systems typically have a much smaller field of view than their refractive counterparts.
+In reality, optical systems for space remote sensing are far more complex because
+the technologies for manufacturing the lenses and mirrors are limited and other effects
+such as thermal distortions and radiation effects can alter the performance of the
+instrument. Thermal distortions can limit the performance of an optical system, even
+if the operating temperature range is regulated within a few degrees for high perfor-
+mance optical systems, and cosmic radiation effects can degrade the transparency of
+most optical glass over time. Figure 9-10 shows the lens cross section of the high-
+resolution optical lens system of the German-built Modular Optoelectronic Multispec-
+tral Scanner (MOMS 2P) instrument designed to achieve 6 m resolution on the ground.
+
+SL,
+
+ee eee
+
+Fig. 9-10. Lens Cross Section of the Panchromatic Objective of the MOMS 2P Instrument.
+The sensor has a focal length of 0.66 m and an aperture size of 0.15 m. The
+complexity of this optical system is representative of sophisticated remote sensing
+payloads.
+
+9.3.3 Diffraction Limited Resolution
+
+The resolution of an optical system is its ability to distinguish fine detail. In general
+resolution is expressed in angular terms. Thus, a telescope that can just distinguish or
+resolve two stars which are very close together is said to have a resolving power equal
+to the angular separation of the stars. For Earth observing systems we are more inter-
+ested in the ability to see or resolve fine detail on the surface. Thus, for these systems
+resolution is commonly expressed in terms of the size of an object on the Earth that
+can just be distinguished from the background. To read this page requires a resolution
+of about 0.1 mm, whereas you may be able to distinguish a large newspaper headline
+with a resolution of 1 cm.
+
+No matter how good the quality of the lens or mirror, a fundamental limitation to
+resolution is diffraction, the bending of light that occurs at the edge of the optical sys-
+tem. Even for a perfect optical system, diffraction causes the image of a point source
+of light, such as a distant star, to appear not as a point on the focal plane but as a series
+of concentric circles getting successively dimmer away from the center, as shown in
+
+264 Space Payload Design and Sizing 9.3
+
+Fig. 9-11. This pattern is called the diffraction disk, the Airy disk*, or the point spread
+function. The angular distance, 0,, from the maximum at the center of the image to the
+first dark interference ring, called the Rayleight limit, or Rayleigh diffraction criteria,
+is given by
+
+6, =1.22 A/D (9-9)
+
+where A is the wavelength, D is the aperture diameter of the optical instrument, and 6,
+is expressed in radians. The bright maximum at the center of the Airy disk, out to the
+first interference minimum, contains 84% of the total energy which arrives at the focal
+plane from a point source. For a satellite at altitude, h, the linear resolution or ground
+resolution, X, at nadir is just
+
+X’=2.44 hA/D (9-10)
+
+where we have replaced the radius from Eq. (9-9) with the diameter of the resolution
+element. In this expression, h can be replaced by the slant range, Rs, from Eq. (5-28),
+to determine the resolution away from nadir (Ry here = D in Chap. 5). Note however,
+that this is the resolution perpendicular to the line of sight and is made larger (ie.,
+worse) by 1/sin €, where €é is the elevation angle at the orbital point in question,
+obtained from Eq. (5-26a). The ground resolution at nadir for several typical wave-
+lengths and aperture diameters is given in Table 9-9.
+
+Ground
+Resolution
+Element,
+x
+
+Orbit Height, h
+Resolution, 6,
+
+Point Spread
+Function
+
+Fig. 9-11. Point Spread Function for Imaging System with Diffraction. The optical wave
+front from an ideal point source on the ground is imaged as the point spread function
+by the optical system. The diameter of the aperture and the wavelength determine the
+extent of the point spread function measured by the diameter, d‘, of the first intensity
+minimum.
+
+When we implement an optical system using a detector array, we add an additional
+design parameter, the quality factor, Q, defined as the ratio of the pixel size, d, to the
+diameter of the diffraction disk or point spread function, a’, i.e.,
+
+Q =d/d’=X/X’ (9-11)
+
+where d’is the diameter of the first minimum in the diffraction image (i.e., twice the
+angular resolution), X is the ground pixel size, and X ‘is the ground resolution = diam-
+eter on the ground corresponding to d’on the focal plane (see Fig. 9-12). Q typically
+ranges from 0.5 to 2. For Q < 1, the pixels are smaller than the diffraction disk and
+resolution is limited by diffraction in the optics. This gives the best possible image
+
+* Named for Sir George Airy, the British Astronomer Royal from 1835 to 1881.
++ Named for Sir John Rayleigh, a 19th century British physicist and 4th recipient of the Nobel
+prize for physics.
+
+9.3 Background 265
+
+resolution for a given aperture. For Q > 1, the resolution is limited by pixel size. This
+will be done if image quality is less important than aperture size, as would be the case,
+for example, when increased light gathering power is required. As a starting point for
+the design, select Q = 1, which allows good image quality.
+
+From the definition of the magnification, Eq. (9-6), we have:
+
+d/X=d'/X'=f/h (9-12)
+and from the small angle approximation for the angular resolution, 8,, we have:
+6, = tan 6, =d’/(2f)= 1.22 A/D (9-13)
+
+Combining Eqs. (9-11) to (9-13), we obtain expressions for the pixel size, d, in terms
+of the other basic system parameters:
+d=d’X/X'=d'Q=(244Af/D)Q (9-14)
+
+where the parameters are defined above and, as usual, A is the wavelength, fis the focal
+length, and D is the aperture diameter.
+
+[ Pixel
+Pixel
+iy.
+d' d d' fa
+I Q>1 mQ<1
+
+Fig. 9-12. Effect of Varying Quality Factor. Different sizing of the detector pixel with respect
+to the point spread function is shown by varying the Quality Factor, Q. A large quality
+factor results in the relative sizing in the diagram on the left and a low quality factor
+results in the relative sizing in the diagram on the right.
+
+TABLE 9-9. Diffraction-Limited Resolution. Note that the Synthetic Aperture Radar provides
+resolutions similar to visual or IR systems, independent of range and wavelength
+for ranges up to the maximum signal-to-noise limit by synthesizing the required
+aperture.
+
+Ground Resolution = 2.44h//D
+Aperture Visible IR Passive Microwave
+Size, D [A= 0.5 pm] [A=3 um] } [f= 10 GHz; A= 3 cm]
+
+craft at h = 900 km 0.366 m = 14.4 in. 22 km = 13.6 miles
+
+874 km = 543 miles
+
+From a synchronous
+spacecraft
+(h = ~35,800 km)
+
+From SR-71 at
+h = 20 km (70,000 ft)
+
+
+266 Space Payload Design and Sizing 9.4
+
+9.4 Observation Payload Design
+
+The electromagnetic radiation that forms the basis of remote sensing arises as a
+by-product of energy being transferred from one form to another. In general, trans-
+formation processes that are more random produce wider bandwidth signatures, while
+a more organized process produces a more coherent return [Elachi, 1987]. For
+example, heat generated by a diesel motor is radiated over a wide bandwidth in the
+infrared spectrum, while a laser (a more organized energy transformation) generates
+narrow bandwidth radiation. In spacecraft remote sensing we are concerned with
+processing measurements from four primary spectral types.
+
+Visible systems operate from the ultraviolet (~ 0.3 rm) to the red end of the visual
+spectrum (~0.75 um). They offer the potential for high spatial resolution because of
+their short wavelengths, but can only operate in daylight because they depend on
+reflected sunlight.
+
+Infrared systems operate in various bands throughout the infrared spectrum
+(~1-100 wm) subject to atmospheric transmission windows. Infrared sensors can
+operate both day and night since the detected signal is a function of the emissivity of
+the scene (although the signatures will be different by day and night).
+
+Microwave radiometers operate in the radio frequency range, chiefly at the milli-
+meter wavelengths (20-200 GHz). Their resolution is three to five orders of magnitude
+worse than visible wavelength sensors with the same aperture size, but they are
+capable of collecting unique information over large areas. Typically, microwave
+sensor require extensive ground-truth calibration data to interpret the measurements.
+
+Radar systems are active instruments which provide their own illumination of the
+scene in the centimeter to millimeter bands. The reflected signals can be processed to
+identify physical features in the scene. Radar systems can be designed to penetrate
+most atmospheric disturbances, such as clouds, because only larger features can reflect
+signals at radar wavelengths. Cantafio [1989] provides an extended discussion of
+space-based radar.
+
+There are a number of different approaches for linking the fundamental physics of
+the Planck function to the practical design of remote sensing systems. Hovanessian
+[1988] treats emitted radiation as a signal to be detected and considers remote sensing
+essentially as a special case of antenna and propagation theory (even in the visible
+spectrum). Elachi [1987] begins with Maxwell’s equations and focuses on the features
+of electromagnetic radiation, such as quantum properties, polarization, coherency,
+group and phase velocity, and Doppler shift to derive strategies for exploiting these
+features in different parts of the frequency spectrum. McCluney [1994] draws on the
+parallels between the science of radiometry and remote sensing in general and the
+science of the human eye as expressed in the literature of photometry. These references
+provide detailed, application-specific derivations beginning with Planck’s Law. Our
+focus for the remainder of this chapter will be on engineering applications and rules-
+of-thumb to define and design remote sensing payloads.
+
+Observation geometry, effective aperture, integration time, detector sensitivity,
+spectral bandwidth, transmission through the atmosphere, and ground pixel size deter-
+mine the radiometric performance of an optical instrument. Depending on the spectral
+range, we define three basic categories of Earth observation. In the first case, the
+optical instrument receives reflected radiation from the surface of the Earth when it is
+illuminated by the Sun. The thermal emitted radiation of the Earth’s surface is negli-
+gible in this case. The frequency range covered by this case includes the visible wave-
+
+9.4 Observation Payload Design 267
+
+length (0.4-0.78 fm), the near infrared wavelength (0.78-1 jm), and the short
+wavelength infrared (1-3 jum).
+
+The second case involves optical instruments receiving emitted radiation from the
+surface of the Earth when the reflected radiation of the sun is negligible. This condition
+holds for the long wavelength infrared region (8-14 ym). The third case applies to the
+mid-wavelength infrared spectral region (3-5 jam) where we must consider contribu-
+tions from direct and reflected sources. Figure 9-13 shows the radiance available from
+direct and reflected radiation sources. Corresponding to Planck’s law, the thermal
+emitted radiance of the Earth (modeled at 290 K) increases with wavelength for the
+spectral region shown. The reflected radiance from the Earth’s surface decreases with
+wavelength.
+
+10’
+Earth
+= | Reflected Thermal
+‘ 7 Sunligh , Radiation
+[2
+¢
+E
+=
+10°
+o
+.*)
+at
+S&S
+be]
+Ly]
+is
+
+4 (um)
+
+Fig. 9-13. Radiance from Direct and Reflected Sources. Radiance contribution in W per
+square meter per meter (wavelength) per unit solid angle of reflected sunlight from
+the Earth and emitted radiation from the Earth as a function of wavelength. The sum
+is shown as a dashed line. The Sun is modeled as a blackbody with a temperature of
+6,000 K, the reflection coefficient of the Earth’s surface and the transmission of the
+atmosphere are modeled as constants for clarity.
+
+In the visual and near IR (0.7 to 1.0 pm) bands, we resolve images produced by
+energy (chiefly from the Sun) reflected from the target scene rather than energy from
+the very limited self-emissions that occur in the visible band. But in the infrared, we
+see things almost entirely by their self-emission, with very little energy being reflected,
+particularly at night. We may use the same optical train elements—lenses, prisms,
+mirrors, and filters—to collect infrared energy as for visible and UV, but we must
+apply them differently. For example, ordinary glass is opaque to IR beyond 3 pm,
+whereas germanium, which is opaque in the visible band, is transparent in the 1.8 to
+25-~m region. Further, we must consider atmospheric scattering caused by aerosols
+and particles in the air. The amount of scattered radiation is a function of the inverse
+fourth power of the wavelength. Thus, IR penetrates haze and dust much better than
+visible radiation because the IR wavelengths are four or more times those in the visible
+
+268 Space Payload Design and Sizing 9.4
+
+spectrum. The same phenomena explain the reddish color of the sky near dawn and
+sunset. At these times, shorter green, blue indigo, and violet wavelength signals are
+greatly attenuated as they travel farther through the atmosphere than when the Sun is
+overhead.
+
+9.4.1 Candidate Sensors and Payloads
+
+Electro-optical imaging instruments use mechanical or electrical means to scan the
+scene on the ground. Spacecraft in geostationary orbits perceive very little relative
+motion between the scene and the spacecraft, so an optical instrument needs to scan in
+two dimensions to form an image. A common approach for geostationary imaging
+spacecraft, such as ESA’s meteorological spacecraft, METEOSAT, involves placing
+a large scan mirror in front of the instrument’s optics to perform the north-south scan.
+Rotation of the spacecraft around a north-south axis performs the east-west scan.
+Three-axis stabilized spacecraft in geostationary orbits frequently use a two-axis scan
+mirror in front of the optics to scan the scene in two dimensions. Alternatively, we can
+use a two-dimensional matrix imager, which maps each picture element (pixel) in the
+imager to a corresponding area on the ground. Scanning the scene then becomes a
+process of sampling the two-dimensional arrangement of pixels in the imager.
+
+Spacecraft in low-Earth orbits move with respect to the scene. The sub-spacecraft
+point moves along the surface of the Earth at approximately 7,000 m/s (see Chap. 5).
+This motion can replace one of the scan dimensions, so the scanning system of the
+optical instrument needs to perform only a one-dimensional scan in the cross-track
+direction. Whiskbroom sensors scan a single detector element that corresponds to a
+single pixel on the ground in the cross-track direction. Fig. 9-14A illustrates this tech-
+nique. Whiskbroom scanners can also use several detectors to reduce the requirements
+compared to a single detector. Each detector element corresponds to a pixel on-ground
+(see Fig. 9-14B), and the dwell time per pixel is multiplied by the number of detector
+elements used.
+
+Push broom scanners use a linear arrangement of detector elements called a line
+imager covering the full swath width. The name “push broom” comes from the
+read-out process, which delivers one line after another, like a push broom moving
+along the ground track. Each detector element corresponds to a pixel on-ground.
+Fig. 9-14C illustrates this technique. The ground pixel size and the velocity of the
+sub-spacecraft point define the integration time.
+
+Step-and-stare scanners use a matrix arrangement of detector elements (matrix
+imager) covering a part or the full image. Each detector element corresponds to a pixel
+on-ground. Fig. 9-14D illustrates this technique. Step-and-stare systems can operate in
+two basic modes. The first mode uses integration times that are chosen as in the case
+of the push broom sensor for which the ground pixel size and the velocity of the sub-
+satellite point determine the integration time. Thus, no advantage with respect to the
+integration time is achieved, but a well known geometry within the image is guaran-
+teed. We need a shutter or equivalent technique, such as a storage zone on the imager,
+to avoid image smear during read-out. The second mode allows a longer integration
+time if the image motion is compensated to very low speeds relative to the ground. We
+can do this by shifting the imaging matrix in the focal plane or by moving the line of
+sight of the instrument by other means to compensate for the movement of the sub-
+spacecraft point. Step-and-stare sensors require relatively complex optics if they must
+cover the full image size. An additional complexity is that the fixed pattern noise has
+to be removed from the image, since each pixel has a somewhat different responsive-
+
+9.4 Observation Payload Design 269
+
+V4 V4
+
+Ground Track Ground Track
+
+Ground Pixel Ground Pixels
+
+-—_—____———%» /” Scan Direction 7—_________¥&» / Scan Direction
+
+Swath Width Swath Width
+
+A. Single-element Whiskbroom Sensor B. Multi-element Whiskbroom Sensor
+
+V4 +
+
+Ground Track Detector pixels Ground Track
+arranged in a two-
+dimensional matrix
+corresponding to
+the ground pixel
+
+arrangement
+
+Linear arranged
+detector pixels
+corresponding to
+linear arranged
+ground pixels
+
+across-track
+
+Swath Width
+Swath Width
+
+C. Push Broom Sensor D. Matrix Imager
+
+Fig. 9-14. Scanning Techniques for Electro-Optical Instruments. (A) Shows a whiskbroom
+scanner with a single detector element which scans one line after another across the
+swath. The swath width must be scanned in the time interval the sub-spacecraft point
+moves down one ground pixel length. (B) Shows a whiskbroom scanner with multiple
+detector elements which scan multiple lines across the swath at a time. The swath
+width must be scanned in the time interval the sub spacecraft point moves down the
+multiple ground pixel length. (C) Shows a push broom scanner with multiple linearly
+arranged detector elements which scan one line across the swath per integration
+time. The integration time is usually set to the time interval the sub-spacecraft point
+moves down one ground pixel length. (D) Shows a step-and-stare scanner with
+detector elements arranged in a matrix which scan the full image per integration time.
+The integration time is usually set to the time interval the sub-spacecraft point needs
+to move down one ground pixel length.
+
+ness and dark signal. Table 9-10 summarizes the distinguishing features of optical
+scanning methods.
+
+An alternate approach for capturing the scene using matrix imagers involves
+positioning of the scene with respect to the instrument. To image the entire scene, the
+instrument shifts, or “steps,” to the next part of the scene (along-track and/or across-
+track) after the integration period. This approach is referred to-as a step-and-stare
+imager. If it only covers a part of the required scene, then moderately complex (and
+also moderately sized) optics is required. We can use highly agile and accurate point-
+ing mirrors in front of the instrument’s optics to adjust the line of sight. For example,
+the Early Bird satellite avoids the complexity of large matrix imagers or sophisticated
+
+270 Space Payload Design and Sizing 9.4
+
+TABLE 9-10. Comparison of Optical Sensor Scanning Methods. We list relative advantages
+and disadvantages of different scanning mechanisms.
+
+Whiskbroom Scanner— | High uniformity of the response | Short dwell time per pixel
+Single Detector Element | function over the scene High bandwidth requirement and
+
+Relatively simple optics time response of the detector
+
+Whiskbroom Scanner— | Uniformity of the response Relatively high bandwidth and
+Multiple Detector function over the swath time response of the detector.
+
+Elements Relatively simple optics
+
+Push Broom Sensor Uniform response function in the | High number of pixels per line
+along-track direction. imager required
+
+No mechanical scanner required | Relatively complex optics
+
+Relatively long dwell time
+(equal to integration time)
+
+Step-and-Stare Well defined geometry within the | High number of pixels per matrix
+
+Imager with _ image imager required
+
+Detector Matrix Long integration time (if motion | Complex optics required to cover
+compensation is performed). the full image size
+
+Calibration of fixed pattern noise
+for each pixel
+
+Highly complex scanner required
+if motion compensation is
+performed.
+
+butting techniques of several smaller matrix imagers in favor of pointing the mirror
+with high dynamics and fine pointing performance.
+
+Optical instruments for space missions usually rely on existing detector and imager
+designs. Custom tailoring of these detectors and imagers is common, however, to
+optimize the design with respect to performance and cost of the instrument. We make
+the distinction between detectors, which consist of one or a few radiation-sensitive
+elements without read-out electronics, and imagers, which usually consist of a con-
+siderable number of discrete radiation-sensitive elements combined with read-out
+electronics.
+
+We must select the materials used for detector elements depending on the spectral
+range of the instrument being designed. The ability of detector elements to absorb pho-
+tons relates directly to the energy of the incident photons (and consequently to the
+wavelength of the radiation as well) and the effective band gap of the material. All
+matter, including the detector material, generates thermal photons. Therefore, we must
+lower the temperature of the detector elements such that the self-generated photons do
+not degrade the signal-to-noise ratio of the instrument. This requirement becomes
+more stringent as the wavelength of the radiation being detected increases. With few
+exceptions, detectors and imagers have to be cooled for wavelengths in the short wave
+infrared (SWIR) band and longer.
+
+For the spectral range between 400 nm and 1,100 nm, silicon detectors and imagers
+are used most frequently. Silicon is attractive because it is possible to combine the
+detector elements and read-out electronics in a single monolithic chip. We can produce
+line imagers with a large number of elements through this process.
+
+Incident photons on a line imager are converted to an electrical output signal in the
+imager. For charge-coupled device (CCD) line imagers with read-out electronics, the
+process begins when incident photons are converted by each pixel (detector element)
+
+9.4 Observation Payload Design 271
+
+into electrons according to a conversion efficiency dictated by the characteristic spec-
+tral response. The electrons are then collected for the entire integration time for each
+pixel. The read-out of the charge generated—up to one million electrons per pixel—is
+performed via an analog shift register into a serial output port. Figure 9-15 shows a
+typical spectral response function for a silicon imager.
+
+5.0
+
+Responsivity (V/uJ/cm?)
+
+400 500 600 700 800 900 1,000 1,100
+Wavelength (nm)
+
+Fig. 9-15. Spectral Response Function of a Silicon Line Imager. The spectral response is
+shown in terms of the output voltage resulting from illumination by energy density vs.
+the wavelength from 400 to 1,100 nm. The imager reaches a quantum efficiency (gen-
+erated electrons per incident photon), denoted by 7, above 50% between 400-800
+nm. Outside this wavelength region the quantum efficiency drops to small values
+making the imager less suitable above 900 nm.
+
+Area array imagers, or matrix CCD imagers, provide an alternative to line imagers.
+The principles of operation are essentially the same as line imagers. Area array imag-
+ers offer the advantage of undistorted geometry within the image. A disadvantage
+compared to line imagers is the possible smear effect during frame transfer. There are
+a variety of read-out techniques to compensate for the smear effect. Matrix imagers
+can also suffer from a relatively poor fill factor of pixels in the array. Table 9-11
+summarizes line and matrix imager capabilities for current systems that are at least
+partially space qualified.
+
+When radiometric performance of the optical instrument is paramount, we use time
+delay and integration (TDI methods. TDI describes an imaging principle that uses the
+image motion along the rows of a matrix imager to extend the integration time.
+Integration time is extended by electronically shifting the integrating pixel cell syn-
+chronously to the movement along the row. The signal-to-noise ratio of this concept is
+improved by the square root of the number of TDI stages. The primary advantage of
+TDI imager systems compared to line imagers is the improved signal-to-noise ratio.
+The disadvantage is the increased requirement for spacecraft attitude and orbit stabil-
+ity (due to the required synchronization of the shifting pixel).
+
+We classify and select infrared detectors according to their spectral band of opera-
+tion and a figure of merit called specific detectivity or quantum efficiency for photon
+detectors. The operating temperature of the detector dictates the cooling requirements
+
+272 Space Payload Design and Sizing 9.4
+
+TABLE 9-11. Characteristics of Imagers. Typical parameters for available fine and matrix
+imager systems. Photo response nonuniformity is the difference between the most
+and least sensitive element under uniform illumination. Dark signal uniformity is
+equivalent to photo response nonuniformity, but without illumination. Dynamic
+range is the saturation exposure divided by the rms noise-equivalent exposure.
+Read-out speed is given in million samples per second (Msps) per output port.
+
+Characteristic Matrix Imager
+
+Se
+frame transfer mode
+
+Photo response nonuniformity
+
+Dark signal nonuniformity 5%
+
+Dynamic range 10,000 [5.000 ssid
+
+Limitations on read-out speed | ~10 Msps For example, 4 ports each at 20 Msps
+
+for the sensor focal plane. Infrared sensors often have nonnegligible time constants for
+response with respect to integration time. Because of technical difficulties with com-
+bining detectors and read-out structure, the total number of pixels in an IR detector
+array is limited in practice to several hundred.
+
+We detect infrared wavelengths with thermal detectors or photon detectors. Ther-
+mal detectors exploit the fact that absorbed heat raises the temperature of the detector,
+which changes its electrical characteristics. The advantage of thermal detectors is uni-
+form response with respect to wavelength. Thermal detectors can also be operated at
+ambient temperatures, although they have lower sensitivity and slower response times.
+
+Photon detectors use absorbed photons to generate charge carriers. These systems
+offer the advantages of higher sensitivity and shorter time response, but they must be
+operated at low temperatures.
+
+Infrared detectors are often rated by the specific detectivity, D*, given by
+
+px = NAA4S (9-15)
+NEP
+
+where A is the detector area, Afis the noise equivalent bandwidth, and NEP is the noise
+equivalent power of the detector. The factor D* is strongly wavelength dependent
+showing its peak value at the cut-off frequency. Figure 9-16 shows the specific detec-
+tivities and the operating temperatures for infrared detectors, and Table 9-12 gives
+characteristics of infrared detector arrays with read-out electronics.
+
+The selection of a detector or detector array (usually with a read-out multiplexer) is
+driven by several factors. The primary design issues center on maximizing detectivity
+in the spectral band of interest while operating at the highest possible temperature and
+a sufficiently small time constant. In addition, we must consider the geometry of the
+detector and the array as well as associated calibration issues.
+
+9.4.2 Payload Operations Concept
+
+In addition to the technical trade-offs in spacecraft performance, the operations
+concept for employing the sensor is an important consideration early in the prelimi-
+nary design. We need to understand the end-to-end mission problem—not merely the
+physics of collection. The entire process beginning with the ultimate users or customers
+of the data needs to provide a feasible and efficient means to meet mission objectives.
+
+9.4 Observation Payload Design 273
+
+1012 — —<- = 1012 =
+a : —t
++ —
+> lea! Photovoltaic
+Fa ‘eC =
+fh al Photoconductor
+Q iol ; W iol
+‘N t T af ‘N
+F ‘| ao Fat =
+§ | css = foe §
+— “ —
+=
+3 3
+—& 2 Y &
+w= i910 i = 4910 | =
+% Se 4 :
+& — i 4 i
+Ss So H
+P
+a | b ee
+109 poi - t 109 :
+i coed ae oo
+{ t t
++ it
+@ | ian (b)
+108 oe i 108 i i i
+10 15 20253 4°5678910 15 202530 40 40 1820253 4 5678910 15 202530 40
+Wavelength (zm) Wavelength (um)
+
+Fig. 9-16. Specific Detectivities and Operating Temperatures for Infrared Detectors.
+(Courtesy of Santa Barbara Research Center.) The specific detectivity, D*, is a nor-
+malized figure of merit for the class of infrared detectors for which the noise (voltage
+or current) is proportional to the square root of the detector area and the electrical
+noise bandwidth. The values given vs. the wavelength show a sharp cut-off to higher
+wavelengths when the lower energy incident photons no longer generate sufficient
+charge carriers within the detector. Additionally, the operating mode (photo-voitaic or
+photo-conductive) and the operating temperature of the detector is indicated. D* can
+be interpreted as the normalized inverse noise-equivalent power of the detector (with
+dimensions expressed as the square root of the detector area times the square root
+of the noise bandwidth divided by the noise-equivaient power).
+
+TABLE 9-12. Characteristics of IR Detector Arrays with Read-out Electronics. The table
+shows detector characteristics based on material properties. (Source: Photonics
+Specira, September, 1989.)
+
+Usable Spectral Operating Time
+Detector | Response Region | Temperature Array Constant T
+Material (uum) (K) Configuration (pts)
+
+128 x 128 100 x 100 | 0.020-0.200
+1,024 x 1 100 x 100 | 0.020-0.200
+64 x2 40x40 | 0.020-0.200
+256 x 256 100 x 100 0.2-0.8
+512 x 30 100 x 100 0.2-0.8
+
+64 x 64 65 x 65 100
+
+- 1,024 x 1 65 x 65 100
+256 x 256 100 x 100 0.2-0.8
+1,024 x 1 100 x 100 0.2-0.8
+288 x 4 25 x 28 0.2-0.8
+
+64 x 64 75 x 75 0.1-5
+
+1,024 x 1 75 x 75 0.1-5
+
+
+274 Space Payload Design and Sizing 9.4
+
+The nomination of a collection task, the tasking and scheduling of the sensor, the
+processing of the mission data, and the distribution of the data can dramatically
+increase the complexity of the systems engineering challenge and decrease the final
+accuracy of the system. Not only can physical effects such as atmospheric correction,
+calibration, and rectification degrade system performance, but technical effects such
+as quantization and data compression errors can decrease the resolution of the system
+from the perspective of the end user. For additional information about technical
+aspects of the end-to-end throughput problem for spacecraft imagery, see Shott
+[1997].
+
+The concept of operations for a spacecraft system such as FireSat needs to account
+for the full breadth of the operational mission, including different phases of the
+mission and alternate operating modes. See Sec. 2.1 and Chap. 14 for a description of
+a mission operations concept.
+
+For preliminary mission planning, we should pay particular attention to the pro-
+jected sequence of events during each mission phase (see Activity Planning in
+Chap. 14). For the FireSat mission under normal operations, a sample mission timeline
+for normal operations includes the following steps:
+
+1. Fire starts at some location
+
+2. Sensor field-of-view passes over the fire
+
+3. Signature from the fire introduced into the sensor data stream
+4
+
+. Data is passed to the mission ground station for analysis (or processed on
+board)
+
+5. Fire detection algorithm determines the possible presence of fire (this may be
+a multistage process with a preliminary, coarse fire detection process that trig-
+gers a more precise algorithm or set of measurements)
+
+6. Generate appropriate messages indicating the presence of fire
+7. Issue reports and notifications to appropriate authorities and research centers
+
+8. Monitor the fire (this could involve switching to an alternate operating concept
+that tracks the progress of the existing fire and monitors surrounding areas for
+new outbreaks)
+
+We should create a concept of operations for each phase of the mission and each
+operating mode of the spacecraft—including contingency and failure modes. This step
+will ensure mission success within the constraints of the operating environment. (See
+Chap. 14.)
+
+9.4.3 Required Payload Capability
+
+Frequently there are several ways to meet mission requirements. How to sort
+through these multiple approaches is not always obvious. The general approach we
+outline provides a repeatable framework for choosing a payload to satisfy a remote
+sensing mission. Once we select a physical phenomenology (e.g., measuring thermal
+infrared radiance to detect forest fires), then two things need to be established. First,
+the radiometric measurement levels that are needed to satisfy the information need;
+and second, the implications for a payload in terms of size and performance to be able
+to sense the required signature.
+
+9.4 Observation Payload Design 275
+
+Categorizing remote sensing missions is complicated by the fact that sensors usually
+have multiple uses, and they can be categorized according to any number of different
+aspects, such as measurement technique (active or passive), event measured (such as
+fire or deforestation), and measurement resolution (spatial, spectral, radiometric,
+temporal). By way of example, however, Table 9-13 provides a small sampling of
+remote sensing payloads and corresponding spacecraft missions.
+
+TABLE 9-13. Characteristics of Typical Payloads.
+
+at28V| Rate
+
+Instrument Name
+
+Solar Lyman-Alpha Coronograph
+Physics X-ray Telescope Spectrom.
+Solar Optical Telescope
+Solar Magnetic Velocity Field
+100 m Pinhole Camera
+Extreme UV Telescope
+Solar Gamma Ray Spectrom.
+
+lon Mass Spectrometer
+Beam Plasma
+
+Plasma Diagnostics
+Doppler Imaging Interferom.
+Proton (lon) Accelerators
+
+Gamma Ray Burst
+
+Cosmic Ray Transition
+X-ray Spectrom./Polarimeter
+Short X-ray
+
+Hi Energy Gamma Ray Tele.
+
+Resources | Gravity Gradiometer
+Synthetic Aperture Radar
+Multi-Spectral Mid-IR
+Thematic Mapper
+
+Life Life Science Lab Module
+Sciences
+
+Environ- Limb Scanning Radiometer
+menial Microwave Radiometer
+Dual Frequency Scatterom.
+Ocean SAR
+Solar Spectrum
+Doppler Imager
+Photometric Imaging
+
+Comm. TDRS Comm. Payload
+
+DSCS III
+
+2.8 x 0.88 x 0.73
+
+2.7 x 1 dia.
+7.3 x 3.8 dia.
+2x 0.4 x 0.4
+
+1x1x2
+
+2.78 x 0.86 x 0.254
+
+1x1x3
+
+0.5 x 0.5 x 0.4
+0.6 x 0.7 x 0.7 +
+two 0.7 dia. ant.
+
+(0.25)8
+6.7x 3.4.x 3.10
+
+2x 4dia.
+3.7 x 2.7 dia.
+16x16x3
+
+1x1x3
+
+3 dia. x 4
+
+0.23 m sphere
+2.8x3.7x 1.4
+1.5 x 1 dia.
+2x0.7x 0.9
+
+4.8 x 1.9 dia.
+4x4x4
+46x 15x03
+20x2x0.2
+0.4 x 0.3 x 0.6
+1.25 x 0.6 x 0.8
+1.4x 1.40.5
+
+2.5x2.5x1
+
+3
+
+120 8x28
+30 1
+85 0.406
+
+715 | 300 (x2)
++50
+
+The measurement techniques employed in sensors are tailored to provide infor-
+
+mation that can be exploited to understand the subject. We describe the fundamental
+information content provided by passive remote sensing instruments in terms of
+spatial, spectral, and radiometric resolution. We then introduce the basic types of
+
+276 Space Payload Design and Sizing 9.4
+
+detectors and collection techniques that are employed in the design of a remote sensing
+instrument.
+
+We use various applications of imaging sensors, such as film cameras or electro-
+optical devices, to measure and analyze spatial features. Optical imaging in the visible
+spectrum is the most common approach for applications dealing with topographic
+mapping and photogrammetry. Other sensors that rely fundamentally on spatial mea-
+surements include sounders and altimeters (Kramer [1996] lists examples of these
+types of sensors).
+
+Spatial resolution is a function of many different parameters of the remote sensing
+system. It is usually different from the ground sample distance (GSD), the distance at
+which the sensor spatially samples the target scene for sensors that have a correspon-
+dence between detector size and ground target size. For targets with very high contrast
+to the background, the spatial resolution can be finer than the GSD—usually however,
+it is on the order of twice the GSD. Alternatively, the spatial resolution can be charac-
+terized by the angle under which it sees the smallest target. The smallest physical
+features that can be discriminated using the sensor measurement characterize the lim-
+its of spatial resolution in a remote sensing system. Spatial resolution is a function of
+the range from the sensor to the target, the aperture and focal length of the lens, and
+the wavelength of the incident energy. We can characterize the spatial resolution by
+the angle that the sensor can resolve, or directly as the ground range in units of length
+for the size of the smallest object that can be discriminated.
+
+We use spectrometers to analyze spectral content of a scene to identify the chemical
+composition of the objects being sensed. The spectral information received by a sensor
+is a composite of the spectral information emitted by all objects in the field-of-view.
+The spectral content reaching a potential multispectral FireSat payload, for example,
+will include signatures from soil, vegetation, and cities in addition to a fire that may
+be present. The combined spectral content of all these features may be very different
+from the spectrum of a forest fire by itself. Combining information from multiple spec-
+tral bands has been used successfully to differentiate key features and maximizing the
+utility of a sensor with a given spectral resolution.
+
+We can use a multispectral sensor to uniquely determine the features within an
+image. Multispectral systems typically employ tens of bands. Hyperspectral and ultra-
+spectral systems employ hundreds and thousands of spectral bands, respectively.
+Following the example presented by Slater [1980, pp. 17-18], we consider a multi-
+spectral image of an area containing concrete, asphalt, soil, and grass. Figure 9-17
+shows typical spectral reflectance for these four materials. If we have an imager with
+only three bits of radiometric sensitivity (low, medium, and high), then no single
+image, whether panchromatic or filtered to a particular band region could distinguish
+these four materials. However, a properly calibrated two-band multispectral system
+can uniquely resolve these four materials using bands in the 600-700 nm and 700-
+900 nm wavelengths. The returns for each of these materials is shown in Table 9-14.
+
+Using multispectral sensors to study more complex scenes or to identify additional
+materials requires more bands or narrower bandwidths. The number of spectral bands
+and the bandwidth of each band determine the resolving power of a spectral sensor.
+We achieve higher spectral resolution is achieved by narrower bandwidths, but using
+narrower bandwidths tends to reduce the signal-to-noise ratio for the measurement.
+
+We can also use intensity information contained in the electromagnetic field to
+extract useful information for remote sensing purposes. If we have an imager with four
+or more bits of sensitivity operating in the 700-900 nm wavelength, then a single
+
+9.4 Observation Payload Design 277
+
+0.6
+
+0.5
+
+Concrete
+0.4
+
+0.3
+
+Reflectance
+
+0.2
+
+0.1 Asphalt
+
+400 600 800
+Wavelength, (nm)
+
+Fig. 9-17. Typical Spectral Reflectance Curves for Grass, Concrete, Soil, and Asphalt. A
+single-band low-resolution sensor cannot distinguish all 4 types, but a 2-band, low-
+resolution sensor can, as shown in Table 9-14 (Slater, 1980].
+
+TABLE 9-14. Spectral Resolution for Sample Two-Band Sensor. Combining low-resolution
+sensor returns for the two-band sensor can uniquely identify the four materials
+from Fig. 9-17.
+
+Sensor Reading Sensor Reading
+600-700 nm 700-900 nm
+a
+
+image could be used to distinguish all four materials represented in Fig. 9-18. The abil-
+ity to distinguish the intensity of radiance at the sensor goes beyond detecting either
+the presence or absence of energy at a given wavelength, For example, if a FireSat
+sensor were being designed to detect fires based on thermal emission, then the inten-
+sity information in the thermal signature would indicate the presence of fires. The
+radiometric resolution of the instrument needs to allow the system to discriminate
+between a forest fire and a campfire, for instance.
+
+Merely detecting the presence of thermal energy in a band region characteristic of
+burning biomass is not sufficient for satisfying the FireSat mission. The number of bits
+used to represent the intensity information for a radiometric instrument will be dictated
+by two practical limits [Slater, 1980, p. 19]: (1) the signal-to-noise ratio present in the
+data, and (2) the level of confidence we need to differentiate between two threshold
+signal levels.
+
+Radiometric instruments measure the intensity of incoming energy. Radiometers
+passively measure the intensity, while scatterometers are active instruments that mea-
+sure surface roughness by sensing the backscattered field when a surface is illuminated.
+Polarimeters measure the polarization state of a transmitted, scattered, or reflected
+wave. Refer to Table 9-13 to see examples of these sensor types.
+
+
+278 Space Payload Design and Sizing 9.5
+
+The limiting factors in intensity measurement using radiometry are the signal-to-
+noise ratio (SNR) of the sensor and the quantization levels of the measurement device.
+Applications requiring high radiometric accuracy include vegetation and soil analysis
+studies, while applications such as sea surface temperature studies require less radio-
+metric resolution.
+
+Figure 9-18 shows the resolution characteristics of an example sensor across the
+three primary dimensions. The sensor is the MODerate-resolution Imaging Spectro-
+radiometer (MODIS), a part of NASA’s Earth Observing System. The MODIS scan-
+ning radiometer has 36 channels that have been selected to enable advanced studies of
+land, ocean, and atmospheric processes. We will discuss applications of the MODIS
+sensor to the problem of automatic fire detection in Sec. 9.6.
+
+Spatial Resolution
+(Ground Sample Distance)
+
+MODIS 1.6 micron Channel
+
+MODIS 0.86 micron
+
+Spectral Resolution Radiometric Resolution
+(Bandwidth) (Dynamic Range)
+
+Fig. 9-18. Dimensions of Resolution for Two Channels of the MODIS Instrument. The
+diagram illustrates the spatial, spectrai, and radiometric dimensions of measurement
+resolution for MODIS. The spatial resolution of the 1.6 micron channel is 500 m ata
+spectral resolution of 20 nm compared to 250 m and 40 nm for the 0.86 micron
+channel. Both channels have 12-bit radiometric resolution. Data from King, et al.
+[1992].
+
+9.5 Observation Payload Sizing
+
+We must be able to estimate the size and main characteristics of the mission pay-
+load before completing a detailed design. We want to be able to look at several options
+without necessarily designing each in depth. This section provides ways to compute
+data rates and estimate the overall size and key parameters. In Sec. 9.6, we will apply
+these values to the FireSat example.
+
+9.5 Observation Payload Sizing 279
+
+9.5.1 Signal Processing and Data Rates
+
+Analog signal processing is very similar for CCD read-out imagers and for infrared
+imagers using an integrated mulitplexer. In both cases weak analog signals need to be
+amplified and conditioned, maintaining high dynamic range and high processing
+speed. Electronic signal processing at high speeds with high accuracy can become a
+cost and schedule driver in the development of high-resolution instruments. Typically
+we must incorporate massively parallel processing and tailored implementation tech-
+nologies to allow high-speed, high-accuracy analog processing. Concerns about elec-
+tromagnetic interference dictate that this processing be conducted as close to the focal
+plane assembly as possible. On the other hand, strict thermal decoupling between
+imagers and the heat dissipating electronics must be maintained.
+
+For CCD imagers the dark signal typically doubles with each rise in temperature of
+seven degrees. Infrared imagers are usually cooled to low temperatures; therefore, we
+must minimize each heat leak to their cryostat to keep the cooling power low. The
+cooling requirement becomes more stringent as the wavelength of the radiation to be
+measured becomes longer. For wavelengths in the 100 lum range the detectors are typ-
+ically cooled to 4 K. Even small heat leaks, such as those from the necessary electrical
+wiring and mechanical connection to the spacecraft, transport excess heat requiring
+high cooling power.
+
+Analog | Output
+to Digital
+Conversion
+
+Photon
+
+Imager
+Control
+
+Timing / Control
+
+Interface
+
+Instrument Control
+
+Interface
+Power Supply and Conditioning
+
+Fig. 9-19. Block Diagram of an Optical Instrument. Photons are collected by the CCD
+imager, then amplified and processed. The primary supporting functions of power and
+control are also depicted. The sampling process for charge coupled device signal pro-
+cessing typically uses correlated double sampling to eliminate reset noise.
+
+The block diagram in Fig. 9-19 shows the typical functional blocks found in the
+electronics of an optical instrument. The signal flow through the electronics begins
+with the detector in the focal plane of the instrument. It converts photons to analog
+electrical signals, which are amplified and conditioned. Any additional signal process-
+ing is performed in the digital data processing block. The analog and digital signal
+
+280 Space Payload Design and Sizing 9.5
+
+processing blocks operate synchronously with the read-out of the imagers. The central
+timing system supplies appropriate timing signals to all relevant circuit blocks to guar-
+antee synchronous operation. Because electrical signals processed in the instrument
+electronics are weak, we have to pay special attention to power conditioning. Careful
+filtering and clean electrical grounding must be implemented to decouple digital and
+analog signals.
+
+The instrument control computer manages the signal processing and timing func-
+tions performed by the instrument and it interfaces to the main spacecraft computer.
+Depending on the design, time-tagged commands are executed by the instrument
+computer or issued by the spacecraft computer.
+
+Analog signal processing for CCD imagers usually involves correlated double
+sampling. This technique takes two slightly time-shifted samples of the analog signal
+and subtracts one from the other to extract their image-related video signal. The adap-
+tation of this video signal to the input range of the analog-to-digital converter requires
+setting gain and offset parameters for the system. Digital data processing normalizes
+the imager pixels. Normalization requires that any non-uniformity in photo response
+and dark signal must be removed from each pixel. This task is frequently conducted
+on board the spacecraft because some of the most straightforward data compression
+algorithms become invalid if the pixels are not normalized. Furthermore, signal pro-
+cessing for normalizing pixels may be required if we use onboard calibration methods
+in the sensor.
+
+We must select the process of normalizing pixels based on the characteristics of the
+sensor. For sensors with a linear response, one- or two-point correction is sufficient.
+Highly nonlinear detectors, as is often the case for infrared detectors, require n-point
+correction techniques. Figure 9-20 illustrates an example of two-point correction. The
+offset (dark signal) and gain factor (response) are corrected by first subtracting the
+individual offset value and then by dividing by the individual response for each pixel.
+
+Output Output
+7 Pixel 1
+/ All n pixels
+/ _- Pixel 2
+/ ,
+/ oa
+/ a i
+/ ao a Pixel n —=>
+Input Input
+
+0
+
+Fig. 9-20. Two-point Normalization of Pixel Response. The left diagram shows the original
+response functions of individual pixels. The right diagram shows the normalized
+response function of the same pixels, where the effects of the variations in offset val-
+ues and responsivity values have been removed from the individual pixels.
+
+High-resolution optical instruments typically generate data rates on the order of
+several hundred Mbps and above. To send this data stream to a ground station in real
+time, the system may need several parallel channels with capacities up to 100 Mbps
+
+9.5 Observation Payload Sizing 281
+
+each. If data collection is short compared to the available downlink time, a buffer
+memory can reduce the downlink data rate over a longer transmission time.
+
+The trends for future systems indicate a tendency toward more onboard information
+extraction to decrease communication requirements. Several enabling technologies
+and techniques include powerful data processing hardware. Software uploads to the
+hardware must be possible to update and modify operational algorithms from the user
+community.
+
+Response of Response of Response of
+Image on the Pixels in Image on the Pixels in Image on the Pixels in
+the Focal the Focal the Focal the Focal the Focal the Focal
+Plane #1 Plane #1 Plane #2 Plane #2 Plane #3 Plane #3
+Half Exact Twice
+Spatial Spatial Spatial
+— —_. Frequency
+Nyquist
+
+Limit Clear Clear Mid-gray
+
+Fig. 9-21. Effect of Sampling Frequency on Image Quality. The three diagrams show illumi-
+nation patterns having different spatial frequencies present in the scene (left of the
+arrows) sampled at the same sampling frequency, that is, the same detector array
+(right of the arrows). The response of the pixels is shown as intensity (gray level) in
+the three diagrams. From left to right: Sampling an illumination pattern with half the
+spatial frequency. Sampling an illumination pattern with exactly the spatial frequency
+(the highest possible frequency that can be reconstructed without error). Sampling an
+illumination pattern with twice the spatial frequency, resulting in a pixel response of
+mid-gray since every pixel is illuminated over exactly half its area.
+
+The spatial sampling process of pixels in an optical instrument is determined by the
+geometry of the detector elements and by the scanning principles employed for the
+different sensor types discussed in Table 9-8. The sampling process can introduce
+errors into the image data if we don’t select it properly. The Nyquist frequency is the
+lowest rate at which information with a given bandwidth must be sampled to avoid
+errors. Figure 9-21 shows the effect of sampling three different illumination frequen-
+cies. The spatial frequency is defined as the inverse of the width of a black-and-white
+line pair, and is expressed in line pairs per meter. The sampling process is performed
+in all three cases by the same detector array (right of the arrows), that is, by the same
+spatial sampling frequency, defined as the inverse of the center distance of the
+sampling pixels. The maximum spatial frequency which can be reconstructed without
+error after the sampling/restoration process is defined as the Nyquist frequency, which
+equals half the sampling frequency, shown in the middle diagram. The response of the
+detector pixels is shown as intensity (gray level) in the three diagrams. On the left,
+sampling of an illumination pattern with half the spatial frequency. In the center,
+sampling of an illumination pattern with exactly the spatial frequency, showing that
+reconstniction of the original illumination pattern is feasible without error. (However,
+if the sampling pattern is shifted by half a pixel with respect to the illumination pattern,
+
+282 Space Payload Design and Sizing 9.5
+
+then reconstruction fails). And on the right, sampling an illumination pattern with
+twice the spatial frequency results in a pixel response of mid-gray since every detector
+pixel is illuminated over half its area in the example. All samples in the third case show
+the same constant value which corresponds to a spatial frequency of zero (line-pairs
+per meter) which was not present in the original scene. This creation of new frequen-
+cies is known as aliasing. Such frequency components cannot be removed by addition-
+al processing of the reconstructed image. Furthermore, the well known techniques to
+eliminate aliasing in electronic signal processing (band limiting the input signal to an
+electronic sampler using a low pass filter corresponding to the Nyquist condition) are
+not feasible when we sample images in the spatial domain. Usually we cannot use our
+optical system as a band-limiting low pass filter since its aperture diameter and cut-off
+frequency are usually defined by radiometric requirements. The result is that we usu-
+ally have a certain amount of unavoidable aliasing which degrades the image quality
+of such systems.
+
+i
+Theoretical MTF of clear aperture
+
+Theoretical MTF of aperture
+with central obscuration
+
+Modulation Transfer Function (MTF)
+
+0 0.2 0.4 0.6 0.8 1 12 1.4 1.6 1.8
+Spatial Frequency (F)
+
+Fig. 9-22. Modulation Transfer Function of Circular Diffraction-Limited Optical System
+vs. Spatial Frequency. MTF curves for a clear circular optical system is compared
+with one having a central obscuration (as found in on-axis reflective telescopes). The
+MTF can be thought of as a function dependent on the spatial frequency, F, which
+describes the modulation (contrast) function through the optical system (analogous
+to the frequency dependent gain of an electrical transmission block). The MTF starts
+at 1 for spatial frequencies near 0 and drops to 0 at the cutoff frequency, F, = D/A h.
+
+The Modulation Transfer Function (MTF) is the ratio of the intensity variation of
+the ground scene to the intensity variation of the image at a given spatial frequency.
+The cut-off frequency is that spatial frequency at which the transfer function becomes
+zero. Figure 9-22 shows the theoretical MTF of an optical system with and without
+central obscuration. The theoretical MTF can be approximated by a line starting at 1
+when the spatial frequency is 0 and falling to 0 at the cut-off frequency, F,, = D/Ah,
+
+9.5 Observation Payload Sizing 283
+
+where D is the aperture diameter, A is the wavelength, and h is the altitude. It is the
+autocorrelation function of the effective aperture. In optical terms, the MTF is the
+absolute value of the complex Optical Transfer Function (OTF) which describes how
+the complex amplitudes of the optical wave front are transferred by an optical system
+at different spatial frequencies.
+
+The MTF describes the transfer quality of an optical system as a function of spatial
+frequency. The point-spread function illustrated in Fig. 9-16 describes exactly the
+same properties by showing the two-dimensional intensity distribution in the focus of
+the optical system. The two are interrelated by the Fourier transform function.
+
+9.5.2 Estimating Radiometric Performance
+
+In order to estimate the radiometric performance of optical instruments in the visi-
+ble or near infrared we start with the radiometric input of the Sun shown in Fig, 9-23.
+
+1,500
+
+1,000
+
+500 t
+
+Radiance (W/m2/m)
+
+0
+400 600 800 1,000 1,200 1,400
+
+Wavelength (nm)
+
+Fig. 9-23. Solar Radiometric Input. Radiometric input (radiance in Wm-2 m~| [wavelength]) of
+the Sun at sea level as a function of the wavelength.
+
+The integration of the spectral radiometric input over the spectral bandwidth gives
+the power density in the spectral band of interest. To first-order we can assume that
+lambertian (ideal) reflection with a constant reflection coefficient occurs at the target
+scene (this approximation holds for small spectral bandwidth). The area of the ground
+pixel resulting in back-radiated power determines the power density per solid angle.
+The atmosphere attenuates this radiation by a constant transmission factor (again
+invoking an approximation for small spectral bandwidth). The effective aperture at
+orbital altitude collects a very small fraction of this radiation resulting in the power at
+the entrance of the optics. The signal power is attenuated further by transmission
+through the optics, ultimately resulting in a lower power level at the detector pixel.
+During the integration period a certain amount of energy (power times integration
+period) is accumulated in each pixel. This energy is divided by the energy of one
+photon (which is wavelength dependent) resulting in the number of available photons
+per pixel. The quantum efficiency of the detector transforms this number of photons
+into the number of available electrons. These electrons comprise a charge packet and
+correspond to the output signal of the detector.
+
+To fully characterize the radiometric performance of an instrument, we must also
+determine the signal-to-noise ratio and dynamic range. The signal-to-noise ratio
+
+284 Space Payload Design and Sizing 9.5
+
+describes the image quality at a given intensity. Due to the quantum nature of light, the
+number of noise electrons (temporal noise) equals the square root of the number of
+signal electrons. The read-out process of the imagers results in a certain number of
+additional noise electrons. The temporal noise is added to the read-out noise since they
+are statistically independent values, resulting in a total number of noise electrons to be
+considered for the evaluation of the signal-to-noise ratio.
+
+The dynamic range of the instrument is the quotient of signal- and read-out noise
+electrons the sensor sees between dark and bright scenes at the given reflection coef-
+ficient of the target scene. The maximum dynamic range is the difference between the
+darkest and brightest possible scene. The brightest scene is typically reflection from
+clouds or snow.
+
+In order to estimate the radiometric performance of optical instruments in the mid-
+and long-wavelength infrared spectrum, the spectral emission of the surface of the
+Earth must be modeled. A blackbody with an equivalent temperature of 290 K can be
+used for this purpose. The atmospheric transmission as a function of the wavelength is
+well known for a given path orientation and atmospheric characteristics. The multi-
+plication of the spectral radiance with the atmospheric transmission results in the
+upwelling radiance at the sensor. The integration of it over the selected bandwidth and
+the multiplication with the area of the ground pixel results in the power per solid angle.
+After consideration of sensor altitude and effective aperture of the receiving optics the
+input power at the sensor’s entrance aperture can be calculated. This transforms via the
+optical transmission factor to the input power at detector level (usually in the picoWatt
+region). During the integration period a certain amount of energy is accumulated per
+pixel. The division of that energy by the energy of one photon gives the number of
+photons available per pixel which is transferred by the quantum efficiency to the avail-
+able number of electrons per pixel which correspond to its output signal.
+
+To characterize the radiometric performance of an instrument with respect to the
+temperature resolution, we must determine the noise-equivalent temperature differ-
+ence (NEAT) for the instrument. The noise equivalent temperature resolution is given
+by the temperature difference (at scene temperature), which generates a signal equiv-
+alent to the total noise electrons at scene temperature. The NEAT characterizes the
+instrument in its ability to resolve temperature variations for a given background
+temperature.
+
+9.5.3 Estimating Size, Weight, and Power
+
+We must be able to estimate the size and main characteristics of the mission pay-
+load before completing a detailed design. We want to be able to look at several options
+without necessarily designing each in depth. This section provides ways to compute
+data rates and estimate the overall size and key parameters. In Sec. 9.6.1, we will apply
+these values to the FireSat example.
+
+We have looked in some detail at the design of specific observation payloads in
+Sec. 9.4. However, irrespective of the nature of the particular payload, we would like
+to estimate its size, weight, and power even before we have done a detailed design. To
+do so, we can use three basic methods:
+
+* Analogy with existing systems
+¢ Scaling from existing systems
+
+¢ Budgeting by components
+
+9.5 Observation Payload Sizing 285
+
+The most straightforward approach is to use an analogy with existing systems. To
+do this, we turn to the list of existing payloads in Table 9-13 in Sec. 9.4.3 or other pay-
+loads that we may be aware of which have characteristics matching the mission we
+have in mind. Kramer [1996] offers a very thorough list of existing sensors. We look
+for payloads whose performance and complexity match what we are trying to achieve
+and make a first estimate that our payload will have characteristics comparable to the
+previously designed, existing payload. While this approach is rough, it does provide a
+first estimate and some bounds to decide whether the approach we have in mind is
+reasonable.
+
+A second approach, described in more detail below, is scaling the payload estimate
+from existing systems. This can provide moderately accurate estimates of reasonable
+accuracy if the scale of the proposed payload does not differ too greatly from current
+payloads. In addition, scaling provides an excellent check. Most existing payloads
+have been carefully designed and optimized. If our new payload is either too large or
+too small relative to prior ones, there should be some reason for this change in charac-
+teristics. If more detailed estimates based on detailed budgets don’t scale from existing
+systems, we must understand why.
+
+The most accurate process for first-order payload sizing is budgeting by compo-
+nents. Here we develop a list of payload components such as detectors, optics, optical
+bench, and electronics. We then estimate the weight, power, and number of each. This
+is the best and most accurate approach but may be very difficult to apply at early mis-
+sion stages because we simply don’t have enough initial information. Ultimately, we
+will size the payload with budgeting by components. We will develop budgets as out-
+lined in Chap. 10 for each payload instrument for weight, power, and any critical
+payload parameters. These budgets will then help us monitor the ongoing payload
+development. However, even with a detailed budget estimate, it is valuable to use
+scaling as acheck on component budgeting. Again, we wish to understand whether the
+components scale from existing payloads and, if not, why not.
+
+Scaling from Existing Systems
+
+An excellent approach for preliminary design is to adjust the parameters in
+Table 9-13 to match the instrument we are designing. We will scale the instruments
+based on aperture—a main design parameter that we can determine from preliminary
+mission requirements. To scale, we compute the aperture ratio, R, defined by
+
+A
+
+R=—~ (9-16)
+
+o
+
+where A; is the required aperture of our new instrument, and A, is the aperture of a
+similar instrument (Table 9-13). We then estimate the size, weight, and power based
+on ratios with the selected instrument from Table 9-13, using the following:
+
+L;=RL, L = linear dimensions (9-17)
+S;=L7? S = surface area (9-18)
+Vj,=L) V = volume (9-19)
+W, = KR3W, W-=weight (9-20)
+
+P;=KR?P, P=power (9-21)
+
+286 Space Payload Design and Sizing 9.5
+
+The factor K should be 2 when R is less than 0.5, and 1 otherwise. This reflects an
+additional factor of 2 in weight and power for increased margin when scaling the sys-
+tem down by a factor of more than 2. When the system grows, the R3 term will directly
+add a level of margin. For instruments more than a factor of five smaller than those
+listed in Table 9-13, scaling becomes unreliable. We recommend assuming a mass
+density of 1 gm/cm3 and power density of 0.005 W/cm? for small instruments. An
+example of these computations for FireSat is in Sec. 9.6.1.
+
+9.5.4 Evaluate Candidate Payloads
+
+Multi-attribute performance indices can be defined for comparing optical instru-
+ments with similar performance characteristics. For high-resolution — spatial
+instruments three basic values describe the quality (corresponding to the information
+content) in the image. The three defining features are the signal-to-noise ratio at spatial
+frequency zero (high SNR corresponds to high information content), the MTF of an
+instrument at the Nyquist frequency (high MTF corresponds to high information
+content for sampling rates between zero and the Nyquist frequency), and the ground
+sample distance GSD (small GSD corresponds to high information content). We
+define a relative quality index (RQD to allow straightforward quantitative compari-
+sons with a reference instrument denoted by the suffix ref.
+
+_ SNR MTF GSD,
+RQI= (9-22)
+SNR MTFep GSD
+
+This relative quality index allows the designer to trade requirements with respect to
+each other. For example, a higher SNR can compensate for a lower MTF at the Nyquist
+frequency for a given GSD. Such comparisons allow for first-order insights into the
+relationships between complexity, performance, and cost of candidate sensors. For
+example, suppose we define a reference instrument to have an SNR of 512, and an
+MTF of 0.5 and a GSD of 25 m. If we then compute design parameters for a particular
+mission, we can generate a relative quality index, or score, for our design with respect
+to the reference instrument. For instance, if our design choices lead us to an instrument
+with a SNR of 705.2, a MTF of 0.47 and a GSD of 30 m, then the RQI for this system
+will be 108%. This index offers a straightforward method for comparing several com-
+peting sensors across three key performance measures.
+
+9.5.5 Observation Payload Design Process
+
+Table 9-15 contains the details of the design process for visible and infrared
+systems. We begin with basic design parameters such as the orbital height, minimum
+observation angle and ground resolution. We then compute the quantities that describe
+the performance of the instrument. In particular, we determine the pixel processing
+parameters and system data rate, the size of the optics for a given pixel size, and the
+radiometry of the sensor. Sample computations for the FireSat payload are given in the
+third column.
+
+The data rate required for observation payloads depends on the resolution, cover-
+age, and amplitude accuracy. With the maximum look angle, 7, spacecraft altitude, h,
+and cross-track pixel size, X, we have to image 2nh/ X pixels per swath line (cross-
+track). With the spacecraft ground-track velocity Vg and the along-track pixel size Y
+we have to scan V, / Y swath lines in one second. If we quantify the intensity of
+each pixel by b bits (2 amplitude levels) we generate a data rate, DR, of
+
+9.5 Observation Payload Sizing 287
+
+pra2Zmh Ve .,Sw.@.4 —— pits/second (bps) (9-23)
+X Y xX Y
+
+where 7) is the maximum look angle in radians, h is the orbit altitude, Vz is the space-
+craft ground-track velocity, S,, is the swath width, X is the across-track pixel dimen-
+sion, and Y is the along-track pixel dimension. The approximation is good for small
+swath widths. The data rate can be increased by transmission overhead such as house-
+keeping data or coding and it can be decreased by data compression. (See Secs. 2.1.1,
+13.2.2, and 15.3.2.).
+
+TABLE 9-15. Calculation Design Parameters for a Passive Optical Sensor.
+
+Step Calculation FireSat Comments
+Define orbital altitude, h Design parametert h=700 km See Table 3-4, Sec. 7.4
+Compute orbit period, P_ Eq. (7-7), IRC* P=98.8min Assumes circular orbit
+
+Compute ground track Eq. (5-31), IRC* Vg = 6.76 km/s Assumes circular orbit
+velocity, Vg
+
+Compute node shift, AL Eq. (7-13), IRC* AL=24.8deg Function of inclination
+
+Step 2. Define Sensor Viewing Parameters
+
+Compute angular Eq. (5-15), IRC* p=643deg Depends on orbital
+radius of the Earth, o altitude
+
+Compute max. distance Eq. (5-17), IRC* Dmax = Depends on orbital
+to the horizon, Dmax 3,069 km altitude
+
+Define max. incidence Design parameter, IRC* IA = 70 deg Adjust swath width for
+ang. JA, or max. Earth good coverage
+cen. ang. ECAma, (Sec. 7.4)
+
+Compute sensor look —_ Eqs. (5-24) or n=57.9deg Will be less than p
+angle (= nadir angle), 7 (5-25b), IRC*
+
+Compute min. elev. Eqs. (5-25b) and €=20 deg If max. ECAmax given,
+angle, «= 90°- JA (5-26), IRC* compute ¢
+
+Compute max. Earth Eqs. (5-25b) and ECAmax= If € given, compute
+central angle, ECA;,,, (5-26), IRC* 12.1 deg ECAmax
+
+Compute slant Eq. (5-27), IRC* Rg= 1,578 km Ag here = Din Chap. 5
+range, As
+
+Find swath width =2 ECAmax 2 ECAmax = Determines coverage
+24.2 deg
+
+Step 3. Define Pixel Parameters and Data Rate
+
+Specify max. along- Design parameter Ymax= 68m Based on spatial
+track ground sampling resolution requirements
+dist., Ymax at ECAmax
+
+Determine instan- Y 180 de IFOV= One pixel width
+taneous field of view,  /FOV = a <— 0.00245 deg
+
+IFOV s
+
+Find max. cross-track y, Xmax = Driven by resolution
+pixel resolution, Xay, max = cos(/A) 199.6 requirement at
+
+at ECAmax maximum slant range
+
+* IRC = parameter tabulated on the inside Rear Cover for Earth Satellites Parameters.
+tCalculations are based on a circular orbit.
+
+
+288 Space Payload Design and Sizing 9.5
+
+TABLE 9-15. Calculation Design Parameters for a Passive Optical Sensor. (Continued)
+
+Step Calculation FireSat Comments
+
+Step 3. Define Pixel Parameters and Data Rate (Continued)
+
+X=30m Best cross-track
+
+Determine cross-track
+
+ground pixel resolution, y ~/Foy. H( x resolution for this
+X, at nadir 180 deg instrument
+Determine along-track Y=30m Best along-track
+pixel resolution, Y, Y =/FOV: 1 saciaa) resolution for this
+at nadir 180 deg instrument
+
+Determine no. of . Z.=4.7x 104 Ground pixel size varies
+cross-track pixels, Z, along the swath
+
+Find no. of swaths . 2, = 225.6 Number of successive
+recorded along-track a: swaths without gaps at
+in 1 sec, Z, nadir
+
+Find no. of pixels =Z,* Z= 1.06 x 107
+recorded in 1 sec., Z
+
+Specify no. of bits Design parameter 8 bits Based on radiometric
+used to encode resolution requirement
+each pixel, B and dynamic range
+
+Compute data rate, DR=2:B DR=85 Mbps Large number may
+DR challenge downlink
+capacity
+
+Step 4. Define Sensor Integration Parameters
+
+Specify no. of pixels for Design parameter Nm = 256 Must be large enough
+whiskbroom inst. Nj, to allow sufficient
+integration time
+
+Find pixel integration N T)= 24.1 ps Integration time of
+period, 7; T=— 2 each detector pixel
+Cc
+
+Find resulting pixel Fy = 1/7; Fp = 42 kHz
+read-out frequency, F,
+
+Verify detector time Ter < Tj Tget < Tj Compare with
+constant, Tyger, is physica! properties
+smaller than 7; in Table 9-12.
+
+Step 5. Define Sensor Optics
+
+Specify width for Design parameter d= 30 um Typical for available
+square detectors, d detectors
+
+Specify quality factor | Design parameter Q=1.1 0.5 < Q< 2 (Q=1.1 for
+for imaging, Q good image quality)
+Specify operating Design parameter Based on subject trades
+wavelength, A
+
+Define focal length, f hed Use altitude and
+fa Eq. (9-12)
+
+Find diffraction-limited 2.44,-f-Q Eq. (9-14) equivalent
+aperture diameter, D D= —
+
+
+9.5
+
+Observation Payload Sizing
+
+289
+
+TABLE 9-15. Calculation Design Parameters for a Passive Optical Sensor. (Continued)
+
+Step
+
+Calculation
+
+FireSat
+
+Comments
+
+Step 5. Define Sensor Optics
+
+Compute F-number
+of optics, F#
+
+Compute field of view
+of optical system, FOV
+
+Determine cut-off
+frequency, F.
+
+Determine cross-track
+Nyquist frequency, F,,
+
+Determine along-track
+Nyquist frequency, Fra
+
+Compute relative
+Nyquist frequencies,
+Foc and Fog
+
+Find optics PSF asa
+function of distance, r,
+from center of detector
+
+Find optical modulation
+transfer function (MTF)
+for clear circular optics
+
+F#= 1/D
+
+FOV = IFOV: Nm
+F,=D/Ah
+
+Fog = 2X
+
+Fog = W2Y
+
+F, F,
+F,. =e 1 & na
+qe F, qa F,
+PSF(1) = [Ady (2)/ ZP
+
+Z=enrDinft
+
+MTF (F) = (2C/n)
+
+5
+2 F,vi-C?
+
+-san|
+
+F#=2.7
+
+FOV=
+0.628 deg
+
+F, =0.09
+line pairs/m
+
+Fac =
+0.017 Ip/m
+
+Fha =
+0.017 Ip/m
+
+rae = 19%
+Ga = 19%
+
+See Figs.
+9-26A and B
+
+See Fig. 9-26B
+
+Typical range = 4-6
+
+FOV for the
+array of pixels
+
+Referred to nadir
+
+Referred to ground pixel
+resolution at nadir
+
+Referred to ground pixel
+resolution at nadir
+
+% of the cutoff
+frequency used
+for this case
+
+Use -2d< r< 2d
+J, is the Bessel function
+of order 1
+
+UseO<FSF
+C=F/F,
+
+Step 6. Estimate Sensor Radiometry (for Nadir Viewing)
+
+Compute detector MTF
+cross-track, MTF, and
+along-track, MTFy
+
+Compute system MTF
+cross-track, MTF,
+
+Define equivalent
+blackbody temp. T
+
+Define the operating
+bandwidth, AA
+
+Determine blackbody
+spectral radiance, L,,
+
+Look up transmissivity,
+t (A) of the atmosphere
+
+Compute upwelling
+radiance, Lyp;
+
+Compute integrated
+upwelling radiance, Ljp,,
+
+MTF = [sin(Fy)/Fx]2
+MTF y= |sin(Fy)/Fy |
+
+MTF,(F) =
+MTFo(F) - MTF, (F)
+
+Design parameter
+Design parameter
+
+Ly = EA) /4n
+E(A) from Eq. (9-2)
+
+See Fig. 9-6
+
+Lupi (Aj=L, t (A)
+
+Lint (A) =D) Lupi (Ai - Aisa)
+i
+
+See Fig. 9-22
+
+See Fig. 9-22
+
+T=290K
+
+AA=1.9 ym
+
+See Fig. 9-6
+
+Lint =
+0.433 W/m2/sr
+
+UseO<F<F
+Fy=nXF
+Fy=n YF
+
+Let Frange:0<FsF,
+
+Blackbody temperature
+of the Earth
+
+Based on subject trades
+
+Use range A + AA/2
+
+Evaluate operating
+bandwidth
+
+Total input radiance as
+a function of wavelength
+
+Evaluate over operating
+bandwidth
+
+
+290 Space Payload Design and Sizing 9.5
+
+TABLE 9-15. Calculation Design Parameters for a Passive Optical Sensor. (Continued)
+
+Step Calculation FireSat Comments
+
+Step 6. Estimate Sensor Radiometry (for Nadir Viewing) (Continued)
+
+Compute radiated L= Lins X°¥ L = 389.5 W/sr Total power from the
+power, L, froma ground scene that
+ground pixel at nadir arrives at the instrument
+
+Compute input power, L P,= P, is power at the
+Pj, at sensor Ph=—is|- 4.3x 10-11 W_ entrance to the optics
+h
+
+Define optical Design parameter T) = 0.75 Typical value for optical
+transmission factor to systems
+
+Find input power, Pp, =Pp= Pin +t Pp= Very little power arrives
+at the detector pixel 3.2 10-11 wat each pixel
+
+Determine available E=Pp-T; E= Radiometric design
+energy, E, after 7.8 x 10-18 Ws challenge for FireSat
+integration time
+
+Find no. of available Np = EAlhe Np = 1.7x 104 his Planck’s constant,
+photons, N, cis speed of light
+
+Define quantum Design parameter QE = 0.5 Typical physical
+efficiency, QE, of property of detector
+detector at A material
+
+Compute no. of N, = No * QE N, = 8.3 x 103 Evaluate for an ideal
+electrons available, Ng detector
+
+Determine no. of _ fan N,=91 Considers only
+noise electrons, N, Nn = Ne Shott noise
+
+Define no. of read-out Design parameter N,= 25 Typical value
+noise electrons, N,
+
+Determine total no. of N,= 95 Assumes uncorrelated
+Ny = N2 +N? ‘
+
+noise electrons, N; noise processes
+
+Find signal-to-noise SNR = N,/N, SNR = 88 Assuming signal
+ratio of the image, SNR dominates background
+
+Determine sensor DR =N,/N, DR = 332.9 With respect to
+dynamic range, DR cold space
+
+Step 7. Find the Noise-Equivalent Temperature Difference
+
+Recompute all the Thew = 1+1K Ng = 8.7 x 103 Assume scene
+parameters in Step 6 temperature changes
+for AT=1K by 1 deg K
+
+Determine no. of AN=N, -N, AN = 335.8
+charge carriers for new
+1 K temp. change
+
+Compute noise- NEAT = N,/AN NEAT=0.3K Temperature limit the
+equivalent temp. instrument can resolve
+difference, NEAT
+
+
+9.6 Examples 291
+
+9.5.6 Assess Life-cycle Cost and Operability of the Payload and Mission
+
+In addition to trades between minimal and desired performance, spacecraft designs
+are heavily driven by cost. Several approaches have been proposed and implemented
+to treat cost as an independent variable. For our purposes, it is sufficient to note that
+trading cost and performance means it is no longer sufficient to state the mission
+requirements clearly and realistically. Rather, the mission requirements become
+involved in the iterative process of design (see Fleeter {1996]). There are several
+excellent descriptions of how to include cost as a system parameter rather than a given;
+see for example Shishko and Jorgensen [1996].
+
+Working through the trade-offs associated with cost, performance, and require-
+ments in this early stage of payload definition keeps payload designers focused on the
+best sensor characteristics to maximize mission performance and minimize cost.
+Designers sometimes have a tendency to want to perform a purely analytical evalua-
+tion of the costs and benefits of various design options. Unfortunately, the relative
+benefits of different design features are difficult if not impossible to quantify in an
+unambiguous and universally accepted manner. Analysis can be very useful for
+providing a common footing and level playing field for the different design attributes.
+Ultimately, however, judgments about satisfying mission objectives within cost and
+schedule constraints rely on human insight, adding to the difficulty and importance of
+this portion of the payload definition process.
+
+Once we determine the final payload type and basic payload performance
+requirements, then payload final design can commence. The final payload design
+could be as simple as an evaluation of existing payloads that are available, or it could
+involve detailed design, fabrication, and testing of an entirely new instrument. The
+final step in the payload definition and sizing process is the decision to procure or fab-
+ricate the spacecraft payload.
+
+Integrating a payload into a spacecraft design introduces several practical consid-
+erations for the other payload subsystems. These derived requirement can have a
+significant impact on the rest of the spacecraft. Table 9-16 contains an overview of
+some of the accommodation aspects of a payload as it impacts the other spacecraft
+subsystems. Resolving the impact of these requirements means we must assess the
+performance, cost, and technical risk of each subsystem to accommodate the payload.
+
+9.6 Examples
+
+We present two examples of remote sensing payload designs—one very prelimi-
+nary and one very mature—to give an indication of the beginning and ending points
+of the design process. Sec. 9.6.1 provides, an initial assessment of a payload to fulfill
+the FireSat mission. Sec. 9.6.2 describes features of the MODerate-Resolution
+Imaging Spectroradiometer (MODIS), one of the primary sensors on board the Earth
+Observing System EOS-AMI spacecraft, which has a fire detection capability.
+
+9.6.1 The FireSat Payload
+
+To illustrate the preliminary design process for payloads, we will estimate the basic
+parameters for the FireSat payload developed throughout Chaps. 1-8 and earlier in
+Chap. 9. We cannot expect to carry out a detailed design without substantial input from
+an IR payload designer. Still, we would at least like to know whether the FireSat
+payload is the size of a shoebox or the size of a truck.
+
+292 Space Payload Design and Sizing 9.6
+
+TABLE 9-16. impact of Remote Sensing Payloads on the Spacecraft Design. The table
+summarizes requirements in other elements of the spacecraft design that must be
+present to support a remote sensing payload.
+
+Additional
+Considerations
+
+Carefully analyze aging of material
+(e.g., stress release in metal parts),
+humidity release, transition to micro-
+gravity, and acceleration forces
+
+Typical stability requirements at
+critical locations within the optical
+instrument housing are in the um and
+mdeg range
+
+Typical Requirements to
+Support Payload
+
+Mount the optical instruments
+isostatically to the spacecraft bus
+
+Impact Area
+Structure
+
+Do not apply excessive forces or
+torques to the payload instrument
+
+Make the mounting structure or base
+plate for optical components stiff
+enough to prevent any misalignment
+when subjected to the forces and
+vibrations of launch
+
+Make large opto-mechanical Large reflective systems (which use
+assemblies temperature stabilized or | Zerodur, Aluminum, or Beryllium or
+isothermal! newly developed materials such as
+SiC or CsiC as materials for the
+mirrors) and mounting structures
+(which use composite materials) are
+temperature sensitive and may
+require semi-active temperature
+control of structure and/or mirrors
+
+Thermal
+
+Operate refractive optical systems
+typically within a specific temperature
+range to achieve required
+performance (frequently they employ
+semi-active temperature control)
+
+Make reflective systems entirely from
+the same material which leads to a
+compensation of thermal effects
+(typically done for cryogenic optical
+systems)
+
+Align the optical axis of the instrument
+and/or the line of sight of the pointing
+device with an external reference on
+the spacecraft. External alignments
+may need to be on the order of
+
+1 arc sec
+
+Temperature gradients in optical
+components can severely degrade
+performance
+
+Use reference cubes to achieve
+alignment
+
+External
+Alignment
+
+External alignment requires a
+calibrated optical bench.
+
+Mount attitude determination sensors
+(e.g., star sensors) to the instrument
+(not the bus) to minimize the effects
+of thermoelasticity
+
+Do pointing by maneuvering the
+spacecraft or by pointing devices
+(such as pointing mirrors for the front
+of the instrument or gimbals for the
+entire instrument)
+
+For monocular optical instruments,
+make the pointing requirements on
+the order of 0.1 to 0.01 of the swath
+width, typically
+
+For stereoscopic instruments,
+automated digital terrain mapping
+requires pointing knowledge of 1/5
+of a pixel
+
+Cleaning optical surfaces is generally
+not possible
+
+During exposure to the environment,
+use cleanliness samples to verify the
+level of contamination
+
+Assembly
+Integration and
+Verification
+
+Optical instruments require clean
+rooms and clean laminar air flow
+benches for all integration and
+verification activities
+
+Clean room requirements typically
+range from 100 to 100,000 ppm
+
+Sensor must have an unobstructed
+field-of-view
+
+Sensor must have a guard cone to
+prevent performance degradation due
+to stray light
+
+Orient radiators and passive coolers
+for infrared systems to prevent
+interference with optical devices
+
+Calibration devices impose
+geometric constraints with respect to
+the optics of the system and the orbit
+
+System
+Accommodation
+
+Avoid pointing toward the Sun
+
+9.6 Examples 293
+
+The FireSat altitude trade led to a preliminary altitude, ) = 700 km. From this, we
+can determine the angular radius of the Earth, p:
+
+p=sin—! (RE(Rg + h))=64.3 deg From Eq. (5-15) (9-24)
+
+A key parameter in the system design is the minimum elevation angle, €, at which
+the system can work. We do not have an estimate of that yet, but we do know that IR
+payloads do not work well at small elevation angles. Therefore, we will tentatively
+assume a minimum elevation angle of 20 deg, recognizing that this may be a very crit-
+ical trade at a later stage. With this assumption, we can compute the nadir angle range,
+n, the maximum ground-track angle or swath width, A, and the maximum range to the
+target, D, from the formulas in Sec. 5.2:
+
+sin ) = cos € sin 9 n = 57.9 deg From Eq. (5-25a) (9-25)
+A=90 -—-n~€= 12.1 deg From Eq. (5-26) (9-26)
+D= Rx (sin A/sin n) = 1,580 km From Eq. (5-27) (9-27)
+
+These equations imply that the sensor on board the spacecraft will have to swing
+back and forth through an angle of +57.9 deg to cover the swath. The swath width on
+the ground will be 2 x 12.1 = 24.2 deg wide in Earth-central angle, with a maximum
+distance to the far edge of the swath of 1,580 km. Had we been able to work all the
+way to the true horizon (€ = 0), the maximum Earth central angle would be 90 —- p=
+27.5 deg, and the swath width would be 55 deg. Increasing the minimum elevation
+angle to 20 deg has very dramatically reduced the size of the available swath.
+
+We next find the orbit period, P, and longitude shift per orbit, AL, (Sec. 7.2):
+
+P = 1.659 x 10 x (6,378 + h)?/2 = 98.8 min From Eq. (7-7) (9-28)
+AL = 1.65 x (360/24) = 24.8 deg From Eq. (5-17) (9-29)
+
+Therefore, at the equator, successive node crossings are 24.8 deg apart. Notice that
+this is slightly larger but very close to the 24.2 deg swath width which we computed
+above. This is an important characteristic for FireSat. It would be extremely valuable
+to have the swaths overlap so that every FireSat spacecraft can cover all locations on
+the Earth twice per day. Therefore, in designing the payload, we should work hard to
+maintain either the altitude or the minimum elevation angle to provide some swath
+overlap. Doing so could dramatically reduce the number of spacecraft required and
+therefore the cost of the system.
+
+As Fig. 9-24 shows, the swath width does not need to be quite as large as the
+spacing between nodes along the equator. Even at the equator, it is enough to have a
+swath width equal to S, the perpendicular separation between the ground tracks. In
+Chap. 7, we selected an inclination for FireSat of 55 deg to cover up to 65 deg latitude.
+Consequently, we can use the spherical triangle ABC shown in the figure to compute
+S as follows:
+
+S=sin-! (sin 24.8 deg sin 55 deg) = 20.1 deg (9-30)
+
+The perpendicular separation between the orbits at the equator is 20.1 deg. Because
+the swath width is 24.2 deg, we now have some overlap margin even at the equator and
+substantial margin at higher latitudes, which are the primary areas of interest. We
+could, therefore, increase the minimum elevation angle to 25 deg. This would be a
+
+294 Space Payload Design and Sizing 9.6
+
+reasonable option. At present, we instead choose to hold € at 20 deg and to provide
+some margin on altitude and elevation angle for later payload trades.
+
+Fig. 9-24. Computation of FireSat Ground-Track Parameters.
+
+We next compute the required resolution and data rates for FireSat. From Table
+1-5, we initially estimated the needed ground resolution as 30 m. Because this is meant
+to be a very low cost system, we will assume that the required resolution, 6@,, is at nadir
+so that from an altitude of 700 km we have:
+
+6, = 0.030/700 = 4.3 x 10-5 rad = 0.00245 deg (9-31)
+
+Had we made this requirement at the maximum slant range of 1,580 km, the required
+resolution would have been 0.001 deg.
+
+Using this resolution, we can follow the procedure outlined in Table 9-15 to com-
+pute the data rate for FireSat as 85 Mbps. This data rate from the FireSat sensor is very
+high. However, we will be able to reduce it in many ways. We could process the data
+on board or, more simply, turn off the payload over the oceans or other areas where
+fire detection is of marginal utility. For now, we will leave the value as computed so
+that we remain aware of the data rate out the sensor, recognizing that this will be need
+to be reduced later in the system design.
+
+We next compute mapping and pointing budgets for FireSat. We do not have a firm
+mapping requirement, but we do have some broad sense of what is needed. We begin,
+therefore, with a rough estimate of performance parameters and create the mapping
+error as a function of the elevation angle shown in Fig. 9-25A. In this figure, we have
+used a 0.1-deg nadir angle and azimuth errors corresponding to a relatively inexpen-
+sive pointing system based on an Earth sensor. We know we can go to a more expen-
+sive system if necessary. In looking at Fig. 9-25A, we see that the mapping error at our
+chosen minimum elevation angle of 20 deg is between 6 and 8 km. While we are not
+
+9.6 Examples 295
+
+certain what our mapping requirement is, we are reasonably sure that it is smaller than
+6 km. We need to locate fires more accurately than this. Note also that the accuracy
+has been set almost entirely by our crude attitude number of 0.1 deg.
+
+The next most critical parameter is the 1-km error in target altitude. This means that
+we assume we can determine the altitude of the fire above the Earth to 1 km—a rea-
+sonable accuracy with an oblate Earth model. But significantly improving this accura-
+cy would require carrying a map of the altitudes of all of the regions of interest. That
+could be very difficult, particularly in mountainous areas, and would cost a lot more
+money. Therefore, it is of little value to drive the error in nadir angle down below ap-
+proximately 0.05 deg because it would no longer be the dominant error source. Fig. 9-
+25B shows the curves that we would achieve with the error in nadir angle reduced to
+0.05 deg and all of the other error sources remaining the same. Now the contribution
+of the errors in nadir angle and target altitude are comparable, so we will use this bud-
+get to establish a preliminary mapping requirement of 5.5 km at a 20-deg elevation an-
+gle, and 3.5 km at a 30-deg elevation angle. This may still be considerably more crude
+than we would like, so we may need to revisit this issue.
+
+107 10.
+1 km Target Altitude Error
+1 km Target Altitude Error
+8 8
+= 0.2 km Radial Error
+& z
+s =
+E ot 5 6
+w E 0.1 deg Azimuth Error
+2 ASS Mapping Error 2
+Mapping E:
+B4 0.5 km In-Track and B, RSS Mapping Error
+Cross-Track Errors =
+0.5 km In-Track and
+0.1 deg Nadir Angle Error Cross-Track Errors
+at 2 0.05 deg Nadir
+Angle Error
+— > rn r 5 = =
+oO 10 20 30 40 50 60 70 80 90 9 10 20 30 40 50 60 70 80 90
+Spacecraft Elevation Seen from Ground ‘Spacecraft Elevation Seen from Ground (deg)
+A. 0.1 deg Nadir Angle Error B. 0.05 deg Nadir Angle Error
+
+Fig. 9-25. FireSat Mapping Budget. Reducing the nadir angle error below 0.05 deg will have
+relatively little impact on the overall mapping error because of the 1 km target altitude
+error. Compare with Fig. 5-22.
+
+Equipped with the analysis of the mission geometry, we turn our attention to the
+process described in Table 9-15, these computations allow us to evaluate the optical,
+signal processing, and radiometric performance of the instrument. The third column in
+that table summarizes the results of the computations for a whiskbroom sensor design
+for the FireSat mission.
+
+The example FireSat design addresses only initial feasibility of the instrument.
+Several challenges remain with this design and addition iterations need to be made in
+the context of mission requirements and constraints. The computed data rate of
+85 Mbps will present a design challenge, as will the multiple pixel scanner needed to
+scan 256 pixels simultaneously. This will require all 256 pixels to be read out in par-
+allel, and the signal processing will need to be designed accordingly. These features
+present a particularly demanding element of the initial design.
+
+296 Space Payload Design and Sizing 9.6
+
+Detector
+Pixel Width
+
+Modulation Transfer Function
+
+Point Spread Function
+
+%0 ad 20 0 20 40 60
+Distance (um)
+
+0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08
+
+Frequency
+A B
+3 axto
+' i nn
+ac
+: oe al
+or
+‘ PE 4x08 Hi
+2x108
+° 0 MA
+< 3.4 il 36 4 42 44 46 48 5.2
+42 44 46 48 Wavelength (um)
+Wavelength (um)
+Cc D
+
+Fig. 9-26. Sample Characteristics for Sample FireSat Sensor Described in Table 9-15 in
+Sec. 9.5.5. A shows the point spread function of the sensor with respect to the pixel
+size (shown as a horizontal bar). B shows the modulation transfer functions of the
+sample instrument. C illustrates optical transmission of the atmosphere over the
+operating wavelength of the sensor. D shows the total upwelling radiance through the
+atmosphere across the operating bandwidth of the sensor.
+
+A second challenge with the design is the relatively poor signal-to-noise ratio of
+88. If we consider a pixel at the limit of the field of view, then radiometric information
+becomes indistinguishable from noise. From this point of view our current design is at
+the limit of feasibility and may require changes to meet the SNR requirements. Finally
+the F-number of the optics of 2.7 (driven by the focal length of 0.7 m and an aperture
+diameter of 26 cm) is quite a demanding optical design.
+
+We now select a “similar instrument” from Table 9-13 for our FireSat example.
+We appear to have two options: the Thematic Mapper or the Multispectral Mid-IR
+instrument. We tentatively select the Multispectral Mid-IR as our similar instrument
+and will scale from its fundamental parameters of 1.5 m x 1 m diameter, 800-kg
+weight, and 900 W power, for its 1-m aperture. We first compute the aperture ratio,
+
+R=0.26/1.0 = 0.26 From (Eq. 9-16) (9-32)
+With this fundamental ratio, we now estimate the FireSat payload parameters as
+Size = 0.4 m x 0.3 m diameter
+Weight = 2 x 800 x 0.263 = 28 kg
+Power = 2 x 900 x 0.263 = 32 W
+
+9.6 Examples 297
+
+As described in Sec. 9.5.3, we have incorporated a factor of 2 to provide margin for
+having substantially scaled down the payload size. The estimate of the linear dimen-
+sions needs to be adjusted as well to allow for the size of the scanner which will need
+to be mounted in front of the sensor optics and electronics. A rough estimate of the
+scanner dimensions is the same size as the payload estimate. Thus, as summarized in
+Table 9-17, the budgeted dimensions for the optics plus scanner is 0.8 m long x 0.3 m
+diameter. Thus, our first guess is that the FireSat payload is a moderately sized instru-
+ment and could fit well on a small to medium-sized spacecraft.
+
+TABLE 9-17. Summary of FireSat Initial Parameter Estimates.
+
+Altitude, h
+
+Comments
+Range = 600 to 800 km
+Coverage to 65 deg latitude
+20.1 deg required
+
+Nominal Value
+700 km
+55 deg
+
+Inclination, /
+
+Swath width, 2A nax
+
+Nadir angle range, 7)
+
+Min. elevation angle, €
+
+24.2 deg
++57.9 deg
+20 deg
+
+Needs payload input
+
+Instrument
+
+Ground resolution
+
+Instrument resolution 4.3 x 10°5 rad
+
+Aperture, A 0.26 m
+
+Size 0.4mx0.3 mdia
+
+Weight, W 28 kg
+
+Power, P 32 W
+
+Data rate, DR 85 Mbits/sec
+
+Mapping 3.5 km @ €= 30°
+5.5 km @ €= 20°
+
+mid-range IR scanner
+30 m at nadir
+
+Payload needs expert input
+Key parameter—needs trade study
+= 0.00245 deg
+
+May be limiting feature
+
+Our preliminary analysis of a small, lightweight FireSat payload shows that the
+mission is feasible but challenging. Several refinements and iterations on the design
+have the potential to result in a viable and cost-effective payload concept. To illustrate
+the end point of such a process, we turn our attention to MODIS, a large instrument
+and a mature design with a fire detection mission.
+
+9.6.2 MODIS—A Real FireSat Example
+
+A detailed design for a spacecraft sensor that can automatically detect fires already
+exists. The MODIS instrument (MODerate-resolution Imaging Spectroradiometer) on
+the Terra spacecraft has been designed for a comprehensive range of scientific inves-
+tigations into Earth’s atmosphere, oceans, and land use—much more challenging than
+fundamental requirements for the FireSat mission (therefore, MODIS may be over-
+designed for the FireSat mission). However, the MODIS instrument represents a
+mature design and a sophisticated, space-based fire detection system. The features and
+considerations that drove the MODIS fire detection sensor and data processing
+algorithms offer an opportunity to inform our broader discussion of FireSat throughout
+this book.
+
+298 Space Payload Design and Sizing 9.6
+
+The development of the MODIS sensor for Terra traces its roots to the GOES and
+NOAA spacecraft, and it represents at least a decade of research and design to improve
+the performance of the Advanced Very High Resolution Radiometer (AVHRR) flown
+on the NOAA series of spacecraft. The MODIS sensor on Terra is a whiskbroom, elec-
+tro-optical system. Table 9-18 lists its technical characteristics and specifications. The
+MODIS instrument includes specific design features to capitalize on the physics of
+thermal] detection of fires. MODIS fire products include detecting the incidence of fire,
+its location, emitted energy, its ratio of flaring to smoldering, and the area burned (burn
+scar detection). These products are important for understanding the influence of burn-
+ing biomass on many atmospheric processes as well as direct and indirect effects on
+terrestrial ecosystems [Kaufman and Justice, 1996]. The key innovations for the fire
+detection algorithms include distinguishing the flaring and smoldering parts of the fire
+and the automatic algorithms for reporting the progress of fires.
+
+TABLE 9-18. MODIS Instrument Characteristics. [Herring, 1997.]
+
+Orbit 705 km, 10:30 a.m. descending node, Sun synchronous
+
+Scan Rate 20.3 rpm cross track
+
+Swath Dimensions 2,330 km (across track) by 10 km (along track)
+
+Telescope 17.78 cm diam off-axis, afocal (collimated, with intermediate field stop)
+Size 1.0x 1.6 1.0m
+
+Mass 274 kg
+
+Power 162.5 W (avg for one orbit), 168.5 W (peak)
+
+Design Life 6 years
+
+Quantization 12 bits
+
+Data Rate 6.2 Mbps (avg), 10.8 Mbps (day), 2.5 Mbps (night)
+
+Spectral Range 0.4~14.4 pm
+
+Spectral Coverage +55deg, 2,330 km swath (contiguous scans at nadir at equator)
+Spatial Resolution 250 m (2 bands), 500 m (5 bands), 1,000 m (29 bands) at nadir
+Duty Cycle 100%
+
+The algorithm developed for MODIS fire detection data products employs two of
+the 500 m resolution bands, one at 4 um and the other at 11 fm. The algorithm is an
+extension of the methods developed using AVHRR. A summary of the steps in the fire
+processing algorithm follows [Kaufman and Justice, 1996]. (See also Sec. 16.3.)
+
+Initialization. The algorithm eliminates pixels with potential problems due to
+clouds or extreme viewing angles. It corrects apparent temperature readings for atmo-
+spheric absorption (including water vapor), and estimates the background temperature
+for pixels containing fire.
+
+Fire detection. The algorithm defines fire pixels based on thresholds and temper-
+ature differences between readings in the two spectral bands.
+
+Correction. It eliminates potential false positive readings due to sun glint and con-
+solidates fire readings from adjacent pixels to eliminate redundant reports.
+
+Total emitted energy. It estimates the total energy based on measurements in the
+4 um channel.
+
+Smoldering or flaming stage. It estimates the nature of the fire, namely, smolder-
+ing, flaming, or a combination of both.
+
+References 299
+
+The MODIS payload illustrates many of the design features of an automated fire
+detection system. In the context of the FireSat mission, this example provides a point
+design that has finalized a series of trade-offs in size, weight, power, resolution, and
+data rate.
+
+References
+
+Barnes, William L., Thomas S. Pagano, and Vincent V. Salomonson. 1998. “Pre-
+launch Characteristics of the Moderate Resolution Imaging Spectroradiometer
+(MODIS) on EOS-AM1.” IEEE Transactions in Geoscience and Remote Sensing,
+vol. 36(4): 1088-1100, July.
+
+Buiten, Henk J. and Jan G.P.W. Clevers, eds. 1996. Land Observation by Remote
+Sensing: Theory and Applications. The Netherlands: Gordon and Breach Science
+Publishers.
+
+Cantafio, Leopold J., ed. 1989. Space-Based Radar Handbook. Boston, MA: Artech
+House.
+
+Chen, H.S. 1985. Space Remote Sensing Systems, an Introduction. Orlando, FL:
+Academic Press.
+
+Colwell, Robert N., ed. 1983. The Manual of Remote Sensing. Falls Church, VA:
+American Society and Photogrammetry and Sheridan Press.
+
+Cruise, A.M., J.A. Bowles, T.J. Patrick and C.V. Goodall. 1998. Principles of Space
+Instrument Design. United Kingdom: Cambridge University Press.
+
+The CSTS Alliance (Boeing, General Dynamics, Lockheed, Martin Marietta, McDon-
+nell Douglas, Rockwell). 1994. “The Commercial Space Transportation Study.”
+Report No. SSD94D0034, April.
+
+Davies, John K. 1997. Astronomy From Space: The Design and Operation of Orbiting
+Observation. Chichester, England: John Wiley & Sons.
+
+DeBlois, Bruce M. 1997. “Space Sanctuary: A Viable National Strategy.” School of
+Advanced Aerospace Studies Manuscript, Montgomery, AL.
+
+Elachi, Charles. 1987. Introduction to the Physics and Techniques of Remote Sensing.
+New York: John Wiley and Sons.
+
+Fleeter, Rick. 1996. “Reducing Spacecraft Cost.” Chap. 5 in Reducing Space Mission
+Cost, James R. Wertz and Wiley J. Larson, eds. Torrance, CA: Microcosm Press.
+
+Glaser, P.E., F.P. Davidson, and K.I. Csigi. 1993. Solar Power Satellites. New York:
+Ellis Horwood, Ltd.
+
+Hall, R. Cargill. 1995. “The Eisenhower Administration and the Cold War: Framing
+American Astronautics to Serve National Security.” Prologue Quarterly of the Na-
+tional Archives, Vol. 27(1): 59-72, Spring.
+
+Herring, David. 1997. NASA’s Earth Observing System: EOS AM-1. NASA Goddard
+Space Flight Center.
+
+Hovanessian, S.A. 1988. Introduction to Sensor Systems. Boston: Artech House.
+
+300 Space Payload Design and Sizing
+
+Huffman, Robert E. 1992. Atmospheric Ultraviolet Remote Sensing. Boston, MA:
+Academic Press, Inc.
+
+Kaufman, Yoram and Chris Justice. 1996. “MODIS Fire Products.” Algorithm
+Technical Background Document, ATBD-MODIS-14, Ver. 2.1, Earth Observing
+System Document ID #2741, NASA Goddard Space Flight Center, December 3.
+
+Kidder, S.Q. and T.H. Vonder Haar. 1995. Satellite Meteorology: An Introduction.
+San Diego: Academic Press.
+
+King, Michael D., Yoram I. Kaufman, W. Paul Menzel, and Didier Tanré. 1992.
+“Remote Sensing of Cloud, Aerosol, and Water Vapor Properties from the Moder-
+ate Resolution Imaging Radiometer (MODIS).” JEEE Transactions on Geoscience
+and Remote Sensing, Vol. 30(1): 2-27, January.
+
+Kondo, Y., ed. 1990. Observatories in Earth Orbit and Beyond. Boston: Kluwer
+Academic Publishers.
+
+Kramer, Herbert J. 1996. Observation of the Earth and Its Environment: Survey of
+Missions and Sensors (Third Edition). Berlin: Springer.
+
+Lutz, Reinhold. 1998. “Design Considerations for High Resolution Earth Observation
+Instruments.” Course notes from Technical University, Delft, Toptech Studies
+Program.
+
+McCluney, Ross. 1994. Introduction to Radiometry and Photometry. Boston: Artech
+House.
+
+McDougall, Walter A. 1997. The Heavens and the Earth: A Political History of the
+Space Age. New York: Basic Books.
+
+Meneghini, Robert and Toshiaki Kozu. 1990. Spaceborne Weather Radar. Boston,
+MA: Artech House.
+
+Miller, Lester John and Edward Friedman. 1996. Photonics Rules of Thumb. New
+York: McGraw-Hill.
+
+Morgan, W. L., and G.D. Gordon 1989. Communications Satellite Handbook. New
+York: John Wiley and Sons.
+
+Schnapf, Abraham, ed. 1985. Monitoring Earth’s Ocean, Land, and Atmosphere from
+Space—Sensors, Systems, and Applications. New York: American Institute of
+Aeronautics and Astronautics, Inc.
+
+Seyrafi, Khalil. 1985. Electro-Optical Systems Analysis. Los Angeles: Electro Optical
+Research Company.
+
+Shishko, Robert and Edward J. Jorgensen. 1996. “Design-to-Cost for Space Mis-
+sions,” Chap. 7 in Reducing Space Mission Cost. James R. Wertz and Wiley J.
+Larson, eds. Torrance, CA: Microcosm Press and Dordrecht, The Netherlands:
+Kluwer Academic Publishers.
+
+Shott, John Robert. 1997. Remote Sensing: The Image Chain Approach. New York:
+Oxford University Press.
+
+Slater, Philip N. 1980. Remote Sensing: Optics and Optical Systems. Reading, MA:
+Addison-Wesley Publishing.

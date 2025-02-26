@@ -1,0 +1,1917 @@
+
+Chapter 2
+
+Mission Characterization
+
+James R. Wertz, Microcosm, Inc.
+Richard P. Reinert, Ball Aerospace Systems
+
+2.1 Step 3: Identifying Alternative Mission Concepts
+Data Delivery; Tasking, Scheduling, and Control;
+Mission Timeline
+
+2.2 Step 4: Identifying Alternative Mission Architectures
+
+2.3 Step 5: Identifying System Drivers
+
+2.4 Step 6: Characterizing the Mission Architecture
+
+Mission characterization is the initial process of selecting and defining a space
+mission. The goal is to select the best overall approach from the wide range available
+to execute a space mission. Typically we wish to choose the lowest cost or the most
+cost-effective approach, and provide a traceable rationale that is intelligible to decision
+makers.
+
+The initial process of mission characterization is discussed for general missions by
+Griffin and French [1991] and Pisacane and Moore [1994]. Elbert [1987, 1996] and
+Agrawal [1986] provide similar discussions for communications and geosynchronous
+satellites. Eckart [1996] and Woodcock [1986] discuss this process for manned mis-
+sions and Wall and Ledbetter [1991] do so for remote sensing. Boden and Larson
+[1996] discuss initial characterization for mission operations and London [1994]
+provides a similar overview for launch vehicles, with a strong emphasis on reducing
+cost. Davidoff [1998] and Wertz and Larson [1996] discuss specific mechanisms
+applicable to low-cost and reduced cost missions.
+
+The unconstrained number of mission options is huge, considering all possible
+combinations of orbits, launch systems, spacecraft, and mission concepts. The goal of
+this chapter is to prune this large number to a manageable level, without discarding
+options that offer significant advantages. We will do so by applying the requirements
+and constraints from Chap. 1 to pare down the list of alternatives. As an example, for
+most commercial communications applications, we would traditionally restrict our-
+selves to a geosynchronous orbit and only a few launch systems. However, the large
+number of low-Earth orbit communications constellations suggests that other options
+should be considered.
+
+With requirements and constraints defined and alternative mission concepts
+selected, we must define each concept to the level required for meaningful compari-
+sons. As Fig. 2-1 shows, we need to do this independently for each of the alternative
+mission concepts identified as “A” and “B” in the figure. Chapter 3 describes in more
+detail how we then evaluate the concepts, compare them in terms of cost and perfor-
+mance, and select one or more baselines. At the same time, we must keep track of the
+
+19
+
+20
+
+Definition of
+Mission Objectives
+(Chapter 1)
+
+Mission
+Characterization
+(Chapter 2)
+
+System
+Level
+Trades
+
+1
+
+Mission Concept
+Evaluation and Selection
+(Chapter 3)
+
+Fig. 2-1. Concept Exploration
+
+Mission Characterization
+
+Mission
+
+Objectives Success
+
+Criteria
+
+Define
+Preliminary
+
+Requirements &
+
+nstraints
+
+Identify
+Applicable
+Mission
+Concepts
+
+y
+Level
+
+Trades
+
+sjuewelnbey
+
+syuredjsuog
+
+Define
+
+Mission
+
+Architecture
+“ne
+
+“Performance _ Performance
+
+Evaluate
+Generate
+Concepts MoEs Measures
+* Cost (Gs of
+¢ Performance Effectiveness
+Concept "B" (MoEs)
+Selection’
+
+Characteristics Concept “B”
+
+Document
+Basetine
+Characteristics,
+Rationaie for
+Selection
+
+Selected
+Baseline
+Concept{s)
+for Further
+Study
+
+Flow. One key for successfully implementing this flow is to
+
+iterate. Successive iterations through the flow will result in greater understanding, and
+can uncover critical requirements and system drivers.
+
+element and system costs using the characteristics generated in the study and the tech-
+niques in Chap. 20. This procedure results in a rough order of magnitude (ROM) cost
+and an understanding of relative costs to support further trades and system evaluations.
+
+2.1 Step 3: Identifying Alternative Mission Concepts 21
+
+1 66
+
+In common use, “mission concept,” “concept of operations,” and “mission
+architecture” are frequently interchangeable and, at best, vaguely defined. Throughout
+this chapter, we wish to clearly distinguish between them. The mission concept, dis-
+cussed in Sec. 2.1, is a broad statement of how the mission will work in practice. This
+should not be confused with mission operations, which provides the details of how
+people will operate and control the mission. The mission architecture, introduced in
+Sec. 2.2, is the mission concept plus a definition of each of the major elements of the
+Mission.
+
+2.1 Step 3: Identifying Alternative Mission Concepts
+
+The broad mission concept is the most fundamental statement of how the mission
+will work—that is, how it gets its data or carries out the mission to satisfy the end
+user’s needs. The mission concept as we are using it here consists of the four principal
+elements in Table 2-1. Notice that most of these elements are somehow associated
+with data or information. Except for manufacturing in space and a small number of
+other space payloads, most space missions are concerned fundamentally with the
+generation or flow of information. Thus, FireSat’s mission is to generate and commu-
+nicate to an end user information about forest fires. Communications satellites move
+data and information from one place to another. Weather, surveillance, and navigation
+satellites are all concerned with generating and communicating information. Thus,
+data flow is central to most space missions. How will FireSat determine where a fire
+is and how big it is? How will the system communicate that information to the fire
+fighter in a truck or plane? Once we answer these broad questions, we begin to under-
+stand FireSat’s abilities and limits.
+
+TABLE 2-1. Elements of the Mission Concept of Operations. See Table 2-2 for a list of key
+trades and where discussed. Note that we discuss communications architecture in
+
+Sec. 13.1.
+Data Delivery How mission and housekeeping | How is imagery collected? How are for-
+
+data are generated or collected, | est fires identified? How are the results
+distributed, and used transmitted to the fire fighter in the field?
+
+What communications network is used
+to transmit forest fire data to the users in
+the field?
+
+What sensors are active and when is
+data being transmitted and processed?
+Which forested areas are receiving
+
+attention this month?
+
+Communications
+Architecture
+
+How the various components of
+the system talk to each other
+
+Tasking,
+Scheduling,
+and Control
+
+How the system decides what to
+do in the long term and short term
+
+When will the first FireSat become
+operational? What is the schedule for
+satellite replenishment?
+
+Mission
+Timeline
+
+The overall schedule for planning,
+building, deployment, operations,
+replacement, and end-of-life
+
+As Table 2-2 shows, defining the mission concept consists of defining the various
+options that are available and then selecting the most appropriate. Section 2.2
+describes how we define options and take a first cut at the broad choices available to
+us. The process of selecting among them described in Sec. 3.2 is called system trades.
+Here we are interested in what these trades are and what some of the broader alterna-
+
+22 Mission Characterization 2.1
+
+tives are to generate and transmit data. The process of defining how to transmit the
+data between the spacecraft and various users and controllers on the ground is called
+the communications architecture and is discussed in Chap. 13.
+
+TABLE 2-2. Process for Defining the Mission Concept of Operations. See Table 2-1 for
+definitions and FireSat example.
+
+Where
+Key Trades Discussed
+
+. Define data delivery process for Space vs. ground processing Sec. 2.1.1
+— Mission and housekeeping data Level of autonomy Chap. 13
+
+Central vs. distributed processing
+
+. Define tasking, scheduling, and control for | Level of autonomy Sec. 2.1.2
+
+~ Mission and housekeeping data Central vs. distributed control
+— Long term and short term
+
+. Define communications architecture for Data rates bandwidth
+— Mission and housekeeping data Timeliness of communications
+
+. Define preliminary mission timeline for Replenishment and
+— Concept development end-of-life options
+— Production and deployment Deployment strategy for
+- Operations and end-of-life multiple satellites
+
+Level of timeline flexibitity
+
+. Iterate and document
+
+The mission timeline differs from other elements of the mission concept in
+Table 2-1. It represents the overall schedule for developing, planning, and carrying out
+the mission. This defines whether it is a one-time only scientific experiment or long-
+term operational activity which will require us to replace and update satellites. In
+either case, we must decide whether the need for the mission is immediate or long
+term. Should we give high priority to near-term schedules or allow more extensive
+planning for the mission? Of course, much of this has to do with the funding for the
+mission: whether money is available immediately or will be available over time as we
+begin to demonstrate the mission’s usefulness.
+
+2.1.1 Data Delivery
+
+Space missions involve two distinct types of data—mission data and housekeeping
+data. Mission data is generated, transmitted, or received by the mission payload. This
+is the basic information that is central to what the mission is all about. For FireSat, this
+data starts out as infrared images on a focal plane and ends up as the latitude, longitude,
+and basic characteristics of a forest fire transmitted to a fire fighter on the ground. The
+mission data has potentially very high data rates associated with it. However, the need
+for this data may be sporadic. Thus, FireSat may generate huge quantities of raw data
+during periods of time that it is passing over the forests, but there is little need for this
+same level of data when it is over the poles or the oceans.
+
+Ultimately, the processed mission data may go directly to the end user or through
+ground stations and communication networks associated with mission operations. This
+will, of course, have a fundamental effect on how the mission works. In the first case,
+FireSat would process its imagery and send the forest fire information as it is being
+observed to the fire fighters in the field. In the second case, data would go instead to
+
+2.1 Step 3: Identifying Alternative Mission Concepts 23
+
+an operations center, where a computer system or human operators would evaluate it,
+compare it with previous data, and determine the location and characteristics of a
+forest fire. Then, the operations center would transmit this information to the fire
+fighters in the field. The result is about the same in both cases, but the system’s abili-
+ties, limits, characteristics, and costs may be dramatically different.
+
+In contrast to the mission data, housekeeping data is the information used to
+support the mission itself—the spacecraft’s orbit and attitude, the batteries’ tempera-
+ture and state of charge, and the status and condition of the spacecraft’s parts. Unlike
+the mission data, which is typically sporadic and may have huge data rates, the house-
+keeping data is usually continuous and at a low data rate. Continuously monitoring
+system performance does not require much information transfer by modern standards.
+In addition, rather than going to the end user, housekeeping data goes to the system
+monitoring and control activity within mission operations. Although housekeeping
+and mission data are distinct, we often need housekeeping data to make the mission
+data useful. For example, we must know the spacecraft’s orbit and attitude to deter-
+mine the ground lookpoint of the payload sensors and thereby locate the fire.
+
+For both mission and housekeeping data, the data delivery system should be an
+information management-oriented process. We want to take a large amount of raw
+data, frequently from a variety of sensors, and efficiently transform it into the infor-
+mation the users need and provide it to them in a timely manner. We do not know at
+first whether sending FireSat data directly to the field or sending it first to a mission
+operations center for interpretation and analysis is the best approach. But we do know
+our choice will dramatically affect how well FireSat works and whether or not it is an
+efficient and effective system.
+
+The principal trades associated with data delivery are:
+
+* Space vs. ground—how much of the data processing occurs on board the space-
+craft vs. how much is done at mission operations or by the end user?
+
+* Central vs. distributed processing—is one computer talking to another computer,
+or does one large central computer on the spacecraft or on the ground process
+everything?
+
+* Level of autonomy*—how much do people need to intervene in order to provide
+intelligent analysis and minimize costs?
+
+These trades are strongly interrelated. Thus, autonomy is important by itself, but is
+also a key element of the space vs. ground trade. If human intervention is required (i.e.,
+it can’t be done autonomously), then the process must be done on the ground—or it
+must be a very large spacecraft. We will discuss each of these trades below after we
+have looked at the data delivery process as a whole. Autonomy is discussed in
+Sec. 2.1.2, because it is also critical to tasking and control.
+
+The best way to start looking at the data-delivery problem is a data-flow analysis.
+This defines where the data originates and what has to happen to it before it gets to
+where it needs to go. To examine the data flow we can use a data-flow diagram as
+shown in Fig. 2-2 for the FireSat mission. A data-flow diagram lets us outline the tasks
+which we need to do, even though we don’t understand yet how we will do most of
+them. For FireSat we know that we need some type of information collection, probably
+
+* The language here can be confusing. An autonomous operation runs without human interven-
+tion. An autonomous spacecraft runs without intervention from outside the spacecraft.
+
+24 Mission Characterization 2.1
+
+a camera or imager or some other mechanism for detecting fires. As shown across the
+top row of Fig. 2-2, this imaging information must be digitized, probably filtered in
+some fashion, and transferred to a map of forest regions. We must then interpret the
+image to identify whether a fire exists, incorporate the results on a map, and distribute
+the map to the end user.
+
+Digitized Filtered
+Image Image
+
+Spacecraft
+
+Attitude Attitude
+
+Archived
+Sensors Filter
+
+Data
+
+Ground
+Look-
+
+Spacecraft Point Fire Control
+Deter- Central
+
+Distributed
+
+mination
+Orbit Orbit
+Sensors
+Spacecraft Spacecraft Fire Control
+or Ground or Ground Central
+
+[___] Data Source
+Orbit and attitude data are also part
+
+= Data End User of the "housekeeping" system
+
+Fig. 2-2. FireSat Data-Flow Diagram. The purpose of the data flow is to view the space mis-
+sion from a data-oriented perspective. We want to know where the data comes from,
+what processing must be done, and where the results are used. Our principal mission
+objective is to provide the necessary data to the end user at minimum cost and risk.
+
+To put the image on a map, we need to determine the spacecraft’s orbit and attitude.
+The attitude will almost certainly be determined on board. The orbit may be deter-
+mined either on board or by observations from the ground. In either case, the orbit and
+attitude information are combined to determine where on the ground the sensor is
+looking. We then select the map corresponding to the area we are looking at so we can
+correlate the sensor data with some physical location the fire fighters recognize.
+
+Even though we are not certain yet how the data will be used, we can be fairly sure
+that our end data from FireSat will have several applications other than immediate use
+by the fire fighters. We will want to archive it in some central location for record-
+keeping and improving our capacity to analyze and interpret future data. Finally, we
+will sort out a large amount of ancillary data, such as statistics, reports, and forest-
+management information, and use it over an extended period. The need for this data
+does not have the real-time demand of the fire data itself.
+
+The importance of the data-flow diagram is that it lets us see what has to happen in
+order to make our mission work. For FireSat, we need to combine the mission sensor
+with orbit and attitude information in order to make our system work in real time.
+However, the most difficult step is probably the one labeled “Image Interpretation and
+Analysis.” Can an automated system quickly detect forest fires and send information
+directly to the user, or do we need extensive interpretation and analysis by trained
+people in mission operations? What type of experiments or information must we have
+to determine which of these is possible? Even after we have selected an approach, we
+
+2.1 Step 3: Identifying Alternative Mission Concepts 25
+
+should revisit it regularly to see that it still makes sense. If we decide that FireSat’s
+real-time requirements demand data processing in a computer on board the spacecraft,
+we may dramatically drive up the cost because onboard processing is expensive. Our
+mission analysis may result in an automated FireSat which costs several times the
+annual budget of the Forest Service. If so, we need to reconsider whether it would be
+more economical to have an analyst on the ground interpret the data and then simply
+phone the results to an appropriate fire station. The data-flow diagram is valuable in
+helping to identify and track these central issues.
+
+We will now look at two of the three principal trades associated with data delivery:
+space vs. ground processing and central vs. distributed processing. Section 2.1.2 and
+Chap. 23.3 discuss the level of autonomy.
+
+Space vs. ground processing trades. In most earlier space missions, ground
+stations processed nearly all of the data because spaceborne processors could not do
+much. Chapter 16 describes several reasons onboard processing lags ground process-
+ing. But many onboard processors are now available with dramatically increased
+capacity. Consequently, a major trade for future missions is how much to process data
+on board the spacecraft vs. on the ground, either at a mission-operations facility or
+with the end user.
+
+Section 3.2 describes how we undertake these and other system trades and compare
+the results. The main issues in the space vs. ground trade are as follows:
+
+1, Autonomy—how independent do we want the system to be of analysis and con-
+trol by a mission operator? If evaluation by people is critical, we must do much
+of the data processing on the ground. If autonomous processing is appropriate,
+it can be done on board the spacecraft, at a central ground facility, or among the
+end users. The level of autonomy is both a key trade in its own right and an
+element of the space vs. ground trade.
+
+2. Data latency—how late can the data get to the end user? If we are allowed only
+fractions of a second, we must go to automated processes, probably on board the
+spacecraft. For FireSat, although we need the data in “near real time,” the delays
+associated with sending the data to the ground for processing are not critical.
+
+3. Communications bandwidth—how much data needs to be transmitted? If we
+have large amounts of data from a sensor, we should process and compress it as
+near the source as possible. Bringing down all of the FireSat imaging data and
+then deciding what to process further on the ground will cause an enormous
+communications problem and will probably drive up the FireSat mission’s cost
+needlessly.
+
+4. Single vs. multiple users—if there are a large number of end users, as would be
+the case for FireSat, we may be able to save considerable money by doing a high
+level of processing on board the spacecraft and sending the results directly down
+to the individual users.
+
+5. Location of end user—is the “end user” for any particular data element on the
+ground or in space? In a space-to-space relay or a system for providing
+automatic orbit maintenance, the end application is in space itself. In this case,
+sending data to the ground for processing and then returning the results to the
+space system can be very complex and costly. On the ground, the complexity of
+the system is strongly affected by whether there is one end user at the mission
+operations center or multiple, scattered users, as in the case of FireSat.
+
+26 Mission Characterization 2.1
+
+Even if we choose to process data mostly in space, the basic system design should
+allow us to obtain or recreate selected raw data for analysis on the ground. A fully
+automated FireSat should have some means to record or broadcast the raw imaging
+data, so mission planners and analysts can evaluate how well the system is working,
+fix problems, and plan alternative and better techniques for later missions.
+
+Traditionally, space software has been much more expensive than ground software.
+This suggests that processing on the ground is generally lower cost than processing on
+board the spacecraft. We believe that this will change in the future and, therefore, soft-
+ware cost should not be a major trade element in the space vs. ground processing trade.
+The cost of software is a function of what is done and how reliable we need to make
+it, rather than where it is done. We can choose to make highly reliable software as
+nearly error-free as possible for our ground systems and this software will have the
+high cost inherent with most previous onboard software systems. On the other hand,
+simple software with many reusable components can be developed economically and
+used on the spacecraft as well as on the ground.
+
+The space vs. ground processing trade will be a key issue and probably a significant
+stumbling block for most missions in the near future. For short-lived, nontime-critical
+missions, it will probably be more economical to work on the ground with little auto-
+mation. For long-lived missions, or time-critical applications, we will have to
+automate the processing and then do space vs. ground trades to minimize the operation
+and end-user costs. In any case, we wish to use the data flow analysis to evaluate where
+the data is coming from and where it will be used. If possible, we would like to mini-
+mize the communication requirements and associate data (e.g., attach time or position
+tags) as early as possible after the relevant data has been created.
+
+For FireSat the payload sensor generates an enormous amount of data, most of
+which will not be useful. One way to effectively deal with large amounts of raw data
+on board the spacecraft is to compress the data (i.e., reduce the amount of data to be
+stored or transmitted) prior to transmitting it to the ground. The data is then recreated
+on the ground using decompression algorithms. There is a variety of methods for
+compressing data, both lossless and lossy. Lossless data compression implies that no
+information is lost due to compression while lossy compression has some “acceptable”
+level of loss. Lossless compression can achieve about a 5 to 1 ratio whereas lossy
+compression can achieve up to 80 to 1 reduction in data. Many of the methods of data
+compression store data only when value changes. Other approaches are based on quan-
+tization where a range of values is compressed using mathematical algorithms or
+fractal mathematics. By using these methods, we can compress the data to a single
+algorithm that is transmitted to the ground and the image is recreated based on the
+algorithm expansion. With the use of fractals, we can even interpolate a higher resolu-
+tion solution than we started with by running the fractal for an extended period of time
+[Lu, 1997]. We select a method for data compression based on its strengths and weak-
+nesses, the critical nature of the data, and the need to recreate it exactly [Sayood, 1996].
+
+When we transmit housekeeping data we would generally use lossless compression
+for several reasons. First, raw housekeeping data is not typically voluminous. Second,
+it is important that none of the data is lost due to compression. However, when we
+transmit an image we might easily use lossy compression. We could either preview the
+image using lossy compression of we could say that the recovered image is “good
+enough.” Alternatively, a high resolution picture may have so much information that
+the human eye can not assimilate the information at the level it was generated. Again,
+in this case a lossy compression technique may be appropriate.
+
+2.1 Step 3: Identifying Alternative Mission Concepts 27
+
+In the FireSat example, we might use a sensor on board the spacecraft that takes a
+digital image of the heat generated at various positions on the Earth. The digital image
+will be represented by a matrix of numbers, where each pixel contains a value corre-
+sponding to the heat at that point on the Earth’s surface. (Of course, we will need some
+method, such as GPS, for correlating the pixel in the image to the location on the
+Earth.) If we assume that the temperature at each location or pixel is represented by
+3 bits, we can distinguish eight thermal levels. However, if we set a threshold such that
+a “baseline” temperature is represented with a 0, we might find that over many
+portions of the Earth, without fire, the image might be up to 70% nominal or 0. This
+still allows for several levels of distinction for fires or other “hot spots” on the Earth.
+Rather than transmit a 0 data value for each cold pixel, we can compress the data and
+send only those pixel locations and values which are not 0. As long as the decompres-
+sion software understands this ground rule, the image can be exactly recreated on the
+ground. In this case, we can reduce our raw data volume to the number of hot spots
+that occur in any given area.
+
+Central vs. distributed processing. This is a relatively new issue, because most
+prior spacecraft did not have sufficient processing capability to make this a meaningful
+trade. However, as discussed above, the situation has changed. The common question
+now is, “how many computers should the spacecraft have?” Typically, weight and
+parts-count-conscious engineers want to avoid distributed processing. However,
+centralized processing can make integration and test extremely difficult. Because
+integration and test of both software and hardware may drive cost and schedule, we
+must seriously consider them as part of the processing trade.
+
+Our principal recommendations in evaluating central vs. distributed processing are:
+
+* Group like functions together
+¢ Group functions where timing is critical in a single computer
+
+* Look for potentially incompatible functions before assigning multiple functions
+to one computer
+
+* Maintain the interface between groups and areas of responsibility outside of the
+computer
+
+* Give serious consideration to integration and test before grouping multiple func-
+tions in a single computer
+
+Grouping like functions has substantial advantages. For example, attitude determi-
+nation and attitude control may well reside in the same computer. They use much of
+the same data, share common algorithms, and may have time-critical elements.
+Similarly, orbit determination and control could reasonably reside in a single naviga-
+tion computer, together with attitude determination and control. These hardware and
+software elements are likely to be the responsibility of a single group and will tend to
+undergo common integration and testing.
+
+In contrast, adding payload processing to the computer doing the orbit and attitude
+activities could create major problems. We can’t fully integrate software and hardware
+until after we have integrated the payload and spacecraft bus. In addition, two different
+groups usually handle the payload and spacecraft bus activities. The design and
+manufacture of hardware and software may well occur in different areas following
+different approaches. Putting these functions together in a single computer greatly in-
+creases cost and risk during the integration and test process, at a time when schedule
+delays are extremely expensive.
+
+28 Mission Characterization 2.1
+
+Another problem which can arise from time to time is incompatible functions, that
+is, activities which do not work well together. One example would be sporadic,
+computationally-intensive functions which demand resources at the same time.
+Another example occurs when the initial processing of either spacecraft bus or payload
+sensors may well be an interrupt-driven activity in which the computer is spending
+most of its time servicing interrupts to bring in observational data. This could make it
+difficult for the same computer to handle computationally-intensive processing
+associated with higher-level activities. This can be accommodated either by having the
+functions handled in separate computers or using a separate I/O processor to queue
+data from the process with a large number of interrupts.
+
+Finally, we must consider the groups who oversee different activities. Integration
+and test of any computer and its associated software will be much more difficult if two
+distinct groups develop software for the same computer. In this case, significant delays
+and risks can occur. This does not necessarily mean, however, that elements controlled
+by different groups cannot be accommodated in the same computer. One approach
+might be to have two engineering groups be responsible for development of specifica-
+tions and ultimately for testing. The detailed specifications are then handed over to a
+single programming group which then implements them in a single computer. This
+allows a single group to be responsible for control of computer resources. Thus, for
+example, the orbit control and attitude control functions may be specified and tested
+by different analysis groups. However, it may be reasonable to implement both
+functions in a single computer by a single group of programmers.
+
+2.1.2 Tasking, Scheduling, and Control
+
+Tasking, scheduling, and control is the other end of the data-delivery problem. If
+the purpose of our mission is to provide data or information, how do we decide what
+information to supply, whom to send it to, and which resources to obtain it from?
+Many of the issues are the same as in data delivery but with several key differences.
+Usually, tasking and control involve very low data rates and substantial decision
+making. Thus, we should emphasize how planning and control decisions are made
+rather than data management.
+
+Tasking and scheduling typically occur in two distinct time frames. Short-term
+tasking addresses what the spacecraft should be doing at this moment. Should FireSat
+be recharging its batteries, sending data to a ground station, turning to look at a fire
+over Yosemite, or simply looking at the world below? In contrast, long-term planning
+establishes general tasks the system should do. For example, in some way the FireSat
+system must decide to concentrate its resources on northwestern Pacific forests for
+several weeks and then begin looking systematically at forests in Brazil. During con-
+cept exploration, we don’t need to know precisely how these decisions are made. We
+simply wish to identify them and know broadly how they will take place.
+
+On the data distribution side, direct downlink of data works well. We can process
+data on board, send it simultaneously to various users on the ground, and provide a
+low-cost, effective system. On the other hand, direct-distributed control raises serious
+problems of tasking, resource allocation, and responsibility. The military community
+particularly wants distributed control so a battlefield commander can control resources
+to meet mission objectives. For FireSat, this would translate into the local rangers
+deciding how much resource to apply to fires in a particular area, including the surveil-
+lance resources from FireSat. The two problems here are the limited availability of
+resources in space and broad geographic coverage. For example, FireSat may have
+
+2.1 Step 3: Identifying Alternative Mission Concepts 29
+
+limited power or data rates. In either case, if one regional office controls the system
+for a time, they may use most or all of that resource. Thus, other users would have
+nothing left. Also, FireSat could be in a position to see fires in Yosemite Park and
+Alaska at the same time. So distributed control could create conflicts.
+
+For most space systems, some level of centralized control is probably necessary to
+determine how to allocate space resources among various tasks. Within this broad
+resource allocation, however, we may have room for distributed decisions on what
+data to collect and make available, as well as how to process it. For example, the
+remote fire station may be interested in information from a particular spectral band
+which could provide clues on the characteristics of a particular fire. If this is an appro-
+priate option, the system must determine how to feed that request back to the satellite.
+We could use a direct command, or, more likely, send a request for specific data to
+mission operations which carries out the request.
+
+Spacecraft Autonomy. Usually, high levels of autonomy and independent opera-
+tions occur in the cheapest and most expensive systems. The less costly systems have
+minimal tasking and control simply because they cannot afford the operations cost for
+deciding what needs to be done. Most often, they continuously carry on one of a few
+activities, such as recovering and relaying radio messages or continuously transmitting
+an image of what is directly under the spacecraft. What is done is determined automat-
+ically on board to save money. In contrast, the most expensive systems have autonomy
+for technical reasons, such as the need for a very rapid response (missile detection sys-
+tems), or a problem of very long command delays (interplanetary missions). Typically,
+autonomy of this type is extremely expensive because the system must make complex,
+reliable decisions and respond to change.
+
+Autonomy can also be a critical issue for long missions and for constellations, in
+which cost and reliability are key considerations. For example, long-duration orbit
+maneuvers may use electric propulsion which is highly efficient, but slow. (See
+Chap. 17 for details.) Thruster firings are ordinarily controlled and monitored from the
+ground, but electric propulsion maneuvers may take several months. Because moni-
+toring and controlling long thruster burns would cost too much, electric propulsion
+requires some autonomy.
+
+As shown in Fig. 2-3, autonomy can add to mission reliability simply by reducing
+the complexity of mission operations. We may need to automate large constellations
+for higher reliability and lower mission-operations costs. Maintaining the relative
+positions between the satellites in a constellation is routine but requires many com-
+putations. Thus, onboard automation—with monitoring and operator override if
+necessary—will give us the best results.
+
+With the increased level of onboard processing available, it is clearly possible to
+create fully autonomous satellites. The question is, should we do so or should we
+continue to control satellites predominantly from the ground?
+
+Three main functions are associated with spacecraft control: controlling the
+payload, controlling the attitude of the spacecraft and its appendages, and controlling
+the spacecraft orbit. Most space payloads and bus systems do not require real-time
+control except for changing mode or handling anomalies. Thus, the FireSat payload
+will probably fly rather autonomously until a command changes a mode or an anomaly
+forces the payload to make a change or raise a warning. Autonomous, or at least semi-
+autonomous payloads are reasonable for many satellites. There are, of course, excep-
+tions such as Space Telescope, which is an ongoing series of experiments being run by
+different principal investigators from around the world. In this case, operators control
+
+30 Mission Characterization 2.1
+
+Traditional Approach
+
+Worldwide
+Tracking
+Data
+
+Ground Station
+Determines &
+Propagates Orbit
+
+Downlink
+combined
+observation,
+attitude, &
+orbit data
+
+Ground Sys
+determines
+what is
+being
+observed
+
+Time and
+
+Lookpoint
+
+Attached
+to data
+
+Attach
+Attitude
+to data
+
+Select Star
+Catalog
+
+¢ Operations Intensive . Needs high accuracy to support long term
+¢ Look Point determined after the fact orbit propagation a
+* Many opportunities for Communications or
+Operations Errors
+
+Autonomous Approach
+
+Time and e Ail intermediate steps occur in real time
+Lookpoint * Accuracy requirement can be reduced to
+AutoNav Attached that needed for real time support
+to data « “Direct to User” data flow is both feasible &
+economical
+
+Downlink data for
+ Venfication as needed |
+
+Fig. 2-3. Comparison of Traditional vs. Autonomous Approach to Satellite Navigation.
+Use of autonomous operations may significantly reduce mission complexity and there-
+by increase reliability.
+
+the payload, but we would use some automatic operations to save money or to make
+the operator’s job easier.
+
+Controlling the attitude of the spacecraft and its appendages is done autonomously
+on board for nearly all satellites. Controlling the attitude from the ground is too expen-
+sive and too risky. The attitude control system on board most spacecraft provides
+various attitude contro] modes and can work over extended periods with little or no
+intervention from the ground.
+
+Ground control has remained strongest in orbit maintenance and control, in which
+virtually all thruster firings intended to change the orbit are set up and enabled by
+ground command. This ground control] will probably continue whenever large rocket
+engines produce orbit maneuvers such as when a kick stage moves the satellite from a
+parking orbit into a geosynchronous transfer orbit. Once in their operational orbit,
+however, many satellites either leave the orbit entirely uncontrolled or simply
+maintain the orbit at a given altitude or within a given window. In this case, low-thrust
+propulsion is both feasible and desirable because it is much less disturbing to the
+normal spacecraft environment. Low-thrust orbit maneuvers have been used on
+geosynchronous spacecraft for a long time so normal satellite operations can continue
+during the course of these stationkeeping maneuvers.
+
+With low-thrust propulsion and current technology for autonomous navigation,
+autonomous orbit control is cheap, easy, and inherently less risky than autonomous
+attitude control. If the attitude control system stops working for even a short time, the
+spacecraft can have various potential problems, including loss of power, loss of
+command, and pointing of sensitive payloads toward the Sun. In contrast, if we lose
+low-thrust orbit control for a while, nothing disastrous happens to the spacecraft. The
+spacecraft proceeds in its orbit drifting slowly out of its predefined position. This is
+easily detected and corrected by the ground, assuming that the orbit control system
+didn’t fail completely.
+
+2.1 Step 3: Identifying Alternative Mission Concepts 31
+
+The major problem facing autonomous orbit control and, therefore, with autono-
+mous satellites as a whole, is tradition. The ground does it mostly because it has always
+been done that way. However, there are some signs of change. Both UoSAT-12 and
+EO-1 are planning experiments in autonomous orbit control and several of the low-
+Earth orbit communications constellations have baselined autonomous orbit control to
+minimize both cost and risk.
+
+Current satellite technology allows us to have fully autonomous, low-cost satellites.
+Autonomy can reduce cost and risk while enabling mission operations people to do
+what they do best—solve problems, handle anomalies, and make long-term decisions.
+We believe fully autonomous satellites, including autonomous orbit maintenance, will
+come about over the next decade as lower costs and risks, validated by on-orbit
+experiments, begin to outweigh the value of tradition.
+
+2.1.3 Mission Timeline
+
+The mission timeline is the overall schedule from concept definition through
+production, operations, and ultimately replenishment and end of life. It covers in-
+dividual satellites and the whole system. Table 2-3 lists the mission timeline’s main
+parts and where they are discussed. Notice that two distinct, potentially conflicting,
+demands can drive planning and production. One is the demand for a particular sched-
+ule or time by which the system must be operational. Thus, a Halley’s Comet mission
+depends on launching a satellite in time to rendezvous with the comet. On the other
+hand, funding constraints frequently slow the mission and cause schedule gaps which
+add both further delays and cost. Of course, funding constraints can affect much more
+than timelines. They can determine whether we will do a mission, as well as its scope.
+
+TABLE 2-3. Principal Elements of the Mission Timeline. Key milestones in the mission or
+project timeline can have a significant effect on how the space system is designed
+and operated.
+
+Element Typically Driven By Where Discussed
+
+Planning and Funding constraints
+Development System need date
+
+Production Funding constraints Chap. 12
+Technology development
+System need date
+
+Initial Launch Launch availability Chap. 18
+System need date
+
+Constellation Production schedule Sec. 7.6.1
+Build-up Launch availability
+Satellite lifetime
+
+Normal Mission Planned operational life Chap. 14
+Operations Satellite lifetime (planned or failure constrained)
+
+Replenishment Production schedule Sec. 19.1
+Launch availability
+Satellite lifetime (planned or failure constrained)
+
+End-of-Life Legal and political constraints Sec. 21.1
+Disposal Danger to other spacecraft
+
+
+32 Mission Characterization 2.2
+
+If the mission involves a constellation of satellites, a key timeline driver is the need
+to have the full constellation up for most of the satellite’s lifetime. If a single satellite
+will last 5 years and we need a constellation of 50, we’l] never get a full constellation
+with a launch rate of 5 per year. If having the full constellation is important, we must
+deploy the initial constellation within 20-25% of an individual satellite’s lifetime.
+This schedule allows some margin for almost inevitable stretch-out as difficulties arise
+during the mission. If the constellation must remain complete, we need to plan for
+regular replenishment of satellites. We can replenish on a predefined timeline as
+satellites wear out or become technically obsolete, or we can respond to on-orbit
+failures or other catastrophic events which “kill” a particular satellite.
+
+Two areas of the mission timeline typically do not receive adequate attention
+during concept exploration: performance with less than a full set of satellites while
+building up the constellation, and end-of-life disposal. In a constellation of satellites
+we would like to increase performance levels as we add satellites. If FireSat is a con-
+stellation, we want to achieve some protection from fires with the first satellite launch
+and more with each added launch until all satellites are in place. As described further
+in Sec. 7.6, designers of constellations often concentrate only on the full constella-
+tion’s performance. However, the period of time before the constellation is brought
+fully into place can frequently be long and may well be a critical phase since a large
+fraction of the funding has been spent and yet full capability has not been achieved.
+Thus it is particularly important for constellation design to take into account the prob-
+lem of performance with less than a full set of satellites. In addition, we want graceful
+degradation, so a satellite failure will still allow strong performance until we replace
+the failed satellite. These issues are important during concept exploration because they
+may significantly affect the design of the constellation and the entire system.
+
+There is now growing concern with disposal of satellites after their useful life in
+orbit. We have already recognized this need for geosynchronous satellites because the
+geosynchronous ring is rapidly filling. But it is also very important for low-Earth orbit
+constellations in which debris and spent satellites left in the pattern can threaten the
+remaining constellation. Again, we must address this issue early in concept definition.
+
+2.2 Step 4: Identifying Alternative Mission Architectures
+
+A mission architecture consists of a mission concept plus a specific set of options
+for the eight mission elements defined in Sec. 1.2. Although we need all of the
+elements to define and evaluate a mission architecture, some are more critical than
+others in determining how the space mission will meet its objectives. Typically, we
+define a mission architecture by specifying the mission concept plus the subject, orbit,
+communications architecture, and ground system. These provide a framework for
+defining the other elements. Alternatively, we may define the architecture by specify-
+ing a unique approach to mission operations or a unique payload which then drives the
+definition of the remaining elements
+
+Our goal is to arrive at a set of candidate architectures for further evaluation large
+enough to encompass all approaches offering significant advantages, but small enough
+to make the more detailed definition and evaluation manageable. Table 2-4 summariz-
+es the mechanism for doing this, which we describe below.
+
+Step A. Identify the mission elements subject to trade. We begin by examining our
+basic mission concept and each of the eight mission elements in light of the require-
+ments and constraints from Sec. 1.4 to determine which have more than one option.
+
+2.2 Step 4: Identifying Alternative Mission Architectures 33
+
+TABLE 2-4. Process Summary for Identifying Alternative Mission Architectures. This high-
+ly creative endeavor can have a significant impact on mission cost and complexity.
+
+Where Discussed
+
+A. Identify the mission elements subject to trade. Table 2-5
+
+B. Identify the main options for each tradeable element. Table 2-6
+D. Prune the trade tree by eliminating unrealistic combinations. Table 2-7
+we do the mission.
+
+Usually this step greatly reduces the number of tradeable elements. Table 2-5 summa-
+rizes this process for FireSat. The FireSat mission has multiple options that will affect
+not only cost but also performance, flexibility, and long-term mission utility. Thus, for
+this mission we should carry through several different options so the decision-making
+audience can understand the main alternatives.
+
+TABLE 2-5. Selecting FireSat Elements Which can be Traded. Many options exist for FireSat,
+not all of which are compatible with each other.
+
+Element of Mission Can be
+Architecture Traded Reason
+
+Want to remain open to alternative approaches
+Yes
+
+Spacecraft Bus Multiple options based on scan mechanism and power
+Launch System Cost only Choose minimum cost for selected orbit
+
+Options are low, medium, or high altitude with varying
+number of satellites
+
+Ground System Yes Could share NOAA control facility, use dedicated
+
+FireSat facility, or direct downlink to users
+Communications Fixed by mission operations and ground system
+Architecture
+
+Mission Operations Can adjust level of automation
+
+Table 2-5 lists one of the options as “Cost only,” meaning that the trade depends
+mainly on cost and only secondarily on how or how well the mission is accomplished.
+An example would be the launch system, for which the main concern normally is what
+launch vehicle will get the spacecraft into orbit at the lowest cost. Still, these trades
+may be important in selecting the mission concept. For example, a major increase in
+the launch cost may outweigh being able to use a smaller number of identical satellites
+in a higher orbit.
+
+Step B. Identify the main options for each tradeable element. Although in theory we
+have almost an unlimited number of options, we normally draw them from a limited
+set such as those in Table 2-6. Thus, we first choose options that apply to our mission
+and then look for special circumstances which may lead us to consider alternatives not
+listed in the table.
+
+34 Mission Characterization 2.2
+
+TABLE 2-6. Common Alternatives for Mission Elements. This table serves as a broad
+checklist for identifying the main alternatives for mission architectures.
+
+Mission
+Element [Where Most Common FireSat
+Discussed] Options Options
+
+Mission Concept |Data delivery | Direct downlink to user, automated ground | Direct downlink or
+(Sec. 2.1] processing, man-in-the-loop processing and | through mission
+transmission control
+
+Tasking Ground commanding, autonomous tasking, |Simple operation or
+simple operations (no tasking required) ground commands
+
+Controllable Selection Standard ground stations, private TV N/A
+Subject (Secs. receivers, ship or aircraft transceivers, (See Sec. 9.3]
+2.3, 13.4, 22.3] special purpose equipment
+
+Performance |EIRP, G/T (See 13.3 for definitions)
+Steering Fixed or tracking
+
+Passive Subject |Whatis tobe | Subject itself, thermal environment, Heat or visible light;
+emitted radiation, contrast with chemical composi-
+surroundings tion; particles
+
+Payload Communications: normal bands IR, visible
+(Chaps. 9, 13] Observations: IR, visible, microwave
+(some items may Radar: L, C, S bands, UHF
+
+not apply,
+depending on Single or multiple frequency bands, Single or
+
+mission type) single or multiple instruments multiple bands
+
+Payload Size vs. Small aperture with high power
+sensitivity (or sensitivity) or vice versa
+
+Spacecraft Bus | Propulsion Whether needed; cold gas, monopropellant, | Determined
+
+(Chap. 10] bipropeilant by definition of
+payload and orbit
+
+Orbit control |Whether needed, onboard vs. ground
+Navigation Onboard (GPS or other) vs. ground-based
+
+Attitude deter- | None, spinning, 3-axis; articulated
+mination and | payload vs. spacecraft pointing;
+control actuators and sensors
+
+Power Solar vs. nuclear or other; body-mounted vs.
+1- or 2-axis pointed arrays
+
+Launch System |Launch SSLV, Atlas, Delta, STS, Titan, Determined by
+[Chap. 18] vehicle Pegasus, Ariane, other foreign definition of space-
+craft and orbit
+
+Upper stage |Pam-D, IUS, TOS, Centaur, integral
+propulsion, other foreign
+
+Launch site Kennedy, Vandenberg, Kourou, other foreign
+
+Orbit Special orbits | None, geosynchronous, Sun-synchronous, |Single GEO
+[Chaps. 6, 7] frozen, Molniya, repeating ground track satellite, low-Earth
+constellation
+
+Altitude Low-Earth orbit, mid-altitude,
+geosynchronous
+
+Inclination 0°, 28.5°, 57°, 63.4°, 90°, 98°
+
+Constellation |Number of satellites; Walker pattern, Min. inclination de-
+configuration |other pattems; number of orbit planes pendent on altitude
+
+
+2.2 Step 4: Identifying Alternative Mission Architectures 35
+
+TABLE 2-6. Common Alternatives for Mission Elements. (Continued) This table serves as a
+broad checklist for identifying the main alternatives for mission architectures.
+
+Mission
+
+Element [Where Most Common FireSat
+Discussed] Options Options
+
+AFSCN, NASA control center, other shared | Shared NOAA
+system, dedicated system system, dedicated
+system
+
+Ground System
+[Chap. 15]
+
+Existing or
+dedicated
+
+Communications | Timeliness
+Architecture
+
+[Chap. 13]
+
+Store and dump, real-time link Either option
+
+Control
+and data
+dissemination
+
+Single or multiple ground stations, direct to
+user, user commanding, commercial links
+
+1 ground station;
+commercial or
+direct data transfer
+
+TDRS or
+commercial
+
+Any of the
+options listed
+
+TDRSS, satellite-to-satellite crosslinks,
+commercial communications relay
+
+Relay
+mechanism
+
+Automation
+level
+
+Mission
+Operations
+[Chap. 14]
+
+Fully automated ground stations, part-time
+operations, full-time (24-hr) operations
+
+Autonomy
+level
+
+Full ground command and control,
+partial autonomy, full autonomy
+(not yet readily available)
+
+Steps C and D. Construct and prune a trade tree of available options. Having
+identified options we next construct a trade tree which, in its simplest form, is a listing
+of all possible combinations of mission options. Mechanically, it is easy to create a list
+of all combinations of options identified in Step B. As a practical matter, such a list
+would get unworkably long for most missions. As we construct the trade tree we need
+to find ways to reduce the number of combinations without eliminating options that
+may be important.
+
+The first step in reducing the number of options is to identify the system drivers (as
+discussed in Sec. 2.3) and put them at the top of the trade tree. The system drivers are
+parameters or characteristics that largely determine the system’s cost and perfor-
+mance. They are at the top of the trade tree because they normally dominate the design
+process and mandate our choices for other elements, thus greatly reducing our options.
+
+The second step in reducing options is to look for trades that are at least somewhat
+independent of the overall concept definition or which will be determined by the
+selection of other elements. For example, the spacecraft bus ordinarily has many key
+options. However, once we have defined the orbit and payload, we can select the
+spacecraft bus that meets the mission requirements at the lowest cost. Again, although
+bus options may not be in the trade tree, they may play a key role in selecting workable
+mission concepts because of cost, risk, or schedule.
+
+The third tree-pruning technique is to examine the tree as we build it and retain only
+sensible combinations. For example, nearly any launch vehicle above a minimum size
+will work for a given orbit and spacecraft. Because cost is the main launch-vehicle
+trade, we should retain in the trade tree only the lowest-cost launch vehicle that will
+fulfill the mission. This does not mean that we will ultimately launch the spacecraft on
+the vehicle listed in the trade tree. Instead, we should design the spacecraft to be com-
+patible with as many launch vehicles as possible and then select the vehicle based on
+cost (which may well have changed) when we are deciding about initial deployment.
+
+Steps C and D produce a trade tree such as the one for FireSat in Fig. 2-4. Our goal
+is to retain a small number of the most promising options to proceed to more detailed
+
+36 Mission Characterization 2.2
+
+definition. For each option we will have selected most, though not necessarily all, of
+the elements shown in Table 2-7 for options 1 and 6. Of course we should reevaluate
+the trade tree from time to time as the system becomes more completely defined.
+
+Orbit Low Earth Geosynchronous
+orbit
+
+Payload Smail Aperture IR Large Aperture IR
+
+Gorm. Store &
+re Dum
+(Downlink) P
+
+Comm.
+
+Arch. Commercial Commercial Commercial Through FireSat
+{to User)
+
+Launch Pegasus Pegasus Shared Shared Shared Shared
+sts STS STS STS
+TOS Integral TOS Integrai
+Propulsion Propulsion
+
+Option No. (3) (4) (5) (6)
+
+Fig. 2-4. FireSat Trade Tree. Only some of the launch options are listed. Other mission
+elements are largely independent of the trade tree options. The goal is to create dras-
+tically different options for comparison.
+
+TABLE 2-7. Two of the Six Preliminary FireSat Mission Concepts. See the trade tree in
+Fig. 2-4 for the other options.
+
+Option 6
+
+IR detection of fires with results put
+on a map and transmitted
+
+Element Option 1
+
+IR detection of fires with results
+
+put on a map and transmitted
+
+Characteristics defined by the
+the specification specification
+
+Small, 3-axis Mid-size, 3-axis
+
+Launch System
+
+Mission Concept
+
+Pegasus STS, integral propulsion
+
+Low-Earth, 2 satellites, Geosynchronous, 1 satellite
+2 perpendicular polar planes centered over west coast of U.S.
+
+Ground System Single, dedicated ground station Single, dedicated ground station
+Communications TDRS data downlink; Direct to station; results relayed
+Architecture commercial links to users to users via FireSat
+Mission Operations | Continuous during fire season, Continuous during fire season,
+
+partial otherwise partial otherwise
+
+Step E. Look for other alternatives. Defining alternative architectures cannot be
+purely mechanical. For nearly any mission, we may find new and better ways of doing
+anything the basic elements do. A new, low-cost launch vehicle may dramatically
+change the available design alternatives. Alternative definitions of the subject or user
+
+
+2.3 Step 5: Identifying System Drivers 37
+
+may allow major performance improvements or cost reductions. For example, as an
+alternative mission concept we could detect forest fires by using small sensors spread
+throughout the forests being monitored and simply use the satellite system to inter-
+rogate the sensors and provide the data to the users. Chapter 22 further explores this
+low-cost alternative. The key point is that alternatives nearly always exist. We must
+look carefully for them and be willing to revise normal requirements and constraints
+to meet our fundamental mission objectives.
+
+2.3 Step 5: Identifying System Drivers
+
+System drivers are the principal mission parameters or characteristics which influ-
+ence performance, cost, risk, or schedule and which the user or designer can control.
+For example, the temperature at which a forest fire burns may heavily influence how
+easily it can be detected; however, this is beyond the system designer’s control and,
+therefore, is not a system driver. Correctly identifying the key system drivers is a crit-
+ical step in mission analysis and design. Misidentifying system drivers is one of the
+most common causes of mission analysis error. For example, we may focus a lot of
+time and effort on getting the most coverage for an orbit when the system’s ultimate
+performance depends mainly on data rates or cloud cover.
+
+Table 2-8 lists the most common system drivers for space missions, along with
+what limits them, what they limit, and where they are discussed. The table helps us
+ensure that we do not overlook system drivers. In identifying these drivers we must
+clearly determine whether we are looking for drivers of performance, cost, risk, or
+schedule. These may be the same or different. To identify system drivers, we:
+
+1. Identify the Area of Interest
+Explicitly identify the area of interest, typically performance, cost, risk, or
+schedule.
+
+2. Identify Parameters Which Measure the Area of Interest
+Define numerical parameters which measure the identified area of interest. (See
+Sec. 3.4 on measures of effectiveness and performance parameters for more
+details on how to do this.) The important point is to find parameters which gen-
+uinely measure the goal rather than ones which simply are easy to compute.
+
+3. Develop First-Order Algorithms
+Develop a formula or algorithm to express the first-order estimate for the value
+of the parameter identified above. This could include either system algorithms
+as defined in Sec. 3.1, or unique algorithms for the identified parameter. (See
+Table 2-9 for the FireSat example.)
+
+4. Examine the Factors
+Examine each of the factors in the expression identified above. Those which can
+be adjusted and which have the strongest effect on results are the system drivers.
+
+5. Look for Possible “Hidden Drivers”
+Examine each of the first-order algorithms for implicit variables or for factors
+affecting more than one characteristic. For example, altitude will influence
+the ground resolution of a given instrument, the area covered by the field of
+view, and the spacecraft’s velocity relative to the Earth. Therefore, it will more
+strongly influence effective area search rates than a single formula may show.
+
+38 Mission Characterization 2.4
+
+TABLE 2-8. Common System Drivers. System drivers can frequently be identified by examin-
+ing the parameters in this list.
+
+Where
+What Limits Driver What Driver Limits Discussed
+Shroud or bay size, Payload size (frequently antenna Chaps.
+available weight, diameter or aperture) 9, 10
+aerodynamic drag
+On-orbit Weight | Altitude, inclination, Payload weight, survivability; largely | Sec. 10.4.1
+launch vehicle determines design and
+manufacturing cost
+
+Secs.
+10.2, 11.4
+
+Sec. 13.3
+
+Size, weight (control
+is secondary problem)
+
+Storage, processing,
+antenna sizes, limits
+of existing systems
+
+Coverage, availability
+of ground stations or
+relay satellites
+
+ie ae
+
+Payload & bus design, system
+sensitivity, on-orbit life
+
+Information sent to user; can push
+demand for onboard processing
+
+Data rate
+
+Sec. 7.2,
+Chap. 13
+
+Communications Coverage, timeliness, ability to
+
+command
+
+Resolution, geolocation, overall sys- Sec. 5.4
+
+tem accuracy; pushes spacecraft cost
+
+Number of Cost Coverage frequency, and overlap Secs.
+
+Spacecraft 7.2,7.6
+
+Altitude Launch vehicle, Performance, survivability, coverage Secs.
+performance (instantaneous and rate), 3.3, 7.1,
+demands, weight communications 7.4,7.6
+
+Coverage Orbit, scheduling, Data frequency and continuity,
+(geometry payload field of view | maneuver requirements
+
+and timing) & observation time
+
+Scheduling Timeline & operations, | Coverage, responsiveness,
+decision making, mission utility
+communications
+
+Operations Cost, crew size, Frequently principal cost driver,
+
+communications principal error source, pushes
+demand for autonomy (can also
+
+save “lost” missions)
+
+The way we have defined our particular problem, or which parameters are available
+to us, may affect our list of system drivers. Thus, defining system drivers depends in
+part on the physical and technical nature of the problem and in part on the constraints
+imposed on the mission analyst. Usually, we want to make these constraints explicit,
+so we will know which variables are available for adjustment and which are assumed
+to be given. Table 2-9 shows the major performance drivers for FireSat.
+
+2.4 Step 6: Characterizing the Mission Architecture
+
+Once we have established alternative mission concepts, architectures, and system
+drivers, we must further define the mission concepts in enough detail to allow
+meaningful evaluations of effectiveness. For concept exploration, the steps in this
+process correspond to the space mission elements. Figure 2-5 illustrates the sequence
+of activities and shows schematically the major interactions between the steps, as well
+as primary trade study areas and their interactions with main elements of the process.
+The steps are described below and summarized in Table 2-10.
+
+2.4 Step 6: Characterizing the Mission Architecture 39
+
+TABLE 2-9. Identification of Performance Drivers for FireSat. First-order algorithms are
+given to allow us to estimate the performance drivers. Definition of performance
+drivers may change as we create more detailed definitions of the system and sys-
+tem algorithms. Comparison of columns two and three shows that the performance
+drivers may depend on the mission concept used.
+
+Key First Order Algorithm First Order Algorithm Performance
+Parameters (Low-Earth Orbit) (Geosynchronous) Drivers
+Observation | (Number of spacecraft)/ Scan frequency Number of spacecraft
+Frequency |12hr for low orbit
+Time Late Onboard storage delay + Communications + Storage delay
+
+processing time processing time (if applicable)
+Resolution | Distance x[(wavelength/ Distance x[(wavelength/ | Altitude, aperture,
+aperture) + control error] aperture) + control error] | control accuracy
+Observation | Cloud cover interval or Cloud cover interval or None
+Gap coverage gap coverage gap (weather dominated)
+
+TABLE 2-10. Summary of the Concept Characterization Process. See text for details. See
+Fig. 2-5 for a typical process flow.
+
+eS
+
+Define the preliminary mission concept Chap. 2
+Define the subject characteristics Chap. 9
+Determine the orbit or constellation characteristics Chap. 7
+Determine payload size and performance Chap. 9, 13
+Select the mission operations approach
+¢ Communications architecture
+
+¢ Operations
+
+¢ Ground system
+
+Design the spacecraft bus to meet payload, orbit, and
+communications requirements
+
+Select a launch and orbit transfer system
+
+Determine deployment, logistics, and end-of-life strategies
+Provide costing support
+
+Document and Iterate
+
+moO DO >
+
+Chap. 13
+Chap. 14
+Chap. 15
+Chap. 10
+
+n
+
+Chap. 18
+Secs. 7.6, 19.1, 21.2
+Chap. 20
+Chap. 20
+
+e-IrQ
+
+A. Define the Preliminary Mission Concept (Chapter 2)
+
+As described in Sec. 2.1, the key elements are data delivery; tasking, scheduling,
+and control; communications architecture; and mission timeline. We begin with a
+broad concept and refine this concept as we define the various mission elements in the
+steps below. (See Tables 2-1 and 2-2 for a further definition of these elements and how
+to define them.)
+
+B. Define the Subject Characteristics (Chapter 9)
+
+We can divide space missions into two broad categories. One services other system
+elements, typically on the user premises, such as Comsat ground stations or GPS
+navigation receivers. The other category senses elements that are not a part of the
+mission system, such as the clouds observed by weather satellites. Our first step in de-
+fining the system elements (Chap. 9) is to determine the subject’s key characteristics.
+
+40 Mission Characterization
+
+Enter with
+Mission
+Requirements
+
+& Constraints
+
+Define Prelkminary Mission Concept
+« Data Creation & Flow
+« Mission Timeline
+
+Step A
+
+Define Subject Charactenstics
+* Active vs. Passive
+« EIRP/Spectral Coverage
+
+Step B
+
+« Duty Cycle
+tar”
+
+Define Orbit/Constellation Element
+* Temporal Coverage 5
+
+« Spatial Coverage
+
+* Number of Spacecraft
+
+* Launch System Performance Reg
+
+« System Cost Implications
+
+« Spacecraft, P/L Environments
+
+Step C
+
+Step |
+
+Define Payload Element
+* Mission Performance
+* Size, Mass, Power
+
+¢ Pointing, Field-of-View,
+« Stationkeeping, Orbit Maintenance
+
+Element Charactenistics
+
+Step D
+
+Payload
+Trades
+
+Element Costs
+
+Oetermine Spacecraft Bus Charactenstics | Element Charactenstics
+
+Size, Mass, Power
+* Pointing ‘Chapter 10]
+
+¢ ; ¢ Propulsion
+« Subsystem Performance
+
+Select Launch & Orbit Transfer
+Element
+e Launch Vehicle Chapter 18
+« Upper Stage/Orbit Transfer
+* Launch Site
+
+Select Mission Operations Approach
+* Tracking and Orbit Determination
+« Mission Command and Control
+
+« Communications Architecture
+« Payload Command and Control
+
+* End-of-life
+Chapters 13-15
+
+KR
+Spacer oS
+Subsystem
+Trades Prehminary System
+Cost Estimate
+
+« Payload
+« Spacecraft
+
+« Launch
+« Operations
+
+Element Costs
+
+Element Characteristics
+Step G
+
+Element Costs
+
+(ntegral Propulsion —
+Upper-Stage
+Trades
+
+—.
+
+Element Characteristics;
+
+Element Costs
+System Cost
+
+Le]
+
+Concept
+Performance
+
+Concept
+ROM
+Cost
+
+Characteristics
+
+Fig. 2-5. Process for Characterizing the Mission Architecture. See Table 2-10 for steps.
+
+If a mission interacts with user equipment, we must define the subject characteristics
+either from known information for well-established services or by a trade study
+involving the rest of the system. The parameters for specifying passive subjects are
+largely the same as those for specifying user elements, except that we don’t have a
+
+2.4
+
+2.4 Step 6: Characterizing the Mission Architecture 41
+
+“receiver” to characterize, and the effective isotropic radiated power (EIRP) specifi-
+cation for the transmitter is replaced by definition of the object’s emission intensity as
+a function of bandwidth. Table 2-11 summarizes the characteristics of both types of
+elements.
+
+TABLE 2-11. Summary of Main Characteristics of Space Mission Subjects. See Chap. 13
+for definitions of communications parameters.
+
+Controllable Subjects Passive Subjects
+. Quantity 1. Quantity
+. Location or range . Location or range
+. Transmitter EIRP 3. Emission intensity (W/sr) as a function of frequency or
+
+- Receiver G/T spectral band
+
+. Frequency and bandwidth . Needed temporal coverage (duty cycle)
+
+. Duty cycle
+
+C. Determine the Orbit and Constellation Characteristics (Chapter 7)
+
+The mission orbit profoundly influences every part of space mission development
+and operation. Combined with the number of spacecraft, it determines all aspects of
+space-to-ground and ground-to-space sensor and communication coverage. For the
+most part, the orbit determines sensor resolution, transmitter power, and data rate. The
+orbit determines the spacecraft environment and, for military spacecraft, strongly
+influences survivability. Finally, the orbit determines the size and cost of the launch
+and delivery system.
+
+Chapter 7 gives detailed directions for orbit design. As Table 2-12 shows, the
+design should include parameters for the mission and transfer orbits, propellant
+requirements, and constellation characteristics.
+
+D. Determine the Payload Size and Performance (Chapters 9 and 13)
+
+We next use the subject characteristics from Step 2 and orbit characteristics from
+Step 3 to create a mission payload concept. We can divide most mission payloads into
+six broad categories: observation or sensing, communications, navigation, in situ sam-
+pling and observations, sample return, and crew life support and transportation. More
+than 90% of current space-system payloads observe, sense, or communicate. Even the
+navigation payloads are basically communications payloads with ancillary data
+processing and stable time-base equipment to provide the navigation signal. Detailed
+directions for sizing and definition appear in Chap. 9 for observation payloads and in
+Chap. 13 for communications payloads. Table 2-13 summarizes the key parameters
+we need to specify.
+
+System-level payload trades typically involve the user element, selecting a mission
+orbit, and allocating pointing and tracking functions between the payload and space-
+craft elements. User element trades involve balancing the performance of the payload
+and elements on the user’s premises to get the lowest overall system cost for a given
+orbit and constellation design. As an example, if a single geosynchronous spacecraft
+must service thousands of ground stations, as for direct broadcast TV, we would min-
+imize the system cost by selecting a large, powerful spacecraft that can broadcast to
+simple and inexpensive ground stations. A system designed for trunkline communica-
+tion between half a dozen ground stations uses more complex and capable ground
+systems and saves cost with simpler spacecraft.
+
+42 Mission Characterization
+
+2.4
+
+TABLE 2-12. Summary of Orbit and Constellation Characteristics. See text for discussion.
+
+Altitude
+
+Inclination
+
+Eccentricity
+
+Argument of perigee for noncircular orbits
+AV budget for orbit transfer
+
+AV budget for orbit maintenance
+
+Whether orbit will be controlled or uncontrolled
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Number and relative orientation of orbit planes (constellations)
+
+Number and spacing of spacecraft per orbit plane (constellations)
+
+TABLE 2-13. Summary of Mission-Payload Characteristics. For multiple payloads, we must
+
+determine parameters for each payload.
+
+. Physical Parameters
+1.1 Envelope dimensions
+1.2 Mass properties
+
+. Viewing and Pointing
+2.1 Aperture size and shape
+
+2.2 Size and orientation of clear field of view required
+
+2.3 Primary pointing direction*
+
+2.4 Pointing direction range and accuracy required
+2.5 Tracking or scanning rate
+
+2.6 Pointing or tracking duration and duty cycle
+
+. Electrical Power
+3.1 Voltage
+3.2 Average and peak power
+3.3 Peak power duty cycle
+. Telemetry and Commands
+4.1. Number of command and telemetry channels
+4.2 Command memory size and time resolution
+4.3 Data rates or quantity of data
+. Thermal Control
+5.1 Temperature limits (operating/non-operating)
+
+§.2 Heat rejection to spacecraft (average/peak wattage/duty cycle)
+
+*e.g., Sun, star, nadir, ground target, another spacecraft
+
+Payload vs. orbit trades typically try to balance the resolution advantages of low
+altitudes against the fewer spacecraft needed for the same coverage at higher altitudes.
+The counterbalancing factor is that we need a sensor with a larger aperture and better
+sensitivity to obtain the same resolution at higher altitudes; the more capable sensor
+
+costs more and needs a larger spacecraft and launch system.
+
+2.4 Step 6: Characterizing the Mission Architecture 43
+
+Payload vs. spacecraft trades usually try to meet pointing and tracking requirements
+at the lowest cost. At one extreme, the payload does all the pointing independently of
+the spacecraft attitude; an example is the use of gimballed scan platforms on the JPL
+Mariner MK-II spacecraft. At the opposite extreme, Space Telescope and Chandra
+X-Ray Observatory point the entire spacecraft with the required level of accuracy. An
+intermediate approach used on RME points the entire spacecraft to a lower level of ac-
+curacy, allowing the payload to do fine pointing over a limited field of regard.
+
+E. Select the Mission Operations Approach (Chapters 13-15)
+
+We next select and size the elements needed to support communications and con-
+trol of the spacecraft and payload. Table 2-14 gives the key parameters. Typically a
+mission operations control center commands and controls the spacecraft and delivers
+data to the user. With rare exceptions, we would choose an existing control center,
+based on the user’s needs, downlink data rates, and, in some cases, security consider-
+ations. Both NASA and the Air Force have existing systems. Particular institutions,
+such as Intelsat or Comsat, use custom systems. Most commercial operators employ
+system-peculiar control centers. If needed, we can interconnect most systems with dif-
+ferent options for relaying communications. Chapter 15 details the specification,
+selection, and design of this element.
+
+TABLE 2-14. Summary of Mission Operations Characteristics.
+
+1. Communications Architecture
+1.1. Number and distribution of ground stations
+1.2 Downlink and uplink path design
+1.3 Crosslink characteristics, if used
+1.4 Relay satellites used
+1.5 Communications link budget
+1.6 Space-to-ground data rates
+
+2. Ground System
+2.1 Use of existing or dedicated facilities
+2.2 Required transmit and receive characteristics
+2.3 Required data handling
+
+3. Operations
+
+3.1 Level of automation
+3.2 Software lines of code to be created
+3.3 Full-time or part-time staffing
+
+3.4 Number of personnel
+
+3.5 Amount of commanding required
+3.6 Timeliness of data distribution
+
+The communications architecture transfers the required mission data (payload and
+housekeeping data) from the spacecraft down to the mission operations control center.
+In addition, we must send commands back to the spacecraft, and meet other require-
+ments such as encryption. Thus, we select the communications relay elements along
+with the mission control system after most payload and orbit trades are complete.
+Typical options are SGLS for Air Force missions or TDRSS/GSTDN with the NASA
+mission control centers. Custom systems are required for some applications and are
+commonly used for commercial missions in geosynchronous orbit. Chapter 13
+describes communications architectures, and Chap. 14 treats operations.
+
+44 Mission Characterization 2.4
+
+F. Design the Spacecraft to Meet Payload, Orbit, and Communications
+Requirements (Chapter 10)
+
+The spacecraft and its subsystems support the payload in the mission orbit—point
+it and supply power, command and data handling, and thermal control. They must be
+compatible with the communications architecture and mission-operations concept.
+These elements, along with the launch system, drive the spacecraft design. We usually
+choose the launch system that costs the least to place the minimum required weight in
+the mission or transfer orbit. Once we make this selection, the spacecraft’s stowed
+configuration is constrained by the shroud volume of the selected vehicle or vehicles.
+Table 2-15 summarizes the items we need to specify while defining the spacecraft.
+Chapter 10 covers how we synthesize spacecraft concepts and their definition and
+sizing.
+
+TABLE 2-15. Summary of Spacecraft Characteristics. See text for discussion.
+
+. General arrangement including payload fields of view (deployed and stowed)
+
+. Functional block diagram
+. Mass properties, by mission phase (mass and moments of inertia)
+
+. Summary of subsystem characteristics
+
+4.1 Electrical power (conversion approach; array and battery size; payload power
+available, average/peak overall spacecraft power, orbit average, peak)
+
+4.2 Attitude control (attitude determination and control components; operating modes;
+ranges and pointing accuracy)
+
+4.3 Navigation and orbit control (accessing requirement, use of GPS; onboard vs. ground)
+
+44 Telemetry and command (command/telemetry format; command and time resolution;
+telemetry storage capacity; number of channels by type)
+
+4.5 Computer (speed and memory; data architecture)
+4.6 Propulsion (amount and type of propellant; thruster or motor sizes)
+
+4.7 Communications (link margins for all links; command uplink data rate; telemetry
+downlink data rates)
+
+4.8 Primary structure and deployables
+4.9 Unique thermal requirements
+4.10 Timing (resolution and accuracy)
+
+. System parameters
+5.1 Lifetime and reliability
+5.2 Level of autonomy
+
+A key spacecraft-versus-launch-system trade is the use of integral propulsion.
+Many commercial spacecraft ride the launch system to transfer orbit and then insert
+themselves into the mission orbit using an internal propulsion or an internal stage.
+Some DoD spacecraft, such as DSCS III and DSP, depend on a launch system with an
+upper stage for insertion directly into the mission orbit. They do not carry large
+integral propulsion subsystems. We should consider this trade whenever the space-
+craft and payload cost enough to justify the reliability offered by an expensive upper
+stage.
+
+2.4 Step 6: Characterizing the Mission Architecture 45
+
+Another trade between the spacecraft and launch system involves guidance of the
+upper stage. Often, the spacecraft control system can guide the upper stage, which may
+allow deletion of equipment from that stage, thereby increasing performance and
+lowering cost. This trade is particularly important when using three-axis-stabilized
+stages.
+
+G. Select a Launch and Orbit Transfer System (Chapter 18)
+
+The launch system and its upper stage need to deliver the spacecraft and payload to
+the mission orbit or to a transfer orbit from which the spacecraft can reach the mission
+orbit on its own. The chosen launch system usually determines the launch site. The
+launch site organization provides pre-launch processing, checkout, and installation to
+the launch system, usually on the launch pad.
+
+Launch vehicles and upper stages may be combined in many ways to match almost
+any reasonable combination of payload and mission orbit. Chapter 18 details the
+characteristics and selection of launch systems. Selecting a launch system typically
+involves the trades with the spacecraft discussed above. In addition, we must decide
+between a single spacecraft launch and manifesting two or more spacecraft in a shared
+launch. In general, multiple manifesting costs less, but constrains the schedule.
+Finally, we should bring certain launch-system parameters to the system level design
+process: type of vehicle, cost per launch, and flow times for processing and prelaunch
+activities at the launch site.
+
+H. Determine Logistics, Deployment, Replenishment, and Spacecraft Disposal
+
+Strategies (Sections 7.6, 19.1, and 21.2)
+
+Logistics is the process of planning to supply and maintain the space mission over
+time. Whereas only military missions typically demand formal plans, the process
+described in Sec. 19.1 can strongly affect costs for any multi-year mission requiring
+extended support. Historically, most life-cycle costs have been locked in by the end of
+concept exploration, so we must evaluate operations, support, replenishment, and
+mechanisms during this phase.
+
+Planners often overlook the sequence for building up and maintaining satellite
+constellations. To deploy a constellation effectively, we must create performance
+plateaus which allow us to deploy in stages and to degrade the system gracefully if
+individual satellites fail. These performance plateaus develop from the constellation
+design, as described in Sec. 7.6.
+
+Section 21.2 describes the ever-increasing problem associated with orbital debris,
+consisting of defunct satellites and associated parts. Because of this problem, all new
+satellite designs should plan for deorbiting or otherwise disposing of satellites at the
+end of their useful life. In particular, satellites must be removed from areas such as the
+geostationary ring, where they would seriously threaten other spacecraft or any low-
+Earth orbit constellation.
+
+I. Provide Costing Support for the Concept-Definition Activity (Chapter 20)
+
+Developing costs for system elements is vital to two objectives: finding the best
+individual mission architecture and comparing mission architectures at the system
+level. Chapter 20 describes parametric, analogous, and bottoms-up methods for
+costing. Typically, for concept exploration, we use only the first two because we lack
+a detailed definition of the design. At this level, we simply want relative comparisons
+rather than absolute estimates, so we can accept the greater uncertainty in these
+methods.
+
+46 Mission Characterization 2.4
+
+References
+Agrawal, Brij N. 1986. Design of Geosynchronous Spacecraft. Englewood Cliffs, NJ:
+Prentice Hall.
+
+Boden, Daryl G. and Wiley J. Larson. 1996. Cost Effective Space Mission Operations.
+New York: McGraw-Hill.
+
+Davidoff, Martin. 1998. Radio Amateur’s Satellite Handbook. Newington, CT: Amer-
+ican Radio Relay League.
+
+Eckart, Peter. 1996. Spaceflight Life Support and Biospherics. Torrance, CA: Micro-
+cosm Press and Dordrecht, The Netherlands: Kluwer Academic Publishers.
+
+Elbert, Bruce R. 1987. Introduction to Satellite Communication. Boston: Artech
+House Publishers.
+
+Elbert, Bruce R. 1996. The Satellite Communication Applications Handbook. Boston:
+Artech House Publishers.
+
+Griffin, M. and J.R. French. 1991. Space Vehicle Design. Washington, DC: AIAA.
+
+London, J.R. 1994. LEO on the Cheap—Methods for Achieving Drastic Reductions in
+Space Launch Costs. Maxwell AFB, AL: Air University Press.
+
+Lu, Ning. 1997. Fractal Imaging. San Diego, CA: Academic Press.
+
+Pisacane, V.L. and R.C. Moore. 1994. Fundamentals of Space Systems. New York:
+Oxford University Press.
+
+Sayood, Khalid. 1996. Introduction to Data Compression. San Francisco, CA: Mor-
+gan Kaufman Publishers.
+
+Wall, Stephen D. and Kenneth W. Ledbetter. 1991. Design of Mission Operations
+Systems for Scientific Remote Sensing. London: Taylor & Francis.
+
+Wertz, James R. and Wiley J. Larson. 1996. Reducing Space Mission Cost. Tor-
+rance, CA: Microcosm Press and Dordrecht, The Netherlands: Kluwer Academic
+Publishers.
+
+Woodcock, Gordon R. 1986. Space Stations and Platforms. Malabar, FL: Orbit Book
+Company.

@@ -1,0 +1,659 @@
+Space Mission
+
+Analysis and Design
+Third Edition
+
+Edited by
+
+Wiley J. Larson
+
+United States Air Force Academy
+
+and
+
+James R. Wertz
+
+Microcosm, Inc.
+
+Coordination by
+Douglas Kirkpatrick, United States Air Force Academy
+
+Donna Klungle, Microcosm, Inc.
+
+This book is published as part of the Space Technology Series, a cooperative activity of the
+United States Department of Defense and National Aeronautics and Space Administration.
+
+(a
+
+Space Technology Library
+
+Published Jointly by
+
+Microcosm Press
+El Segundo, California
+
+na
+hy
+Kluwer Academic Publishers
+Dordrecht / Boston / London
+Third Edition
+Library of Congress Cataloging-in-Publication Data
+
+AC.LP. Catalogue record for this book is available from
+the Library of Congress.
+
+ISBN 1-881883-10-8 (pb) (acid-free paper)
+ISBN 0-7923-5901-1 (hb) (acid-free paper)
+
+Cover photo of Earth from Space. View of Africa and the Indian Ocean taken in Dec. 1972, by Apollo 17,
+the last of the Apollo missions to explore the Moon. Photo courtesy of NASA.
+
+Cover design by Jeanine Newcomb and Joy Sakaguchi.
+
+Published jointly by
+Microcosm Press
+401 Coral Circle, El Segundo, CA 90245-4622 USA
+and
+Kluwer Academic Publishers,
+P.O. Box 17, 3300 AA Dordrecht, The Netherlands.
+
+Kluwer Academic Publishers incorporates
+the publishing programmes of
+D. Reidel, Martinus Nijhoff, Dr. W. Junk and MTP Press.
+
+Sold and distributed in the USA and Canada
+by Microcosm, Inc.
+401 Coral Circle, El Segundo, CA 90245-4622 USA
+and Kluwer Academic Publishers,
+101 Philip Drive, Norwell, MA 02061 USA
+
+In all other countries, sold and distributed
+by Kluwer Academic Publishers Group,
+P.O. Box 322, 3300 AA Dordrecht, The Netherlands.
+
+Printed on acid-free paper
+
+All Rights Reserved
+© 1999 Microcosm, Inc. and W.J Larson
+Seventh Printing, 2005
+No part of the material protected by this copyright notice may be reproduced or
+utilized in any form or by any means, electronic or mechanical,
+including photocopying, recording, or by any information storage and
+retrieval system, without written permission from the copyright owner.
+
+Printed in the United States of America
+List of Authors
+
+Henry Apgar. Vice President, MCR International, Inc., Thousand Oaks, California.
+M.B.A., Northeastern University; B.S. (Electrical Engineering), Rutgers University.
+Chapter 20—Cost Modeling.
+
+David A. Bearden. Senior Project Engineer, Corporate Business Division, The Aero-
+space Corporation, El] Segundo, California. Ph.D., M.S. (Aerospace Engineering),
+University of Southern California; B.S. (Mechanical Engineering), University of
+Utah. Chapter 20—Cost Modeling.
+
+Robert Bell. Mission Analyst, Microcosm, Inc., Torrance, California. M.S. (Aero-
+space Engineering), University of Southern California; B.S. (Aerospace Engineering),
+University of Southern California. Appendix F—Units and Conversion Factors.
+
+Richard T. Berget. Program Director, BF Goodrich Aerospace, Data Systems Divi-
+sion, Albuquerque, New Mexico. M.S., B.S. (Electrical Engineering), University of
+New Mexico. Section 11.3—Command and Data Handling.
+
+J. B. Blake. Director, Space Sciences Department, Space and Environment Tech-
+nology Center, The Aerospace Corporation, El Segundo, California. Ph.D., M.S.
+(Physics), University of Illinois; B.S. (Engineering Physics), University of Illinois.
+Section 8.1—The Space Environment.
+
+Daryl G. Boden. Associate Professor of Aerospace Engineering, U.S. Naval Acad-
+emy, Annapolis, Maryland. Ph.D.(Aeronautical and Astronautical Engineering),
+University of Illinois; M.S. (Astronautical Engineering), Air Force Institute of
+Technology; B.S. (Aerospace Engineering), University of Colorado. Chapter
+6—lIntroduction to Astrodynamics.
+
+William R. Britton. Mechanisms Section Manager, Space Systems, Lockheed Martin
+Astronautics, Denver, Colorado. B.S. (Mechanical Engineering), Drexel University.
+Section 11.6—Structures and Mechanisms.
+
+Robert F. Brodsky. Chief Engineer, Microcosm, Inc., Torrance, California. Adjunct
+Professor of Aerospace Engineering, University of Southern California. Sc.D.
+(Engineering), New York University; M.Aeron. Engineering, New York University;
+M.S. (Mathematics), University of New Mexico; B.M.E., Cornell University.
+Chapter 9——Space Payload Design and Sizing.
+
+John B. Carraway. Principal Engineer, Jet Propulsion Laboratory, Pasadena,
+California. B.S. (Electrical Engineering), Massachusetts Institute of Technology.
+Chapter 14—Mission Operations.
+x List of Authors
+
+Bruce Chesley. Small Satellite Program Manager and Assistant Professor of Astro-
+nautics, U.S. Air Force Academy, Colorado Springs, Colorado. Ph.D. (Aerospace
+Engineering), University of Colorado, Boulder; M.S. (Aerospace Engineering),
+University of Texas at Austin; B.S. (Aerospace Engineering), University of Notre
+Dame. Chapter 9—Space Payload Design and Sizing.
+
+John T. Collins. System Engineer, Microcosm, Inc. B.S. (Aerospace Engineering),
+University of Illinois (UIUC); B.S. (Astronomy), University of Illinois (UIUC).
+Section 20.5—FireSat Example.
+
+Richard S. Davies. Technical Staff, Stanford Telecommunications, Inc., Santa Clara,
+California. Engineer, Stanford University; M.S., B.S. (Electrical Engineering),
+University of Pennsylvania. Chapter 13-—-Communications Architecture.
+
+Simon D. Dawson. Systems Engineer, Microcosm, Inc., Torrance, California. MSc
+(Spacecraft Technology and Satellite Communications), University College London,
+University of London; BSc (Hons) (Physics & European Studies), University of Sus-
+sex. Appendices; Inside Rear Pages—Earth Satellite Parameters.
+
+Fred J. Dietrich. Principal Engineer, Globalstar, L.P., Palo Alto, California. Ph.D.,
+Ohio State University; M.S. (Electrical Engineering), Purdue University; B.S.
+(Electrical Engineering), Missouri School of Mines. Chapter 13—Communications
+Architecture.
+
+Peter G. Doukas. Senior Staff Engineer, Martin Marietta Astronautics Group,
+Denver, Colorado. B.S. (Aeronautics and Astronautics), Purdue University. Sec-
+tion 11.6—Structures and Mechanisms.
+
+John S. Eterno. Chief Scientist, Ball Aerospace & Technologies Corp., Boulder,
+Colorado. Ph.D., M.S. (Aeronautics and Astronautics), Massachusetts Institute of
+Technology; B.S. (Aerospace Engineering), Case Western Reserve University.
+Section 11.1—Artitude Determination and Control.
+
+Rick Fleeter. President, AeroAstro, Herndon, Virginia. Ph.D. (Thermodynamics),
+Brown University; M.Sc. (Astronautics and Aeronautics), Stanford University; A.B.
+(Engineering and Economics), Brown University. Chapter 22—Design of Low-Cost
+Spacecraft.
+
+David G. Gilmore. Senior Engineering Specialist, The Aerospace Corporation, El
+Segundo, California. B.S. (Mechanical Engineering), University of California, Irvine.
+Section 11.5—-Thermal.
+
+D. J. Gorney. Principal Director, Defense Support Program, The Aerospace Cor-
+poration, El Segundo, California. Ph.D., M.S. (Atmospheric Sciences), University of
+California, Los Angeles; B.S. (Physics), University of Bridgeport, Connecticut.
+Section 8.1—The Space Environment.
+
+Eric W. Grob. Aerospace Engineer, Thermal Engineering Branch, NASA Goddard
+Space Flight Center, Greenbelt, Maryland. M.S. (Mechanical Engineering), Drexel
+University; B.S. (Mechanical Engineering), West Virginia University. Section
+11.5—Thermal.
+List of Authors xi
+
+L. Jane Hansen. President, HRP Systems, Torrance, California. M.B.A., Pepperdine
+University School of Business and Management; B.S. (Applied Mathematics), Cali-
+fornia Polytechnic State University, San Luis Obispo. Chapter 16—Spacecraft Com-
+puter Systems.
+
+Brian E. Hardt. Senior Project Engineer, The Aerospace Corporation, El Segundo,
+California. M.S. (Mechanical Engineering), University of Illinois at Urbana-Cham-
+paign; B.S. (Mechanical Engineering), University of Illinois at Urbana-Champaign.
+Section 11.5—Thermal.
+
+Herbert Hecht. Chairman of the Board, SoHaR, Inc., Beverly Hills, California. Ph.D.
+(Engineering), University of California, Los Angeles; M.S. (Electrical Engineering),
+Polytechnic University of New York; B.S. (Electrical Engineering), City University,
+New York. Section 19.2—Reliability for Space Mission Planning.
+
+Robert W. Hosken. Member of the Technical Staff, The Aerospace Corporation, El
+Segundo, California. Ph.D. (Physics), University of Illinois; B.S. (Electrical Engi-
+neering), Polytechnic Institute of Brooklyn. Chapter 16—Spacecraft Computer
+Systems.
+
+Douglas Kirkpatrick. Visiting Professor, U.S. Air Force Academy, Colorado
+Springs, Colorado. Ph.D., University of Texas at Austin; M.S., Purdue University;
+B.S., U.S. Air Force Academy. Section 11.2—Telemetry, Tracking, and Command;
+Chapter 18—Launch Systems.
+
+Malcolm K. Kong. Manager, Hardness & Survivability Engineering, TRW Systems
+& Information Technology Group, Redondo Beach, California. M.S. (Systems Engi-
+neering), West Coast University, Los Angeles; B.S. (Electrical Engineering), Purdue
+University. Section 8.2—Hardness and Survivability Requirements.
+
+H. C. Koons. Distinguished Scientist, Space Sciences Department, Space and Envi-
+ronment Technology Center, The Aerospace Corporation, El Segundo, California.
+Ph.D. (Geophysics), Massachusetts Institute of Technology; B.S. (Physics), Massa-
+chusetts Institute of Technology. Section 8.1—The Space Environment.
+
+Wiley J. Larson. Director, Space Mission Analysis and Design Program, U.S. Air
+Force Academy, Colorado Springs, Colorado. D.E. (Spacecraft Design), Texas A&M
+University; M.S. (Electrical Engineering), University of Michigan; B.S. (Electrical
+Engineering), University of Michigan. Editor; Chapter 1—The Space Mission Analy-
+sis and Design Process, Chapter 14—Mission Operations, Chapter 23—Applying
+Space Mission Analysis and Design Process.
+
+Joseph P. Loftus, Jr. Assistant Director for Plans, L.B. Johnson Space Center,
+NASA, Houston, Texas. Sloan Fellow (Business), Stanford University; M.A. (Math
+and Psychology), Fordham University; B.A. (Math and Psychology), Catholic Univer-
+sity. Chapter 18—Launch Systems.
+
+Reinhold Lutz. Director, Technology Strategy, Daimler Chrysler Aerospace, Bergen,
+Germany. Dr.-Ing., University of German Forces; Dipl.-Ing., Technical University
+Munich. Chapter 9—Space Payload Design and Sizing.
+xii List of Authors
+
+Ronald A. Madler. Associate Professor, Embry-Riddle Aeronautical University,
+Prescott, Arizona. Ph.D., M.S., B.S. (Aerospace Engineering Sciences), University of
+Colorado, Boulder. Section 21.2—Orbital Debris—A Space Hazard.
+
+James R. McCandless. Manager (Retired), Stress Analysis, Space Systems, Lock-
+heed Martin Astronautics, Denver, Colorado. B.S. (Architectural Engineering),
+University of Texas. Section 11.6—Structures and Mechanisms.
+
+Joseph K. McDermott. Engineering Manager, Lockheed Martin Astronautics Group,
+Denver, Colorado. M.E. (Engineering Management), University of Colorado; B.S.
+(Chemistry), Loras College. Section 11.4—Power.
+
+Darren S. McKnight. Vice President, Titan Research and Technology, Reston, Vir-
+ginia. Ph.D. (Aerospace Engineering), University of Colorado; M.S. (Mechanical
+Engineering), University of New Mexico; B.S. (Engineering), U.S. Air Force Acade-
+my. Section 21.2—-Orbital Debris—A Space Hazard.
+
+Wade Molnau. Manufacturing Manager, Motorola Systems Solutions Group, Space
+Services and Systems Division, Scottsdale, Arizona. Ph.D., M.S., B.S. (Industrial
+Engineering), Arizona State University. Section 19.1— Designing Space Systems for
+Manufacturability.
+
+Paul Nordin. NASA/TDRS Resident Office Manager at Hughes Space and Com-
+munications, El Segundo, California, employed by The Boeing Company, Seabrook,
+MD. Ph.D., M.A., B.A., (Nuclear Physics), University of California, Berkeley.
+Section 8.2—Hardness and Survivability Requirements.
+
+Jean Olivieri. Teledesic Bus Production Manager, Motorola Advanced Systems
+Division, Chandler, Arizona. M.S., B.S. (Industrial Engineering), Arizona State
+University. Section 19.1— Designing Space Systems for Manufacturability.
+
+Wes Ousley. Head, Thermal Engineering Branch, NASA Goddard Space Flight Cen-
+ter, Greenbelt, Maryland. B.S. (Mechanical Engineering), University of Maryland.
+Section 11.5—Thermal.
+
+Craig H. Pollock. Space Systems Engineer (Onboard Processing Design Integration
+and Operations Engineering), TRW Space and Defense Sector, Redondo Beach, Cal-
+ifornia. M.A. (Mathematics), California State University, Long Beach; B.S. (Physics
+and Mathematics), University of New Mexico. Chapter 16—Spacecraft Computer
+Systems.
+
+Robert C. Prager. Engineering Specialist, The Aerospace Corporation, El Segundo,
+California. MS. (Engineering), University of California, Berkeley. B.S. (Engineer-
+ing), Princeton University. Section 11.5—Thermal.
+
+Emery I. Reeves. Shriever Chair Professor of Space Systems Engineering, U.S. Air
+Force Academy, Colorado Springs, Colorado. M.S. (Electrical Engineering),
+Massachusetts Institute of Technology; B.E. (Electrical Engineering), Yale Univer-
+sity. Chapter 10—Spacecraft Design and Sizing, Chapter 12—Spacecraft Manufac-
+ture and Test.
+List of Authors xiii
+
+Richard P. Reinert. Staff Consultant, Spacecraft and Mission Design Division, Ball
+Aerospace Systems, Boulder, Colorado. B.S. (Aeronautical Engineering), Massachu-
+setts Institute of Technology. Chapter 2—Mission Characterization.
+
+Robert L. Sackheim. Deputy Director, Propulsion Technology and Fluid Mechanics
+Center, TRW, Inc., Redondo Beach, California. M.S., B.S. (Chemical Engineering)
+Columbia University. Chapter 17—Space Propulsion Systems.
+
+Thomas P. Sarafin. Consultant/President, Instar Engineering and Consulting, Inc.,
+Littleton, Colorado, B.S. (Civil Engineering), Ohio State University. Section
+11.6—Structures and Mechanisms.
+
+Michael Schulz. Senior Scientist, Lockheed Martin Advanced Technology Center,
+Palo Alto, California. Ph.D. (Physics), Massachusetts Institute of Technology; B.S.
+(Physics), Michigan State University. Section 8.1—The Space Environment.
+
+Chad Spalt. Production Technical Lead, Motorola Satellite Communications Group,
+Mobile Satellite Systems Division, Chandler, Arizona. M.S. (Industrial Engineering),
+Arizona State University; B.S. (Mechanical Engineering Technology), Southern
+Illinois University. Section 19.1—Designing Space Systems for Manufacturability.
+
+Gael F. Squibb. Director for Telecommunications and Mission Operations, Jet
+Propulsion Laboratory, Pasadena, California. M.S. (Systems Management), Univer-
+sity of Southern California, B.S. (Physics), Harvey Mudd College. Chapter
+14—-Mission Operations
+
+Charles Teixeira. Chief, Systems Definition Branch, L.B. Johnson Space Center,
+NASA, Houston, Texas. M.S. (Mechanical Engineering), Louisiana State Univer-
+sity; B.S. (Aeronautical Engineering), New York University. Chapter 18—Launch
+Systems.
+
+Alan C. Tribble. Manager, Applications Development, Information Technology,
+Rockwell Collins, Cedar Rapids, lowa. Ph.D., M.S., (Physics), University of Iowa;
+B.S. (Physics), University of Arkansas. Section 8.1—The Space Environment.
+
+A. L. Vampola. Consultant, Space Environment Effects, Vista, California. Ph.D.,
+M.S. (Physics), St. Louis University, B.S. (Mathematics and Physics), Creighton
+University, Nebraska. Section 8.1—The Space Environment.
+
+R. L. Walterscheid. Senior Scientist, Space Sciences Department, Space and
+Environment Technology Center, The Aerospace Corporation, El Segundo, Califor-
+nia. Ph.D. (Atmospheric Sciences), University of California, Los Angeles; M.S.
+(Meteorology), University of California, Los Angeles; A.B. (Physics), University of
+California, Berkeley; B.S. (Meteorology), University of Wisconsin. Section 8.1—-The
+Space Environment.
+
+Stanley I. Weiss. Visiting Professor, Massachusetts Institute of Technology and
+University of California Davis; Formerly Corporate VP Engineering and VP Research
+and Development, Lockheed Corporation; Ph.D., University of Illinois; M.S., B.S.,
+Renesselaer Polytechnic Institute. Chapter 4—Requirements Definition.
+xiv List of Authors
+
+James R. Wertz. President, Microcosm, Inc., Torrance, California. Ph.D. (Relativity
+& Cosmology), University of Texas, Austin, M.S. (Administration of Science
+and Technology), George Washington University; S.B. (Physics), Massachusetts
+Institute of Technology. Editor; Chapter 1—The Space Mission Analysis and Design
+Process, Chapter 2—Mission Characterization, Chapter 3—Mission Evaluation;
+Chapter 5—Space Mission Geometry; Chapter 7—-Orbit and Constellation Design;
+Section 8.1—The Space Environment, Section 11.7—Guidance and Navigation;
+Chapter 23—Applying the Space Mission Analysis and Design Process; Appen-
+dix E—Universal Time and Julian Dates.
+
+Gary G. Whitworth. Senior Engineer (Retired), Applied Physics Laboratory, Johns
+Hopkins University, Laurel, Maryland. B.S. (Electrical Engineering), University of
+Tennessee. Chapter 15—Ground System Design and Sizing.
+
+Michael S. Williams. Vice President, Personal SATCOM Systems, Lockheed Martin
+Global Telecommunications, Reston, VA. M.S. (Electrical Engineering), University
+of Pennsylvania; M.B.A. (Statistics/Operations Research), Temple University; B.S.
+(Physics), St. Joseph's University. Chapter 4-——Requirements Definition.
+
+William B. Wirin. General Manager, Wirin & Associates. J.D. (University of
+Southern California School of Law); B.A. (Political Science), Occidental College.
+Section 21.1—Law and Policy Considerations.
+
+Robert E. Wong. Manager, Economic Analysis, TRW Systems Engineering and
+Development Division, TRW, Inc., Redondo Beach, California. Ph.D. (Economics),
+University of Southern California, M.S. (Mathematics), University of Southern
+California, M.A. (Economics), University of Southern California; B.S. (Physics),
+Iowa State University. Chapter 20—Cost Modeling.
+
+Sidney Zafran. Program Manager, TRW, Inc., Redondo Beach, California. B.S.
+(Mechanical Engineering), Massachusetts Institute of Technology. Chapter 17—
+Space Propulsion Systems.
+List of Authors
+
+xv
+
+SMAD I, II, and ITI Authors
+
+The third edition is the end result of a substantial effort by the authors of all the
+SMAD editions. Consequently, we would like to acknowledge and express our thanks
+to all of the authors who have contributed to this series:
+
+Henry Apgar
+David A. Bearden
+Robert Bell
+Richard T. Berget
+J. B. Blake
+
+James E. Boatwright
+Daryl G. Boden
+William R. Britton
+Robert F. Brodsky
+John B. Carraway
+Bruce Chesley
+Arthur Chomas
+John T. Collins
+Richard S. Davies
+Simon D. Dawson
+Fred J. Dietrich
+Peter G. Doukas
+Neal Ely
+
+John S. Eterno
+Rick Fleeter
+
+John R. Ford, Jr.
+Martin E.B. France
+David G. Gilmore
+Steven Glaseman
+D. J. Gorney
+
+Eric W. Grob
+
+L. Jane Hansen
+Brian E. Hardt
+Herbert Hecht
+Robert W. Hosken
+Douglas Kirkpatrick
+Malcolm K. Kong
+H. C. Koons
+Wiley J. Larson
+Joseph P. Loftus, Jr.
+Reinhold Lutz
+Ronald A. Madler
+Francois Martel
+
+James R. McCandless
+Joseph K. McDermott
+Darren S. McKnight
+Robert K. McMordie
+Wade Molnau
+
+Ralph L. Mueller
+David Negron, Jr.
+Paul Nordin
+
+Thomas P. O’Brien
+Jean Olivieri
+
+Wes Ousley
+
+Aniceto Panetti
+
+Craig H. Pollock
+Robert C. Prager
+Emery I. Reeves
+Richard P. Reinert
+Robert L. Sackheim
+Thomas P. Sarafin
+Michael Schulz
+
+Chad Spalt
+
+Gael F. Squibb
+Charles Teixeira
+Merlin E. Thimlar
+Alan C. Tribble
+
+Tim Turner
+
+A. L. Vampola
+
+R. L. Walterscheid
+Richard Warner
+Stanley I. Weiss
+James R. Wertz
+
+Gary G. Whitworth
+Michael S. Williams
+William B. Wirin
+Robert S. Wolf
+Robert E. Wong
+Sidney Zafran
+
+Robert O. Zermuehlen
+Harold F. Zimbelman
+Preface
+
+Space Mission Analysis and Design, known as SMAD to its many friends, has
+gained widespread use as a text and reference throughout the astronautics community.
+The purpose of the third edition of SMAD is to both update the book and make it more
+useful and more practical wherever possible. Some topics, such as astrodynamics and
+mission geometry, have changed relatively little since publication of the second edi-
+tion in 1992. Here we have made minor modifications to make the material clearer and
+more precise. On the other hand, topics such as space computers and the design of
+observation payloads have been nearly completely rewritten. Because of the growing
+interest in “LightSats” and low-Earth orbit constellations we have added a SmallSat
+cost model, expanded the discussion of constellation design, and included a new sec-
+tion on multi-satellite manufacturing. The entire volume reflects a greater emphasis on
+reducing mission cost and doing more with less people and fewer resources.” Finally,
+the FireSat sample mission has been extended further and the appendices and end mat-
+ter updated and expanded to provide greater utility as a quick reference. We hope the
+new edition is better and more useful to you.
+
+As with the first two editions, the goal of the book to is allow you to begin with a
+“blank sheet of paper” and design a space mission to meet a set of broad, often poorly
+defined, objectives at minimum cost and risk. You should be able to define the mission
+in sufficient detail to identify principal drivers and make a preliminary assessment of
+overall performance, size, cost, and risk. The emphasis is on low-Earth orbit, un-
+manned spacecraft. However, we hope the principles are broad enough to be applica-
+ble to other missions as well. We intend the book to be a practical guide, rather than a
+theoretical treatise. As much as possible, we have provided physical and engineering
+data, rules of thumb, empirical formulas, and design algorithms based on past experi-
+ence. We assume that the reader has a general knowledge of physics, math, and basic
+engineering, but is not necessarily familiar with any aspect of space technology.
+
+The third edition represents an amalgam of contributions over the last decade by
+many engineers and managers from throughout the community. It reflects the insight
+gained from their practical experience, and suggests how things might be done better
+in the future. From time to time the views of authors and editors conflict, as must nec-
+essarily occur given the broad diversity of experience. We believe it is important to
+reflect this diversity rather than suppress the opinions of individual experts. Similarly,
+the level of treatment varies among topics, depending both on the issues each author
+feels is critical and our overall assessment of the level of detail in each topic that is
+important to the preliminary mission analysis and design process.
+
+* The continuing, unrelenting demand to drive down mission cost has led to the creation a
+companion volume to SMAD, Reducing Space Mission Cost [Wertz and Larson, 1996], which
+addresses cost reduction in all aspects of mission design and includes 10 case studies of how
+the process works in practice.
+
+Xvi
+Preface xvii
+
+The book is intended as a textbook for either introductory graduate or advanced
+undergraduate courses, or as a reference for those already working in space tech-
+nology. It can also provide valuable supplementary material for related courses such
+as spacecraft design or space mission operations. We believe the book can be a key
+tool for payload designers who need to find out more about space mission design and
+for those charged with the responsibility of developing space mission requirements
+and specifications. Finally, we hope that it will be of use to many system engineers in
+this field who have a detailed knowledge of one area, but need to broaden their back-
+ground or verify their understanding in related topics.
+
+The book is meant to be read sequentially, although most of the chapters are self-
+contained, with references to other parts of the book as needed. For readers with
+specific interests, we recommend the following:
+
+Those concerned primarily with mission analysis and design should read
+Chaps. 1-9 and 19-23.
+
+Those concerned with spacecraft and subsystem design should read Chaps. 1,
+2, 4, 8-13, and 16-23.
+
+Those concerned primarily with mission operations and the ground interaction
+should read Chaps. 1, 2, 4, and 13-16.
+
+Those concerned with requirements definition, logistics, and putting a space
+system in place should read Chaps. 1-4, 7, 9, 10, and 18-23.
+
+Those interested in constellation design and multi-satellite systems should
+read Chaps. 1-9, 13-16, and 19-23.
+
+Those interested in reducing mission cost and the design of low-cost missions
+should read Chaps. 1-3, 7-10, 12, 20-23, and the companion volume, Reduc-
+ing Space Mission Cost.
+
+SI (metric) units are used throughout the book. Conversions for essentially all
+common units are contained in Appendix F. Conversion factors and physical constants
+are generally given to their full available accuracy so that they can be inserted into
+computer programs and not considered further. As discussed in the introduction to the
+appendices, the values given are those adopted by the National Bureau of Standards
+based on a least-squares fit to the fundamental physical constants or international
+agreement on the definitions of various units. In the case of astronomical constants,
+values adopted by the International Astronomical Union are given. The most com-
+monly used astronautical formulas and constants are in the appendices. An expanded
+table of space mission parameters for Earth orbits is on the inside back endleaf. For
+those wishing to expand that table or use it for other central bodies, the formulas used
+for creating it are on the preceding pages.
+
+Leadership, funding, and support essential to updating the book were provided by
+numerous programs at the Air Force Space and Missile Center, Air Force Space
+Command, NASA Headquarters, NASA/Goddard Space Flight Center, and the
+Advanced Projects Research Agency. Obtaining funding to create and maintain
+much-needed reference material is exceptionally difficult. We are deeply indebted to
+the sponsoring organizations, particularly Air Force Phillips Laboratory, for their
+support and their recognition of the importance of projects such as this one.
+
+The third edition of this book is the result of nearly two years of effort by a
+dedicated team of government, industry, and academic professionals. The Department
+of Astronautics, United States Air Force Academy, provided unwavering support for
+xviii Preface
+
+the project. Michael DeLorenzo, Chairman of the Department of Astronautics,
+provided the leadership and continuing support critical to projects of this type. Both
+Doug Kirkpatrick and Perry Luckett performed a detailed grammatical review in a
+valiant effort to prevent the rest of us from demonstrating why we became engineers
+rather than writers. Several graphics artists at the Academy, particularly Mary
+Tostanoski and Debra Porter, spent many hours developing and updating artwork.
+Joan Aug and Bert Reinertson cheerfully handled the huge administrative burden at
+the Academy. Numerous faculty members, staff, and students graciously sacrificed
+their time to provide assistance, review, and comments. Daryl Boden assisted with the
+editing and reviewing even after changing assignments to the Naval Academy. Doug
+Kirkpatrick managed the task for the Air Force with great skill and patience and
+reviewed nearly all of the material for both technical and linguistic correctness!
+
+OAO Corporation, Colorado Springs, Colorado, provided the contract support for
+the project. Anita Shute at the Air Force Academy spent many hours revising drafts,
+creating artwork, and working all aspects of the project. Eugene deGeus of Kluwer
+Academic Publishers supplied substantial assistance with all aspects of the publishing
+activity. This was his final project at Kluwer before taking a science administration
+position with the Dutch government. We will miss his wisdom and guidance and wish
+him the best of future success.
+
+At Microcosm, the entire analysis and publications staff worked virtually all
+aspects of the book (art, grammar, equation checking, technical reviews, and camera-
+ready copy) and suffered patiently through “the book project” as it continually
+absorbed great amounts of limited resources. Much of the new graphics was done by
+undergraduate students Karen Burnham, Paul Murata, Alan Chen, and Julie Wertz
+under the very capable guidance of Kevin Polk and Simon Dawson. Jennifer Burnham
+and Judith Neiger did much of the proofing. Robert Bell did most of the demanding
+task of updating units and conversion factors. John Collins created the new FireSat
+cost model. Wendi Huntzicker and Joy Sakaguchi created the new camera-ready copy
+for most of the book. Joy and Chris deFelippo did much of the new art. Finally, Donna
+Klungle did a truly remarkable job managing, administering, editing, reviewing, and
+preparing revisions, drafts, and the final camera-ready copy. Donna accomplished this
+with skill and good humor, while dealing with the conflicting demands of multiple au-
+thors and editors.
+
+Arthur Cox of Lawrence Livermore National Labs and the editors of Astrophysical
+Quantities [1999] graciously permitted the use of drafts of their forthcoming volume
+so that we could obtain the most current values for physical quantities. We highly
+recommend that readers consult Astrophysical Quantities for solar system and astro-
+nomical parameters which are not contained here.
+
+Every effort has been made to eliminate mathematical and factual errors. Many
+errors from prior editions have been found largely through readers’ comments and
+constructive criticism. Please continue to send any errors, omissions, corrections, or
+comments to either editor at the addresses below. We sincerely hope that the book will
+be of use to you in our common goal of reducing the cost and complexity of space
+utilization.
+
+Finally, one of the most exciting aspects of space mission analysis and design is that
+after 40 years of space exploration we have only begun to scratch the surface of the
+variety of important missions that can and should be done. In spite of problems, set-
+backs, and higher costs than any of us would like, people young and old remain excited
+about space. The exploration of space will take dramatic new turns in the future, from
+Preface xix
+
+communications constellations and microgravity work now beginning to become a
+reality to solar power satellites, space tourism, space industrialization, and settlements
+on the Moon and planets which are still to be designed. We hope that this volume
+provides a portion of the roadmap and incentive to those who will undertake these
+tasks. We wish you the best of success in this endeavor.
+
+June, 1999
+
+James R. Wertz Wiley J. Larson
+
+Microcosm, Inc. Department of Astronautics
+
+401 Coral Circle United States Air Force Academy
+El Segundo, CA 90245-4622 Colorado Springs, CO 80840-6224
+FAX: (310) 726-4110 FAX: (719) 333-3723
+
+Jwertz @smad.com wileylarson @adelphia.net
+
+Cox, A.N. ed. 1999. Astrophysical Quantities, New York: Springer-Verlag.
+
+Wertz, James R. and Wiley J. Larson. 1996. Reducing Space Mission Cost. Torrance, CA and
+Dordrecht, The Netherlands: Microcosm Press and Kluwer Academic Publishers.

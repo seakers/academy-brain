@@ -18,6 +18,7 @@ from client.Topic import Topic
 from client.LearningModule import LearningModule
 from client.Message import Message
 from client.Questions import Questions
+from client.TextBook import TextBook
 
 
 gabe_account = {
@@ -265,6 +266,9 @@ def main():
 
     Message(client).index()
     print("#####7##########")
+
+    TextBook(client).index()
+    print("#####8##########")
 
 
 

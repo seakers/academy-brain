@@ -1,0 +1,434 @@
+Table of Contents
+
+List of Authors
+
+Preface
+
+1.
+
+The Space Mission Analysis and Design Process
+
+1.1
+1.2
+1.3
+1.4
+
+Introduction and Overview
+
+The Space Mission Life Cycle
+
+Step 1: Definition of Mission Objectives
+
+Step 2: Preliminary Estimate of Mission Needs, Requirements,
+and Constraints
+
+Mission Characterization
+
+2.1
+2.2
+2.3
+2.4
+
+Step 3: Identifying Alternative Mission Concepts
+Step 4: Identifying Alternative Mission Architectures
+Step 5: Identifying System Drivers
+
+Step 6: Characterizing the Mission Architecture
+
+Mission Evaluation
+
+3.1
+3.2
+3.3
+3.4
+
+Step 7: Identification of Critical Requirements
+
+Mission Analysis
+
+Step 8: Mission Utility
+Step 9: Mission Concept Selection
+
+Requirements Definition
+
+4.1
+4.2
+4.3
+4.4
+
+Role of Requirements in System Development
+Requirements Analysis and Performance Budgeting
+Requirements Documentation and Specifications
+Summary: The Steps to a Requirements Baseline
+
+Space Mission Geometry
+
+3.1
+5.2
+5.3
+5.4
+
+Introduction to Geometry on the Celestial Sphere
+
+Earth Geometry Viewed from Space
+
+Apparent Motion of Satellites for an Observer on the Earth
+Development of Mapping and Pointing Budgets
+
+Introduction to Astrodynamics
+
+6.1
+6.2
+6.3
+6.4
+6.5
+
+Keplerian Orbits
+Orbit Perturbations
+Orbit Maneuvering
+Launch Windows
+Orbit Maintenance
+
+ix
+
+xvii
+
+N~— =
+
+110
+117
+123
+
+131
+132
+141
+146
+153
+155
+vi
+
+10.
+
+11.
+
+12.
+
+Table of Contents
+
+Orbit and Constellation Design
+
+71
+7.2
+73
+74
+75
+
+76
+
+The Orbit Design Process
+
+Earth Coverage
+
+The AV Budget
+
+Selecting Orbits for Earth-Referenced Spacecraft
+Selecting Transfer, Parking,
+
+and Space-Referenced Orbits
+
+Constellation Design
+
+The Space Environment and Survivability
+
+8.1
+8.2
+
+The Space Environment
+Hardness and Survivability Requirements
+
+Space Payload Design and Sizing
+
+9.1 Payload Design and Sizing Process
+9.2 Mission Requirements and Subject Trades
+9.3. Background
+94 Observation Payload Design
+9.5 Observation Payload Sizing
+9.6 Examples
+Spacecraft Design and Sizing
+10.1 Requirements, Constraints,
+and the Design Process
+10.2 Spacecraft Configuration
+10.3. Design Budgets
+10.4 Designing the Spacecraft Bus
+10.5 Integrating the Spacecraft Design
+10.6 Examples
+Spacecraft Subsystems
+11.1 Attitude Determination and Control
+11.2 Telemetry, Tracking, and Command
+11.3. Command and Data Handling
+11.4 Power
+11.5 Thermal
+11.6 Structures and Mechanisms
+11.7. Guidance and Navigation
+Space Manufacture and Test
+12.1 Engineering Data
+12.2 Manufacture of High-Reliability Hardware
+12.3. Inspection and Quality Assurance
+12.4 The Qualification Program
+12.5 Spacecraft Qualification Test Flow
+12.6 Launch Site Operations
+
+159
+160
+163
+176
+179
+
+183
+188
+
+203
+203
+221
+
+241
+245
+249
+255
+266
+278
+291
+
+301
+
+304
+308
+314
+318
+336
+339
+
+353
+354
+381
+395
+407
+428
+459
+497
+
+519
+521
+521
+523
+524
+529
+530
+13.
+
+14.
+
+15.
+
+16.
+
+17.
+
+18.
+
+19.
+
+20.
+
+Table of Contents
+
+Communications Architecture
+
+13.1 Communications Architecture
+
+13.2 Data Rates
+
+13.3. Link Design
+
+13.4 Sizing the Communications Payload
+13.5 Special Topics
+
+Mission Operations
+
+14.1 Developing a Mission Operations Plan
+
+14.2 Overview of Space Mission Operations Functions
+
+14.3. Estimating the Size and Cost of Mission Operations
+
+14.4 Automating Spacecraft and Ground Operations Functions
+
+Ground System Design and Sizing
+
+15.1 The Ground System Design Process
+
+15.2 A Ground System’s Basic Elements
+
+15.3. The Typical Ground System
+
+15.4 Alternatives to Building a Dedicated System
+15.5 Key Design Considerations
+
+Spacecraft Computer Systems
+
+16.1 Computer System Specification
+16.2 Computer Resource Estimation
+16.3 FireSat Example
+
+Space Propulsion Systems
+
+17.1 Propulsion Subsystem Selection and Sizing
+17.2 Basics of Rocket Propulsion
+
+17.3. Types of Rockets
+
+17.4 Component Selection and Sizing
+
+17.5 Staging
+
+Launch Systems
+
+18.1 Basic Launch Vehicle Considerations
+
+18.2 Launch System Selection Process
+
+18.3 Determining the Spacecraft Design
+Envelope and Environments
+
+Space Manufacturing and Reliability
+19.1 Designing Space Systems for Manufacturability
+19.2 Reliability for Space Mission Planning
+
+Cost Modeling
+
+20.1 Introduction to Cost Analysis
+
+20.2 The Parametric Cost Estimation Process
+20.3 Cost Estimating Relationships
+
+20.4 Other Topics
+
+20.5  FireSat Example
+
+533
+534
+543
+550
+570
+3575
+
+587
+590
+600
+611
+616
+
+621
+623
+624
+629
+636
+642
+
+645
+649
+660
+673
+
+685
+687
+688
+691
+708
+716
+
+719
+720
+723
+
+735
+
+745
+745
+765
+
+783
+784
+791
+795
+804
+811
+Viii Table of Contents
+
+21. Limits on Mission Design
+21.1 Law and Policy Considerations
+21.2 Orbital Debris—A Space Hazard
+
+22. Design of Low-Cost Spacecraft
+22.1 Designing Low-Cost Space Systems
+22.2 Small Space Systems Capabilities and Applications
+22.3 Applying Miniature Satellite Technology to FireSat
+22.4 Scaling from Large to Small Systems
+22.5 Economics of Low-Cost Space Systems
+22.6 Annotated Bibliography on Low-Cost Space Systems
+
+23. Applying the Space Mission Analysis and Design
+23.1 Applying SMAD to Later Mission Phases
+23.2 Lessons Learned from Existing Space Programs
+23.3. Future Trends
+
+APPENDICES
+
+Appendix A. Mass Distribution for Selected Satellites
+Appendix B. Astronautical and Astrophysical Data
+Appendix C. Elliptical Orbit Equations
+
+Appendix D. Spherical Geometry
+
+Appendix E. Universal Time and Julian Dates
+Appendix F. Units and Conversion Factors
+
+Index
+
+Additional Information:
+
+Earth Satellite Parameters
+Fundamental Physical Constants
+Spaceflight Constants
+
+Index to Process Charts
+
+821
+821
+840
+
+853
+858
+863
+869
+871
+873
+881
+
+883
+884
+888
+889
+
+894
+897
+902
+904
+913
+919
+929
+
+977
+988
+988
+989

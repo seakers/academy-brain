@@ -1,0 +1,7064 @@
+6-sigma design process
+1950 coordinates
+2000 coordinates
+
+—A—
+
+AAR (See Area Access Rate)
+Aberrations, optical
+-Absolute stationkeeping
+vs. relative stationkeeping
+Absorptivity (See also emissivity)
+atmospheric transmission
+table of values
+Acceleration
+units and conversion factors
+Acceleration loads
+Acceptance tests
+Access area
+for typical spacecraft
+instruments
+
+Index
+
+746-747, 781
+97
+97
+
+261
+
+508-509
+435-436
+
+130, 266, 284
+436
+
+920
+739
+520
+163
+
+167
+
+table of values Inside rear cover (col. 1-4)
+
+Acoustic environment
+(of launch vehicle)
+sound pressure level
+Acquisition reform
+ACR (See Area Coverage Rate)
+
+741
+742
+522
+
+ACS (attitude control system; See Attitude
+Determination and Control subsystem)
+
+Active thermal control
+
+428
+
+ACTS (Advanced Communications
+
+Technology Satellite)
+antenna
+Acts of U.S. Congress (See also
+
+541
+
+572-573, 576
+
+Congress; treaties; individual acts)
+
+Buy America Act
+
+834
+
+Commercial Launch Act of 1984
+
+1988 amendment
+
+environmental impact
+assessment
+
+insurance cap
+
+power over commercial
+launch
+
+reason for
+
+requires launch license
+
+830-831
+
+835
+830-831
+
+827
+824
+826
+
+Commercial Space Act of 1998
+
+GPS spectrum
+
+launch site upgrades
+
+reusable launchers
+Export Administration Act
+
+826
+827
+822
+834
+
+929
+
+Export Control Act
+Federal Tort Claims Act
+National Environmental
+Policy Act
+Actuators (See Attitude control
+actuators, Attitude determination
+and control subsystem)
+Ada (computer language)
+(See also software)
+Adaptive differential pulse code
+modulation
+ADCS (See Attitude determination
+and control subsystem)
+AES8 (radiation belt electron model)
+Aeroassist trajectory
+Aerodynamic drag
+(See Atmospheric drag)
+Aerodynamic loads
+Aerodynamic stabilization
+use on small satellites
+Aerodynamic torques
+(See also Torque)
+formula for
+Aerogel
+as thermal insulation
+Aerospace Ground Equipment
+cost estimates
+AFSCN (See Air Force Satellite
+Control Network)
+Agile manufacturing
+
+834
+830
+
+834
+
+303
+666
+549
+215
+179, 184
+
+738, 739
+
+864
+
+324, 366-367
+437, 438
+
+796
+
+754-755
+
+Agreement on astronaut rescue and
+
+return of spacecraft
+Air Force Satellite Control Netwo
+
+823-824
+rk
+
+(AFSCN) (See also ground systems) 637-638
+
+parameters for
+use for DMSP
+use for FLTSATCOM
+use of DSCS-III
+Airy disk (in optics)
+Airy, Sir George
+AKM (apogee kick motor;
+See also Kick motor, Kick stage)
+cost estimates
+Albedo
+definition of
+geometry factors for
+planets
+ALEXIS (small X-ray
+astronomy satellite)
+cost estimate
+redundancy on
+
+547-548
+635
+635
+534
+263
+264
+
+306
+795-796
+432-434
+432-433
+907-908
+
+434
+
+858
+874
+877
+930
+
+Algorithms
+first-order 37
+system 57
+Aliasing 282
+
+Allocation of requirements (See
+Requirements of a space mission)
+Altitude maintenance (See also
+Orbit maintenance, atmospheric drag) 497
+
+graph of required AV 177
+Altitude plateaus, constellation 198
+Aluminum (See also Structural materials)
+
+as rocket propellant 699
+
+use of 465
+
+properties of 466
+
+thermal properties of 436
+Ammonia dissociation 697
+Ammonium perchlorate
+
+as rocket propellant 699
+Ampere-hour capacity (See Batteries)
+Amplifiers
+
+solid-state 575
+
+traveling-wave tube (TWTA) 575
+
+AMSAT (satellite organization for
+radio amateurs; See also OSCAR
+
+satellites, MicroSat) 860, 871
+AMSAT (small satellite)
+cost estimate 808
+in geosynchronous orbit 868-869
+launch 865
+mass distribution of 895-896
+Analemma 122
+Analog modulation techniques
+(See also Data rates) 543
+Analog signal processing (See signal
+processing, analog)
+Analytical redundancy 7719
+Angular acceleration
+units and conversion factors 920
+Angular impulse (See Angular
+momentum; Disturbance torques)
+estimate for spacecraft 323-328
+
+Angular measure
+units and conversion factors 920
+Angular momentum (See also Momentum
+unloading; Momentum wheels; Torques) 354
+
+estimate for spacecraft 323-328
+
+FireSat example 376
+
+simplified equations for 370
+
+units and conversion factors 921
+Angular motion
+
+of a satellite seen from Earth 117-123
+Angular rate
+
+units and conversion factors 920
+Angular resolution (See Beamwidth,
+
+resolution) 265
+
+Angular velocity
+
+units and conversion factors 921
+Anik C (communications satellite) 633
+
+Animation (mission utility
+technique) 65
+
+Index
+
+Anomalistic year 898
+Anomaly (failure) analysis 606
+Anomaly, in an orbit (See also Mean anomaly,
+
+Eccentric anomaly, True anomaly) 139-140
+ANSI (software standards) 670
+Antarctic Treaty
+
+differences from Outer Space Treaty 825
+
+Antennas (See also Footprint)
+
+beamhopping technique 573
+computation of footprint 165-168
+directional accuracy of 322
+efficiency 533
+equation for 555-556
+gain calculation 552-554
+pointing method 319-320
+system for ground station 624
+thermal requirements for 428
+types of 570-575
+Anti-Ballistic Missile Limitations
+Treaty (ABM) 825
+Antijamming (of RF signals) (see Jamming)
+Antipode (or Antipoint) 99
+Antisolar point 99
+AP8 (radiation belt proton model) 215
+Aperture
+computation for FireSat 288
+numerical 261
+optical 259, 264
+synthetic 265, 275
+
+Apogee Kick Motor (AKM); also
+Apogee boost motor (See also
+
+Kick motor; Kick stage) 306
+
+Apollo (Moon mission)
+
+cost estimate 808
+
+in site science 244
+
+use of fuel cells 409
+Apparent motion of satellites 117-123
+Appendages of spacecraft 303
+
+examples of 309-311
+
+effect on configuration 312-314
+Application software 663
+
+estimating resource needs 663-666
+Applied axial loads 488
+Apstar (communications satellite)
+
+regulatory problem 821
+Arc (or arc segment) 99
+Arc length measurement 99-100
+Arc minute 920
+Arc second 920
+Arcjets (See Electric propulsion)
+Architecture
+
+communications 533-543
+
+mission 10-11, 32-37
+
+mission, as cost structure 788
+
+onboard processing 651-657
+Area
+
+units and conversion factors 916
+Area Access Rate (AAR) 164
+
+equations for 168-169
+
+table of values Inside rear cover (col. 5-8)
+Index
+
+Area Coverage Rate (ACR) 164
+computation example 169-170
+equations for 116-117
+
+for different instrument types 168
+
+Area moment of inertia 462, 476
+equations for 476-477
+sample computations 483, 490-491
+
+Area Search Rate (See Area Coverage rate)
+
+Argument of latitude
+(See also Orbit elements) 137
+Argument of perigee
+(See also Orbit elements) 136
+formulas for 902
+Ariane launch system 732
+adapter masses 736
+and small satellites 865
+characteristics of 728
+cost estimates 802
+fundamental frequency 741
+injection accuracy 742
+reliability experience 727
+user’s guide for 743
+Ariane Structure for Attached Payloads
+(ASAP) ring
+Small satellite launch 857, 859, 865
+Arms Export Control Act 834
+
+Arrays, solar (See Solar arrays)
+ASAP (Ariane Structure for Attached
+Payloads) ring
+Small satellite launch 857, 859, 865
+Ascending node (See also Orbit elements;
+Right ascension of the ascending node) 136
+
+Assembly
+
+hardware nomenclature 519
+Assembly languages 658
+Assembly line
+
+for Iridium 762-164
+
+for satellite manufacturing 654
+Association of data 26
+Asteroids (See also Meteoroids, Comets)
+
+mining of 839-840
+Astigmatism (aberration) 261
+ASTP (small spacecraft)
+
+characteristics of 854
+ASTRID (small satellite)
+
+cost estimate 874
+ASTRO (small spacecraft series)
+
+guidance and control 864
+Astrodynamics (See also Orbits) 131-158
+
+books on 131
+Astronauts
+
+effect of solar particles on 217
+
+“envoys of mankind” 823
+
+rescue and return required 823-824
+
+return from Moon 510
+
+use of Manned Maneuvering Unit 693
+Astronomical latitude 899
+Atlas Centaur launch system 731
+
+characteristics of 728
+
+cost estimates 802
+
+931
+
+fundamental frequency 741
+injection accuracy 742
+reliability experience 727
+sound pressure level 742
+tested shock levels 526
+user’s guide for 743
+vibration tests for components 526
+
+Atmosphere (See also Atmospheric drag;
+
+Atmospheric pressure) 207-212
+attenuation (link budget) 564-565
+
+density, effect on orbits
+(See also Atmospheric drag) 208-209
+
+effect on payloads 258-259
+effect on rocket performance 722
+models of 208
+scale height 211
+table of values Inside rear cover
+(col, 25)
+structure of 207-212
+temperature of 207
+transmission vs. wavelength 258
+Atmospheric
+density
+table of values Inside rear cover
+(col. 26-28)
+Atmospheric drag 144-145
+effect on AV budget 179
+effect on launch systems 722
+effect on microgravity 206
+effect on satellite lifetime 208-211
+formulas for 144-145
+maneuver to overcome 508
+table of values Inside rear cover
+(col. 33-40)
+
+to remove energy
+from an orbit 184
+Atmospheric pressure
+
+effect on rocket performance 690, 691
+Atomic oxygen
+effect on space systems 211-212
+
+ATS (See Advanced Technology Satellite)
+Attitude capture 322-323
+Attitude control (See Attitude
+
+determination and control subsystem)
+
+analogy with
+orbitcontrol 498, 510-511, 512-514
+
+Attitude control actuators (See also Control
+
+moment gyros; Magnetic torquers;
+
+Momentum wheels; Reaction
+
+wheels; Thrusters) 303, 325, 368-371
+
+angular momentum capacity 368, 370
+FireSat example 376
+sizing 370
+torque capability 368
+Attitude Control System (ACS)
+(See Attitude Determination and
+Control Subsystem)
+Attitude Determination and
+Control Subsystem (ADCS) 354-380
+accuracy requirements 83-86, 365
+932
+
+angular impulse capability 323
+angular impulse requirements 326
+attitude control requirements 319-320
+
+attitude control
+
+techniques 313-314, 319, 359
+components 327, 368-377
+control algorithm definition 378
+cost estimates 795-197
+definition of 302
+design of 319-328, 356
+failure rates 769
+FireSat example 375-376
+for small satellites 863-864
+performance requirements 357
+
+pointing requirements
+
+(See also mapping and pointing) 363
+power consumption 316, 369, 373, 376
+representative masses of 895-896
+sensor selection 365
+slewing requirements 364
+software sizing 663-664
+spin stabilization patent 828
+torque requirements 322-323
+
+trade with orbit
+accuracy
+weight budget
+Attitude determination sensors
+(See also Directional antennas; Horizon
+sensors, Star sensors; Sun sensors;
+Magnetometers; Gyroscopes;
+
+83-84, 123-130
+316, 369, 373
+
+Inertial-measurement units) 371-377
+FireSat sensors 375-377
+table of accuracy ranges 322
+Australia
+launch site 733
+Autonomous navigation 28-31
+definition of 498
+systems 141, 162, 321, 503-507
+trades 500-501
+Autonomous orbit maintenance S11
+Autonomy
+FireSat payload sizing 675-682
+future developments 890
+“in moderation” 890
+levels of 615-618
+low-cost approach 890
+software sizing 665
+trades 25, 28-31
+Autotracking 625
+Axial rigidity 486
+Azimuth coordinate 100
+—___BRB—
+Backload
+in a thermal system 454
+Baikonur
+launch site 733
+
+Index
+
+Ballistic coefficient 145
+estimating 207-208
+effect on satellite lifetimes 211
+table of representative values 207
+
+Bandwidth (See also Data rate;
+
+Communications architecture)
+antenna needs 329
+control of 541
+efficient use of 560
+FireSat 289
+in attitude control system 379-380
+in space vs. ground trade 25, 652
+in TT&C 388
+Nyquist frequency and 281
+regulatory constraints 566
+typical capabilities 550
+typical GEOSat capabilities 550
+vs. data rate 563
+vs. energy transformation process 266
+vs. modulation type 558-563
+vs. number of satellites 867
+
+Baseline design 5,247
+
+Batt
+as thermal insulation 437, 438
+
+Batteries (See also Power subsystem) 333-334
+average eclipse load 422
+capacity 418
+capacity, ideal 422
+characteristics 419, 420
+charge-discharge profile 418-419
+depth-of-discharge 333, 420, 421
+design steps 422
+linear, charge-current control 427
+primary batteries 409, 418-419
+FireSat example 422
+recharge power 315
+secondary batteries 419-422
+
+pressure vessels 420-421
+specific energy density 419
+thermal challenges 450-451
+thermal requirements for 428
+Beam plasma instrument 275
+Beam width (See also Footprint;
+Angular resolution)
+communications subsystem 384
+definition of 555
+requirements for 385
+
+Beamhopping technique 573-574
+
+Beams (Structural)
+cantilevered 473-475
+deflection 483-484
+equivalent 470
+natural frequencies 483, 484
+shear forces 474-475
+
+Benchmark program, to evaluate
+
+computer performance 662-663
+
+Bending moments 473
+
+Bent pipe 580
+TDRSS use as 639
+
+BER (See Bit Error Rate)
+Index
+
+Beta angle (Sun geometry)
+
+example calculation 107-109
+Beta particles 227
+Bi-level (discrete) input
+
+telemetry data 398
+Biconical horn antenna 571-572
+BIF (Built-in function) 667
+‘Big LEO” communications
+
+constellations 538-539
+
+examples of 584-585
+Binary Phase Shift Keying (BPSK)
+(See also Modulation techniques) 558
+Bipropellant propulsion systems
+advantages and disadvantages 693
+applications of 688
+design of 694-696
+example systems 694
+fuels used 686
+mixture ratio 713
+operating characteristics 692
+use for orbit transfer 363
+use in integral propulsion 727
+use on FireSat 340
+BIT (Built-in test) 667
+Bit, computer 656
+Bit error probability 560
+Bit Error Rate (BER) 389, 546, 560
+as figure of merit 389
+as function of E,/N, 561
+definition of 555
+Bitflip (See also Single-event phenomena} 220
+Blackbody 256
+heat rejection by 439
+in thermal analysis 433, 439
+radiation temperature 257
+Bladder
+in propellant tanks 709
+Blankets (See Multilayer insulation)
+Blowdown pressurization system 708
+Boosted weight 316, 725
+Booster adapter 301, 736
+BPS (bits per second) 545
+BPSK (Binary Phase Shift Keying)
+
+(See also Modulation techniques) 558
+Brahe, Tycho 132, 139
+Brayton-cycle engine (See also
+
+Power subsystem) 409, 410
+BremSat (small satellite)
+
+mass distribution of 895-896
+Bremsstrahlung
+electrons 231
+X-ray dose 216
+Brightness 257, 270
+temperature 270
+Brilliant Pebbles 243
+Brittle substances 472-473
+Budgets (See also Delta V; Mapping
+and pointing ;-Weight; Power;
+Propellant; Reliability) 4
+attitude vs. orbit 83-84
+
+933
+communication link 567-570
+Delta V (velocity) 176-179, 686
+failure probability 765
+list of Inside front pages
+
+mapping and pointing
+
+in navigation systems
+performance
+power
+
+(See also Power budget)
+process for
+
+81-85, 123-130
+
+499
+83-90
+
+4, 314-316
+
+creating 83-90, 123-130, 314-318
+propellant 314, 686-687, 712
+refining and negotiating 88-90
+reliability (See also
+
+Reliability budget) 317, 765
+response time example 82-83, 86-88
+spacecraft design 314-318
+weight (See also
+
+Weight budget) 4, 315-317, 724-725
+
+Built-in function (BIF) 667
+Built-in test (BIT) 667
+Bulk charging 204
+Burst disc 694
+Bus (See Spacecraft bus)
+
+Buy America Act 833-834
+Byte 656
+—_C—
+
+C (computer language) 666
+
+C3 (See Command, control,
+and communications)
+C* (characteristic exhaust velocity) 713
+C&DH subsystem (See Command
+and Data Handling subsystem)
+Canada
+Anik-C satellite 633
+Daylight Savings Time 913
+objection to military use of ISS 827
+reentry of Cosmos 954 830
+sale of satellite imagery 833
+Cantilevered beam 473-475
+Capillary pumping
+in heat pipes 444-446
+Capture range, communication 389
+Cargo Integration Review 735
+Carrier-to-noise ratio (C/N) 555
+Carrier-to-noise-
+density-ratio (C/N,) 555
+Cartridge heater 440-441
+CASE (Computer-aided
+software engineering) tools 672
+use in functional analysis 83
+Cassegrain telescope optics 262
+Catalyst bed 697
+CCD (charge-coupled device) 270-271
+CCIR (Consultative Committee on
+International Radio Communications) 384
+934
+
+CCIT (Consultative Committee on
+Interaction Telephony) 384
+CDMA (See Code division multiple access)
+
+CDR (Critical Design Review) 521, 664, 880
+Celsius (unit of temperature;
+See also temperature)
+correct use of 439
+Celestial coordinates 96-97
+1950 coordinates 97
+2000 coordinates 97
+component names 102
+True of Date (TOD) 97
+Celestial pole 96
+Celestial sphere 95, 98-110
+arc (or arc segment) 99
+geometry on 98-110
+great circle 99
+view of Earth on 115
+Centaur (Orbital transfer vehicle)
+characteristics of 730
+Central node (See also Computer
+systems, spacecraft: architectures) 653
+
+Central Processing Unit (CPU)
+(See Computer systems, spacecraft)
+
+Central vs. distributed processing
+(See Data delivery)
+
+Centralized architecture,
+
+in onboard processing 653
+Centrifugal force
+effect on microgravity 206
+
+CGN (Conmiercial Ground Network) 641
+Challenger (Space Shuttle)
+
+effect of loss on insurance 831
+loss of 498
+Chandra X-Ray Observatory
+high performance design 248
+liquid engine on 694
+need to be in space 14
+pointing of 43
+space-referenced orbit 187
+Characteristic exhaust velocity (C*) 713
+Charge-coupled device (CCD) (See also
+Observation payloads) 270
+Charging, of spacecraft 212-214
+Check bits, in error detection 715
+
+Chemical Release Observation
+Canister (CRO; small satellite)
+
+attitude control 864
+characteristics of 854
+cost and performance of 858
+cost estimate 874
+China (See also Long March)
+cost estimates 802
+launch sites 733
+launch systems 728
+user guide 743
+sale of satellite imagery 833
+Chirping (See Pulse compression)
+Chromatic aberration 261-262
+Circle (conic section) 133-134
+
+Index
+
+Circuit Tolerance Analysis 712
+Circular velocity 135, 903
+Classical orbit elements
+(See Orbit elements)
+Cleanliness requirements 522-523
+Clementine (small satellite)
+cost estimate for 808, 874
+mass breakdown 895-896
+Clohessy- Wiltshire Equations 153
+CMG (See Control moment gyro)
+Co-elevation coordinate 100
+Co-latitude coordinate 100
+Code division multiple access
+(CDMA) (See also Modulation
+techniques) 576
+Codes 561-563
+error detecting and correcting 715
+Coding
+gain 562, 579
+types of 561
+Coherent turnaround,
+communication model 381-382
+Cold gas propulsion
+advantages and disadvantages 693
+applications of 371, 687-688, 693
+cost estimate of 799
+operating characteristics 692-693
+Pegasus attitude control 731
+system weight 715
+use on OGO 311
+Collision avoidance
+for debris avoidance 849
+in constellations 198-200
+Column buckling 478
+Coma (aberration) 261
+Combustion chamber pressure 691
+Comet 55/Tempel-Tuttle
+source of Leonid meteoroids 842
+Comet Giacobini-Zinner
+space mission to 508
+Comets
+coma “name use” 261
+orbit propagation for 498
+source of meteoroid material 840-842
+Command and Data Handling
+(C&DH) subsystem 303-304, 330,
+314-315, 395-407
+basic components 331
+C&DH systems 402
+command formats 395-396
+command processing 398
+complexity of 404
+design of 330
+design process table 399
+FireSat baseline 405
+FireSat requirements 404
+power consumption 316
+radiation requirement 403
+reliability 402-403
+size, weight, power estimation 405
+Index
+
+sizing process 331, 398-407
+spacecraft bus constraints 402
+telemetry processing 400
+
+Command, Control, and
+Communications (C3) (See also
+
+Communications architecture) 12
+Command decoder
+block diagram 396
+Command processing
+software sizing 665
+Command Readout Station (CRS) 635
+Command-response protocol 654
+
+Commercial Ground Network (CGN) 641
+
+Commercial ground systems 640-641
+Commercial Launch Act of 1984
+1988 amendment 830-831
+
+environmental impact
+assessment 835
+
+insurance cap 830-831
+power over commercial
+launch 827
+reason for 824
+requires launch license 826
+Commercial missions
+cost relative to military 799
+Commercial off-the-shelf
+software (see COTS)
+Commercial parts
+reliability of TN-772
+
+use in small spacecraft 875
+
+use in spacecraft 747-748
+Commercial Space Act of 1998
+GPS spectrum 826
+launch site upgrades 827
+reusable launchers 822
+Common law
+and space policy 822
+Communication, frequencies (See
+Frequencies, communications)
+Communications
+effect of nuclear weapons on 227-228
+software sizing for 663-664
+Communications architecture (See
+also Communications subsystem;
+bandwidth) 12, 21, 22,
+45, 533-586
+definition 12, 22, 43, 553
+design process table 534
+diversity techniques 582-583
+double-hop link 539
+geostationary orbit 537-538
+geostationary orbit with crosslink 538
+impact of design on operations 614
+launch system and payload 736
+low-altitude crosslinked 538-539
+Molniya orbit 538
+network components of 534
+optical links 583-584
+security techniques for 582
+
+encryption and decryption 582
+
+935
+selection criteria 542-543
+store and forward 536-537
+
+Communications links (See also Link
+budget; Communications architectures)
+as part of communicationsarchitecture 543
+
+budget 567
+design 550-570
+link equation 552, 554-558
+
+derivation 552-554
+of Pioneer satellite 563
+techniques for sharing 575-579
+
+Communications Payload and Spaceborne
+
+Electronics Cost Model (CPCM) 788, 796
+Communications satellites
+legal issues 825
+linking of ground systems 631
+payload sizing 570-575
+Communications subsystem
+(also called Telemetry and
+Command Subsystem;
+(See also Communications
+architecture; bandwidth) 303, 328-329,
+381-394, 547-548
+antenna requirements for 571
+attributes 378,548
+block diagram of 390-391
+carrier tracking 381
+command reception 381
+composite signal 390-391
+conical-scan systems 383
+cost estimates 726
+design of 312-314, 389-394
+design process table 388
+equipment 393, 399, 584
+failure rates 710
+functions 382
+impact of design on operations 614
+interfaces with other subsystems 387
+Ku-band typical parameters 394
+losses 392
+monopulse system 385
+nuclear blast effects on 227-228
+operation 390-391
+power consumption 316
+phase coherence 381
+ranging 381
+reliability allocation to 711
+representative masses 894-896
+requirements 384, 385
+S-band
+characteristics of 329
+typical parameters 394
+selection criteria 390
+system-level interface options 386
+telemetry modulation 381
+typical parameters 394
+X-band typical parameters 394
+Compandor 545
+Completeness, in
+requirements specifications 91
+936
+Component
+hardware nomenclature 519
+Component design loads 463-464
+Composite materials 464, 465
+Composite signal 390-391
+Comprehensive system test (CST) 529
+Compression (See Data compression)
+Compton scattering 226
+Computer-aided software
+engineering (CASE) tools 672
+use in functional analysis 83
+Computer language
+development cost based on 801
+memory used based on 666
+types of, choice of 658
+Computer systems, spacecraft 645-684
+architectures 651-657
+central processing unit
+(CPU) 656
+clock speed 662
+central vs. distributed
+processing 23, 27-28
+crossing system boundaries 645-646
+current technology used on
+SmallSats 886-887
+design drivers for 649
+development process 647
+FireSat example 673-683
+attitude control software 673-675
+greater reliance on 6, 889-890
+hierarchy of elements 648
+integration and test 670
+memory 656
+performance benchmarks 662-663
+reaction curves 664
+representative hardware 669
+requirements allocation 647, 649-660
+requirements definition 650-651
+resource estimation 660-670
+onboard applications 665
+operating-system functions 666
+selection guidelines 667-670
+small satellites use of 865-866
+space vs. ground processing 25-27
+system block diagram 655
+table of (current) 669
+throughput 657, 662-663
+Concentrator solar arrays 416
+Concept development 9
+requirements validation 10
+Concept exploration 7, 20
+flow diagram 20
+“Needs” analysis 9
+requirements for successful 10
+Concept of operations (See also
+Mission concept) 21-32, 69-72
+
+Concurrent engineering
+in multi-satellite
+manufacturing 751, 754-756, 761
+materials selection 747
+
+Index
+
+Configuration drivers (See
+Spacecraft configuration)
+
+Configuration management 521
+Congress, U.S. (See also Acts of Congress;
+treaties)
+commercial launch 827
+GPS spectrum 826
+insurance cap 831
+nuclear reactor concern 825
+role in FireSat 3
+role in Space policy 828-829
+Conic section 133-134
+Conical-scan systems 383
+Consistency
+in requirements specifications 90-91
+in system definition 5
+Consolidated Space Operations
+Center (CSOC) 637
+Consolidated Satellite Test
+Center (CSTC) 637
+Constants (See also individual
+subjects; e.g., Sun, Earth, Orbits)
+Earth and Sun 897-899
+Earth satellite
+parameters Inside rear cover
+fundamental physical,
+table of Inside front cover
+high precision values of e, 7 927
+of motion 134-135
+source of 893
+
+spaceflight, table of Inside front cover
+
+Constellation, of satellites
+
+active debris avoidance 849
+communications
+
+regulatory limitations 825-826
+constellation maintenance 497
+
+constellation patterns 191-196
+coverage of (See also coverage) 189-197
+
+number of orbit planes 190-191
+vs. latitude 197
+design of 188-200
+books on 197
+existence of altitude plateaus 198
+growth and degradation 197
+patents on 194, 828
+process summary 197-200
+examples of 584-585
+Iridium assembly process 762-164
+satellite manufacturing for 745-764
+use for communications 537-539
+Constraints (See Mission constraints;
+Requirements)
+Contamination
+effect on thermal surfaces 435-436
+Control algorithms
+for attitude determination
+and control 378
+Control authority 322
+
+Control modes (See also Attitude determination
+and control subsystem) 355, 357, 362
+Index
+
+Control moment gyros
+
+(CMGs) 319, 322, 325, 361, 369
+
+typical parameters 369
+
+Control system (See Attitude
+
+determination and control subsystem)
+Convection 431
+Convention on International Liability
+
+for Damage Caused by Satellites
+Convention on Registration of
+
+Objects Launched into Space 824
+Convention on the Prohibition of
+
+824, 830
+
+Military or Hostile Use of Space 824-825
+Coordinate systems (See also specific
+coordinate systems) 95-102
+date associated with 97
+effect of coupling 362
+geocentric-geodetic conversion 899-901
+how to define 95
+selection of
+as source of error 95
+example of importance of
+correct choice 105-107
+spacecraft 355
+spherical 100-102
+“sufficiently inertial” 135
+used in space missions 96
+Copernicus, Nicolaus 132
+Coriolis force 206
+Cosine loss (solar arrays) 417
+Cosmic rays (See also Single-event
+phenomena) 219-221
+Cosmic ray transition instrument 275
+Cosmos 954 837
+and damage claims 830
+Cost drivers 784
+Cost estimates 783-818
+cost uncertainty 803-806
+discount rate 807
+FireSat example 810
+government vs. commercial 799
+ground segment 793, 801-802, 812-813
+inflation 791-792
+
+launch segment 793, 802-803, 812-813
+operations and maintenance 793, 801-802,
+
+813
+order of magnitude 807, 809
+present value 807
+
+tisk assessment 803-806
+satellite hardening 229-230, 237
+software 800
+space segment 793, 795-797, 812-813
+time distribution of costs 806-807
+types of dollars 790-791
+Cost Estimating Relationship (CER)
+
+categories in 792-794
+comparison of models 815
+definition of 787
+data needed for 793
+elements of
+
+ground segment 801-802
+
+937
+
+launch segment 802-803
+space segment 795-197
+FireSat example 810-818
+impact of new technology on 798-800
+
+primary statistical indicators of 790
+
+procedure for developing 789-790
+Cost models 783-820
+comparison of results of 815
+parametric 791-795
+techniques for developing 789-790
+Cost-risk analysis 803-806
+
+Costs (See also Cost estimates, Cost models)
+
+cost vs. design life curve V7
+design-to-cost specification 77
+life cycle analysis 784-786
+limitation on missions 2, 890-891
+minimize using SMAD 884-886
+of design changes 757
+part/process cost relationship 752-753
+payload design 245-248
+program-level allocation 798
+reduction via COTS tools 65-69
+spacecraft manufacturing goals 746
+vs, performance (conceptual) 248
+vs. project phase 756-7157
+
+COTS (commercial off-the-shelf) software
+
+cost hierarchy 67
+for mission analysis 65-69
+list of tools 68
+tailoring of 671, 673
+Courier (Army communications
+satellite)
+use of store and forward 536
+Coverage (See also Earth coverage,
+Constellation) 163-176
+Figures of Merit for 173-176
+inappropriate statistical
+analysis 173, 175-176
+minimum number of satellites
+for whole Earth 193-194
+of constellations 189-197
+Coverage Gap (Figure of Merit) 174
+
+Cowell’s method (of orbit integration) 142
+CPCM (Communications Payload and
+Spaceborne Electronics
+
+Cost Model) 788, 796
+CPU (central processing unit) 656
+Crane model (climate data) 564
+Critical Design Review (CDR) 521, 664, 880
+Critical inclination 182
+Critical loads 477
+Critical requirements (See also
+
+Requirements of a space mission) 4
+
+hidden 48
+identification of 48-49
+top-level 48
+Criticality Analysis 710
+
+CRO (See Chemical Release Observation
+Canister)
+
+Cross-compiler 659, 672
+938
+
+Crosslinks (See also Communications
+
+architecture; Link budget) 534-539
+advantages and disadvantages
+for navigation 502
+list of characteristics 504
+optical 583
+sizing estimate 513
+use for satellite navigation 506-507
+Cryogenic cooling 451
+Cryogens
+for cryogenic cooling 451
+CSOC (Consolidated Satellite
+Operations Center) 637
+CST (Comprehensive System Test) 529
+CSTC (Consolidated Satellite
+Test Center) 637
+Current
+units and conversion factors 921-922
+Current-voltage plot (I-V) (See also
+Photovoltaics) 415
+Curvature (optical aberration) 261
+Cut-off frequency 282
+Cycle time
+in satellite manufacturing 746, 752
+Cycles of learning
+in satellite manufacturing 759
+—)D—
+D* (See Specific detectivity) 272
+D-1e (orbital transfer vehicle)
+characteristics of 730
+Dance of Planets (COTS software) 68
+DARPA (See Defense Advanced
+Research Projects Agency)
+Dark signal uniformity 272
+Data
+association as soon as possible 26
+latency 25
+mission vs. housekeeping 22-23
+Data compression 26, 550, 634
+Data delivery (part of mission concept) 22
+central vs. distributed
+processing 23, 27-28
+level of autonomy 23
+space vs. ground 23, 25-27
+Data dictionary 599
+Data-flow analysis, diagram 24
+Data flow diagram
+basis for computer
+requirements 609, 650, 658
+development of 599
+FireSat example 24
+in communications architecture 534
+use in mission design 23-26
+use in navigation decision 500
+Data handling (See also Computers,
+spacecraft) 632-635
+
+definition of 396
+
+Index
+
+observation payload 280
+quality monitoring 634
+unit block diagram 397
+Data rates (See also Bandwidth) 279-283,
+543-548
+analog modulation techniques 543
+analog-to-digital conversion 544
+compandor 545
+compression 549-550
+computation 287-288
+definition of 545
+digital modulation 543
+digital-to-analog conversion 544
+need for dumping data 642-643
+observation payload 279
+power ratio 545
+quantization 544-545
+requirements 385, 549
+FireSat example 294
+TT&C 384-385
+voice transmission 547
+vs. bandwidth 563
+Data relay (See also Communications
+architecture; Crosslinks) 534
+Data user interface 626
+Day numbers 914
+table for finding 915
+dB (decibel)
+definition 554
+Dead band
+thermal 441-442
+Dead weight fraction
+(launch systems) 723
+Dead zone (of attitude
+control thrusters) 322, 325
+
+Debris (See Orbital debris) 837-838, 840-850
+Decay, orbit (See Atmospheric drag;
+
+Orbital lifetime)
+Decibel (dB)
+definition 554
+Decompression of data (See Data
+compression)
+Decoys (satellite defense) 237-238
+Decryption 634
+Deep Space Network (DSN)
+parameters of 348
+tracking interplanetary
+spacecraft 502, 596
+TT&C options 386
+Defense Advanced Research Projects
+Agency (DARPA)
+ASTP small satellite 854
+development of new launchers 867
+GLOMR cost experience 874
+laser development 583
+Defense Meteorological Satellite
+Program (DMSP)
+cost estimate 808
+ground system for 635-636
+mass distribution of 894-896
+Index
+
+Defense Satellite Communications
+System (DSCS)
+antenna 572
+attitude control 313
+bandwidth 550
+configuration of 309
+cost estimate 808
+mass distribution of 894-896
+TDMA 576
+use by AFSCN 534
+use of upper stage 44
+Defense Satellite Program (DSP) 44
+attitude control 313
+configuration of 310
+cost estimate 808
+mass distribution of 894-896
+Delayed Radiation 231-232
+Delta II (rocket engine) 694
+Delta (launch system) 730-731
+adapters for small satellites 865
+battery use 409
+characteristics of 728
+cost estimates 802
+fundamental frequency 741
+injection accuracy 742
+reliability experience 727
+sound pressure level 742
+use of upper stage 44
+user’s guide for 743
+Delta pattern
+(Walker constellations) 194-195
+Delta PCM 546
+Delta V (AV = applied
+incremental velocity) 314, 698
+altitude maintenance
+requirement 176-177
+budget 176-179
+deorbit requirement 157
+table of values Inside rear cover
+(col. 29-32, 44-46)
+Demodulation 558
+Demultiplexing 634
+Density
+units and conversion factors 921
+Deorbit
+AV requirement 157
+Department of Transportation (DOT)
+launch vehicle role 826-827
+Depth-of-discharge (DOD)
+(See Batteries, depth-of-discharge)
+Depth of focus 253
+Derating, of components 774
+Desaturation (See also Momentum
+unloading} 362
+Design budgets (See Budgets)
+Design failures
+cause of 781
+Design for manufacturability 745-764
+Design for reliability process 317
+
+Design life
+
+939
+failure probability at 767
+FireSat cost trade 815-817
+quantifying choice 17
+reliability decisions for 768
+vs. cost 815-817
+Design margin 75,90
+reliability and 774
+Design of spacecraft
+(See Spacecraft design)
+Design verification tests (See also
+Qualification program)
+definition of 748
+Design to cost 77, 758, 783
+Despun platform 359
+Destructive physical analysis test
+(DPA test) 522
+DET (direct-energy-transfer) 425
+‘Detect-respond” failure analysis 606
+Detectivity (See Specific detectivity)
+Detectors
+alternative types 268-276
+dwell time 268, 270
+elements (See Pixel} 268, 270-271, 281
+IR 266-275
+noise equivalent bandwidth 272
+noise equivalent power 272
+photon 272
+silicon 270
+thermal 272
+visible 267
+Developer, of a space mission
+definition of 8
+Deviation of the vertical 899
+Device driver
+software sizing 667
+Device handler (software) 667
+Dhrystone computer benchmark 663
+Diagnostic software 667
+Diaphragm
+in propellant tanks 709
+Differential PSK (DPSK) (See also
+Modulation techniques) 560
+Diffraction (in optical system) 263
+Disk (See also Airy disk) 263
+Diffraction limited resolution 263-265
+Digital modulation
+(See Data rates)
+Digital] signal processing (See Signal
+processing, digital)
+Dihedral angle (rotation angle) 99-100
+Diode heat pipe 446
+Diplexer, communication 389
+Direct-energy-transfer (DET;
+in power regulation) 425
+Direct Memory Access (DMA) 670
+Direct orbit 137
+Directional antennas 322
+Discount rate (in cost estimating) 807
+in cost modeling 807
+Displacement fluence 233
+940
+
+Disposal
+
+of spacecraft 31-32, 45, 162, 849-850
+debris mitigation 850
+delta V budget for 177-178
+deorbit delta V 157
+table of Inside rear pages (col. 44)
+disposal orbit 159
+for collision avoidance 200
+from GEO 162-163
+need for 32-850
+need for in constellations 189, 199
+options for 162-163
+Disposal orbit 159, 161
+Distortion (aberration) 261
+
+Distributed architecture,
+in onboard processing 653-654
+
+Distributed computer architecture (See also
+Computers systems, spacecraft) 653-654
+Disturbance torques (See also specific
+torques, e.g. Aerodynamic torques)
+
+cyclic 354
+equations and definitions 324, 366
+equations for 366
+FireSat worst-case estimate 367
+in attitude control 324-325
+internal 368
+secular 354
+Diversity (communications
+technique) 582-583
+DMA (Direct Memory Access) 670
+DM/LAE (rocket engine) 694
+
+DMSP (See Defense Meteorological
+Satellite Program)
+
+Documentation
+reason for 2
+of requirements 90-93
+of reasons for requirements 887-888
+payload design 245-248
+
+DOD (See Batteries: depth-of-discharge)
+DOD-STD-
+(See Standards/Standardization)
+
+DOD-STD-2167 672
+DOD-STD-480 521
+Domsat (domestic
+communications satellite) 632
+
+DOORS (COTS software)
+
+in requirements development 89
+Doppler frequency shift 383
+Doppler Imager 275
+Doppler Imaging Interferometer 275
+DOT (See Department of Transportation)
+Double-hop link 539
+Double-Pole, double-throw switch 390
+Downlink or return link 303
+
+design procedure 568
+
+signal 382
+
+DPSK (See Differential PSK)
+Drag (See Atmospheric drag)
+Draim, John 194
+Drift rate (in orbit) 152-153
+
+Index
+
+Drivers (See also System drivers) 4
+Driving requirements (See critical
+requirements)
+changed to “critical requirements” 4
+Dry weight
+of a spacecraft 316, 725
+of representative spacecraft 894-896
+DSCS (See Defense Satellite
+Communications System)
+DSN (See Deep Space Network)
+DSP (See Defense Satellite Program)
+Dual Frequency Scatterometer 275
+Dual mode propulsion systems
+advantages and disadvantages 693
+applications of 688
+definition of 686
+design of 688
+operating characteristics 692
+Ductile materials 472-473
+Duty cycle 166
+Duty factor 542-543
+AV (See Delta V)
+Dwell time
+(See also Exposure time) 166, 268, 573
+Dynamic envelope 461
+Dynamic power source
+(See also Power subsystem) 409
+balance of energy 409
+Rankine-cycle engine 409
+Stirling-cycle engine 409
+Dynamic pressure
+(launch systems) 722, 738
+Dynamic range
+as imager characteristic 272, 284
+Dynamic test models
+in satellite manufacturing 759
+—F—
+e (logarithm base)
+accurate value for 927
+E-SAT (communications constellation)
+example of Little LEO 539
+use of store and forward 537
+Early Bird (first commercial comsat) 856
+imaging system 269
+Earth (See also Atmosphere;
+Space environment; Magnetic field)
+angular radius of 111
+table of Inside rear cover (col. 49)
+appearance from space 111-112, 115
+geocentric and geodetic
+coordinates 899-901
+geometry viewed from space 111-117
+infrared energy from 433-434
+oblateness of (See Oblateness)
+observation parameters
+formulas for 110-117
+Index
+
+table of Inside rear pages
+
+physical constants 897-898
+
+physical properties 897
+
+Earth central angle 113
+used to parameterize
+
+coverage 165
+
+maximum 119, 168
+
+table of Inside rear pages (col. 13-16)
+
+Earth coverage (See also Swath width) 163-176
+
+analytic approximations for 165-171
+constellations 189-197
+FireSat example 70-72
+Figures of Merit 173-176
+ground track as simulation 172
+numerical simulations 171-173
+Earth-fixed coordinates
+definition of 96-97
+names of components 102
+Earth horizon sensors (See Horizon sensors)
+Earth-referenced orbits 160
+selection of 179-183
+
+Earth satellite parameters,
+
+table of Inside rear pages
+Earth station (See Ground systems)
+Earth terminal (See Ground systems)
+
+Eastern Test Range 732
+available orbit inclination 734
+location of 733
+
+East-West stationkeeping (See Stationkeeping)
+
+Eccentric anomaly 139, 140
+Eccentric orbits (See also orbits;
+elliptical orbits; Molniya orbits)
+continuous coverage by 194
+reasons for selecting 182-183, 199
+usually at critical inclination 182
+thermal considerations in 453
+Eccentricity (See also Orbit elements) 135
+formulas for 137, 904
+selection of 183
+Eccentricity vector 136
+formula for 904
+Eclipses
+computation of duration 105-107
+effect on power 339, 413, 420-422
+effect on thermal input 110
+table of duration Inside rear cover
+(col. 53)
+thermal shock from 360
+Ecliptic 105-106
+rate of change of the obliquity 898
+Ecliptic coordinates
+definition of 96
+names of components 102
+EDAC (See Error Detection and Correction)
+Edge (COTS software) 68-69
+Effective emittance
+(See also Emittance) 437-438
+Effective horizon 119
+Effective isotropic radiated power
+(EIRP; See also Link budget) 41, 384
+
+941
+
+communications requirements 385
+
+in ground system design process 621
+
+in link equation 551
+Effective area, antenna 553
+Effective thrust 691
+
+EIRP (See Effective isotropic radiated power)
+
+Elasticity, methods for analyzing 471-474
+Electric charge
+
+units and conversion factors 921
+Electric conductance
+
+units and conversion factors 921
+Electric field intensity
+
+units and conversion factors 922
+Electric potential difference
+
+units and conversion factors 922
+Electric propulsion 701-708
+
+advantages and disadvantages 693
+
+alternative designs 702-708
+
+applications of 688
+
+Operating characteristics 692-693,
+
+703-704, 707
+types of 687
+
+Electrical power subsystem (EPS)
+(See Power subsystem)
+Electromagnetic compatibility (EMC) 524
+
+Electromagnetic interference (EMI) 213
+Electromagnetic pulse (EMP) 224
+hardening against 234
+Electromagnetic radiation
+atmospheric transmission 258
+definition of spectral bands
+(See also RF) 255
+Electromagnetic spectrum 255-257
+infrared systems 266
+microwave radiometers 266
+primary (direct) 257
+radar systems 266
+secondary (single scatter) 257
+visible systems 266
+Electromagnetic units 926
+Electromechanical assembly
+cleanliness requirement 523
+Electronic intelligence (ELINT) 234
+Electrons
+from nuclear explosion 223-226
+effects on communications © 227-228
+in space environment 214-216
+shielding against 230-232
+
+Elements of a mission (See Mission elements)
+Elevation (in az-el coordinate
+
+system) 100-102
+Elevation angle (or grazing angle)
+
+(See also Swath width) 113, 117, 264
+
+FireSat example 287, 293
+
+importance of in mission
+design 116-117, 126-128
+Ellipse (conic section) 133-134
+Ellipso (communications constellation)
+example of LEO cellular 538
+parameters of 585
+942
+
+Ellipticity of the Earth (See
+
+Oblateness of the Earth) 897
+Embedded computer 648
+EMC (See Electromagnetic compatibility) 524
+EMI (See Electromagnetic interference)
+
+Emissivity 435-436
+in Stefan-Boltzmann equation 439
+IR . 435
+table of values 436
+
+Emittance (See Emissivity)
+
+EMP (See Electromagnetic pulse)
+
+Encoding 634
+
+Encryption 582, 634
+
+End-of-life (See Disposal of spacecraft)
+End user, of a space mission
+
+definition of 7
+
+location of 25
+Energy
+
+units and conversion factors 922
+Energy balance equation 452-457
+
+for sizing thermal radiator 453-456
+Energy equation (orbits) 134
+Energy conversion efficiency
+
+(of a solar cell) 413
+
+Energy storage subsystem (See also Batteries)
+
+design steps 422
+Engineering data
+
+configuration management 521
+
+definition and control of 521
+Engineering development models
+
+in satellite manufacturing 760
+
+Engines, rocket (See Rocket engines)
+Environment (See also Space environment;
+Nuclear weapons environment) 203-229
+Environmental concerns (See also
+Orbital debris; Space environment)
+lasers and particle beams 836
+mission design and 834-838
+need for environmental
+assessment 833
+
+nuclear power sources and 825, 836
+orbital debris 840-850
+European policy 838
+US policy 838
+Environmental Control System
+(See Thermal subsystem)
+Ephemeris
+definition of 131
+propagation
+software sizing 665
+real time 501
+satellite 497-498
+solar 497-498
+
+EPS (Electrical Power Subsystem)
+(See Power subsystem)
+Equator (of coordinate system) 101
+Equilateral right triangle 103-104
+Equinox (See Vernal equinox)
+Equipotential surface
+for the Earth 899
+
+Index
+
+Equivalent axial loads 478-499, 488
+Error budgets (See Budgets)
+Error correcting codes 569
+
+Error Detection and Correction (EDAC)
+
+circuitry for 660-661
+coding techniques for 775
+ESA (See European Space Agency)
+Escape velocity (See also Orbits) 135
+formulas for 903
+ESOC (European Space Operations
+Center) 592
+ETA (Explosive Transfer Assembly) 700
+ETR (See Eastern Test Range)
+Euler angles 380
+Euler buckling loads 477-478
+European Space Agency (ESA)
+(See also Ariane)
+environmental models from 844
+L-Sat operator 633
+launch vehicle costs 803
+requirements definition 76
+upper stages 730
+European Space Operations Center
+(ESOC) 592
+European Space Tracking network
+ground-support scheduling 569
+EUTELSAT (European Telecommunication
+Satellite Consortium) 384
+Event-driven software architecture 656
+EWB (COTS software) 68
+Excel (COTS software)
+in requirements development 89
+Julian date in 916-917
+Exhaust plume 715
+Exhaust velocity, effective 689
+EXOS (Small spacecraft)
+characteristics of 769-770
+Exospheric temperature 208
+Expander cycle 696
+Expected launch availability 726
+Exploitation of space 14
+Explorer VI (small satellite)
+configuration of 309
+Explorers (NASA spacecraft) 853
+Explosive Transfer Assembly (ETA) 700
+Export Administration Act of 1979 834
+Export restrictions (See Import and
+export restrictions)
+Exposure time (See also Dwell time) 166
+External disturbances (See Disturbance
+torques)
+Extreme Ultraviolet Telescope 276
+—F}.
+F-number (See also Infinity F-number) 259
+computation of, for FireSat 289
+F-stop 259
+Index
+
+F10.7 index of solar radio flux 204
+Face sheets 465, 482-483
+Facility cleanliness requirements 523
+Facility elements
+
+ground system 624
+FAI (communications constellation)
+
+example of Little LEO 539
+
+use of store and forward 537
+
+Failure Modes, Effects, and
+
+Criticality Analysis (FMECA) 338, 770
+Failures (See also Reliability)
+altitude vs. orbit control 510
+caused by debris 845-850
+computer watchdog 403
+cost of 876-878
+hypothetical calculation 70
+evaluation of modes 317
+failure probability 765-766
+fault tree for 773
+Galileo antenna 610
+implications for low-cost
+spacecraft design 860, 862
+implications for orbit transfer
+options 186
+implications for spacecraft options 606
+implications for structural design 467-471
+in composite materials 465
+in launch vehicles 727
+in spacecraft computer 660
+launch delay after 726
+lifetime and reliability 338-339
+modes analysis 710
+need for telemetry 547
+rates for piece parts 772
+reporting of 710-771
+Fairings
+launch vehicle 306, 311, 725,
+727, 735-738
+Fatigue (structural) 466
+Fault avoidance 773-779
+reliability and 700
+Fault detection
+fault tolerance 771
+in TT&C 383
+related to autonomy 664
+software methods for 659-660
+software sizing for 664-665
+Fault tolerance 777-779
+Fault tree
+for software reliability 7712-773
+FCC (See Federal Communications
+Commission)
+FDMA (See Frequency division
+multiple access)
+Feasibility assessment 51-52
+
+FED STD 209 (See Facility
+cleanliness requirements)
+Federal Communications
+Commission (FCC)
+proposals to 580
+
+943
+role in allocating orbital slots
+and frequencies 566, 826
+Federal Tort Claims Act 830
+Federated architecture (onboard
+processing) 653
+Fee
+in cost models 789
+‘Fenced funding” 829
+Field of view of spacecraft (See also
+Access area; Footprint) 116
+in pointing requirements 130
+instantaneous 163
+Figures of Merit (FoMs)
+characteristic exhaust velocity 691
+characteristics of good 59
+coverage 173-176
+in constellation design 197
+Mean Mission Duration 767
+reliability 765
+thrust coefficient 690
+File Transfer Protocol (FTP) 632, 641
+Final Operating Capability (FOC) 786
+Finite element model 470
+FireSat Example Mission
+ADCS design process 342
+ADCS software for 673-675
+altitude trade 57
+attitude control software 667-670
+attitude determination and
+control system selection 376
+attitude determination sensor
+selection 375
+autonomous fire detection 675-682
+battery capacity 422
+C&DH subsystem 404-405
+communication parameters
+for payload 576
+communications architecture 543
+computer system
+architecture selection 679-682
+control algorithms 380
+control system selection 364
+cost estimates 793, 810-818
+software 682-683
+cost uncertainty 814-815
+coverage data 71
+critical requirements 49
+data collection rate 548
+data-flow diagram 24
+Delta V budget 178
+design life cost trade 815-817
+fields of view 130
+fire warning time as MoE 59-61
+functional flow of geopositioning
+requirement 82
+imaging needs 876
+legal and policy issues 838-839
+link budgets for 567
+mapping accuracy 295
+Measures of Effectiveness 59-60
+944
+
+miniature satellite technology
+
+approach 869-871
+mission element alternatives 34
+mission objectives 12-15
+mission options 21-32
+mission requirements 15-18
+mission statement 3
+onboard data processing 549
+
+orbit choices
+
+184-185, 293-294
+
+origin of 2-3
+payload design 29 1-296
+aperture 294
+data rate 294
+frequency bands 295
+resolution 294
+software sizing 675-682
+summary of 297
+swath width 293-294
+performance drivers 38
+performance parameters 60
+preliminary concepts 36
+spacecraft parameters 339-341
+software cost estimates 632-635
+software sizing 673-683
+subject of 252-254
+system algorithms for 38
+telemetry, tracking, and command 548
+thruster sizing 372
+time distribution of costs 814
+trade tree 36
+transfer orbit for 187
+weight budget 341
+Work Breakdown Structure 811-812
+Firmware 658
+First Point of Aries (See Vernal equinox)
+Fiattening factor (Earth shape) 897, 900
+FleetSat Experimental Package 580
+Flexible Image Transport System
+use on NASA missions 595
+Flexibility (in structural members) 470
+Flight Feasibility Review (FFR) 735
+Flight path angle 133
+formulas for 902
+Flight vehicle mass 723
+Flow down (See Requirements of
+a space mission, allocation)
+definition of 3
+FLTSATCOM (communications
+satellite) 339-351
+antenna size 572
+attitude control subsystem 346-347
+communications and C&DH
+systems 347-348
+initial design decisions 343
+mass distribution of 894-896
+mission parameters 342-351
+modulation technique 560
+power budget 345
+power subsystem 349
+propellant budget 344
+
+Index
+
+propulsion subsystem
+requirements and constraints
+size and design integration
+structures subsystem
+weight budget
+
+Fluence
+
+Flux
+
+Flybys
+
+346
+343
+351
+350-351
+345
+
+211, 221, 217-219
+
+221
+
+177-178, 184, 187
+
+FMEA (See Failure Modes & Effects Analysis)
+
+FMECA (See Failure Modes, Effects,
+and Criticality Analysis)
+Foam
+as thermal insulation
+
+FOC (See Final Operating Capability)
+
+437, 438
+
+Focal length 258-259
+computation of, for FireSat 288
+Focal point 258
+Focal-plane architecture 263-265
+FoM (See Figures of Merit)
+Footprint 163, 165-166
+average overlap 166
+size computations 165-167
+Force
+units and conversion factors 922
+Forcing functions 462
+Foreshortening near geometric
+horizon 114-116
+Fortran (computer language) 663
+Forward error correction coding 561
+Forward link (See also
+Communication links) 303
+alternate definitions of 535
+FOV (See Field of view of spacecraft;
+Footprint)
+France (See also Ariane)
+hybrid sounding rocket 701
+launch vehicle characteristics 728
+jaunch vehicle user guide 743
+sale of imagery data 833
+smail satellites 855
+Fracture control program 469
+Fracture-mechanics safe-life
+analysis 469
+Fragmentation weapons 222
+Frame image 260
+Free-body diagram 721
+Free fall (See Microgravity)
+Free molecular heating 433
+Freja (small satellite)
+cost estimate 808
+mass distribution of 895-896
+Frequency 255
+cut-off 282
+Nyquist 281
+spatial 281
+Frequency bands
+allocation of 826
+for FireSat Example Mission 282
+limitations on flux densities 566
+RF carrier 542
+Index
+
+selection of 328, 565-566
+sharing 566
+Frequency division multiple
+access (FDMA) 576
+Frequency hopping (communications
+technique) 582
+Frequency response, launch vehicle 740
+Frequency shift keying (FSK)
+(See also Modulation
+techniques) 393, 559-560
+Frozen orbit 180, 182-183
+
+FSK (See Frequency Shift Keying)
+
+FTP (File Transfer Protocol) 632, 641
+Fuel cells 409
+regenerative 4}1
+Fuel mass fraction (See Propellant
+mass fraction)
+Functional flow diagram 82-83
+Functional partitioning (See also
+Computer systems, spacecraft:
+requirements definition) 651-652
+Functional redundancy 779
+Functional testing of spacecraft 528
+Future changes in space
+missions 5-7, 889-891
+Future space programs
+books on 889
+trends 889-891
+—_—G—
+g (unit of acceleration) 920
+g levels
+in launch vehicles 739-740
+
+G&C (Guidance and control).
+(See Guidance and Navigation System;
+Attitude Determination and Control
+Subsystem)
+
+G/T (See Gain-to-noise temperature ratio)
+
+Gain
+
+in antennas 552-554
+Gain-to-noise temperature ratios
+(G/T) (See also Link budgets) 623
+requirements for 385
+Galactic cosmic rays (GCR) 218-221
+Galileo (interplanetary mission)
+complex operations of 595
+response to in-flight failure 610
+Gallium arsenide (GaAs)
+in photovoltaics 413, 414, 415
+GALS (Russian spacecraft)
+use of electric propulsion 687
+Gamma ray burst instrument 275
+Gamma Ray Observatory (GRO)
+cost estimate 808
+monopropellant-hydrazine
+system 697-698
+
+radiation overload 837
+
+945
+Gamma rays 255
+from nuclear explosions 222-224, 226
+shielding against 230
+GAS (See Get-Away Special)
+Gas jets (See Attitude control
+actuators; Thrusters)
+Gauss's Formula (spherical
+geometry) 907
+Gaussian statistics
+how to treat in cost modeling 805
+inappropriate for cover 173, 175-176
+inappropriate for cost modeling 804
+math model for 805
+GCI (See Geocentric Inertial
+Coordinates)
+GCR (see Galactic cosmic rays)
+Gemini
+cost estimate 808
+General perturbations (See also
+Orbits; Orbit perturbations) 142
+
+GEO (See Geosynchronous orbit)
+Geocentric coordinates
+
+transformation to geodetic 901
+Geocentric Inertial Coordinates (GCI) 96
+
+in defining orbital elements 135-136
+inertial properties of 135
+Geodetic coordinates 899-901
+Geolocation 250
+
+Geomagnetically trapped radiation
+
+(See Trapped radiation)
+Geomagnetism (See Magnetic field)
+Geometrical horizon (See also Horizon) 119
+
+Geometry 95-130
+books on 98
+on the celestial sphere 98-110
+thermal factors 907-912
+Geometry, spherical (See Spherical
+geometry)
+Geopotential model 143
+GEOSAT (Earth mapping satellite)
+attitude control 314
+configuration of 311
+ground system 629-630
+Geosynchronous orbit (GEO) (See
+also Stationkeeping; Geosynchronous
+transfer orbits)
+allocation of slots 825-826
+apparent satellite motion in 121-123
+applications of 180
+communications architecture 537-538
+debris in 843-844
+Earth coverage from 549
+FireSat us of 182
+ground station coverage 642
+launch vehicle capacity to 728
+numerical parameters Inside
+rear pages
+period of satellites 138
+probability of collisions in 761
+radiation dose rate in 216
+946
+
+497, 508-510
+452-453
+
+stationkeeping
+thermal considerations in
+Geosynchronous transfer orbit (GTO)
+
+cost to 802
+debris in 845
+ground control of 30
+injection accuracy 742
+launch vehicle capacity to 728
+plane change in 185
+Germanium lens 267
+Get Away Special (GAS) 859
+Giacobini-Zinner (comet mission) 508
+GINGA (Japanese X-ray satellite) 837
+“Global commons”
+concept applied to outer space 835
+Global Navigation Satellite System
+(GLONASS, Russia) 506
+
+Global Positioning System (GPS)
+advantages and disadvantages
+
+for navigation 502
+applications of 243
+
+as time source 582
+Block II cost estimate 808
+for orbit determination 140-141
+
+in orbit vs. attitude trade 83
+list of characteristics 504
+mass distribution of 894-895
+modulation technique 579
+protection of frequency 826
+sizing estimate 513
+subject of 251
+use for attitude determination 505
+use for satellite navigation 321, 505
+visibility requirement 193
+
+Globalstar (communications constellation)
+coding for 545
+communications bandwidth 550
+effect of nuclear burst 222
+example of LEO cellular 538
+fixed beams 573
+parameters of 585
+use of CDMA 579
+use of RAD-6000 669
+use of “satellite diversity” 582
+GLOMR (Global Low Orbiting
+
+Message Relay) satellite 857
+cost estimate 874
+guidance and control 864
+
+GLONASS (Russian Navigation
+System) (See Global Navigation
+Satellite System)
+GMT (Greenwich Mean Time;
+See Universal Time)
+GN&C (See Guidance and navigation system)
+
+GNS (Ground Network System) 641
+Goddard Earth model 143
+Goddard Range and Range Rate
+
+system 547
+
+Goddard Trajectory Determination
+
+System (GTDS) 501, 503
+
+Index
+
+GOES (Geostationary Operational
+
+Environmental Satellite) 548
+antenna size 574
+cost estimate 808
+data rates 548
+Gold
+thermal properties of 436
+GONAS (Russian spacecraft)
+use of electric propulsion 687
+GPS (See Global Positioning System)
+Graceful degradation
+in constellation
+design 163, 190-191, 199
+Granularity 401
+
+Gravity assist trajectory (See Flybys)
+Gravity gradient
+
+control technique 359-360, 364
+use on smail satellites 863-~864
+forces in microgravity 205
+torque computation 324, 366
+FireSat example 367
+Gravity gradiometer 275
+Grazing angle (See Elevation angle)
+Great circle 99
+Great circle arc 99
+Greenwich Mean Time (GMT;
+See Universal Time)
+Greenwich meridian 908
+in Earth-fixed coordinates 96-97
+GRO (See Gamma Ray Observatory)
+Ground Network System (GNS) 641
+Ground sample distance (GSD) 276
+
+Ground segment (See Ground systems)
+Ground-Space Tracking and Data Network
+(GSTDN)
+as communications relay
+
+element 43
+turnaround ratio 381
+Ground-station tracking 503
+Ground systems 12, 621-644
+basic elements 624-629
+commercial 640-641
+communication links 631-632
+
+cost estimating relationship 801
+coverage per spacecraft 642-643
+computations for 117-123
+
+summary of formulas 121
+data rates and storage 642-643
+data user requirements 643-644
+dedicated 623
+
+alternatives to 636-641
+design process 623-624
+functions and options
+
+table of 622
+GEOSAT example 629
+host 636
+impact on design on operations 614
+interface 305
+mission and facility elements 624
+orbit control by 510
+Index
+
+role in orbit
+
+determination 498, 501, 503
+service-provided 636-639
+typical installation 628
+
+Ground terminal (See Ground systems)
+Ground trace (See Ground tracks)
+
+Ground tracks
+definition of 116
+evaluation 137-139
+FireSat example 294
+repeating 155-156
+satellite 137-139
+use in coverage analysis 171-173
+
+Ground-truth calibration
+measurements 266
+GSD (see Ground sample distance)
+GSTDN (See Ground Space Tracking
+and Data Network)
+GTDS (See Goddard Trajectory
+Determination System)
+Guidance (See also Navigation)
+
+definition of 497
+Guidance and navigation
+subsystem 321, 497-514
+design process table 499
+hardware sizing 512-514
+requirements definition 501
+sizing 512
+
+system definition process 498-501
+GVSC (onboard computer)
+
+characteristics of 669
+Gyration (See Radius of gyration)
+
+Gyroscopes (See also Inertial
+
+measurement units} 322, 375
+
+software sizing 665
+
+Gyroscopic stiffness 354
+—_—H—
+
+H-2 launch system 732
+characteristics of 728
+reliability experience 727
+user’s guide for 743
+
+H-10 (orbital transfer vehicle)
+characteristics of 730
+
+Hague, International Court at the 823
+
+Hall Effect thrusters (See Electric propulsion)
+
+Hardening of spacecraft 221-236
+HEAO-B design example 341-351
+attitude control subsystem 346-347
+communications and C&DH
+systems 348
+initial design decisions 344-345
+mission parameters 342
+power budget 345
+power subsystem 349
+propulsion subsystem 346
+requirements and constraints 343
+
+947
+
+size and design integration 351
+
+structures subsystem 351
+
+weight budget 345
+Heat balance
+
+calculation of 452-457
+
+Heat pipes 412-413, 444-446
+Heat transfer (See Heat balance)
+Heaters 440-442
+Heel, of footprint (See also Footprint) 166
+Helix antenna (See also Antennas) 571
+Heritage, technical (cost factor) 798-799
+HETE (small satellite)
+cost estimate 874
+mass distribution of 895-896
+Hidden agenda 12,15
+in payload performance 245
+Hidden drivers 37
+Hidden requirements 48
+High Energy Astronomical
+Observatory (See HEAO)
+Higher-order languages (HOL) 658
+Hill’s equations 153
+Hitchhiker (Small satellite launch 859, 865
+Hohmann transfer orbit 146-150, 185
+advantages of 185
+as most efficient
+two-burn transfer 146
+total required delta V 147
+Hohmann, Walter 146
+HOL (See Higher-order languages)
+Hold Harmless Clause 831
+Homogeneous metals 463
+Hoop radius of curvature 479
+Horizon
+effective 119
+foreshortening near 114-116
+inner/outer 117
+true (geometric) 113
+Horizon crossing indicators (See also
+Horizon sensors) 374
+Horizon sensors 322, 373-374
+FireSat example 375-376
+software sizing for 665
+Horn antenna 571
+Host machine (computer) 672
+Hot-gas system (See Propulsion system;
+Thrusters)
+‘House of quality” 78-80
+Housekeeping
+data definition 23
+data handling 330
+HS 601 (rocket engine) 694
+Hubble Space Telescope (HST;
+See Space Telescope) 234
+Hubble Star Catalog
+(COTS Software) 68
+Hybrid architecture 612
+Hybrid rockets
+advantages and disadvantages 693
+applications of 687-688
+948
+
+design of 699-701
+example systems 701
+operating characteristics 692
+Hydrazine propellant (N.H4)
+advantages and disadvantages 693
+characteristics 692
+cost estimate of 797
+in bipropellant engines 694-696
+in dual-mode systems 688
+in monopropellant engines 697-698
+thermal requirements for 428
+use in launch vehicles 731-732
+use in thrusters 71
+use on FLTSATCOM 343-346
+use on HEAO-B 346
+Hyperbola (conic section) 133-134
+Hyperspectral sensor systems 276
+Hypervelocity debris impact
+(See also Orbital debris)
+effect on satellite of 846
+—l[—
+VO (Input/Output) 607
+I/O handler 666
+I-V (See Current-voltage plot)
+ICBM (Intercontinental
+Ballistic Missile) 237
+ICD (Interface Control Document) 92
+ICO (communications constellation)
+example of MEO system 539
+parameters of 585
+suit with TRW 830
+IEEE Specification Guide
+(software standards) 670
+Iuminance
+units and conversion factors 922
+Import and export restrictions
+effects on mission design 833-834
+IMU (See Inertial-measurement unit)
+Inclination (See also Orbit elements)
+definition of 136
+formulas for 902
+prograde vs. retrogade 137
+India
+launch sites 733
+sale of satellite imagery 833
+small satellites 854-855
+Indiction (15 year period) 914
+Indium phosphide (in
+photovoltaics) 413,415
+Indostar (small satellite)
+cost estimate 874
+Industrial Space Facility (ISF) 829
+Inertia matrix 354
+Inertial-measurement unit (IMU) 322, 375
+software sizing 665
+Inertial space 96, 140, 153
+
+Index
+
+Inertial Upper Stage (TUS) (See
+
+also Space Shuttle) 712, 731
+characteristics of 730
+injection accuracy 712
+user’s guide for 744
+
+Infinity F-number (F-stop, F No.) 259
+computation of, for FireSat 289
+Inflation
+in cost modeling 79 1-792
+
+Infrared (See Detectors, IR)
+Infrared emissivity (See Emissivity)
+Infrared radiation
+
+from the Earth 255-257, 433-434
+from the planets 434
+Infrared (IR) remote-sensing
+systems 255, 266-267
+need for cooling 451
+Initial Operating Capability
+(IOC) 784, 794
+Initiation (See Program initiation)
+Injected weight 316, 725
+Injection orbit 159
+INMARSAT (International Maritime
+Satellite) 384
+Inner horizon (See also Horizon) 117, 167
+Input/Output (I/O) 656
+Instantaneous Access Area (IAA)
+(See also Access Area) 164
+Instantaneous area coverage rate
+(See also Area coverage rate) 166
+
+Instantaneous coverage area
+
+(See Footprint area; Field of view;
+
+Access area)
+Instruction mix 662
+Instruction Set Architecture (ISA)
+
+(See also Computer systems,
+
+spacecraft: central processing unit) 658
+Insulation 436-438
+Insurance coverage 830-834
+
+actuarial risk 832
+contracting for 832
+foreign launches 751
+launch failures and 831
+loss to government equipment 830
+loss to others on flight 831
+on-orbit performance 832
+pre-launch 830
+reflight 831
+third-party liability 830-831
+Integral propulsion
+as key system trade 44
+as upper stage option 34, 727
+cost impact of 183, 685-686
+engines for 694
+for FireSat 36
+use of 685-686
+Integrated Product Team (IPT) 74
+Integrated System Test (IST) 529-530
+
+Intellectual property rights (See Patents)
+Intelsat
+antenna
+C-band margin
+consortium
+cost estimate
+mass distribution of
+operations approach
+ranging tones
+relay bandwidth
+representative satellites
+TDMA
+TT&C parameters
+Interagency Nuclear Safety
+Review Panel
+Intercontinental ballistic missile
+(ICBM)
+Interdepartmental Radio Advisory
+Committee
+Interface Control Document (ICD)
+Interface Requirements
+Specification (IRS)
+Interference (See Jamming)
+Interleaving of data
+International Astronomical Union
+modified Julian date
+setting astrophysical constants
+International Court at the Hague
+International Frequency
+Registration Board
+
+International space law
+conflicts with U.S. law
+International Space Station
+active debris avoidance
+commercial opportunities
+design requirements
+orbital debris considerations
+political conflict
+potential SDI role
+power distribution
+relevance to patents
+retrieval of satellites
+use for
+International System of Units (SI)
+International Telecommunication
+Convention and Final Protocol
+International Telecommunications
+Union (ITU)
+Apstar regulatory problem
+control of GEO
+data relay proposals
+frequencies allowed by
+impact on TT&C
+organization of
+regulatory approach
+International Traffic in Arms
+Regulations (ITAR)
+
+Index
+
+571, 572
+569
+384
+808
+894-895
+43
+547
+550
+633
+576
+548
+
+836
+237
+
+566
+92
+
+661
+582
+
+918
+893
+823
+
+384, 826
+
+822-828
+825
+
+849
+831
+
+TI
+763
+829
+827
+423
+828
+
+163
+919-926
+
+826
+
+821
+826
+581
+565-566
+385
+384
+826
+
+834
+
+Internet (See also Wideband data systems)
+
+data rates
+RF frequencies allowed
+satellite systems for
+
+550
+566
+581
+
+949
+use of satellites for 535, 539
+Internet Protocols (IP) 632, 641
+Interplanetary orbits
+human missions 891
+need for autonomy 29
+payload increase 187
+power systems for 411
+reference frame for 136
+representative spacecraft 808
+software for 68, 610
+spacecraft tracking 502
+thermal considerations in 453
+IOC (Initial Operating Capability) 784
+Ion mass spectrometer 275
+Ion Propulsion (See Electric propulsion)
+IP (Internet Protocols) 632, 641
+IPT (Integrated product team) 74
+IR (See Infrared)
+IR emissivity (See Emissivity)
+IRAS (Infrared Astronomy Satellite) 43
+Iridium (communications constellation)
+effect of nuclear burst 222
+example of innovative system 54
+example of LEO cellular 538
+multiple beams 573
+origin of name 193
+rapid deployment 891
+satellite assembly process 762-764
+Iridium (element)
+use of, in thrusters 697
+IRS (Interface Requirements
+Specification) 618
+ISA (Instruction Set Architecture) 614
+ISEE-C (spacecraft) 508
+ISES/REX (small satellite)
+characteristics of 854
+ISF (Industrial Space Facility) 748
+ISO 9000
+software standards 671
+ISO-15288 (standard) 90
+Isotropic metals 464
+Ip (See Specific impulse)
+Israeli Launch Complex
+location of 733
+ISS (See International Space Station)
+IST (See Integrated System Test)
+Itamsat (small satellite)
+characteristics of 855
+ITU (See International
+Telecommunications Union)
+TUS SRM-2 (motor) 699
+IUS (See Inertial Upper Stage)
+—J—
+Jacchia models (atmosphere) 208
+Jamming (of RF signals)
+antijam techniques 236, 580-582
+950
+
+atmosphere blocking
+phased array use to avoid
+susceptibility to
+vs. data rate
+Japan (See also H-1, H-2)
+commercial remote sensing
+communications satellites
+launch sites
+launch systems
+launch vehicle costs
+sale of satellite imagery
+small satellites
+time zone
+use of electric propulsion
+U.S. export control
+Jet Propulsion Laboratory
+Deep Space Network
+Jiuguan launch site (China)
+location of
+Jovial (computer language)
+JPL (See Jet Propulsion Laboratory)
+Julian Century
+Julian Dates
+conversion to calendar dates
+table for finding
+Jupiter
+thermal environment
+“Just in time” manufacturing
+
+—K—
+
+K (Kelvin, unit of temperature)
+K (notation for 1,000 and 1,024)
+Kagoshima Space Center
+location of
+Kalman filter
+software sizing
+Kapton
+thermal properties of
+Kapustin Yar (launch site)
+location of
+Keel fittings (on Space Shuttle)
+Kelvin (unit of temperature;
+See also temperature)
+correct use of
+Kennedy Space Center
+(See Eastern Range)
+Keplerian (= classical orbit) elements
+(See Orbit elements)
+Keplerian orbits (See also Orbits;
+Two-body equations of motion)
+Kepler, Johannes
+laws of planetary motion
+Kevlar™
+Khornerstone computer benchmark
+Kick motor
+cost estimates
+Kick stage
+
+564
+572
+537-538
+550
+
+833
+633
+733
+728, 732
+802
+833
+856, 858
+909
+706-707
+836
+
+502
+
+733
+666
+
+920
+913-918
+914-917
+
+915
+
+434
+753-755
+
+439
+665
+
+733
+665
+436
+733
+336
+439
+732
+135-136
+132-140
+132, 139
+464
+663
+306
+
+796
+301
+
+Index
+
+Kilogram
+definition of
+KIPS (thousands of instructions
+per second)
+Kitsat (small satellite)
+characteristics of
+Kosmos (small satellite)
+characteristics of
+Kourou Launch Center
+location of
+Ku-band communications
+characteristics of
+cost estimate of
+future plans for
+on Intelsat-V
+on TDRS
+
+—L—
+
+L-9 (orbital transfer vehicle)
+characteristics of
+L-Sat (communications satellite)
+L-Shell (magnetic field)
+Lagrange, Joseph
+Lagrange point orbits
+Lagrange points
+space colonies at
+Land Remote-Sensing
+Commercialization Act of 1984
+Landmark tracking
+advantages and disadvantages
+for navigation
+list of characteristics
+sizing estimate
+use for satellite navigation
+
+386,
+
+160,
+
+919
+662
+854-855
+854
+733
+
+395
+801
+641
+550
+393, 639
+
+730
+
+633
+
+215
+
+188
+
+184, 188
+188
+
+52
+
+833
+
+502
+504
+513
+507
+
+Landsat 4, 5 (Earth observation satellite)
+
+configuration of
+Language (See computer language)
+Lasers
+as communications link
+as cost risk
+as weapons
+in gyros
+legal aspects of
+susceptibility of power systems to
+thermal challenges
+vs. RF crosslinks
+Latching valves
+Latency of data
+Lateral rigidity
+Launch azimuth
+Launch rate
+Launch segment (See Launch systems)
+Launch sites
+map of
+selection process
+weather considerations
+streamlined spacecraft testing
+
+310
+
+583-584
+803
+228-229
+375
+
+836
+
+410
+
+451
+
+583
+
+698
+
+25,
+
+486
+
+153
+
+726
+
+732-734
+
+733
+
+734
+
+749-750
+Index
+
+table of locations 733
+test operations at 530-531
+Launch systems (See also
+individual launch vehicles) 44-45, 719-744
+aerodynamic drag forces 721, 722
+availability 724-126
+booster-adapters 736
+center-of-gravity 721
+center-of-pressure 721
+constraints on spacecraft design 305
+cost estimates 802
+cost, in selection process T24
+dedicated vs. shared 723
+definition 719
+dynamic pressure 722
+flight path angle 72)
+forces acting on 72)
+gravity and drag losses for 690
+impact on structural
+requirements 460
+injection accuracy 742
+insurance coverage for 830-832
+interfaces with payload 735-738
+launch site operations 530
+mass fractions 723
+multiple payload capabilities 723
+navigation, guidance, and
+control subsystem use 724
+payload environments 738-743
+payload fairings 735-738
+in selection process 725
+payload integration 735
+performance capability 724, 725
+performance for
+due-East launches 729
+polar launches 729
+performance improvement 719
+performance losses 722
+performance margin 724
+power sources 409
+reliability 726, 727
+requirement allocation 724
+selection process 720, 723-734
+separation from spacecraft 739
+spacecraft compatibility 724
+stand-down time 726
+structural and electrical interfaces 736
+surge-rate capacity 726
+thrust-to-weight ratio 722
+upper stages 730
+user guides, listing of 743-744
+velocity as a measure of
+performance 720
+weight parameter definitions 725
+Launch windows 153-157
+Law, international space 822-828
+Law of Cosines for Angles 907
+Law of Cosines for Sides 907
+Law of Sines 907
+
+LDEF (See Long Duration Exposure Facility)
+
+951
+
+Lean manufacturing 754-755
+Lean production
+
+for multi-satellite manufacturing 748-749
+
+Learning curve 809-810
+LEASAT (communications satellite) 633
+Length
+
+units and conversion factors 922-923
+Lens (refractive optical system) 258
+Lens antenna $72-573
+
+LEO (See Low-Earth orbit)
+LEO-1 (communications constellation)
+
+example of Little LEO 539
+parameters of 584
+use of store and forward 537
+Leonid meteors 842
+Liability 829-832
+and damage claims 830
+use of space and 829
+Libration 360
+Libration point orbits 188
+Life cycle (See also Costs, life cycle) 7
+Life Science Lab Module 275
+
+Lifetime (See also Design life; Mean
+mission duration; Orbital lifetime)
+
+design cost trade 815-817
+determining requirements 17-18
+effect of nuclear burst 222
+failure probability TN-~772
+reliability models 766
+Lift
+on launch vehicles 721
+“Lights-out operations” 617
+LightSats (See also Miniature
+Satellites) 853-882
+annotated bibliography 881-882
+for constellations 162
+greater use of 6
+growth in numbers 890
+survivability strategy, use in 236
+Limb scanning radiometer 275
+Limit load 468
+Linear, charge-current-control (See
+also Batteries) 427
+Linear energy transfer 220
+
+Lines of code (See Source lines of code)
+Link (See Communications links)
+
+Link access time $43
+Link availability 543
+Link budget 567-568
+Link data rates 623
+Link design 231, 550-570
+process table for 551
+Link equation 551
+derivation of 552-554
+Linpack computer benchmark 663
+Liquid propulsion systems 639
+“Little LEO” communications
+constellations 538-539
+examples of 584-585
+Load factors 335, 461
+952
+
+Loaded weight
+
+of representative spacecraft
+Loads/loading (mechanical)
+
+buckling
+
+column buckling
+
+coupled loads analysis
+
+crippling
+
+critical loads
+
+design limit load
+
+design ultimate load
+
+equivalent axial loads
+
+in mission planning
+Local sidereal time (LST)
+Local tangent coordinates
+Local vertical (on the Earth)
+Local Vertical/Local Horizontal
+
+(LVLRH) coordinates
+
+definition of
+
+names of components
+Logistics, space
+
+316, 725
+894-895
+
+477
+477-478
+462
+
+470
+
+477
+
+467
+
+471
+478-479
+606
+
+154
+
+96
+
+899
+
+96
+102
+45
+
+Long Duration Exposure Facility (LDEF)
+
+Ballistic coefficient
+results from
+Long March launch system
+characteristics of
+fundamental frequency
+reliability experience
+user’s guide for
+Longitude of perigee
+Look point
+Lorentz acceleration
+LOSAT-X (small spacecraft)
+characteristics of
+Losses
+in communications link (See
+also Link budget)
+in data compression
+Louvers (thermal control)
+Low-cost satellites (See also
+Miniature satellites; LightSats)
+annotated bibliography
+design considerations
+Low-Earth orbit (See also Orbits;
+Coverage; Space environment)
+apparent motion as seen
+from ground
+communications constellations
+(See also constellations)
+defined by radiation belt
+examples of
+FireSat example
+formulas for visibility
+ground station coverage
+ground track plot
+sample thermal calculation
+thermal considerations in
+Low-thrust orbit transfer
+advantages of
+LST (see Local Sidereal Time)
+Luminance
+
+243
+841
+732
+728
+74)
+727
+743
+136
+123
+701
+
+854
+
+554-558
+26
+442-444
+
+853-882
+881-882
+858-863
+
+117-123
+
+538-539
+182
+584-585
+182-183
+121
+542
+171
+455
+452
+
+186
+
+Index
+
+units and conversion factors 923
+Lunar Economic Development Authority 840
+LVLH (see Local Vertical/Local
+
+Horizontal, also Local Tangent
+
+coordinates)
+Lyman-Alpha Coronograph 275
+—M—
+M-3SII launch system 732
+characteristics of 710
+Magellan spacecraft
+structures subsystem 483-485
+Magnetic dipole moment 926
+units and conversion factors 923
+Magnetic field strength 926
+units and conversion factors 923
+Magnetic field (Earth) 212~216, 360
+L-shell 215
+magnetotail 212
+substorms 213
+trapped radiation 224
+Magnetic flux
+units and conversion factors 923
+Magnetic induction 926
+units and conversion factors 923
+Magnetic moment 926
+units and conversion factors 923
+Magnetic stabilization
+use on smal satellites 864-868
+Magnetic torquers
+application range 365
+characteristics of 369
+FireSat example 376
+on small spacecraft 863
+sizing 370
+Magnetometers 322, 373, 374
+FireSat example 375-376
+software sizing 665
+Magnetoplasmadynamic thrusters
+(MPD; See Electric
+propulsion) 692-693, 701
+Magnification of a lens 259
+Major program, in DoD usage 9
+Management reserve
+in mission costing 803
+Manned Maneuvering Unit 693
+MANS (See Microcosm Autonomous
+Navigation System)
+Manufacturability
+spacecraft design for 745-764
+Manufacturing in space
+potential for 244
+use of microgravity for 206
+Manufacturing of spacecraft 519-523
+acceptance tests 520
+configuration identification 521
+creating visions and goals 750-751
+Index
+
+design for manufacturability 745-764
+inspection 523-524
+Iridium assembly process 762-764
+qualification tests 520
+qualified design 520
+quality assurance 523-524
+stages of 521
+theory of type test 520
+Manufacturing Readiness Review 521
+Mapping
+accuracy 123, 125
+budgets 123-130
+definition of 123
+requirements 127-129
+Margins (See Propellant margin;
+Power margin; Weight margin)
+Mariner MK-II (small spacecraft)
+and pointing requirements 43
+Marisat (communications satellite) 633
+Marmon clamp 336
+Mars
+human mission to 891
+thermal environment 434
+thermal geometry factors for 909
+Mars Observer
+cost estimate 808
+Mass
+units and conversion factors 923
+Mass budget (See Weight budget)
+Mass fractions
+launch systems 723
+Orbital Maneuvering Unit 715
+representative spacecraft 894-896
+typical values 316
+Mass moment of inertia (MOT) 462, 476
+equations for 482
+for deployables 495
+units and conversion factors 924
+
+Mass Spectrometer Incoherent
+Scatter (MSIS), atmospheric model 208
+Materials (See Spacecraft materials)
+
+Materials experiment assembly 275
+Math utilities (software) 667
+MATLAB (COTS software) 67
+Julian date in 916-917
+Matrix imager (See also Step and store
+cameras) 268
+area array (CCB) 291
+Max q (maximumdynamic pressure) 742
+MCC (See Mission Control Center)
+Mean anomaly 139-140
+
+Mean Mission Duration (MMD) 767
+
+Mean motion 139-140
+Mean Response Time (Figure of
+
+Merit) 174-175
+Mean sea level 899
+Mean Time Between Failures (MTBF) 778
+Measures of Effectiveness (MoEs) 5
+
+characteristics of good 59-61
+
+953
+Mechanical manufacturing (See
+also Manufacturing of spacecraft) 522
+Mechanisms, aerospace 494-497
+thermal challenges 451
+Medium Earth orbit
+communications constellations
+(See also constellations) 539, 542
+
+definition of 542
+
+examples of 584-585
+Memory, computer
+estimating needs 662-667
+Meniscus
+in heat pipes 444-446
+MEO (See Medium Earth orbit)
+Mercury (planet)
+thermal environment 434
+Mercury (Space program)
+cost estimate 808
+Meridian (in a coordinate system) 100-102
+Meteoroids
+in near Earth space 840-842, 845
+Meteosat (weather satellite) 539
+scan mechanism 268
+use of onboard processing 539
+Meter, definition of 919
+Metric prefixes 919
+Metric (SI) units (See International
+System of Units)
+MESK (Multiple-Frequency Shift
+Keying) 559
+Microcosm Autonomous
+Navigation System (MANS) 506
+advantages and disadvantages 502
+characteristics 504
+sizing estimate 513
+MicroGLOBE (computer program) 117
+Microgravity 204-207
+equations for 206
+levels of 206
+tidal forces in 205
+MICROLAB (small satellite)
+characteristics of 855
+Microsat (small satellite) 871
+cost estimate 874
+Microspace (See Miniature satellites)
+Microwave radiometry
+characteristics 255
+instrument 275
+payload design considerations 257
+Microwave weapons 229
+MIL-HDBK-17 (composites) ' 464
+MIL-HDBK-217 (reliability) 719
+MIL-HDBK-5 (metals) 464
+MIL-HDBK-5G (metals) 469
+MIL Q 9858A (quality assurance) 523
+Mil-spec parts
+vs. S-level 747-748
+MIL-STD- (See Standards/Standardization)
+MIL-STD-100 (drawings) 521
+954
+
+MIL-STD-483 (configuration
+
+Management) 521
+MIL-STD-490 (specification) 521
+MIL-STD-499 (requirements) 77, 90
+MIL-STD-1521 (technical reviews) 521
+MIL-STD-1553 (data bus standard) 654
+MIL-STD-1750 (computer) 658
+Military specifications
+
+no longer maintained 521
+Milstar
+antenna 572
+Miniature satellites (See also
+LightSats) 853-881
+applications 856-858, 869
+autonomy in 881
+bibliography 881
+cost differences compared
+with conventional satellites | 873-877
+definition of 853
+design considerations 858-863
+distinction from conventional 854
+FireSat example mission
+approach 869-871
+ground-station design 861
+guidance and control
+techniques 863-864, 877
+information processing 865
+integration and test 862, 880
+launch systems for 865
+organization for 860-861
+parts procurement 862, 877-878,
+879-880
+power management 864-865, 877
+program management 879
+quality assurance 861-862
+redundancy in 861, 877
+risk assessment 862
+scaling differences 871-873
+schedules 861, 878-879
+structural differences 863
+when to choose 880-881
+Miniaturized electronics 162
+Minimum shift keying (MSK)
+
+(See also Modulation techniques) 560
+
+Minute (of arc = angular measure)
+
+conversion factors 915
+MIPS (millions of instructions per
+
+second) 662
+
+Mirrors (in payload design) 258
+Mission analysis 49-59
+
+hierarchy 51
+
+in ongoing programs 883-889
+
+need to consider patents 828
+Mission analysis and design process
+
+overview 1-7
+Mission architecture (See Space
+
+mission architecture)
+
+Mission characterization 19-45
+Mission concept (See also Concept
+of Operations) 21
+
+Index
+
+identifying alternatives 21-32
+selection 69-72
+Mission constraints 12, 15
+payload design requirements and
+constraints 245, 249, 305
+Mission Control Center (MCC) 627
+Air Force Satellite Control Network 637
+combined with SOCC and POCC 627
+for Tracking and Data Relay
+Satellite System 639
+location of 627
+Mission data recovery equipment 625
+Mission design (See also Mission analysis)
+impact on operations cost 612
+Mission effectiveness (reliability) 765
+
+Mission elements (See also
+individual elements)
+Mission geometry
+
+10-12, 32-33, 34-35
+
+(See also Geometry) 95-130
+Mission lifetime
+determining requirement 17-18
+reliability models 7166
+Mission Needs Statement 9
+Mission objectives 12-15
+need for broad 1-3
+payload design 245-248
+transforming into requirements 15
+Mission operations 43, 587-620
+automation of 615-618
+books on 590
+cost and size estimating 611-615
+functions of 588-589, 600-611
+operations plan development 590-600
+personnel training 602, 610
+relative cost of functions 616
+Space Ops cost model 615
+Mission Operations Plan (MOP) 590-600
+Mission planning 558, 601-603
+bus planning 605-606
+Firesat 249
+need to consider patents 828
+on ongoing programs 883-889
+payload planning 606-607
+Mission requirements (See
+Requirements of a space mission)
+Mission simulator (See also
+Mission utility analysis) 62-65
+Mission success criteria 317
+Mission timeline
+budgets 87
+definition of 31
+principal elements 31
+Mission utility analysis 5, 49, 59-67
+in operations planning 599
+via simulation 62-65
+Mixture ratio (in propellant) 713
+MJD (Modified Julian Date) 917-918
+MLE (Most Likely Estimate)
+in cost estimating 804
+
+MLI (See Multilayer insulation)
+Index
+
+MMBBPS (rocket engine) 694
+MMD (Mean Mission Duration) 767
+MMH (Monomethy! hydrazine,
+
+See also hydrazine) 694
+Moderate-Resolution Imaging
+
+Spectroradiometer 297-299
+Modified Julian Date (MJD) 917-918
+MODIS (Moderate-Resolution Imaging
+
+Spectroradiometer; 297-299
+
+Modulation and coding (See also Data rates)
+
+558-563
+comparison table of 562
+techniques 393
+
+Modulation Transfer Function
+
+(MTF) 282
+MoEs (Measures of Effectiveness)
+
+(See Figures of Merit)
+
+MOI (See Mass moment of inertia)
+
+Molniya orbits (See also Orbits)
+communications geometry 537
+parameters 143
+secular variations 144
+uses for 180
+use by former Soviet Union 182
+use of critical inclination 182
+
+Moment of inertia (See Area moment
+
+of inertia, Mass moment of inertia)
+
+units and conversion factors 924
+
+Momentum, of a spacecraft (See Angular
+
+momentum)
+
+Momentum-bias system 362
+FireSat example 380
+parameters 379
+
+Momentum dumping 362
+
+Momentum unloading 362
+
+Momentum wheels (See also
+
+Reaction wheels)
+
+definition of 368
+FireSat example 376
+sizing 370
+types of 319
+typical parameters 369
+
+Monocoque construction 486
+
+Monocoque structures 414
+
+Monomethyl hydrazine (MMH,
+
+See also Hydrazine) 694
+Monopropellant engines 697-698
+Monopropeliant propulsion systems
+
+(See also Hydrazine)
+
+advantages and disadvantages 693
+applications of 688
+C* of 691
+design of 697-698
+diagram of 691
+operating characteristics 692
+
+Monopulse systems (in communications) 383
+
+Monte Carlo simulation
+
+(See also Simulation) 64, 806
+Moon
+
+bases open to inspection 825
+
+955
+ephemeris of 498
+legal use of 823
+orbit perturbations due to 142-144
+phase law 898
+possibility of bases 891
+thermal environment 434
+trajectory to 510
+use in satellite navigation 504
+visual magnitude 898
+Moon Treaty of 1979 825
+provisions of 839-840
+vs. Antarctic Treaty 825
+MOP (Mission Operations Plan) 590-600
+Most Likely Estimate (MLE)
+in cost estimating 804
+Motorola (See also Iridium)
+Six-sigma program 747
+Motors, rocket (solid) 699
+weight estimation 712
+MPD (magnetoplasmadynamic)
+thrusters (See also Electric
+propulsion) 692, 693
+MSIS (Mass Spectrometer Inconherent
+Scatter) atmosphere model) 208
+MSK (Minimum Shift Keying)
+MTBF (See Mean Time Between Failures)
+MTF (Modulation Transfer
+Function) 282
+Multilayer insulation 436-438
+Multiple frequency shift keying
+(MFSK) (See also Modulation
+techniques) 559
+Multiplexing
+of data 547
+Multispectral mid-IR instrument 275
+Multispectral systems 276
+MUSE (COTS software) 68-69
+MV launch system
+characteristics of 728
+reliability experience 727
+Mylar
+thermal properties of 436
+—N—
+N1/H1 launch system
+reliability experience 673
+NA (numerical aperture) 261
+Nadir 99
+Nadir angle 102
+definition of 102
+equations for 113
+maximum 119
+table of values Inside rear cover
+(col. 21-24)
+Napier’s rules 103
+formulas derived from 904, 905-907
+956
+
+NASA (See National Aeronautics and
+Space Administration)
+
+National Aeronautics and Space
+Administration (NASA; See also Tracking
+and Data Relay Satellite System; Space Shuttle)
+
+Buy America Act 834
+commercial ISS opportunities 829
+debris mitigation guidelines 840
+debris program office 844
+full cost accounting 608
+Get Away Special 857
+launch insurance 831
+Link data 386, 393, 548
+mission design perspective 1, 48
+Nuclear power review 836
+orbit determination by 501
+representative smallsats 855, 874
+requirements development 76-77
+role in satellite recovery 822
+Space Ops Cost Model 615
+Technology readiness level 804
+use of commercial data 833
+use of commercial TT&C 641
+
+National Bureau of Standards
+setting physical constants 835
+
+National Environmental Policy Act 753
+
+NATO HI (communications
+
+satellite) 633
+
+mass distribution of 894-896
+
+Natural frequency 483
+
+Navigation (See also autonomous
+
+navigation)
+
+‘method comparison 502
+data source and uses 500-501
+definition of 497
+methods of 497-514
+
+mission operations function 589, 601, 605
+payloads for (See also Global
+
+Positioning System) 243
+purpose of 500-501
+NEAR (small satellite)
+cost estimate 874
+NEAT (See Noise equivalent
+temperature difference) 284
+Needs analysis (see also Mission
+objectives) 82
+Neptune
+thermal environment 434
+
+NETD (See Noise equivalent
+temperature difference)
+Network control
+
+in communications architecture 540-541
+Neutral-particle-beam weapons 229
+Neutron radiation 223
+
+inability to harden against 233
+Newton, Isaac 132
+Nickel cadmium (NiCd) (batteries) 420
+
+Nickel-hydrogen (NiH,) (batteries) 420
+
+Index
+
+NIMBUS (weather satellite) 755
+NNSS (See Navy Navigation Satellite System)
+NOAA spacecraft 559
+anomalies 563
+Nodal vector (See also Orbit elements) 136
+Node spacing
+table of values Inside rear cover
+(col. 55-56)
+Noise equivalent bandwidth 272
+Noise equivalent power (NEP) 272
+Noise equivalent temperature
+difference (NEAT or NETD) 284
+computation of, for FireSat 290
+Noise figure 557
+Noise spectral density 554
+Noise temperature
+antenna 556-557
+as a function of frequency 557
+receiver 556
+system 557
+Non-real-time processing 604
+Non-regenerative repeater 580
+
+North-South drift (See also
+
+Geosynchronous orbit; Orbit
+
+maintenance) 156
+North-South stationkeeping
+
+(See Stationkeeping)
+NOVA (small spacecraft)
+
+use of electric propulsion 705
+Nozzle, rocket
+
+area exposure ratio 641
+
+throat 691
+
+Nuclear power sources (See also
+Environmental concerns,
+nuclear power sources and; SNAP)
+
+characteristics of 410
+COSMOS 954 failure 830
+design for safety 837
+environmental concerns 825
+need for impact statement 836
+possible ban 837
+static vs. dynamic 409
+use in electric propulsion 201
+Nuclear weapons environment 222-228
+Compton scattering events 226
+effects on communications 227-228
+electromagnetic pulse (EMP) 224
+geomagnetically trapped
+radiation 224
+illegal in space 823
+neutron radiation 223
+photo-electric effect 226
+prompt radiation 223
+system-generated EMP 224
+X-radiation 222-223, 226
+Numerical aperture, of a lens (NA) 261
+Nyquist frequency 281
+Nyquist, Harry 544
+Index
+
+—O—
+
+OBC (Onboard computer)
+(See Computer systems, spacecraft)
+
+Oblateness of the Earth
+effect on orbits 156
+geodetic coordinates 899-901
+geometry 111
+physical parameters 897
+
+Objectives (See Mission objectives)
+
+Oblique spherical triangles 904
+formulas for 907
+
+Observation payloads
+data rates 274-275
+design of 266-298
+formula summary 287-290
+infrared (IR) systems 266
+microwave radiometers 266
+photographic techniques 248
+radar imagers 266
+sizing methods 275-277
+types of 266-268
+visual and IR payload design 249-269
+visible systems 266
+
+ODCS (Orbit determination and
+control subsystem) (See Guidance
+and navigation subsystem; Orbit control;
+
+Orbit determination)
+OEX (small spacecraft)
+characteristics of 769
+OFFEQ-3 (small satellite)
+characteristics of 855
+Office of the Secretary of Defense (OSD)
+inflation factors from 791
+OGO (Orbiting Geophysical Observatory)
+attitude control 314
+configuration of 311
+yaw steering 313
+OME/UR (rocket engine) 694
+On-orbit check-out and calibration 670
+On-orbit delivery of space systems 832
+On-orbit repair and recovery 573
+Onboard processing (See
+
+Computers, spacecraft)
+Onboard software (See Software)
+Operating power budget (See Power
+
+budget)
+Operating system software 662
+estimating resource needs 666-670
+Operation Morning Light 830
+Operational concept (See Concept
+of operations)
+Operational orbit, definition of 159
+Operational requirements 74
+Operations (See Mission operations)
+Operations team 556
+design of 558
+
+Operators, of a space mission
+definition of 7
+
+957
+Optical communications (See also
+lasers) 583-584
+as cost risk 803
+Optical elements
+thermal challenges 451
+Optical payloads (See Payloads; Infrared
+remote-sensing systems; Observation
+payloads)
+Optical systems (See also Detectors:
+
+IR, visible) 257-265
+optical transfer function 282
+reflective vs. refractive 258-265
+
+ORB (COTS software) 68
+ORBCOMM (communications constellation)
+cost estimate 808
+cost of 810
+effect of nuclear burst 222
+launch of 857
+mass distribution of 895-896
+parameters of 584
+use of store and forward 537
+ORBCOMM (small satellite)
+characteristics of 854-855
+Orbit control (See also Guidance and
+navigation subsystem; Orbit maintenance;
+
+Stationkeeping) 497, 507-512
+analogy with attitude
+
+control 498, 510-511, 512
+autonomous vs.
+
+ground-based 510-512
+components 507-512
+hardware sizing 512-514
+
+mission operations function 589, 601, 605
+
+need for 30, 500
+systems for 507
+trades 500, 501
+
+Orbit decay (See Atmospheric drag)
+
+Orbit-defined coordinates (See Roil-
+pitch-yaw coordinates)
+
+Orbit design (See also Orbits;
+
+Constellations) 159-202
+books on 131
+process summary 160, 198-199
+requirements and constraints 41-42, 305
+
+Orbit determination 140-141
+analytical methods 501
+books on 501
+components 501-507
+definition of 497
+real-time vs. definitive 498
+systems for 501-507
+
+Orbit determination and control
+subsystem (ODCS) (See Guidance
+and navigation subsystem; Orbit control)
+
+Orbit elements 135-137
+variations in (See Orbit
+perturbations)
+Orbit Tf Plus (computer program) 117
+
+Orbit lifetime (See Orbital lifetime)
+958
+
+Orbit maintenance (See also Altitude
+
+maintenance; Orbital lifetime;
+
+Stationkeeping) 155-157, 497, 507-512
+
+autonomous vs. ground-based
+
+of constellations
+systems for
+
+510-512
+509
+507
+
+Orbit maneuvering (See also Orbit
+
+control; Orbit transfer)
+
+Orbit period (See Period, orbital)
+
+Orbit perturbations (See also
+
+Atmospheric drag; Orbit control)
+
+atmospheric drag effects
+
+control of in constellations
+
+control of
+
+non-spherical Earth effects
+
+third-body effects
+
+solar radiation effects
+Orbit propagation
+
+COTS software for
+
+general perturbations
+
+software sizing for
+
+special perturbations
+
+146-153
+
+141-146
+144-145
+199
+
+508
+142-144
+142
+145-146
+498
+
+68
+142-144, 568
+665
+
+142, 568
+
+Orbit transfer (See also Hohmann transfer
+
+orbit, Orbital Transfer vehicle) 146-153,
+159-161
+coplanar 146-150
+formula summary 147-149
+Hohmann 146-150
+low-thrust 185-186
+one-tangent-burn 148
+plane change 150-151
+rendezvous 151-153
+selection of 183-188
+spiral transfer 149
+Orbit Workbench (COTS software) 117
+Orbit Works (COTS software) 68
+Orbital decay (See Orbital lifetime;
+Atmospheric drag)
+Orbital debris (See also
+end-of-life) 838, 840-850
+avoidance techniques 848-849
+bumper shield system 846-847
+collision probability of 844, 845
+definition of 842
+design considerations 844-850
+effect on satellite of impact 848
+from satellite collisions 198-200
+growth rate of 843-844
+in LEO and GEO 842-843
+mitigation techniques 849-850
+nontrackable objects 761
+protection from 846-849
+Report by Interagency Group 838
+satellite fragmentation events 760
+space policy on 838
+spatial density of 843
+Orbital lifetime (See also
+Atmospheric Drag) 208-211
+curves for 290-210
+orbit control implications 478
+
+Index
+
+table of values for Inside rear cover
+(col. 37-40)
+
+Orbital Maneuvering Unit
+
+propellant mass fraction 715
+Orbital slots, geostationary
+
+allocation of 826
+Orbital Transfer Vehicles 233
+
+table of 730
+Orbiter (See Space Shuttle)
+Orbiting Geophysical
+
+Observatory (See OGO)
+
+Orbits (See also Orbit control; Orbit
+perturbations; Sun-synchronous orbit;
+Molniya orbit; Geosynchronous orbit;
+Orbit transfer; Stationkeeping;
+
+Constellation) 131-200
+altitude trade 56-57
+books on 131, 159
+circular velocity 135
+
+table of Inside rear pages (co. 41-42)
+communications architecture 542
+
+constellation (See Constellation)
+control of (See Orbit control)
+
+COTS analysis tools 68
+coverage simulations 171-173
+design of 34, 159-202
+books on 159
+process summary 160, 198-199
+requirements and
+constraints 41-42, 305
+determination (See Orbit determination)
+direct 137
+Earth-referenced 160
+selection of 183-188
+eccentric (See also eccentric orbits) 182
+elements 135-137
+equation of motion (2-body) 132-135
+equation summary 902-903
+escape velocity 135
+formulas for Inside front cover
+failure rates, relationship to 709
+FireSat example 182-183
+formula summary 902-903
+geosynchronous (See also
+Geosynchronous orbits) 180, 182
+ground track (See Ground tracks) 116
+
+Hohmann transfer orbit
+
+(See Hohmann transfer orbit)
+impact on operations 612
+Keplerian orbits 132-141
+lifetime (See Orbital lifetime)
+low-Earth orbits (LEO, See also
+
+Low-Earth orbits) 182
+maneuvers (See also Orbit
+maneuvering) 146-153
+
+Molniya orbit (See Molniya orbits) 143
+parking (See Parking orbits) 160, 187-188
+
+patents on 194, 828
+period 137
+formula for 137, 168, 902
+Index
+
+table of Inside rear cover (col. 52)
+perturbations (See also Orbit
+
+perturbations) 141-146
+rendezvous 151-153
+retrograde 137
+space-referenced 160, 187
+specialized 161
+standard notation 137
+stationkeeping (See Station-keeping;
+
+Orbit maintenance) 508-509
+Sun-synchronous (See Sun-synchronous
+
+orbit) 180, 184
+trades with attitude
+
+accuracy 83-84, 123-130
+transfer orbits (See also Orbit
+
+transfer) 146-153, 159-161
+
+@rsted (small satellite)
+
+cost estimate 808
+
+mass distribution of 895-896
+OSD (Office of the Secretary of Defense)
+
+inflation factors from 791
+OSCAR (amateur satellite series) 856
+characteristics of 857-858
+cost estimate 874
+guidance and control 864
+mass comparison 873
+Oxygen, atomic
+effect on space systems 211
+density 212
+Outer horizon (See also Horizon) 117,167
+Outer Space Treaty of 1967 835
+liability specification 824
+provisions of 823-827
+—Pp—
+P80-1 (spacecraft)
+mass distribution of 894, 895
+Paints
+thermal properties of 436
+Palapa B (small spacecraft)
+guidance and control efficiency
+comparison 873
+rescue 822
+PAM-D (orbital transfer vehicle) 731
+characteristics of 728
+use on Delta launch vehicle 728
+PAML (Project Approved
+Materials List) §22
+
+PAPL (Project Approved Parts List) $22
+Parabola (conic section) 133-134
+Parabolic reflector antenna 570-575
+Parallel axis theorem (structure) 476
+Parallel lines
+
+non-existent in spherical coordinates 102
+Parallel redundancy 766
+Parallels (in spherical coordinates) 100
+Parametric cost estimates 791-802
+
+959
+definition of 787
+FireSat characteristics 793
+procedure for computing 787-788
+Pareto Principle 758
+Parking orbit (See also Orbits)
+definition of 160
+selection of 183, 187-188
+use for satellite storage 188
+Parts (See piece parts, S-level parts)
+Pascal (computer language) 666
+Pascal (unit of pressure) 924
+Pass, over ground station (See also
+Ground systems, ground tracks)
+formula summary 13
+parameter computation 117-122
+Passive analog data 398
+Passive radiators
+for cryogenic cooling 451
+Passive thermal control 428
+Patch heater 440
+Patents
+military limits on export 834
+on orbits 194, 828
+on space systems 827-828
+Path loss (link budget) 551
+Pathfinding
+in satellite manufacturing 159
+Payload (of launch vehicle = space segment)
+definition 719
+integration with launch system 735
+Payload (of space segment =
+Mission payload) (See also
+Observation payloads) 41-44, 241-300
+applications payloads 243
+as drivers of spacecraft design 304-306
+books on design of 242
+budgeting by components 285
+characteristics of 42, 243, 245-248
+communications payloads 242-243
+sizing of 570-575
+concept of operations 245-6, 248
+cost estimates 796
+critical parameters 284-286
+definition 12, 241
+design requirements and
+constraints 305
+Earth-looking remote sensing 241
+FireSat sizing example 291-297
+Innovative 243-244
+mission payload concept 41
+observation payload
+overview 242-243, 266-298
+operational constraints 249
+operations 247
+optical instrument 279-280
+performance threshold 250
+performance vs. cost 248
+power budget 314
+radiometric performance 283
+remote sensing 242-243
+960
+
+representative masses of 894
+scaling from existing systems 284
+scientific payloads 243-244
+selection and design process 245-248
+sensors 251
+sizing 245-248, 278-291
+trade studies for 234-238
+weapons 243-244
+Payload fairings (See Fairings)
+Payload mass fraction (launch
+systems) 723
+Payload Operations Control Center
+(POCC) 627-639
+Air Force Satellite Control
+Network 637
+demultiplexing with 634
+locating 627
+number of 642
+role of 626
+spacecraft autonomy with 635
+use with TDRSS 639
+Payload simulator (See also Mission
+simulator) 62
+PCM (Pulse Code Modulation; see
+also Modulation techniques) 393
+PD (Proportional plus
+derivative) controller 379
+PDR (Preliminary Design Review) 649, 664
+Peaceful use of space
+legal requirement for 823
+Peak-power tracker (PPT; in power
+regulation) 425
+Pegasus launch system 731
+characteristics of 728
+cost estimates 802
+fundamental frequency 741
+reliability experience 727
+small satellite launch 860
+use for small satellites 860
+user’s guide for 744
+Pellet weapons 229
+Pentriad (communications constellation)
+example of MEO system 539
+parameters of 585
+Percent Coverage (Figure of Merit) 176
+Performance (See Payloads; Mission
+utility analysis)
+drivers (See System drivers)
+margin
+in launch systems 724
+parameters 59-60
+plateaus (in constellation design) 190
+quantification techniques 57-59
+Perigee kick motor (PKM) 306
+Period, orbital
+computation from groundtrack 137
+formulas for 137, 168, 902
+in Kepler’s third law 132
+
+table of values Inside rear cover (col. 52)
+Personnel training (See Training)
+
+Index
+
+Perturbations (See Orbit perturbations)
+
+‘Phase coherence, communication 381-382
+Phase modulation (PM) 393
+Phase quadrature modulation (PQM) 393
+Phase shift keying (PSK) 378
+Phased array antenna 572
+Phasing orbit (See also Orbits:
+
+Rendezvous) 149-151
+Photo-electric effect 226
+Photo response nonuniformity 272
+Photometric imaging instruments 275
+Photon detector (see Detector, photon)
+Photovoltaics (See also solar array) 409, 411
+
+current-voltage plot 415
+design 411-418
+energy-conversion efficiency 413
+gallium-arsenide cells 413
+indium-phosphide cells 413
+inherent degradation 414
+low-cost technologies 876
+open-circuit voltage 414
+peak-power point 414
+performance comparison 414
+performance degradation 407
+planar array 416
+radiation damage 417
+shadowing considerations 416
+short-circuit current 414
+silicon cells 413
+temperature coefficient 415
+Physical constants (See Constants)
+pi (2)
+accurate value for 927
+Piece parts (See also Commercial parts;
+S-level parts)
+in multi-spacecraft
+manufacturing 747-748
+nomenclature for 519
+procurement times $22
+reliability of TN-7712
+selection of 752-153
+Pioneer (interplanetary probe)
+communication link for 563
+cost estimate 808
+Pitch (orbit-defined coordinate) 97, 341
+Pixel 244, 274, 281
+PKM (perigee kick motor) 306
+Planck's Law (Planck’s equation) 256
+blackbody radiation curves 256
+Planets
+ephemerides of 497
+thermal geometry factors for 908-909
+Plasma diagnostics instrument 275
+Plasmas (See also Space
+environment) 204, 212-214
+Plate scale 258
+formula for 259
+Plesetsk (launch site)
+location of 733
+
+Plume (See Exhaust plumes)
+Index
+
+Pluto
+thermal environment 434
+Pluto Express (small satellite)
+
+mass distribution of 895-896
+PM (Phase Modulation) 393
+PN code (Pseudorandom code) 547
+POCC (See Payload Operations
+Control Center)
+Point coverage simulation
+(See also Earth coverage) 172
+Point design 53
+Point spread function 263
+Pointing 123
+accuracy 129-130
+budgets 4, 123-130
+design approaches 304, 313, 319
+effect on ADCS design 363
+requirements 128-130, 356
+trades vs. mapping 126, 499-500
+Polar angle (see True anomaly)
+definition of 133
+Polar equation of a conic section 133
+Polar orbit
+definition of 137
+launch azimuth for 154
+launch vehicle capacity to 729
+magnetic torque in 366
+radiation dose in 225
+SNAP IOA spacecraft in 839
+Polarimeter 227
+Polarization, antenna 389
+Policy
+impact on space missions 821-840
+U.S. space policy 828-829
+Polybutadiene
+in rocket propellant 699
+PoSat (small satellite)
+characteristics of 855
+cost estimate 808
+mass distribution of 895-896
+Position gain 379
+Power
+units and conversion factors 924
+Power budget (See also Budgets) 314-318
+examples 345
+steps in preparing 315
+Power flux density
+maximum allowed 565
+Power spectral density (PSD) 461, 462
+Power subsystem (See also Solar array;
+Batteries; Photovoltaics) 304, 407-427
+
+battery depth-of-discharge
+vs. cycle life 333
+
+beginning-of-life (BOL) 304, 315, 407
+Brayton-cycle engine 409-410
+cost estimates 795-797
+design of 332-335, 408
+directed-energy transfer 408
+dynamic power 409
+
+electric propulsion
+
+961
+requirements 702, 705
+end-of-life (EOL) 304, 407
+energy balance 409
+energy storage (See also
+Batteries) 418-422
+fuel cells 409-410
+functional breakdown of 407
+on small satellites 864-866
+peak power tracker 408
+photovoltaic cells 409, 411-418
+power consumption 316
+power distribution 423-424
+design 425
+direct-energy-transfer 426
+fault protection 424
+load profile 423
+software sizing for 665-666
+switches 423
+power regulation 334, 424-425
+design 427
+fully regulated subsystem 427
+quasi-regulated subsystem 426
+shunt regulator 425
+unregulated subsystem 426
+Rankine-cycle engine 409
+regenerative fuel cell 411
+representative masses of 894
+requirements for 407
+sizing 332-335
+sources of power 407-418
+static power 409
+Stirling-cycle engine 409
+system-level parameter effects 408
+thermionic energy conversion 409
+thermoelectric couple 409
+weight and power budget 334
+PPM (Pulse position modulation) 393
+PPT (Peak-power tracker) 425-426
+
+PPT (Pulsed plasma thruster)
+
+(See Electric propulsion)
+PQM (Phase quadrature modulation) 393
+Precession, of a spinning spacecraft 361
+Precession of the equinoxes (See
+
+also Vernal equinox)
+
+data 898
+
+definition of 96-97
+Precombustion chambers 696
+“Predict-prevent” failure analysis 606
+Preliminary Design Review (PDR) 649, 664
+Present value (in cost estimating) 806
+Pressurant gas
+
+calculation of mass 714
+
+requirements for 713
+Pressure
+
+units and conversion factors 924
+Pressure differential, launch 739
+
+Primary batteries (See Batteries, primary)
+Primary data
+
+vs. processed data 833
+Primary power source 334
+962 Index
+Principles Relating to Remote in satellite manufacturing 759
+Sensing of the Earth from Space Profit
+(U.N. General Assembly in cost models 789
+resolution) 832-833 Prograde orbit (direct orbit,
+Principles Treaty (See Outer Space See also Orbit) 137
+Treaty of 1967) 823 Program initiation 9
+Process characterization models 759-160 Programmable read-only memory
+Process control in manufacturing (PROM) 656
+(See also Qualification program) Project Approved Materials List
+development and verification 759-760, 774 (PAML) §22
+Process tables Inside front cover Project Approved Parts List (PAPL) 522
+attitude determination and Project West Ford
+control subsystem design 356 and space contamination 824
+command and data handling Proliferation (Redundant nodes) 236
+subsystem 331, 399 PROM (Programmable Read-Only
+communications architecture $34 Memory) 656
+communications subsystem Prompt radiation 223, 230
+design 329, 388 Propellant budget (See also
+computer system development 647 Delta V budget) 314
+concept characterization 39 FireSat example 340
+concept of operations 22 FLTSATCOM example 344
+constellation design 198 for representative spacecraft 894-895
+cost estimates 792 formulas for mass of 690
+delta V budget 178 maintaining margin in 179
+ground segment 624 spin stabilization 271-273
+guidance and navigation three-axis stabilization 273-276
+subsystem design 499 Propellant management 708-709
+identifying alternative Propellant mass fraction
+mission architectures 33 (launch systems) 723
+link design and payload sizing 551 Propellant tanks 708-710
+launch segment 720 Propellants (See also Propellant budget;
+missions Operations planning 591 Propellant management;
+orbit selection 160 Propulsion subsystem) 301
+observation sensor design 287-290 advantages and disadvantages
+payload design overview 246 for spacecraft, table of 693
+power subsystem design 408 amount for representative
+propulsion subsystem spacecraft 894-895
+selection and sizing 687 densities of 692
+requirements definition 93 design margin 713
+solar array design 412 feed approaches 708-709
+space mission analysis and design 2 mass calculation equation for 690
+spacecraft bus mass estimation 712-713
+design overview 302 performance and operating
+preliminary design 307 characteristics, table of 692
+requirement sources 305 Proportional plus derivative
+spacecraft qualification (PD) controller 379
+program design 528 Propulsion module (See Kick stage)
+spacecraft structures size Propulsion subsystem 302, 318, 685-718
+and mass estimation 486 basics of 688-691
+structures and mechanisms 459 component selection
+subject trades 253 and sizing 708-716
+system trade process 56 design of 318, 687-688
+thermal design 430 functions of 685, 686
+Process verification tests 748 gas storage systems 709
+Processed data metered 302
+vs. primary data 833 power budget 316, 318
+Processing Architecture (See Computer pressure-fed systems 708
+systems, spacecraft: architectures) principal options 687, 693-708
+Processors (See Computer systems, spacecraft) process table for selection
+Production management and sizing 687
+Index
+
+pump-fed systems 708
+representative masses of 894
+requirements 685
+selection and sizing 687-688
+types of 693-708
+cold gas 693
+weight of 316, 318, 712, 715
+Protocol (See also FTP, IP, TCP, UDP) 652
+command-response 612
+definition of 652
+token-passing 612
+Protoflight approach 798
+Proton launch system 731
+characteristics of 728
+fundamental frequency TAl
+reliability experience 727
+user’s guide for 744
+Protons
+damage in electronic devices 220
+from solar particle events 217-218
+in space environment 215-217
+PSD (power spectral density) 461
+Pseudorandom (PN) code 547
+Pull production systems
+(manufacturing technique) 755
+Pulse Code Modulation (PCM) 393
+Pulse compression (chirping) 273
+Pulse Position Modulation (PPM) 393
+Pulsed Plasma Thruster (PPT)
+(See Electric propulsion)
+Pushbroom scanner 268-270
+focal planes 232
+Pyrotechnic shock 460-461
+test 529
+—Q—
+QPSK (Quadriphase phase
+shift keying) 392, 558
+Quad-helix antenna 572
+Quadrantal spherical triangles 103, 904
+formulas for 906
+Quadriphase Phase Shift Keying
+(QPSK) 397, 558
+Qualification program 524-530
+component testing 525
+design of 528
+in multi-spacecraft production 748-749
+qualification tests 520
+Qualified design, definition of 520
+Quality assurance 523-524
+elements of 524
+
+Quality factor (in observation payloads) 264
+Quality Function Development
+
+(QFD) 78-80
+Quantum efficiency (See specific
+detectivity) 271
+
+Quasi-regulated power subsystem (See also
+Power subsystem, Power regulation) 426
+
+963
+
+Quaternions 380
+
+Quiescent environment testing 780
+
+—R—
+
+R-40B (rocket engine) 694
+
+R4-D (rocket engine) 694
+
+R42 (rocket engine) 694
+
+Rad (radiation absorbed dose;
+
+unit of measure) 216
+RAD 6000 (onboard computer)
+
+characteristics of 669
+Radar (See also specific systems,
+
+Le., GEOSAT, RORSAT) 266
+access area 167-168
+active remote sensing 243-244
+decoys for 238
+for satellite tracking 503-503, 629, 842
+GEOSAT example 311
+on Magellan 483
+orbit determination using 140
+phased array vs. reflector 56
+resolution 265
+RORSAT example 825, 837
+subject trades for 254
+typical instruments 275
+
+Radar Ocean Reconnaissance
+Satellites (RORSAT) 837
+Radar remote-sensing systems 266
+RadarSat (spacecraft)
+debris shielding 846
+RADCAL (small satellite)
+cost estimate 808
+mass distribution of 895-896
+Radian (angular measure)
+conversions for 920
+definition of 102
+Radiant emittance, total 257
+
+Radiation (See Electromagnetic
+radiation; Thermal radiation; Nuclear
+weapons environment)
+
+Radiators 439-440
+for thermal control 435
+requirements for 453
+
+Radiation belts (See Trapped radiation, van
+Allen belts)
+Radio 1&2 (small spacecraft)
+characteristics of 769
+Radio frequency spectrum (See RF)
+Radioisotope thermoelectric
+generators (RTGs) (See also
+
+Power subsystem) 334
+
+Radiometric resolution (See Resolution,
+
+radiometric)
+
+Radiometry 266
+performance 283
+polarimeters 277
+radiometers 277
+964
+
+scatterometers 277
+Radius of apogee 133, 135
+formulas for 905
+Radius of perigee 133, 135
+formulas for 904
+Raduga (communications satellite) 571
+Rain attenuation 564-565
+Random access memory (RAM) 656
+Random vibration 461
+Range and range rate
+code 383
+function 382
+in TT&C 381-383
+use in orbit determination 503
+Range to target 119
+Rankine-cycle engines
+(See also Power subsystem) 409
+Rate gain 379
+Rate-1/2 convolutional code 561
+Rayleigh diffraction criteria (See also
+Rayleigh limit) 264
+Rayleigh, Sir John 264
+RCA (communications satellite) 633
+
+RCS (reaction control system)
+(See Propulsion systems)
+RDD 100 (COTS software)
+
+in requirements development 89
+RDT&E (Research, Development, Test
+and Evaluation cost category) 786
+Reaction curves (in spacecraft
+computers) 663
+Reaction wheels 319
+definition of 368
+derived, payload 247
+FLTSATCOM example 347-348
+payload design 245
+performance range 369
+sizing 370
+software sizing 665
+thermal requirements for 428
+Read Only Memory (ROM) 658
+Real-time processing 648
+Receive RF equipment 625
+Received isotropic power (RIP) 555
+Receiver noise bandwidth 554
+Reduced Instruction Set Computer (RISC)
+throughput rating 667
+Redundancy (See also Fault tolerance)
+functional 779
+in attitude control 375
+in FireSat 59
+in FLTSATCOM 343
+
+in ground system 627-628
+in low-cost spacecraft 860-864, 872, 882
+
+in onboard computer 682
+in orbit coverage 190
+in software architecture 654
+in TT&C 390-391, 394
+k-out-of-n 778
+
+reliability improvement and 777-1719
+
+Index
+
+requirements for 16
+series vs. parallel 766
+software management of 773
+software methods for 659-660
+types of TIT-T18
+use of failure modes analysis 7710
+Redundant nodes (security) 236
+Reed-Solomon code 563
+
+Reference ellipsoid (for Earth figure) 899
+Reference point (of a coordinate
+
+system) 100
+Reflective optical system 258, 261-262
+Reflector antenna 570
+Reflectors
+
+thermal properties of 436
+
+Refraction (See Stellar refraction)
+
+Refractive optical system 258, 261-262
+Refrigerators
+for cryogenic cooling 451
+Regenerative cooling 696
+Regenerative transponder 580
+Regulated pressurization system 708
+Relative quality index (payloads) 286
+Relative stationkeeping
+vs. absolute stationkeeping 508-509
+Relay communications systems
+table of bandwidths 550
+Relay Mirror Experiment (RME) 43
+Reliability 338-339, 765-782
+analyses 765-768
+budget for 317
+definition of 765
+design for 768-773
+design for fault avoidance 713-719
+effect of partitioning 718
+failure rates vs. complexity 769
+“infant mortality” of spacecraft 338
+mean mission duration 767
+measurements of 765-768
+models of 766
+single-string 338
+program for 765, 769-771
+satellite manufacturing
+objectives 746-747
+software 712-7113
+system vs. mission 765
+test techniques 719-781
+Reliability budget 317
+Remote sensing
+and space law 832-833
+examples 291-298
+payload design 266-278
+payloads 242-243
+Remote-sensing systems (See Observation
+Payloads)
+
+Rendezvous (See Orbits: rendezvous; Orbit
+maneuvering; Orbit transfer; Phasing orbit)
+Repeating ground track orbit 155-156, 180
+
+Requirements of a
+
+Space mission 12, 49, 73-94, 245
+Index
+
+allocation of (See also budgeting) 80
+attitude vs. orbit 83-84
+definition 5
+example 86-88
+geolocation 81-82
+initial 83-86
+process of 80-81
+refining of 88-90
+
+baseline 93-94, 247
+
+closure 80
+
+decomposition 80
+
+documentation of 91
+
+early definition of 3
+
+effect on orbit design 180, 181
+
+FireSat Example 16
+
+methods for trading on 888-889
+
+operational 15, 74
+
+orbit-related 161
+
+preliminary estimate of 15-18
+
+role in system development 74-80
+
+specification of 90-93
+
+tailoring of 92
+
+traceability 91-92
+
+validation milestone 10
+
+vs. objectives 13
+
+Research, Development, Test and
+Evaluation cost category (RDT&E) 786
+Resistance
+
+units and conversion factors 922
+
+Resistojets (See Electric propulsion)
+
+Resolution 263-265
+ground (linear) 264
+optical 264
+radiometric 275, 277, 278
+spatial 275-276, 278
+spectral 275-276, 278
+
+Response Time (Figure of Merit) 174
+
+Retargeting
+of orbit 508
+
+Retrograde orbits 137
+
+Return link (See also Communication links)
+alternate definitions of 535
+
+RF (radio frequency) (See also Jamming)
+definition of bands 255
+noise from nuclear bursts 224
+part of communications
+
+architecture 542
+regulatory limits 566
+typical TT&C parameters 394
+vs. laser crosslinks 583
+
+RH32 (onboard computer)
+characteristics of 669
+
+Ribbon (structure element) 482
+
+Right ascension of the ascending node
+
+(See also Orbit elements) 136
+formulas for 136, 142
+
+rate of change of 142-144
+table of values Inside rear cover
+
+(col. 56)
+
+Right spherical triangles 904
+
+965
+differences from
+plane triangles 103-105
+examples of 103-105
+formulas for 905
+Ring architecture,
+in onboard processing 653
+RIP (Received Isotropic Power) 555
+RISC (Reduced Instruction Set Computer)
+throughput rating 667
+RL10-A (rocket engine) 694
+RME (Relay Mirror Experiment) 43
+Rocket (See also propulsion system)
+engine vs. motor 693
+Rocket engines
+bipropellant 694
+hybrid 692, 699-701
+hydrazine 697
+ion 701
+modules 463
+monopropellant 691, 694
+sizing 713
+topping cycle 696
+water electrolysis 692, 693, 697-698
+Rocket equation 690
+Rocket motors, solid 699
+sizing 712
+Rockets, hybrid 692, 699-701
+Roll (orbit-defined coordinates) 97, 355
+Roli-pitch-yaw coordinates 96-97
+FireSat example 355
+Roli-yaw coupling 362
+ROM (See Rough Order of Magnitude;
+Read Only Memory)
+RORSAT (Radar Ocean
+Reconnaissance Satellite) 837
+Rotation angle 99,101
+Rough order of magnitude (ROM) 20
+Royal Greenwich Observatory 908
+RS-41 (rocket engine) 694
+RTG (Radioisotope Thermoelectric
+Generator) 334
+Run-time kernel (software) 667
+Russia (including former Soviet
+Union, See also Proton, Energia)
+launch sites 733
+launch systems 728, 731
+role in Outer Space Treaty 834
+sale of satellite imagery 833
+satellite navigation system 506
+use of electric propulsien 706-707
+use of nuclear propulsion in space 837
+—S—
+S-band communications 329, 394
+S-level parts 522
+in multi-spacecraft
+manufacturing 747-148
+966
+
+S$80/T (small satellite)
+characteristics of
+S/C (See Spacecraft)
+Safety, factor of
+Safety, margin of
+Sampex (small satellite)
+cost estimate
+mass distribution of
+Sampling rate
+Nyquist frequency
+observation payload
+spatial frequency
+San Marco Launch Platform
+location of
+Sandpiper missile (hybrid rocket)
+Sandwich (structure element)
+Saphir (small satellite)
+characteristics of
+cost estimate
+SAR (See Synthetic aperture radar)
+SARA (small satellite)
+characteristics of
+
+“Satellite diversity” (communications
+
+technique)
+Satellite Switched-TDMA
+(SS-TDMA)
+Satellite Tool Kit (COTS software)
+Satellites (See also Spacecraft)
+apparent motion of
+
+854
+
+468
+468
+
+808
+895-896
+544, 545
+
+281
+28 1-282
+
+281
+
+733
+701
+482-483
+855
+874
+854
+582-583
+
+576
+68, 117
+
+117-123
+
+ground track of (See Ground tracks) 116
+
+lifetimes (See also Atmospheric
+drag)
+motion of (See Orbits)
+Sattrack (small satellite)
+characteristics of
+Saturn
+thermal environment
+Saturn launch system
+cost estimates
+SC (onboard computer series)
+characteristics of
+Scale (See also magnification)
+Scale height (atmosphere)
+atmospheric density
+table of values
+Scaliger, Joseph
+invention of Julian dates
+Scaling
+spacecraft sizing by
+Scanning techniques (payload)
+SCAT (Secondary Combustion
+Augmented Thruster)
+Scatterometers
+SCD-1 (small satellite)
+characteristics of
+Scenarios
+use in operations planning
+Scene temperature
+Schedule (See also Timeline)
+payload design
+
+208-211
+
+855
+434
+802
+669
+259
+
+211
+145
+
+Inside rear cover (col. 25)
+
+914
+
+285
+268-270
+
+688-689
+277
+
+855
+
+597-598
+284
+
+245-248
+
+Index
+
+Scheduled software architecture 656
+Schmidt telescope optics 262
+Scientific payloads 243-244
+Scintillation 564
+Scrubber (computer memory) 660-661
+SDI (See Strategic Defense Initiative)
+SDR (System Design Review) 664
+SE (Standard Error)
+
+in cost estimating 804
+SEB (Single-event burnout) 220
+Second (of arc = angular measure)
+
+conversion factors 920
+Second (time)
+
+conversion factors 924-925
+
+definition of 919
+Second moment of area (See Area
+moment of inertia)
+Secondary batteries (See Batteries, secondary)
+Secondary Combustion Augmented
+
+Thruster (SCAT) 688-689
+Secondary power source 334
+Sectoral terms (geopotential) 143
+Security, of comm links 582
+SEDS 1 (small satellite)
+
+characteristics of 855
+Segment specifications 89
+SEI (Software Engineering Institute)
+
+software standards 670-671
+
+SEL (single-event latchup) 220
+Semimajor axis (See also
+
+Orbit elements) 131, 133, 135
+formulas for 905
+Semiminor axis 133
+Semimonocoque structures 464
+Sensors
+attitude control (See Attitude
+determination sensors)
+comparison of payload type 245, 275
+
+SEP (See Single-event phenomena)
+Separation plane attachments
+
+marmon clamp 336
+
+separable bolts 336
+Serial telemetry interface 398
+Series redundancy 766
+Set point
+
+thermal 441
+SEU (Single-Event Upset) 6, 220-221
+SGEMP (System-Generated
+
+Electromagnetic Pulse) 224, 234
+
+SGLS (See Space-Ground Link System)
+Shannon-Hartley theorem 562
+Shannon limit 562-563
+Shavit
+
+Small satellite launch 860
+Shielding (See also Hardening)
+
+against hostile environment 224-236
+
+against natural radiation 216
+Shock characteristics, launch 741
+Shock testing (of components) 524
+Short wave infrared 266, 270
+Index
+
+Shroud (launch vehicle, See Fairings)
+Shunt regulators (in power regulation) 425
+Shuttle (See Space Shuttle)
+
+SI (International System of Units) 919-927
+Signal processing, imagers 279
+analog 280
+digital 280
+Signal-to-noise quantization 544-545
+
+Signal-to-noise ratio (S/N) 278, 286, 290, 561
+computation of, for observation
+
+payload 290
+Signature
+
+decoy duplication of 238
+
+distinguishing features 277
+
+of the subject 251, 274
+
+Silicon
+in photovoltaics 413, 414
+Simulation (See also Mission simulator;
+
+Payload simulator) 58-59, 61-605
+animation uses 65
+Monte Carlo 64
+
+Simulation/Verification (Sim/Ver) 635
+
+Simulators (See Mission simulator;
+
+Payload simulator)
+
+Single-event phenomena (SEP) 219
+memory scrubbing to prevent 661
+single-event burnout (SEB) 220
+single-event latchup (SEL) 220
+single-event upset (SEU) 6, 220-221
+
+Six-sigma design process 746-747, 781
+
+Sizing (See also element being sized)
+mission, estimate of 52
+payloads 245-248, 278-291
+software (See Computers, spacecraft:
+sizing and timing estimates)
+spacecraft
+estimating parameters 336-337
+Skybridge (communications constellation)
+
+constellation design 539
+SkyLab
+
+cost estimate 808
+Slant range 264
+Slew maneuvers 355
+
+requirements 364
+SLOC (See Source lines of code)
+SMAD (COTS software) 68
+Small circle 99
+Small Satellite Cost Model (SSCM)
+
+CERs based on 797
+
+Small-satellite programs (See
+Miniature satellites; LightSats)
+
+SMM (See Solar Maximum Mission)
+
+SNAP (Systems for nuclear auxiliary
+
+power) 836-837
+Sneak Circuit Analysis 710
+SOCC (See Spacecraft Operations
+
+Control Center)
+
+Software
+application 648
+
+control system 661
+
+COTS
+custom-developed
+embedded
+mission-data
+onboard (See also Computers,
+spacecraft)
+cost estimates
+Operating system
+reliability methods for
+sizing methods
+system management
+Software Engineering Institute (SEI)
+software standards
+Software Requirements Specification
+Software Specification Review (SSR)
+Solar A (small satellite)
+characteristics of
+Solar absorptivity (See Absorptivity)
+Solar activity (See Solar cycles)
+Solar arrays (See also
+Photovoltaics)
+back-surface reflectors
+body-mounted
+coatings
+concentrator solar arrays
+cosine loss
+coverslide
+cylindrical arrays
+definition
+design process
+design process table
+inherent degradation
+life degradation
+operating temperatures
+planar arrays
+I-V plot
+radiation damage
+rules for estimating area
+offset and moment of inertia
+shadowing
+Sun-incidence angle
+Solar cells (See also Solar arrays;
+Photovoltaics)
+temperature coefficient
+Solar constant
+Solar cycles
+list, 1979 to 2029
+properties of
+solar flux variations
+Solar Maximum Mission (SMM)
+Solar panels
+thermal requirements for
+Solar particle event (SPE)
+Solar radiation
+effect on orbit
+flux
+intensity computation
+spectral characteristics
+total emitted radiation
+visibility (See Eclipse)
+
+312-313,
+
+967
+
+671-672
+671
+648
+661
+
+645
+800
+648, 661
+772
+623
+661
+
+670-671
+661
+664
+
+854
+
+332, 415
+416-417
+416
+416-417
+416
+417
+416
+332
+415
+411418
+412
+414
+315,417
+415
+332, 416
+415
+417
+
+337
+416
+417
+
+415
+429
+
+218
+897
+205
+825, 837
+
+428
+217-218
+
+145-146
+432
+109-110
+256, 267
+897
+968
+
+Solar sail 179
+Solid angle (= angular area)
+units and conversion factors 920
+Solid rocket motors
+advantages and disadvantages of 693
+applications of 687-688
+design of 699
+example systems 699
+operating characteristics 692
+
+Solid state amplifiers (See Amplifiers,
+solid state)
+
+Sound pressure level (SPL) 742
+Sounders (IR imagers) 276
+Source lines of code (SLOC) 675
+
+converting to words of memory 666
+Soviet Union (See Russia)
+Soyuz/Molniya launch system
+
+cost of 802
+
+reliability experience 727
+Space
+
+characteristics of, used by
+
+space missions 14
+
+Space environment (See also Nuclear weapons
+environment; Orbital debris; Environmental
+concerns) 203-240
+
+books on 203
+design requirements and constraints 305
+
+effect on thermal surfaces 435-436
+galactic cosmic rays 218-221
+impact on operations 612
+microgravity 204-207
+orbital debris 840-852
+plasmas 212-214
+solar particle events 217-218
+space charging 212-214
+thermal 431-434
+trapped radiation 214-217
+upper atmosphere 207-212
+Van Allen radiation belts (See
+Van Allen radiation belts)
+Space-Ground Link System (SGLS)
+as communicationsrelay element 43
+attributes 393
+compatibility with
+communication subsystem 389
+data rates 638
+turnaround ratio 381
+Space mission architecture 21
+characterizing 39-45
+definition of 4, 10-11
+identifying alternatives 32-36
+
+Space mission life cycle (See also Life cycle)
+7-10
+
+System engineering during 901-902
+Space Operations Cost Model 615
+Space payloads (See Payloads)
+
+Space policy
+
+overview of U.S. 828-829
+Space radiators (See Radiators;
+
+Thermal subsystem) 439-440
+
+Index
+
+Space-referenced orbit (See also Orbits)
+definition of 160
+selection of 183, 187-188
+
+Space segment (See also Spacecraft, Payload)
+
+cost estimating relationship 795-197
+definition of 12
+Space Sextant 506
+advantages and disadvantages 502
+list of characteristics 504
+sizing estimate $13
+Space Shuttle (Orbiter)
+active debris avoidance 849
+contamination 715
+cost estimates 802, 808
+dynamic envelope 461
+External Tank structure 459
+fundamental frequency 741
+injection accuracy with [US 742
+keel fittings 336
+launch system characteristics 728
+prelaunch training 564
+reliability experience 727
+retrieval of spacecraft 163
+rocket engine for 696
+role in rescue of Westar VI 822
+safety requirement for 698
+small satellite launch system 865
+sound pressure level in 742
+use as launch system 731
+use for orbit maintenance 507
+user’s guide for 744
+
+Space Station (See International Space Station)
+Space Surveillance Network
+
+debris tracking 842
+Space Tech Res Vehicle (small satellite)
+characteristics of 855
+Space Telescope
+cost estimate 808
+cost vs. performance 248
+distribution of payload control 29
+key system trades 54
+parking orbit, use of 187
+payload planning 568
+repair and recovery features 573
+star catalog 68
+subject trades 254
+use of Orbiter 507
+Space Transportation System (STS)
+(See Space Shuttle)
+Space vs. ground processing (See
+also Autonomy) 25-26
+
+Spacecraft (See also Spacecraft bus;
+Payload, individual subsystems)
+autonomy (See Autonomy)
+
+characteristics 44
+
+commanding 574
+
+components temperature ranges 428
+
+computer system (See Computer systems,
+spacecraft)
+
+control (See Attitude determination
+Index
+
+and control system; Guidance
+
+and navigation system)
+design and sizing 301-352
+design for manufacturability 745-764
+disposal of (See Disposal of spacecraft)
+
+estimating dimensions 312
+examples
+configurations 309-311
+FireSat 339-341
+FLTSATCOM 341-351
+HEAO 341-351
+Iridium 762-764
+hardening (See Hardening of spacecraft)
+hardware nomenclature 519
+impact of design on operations 614
+Iridium assembly process 762-764
+manufacturing 519-523
+processor (See Computer systems,
+spacecraft)
+quantity production of 745-764
+representative configurations 308-311
+representative mass
+distribution 894-896
+separation from launcher 322
+size estimating rules 336-337
+testing 519, 520, 523-531
+Spacecraft bus (See also Spacecraft;
+Miniature satellite technology; and
+individual topics and subsystems) 301
+cost estimates 795-797
+definition of 11,12
+design and sizing 301-351
+functions of 302
+Spacecraft—centered celestial
+sphere 106
+view of Earth on 115
+Spacecraft charging 212-214
+Spacecraft configuration 308-314
+drivers 308, 312
+examples of 309-311
+FLTSATCOM and HEAO
+example 341-344
+
+effect of pointing and attitude control 313
+
+Spacecraft coordinates 96-97, 355
+names of components 102
+Spacecraft design 301-351
+books on 301
+configuration examples 309-311
+design budgets 314-318
+examples of 308-314, 339-351
+integration 336-339
+reliability 336-339
+requirements and constraints 305
+tradeoffs 307
+
+Spacecraft materials 463-466, 472-473
+Spacecraft Operations Control
+
+Center (SOCC) 626-641
+demultiplexing with 634
+number of 642
+role of 626-627
+
+969
+spacecraft autonomy with 635
+use with TDRSS 639-640
+Spacecraft operations (See Mission
+operations)
+
+Spacecraft subsystems (See also
+specific subsystem) 302-304, 318-336,
+
+353-514
+
+attitude determination and
+
+control 354-380, 319-328
+command and data
+
+handling 330, 345-407
+communications 328-329, 381-394
+guidance and navigation 497-514
+power 332-335, 407-427
+propulsion 318, 685~717
+structures and
+
+mechanisms 335-336, 459-497
+thermal 330-332, 428-458
+
+Spacecraft testing 519-531, 670-671
+Spaceflight Tracking and Data
+Network (STDN)
+ground-support scheduling 592
+Spatial frequency (See Sampling rate)
+
+Spatial resolution 275-276, 278
+SPE (Solar particle event) 217-218
+Special perturbations
+(Orbit propagation) 142, 568
+Specific angular momentum 135
+Specific detectivity (D* = Quantum
+efficiency) 271-273
+Specific heat capacity
+units and conversion factors 924
+Specific impulse (I,,) ( See also
+Propulsion) 176, 689
+definition of 689
+equations for 689, 691
+Specific mechanical energy 134
+Specifications 90-94
+definition of 91
+need for reasons 887
+payload 245-247
+Spectral characteristics of
+remote-sensing instruments 255-257
+Spectral irradiance 256
+Spectral radiance 256
+Spectrum (See Electromagnetic spectrum)
+Spherical aberration 261
+Spherical excess 102-103
+Spherical geometry 98-110
+formulas for 904
+Spherical triangles 99-109
+formulas for 904-907
+right vs. quadrantal 904
+differences from plane
+triangles 104-105
+examples of 104, 105
+Spin stabilization 319
+angular impulse requirement 326-328
+dual-spin 313, 319, 360
+
+effect on antenna design 392
+970
+
+key parameters 379
+
+nutation 361
+
+passive spin 319
+
+patent on 828
+
+precession 361
+
+propellant budget 314
+
+use on small satellites 864
+
+with precession control 319
+
+wobble 361
+SPL (Sound pressure level) 742
+Sponsor, of a space mission
+
+definition of 7
+Spring constant 483
+Sputnik (first artificial satellite) 541, 853
+Sriharikota (launch site)
+
+location of 733
+SRM-1I motor 699
+SROSS (small satellite)
+
+characteristics of 854-855
+
+SRS (Software Requirements
+Specification) 661
+SS-TDMA (Satellite Switched-TDMA) 576
+SSCM (See Small Satellite Cost Model)
+SSP (Subsatellite point) 112, 165, 167
+SSR (Software Specification Review) 664
+SSTL (See Surrey Space Technology
+Laboratory; UoSAT)
+
+Stability (in structural members) 470
+Staging 716-717
+velocity increments 716
+
+Stand-down time (for launch vehicles) 726
+Standard Error (SE)
+
+in cost estimating 804
+Standards/Standardization
+(See also MIL-STD, DOD-STD) 71
+STAR (rocket motors) (See also
+PAM, Orbit transfer vehicle) 699
+
+Star architecture (in onboard processing) 653
+Star catalogs
+
+COTS Hubble catalog 68
+Star Lynx (communications constellation)
+
+examples of MEO systems 539
+
+parameters of 585
+
+Star mappers (See Star sensors)
+STAR-RH (onboard computer)
+
+characteristics of 669
+Star sensors 322, 373-374
+software sizing 665
+thermal requirements for 428
+Star trackers (See Star sensors)
+Starfish (high-altitude nuclear test) 222
+Starsys (communications constellation)
+example of Little LEO 539
+parameters of 585
+use of store and forward 537
+State diagram
+for onboard computer 650-651
+
+Static power sources (See also
+Power subsystem) 409
+Statically determinate structure 470
+
+Index
+
+Station control center 626
+Stationkeeping (See also Orbit
+maintenance; Orbit
+
+maneuvering) 156, 497
+absolute vs. relative 508-509
+electric propulsion for 702, 704, 707
+formula summary Inside front cover
+geosynchronous 487, 509-510
+
+use of autonomous orbit
+maintenance 511
+in constellations 199
+need for 508
+Statistical analysis
+Gaussian math model 805
+in cost modeling 803-806
+inappropriateness for
+coverage 173, 175-176
+non-Gaussian cost model 804
+terminology 804
+STDN (Spaceflight Tracking
+and Data Network) 592
+Stefian-Boltzmann constant 439
+Stefan-Boltzmann equation 257, 439
+
+Stellar refraction (navigation approach)
+
+advantages and disadvantages 502
+
+list of characteristics 504
+
+sizing estimate $13
+
+use in navigation systems 506
+Stentor (French spacecraft)
+
+use of electric propulsion 707
+STEP-3 (small satellite)
+
+characteristics of 855
+
+Step and stare scanner imaging mode 268-270
+Steradian (angular area)
+
+conversions for 920
+definition of 102
+Stiffness (in structural members) 470
+Stirling-cycle engines
+(See also Power Subsystem) 409
+Storage orbit (See also parking orbit) 188
+Store-and-forward
+communications 536-537, 539, 859
+examples of 585
+low cost systems 859, 868
+Strain (See also Stress) 471
+Poisson's ratio 471
+Strain energy 470
+Strategic Defense Initiative (SDD 234, 837
+potential role of Space Station 827
+
+“Streets of coverage”
+
+definition of 191-192
+
+constellation pattern 192-193
+Strength dispersion
+
+reliability and 716
+Stress (See also Strain)
+
+bending stress 478
+
+cylinder buckling stress 480
+
+hoop stress 480-481
+
+meridional stress 480
+
+methods for analyzing 467-485
+Index
+
+modulus of elasticity 472
+proportional limit 472
+reduction factor 480
+stiffness 471
+units and conversion factors 823
+yield stress 472
+Young's modulus 472
+Stressed environment testing 780
+
+Structural design of a spacecraft
+(See also Structures and Mechanisms
+
+subsystem) 459-485
+fracture control policy 469
+philosophy and criteria 467-469
+safe-life analysis 469
+safety factors 467-468
+
+Structure mass fraction
+(launch systems) 723
+Structures and Mechanisms
+
+subsystem 304, 335-336, 459-497
+cost estimates 795-197
+design of 335-336
+design options 463-467
+design process 459
+margin of safety (MS) 489
+materials 463-467
+monocoque
+
+sizing example 486-490
+packaging and configuring 462-463
+
+power consumption 316
+
+primary structure 304, 335, 459
+representative masses of 895-896
+requirements 459-462
+by mission phase 460
+launch vehicle, impact on 461
+materials selection 463-467
+secondary structure 304, 335, 459
+
+semi-monocoque structure 335
+
+size and mass estimation 470-497
+skin-stringer example 490-494
+tensile strength of materials 473
+weight budget 316
+STRV (small satellite)
+characteristics of 855
+STS (Space Transportation System)
+(See Space Shuttle)
+Subject, of a space
+mission 10-12, 39, 251-255
+controllable (active) 253
+definition of 10
+passive 253-254
+signature 250-251
+trades 251-255
+Subsatellite point (SSP) (See
+also Ground track) 112, 165, 167
+
+Subsystems (See also individual subsystems)
+
+design of 353-518
+hardware nomenclature 519
+nomenclature for 303
+representative masses of 895-896
+
+Sufficiently inertial coordinate frame 135
+
+971
+
+Sun (See also Solar radiation; Solar cycles)
+orbit perturbations due to 142~144
+physical properties 897
+
+thermal energy from 431-432
+Sun incidence angle (See also
+Solar arrays)
+eclipse computations 107-109
+geometry relative to spacecraft 107-109
+Sun Sensors 322, 373
+FireSat example 375-377
+software sizing 665
+Sun-synchronous orbits 180, 184
+determining inclination 144
+tables of values Inside rear pages
+(col. 48)
+uses for 180
+Sunspot cycle (See Solar cycles)
+Superbird (spacecraft)
+antenna size 574
+Supervised autonomy 511
+Supply chain management
+in satellite manufacturing 759
+Surface charging 213
+Surface finishes
+for thermal control 434-436
+Surface tension
+use in propellant
+management 710
+Surge-rate capacity (for launch
+vehicles) 726
+Surrey Space Technology
+
+Laboratory (SSTL; See also UoSAT)
+
+spacecraft computers 886-887
+Survivability 221-238
+requirements for 221
+Swath 116
+coverage 116
+width 168, 191
+FireSat example 293
+width vs. elevation angle 128
+Symphonie (communications
+satellite) 633
+Synthetic Aperture Radar (SAR)
+access area 167-168
+resolution 265
+typical instruments 275
+System algorithms 57-58
+System block diagram
+computer system 655
+System Design Review (SDR) 664
+System drivers 4, 48, 53
+identifying 37-38
+“hidden drivers” 37
+System engineering process 47, 73
+books on 1, 19, 47-48
+over mission lifecycle 887-888
+“top-down” 74
+System-generated electromagnetic
+pulse (SGEMP) 224, 234
+System management software 661
+972
+
+System noise temperature (See also
+
+Noise temperature) 554
+System requirements (See Requirements
+
+of a space mission)
+System Requirements Review
+
+(SRR) 650, 664, 675
+System specification 92
+System standards (See Standards) 76
+System trades 21, 53-57
+
+—T-—
+Tai-yuan launch complex
+_ location of 733
+Tanegashima launch site (Japan)
+location of 733
+Tanks, propellant
+FLTSATCOM, HEAO examples 346
+table of options for 709
+weight estimation 714
+Tantalum
+use for shielding 231
+Target machine (computer) 672
+Targeting
+in orbit control 508
+Tasking, scheduling, and control 28-31
+Taurus launch system 731
+characteristics of 728
+TCP (Transmission Control
+Protocol) 632, 641
+
+TCS (Thermal Control Subsystem;
+
+See Thermal subsystem)
+TDMA (Time division multiple access) 576
+TDRS (See Tracking and Data Relay
+
+Satellite)
+
+Technology heritage (cost factor) 798-799
+Technology readiness level (TRL) 804
+Techsat-1 (small satellite)
+characteristics of 855
+Teledesic (communications constellation)
+example of “Big LEO” 539
+FCC proposal 581
+parameters of 584
+
+Telemetry (See also Data rates;
+Data delivery; Communications subsystem)
+
+analog data 397
+definition of 396
+digital data 398
+software sizing for processing 665
+Telemetry, tracking, and command
+(TT&C) subsystem (See
+Communication subsystem)
+Telephone
+data rate for 546
+Television
+data rate for 546
+
+Telstar (early communications
+
+satellites) 633, 856
+
+Index
+
+Temisat (small satellite)
+
+characteristics of 855
+Temperature
+units and conversion factors 924
+Temperature range, launch environment 737
+Temporal redundancy 7719
+Tesseral terms (geopotential) 143
+Test Readiness Review (TRR) 664
+Testing
+in multi-spacecraft production 748-749
+in single-spacecraft
+manufacturing 524-530
+need to minimize 755
+reliability 779-781
+TFU (See Theoretical First Unit)
+Thematic mapper instrument 275
+Then-year dollars
+in cost modeling 791
+Theoretical First Unit (TFU)
+CERs for 796
+cost allocation to 798
+definition of 786
+FireSat example 811-812, 814
+smallsats 797
+Thermal conductivity
+units and conversion factors 924
+Thermal control subsystem
+(See Thermal subsystem)
+Thermal detector (See Detectors)
+Thermal geometry factors 907-912
+Thermal radiation
+effect on thermal surface 435-436
+formula summary 256
+geometry factors for 907-908
+properties of materials 437
+spacecraft environment 428-429
+spectral distribution 255-257
+
+Thermal radiators (See Radiators)
+Thermal subsystem 304, 303-332, 453-458
+
+active vs. passive 428
+challenges 450-452
+components 434-446
+cost estimates 795-797
+design process for 429-431, 446-450
+gradient requirement 428
+hardware for 434-446
+heat balance equation 452-457
+math models for 447-450
+operational vs. survival limits 428,
+457-458
+power consumption 316, 457-458
+representative masses 895-896
+requirements flow-down 448
+requirements for 428-431, 446-448
+software sizing 663-665
+thermal challenges 430, 450-452
+thermal environment 431-434
+weight, power, and telemetry
+requirements 430, 457-458
+weight budget for 316
+Index
+
+Thermal-vacuum test of
+components 525
+temperature cycle 527
+Thermionic energy conversion
+(See also Power subsystem) 409
+Thermodynamic power cycle 409
+Thermoelectric couple
+(See also Power subsystem) 409
+Thermosphere 208
+Thermostats 438-439
+use on spacecraft 441-442
+reliability of 442
+Three-axis stabilization
+advantages and disadvantages 320-322
+angular impulse computation 323-327
+classes of 318
+configuration examples 310-311
+control algorithms 379
+failure rates for 769
+hardware for 368
+on FireSat 340
+on FLTSATCOM, HEAO-B 343-347
+on small spacecraft 874
+sensing needed 375
+techniques for 361-365
+use with solar arrays 313, 408, 416
+Throughput, computer
+estimating needs 662-667
+Thrust 688
+Thrust coefficient 691
+Thrust range 692
+Thrust-to-weight ratio
+of launch systems 722
+Thrust vector control 710
+table of methods 712
+Thrusters (See also Attitude control
+actuators; Propulsion subsystems) 693
+control software sizing 665
+design of 715
+FireSat Example Mission 372
+sizing 372
+table of 711
+Thumba Equatorial Station
+(launch site)
+location of 733
+Tidal forces
+in microgravity 205
+Time
+Julian Dates 913-918
+time zones 914
+units and conversion factors 924-925
+Universal Time 913
+Time Average Gap (Figure of Merit) 174
+Time division multiple access
+(TDMA) 576
+Time in view 120
+table of values Inside rear cover
+(col. 9-12)
+Time-of-flight 139-140, 152
+
+973
+
+in an elliptical orbit 139-140
+summary of formulas 905
+Time since perigee passage (See also
+Mean anomaly; True anomaly;
+
+Orbit elements) 136
+Time spreading of costs
+method for 807
+Time systems 913-918
+Time word (in computer systems) 400
+Time zones
+conversions 909
+Timeline (See Mission timeline)
+Timetagging 634
+Tiros (first weather satellite) 856
+Titan launch system 731
+characteristics of 728
+cost estimates 802
+fundamental frequency 741
+injection accuracy 742
+reliability experience 727
+sound pressure level 742
+Titan IV 409
+user’s guide for 743-744
+TOD (True of Date coordinates) 97
+Toe, of footprint (See also Footprint) 166
+Topping cycle engine 696
+Toroidal beam antenna 572
+
+Torque (See also disturbance torque)
+estimating requirements 322-323
+units and conversion factors 920
+Torquers (See Attitude control actuators;
+Magnetic torquers; Control moment
+gyros; Momentum wheels; Reaction
+wheels; Thrusters)
+
+TOS (Transfer Orbit Stage) 730-731
+Tracking and Data Relay
+Satellite (TDRS) 275, 498, 639-640
+advantages and disadvantages
+for navigation 7 502
+as communications relay element 43
+axes of control 313
+compatibility with
+communications subsystem 389
+configuration of 310
+cost estimate 809
+mass distribution of 894-896
+parameters of 548
+use for satellite navigation 498
+Tracking range, communication 389
+Trade studies (See System trades)
+Trade tree 35-36
+Trajectory (See also Orbits) 131
+Training
+manufacturing 521
+On operations procedures 595
+operations function 602,610
+team building via 761
+Transfer orbit 160
+equations for 146-151
+selecting 183-187
+974
+
+Transfer Orbit Stage (TOS; Orbital
+transfer vehicle)
+
+characteristics of 730-731
+
+Transmission Control
+Protocol (TCP) 632, 641
+
+Transmission path loss 551
+Transmit antenna gain
+
+definition of 552
+Transmit RF equipment 625
+Transmitters
+
+solid-state 574-575
+Transponder
+
+block diagram 392
+
+use for data relay 550
+Transtage (rocket engine) 694
+Transtar (rocket engine) 694
+
+Trapped radiation (See also Van
+Allen radiation belts) 214-217, 224-226
+
+Bremsstrahlung X-ray dose 216
+rad (radiation absorbed dose;
+unit of measure) 216
+total radiation dose 216
+Traveling-wave tube amplifier
+(TWTA) 232
+Treaties
+
+Antarctic Treaty
+differences from Outer
+
+Space Treaty 825
+Anti-Ballistic Missile Limitations
+
+Treaty 827
+
+Moon Treaty of 1979 825
+
+Outer Space Treaty of 1967
+
+provisions of 823-825
+Treaty Banning Nuclear
+Weapon Tests in Outer Space 823
+TRL (Technology Readiness Level) 804
+Tropical year 898
+TRR (Test Readiness Review) 664
+True anomaly (See also
+Orbit elements) 133, 136-137
+formulas for 905
+approximation for 140
+True of date coordinate 97
+TRW
+orbit patent 828
+Tsiolokovsky, Konstantin 690
+Tsyklon launch system
+cost of 802
+reliability experience 727
+TT&C (See Telemetry, Tracking, and
+Command)
+TUBSAT (small satellite)
+characteristics of 854-855
+Tungsten
+use for shielding 231
+Turnaround ratio, conmmunication 381
+“Turnkey” space system 832
+Two-body equations of motion
+(See also Orbits) 132-135
+
+Index
+
+orbit maintenance 155-156
+perturbations 142
+Two-way coherent mode, communication 381
+Type test 520
+Tyuratam (Baikonur launch site)
+location of 733
+—U—
+UDP (User Datagram Protocol) 632, 641
+Ullage 713
+Ultimate load 468
+Ultraspectral sensor systems 276
+Ultraviolet (UV) 266
+UNAMSAT (small satellite)
+characteristics of 855
+Unit vectors 95, 97,98
+
+transformations to spherical
+coordinates 101
+United Nations Committee on
+the Peaceful Uses of
+Outer Space 837
+
+Universal Time (UT) 626, 913-914
+conversion to civil time 913-914
+use on spacecraft 400
+Universal Time Coordinated (UTC) 626
+
+Unmanned Space Vehicle Cost Model (USCM)
+
+CERs based on 795-196
+FireSat example 811-814
+publicly available 788, 796
+UoSat
+characteristics of 854
+cost estimate 874
+guidance and control 864
+use of GaAs solar cells 864
+Uplink 303
+UPM-SAT (small satellite)
+characteristics of 855
+Uranus
+thermal environment 434
+USCM (See Unmanned Space Vehicle
+Cost Model)
+User Datagram Protocol (UDP) 632, 641
+Users Manuals (launch systems) 743-744
+USSR (See Russia)
+UT (See Universal Time)
+UTC (Universal Time Coordinated) 626
+Utilities (software) 667
+Utility analysis (See also
+Mission utility analysis) 49, 59-69, 70
+UV (Ultraviolet) 266
+
+—_Vv—
+
+Validation exercises, for requirements 90
+Valves 698
+Index
+
+Van Allen radiation belts (See also
+
+Trapped radiation) 187, 214-217
+effect of nuclear explosions on 224
+factor in 181
+
+hardening against 221, 224-226, 231
+Vandenberg AF Base (See Western Range)
+
+Variable-conductance heat pipes 444-446
+Variability Reduction (screening) 715-116
+VELA (nuclear detection satellite)
+configuration of 389, 856
+Velocity (See also Orbits: circular
+velocity and escape velocity)
+orbital 134-135
+formulas for 905
+table of values Inside rear cover
+(col. 41-48)
+units and conversion factors 920
+Velocity change (See Delta V)
+Venus
+thermal environment 434
+Verification 94
+Vernal equinox 96
+precession of the equinoxes 96
+use of
+in celestial coordinates 96-97
+in orbit elements 135
+in sidereal time 154
+Vibration
+effect on microgravity 206
+Vibration, launch 740
+Vibration tests 525-526, 529
+Viewing geometry
+Earth from spacecraft 114-116
+Viscosity
+units and conversion factors 920
+
+Visible systems (See Observation payloads) 266
+
+Visual detectors 255-266
+Visual payload design process 254
+Vita (communications constellation)
+example of Little LEO 539
+use of store and forward 537
+Viterbi decoding, with
+convolutional coding 561-562
+Volume
+units and conversion factors 824
+Voyager (spacecraft)
+analyzing payload data 562
+—__-.W—
+Walker constellations 194-197
+Walker delta pattern 194
+Walker, John 194
+Wallops Island facility 732
+location of 733
+WARC (World Administrative
+Radio Conference) 387, 566, 826
+
+Watchdog timer 401
+
+975
+
+Wavelength 255
+WBS (See Work Breakdown Structure)
+Weight budget 12, 315-317, 725
+
+boosted weight 316
+definition 12,314
+FireSat example 341
+FLTSATCOM, HEAO examples 345
+for representative spacecraft 894-896
+injected weight 316
+loaded weight 316
+spacecraft dry weight 316
+Weight margin 315-317
+Weightlessness (See Microgravity)
+Westar (communications satellite) 633
+rescue by Shuttle mission 51C 822
+Western Range 732
+available launch azimuth 734
+available orbit inclination 734
+location of 733
+Whetsone computer benchmark 663
+Whiskbroom scanner imaging mode 268-270
+White Sands ground station 489
+Wideband data systems
+bandwidth of 550
+definition of 535
+examples of 584-585
+Wick
+in heat pipes 444-446
+Wien’s Displacement Law 257
+“Williams patent” 828
+Wobble (See also Spin stabilization) 361
+Woomera Launch Site
+location of 733
+Word processing, as illustration of
+software architecture 656
+Words, computer memory (See also
+Computer systems, spacecraft) 606
+Work Breakdown Structure (WBS)
+definition of 784
+for FireSat 811-812
+representative WBS 786
+Workmanship failures 781
+World Administrative Radio
+Conference (WARC) 387, 566, 826
+—_—K——
+X-33 (reusable launch vehicle)
+regulatory constraints 822
+X-34 (reusable launch vehicle)
+regulatory constraints 822
+X-band communications 386, 393, 641
+characteristics of 394
+on DSCS If 550
+on small satellites 865
+X-ray spectrometer 275
+X-ray telescope (See Chandra)
+X-rays 255
+976
+
+from nuclear explosion
+from solar particle events
+production of EMP from
+shielding against
+Xichang launch complex
+XLR-132 (rocket engine)
+
+—y—
+
+Yaw (orbit defined coordinate)
+
+Yaw steering, spacecraft
+Yield factor
+
+Yield load
+
+Yield margin
+
+Yield (Nuclear explosion)
+Young’s modulus
+
+—7—
+
+Z (Zulu Time = GMT = UT)
+
+Zenit launch system
+characteristics of
+reliability experience
+
+Zenith
+
+Zenith angle
+
+Zero-g (See Microgravity)
+
+Index
+
+222~223
+217-218
+224
+230-231
+733
+694
+
+96-97, 355
+313
+468
+468
+468
+222
+472
+
+913-914
+
+728
+727
+
+99
+102
+
+Zero momentum system (See also Attitude
+
+determination and control
+subsystem)
+
+Zonal coefficients (spherical
+harmonics)
+
+Zulu Time (Z = GMT = UT)
+
+359, 362
+
+143
+913-914

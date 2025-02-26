@@ -7,4 +7,7 @@ academy_assistant/assistant/models
 academy_assistant/assistant/models_copy
 logs
 venv
+.venv
 .hypothesis
+processed_slides
+textbook_pdfs
