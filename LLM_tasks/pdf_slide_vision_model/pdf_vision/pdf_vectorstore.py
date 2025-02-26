@@ -20,7 +20,6 @@ import faiss
 # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'academy.settings')
 
 from academy_assistant.database.graphql import GraphqlClient
-os.environ["OPENAI_API_KEY"] = "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"
 
 class PDFIndexer:
     def __init__(self, text_output_dir='extracted_pdf_texts'):

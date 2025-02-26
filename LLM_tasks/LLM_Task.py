@@ -3,7 +3,6 @@ import importlib.util
 import sys
 from openai import OpenAI
 import openai
-openai.api_key = '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'
 
 from retrying import retry
 import concurrent.futures
@@ -33,7 +32,7 @@ class LLM_Task:
 
         # Num Examples
         self.num_examples = 5
-        self.client = OpenAI(api_key='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')
+        self.client = OpenAI()
 
 
 

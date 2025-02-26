@@ -132,7 +132,6 @@ if __name__ == "__main__":
     #             file_name = f"{module['name']}_slide_{num+1}"
     #             indexer.extract_text_from_image(slide_image, module['name'], num)
 
-    # openai_api_key = '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'
     # indexer.load_texts()
     # indexer.create_faiss_store()
     print("Slides vector store created successfully.")
